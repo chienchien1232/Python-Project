@@ -37,16 +37,16 @@ data/processed/ml_results/
 ## Sử dụng riêng từng chức năng
 
 ```bash
-python -m src.player_clustering
-python -m src.player_similarity --top-k 10
-python -m src.team_clustering
-python -m src.anomaly_detection
+python -m src.Player_Analysis.player_clustering
+python -m src.Player_Analysis.player_similarity --top-k 10
+python -m src.Team_Analysis.team_clustering
+python -m src.Player_Analysis.anomaly_detection
 ```
 
 ## Gọi từ Python
 
 ```python
-from src.player_similarity import find_similar_players
+from src.Player_Analysis.player_clustering import find_similar_players
 
 similar = find_similar_players(player_id=123, top_k=10)
 print(similar)

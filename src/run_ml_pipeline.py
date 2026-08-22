@@ -1,18 +1,21 @@
 from __future__ import annotations
-
+import os
+import sys
 import argparse
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 try:
-    from .player_clustering import cluster_players
-    from .player_similarity import compute_player_similarity
-    from .team_clustering import cluster_teams
-    from .anomaly_detection import detect_player_anomalies
-    from .ml_data import ensure_result_dir
+    from Player_Analysis.player_clustering import cluster_players
+    from Player_Analysis.player_similarity import compute_player_similarity
+    from Team_Analysis.team_clustering import cluster_teams
+    from Player_Analysis.anomaly_detection import detect_player_anomalies
+    from ml_data import ensure_result_dir
 except ImportError:
-    from player_clustering import cluster_players
-    from player_similarity import compute_player_similarity
-    from team_clustering import cluster_teams
-    from anomaly_detection import detect_player_anomalies
+    from Player_Analysis.player_clustering import cluster_players
+    from Player_Analysis.player_similarity import compute_player_similarity
+    from Team_Analysis.team_clustering import cluster_teams
+    from Player_Analysis.anomaly_detection import detect_player_anomalies
     from ml_data import ensure_result_dir
 
 
