@@ -1,0 +1,23 @@
+=== FIFA WORLD CUP 2026 - PLAYER x MATCH DATASET (FINAL) ===
+
+[NOI DUNG THU MUC]
+  player_match_stats.csv/.parquet : 5323 dong (Player x Match, 61 cot)
+  goalkeeper_match_stats.csv/.parquet: 627 dong (14 cot)
+  wc2026.db                        : SQLite 2 bang tren
+  id_mapping_fifa_to_csv.json      : FIFA IdPlayer -> csv player_id
+  id_conflicts.json                : 2 truong hop identity conflict da flag
+
+[NGUON DU LIEU]
+  api.fifa.com (chinh thuc) -> matches/lineups/goals/cards/subs/minutes co so
+  site.api.espn.com         -> saves/shots_faced/punches GK + fouls/shots/SOT per-player
+  sofascore.com             -> assists attribution, VAR, shootout-miss
+  training.fifa.com (FIFA TC via Kaggle mirror) -> passes/crosses/tackles/
+     interceptions/clearances/blocks/recoveries/duels/aerials/dribbles
+
+[THONG KE]
+  pms rows: 5323 | gk rows: 627
+  goals=294 | assists=169 | passes filled=5321
+
+[COT VAN NULL CO CHU DICH]
+  group (knockout), sub-minutes (khong phai thay nguoi),
+  2 dong Rashford/Toney (FIFA TC khong ghi), offsides 215 o phut-khong-ro

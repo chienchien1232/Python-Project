@@ -1,0 +1,23 @@
+=== A. CANONICAL CSV ===
+  matches                rows=  104 cols=17
+  match_events           rows=  601 cols=6
+  match_lineups          rows= 5408 cols=7
+  match_team_stats       rows=  208 cols=12
+  player_stats           rows= 1248 cols=21
+  squads_and_players     rows= 1248 cols=10
+  teams                  rows=   48 cols=8
+  tournament_stages      rows=    7 cols=3
+  venues                 rows=   16 cols=8
+  matches_detailed       rows=  104 cols=23
+  PK unique: OK
+  FK (13 rang buoc): OK
+  delimiter ';': khong co - OK
+  ten kieu HOA trong squads: 0
+
+=== B. WC2026 PLAYER MATCH ===
+  player_match_stats: rows=5323 FK=OK dup=0 tenHOA=0 -> OK
+  goalkeeper_match_stats: rows=627 FK=OK dup=0 tenHOA=0 -> OK
+  events-goals == scores: OK
+  pms minutes hop le: OK
+
+=== KET LUAN: TOAN BO PASS ===

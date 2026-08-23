@@ -1,0 +1,1286 @@
+[
+ {
+  "match_id": "1",
+  "date": "2026-06-11",
+  "ko": "19:00",
+  "buckets": [
+   "20260611"
+  ],
+  "home_id": "1",
+  "away_id": "2",
+  "home": "Mexico",
+  "away": "South Africa"
+ },
+ {
+  "match_id": "2",
+  "date": "2026-06-12",
+  "ko": "02:00",
+  "buckets": [
+   "20260611",
+   "20260612"
+  ],
+  "home_id": "3",
+  "away_id": "4",
+  "home": "South Korea",
+  "away": "Czechia"
+ },
+ {
+  "match_id": "3",
+  "date": "2026-06-12",
+  "ko": "19:00",
+  "buckets": [
+   "20260612"
+  ],
+  "home_id": "5",
+  "away_id": "6",
+  "home": "Canada",
+  "away": "Bosnia and Herzegovina"
+ },
+ {
+  "match_id": "4",
+  "date": "2026-06-13",
+  "ko": "01:00",
+  "buckets": [
+   "20260612",
+   "20260613"
+  ],
+  "home_id": "13",
+  "away_id": "14",
+  "home": "USA",
+  "away": "Paraguay"
+ },
+ {
+  "match_id": "5",
+  "date": "2026-06-13",
+  "ko": "19:00",
+  "buckets": [
+   "20260613"
+  ],
+  "home_id": "7",
+  "away_id": "8",
+  "home": "Qatar",
+  "away": "Switzerland"
+ },
+ {
+  "match_id": "6",
+  "date": "2026-06-13",
+  "ko": "22:00",
+  "buckets": [
+   "20260613"
+  ],
+  "home_id": "9",
+  "away_id": "10",
+  "home": "Brazil",
+  "away": "Morocco"
+ },
+ {
+  "match_id": "7",
+  "date": "2026-06-14",
+  "ko": "01:00",
+  "buckets": [
+   "20260613",
+   "20260614"
+  ],
+  "home_id": "11",
+  "away_id": "12",
+  "home": "Haiti",
+  "away": "Scotland"
+ },
+ {
+  "match_id": "8",
+  "date": "2026-06-14",
+  "ko": "04:00",
+  "buckets": [
+   "20260613",
+   "20260614"
+  ],
+  "home_id": "15",
+  "away_id": "16",
+  "home": "Australia",
+  "away": "Türkiye"
+ },
+ {
+  "match_id": "9",
+  "date": "2026-06-14",
+  "ko": "17:00",
+  "buckets": [
+   "20260614"
+  ],
+  "home_id": "17",
+  "away_id": "18",
+  "home": "Germany",
+  "away": "Curaçao"
+ },
+ {
+  "match_id": "10",
+  "date": "2026-06-14",
+  "ko": "20:00",
+  "buckets": [
+   "20260614"
+  ],
+  "home_id": "21",
+  "away_id": "22",
+  "home": "Netherlands",
+  "away": "Japan"
+ },
+ {
+  "match_id": "11",
+  "date": "2026-06-14",
+  "ko": "23:00",
+  "buckets": [
+   "20260614"
+  ],
+  "home_id": "19",
+  "away_id": "20",
+  "home": "Côte d'Ivoire",
+  "away": "Ecuador"
+ },
+ {
+  "match_id": "12",
+  "date": "2026-06-15",
+  "ko": "02:00",
+  "buckets": [
+   "20260614",
+   "20260615"
+  ],
+  "home_id": "23",
+  "away_id": "24",
+  "home": "Sweden",
+  "away": "Tunisia"
+ },
+ {
+  "match_id": "13",
+  "date": "2026-06-15",
+  "ko": "16:00",
+  "buckets": [
+   "20260615"
+  ],
+  "home_id": "29",
+  "away_id": "30",
+  "home": "Spain",
+  "away": "Cabo Verde"
+ },
+ {
+  "match_id": "14",
+  "date": "2026-06-15",
+  "ko": "19:00",
+  "buckets": [
+   "20260615"
+  ],
+  "home_id": "25",
+  "away_id": "26",
+  "home": "Belgium",
+  "away": "Egypt"
+ },
+ {
+  "match_id": "15",
+  "date": "2026-06-15",
+  "ko": "22:00",
+  "buckets": [
+   "20260615"
+  ],
+  "home_id": "31",
+  "away_id": "32",
+  "home": "Saudi Arabia",
+  "away": "Uruguay"
+ },
+ {
+  "match_id": "16",
+  "date": "2026-06-16",
+  "ko": "01:00",
+  "buckets": [
+   "20260615",
+   "20260616"
+  ],
+  "home_id": "27",
+  "away_id": "28",
+  "home": "IR Iran",
+  "away": "New Zealand"
+ },
+ {
+  "match_id": "17",
+  "date": "2026-06-16",
+  "ko": "19:00",
+  "buckets": [
+   "20260616"
+  ],
+  "home_id": "33",
+  "away_id": "34",
+  "home": "France",
+  "away": "Senegal"
+ },
+ {
+  "match_id": "18",
+  "date": "2026-06-16",
+  "ko": "22:00",
+  "buckets": [
+   "20260616"
+  ],
+  "home_id": "35",
+  "away_id": "36",
+  "home": "Iraq",
+  "away": "Norway"
+ },
+ {
+  "match_id": "19",
+  "date": "2026-06-17",
+  "ko": "01:00",
+  "buckets": [
+   "20260616",
+   "20260617"
+  ],
+  "home_id": "37",
+  "away_id": "38",
+  "home": "Argentina",
+  "away": "Algeria"
+ },
+ {
+  "match_id": "20",
+  "date": "2026-06-17",
+  "ko": "04:00",
+  "buckets": [
+   "20260616",
+   "20260617"
+  ],
+  "home_id": "39",
+  "away_id": "40",
+  "home": "Austria",
+  "away": "Jordan"
+ },
+ {
+  "match_id": "21",
+  "date": "2026-06-17",
+  "ko": "17:00",
+  "buckets": [
+   "20260617"
+  ],
+  "home_id": "41",
+  "away_id": "42",
+  "home": "Portugal",
+  "away": "Congo DR"
+ },
+ {
+  "match_id": "22",
+  "date": "2026-06-17",
+  "ko": "20:00",
+  "buckets": [
+   "20260617"
+  ],
+  "home_id": "45",
+  "away_id": "46",
+  "home": "England",
+  "away": "Croatia"
+ },
+ {
+  "match_id": "23",
+  "date": "2026-06-17",
+  "ko": "23:00",
+  "buckets": [
+   "20260617"
+  ],
+  "home_id": "47",
+  "away_id": "48",
+  "home": "Ghana",
+  "away": "Panama"
+ },
+ {
+  "match_id": "24",
+  "date": "2026-06-18",
+  "ko": "02:00",
+  "buckets": [
+   "20260617",
+   "20260618"
+  ],
+  "home_id": "43",
+  "away_id": "44",
+  "home": "Uzbekistan",
+  "away": "Colombia"
+ },
+ {
+  "match_id": "25",
+  "date": "2026-06-19",
+  "ko": "01:00",
+  "buckets": [
+   "20260618",
+   "20260619"
+  ],
+  "home_id": "1",
+  "away_id": "3",
+  "home": "Mexico",
+  "away": "South Korea"
+ },
+ {
+  "match_id": "26",
+  "date": "2026-06-18",
+  "ko": "16:00",
+  "buckets": [
+   "20260618"
+  ],
+  "home_id": "4",
+  "away_id": "2",
+  "home": "Czechia",
+  "away": "South Africa"
+ },
+ {
+  "match_id": "27",
+  "date": "2026-06-18",
+  "ko": "22:00",
+  "buckets": [
+   "20260618"
+  ],
+  "home_id": "5",
+  "away_id": "7",
+  "home": "Canada",
+  "away": "Qatar"
+ },
+ {
+  "match_id": "28",
+  "date": "2026-06-18",
+  "ko": "19:00",
+  "buckets": [
+   "20260618"
+  ],
+  "home_id": "8",
+  "away_id": "6",
+  "home": "Switzerland",
+  "away": "Bosnia and Herzegovina"
+ },
+ {
+  "match_id": "29",
+  "date": "2026-06-20",
+  "ko": "00:30",
+  "buckets": [
+   "20260619",
+   "20260620"
+  ],
+  "home_id": "9",
+  "away_id": "11",
+  "home": "Brazil",
+  "away": "Haiti"
+ },
+ {
+  "match_id": "30",
+  "date": "2026-06-19",
+  "ko": "22:00",
+  "buckets": [
+   "20260619"
+  ],
+  "home_id": "12",
+  "away_id": "10",
+  "home": "Scotland",
+  "away": "Morocco"
+ },
+ {
+  "match_id": "31",
+  "date": "2026-06-19",
+  "ko": "19:00",
+  "buckets": [
+   "20260619"
+  ],
+  "home_id": "13",
+  "away_id": "15",
+  "home": "USA",
+  "away": "Australia"
+ },
+ {
+  "match_id": "32",
+  "date": "2026-06-20",
+  "ko": "03:00",
+  "buckets": [
+   "20260619",
+   "20260620"
+  ],
+  "home_id": "16",
+  "away_id": "14",
+  "home": "Türkiye",
+  "away": "Paraguay"
+ },
+ {
+  "match_id": "33",
+  "date": "2026-06-20",
+  "ko": "20:00",
+  "buckets": [
+   "20260620"
+  ],
+  "home_id": "17",
+  "away_id": "19",
+  "home": "Germany",
+  "away": "Côte d'Ivoire"
+ },
+ {
+  "match_id": "34",
+  "date": "2026-06-21",
+  "ko": "00:00",
+  "buckets": [
+   "20260620",
+   "20260621"
+  ],
+  "home_id": "20",
+  "away_id": "18",
+  "home": "Ecuador",
+  "away": "Curaçao"
+ },
+ {
+  "match_id": "35",
+  "date": "2026-06-20",
+  "ko": "17:00",
+  "buckets": [
+   "20260620"
+  ],
+  "home_id": "21",
+  "away_id": "23",
+  "home": "Netherlands",
+  "away": "Sweden"
+ },
+ {
+  "match_id": "36",
+  "date": "2026-06-21",
+  "ko": "04:00",
+  "buckets": [
+   "20260620",
+   "20260621"
+  ],
+  "home_id": "24",
+  "away_id": "22",
+  "home": "Tunisia",
+  "away": "Japan"
+ },
+ {
+  "match_id": "37",
+  "date": "2026-06-21",
+  "ko": "19:00",
+  "buckets": [
+   "20260621"
+  ],
+  "home_id": "25",
+  "away_id": "27",
+  "home": "Belgium",
+  "away": "IR Iran"
+ },
+ {
+  "match_id": "38",
+  "date": "2026-06-22",
+  "ko": "01:00",
+  "buckets": [
+   "20260621",
+   "20260622"
+  ],
+  "home_id": "28",
+  "away_id": "26",
+  "home": "New Zealand",
+  "away": "Egypt"
+ },
+ {
+  "match_id": "39",
+  "date": "2026-06-21",
+  "ko": "16:00",
+  "buckets": [
+   "20260621"
+  ],
+  "home_id": "29",
+  "away_id": "31",
+  "home": "Spain",
+  "away": "Saudi Arabia"
+ },
+ {
+  "match_id": "40",
+  "date": "2026-06-21",
+  "ko": "22:00",
+  "buckets": [
+   "20260621"
+  ],
+  "home_id": "32",
+  "away_id": "30",
+  "home": "Uruguay",
+  "away": "Cabo Verde"
+ },
+ {
+  "match_id": "41",
+  "date": "2026-06-22",
+  "ko": "21:00",
+  "buckets": [
+   "20260622"
+  ],
+  "home_id": "33",
+  "away_id": "35",
+  "home": "France",
+  "away": "Iraq"
+ },
+ {
+  "match_id": "42",
+  "date": "2026-06-23",
+  "ko": "00:00",
+  "buckets": [
+   "20260622",
+   "20260623"
+  ],
+  "home_id": "36",
+  "away_id": "34",
+  "home": "Norway",
+  "away": "Senegal"
+ },
+ {
+  "match_id": "43",
+  "date": "2026-06-22",
+  "ko": "17:00",
+  "buckets": [
+   "20260622"
+  ],
+  "home_id": "37",
+  "away_id": "39",
+  "home": "Argentina",
+  "away": "Austria"
+ },
+ {
+  "match_id": "44",
+  "date": "2026-06-23",
+  "ko": "03:00",
+  "buckets": [
+   "20260622",
+   "20260623"
+  ],
+  "home_id": "40",
+  "away_id": "38",
+  "home": "Jordan",
+  "away": "Algeria"
+ },
+ {
+  "match_id": "45",
+  "date": "2026-06-23",
+  "ko": "17:00",
+  "buckets": [
+   "20260623"
+  ],
+  "home_id": "41",
+  "away_id": "43",
+  "home": "Portugal",
+  "away": "Uzbekistan"
+ },
+ {
+  "match_id": "46",
+  "date": "2026-06-24",
+  "ko": "02:00",
+  "buckets": [
+   "20260623",
+   "20260624"
+  ],
+  "home_id": "44",
+  "away_id": "42",
+  "home": "Colombia",
+  "away": "Congo DR"
+ },
+ {
+  "match_id": "47",
+  "date": "2026-06-23",
+  "ko": "20:00",
+  "buckets": [
+   "20260623"
+  ],
+  "home_id": "45",
+  "away_id": "47",
+  "home": "England",
+  "away": "Ghana"
+ },
+ {
+  "match_id": "48",
+  "date": "2026-06-23",
+  "ko": "23:00",
+  "buckets": [
+   "20260623"
+  ],
+  "home_id": "48",
+  "away_id": "46",
+  "home": "Panama",
+  "away": "Croatia"
+ },
+ {
+  "match_id": "49",
+  "date": "2026-06-25",
+  "ko": "01:00",
+  "buckets": [
+   "20260624",
+   "20260625"
+  ],
+  "home_id": "4",
+  "away_id": "1",
+  "home": "Czechia",
+  "away": "Mexico"
+ },
+ {
+  "match_id": "50",
+  "date": "2026-06-25",
+  "ko": "01:00",
+  "buckets": [
+   "20260624",
+   "20260625"
+  ],
+  "home_id": "2",
+  "away_id": "3",
+  "home": "South Africa",
+  "away": "South Korea"
+ },
+ {
+  "match_id": "51",
+  "date": "2026-06-24",
+  "ko": "19:00",
+  "buckets": [
+   "20260624"
+  ],
+  "home_id": "8",
+  "away_id": "5",
+  "home": "Switzerland",
+  "away": "Canada"
+ },
+ {
+  "match_id": "52",
+  "date": "2026-06-24",
+  "ko": "19:00",
+  "buckets": [
+   "20260624"
+  ],
+  "home_id": "6",
+  "away_id": "7",
+  "home": "Bosnia and Herzegovina",
+  "away": "Qatar"
+ },
+ {
+  "match_id": "53",
+  "date": "2026-06-24",
+  "ko": "22:00",
+  "buckets": [
+   "20260624"
+  ],
+  "home_id": "12",
+  "away_id": "9",
+  "home": "Scotland",
+  "away": "Brazil"
+ },
+ {
+  "match_id": "54",
+  "date": "2026-06-24",
+  "ko": "22:00",
+  "buckets": [
+   "20260624"
+  ],
+  "home_id": "10",
+  "away_id": "11",
+  "home": "Morocco",
+  "away": "Haiti"
+ },
+ {
+  "match_id": "55",
+  "date": "2026-06-26",
+  "ko": "02:00",
+  "buckets": [
+   "20260625",
+   "20260626"
+  ],
+  "home_id": "16",
+  "away_id": "13",
+  "home": "Türkiye",
+  "away": "USA"
+ },
+ {
+  "match_id": "56",
+  "date": "2026-06-26",
+  "ko": "02:00",
+  "buckets": [
+   "20260625",
+   "20260626"
+  ],
+  "home_id": "14",
+  "away_id": "15",
+  "home": "Paraguay",
+  "away": "Australia"
+ },
+ {
+  "match_id": "57",
+  "date": "2026-06-25",
+  "ko": "20:00",
+  "buckets": [
+   "20260625"
+  ],
+  "home_id": "20",
+  "away_id": "17",
+  "home": "Ecuador",
+  "away": "Germany"
+ },
+ {
+  "match_id": "58",
+  "date": "2026-06-25",
+  "ko": "20:00",
+  "buckets": [
+   "20260625"
+  ],
+  "home_id": "18",
+  "away_id": "19",
+  "home": "Curaçao",
+  "away": "Côte d'Ivoire"
+ },
+ {
+  "match_id": "59",
+  "date": "2026-06-25",
+  "ko": "23:00",
+  "buckets": [
+   "20260625"
+  ],
+  "home_id": "24",
+  "away_id": "21",
+  "home": "Tunisia",
+  "away": "Netherlands"
+ },
+ {
+  "match_id": "60",
+  "date": "2026-06-25",
+  "ko": "23:00",
+  "buckets": [
+   "20260625"
+  ],
+  "home_id": "22",
+  "away_id": "23",
+  "home": "Japan",
+  "away": "Sweden"
+ },
+ {
+  "match_id": "61",
+  "date": "2026-06-27",
+  "ko": "03:00",
+  "buckets": [
+   "20260626",
+   "20260627"
+  ],
+  "home_id": "28",
+  "away_id": "25",
+  "home": "New Zealand",
+  "away": "Belgium"
+ },
+ {
+  "match_id": "62",
+  "date": "2026-06-27",
+  "ko": "03:00",
+  "buckets": [
+   "20260626",
+   "20260627"
+  ],
+  "home_id": "26",
+  "away_id": "27",
+  "home": "Egypt",
+  "away": "IR Iran"
+ },
+ {
+  "match_id": "63",
+  "date": "2026-06-27",
+  "ko": "00:00",
+  "buckets": [
+   "20260626",
+   "20260627"
+  ],
+  "home_id": "32",
+  "away_id": "29",
+  "home": "Uruguay",
+  "away": "Spain"
+ },
+ {
+  "match_id": "64",
+  "date": "2026-06-27",
+  "ko": "00:00",
+  "buckets": [
+   "20260626",
+   "20260627"
+  ],
+  "home_id": "30",
+  "away_id": "31",
+  "home": "Cabo Verde",
+  "away": "Saudi Arabia"
+ },
+ {
+  "match_id": "65",
+  "date": "2026-06-26",
+  "ko": "19:00",
+  "buckets": [
+   "20260626"
+  ],
+  "home_id": "36",
+  "away_id": "33",
+  "home": "Norway",
+  "away": "France"
+ },
+ {
+  "match_id": "66",
+  "date": "2026-06-26",
+  "ko": "19:00",
+  "buckets": [
+   "20260626"
+  ],
+  "home_id": "34",
+  "away_id": "35",
+  "home": "Senegal",
+  "away": "Iraq"
+ },
+ {
+  "match_id": "67",
+  "date": "2026-06-28",
+  "ko": "02:00",
+  "buckets": [
+   "20260627",
+   "20260628"
+  ],
+  "home_id": "40",
+  "away_id": "37",
+  "home": "Jordan",
+  "away": "Argentina"
+ },
+ {
+  "match_id": "68",
+  "date": "2026-06-28",
+  "ko": "02:00",
+  "buckets": [
+   "20260627",
+   "20260628"
+  ],
+  "home_id": "38",
+  "away_id": "39",
+  "home": "Algeria",
+  "away": "Austria"
+ },
+ {
+  "match_id": "69",
+  "date": "2026-06-27",
+  "ko": "23:30",
+  "buckets": [
+   "20260627"
+  ],
+  "home_id": "44",
+  "away_id": "41",
+  "home": "Colombia",
+  "away": "Portugal"
+ },
+ {
+  "match_id": "70",
+  "date": "2026-06-27",
+  "ko": "23:30",
+  "buckets": [
+   "20260627"
+  ],
+  "home_id": "42",
+  "away_id": "43",
+  "home": "Congo DR",
+  "away": "Uzbekistan"
+ },
+ {
+  "match_id": "71",
+  "date": "2026-06-27",
+  "ko": "21:00",
+  "buckets": [
+   "20260627"
+  ],
+  "home_id": "48",
+  "away_id": "45",
+  "home": "Panama",
+  "away": "England"
+ },
+ {
+  "match_id": "72",
+  "date": "2026-06-27",
+  "ko": "21:00",
+  "buckets": [
+   "20260627"
+  ],
+  "home_id": "46",
+  "away_id": "47",
+  "home": "Croatia",
+  "away": "Ghana"
+ },
+ {
+  "match_id": "73",
+  "date": "2026-06-28",
+  "ko": "19:00",
+  "buckets": [
+   "20260628"
+  ],
+  "home_id": "2",
+  "away_id": "5",
+  "home": "South Africa",
+  "away": "Canada"
+ },
+ {
+  "match_id": "74",
+  "date": "2026-06-29",
+  "ko": "17:00",
+  "buckets": [
+   "20260629"
+  ],
+  "home_id": "9",
+  "away_id": "22",
+  "home": "Brazil",
+  "away": "Japan"
+ },
+ {
+  "match_id": "75",
+  "date": "2026-06-29",
+  "ko": "20:30",
+  "buckets": [
+   "20260629"
+  ],
+  "home_id": "17",
+  "away_id": "14",
+  "home": "Germany",
+  "away": "Paraguay"
+ },
+ {
+  "match_id": "76",
+  "date": "2026-06-30",
+  "ko": "01:00",
+  "buckets": [
+   "20260629",
+   "20260630"
+  ],
+  "home_id": "21",
+  "away_id": "10",
+  "home": "Netherlands",
+  "away": "Morocco"
+ },
+ {
+  "match_id": "77",
+  "date": "2026-06-30",
+  "ko": "17:00",
+  "buckets": [
+   "20260630"
+  ],
+  "home_id": "19",
+  "away_id": "36",
+  "home": "Côte d'Ivoire",
+  "away": "Norway"
+ },
+ {
+  "match_id": "78",
+  "date": "2026-06-30",
+  "ko": "21:00",
+  "buckets": [
+   "20260630"
+  ],
+  "home_id": "33",
+  "away_id": "23",
+  "home": "France",
+  "away": "Sweden"
+ },
+ {
+  "match_id": "79",
+  "date": "2026-07-01",
+  "ko": "02:00",
+  "buckets": [
+   "20260630",
+   "20260701"
+  ],
+  "home_id": "1",
+  "away_id": "20",
+  "home": "Mexico",
+  "away": "Ecuador"
+ },
+ {
+  "match_id": "80",
+  "date": "2026-07-01",
+  "ko": "16:00",
+  "buckets": [
+   "20260701"
+  ],
+  "home_id": "45",
+  "away_id": "42",
+  "home": "England",
+  "away": "Congo DR"
+ },
+ {
+  "match_id": "81",
+  "date": "2026-07-01",
+  "ko": "20:00",
+  "buckets": [
+   "20260701"
+  ],
+  "home_id": "25",
+  "away_id": "34",
+  "home": "Belgium",
+  "away": "Senegal"
+ },
+ {
+  "match_id": "82",
+  "date": "2026-07-02",
+  "ko": "00:00",
+  "buckets": [
+   "20260701",
+   "20260702"
+  ],
+  "home_id": "13",
+  "away_id": "6",
+  "home": "USA",
+  "away": "Bosnia and Herzegovina"
+ },
+ {
+  "match_id": "83",
+  "date": "2026-07-02",
+  "ko": "19:00",
+  "buckets": [
+   "20260702"
+  ],
+  "home_id": "29",
+  "away_id": "39",
+  "home": "Spain",
+  "away": "Austria"
+ },
+ {
+  "match_id": "84",
+  "date": "2026-07-02",
+  "ko": "23:00",
+  "buckets": [
+   "20260702"
+  ],
+  "home_id": "41",
+  "away_id": "46",
+  "home": "Portugal",
+  "away": "Croatia"
+ },
+ {
+  "match_id": "85",
+  "date": "2026-07-03",
+  "ko": "03:00",
+  "buckets": [
+   "20260702",
+   "20260703"
+  ],
+  "home_id": "8",
+  "away_id": "38",
+  "home": "Switzerland",
+  "away": "Algeria"
+ },
+ {
+  "match_id": "86",
+  "date": "2026-07-03",
+  "ko": "18:00",
+  "buckets": [
+   "20260703"
+  ],
+  "home_id": "15",
+  "away_id": "26",
+  "home": "Australia",
+  "away": "Egypt"
+ },
+ {
+  "match_id": "87",
+  "date": "2026-07-03",
+  "ko": "22:00",
+  "buckets": [
+   "20260703"
+  ],
+  "home_id": "37",
+  "away_id": "30",
+  "home": "Argentina",
+  "away": "Cabo Verde"
+ },
+ {
+  "match_id": "88",
+  "date": "2026-07-04",
+  "ko": "01:30",
+  "buckets": [
+   "20260703",
+   "20260704"
+  ],
+  "home_id": "44",
+  "away_id": "47",
+  "home": "Colombia",
+  "away": "Ghana"
+ },
+ {
+  "match_id": "89",
+  "date": "2026-07-04",
+  "ko": "21:00",
+  "buckets": [
+   "20260704"
+  ],
+  "home_id": "14",
+  "away_id": "33",
+  "home": "Paraguay",
+  "away": "France"
+ },
+ {
+  "match_id": "90",
+  "date": "2026-07-04",
+  "ko": "17:00",
+  "buckets": [
+   "20260704"
+  ],
+  "home_id": "5",
+  "away_id": "10",
+  "home": "Canada",
+  "away": "Morocco"
+ },
+ {
+  "match_id": "91",
+  "date": "2026-07-05",
+  "ko": "20:00",
+  "buckets": [
+   "20260705"
+  ],
+  "home_id": "9",
+  "away_id": "36",
+  "home": "Brazil",
+  "away": "Norway"
+ },
+ {
+  "match_id": "92",
+  "date": "2026-07-06",
+  "ko": "01:00",
+  "buckets": [
+   "20260705",
+   "20260706"
+  ],
+  "home_id": "1",
+  "away_id": "45",
+  "home": "Mexico",
+  "away": "England"
+ },
+ {
+  "match_id": "93",
+  "date": "2026-07-06",
+  "ko": "19:00",
+  "buckets": [
+   "20260706"
+  ],
+  "home_id": "41",
+  "away_id": "29",
+  "home": "Portugal",
+  "away": "Spain"
+ },
+ {
+  "match_id": "94",
+  "date": "2026-07-07",
+  "ko": "00:00",
+  "buckets": [
+   "20260706",
+   "20260707"
+  ],
+  "home_id": "13",
+  "away_id": "25",
+  "home": "USA",
+  "away": "Belgium"
+ },
+ {
+  "match_id": "95",
+  "date": "2026-07-07",
+  "ko": "16:00",
+  "buckets": [
+   "20260707"
+  ],
+  "home_id": "37",
+  "away_id": "26",
+  "home": "Argentina",
+  "away": "Egypt"
+ },
+ {
+  "match_id": "96",
+  "date": "2026-07-07",
+  "ko": "20:00",
+  "buckets": [
+   "20260707"
+  ],
+  "home_id": "8",
+  "away_id": "44",
+  "home": "Switzerland",
+  "away": "Colombia"
+ },
+ {
+  "match_id": "97",
+  "date": "2026-07-09",
+  "ko": "20:00",
+  "buckets": [
+   "20260709"
+  ],
+  "home_id": "33",
+  "away_id": "10",
+  "home": "France",
+  "away": "Morocco"
+ },
+ {
+  "match_id": "98",
+  "date": "2026-07-10",
+  "ko": "19:00",
+  "buckets": [
+   "20260710"
+  ],
+  "home_id": "29",
+  "away_id": "25",
+  "home": "Spain",
+  "away": "Belgium"
+ },
+ {
+  "match_id": "99",
+  "date": "2026-07-11",
+  "ko": "21:00",
+  "buckets": [
+   "20260711"
+  ],
+  "home_id": "36",
+  "away_id": "45",
+  "home": "Norway",
+  "away": "England"
+ },
+ {
+  "match_id": "100",
+  "date": "2026-07-12",
+  "ko": "01:00",
+  "buckets": [
+   "20260711",
+   "20260712"
+  ],
+  "home_id": "37",
+  "away_id": "8",
+  "home": "Argentina",
+  "away": "Switzerland"
+ },
+ {
+  "match_id": "101",
+  "date": "2026-07-14",
+  "ko": "19:00",
+  "buckets": [
+   "20260714"
+  ],
+  "home_id": "33",
+  "away_id": "29",
+  "home": "France",
+  "away": "Spain"
+ },
+ {
+  "match_id": "102",
+  "date": "2026-07-15",
+  "ko": "19:00",
+  "buckets": [
+   "20260715"
+  ],
+  "home_id": "45",
+  "away_id": "37",
+  "home": "England",
+  "away": "Argentina"
+ },
+ {
+  "match_id": "103",
+  "date": "2026-07-18",
+  "ko": "21:00",
+  "buckets": [
+   "20260718"
+  ],
+  "home_id": "33",
+  "away_id": "45",
+  "home": "France",
+  "away": "England"
+ },
+ {
+  "match_id": "104",
+  "date": "2026-07-19",
+  "ko": "19:00",
+  "buckets": [
+   "20260719"
+  ],
+  "home_id": "29",
+  "away_id": "37",
+  "home": "Spain",
+  "away": "Argentina"
+ }
+]

@@ -1,0 +1,522 @@
+{
+ "1": {
+  "gameId": "760415",
+  "home": "MEX",
+  "away": "RSA"
+ },
+ "2": {
+  "gameId": "760414",
+  "home": "KOR",
+  "away": "CZE"
+ },
+ "3": {
+  "gameId": "760416",
+  "home": "CAN",
+  "away": "BIH"
+ },
+ "4": {
+  "gameId": "760417",
+  "home": "USA",
+  "away": "PAR"
+ },
+ "5": {
+  "gameId": "760420",
+  "home": "QAT",
+  "away": "SUI"
+ },
+ "6": {
+  "gameId": "760419",
+  "home": "BRA",
+  "away": "MAR"
+ },
+ "7": {
+  "gameId": "760418",
+  "home": "HAI",
+  "away": "SCO"
+ },
+ "8": {
+  "gameId": "760421",
+  "home": "AUS",
+  "away": "TUR"
+ },
+ "9": {
+  "gameId": "760422",
+  "home": "GER",
+  "away": "CUW"
+ },
+ "10": {
+  "gameId": "760425",
+  "home": "NED",
+  "away": "JPN"
+ },
+ "11": {
+  "gameId": "760423",
+  "home": "CIV",
+  "away": "ECU"
+ },
+ "12": {
+  "gameId": "760424",
+  "home": "SWE",
+  "away": "TUN"
+ },
+ "13": {
+  "gameId": "760428",
+  "home": "ESP",
+  "away": "CPV"
+ },
+ "14": {
+  "gameId": "760426",
+  "home": "BEL",
+  "away": "EGY"
+ },
+ "15": {
+  "gameId": "760429",
+  "home": "KSA",
+  "away": "URU"
+ },
+ "16": {
+  "gameId": "760427",
+  "home": "IRN",
+  "away": "NZL"
+ },
+ "17": {
+  "gameId": "760432",
+  "home": "FRA",
+  "away": "SEN"
+ },
+ "18": {
+  "gameId": "760430",
+  "home": "IRQ",
+  "away": "NOR"
+ },
+ "19": {
+  "gameId": "760433",
+  "home": "ARG",
+  "away": "ALG"
+ },
+ "20": {
+  "gameId": "760431",
+  "home": "AUT",
+  "away": "JOR"
+ },
+ "21": {
+  "gameId": "760435",
+  "home": "POR",
+  "away": "COD"
+ },
+ "22": {
+  "gameId": "760437",
+  "home": "ENG",
+  "away": "CRO"
+ },
+ "23": {
+  "gameId": "760434",
+  "home": "GHA",
+  "away": "PAN"
+ },
+ "24": {
+  "gameId": "760436",
+  "home": "UZB",
+  "away": "COL"
+ },
+ "25": {
+  "gameId": "760441",
+  "home": "MEX",
+  "away": "KOR"
+ },
+ "26": {
+  "gameId": "760438",
+  "home": "CZE",
+  "away": "RSA"
+ },
+ "27": {
+  "gameId": "760440",
+  "home": "CAN",
+  "away": "QAT"
+ },
+ "28": {
+  "gameId": "760439",
+  "home": "SUI",
+  "away": "BIH"
+ },
+ "29": {
+  "gameId": "760444",
+  "home": "BRA",
+  "away": "HAI"
+ },
+ "30": {
+  "gameId": "760445",
+  "home": "SCO",
+  "away": "MAR"
+ },
+ "31": {
+  "gameId": "760442",
+  "home": "USA",
+  "away": "AUS"
+ },
+ "32": {
+  "gameId": "760443",
+  "home": "TUR",
+  "away": "PAR"
+ },
+ "33": {
+  "gameId": "760448",
+  "home": "GER",
+  "away": "CIV"
+ },
+ "34": {
+  "gameId": "760446",
+  "home": "ECU",
+  "away": "CUW"
+ },
+ "35": {
+  "gameId": "760447",
+  "home": "NED",
+  "away": "SWE"
+ },
+ "36": {
+  "gameId": "760449",
+  "home": "TUN",
+  "away": "JPN"
+ },
+ "37": {
+  "gameId": "760451",
+  "home": "BEL",
+  "away": "IRN"
+ },
+ "38": {
+  "gameId": "760452",
+  "home": "NZL",
+  "away": "EGY"
+ },
+ "39": {
+  "gameId": "760453",
+  "home": "ESP",
+  "away": "KSA"
+ },
+ "40": {
+  "gameId": "760450",
+  "home": "URU",
+  "away": "CPV"
+ },
+ "41": {
+  "gameId": "760457",
+  "home": "FRA",
+  "away": "IRQ"
+ },
+ "42": {
+  "gameId": "760454",
+  "home": "NOR",
+  "away": "SEN"
+ },
+ "43": {
+  "gameId": "760456",
+  "home": "ARG",
+  "away": "AUT"
+ },
+ "44": {
+  "gameId": "760455",
+  "home": "JOR",
+  "away": "ALG"
+ },
+ "45": {
+  "gameId": "760461",
+  "home": "POR",
+  "away": "UZB"
+ },
+ "46": {
+  "gameId": "760459",
+  "home": "COL",
+  "away": "COD"
+ },
+ "47": {
+  "gameId": "760458",
+  "home": "ENG",
+  "away": "GHA"
+ },
+ "48": {
+  "gameId": "760460",
+  "home": "PAN",
+  "away": "CRO"
+ },
+ "49": {
+  "gameId": "760467",
+  "home": "CZE",
+  "away": "MEX"
+ },
+ "50": {
+  "gameId": "760466",
+  "home": "RSA",
+  "away": "KOR"
+ },
+ "51": {
+  "gameId": "760463",
+  "home": "SUI",
+  "away": "CAN"
+ },
+ "52": {
+  "gameId": "760462",
+  "home": "BIH",
+  "away": "QAT"
+ },
+ "53": {
+  "gameId": "760465",
+  "home": "SCO",
+  "away": "BRA"
+ },
+ "54": {
+  "gameId": "760464",
+  "home": "MAR",
+  "away": "HAI"
+ },
+ "55": {
+  "gameId": "760470",
+  "home": "TUR",
+  "away": "USA"
+ },
+ "56": {
+  "gameId": "760469",
+  "home": "PAR",
+  "away": "AUS"
+ },
+ "57": {
+  "gameId": "760468",
+  "home": "ECU",
+  "away": "GER"
+ },
+ "58": {
+  "gameId": "760473",
+  "home": "CUW",
+  "away": "CIV"
+ },
+ "59": {
+  "gameId": "760472",
+  "home": "TUN",
+  "away": "NED"
+ },
+ "60": {
+  "gameId": "760471",
+  "home": "JPN",
+  "away": "SWE"
+ },
+ "61": {
+  "gameId": "760477",
+  "home": "NZL",
+  "away": "BEL"
+ },
+ "62": {
+  "gameId": "760476",
+  "home": "EGY",
+  "away": "IRN"
+ },
+ "63": {
+  "gameId": "760479",
+  "home": "URU",
+  "away": "ESP"
+ },
+ "64": {
+  "gameId": "760478",
+  "home": "CPV",
+  "away": "KSA"
+ },
+ "65": {
+  "gameId": "760475",
+  "home": "NOR",
+  "away": "FRA"
+ },
+ "66": {
+  "gameId": "760474",
+  "home": "SEN",
+  "away": "IRQ"
+ },
+ "67": {
+  "gameId": "760483",
+  "home": "JOR",
+  "away": "ARG"
+ },
+ "68": {
+  "gameId": "760484",
+  "home": "ALG",
+  "away": "AUT"
+ },
+ "69": {
+  "gameId": "760481",
+  "home": "COL",
+  "away": "POR"
+ },
+ "70": {
+  "gameId": "760482",
+  "home": "COD",
+  "away": "UZB"
+ },
+ "71": {
+  "gameId": "760485",
+  "home": "PAN",
+  "away": "ENG"
+ },
+ "72": {
+  "gameId": "760480",
+  "home": "CRO",
+  "away": "GHA"
+ },
+ "73": {
+  "gameId": "760486",
+  "home": "RSA",
+  "away": "CAN"
+ },
+ "74": {
+  "gameId": "760487",
+  "home": "BRA",
+  "away": "JPN"
+ },
+ "75": {
+  "gameId": "760489",
+  "home": "GER",
+  "away": "PAR"
+ },
+ "76": {
+  "gameId": "760488",
+  "home": "NED",
+  "away": "MAR"
+ },
+ "77": {
+  "gameId": "760490",
+  "home": "CIV",
+  "away": "NOR"
+ },
+ "78": {
+  "gameId": "760492",
+  "home": "FRA",
+  "away": "SWE"
+ },
+ "79": {
+  "gameId": "760491",
+  "home": "MEX",
+  "away": "ECU"
+ },
+ "80": {
+  "gameId": "760495",
+  "home": "ENG",
+  "away": "COD"
+ },
+ "81": {
+  "gameId": "760493",
+  "home": "BEL",
+  "away": "SEN"
+ },
+ "82": {
+  "gameId": "760494",
+  "home": "USA",
+  "away": "BIH"
+ },
+ "83": {
+  "gameId": "760497",
+  "home": "ESP",
+  "away": "AUT"
+ },
+ "84": {
+  "gameId": "760496",
+  "home": "POR",
+  "away": "CRO"
+ },
+ "85": {
+  "gameId": "760498",
+  "home": "SUI",
+  "away": "ALG"
+ },
+ "86": {
+  "gameId": "760499",
+  "home": "AUS",
+  "away": "EGY"
+ },
+ "87": {
+  "gameId": "760500",
+  "home": "ARG",
+  "away": "CPV"
+ },
+ "88": {
+  "gameId": "760501",
+  "home": "COL",
+  "away": "GHA"
+ },
+ "89": {
+  "gameId": "760503",
+  "home": "PAR",
+  "away": "FRA"
+ },
+ "90": {
+  "gameId": "760502",
+  "home": "CAN",
+  "away": "MAR"
+ },
+ "91": {
+  "gameId": "760504",
+  "home": "BRA",
+  "away": "NOR"
+ },
+ "92": {
+  "gameId": "760505",
+  "home": "MEX",
+  "away": "ENG"
+ },
+ "93": {
+  "gameId": "760506",
+  "home": "POR",
+  "away": "ESP"
+ },
+ "94": {
+  "gameId": "760507",
+  "home": "USA",
+  "away": "BEL"
+ },
+ "95": {
+  "gameId": "760509",
+  "home": "ARG",
+  "away": "EGY"
+ },
+ "96": {
+  "gameId": "760508",
+  "home": "SUI",
+  "away": "COL"
+ },
+ "97": {
+  "gameId": "760510",
+  "home": "FRA",
+  "away": "MAR"
+ },
+ "98": {
+  "gameId": "760511",
+  "home": "ESP",
+  "away": "BEL"
+ },
+ "99": {
+  "gameId": "760512",
+  "home": "NOR",
+  "away": "ENG"
+ },
+ "100": {
+  "gameId": "760513",
+  "home": "ARG",
+  "away": "SUI"
+ },
+ "101": {
+  "gameId": "760514",
+  "home": "FRA",
+  "away": "ESP"
+ },
+ "102": {
+  "gameId": "760515",
+  "home": "ENG",
+  "away": "ARG"
+ },
+ "103": {
+  "gameId": "760516",
+  "home": "FRA",
+  "away": "ENG"
+ },
+ "104": {
+  "gameId": "760517",
+  "home": "ESP",
+  "away": "ARG"
+ }
+}

@@ -1,0 +1,105 @@
+match_id,competition,season,match_date,kickoff_time_utc,stage,group,round,venue,city,country,home_team,away_team,home_score,away_score,home_penalty_score,away_penalty_score,result_type,status,attendance,referee,fifa_match_id,data_source
+1,FIFA World Cup 2026,2026,2026-06-11,19:00,Group Stage,Group A,1,Mexico City Stadium,Mexico City,Mexico,Mexico,South Africa,2,0,,,Regular,Completed,80824,Wilton SAMPAIO,400021443,api.fifa.com
+2,FIFA World Cup 2026,2026,2026-06-12,02:00,Group Stage,Group A,2,Guadalajara Stadium,Guadalajara,Mexico,Korea Republic,Czechia,2,1,,,Regular,Completed,44985,Amin Mohamed Omar,400021441,api.fifa.com
+3,FIFA World Cup 2026,2026,2026-06-12,19:00,Group Stage,Group B,3,Toronto Stadium,Toronto,Canada,Canada,Bosnia and Herzegovina,1,1,,,Regular,Completed,43002,Facundo TELLO,400021449,api.fifa.com
+4,FIFA World Cup 2026,2026,2026-06-13,01:00,Group Stage,Group D,4,Los Angeles Stadium,Los Angeles,United States,USA,Paraguay,4,1,,,Regular,Completed,70492,Danny Desmond Makkelie,400021458,api.fifa.com
+5,FIFA World Cup 2026,2026,2026-06-13,19:00,Group Stage,Group B,8,San Francisco Bay Area Stadium,San Francisco Bay Area,United States,Qatar,Switzerland,1,1,,,Regular,Completed,67966,Said MARTINEZ,400021447,api.fifa.com
+6,FIFA World Cup 2026,2026,2026-06-13,22:00,Group Stage,Group C,7,New York/New Jersey Stadium,New Jersey,United States,Brazil,Morocco,1,1,,,Regular,Completed,80663,Slavko VINCIC,400021456,api.fifa.com
+7,FIFA World Cup 2026,2026,2026-06-14,01:00,Group Stage,Group C,5,Boston Stadium,Boston,United States,Haiti,Scotland,0,1,,,Regular,Completed,64146,Mustapha Ghorbal,400021453,api.fifa.com
+8,FIFA World Cup 2026,2026,2026-06-14,04:00,Group Stage,Group D,6,BC Place Vancouver,Vancouver,Canada,Australia,Türkiye,2,0,,,Regular,Completed,52497,Jesús Valenzuela Sáez,400021463,api.fifa.com
+9,FIFA World Cup 2026,2026,2026-06-14,17:00,Group Stage,Group E,10,Houston Stadium,Houston,United States,Germany,Curaçao,7,1,,,Regular,Completed,68021,Jalal Jayed,400021464,api.fifa.com
+10,FIFA World Cup 2026,2026,2026-06-14,20:00,Group Stage,Group F,11,Dallas Stadium,Dallas,United States,Netherlands,Japan,2,2,,,Regular,Completed,69285,Ismail Elfath,400021470,api.fifa.com
+11,FIFA World Cup 2026,2026,2026-06-14,23:00,Group Stage,Group E,9,Philadelphia Stadium,Philadelphia,United States,Côte d'Ivoire,Ecuador,1,0,,,Regular,Completed,68274,François Letexier,400021467,api.fifa.com
+12,FIFA World Cup 2026,2026,2026-06-15,02:00,Group Stage,Group F,12,Monterrey Stadium,Monterrey,Mexico,Sweden,Tunisia,5,1,,,Regular,Completed,50987,Yael Falcón Pérez,400021474,api.fifa.com
+13,FIFA World Cup 2026,2026,2026-06-15,16:00,Group Stage,Group H,14,Atlanta Stadium,Atlanta,United States,Spain,Cabo Verde,0,0,,,Regular,Completed,67640,Adham Mohammad Tumah Makhadmeh,400021482,api.fifa.com
+14,FIFA World Cup 2026,2026,2026-06-15,19:00,Group Stage,Group G,16,Seattle Stadium,Seattle,United States,Belgium,Egypt,1,1,,,Regular,Completed,66775,Ramon ABATTI,400021478,api.fifa.com
+15,FIFA World Cup 2026,2026,2026-06-15,22:00,Group Stage,Group H,13,Miami Stadium,Miami,United States,Saudi Arabia,Uruguay,1,1,,,Regular,Completed,62764,Maurizio Mariani,400021486,api.fifa.com
+16,FIFA World Cup 2026,2026,2026-06-16,01:00,Group Stage,Group G,15,Los Angeles Stadium,Los Angeles,United States,IR Iran,New Zealand,2,2,,,Regular,Completed,70108,César Arturo Ramos Palazuelos,400021476,api.fifa.com
+17,FIFA World Cup 2026,2026,2026-06-16,19:00,Group Stage,Group I,17,New York/New Jersey Stadium,New Jersey,United States,France,Senegal,3,1,,,Regular,Completed,80545,Alireza FAGHANI,400021490,api.fifa.com
+18,FIFA World Cup 2026,2026,2026-06-16,22:00,Group Stage,Group I,18,Boston Stadium,Boston,United States,Iraq,Norway,1,4,,,Regular,Completed,63106,Pierre Ghislain Atcho,400021488,api.fifa.com
+19,FIFA World Cup 2026,2026,2026-06-17,01:00,Group Stage,Group J,19,Kansas City Stadium,Kansas City,United States,Argentina,Algeria,3,0,,,Regular,Completed,69045,Szymon MARCINIAK,400021496,api.fifa.com
+20,FIFA World Cup 2026,2026,2026-06-17,04:00,Group Stage,Group J,20,San Francisco Bay Area Stadium,San Francisco Bay Area,United States,Austria,Jordan,3,1,,,Regular,Completed,68527,Dahane BEIDA,400021498,api.fifa.com
+21,FIFA World Cup 2026,2026,2026-06-17,17:00,Group Stage,Group K,23,Houston Stadium,Houston,United States,Portugal,Congo DR,1,1,,,Regular,Completed,68777,Abdulrahman AL JASSIM,400021502,api.fifa.com
+22,FIFA World Cup 2026,2026,2026-06-17,20:00,Group Stage,Group L,22,Dallas Stadium,Dallas,United States,England,Croatia,4,2,,,Regular,Completed,70389,Clément Turpin,400021507,api.fifa.com
+23,FIFA World Cup 2026,2026,2026-06-17,23:00,Group Stage,Group L,21,Toronto Stadium,Toronto,Canada,Ghana,Panama,1,0,,,Regular,Completed,42942,Glenn Nyberg,400021510,api.fifa.com
+24,FIFA World Cup 2026,2026,2026-06-18,02:00,Group Stage,Group K,24,Mexico City Stadium,Mexico City,Mexico,Uzbekistan,Colombia,1,3,,,Regular,Completed,80824,Anthony Taylor,400021504,api.fifa.com
+25,FIFA World Cup 2026,2026,2026-06-19,01:00,Group Stage,Group A,28,Guadalajara Stadium,Guadalajara,Mexico,Mexico,Korea Republic,1,0,,,Regular,Completed,45522,Gustavo Tejera,400021442,api.fifa.com
+26,FIFA World Cup 2026,2026,2026-06-18,16:00,Group Stage,Group A,25,Atlanta Stadium,Atlanta,United States,Czechia,South Africa,1,1,,,Regular,Completed,67442,Tori Penso,400021440,api.fifa.com
+27,FIFA World Cup 2026,2026,2026-06-18,22:00,Group Stage,Group B,27,BC Place Vancouver,Vancouver,Canada,Canada,Qatar,6,0,,,Regular,Completed,52497,Cristián Marcelo Garay Reyes,400021450,api.fifa.com
+28,FIFA World Cup 2026,2026,2026-06-18,19:00,Group Stage,Group B,26,Los Angeles Stadium,Los Angeles,United States,Switzerland,Bosnia and Herzegovina,4,1,,,Regular,Completed,70026,João Pedro Silva Pinheiro,400021446,api.fifa.com
+29,FIFA World Cup 2026,2026,2026-06-20,00:30,Group Stage,Group C,29,Philadelphia Stadium,Philadelphia,United States,Brazil,Haiti,3,0,,,Regular,Completed,68324,Alejandro José Hernández Hernández,400021457,api.fifa.com
+30,FIFA World Cup 2026,2026,2026-06-19,22:00,Group Stage,Group C,30,Boston Stadium,Boston,United States,Scotland,Morocco,0,1,,,Regular,Completed,64146,Ilgiz Tantashev,400021454,api.fifa.com
+31,FIFA World Cup 2026,2026,2026-06-19,19:00,Group Stage,Group D,32,Seattle Stadium,Seattle,United States,USA,Australia,2,0,,,Regular,Completed,66925,Felix Zwayer,400021462,api.fifa.com
+32,FIFA World Cup 2026,2026,2026-06-20,03:00,Group Stage,Group D,31,San Francisco Bay Area Stadium,San Francisco Bay Area,United States,Türkiye,Paraguay,0,1,,,Regular,Completed,68827,Ivan Arcides Barton Cisneros,400021460,api.fifa.com
+33,FIFA World Cup 2026,2026,2026-06-20,20:00,Group Stage,Group E,33,Toronto Stadium,Toronto,Canada,Germany,Côte d'Ivoire,2,1,,,Regular,Completed,43036,Juan Gabriel Benítez,400021469,api.fifa.com
+34,FIFA World Cup 2026,2026,2026-06-21,00:00,Group Stage,Group E,34,Kansas City Stadium,Kansas City,United States,Ecuador,Curaçao,0,0,,,Regular,Completed,68598,Ning Ma,400021465,api.fifa.com
+35,FIFA World Cup 2026,2026,2026-06-20,17:00,Group Stage,Group F,35,Houston Stadium,Houston,United States,Netherlands,Sweden,5,1,,,Regular,Completed,68777,Michael Oliver,400021472,api.fifa.com
+36,FIFA World Cup 2026,2026,2026-06-21,04:00,Group Stage,Group F,36,Monterrey Stadium,Monterrey,Mexico,Tunisia,Japan,0,4,,,Regular,Completed,51243,Istvan Kovacs,400021475,api.fifa.com
+37,FIFA World Cup 2026,2026,2026-06-21,19:00,Group Stage,Group G,39,Los Angeles Stadium,Los Angeles,United States,Belgium,IR Iran,0,0,,,Regular,Completed,70317,Darío Herrera,400021477,api.fifa.com
+38,FIFA World Cup 2026,2026,2026-06-22,01:00,Group Stage,Group G,40,BC Place Vancouver,Vancouver,Canada,New Zealand,Egypt,1,3,,,Regular,Completed,52497,Omar Mohamed Al Ali,400021480,api.fifa.com
+39,FIFA World Cup 2026,2026,2026-06-21,16:00,Group Stage,Group H,38,Atlanta Stadium,Atlanta,United States,Spain,Saudi Arabia,4,0,,,Regular,Completed,68239,Raphael Claus,400021483,api.fifa.com
+40,FIFA World Cup 2026,2026,2026-06-21,22:00,Group Stage,Group H,37,Miami Stadium,Miami,United States,Uruguay,Cabo Verde,2,2,,,Regular,Completed,64003,Espen Eskås,400021487,api.fifa.com
+41,FIFA World Cup 2026,2026,2026-06-22,21:00,Group Stage,Group I,42,Philadelphia Stadium,Philadelphia,United States,France,Iraq,3,0,,,Regular,Completed,68324,Drew Fischer,400021492,api.fifa.com
+42,FIFA World Cup 2026,2026,2026-06-23,00:00,Group Stage,Group I,41,New York/New Jersey Stadium,New Jersey,United States,Norway,Senegal,3,2,,,Regular,Completed,80663,Wilton SAMPAIO,400021491,api.fifa.com
+43,FIFA World Cup 2026,2026,2026-06-22,17:00,Group Stage,Group J,43,Dallas Stadium,Dallas,United States,Argentina,Austria,2,0,,,Regular,Completed,70649,Amin Mohamed Omar,400021494,api.fifa.com
+44,FIFA World Cup 2026,2026,2026-06-23,03:00,Group Stage,Group J,44,San Francisco Bay Area Stadium,San Francisco Bay Area,United States,Jordan,Algeria,1,2,,,Regular,Completed,68371,Slavko VINCIC,400021499,api.fifa.com
+45,FIFA World Cup 2026,2026,2026-06-23,17:00,Group Stage,Group K,47,Houston Stadium,Houston,United States,Portugal,Uzbekistan,5,0,,,Regular,Completed,68777,Jalal Jayed,400021503,api.fifa.com
+46,FIFA World Cup 2026,2026,2026-06-24,02:00,Group Stage,Group K,48,Guadalajara Stadium,Guadalajara,Mexico,Colombia,Congo DR,1,0,,,Regular,Completed,45358,Maurizio Mariani,400021501,api.fifa.com
+47,FIFA World Cup 2026,2026,2026-06-23,20:00,Group Stage,Group L,45,Boston Stadium,Boston,United States,England,Ghana,0,0,,,Regular,Completed,63983,Said MARTINEZ,400021506,api.fifa.com
+48,FIFA World Cup 2026,2026,2026-06-23,23:00,Group Stage,Group L,46,Toronto Stadium,Toronto,Canada,Panama,Croatia,0,1,,,Regular,Completed,43036,Pierre Ghislain Atcho,400021511,api.fifa.com
+49,FIFA World Cup 2026,2026,2026-06-25,01:00,Group Stage,Group A,53,Mexico City Stadium,Mexico City,Mexico,Czechia,Mexico,0,3,,,Regular,Completed,80824,Yael Falcón Pérez,400021444,api.fifa.com
+50,FIFA World Cup 2026,2026,2026-06-25,01:00,Group Stage,Group A,54,Monterrey Stadium,Monterrey,Mexico,South Africa,Korea Republic,1,0,,,Regular,Completed,51243,Facundo TELLO,400021445,api.fifa.com
+51,FIFA World Cup 2026,2026,2026-06-24,19:00,Group Stage,Group B,51,BC Place Vancouver,Vancouver,Canada,Switzerland,Canada,2,1,,,Regular,Completed,52497,Ramon ABATTI,400021451,api.fifa.com
+52,FIFA World Cup 2026,2026,2026-06-24,19:00,Group Stage,Group B,52,Seattle Stadium,Seattle,United States,Bosnia and Herzegovina,Qatar,3,1,,,Regular,Completed,66925,Jesús Valenzuela Sáez,400021448,api.fifa.com
+53,FIFA World Cup 2026,2026,2026-06-24,22:00,Group Stage,Group C,49,Miami Stadium,Miami,United States,Scotland,Brazil,0,3,,,Regular,Completed,64478,César Arturo Ramos Palazuelos,400021455,api.fifa.com
+54,FIFA World Cup 2026,2026,2026-06-24,22:00,Group Stage,Group C,50,Atlanta Stadium,Atlanta,United States,Morocco,Haiti,4,2,,,Regular,Completed,68239,Danny Desmond Makkelie,400021452,api.fifa.com
+55,FIFA World Cup 2026,2026,2026-06-26,02:00,Group Stage,Group D,59,Los Angeles Stadium,Los Angeles,United States,Türkiye,USA,3,2,,,Regular,Completed,70492,Mustapha Ghorbal,400021459,api.fifa.com
+56,FIFA World Cup 2026,2026,2026-06-26,02:00,Group Stage,Group D,60,San Francisco Bay Area Stadium,San Francisco Bay Area,United States,Paraguay,Australia,0,0,,,Regular,Completed,68827,Clément Turpin,400021461,api.fifa.com
+57,FIFA World Cup 2026,2026,2026-06-25,20:00,Group Stage,Group E,56,New York/New Jersey Stadium,New Jersey,United States,Ecuador,Germany,2,1,,,Regular,Completed,80663,Tori Penso,400021466,api.fifa.com
+58,FIFA World Cup 2026,2026,2026-06-25,20:00,Group Stage,Group E,55,Philadelphia Stadium,Philadelphia,United States,Curaçao,Côte d'Ivoire,0,2,,,Regular,Completed,68324,Glenn Nyberg,400021468,api.fifa.com
+59,FIFA World Cup 2026,2026,2026-06-25,23:00,Group Stage,Group F,58,Kansas City Stadium,Kansas City,United States,Tunisia,Netherlands,1,3,,,Regular,Completed,68391,Katia Itzel García,400021473,api.fifa.com
+60,FIFA World Cup 2026,2026,2026-06-25,23:00,Group Stage,Group F,57,Dallas Stadium,Dallas,United States,Japan,Sweden,1,1,,,Regular,Completed,70137,Ivan Arcides Barton Cisneros,400021471,api.fifa.com
+61,FIFA World Cup 2026,2026,2026-06-27,03:00,Group Stage,Group G,64,BC Place Vancouver,Vancouver,Canada,New Zealand,Belgium,1,5,,,Regular,Completed,52497,Adham Mohammad Tumah Makhadmeh,400021481,api.fifa.com
+62,FIFA World Cup 2026,2026,2026-06-27,03:00,Group Stage,Group G,63,Seattle Stadium,Seattle,United States,Egypt,IR Iran,1,1,,,Regular,Completed,66925,Szymon MARCINIAK,400021479,api.fifa.com
+63,FIFA World Cup 2026,2026,2026-06-27,00:00,Group Stage,Group H,66,Guadalajara Stadium,Guadalajara,Mexico,Uruguay,Spain,0,1,,,Regular,Completed,45065,Ismail Elfath,400021484,api.fifa.com
+64,FIFA World Cup 2026,2026,2026-06-27,00:00,Group Stage,Group H,65,Houston Stadium,Houston,United States,Cabo Verde,Saudi Arabia,0,0,,,Regular,Completed,68278,François Letexier,400021485,api.fifa.com
+65,FIFA World Cup 2026,2026,2026-06-26,19:00,Group Stage,Group I,61,Boston Stadium,Boston,United States,Norway,France,1,4,,,Regular,Completed,64146,Michael Oliver,400021489,api.fifa.com
+66,FIFA World Cup 2026,2026,2026-06-26,19:00,Group Stage,Group I,62,Toronto Stadium,Toronto,Canada,Senegal,Iraq,5,0,,,Regular,Completed,43036,Anthony Taylor,400021493,api.fifa.com
+67,FIFA World Cup 2026,2026,2026-06-28,02:00,Group Stage,Group J,70,Dallas Stadium,Dallas,United States,Jordan,Argentina,1,3,,,Regular,Completed,70649,Istvan Kovacs,400021495,api.fifa.com
+68,FIFA World Cup 2026,2026,2026-06-28,02:00,Group Stage,Group J,69,Kansas City Stadium,Kansas City,United States,Algeria,Austria,3,3,,,Regular,Completed,69045,Ilgiz Tantashev,400021497,api.fifa.com
+69,FIFA World Cup 2026,2026,2026-06-27,23:30,Group Stage,Group K,71,Miami Stadium,Miami,United States,Colombia,Portugal,0,0,,,Regular,Completed,64478,Alireza FAGHANI,400021505,api.fifa.com
+70,FIFA World Cup 2026,2026,2026-06-27,23:30,Group Stage,Group K,72,Atlanta Stadium,Atlanta,United States,Congo DR,Uzbekistan,3,1,,,Regular,Completed,68239,Felix Zwayer,400021500,api.fifa.com
+71,FIFA World Cup 2026,2026,2026-06-27,21:00,Group Stage,Group L,67,New York/New Jersey Stadium,New Jersey,United States,Panama,England,0,2,,,Regular,Completed,80663,Abdulrahman AL JASSIM,400021508,api.fifa.com
+72,FIFA World Cup 2026,2026,2026-06-27,21:00,Group Stage,Group L,68,Philadelphia Stadium,Philadelphia,United States,Croatia,Ghana,2,1,,,Regular,Completed,68324,Drew Fischer,400021509,api.fifa.com
+73,FIFA World Cup 2026,2026,2026-06-28,19:00,Round of 32,,73,Los Angeles Stadium,Los Angeles,United States,South Africa,Canada,0,1,,,Regular,Completed,69237,João Pedro Silva Pinheiro,400021518,api.fifa.com
+74,FIFA World Cup 2026,2026,2026-06-29,17:00,Round of 32,,76,Houston Stadium,Houston,United States,Brazil,Japan,2,1,,,Regular,Completed,68777,Maurizio Mariani,400021516,api.fifa.com
+75,FIFA World Cup 2026,2026,2026-06-29,20:30,Round of 32,,74,Boston Stadium,Boston,United States,Germany,Paraguay,1,1,3,4,AET,Completed,63945,Jalal Jayed,400021513,api.fifa.com
+76,FIFA World Cup 2026,2026,2026-06-30,01:00,Round of 32,,75,Monterrey Stadium,Monterrey,Mexico,Netherlands,Morocco,1,1,2,3,AET,Completed,51243,Wilton SAMPAIO,400021522,api.fifa.com
+77,FIFA World Cup 2026,2026,2026-06-30,17:00,Round of 32,,78,Dallas Stadium,Dallas,United States,Côte d'Ivoire,Norway,1,2,,,Regular,Completed,69665,Jesús Valenzuela Sáez,400021514,api.fifa.com
+78,FIFA World Cup 2026,2026,2026-06-30,21:00,Round of 32,,77,New York/New Jersey Stadium,New Jersey,United States,France,Sweden,3,0,,,Regular,Completed,80663,Danny Desmond Makkelie,400021523,api.fifa.com
+79,FIFA World Cup 2026,2026,2026-07-01,02:00,Round of 32,,79,Mexico City Stadium,Mexico City,Mexico,Mexico,Ecuador,2,0,,,Regular,Completed,80824,Slavko VINCIC,400021520,api.fifa.com
+80,FIFA World Cup 2026,2026,2026-07-01,16:00,Round of 32,,80,Atlanta Stadium,Atlanta,United States,England,Congo DR,2,1,,,Regular,Completed,68239,Adham Mohammad Tumah Makhadmeh,400021512,api.fifa.com
+81,FIFA World Cup 2026,2026,2026-07-01,20:00,Round of 32,,82,Seattle Stadium,Seattle,United States,Belgium,Senegal,3,2,,,Penalty Shootout,Completed,66925,Said MARTINEZ,400021525,api.fifa.com
+82,FIFA World Cup 2026,2026,2026-07-02,00:00,Round of 32,,81,San Francisco Bay Area Stadium,San Francisco Bay Area,United States,USA,Bosnia and Herzegovina,2,0,,,Regular,Completed,68827,Raphael Claus,400021524,api.fifa.com
+83,FIFA World Cup 2026,2026,2026-07-02,19:00,Round of 32,,84,Los Angeles Stadium,Los Angeles,United States,Spain,Austria,3,0,,,Regular,Completed,70492,Glenn Nyberg,400021519,api.fifa.com
+84,FIFA World Cup 2026,2026,2026-07-02,23:00,Round of 32,,83,Toronto Stadium,Toronto,Canada,Portugal,Croatia,2,1,,,Regular,Completed,43036,Espen Eskås,400021526,api.fifa.com
+85,FIFA World Cup 2026,2026,2026-07-03,03:00,Round of 32,,85,BC Place Vancouver,Vancouver,Canada,Switzerland,Algeria,2,0,,,Regular,Completed,52497,Yael Falcón Pérez,400021527,api.fifa.com
+86,FIFA World Cup 2026,2026,2026-07-03,18:00,Round of 32,,88,Dallas Stadium,Dallas,United States,Australia,Egypt,1,1,2,4,AET,Completed,70244,Gustavo Tejera,400021515,api.fifa.com
+87,FIFA World Cup 2026,2026,2026-07-03,22:00,Round of 32,,86,Miami Stadium,Miami,United States,Argentina,Cabo Verde,3,2,,,Penalty Shootout,Completed,64478,Drew Fischer,400021521,api.fifa.com
+88,FIFA World Cup 2026,2026,2026-07-04,01:30,Round of 32,,87,Kansas City Stadium,Kansas City,United States,Colombia,Ghana,1,0,,,Regular,Completed,69045,Clément Turpin,400021517,api.fifa.com
+89,FIFA World Cup 2026,2026,2026-07-04,21:00,Round of 16,,89,Philadelphia Stadium,Philadelphia,United States,Paraguay,France,0,1,,,Regular,Completed,68324,Ilgiz Tantashev,400021533,api.fifa.com
+90,FIFA World Cup 2026,2026,2026-07-04,17:00,Round of 16,,90,Houston Stadium,Houston,United States,Canada,Morocco,0,3,,,Regular,Completed,68777,Michael Oliver,400021530,api.fifa.com
+91,FIFA World Cup 2026,2026,2026-07-05,20:00,Round of 16,,91,New York/New Jersey Stadium,New Jersey,United States,Brazil,Norway,1,2,,,Regular,Completed,80663,Ismail Elfath,400021532,api.fifa.com
+92,FIFA World Cup 2026,2026,2026-07-06,01:00,Round of 16,,92,Mexico City Stadium,Mexico City,Mexico,Mexico,England,2,3,,,Regular,Completed,80824,Alireza FAGHANI,400021531,api.fifa.com
+93,FIFA World Cup 2026,2026,2026-07-06,19:00,Round of 16,,93,Dallas Stadium,Dallas,United States,Portugal,Spain,0,1,,,Regular,Completed,70649,Anthony Taylor,400021529,api.fifa.com
+94,FIFA World Cup 2026,2026,2026-07-07,00:00,Round of 16,,94,Seattle Stadium,Seattle,United States,USA,Belgium,1,4,,,Regular,Completed,66925,Adham Mohammad Tumah Makhadmeh,400021534,api.fifa.com
+95,FIFA World Cup 2026,2026,2026-07-07,16:00,Round of 16,,95,Atlanta Stadium,Atlanta,United States,Argentina,Egypt,3,2,,,Regular,Completed,68239,François Letexier,400021528,api.fifa.com
+96,FIFA World Cup 2026,2026,2026-07-07,20:00,Round of 16,,96,BC Place Vancouver,Vancouver,Canada,Switzerland,Colombia,0,0,4,3,AET,Completed,52497,Ivan Arcides Barton Cisneros,400021535,api.fifa.com
+97,FIFA World Cup 2026,2026,2026-07-09,20:00,Quarter-final,,97,Boston Stadium,Boston,United States,France,Morocco,2,0,,,Regular,Completed,63811,Facundo TELLO,400021536,api.fifa.com
+98,FIFA World Cup 2026,2026,2026-07-10,19:00,Quarter-final,,98,Los Angeles Stadium,Los Angeles,United States,Spain,Belgium,2,1,,,Regular,Completed,70492,Michael Oliver,400021538,api.fifa.com
+99,FIFA World Cup 2026,2026,2026-07-11,21:00,Quarter-final,,99,Miami Stadium,Miami,United States,Norway,England,1,2,,,Penalty Shootout,Completed,64478,Clément Turpin,400021539,api.fifa.com
+100,FIFA World Cup 2026,2026,2026-07-12,01:00,Quarter-final,,100,Kansas City Stadium,Kansas City,United States,Argentina,Switzerland,3,1,,,Penalty Shootout,Completed,69045,João Pedro Silva Pinheiro,400021537,api.fifa.com
+101,FIFA World Cup 2026,2026,2026-07-14,19:00,Semi-final,,101,Dallas Stadium,Dallas,United States,France,Spain,0,2,,,Regular,Completed,70176,Ivan Arcides Barton Cisneros,400021541,api.fifa.com
+102,FIFA World Cup 2026,2026,2026-07-15,19:00,Semi-final,,102,Atlanta Stadium,Atlanta,United States,England,Argentina,1,2,,,Regular,Completed,68239,Ismail Elfath,400021540,api.fifa.com
+103,FIFA World Cup 2026,2026,2026-07-18,21:00,Third-place,,103,Miami Stadium,Miami,United States,France,England,4,6,,,Regular,Completed,64478,Jesús Valenzuela Sáez,400021542,api.fifa.com
+104,FIFA World Cup 2026,2026,2026-07-19,19:00,Final,,104,New York/New Jersey Stadium,New Jersey,United States,Spain,Argentina,1,0,,,Penalty Shootout,Completed,80663,Slavko VINCIC,400021543,api.fifa.com

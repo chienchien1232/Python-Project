@@ -1,0 +1,1874 @@
+{
+ "1": [
+  {
+   "side": "home",
+   "name": "Raúl Rangel",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Ronwen Williams",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "2": [
+  {
+   "side": "home",
+   "name": "Kim Seung-Gyu",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Matej Kovár",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "3": [
+  {
+   "side": "home",
+   "name": "Maxime Crépeau",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Nikola Vasilj",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "4": [
+  {
+   "side": "home",
+   "name": "Matt Freese",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Orlando Gill",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "4"
+  }
+ ],
+ "5": [
+  {
+   "side": "home",
+   "name": "Mahmoud Abunada",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Gregor Kobel",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "6": [
+  {
+   "side": "home",
+   "name": "Alisson Becker",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Yassine Bounou",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "7": [
+  {
+   "side": "home",
+   "name": "Johny Placide",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Angus Gunn",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "8": [
+  {
+   "side": "home",
+   "name": "Patrick Beach",
+   "apps": "1",
+   "saves": "8",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Ugurcan Çakir",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "9": [
+  {
+   "side": "home",
+   "name": "Manuel Neuer",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Eloy Room",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "7"
+  }
+ ],
+ "10": [
+  {
+   "side": "home",
+   "name": "Bart Verbruggen",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Zion Suzuki",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "11": [
+  {
+   "side": "home",
+   "name": "Yahia Fofana",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Hernán Galíndez",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "12": [
+  {
+   "side": "home",
+   "name": "Kristoffer Nordfeldt",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Mouhib Chamakh",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "5"
+  }
+ ],
+ "13": [
+  {
+   "side": "home",
+   "name": "Unai Simón",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Vozinha",
+   "apps": "1",
+   "saves": "7",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "14": [
+  {
+   "side": "home",
+   "name": "Thibaut Courtois",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Mostafa Shoubir",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "15": [
+  {
+   "side": "home",
+   "name": "Mohammed Al-Owais",
+   "apps": "1",
+   "saves": "9",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Fernando Muslera",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "16": [
+  {
+   "side": "home",
+   "name": "Alireza Beiranvand",
+   "apps": "1",
+   "saves": "6",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Max Crocombe",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "17": [
+  {
+   "side": "home",
+   "name": "Mike Maignan",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Édouard Mendy",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "18": [
+  {
+   "side": "home",
+   "name": "Jalal Hassan",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "4"
+  },
+  {
+   "side": "away",
+   "name": "Ørjan Nyland",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "19": [
+  {
+   "side": "home",
+   "name": "Emiliano Martínez",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Luca Zidane",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "20": [
+  {
+   "side": "home",
+   "name": "Alexander Schlager",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Yazeed Abulaila",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "21": [
+  {
+   "side": "home",
+   "name": "Diogo Costa",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Lionel Mpasi",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "22": [
+  {
+   "side": "home",
+   "name": "Jordan Pickford",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Dominik Livakovic",
+   "apps": "1",
+   "saves": "7",
+   "shots_faced": "0",
+   "conceded": "4"
+  }
+ ],
+ "23": [
+  {
+   "side": "home",
+   "name": "Lawrence Ati Zigi",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Orlando Mosquera",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "24": [
+  {
+   "side": "home",
+   "name": "Utkir Yusupov",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "3"
+  },
+  {
+   "side": "away",
+   "name": "Camilo Vargas",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "25": [
+  {
+   "side": "home",
+   "name": "Raúl Rangel",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Kim Seung-Gyu",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "26": [
+  {
+   "side": "home",
+   "name": "Matej Kovár",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Ronwen Williams",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "27": [
+  {
+   "side": "home",
+   "name": "Maxime Crépeau",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Mahmoud Abunada",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "6"
+  }
+ ],
+ "28": [
+  {
+   "side": "home",
+   "name": "Gregor Kobel",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Nikola Vasilj",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "4"
+  }
+ ],
+ "29": [
+  {
+   "side": "home",
+   "name": "Alisson Becker",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Johny Placide",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "30": [
+  {
+   "side": "home",
+   "name": "Angus Gunn",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Yassine Bounou",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "31": [
+  {
+   "side": "home",
+   "name": "Matt Freese",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Patrick Beach",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "32": [
+  {
+   "side": "home",
+   "name": "Ugurcan Çakir",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Orlando Gill",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "33": [
+  {
+   "side": "home",
+   "name": "Manuel Neuer",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Yahia Fofana",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "34": [
+  {
+   "side": "home",
+   "name": "Hernán Galíndez",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Eloy Room",
+   "apps": "1",
+   "saves": "15",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "35": [
+  {
+   "side": "home",
+   "name": "Bart Verbruggen",
+   "apps": "1",
+   "saves": "7",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Kristoffer Nordfeldt",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "5"
+  }
+ ],
+ "36": [
+  {
+   "side": "home",
+   "name": "Aymen Dahmen",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "4"
+  },
+  {
+   "side": "away",
+   "name": "Zion Suzuki",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "37": [
+  {
+   "side": "home",
+   "name": "Thibaut Courtois",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Alireza Beiranvand",
+   "apps": "1",
+   "saves": "7",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "38": [
+  {
+   "side": "home",
+   "name": "Max Crocombe",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "3"
+  },
+  {
+   "side": "away",
+   "name": "Mostafa Shoubir",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "39": [
+  {
+   "side": "home",
+   "name": "Unai Simón",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Mohammed Al-Owais",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "4"
+  }
+ ],
+ "40": [
+  {
+   "side": "home",
+   "name": "Fernando Muslera",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Vozinha",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "41": [
+  {
+   "side": "home",
+   "name": "Mike Maignan",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Ahmed Basil",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "42": [
+  {
+   "side": "home",
+   "name": "Ørjan Nyland",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Édouard Mendy",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "43": [
+  {
+   "side": "home",
+   "name": "Emiliano Martínez",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Alexander Schlager",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "44": [
+  {
+   "side": "home",
+   "name": "Yazeed Abulaila",
+   "apps": "1",
+   "saves": "6",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Luca Zidane",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "45": [
+  {
+   "side": "home",
+   "name": "Diogo Costa",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Abduvohid Nematov",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "5"
+  }
+ ],
+ "46": [
+  {
+   "side": "home",
+   "name": "Camilo Vargas",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Lionel Mpasi",
+   "apps": "1",
+   "saves": "8",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "47": [
+  {
+   "side": "home",
+   "name": "Jordan Pickford",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Benjamin Asare",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "48": [
+  {
+   "side": "home",
+   "name": "Orlando Mosquera",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Dominik Livakovic",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "49": [
+  {
+   "side": "home",
+   "name": "Matej Kovár",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "3"
+  },
+  {
+   "side": "away",
+   "name": "Raúl Rangel",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "50": [
+  {
+   "side": "home",
+   "name": "Ronwen Williams",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Kim Seung-Gyu",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "51": [
+  {
+   "side": "home",
+   "name": "Gregor Kobel",
+   "apps": "1",
+   "saves": "6",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Maxime Crépeau",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "52": [
+  {
+   "side": "home",
+   "name": "Nikola Vasilj",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Mahmoud Abunada",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "53": [
+  {
+   "side": "home",
+   "name": "Angus Gunn",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "3"
+  },
+  {
+   "side": "away",
+   "name": "Alisson Becker",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "54": [
+  {
+   "side": "home",
+   "name": "Yassine Bounou",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Johny Placide",
+   "apps": "1",
+   "saves": "8",
+   "shots_faced": "0",
+   "conceded": "4"
+  }
+ ],
+ "55": [
+  {
+   "side": "home",
+   "name": "Ugurcan Çakir",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Matt Turner",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "56": [
+  {
+   "side": "home",
+   "name": "Orlando Gill",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Patrick Beach",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "57": [
+  {
+   "side": "home",
+   "name": "Hernán Galíndez",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Manuel Neuer",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "58": [
+  {
+   "side": "home",
+   "name": "Eloy Room",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Yahia Fofana",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "59": [
+  {
+   "side": "home",
+   "name": "Aymen Dahmen",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "3"
+  },
+  {
+   "side": "away",
+   "name": "Bart Verbruggen",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "60": [
+  {
+   "side": "home",
+   "name": "Zion Suzuki",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Jacob Widell Zetterström",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "61": [
+  {
+   "side": "home",
+   "name": "Max Crocombe",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "5"
+  },
+  {
+   "side": "away",
+   "name": "Thibaut Courtois",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "62": [
+  {
+   "side": "home",
+   "name": "Mostafa Shoubir",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Alireza Beiranvand",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "63": [
+  {
+   "side": "home",
+   "name": "Fernando Muslera",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Unai Simón",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "64": [
+  {
+   "side": "home",
+   "name": "Vozinha",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Mohammed Al-Owais",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "65": [
+  {
+   "side": "home",
+   "name": "Egil Selvik",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "4"
+  },
+  {
+   "side": "away",
+   "name": "Mike Maignan",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "66": [
+  {
+   "side": "home",
+   "name": "Mory Diaw",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Ahmed Basil",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "67": [
+  {
+   "side": "home",
+   "name": "Yazeed Abulaila",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "3"
+  },
+  {
+   "side": "away",
+   "name": "Emiliano Martínez",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "68": [
+  {
+   "side": "home",
+   "name": "Oussama Benbot",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "3"
+  },
+  {
+   "side": "away",
+   "name": "Alexander Schlager",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "69": [
+  {
+   "side": "home",
+   "name": "Camilo Vargas",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Diogo Costa",
+   "apps": "1",
+   "saves": "6",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "70": [
+  {
+   "side": "home",
+   "name": "Lionel Mpasi",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Abduvohid Nematov",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "71": [
+  {
+   "side": "home",
+   "name": "Orlando Mosquera",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Jordan Pickford",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "72": [
+  {
+   "side": "home",
+   "name": "Dominik Livakovic",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Benjamin Asare",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "73": [
+  {
+   "side": "home",
+   "name": "Ronwen Williams",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Maxime Crépeau",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "74": [
+  {
+   "side": "home",
+   "name": "Alisson Becker",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Zion Suzuki",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "75": [
+  {
+   "side": "home",
+   "name": "Manuel Neuer",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Orlando Gill",
+   "apps": "1",
+   "saves": "6",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "76": [
+  {
+   "side": "home",
+   "name": "Bart Verbruggen",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Yassine Bounou",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "77": [
+  {
+   "side": "home",
+   "name": "Yahia Fofana",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Ørjan Nyland",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "78": [
+  {
+   "side": "home",
+   "name": "Mike Maignan",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Jacob Widell Zetterström",
+   "apps": "1",
+   "saves": "9",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "79": [
+  {
+   "side": "home",
+   "name": "Raúl Rangel",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Hernán Galíndez",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "80": [
+  {
+   "side": "home",
+   "name": "Jordan Pickford",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Lionel Mpasi",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "81": [
+  {
+   "side": "home",
+   "name": "Thibaut Courtois",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Mory Diaw",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "82": [
+  {
+   "side": "home",
+   "name": "Matt Freese",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Nikola Vasilj",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "83": [
+  {
+   "side": "home",
+   "name": "Unai Simón",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Alexander Schlager",
+   "apps": "1",
+   "saves": "6",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "84": [
+  {
+   "side": "home",
+   "name": "Diogo Costa",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Dominik Livakovic",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "85": [
+  {
+   "side": "home",
+   "name": "Gregor Kobel",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Luca Zidane",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "86": [
+  {
+   "side": "home",
+   "name": "Patrick Beach",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Mostafa Shoubir",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "87": [
+  {
+   "side": "home",
+   "name": "Emiliano Martínez",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Vozinha",
+   "apps": "1",
+   "saves": "8",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "88": [
+  {
+   "side": "home",
+   "name": "Camilo Vargas",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Lawrence Ati Zigi",
+   "apps": "1",
+   "saves": "7",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "89": [
+  {
+   "side": "home",
+   "name": "Orlando Gill",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Mike Maignan",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "90": [
+  {
+   "side": "home",
+   "name": "Maxime Crépeau",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "3"
+  },
+  {
+   "side": "away",
+   "name": "Yassine Bounou",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "91": [
+  {
+   "side": "home",
+   "name": "Alisson Becker",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Ørjan Nyland",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "92": [
+  {
+   "side": "home",
+   "name": "Raúl Rangel",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "3"
+  },
+  {
+   "side": "away",
+   "name": "Jordan Pickford",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "93": [
+  {
+   "side": "home",
+   "name": "Diogo Costa",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Unai Simón",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "94": [
+  {
+   "side": "home",
+   "name": "Matt Freese",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "4"
+  },
+  {
+   "side": "away",
+   "name": "Thibaut Courtois",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "95": [
+  {
+   "side": "home",
+   "name": "Emiliano Martínez",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Mostafa Shoubir",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "96": [
+  {
+   "side": "home",
+   "name": "Gregor Kobel",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Camilo Vargas",
+   "apps": "1",
+   "saves": "2",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "97": [
+  {
+   "side": "home",
+   "name": "Mike Maignan",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Yassine Bounou",
+   "apps": "1",
+   "saves": "6",
+   "shots_faced": "0",
+   "conceded": "2"
+  }
+ ],
+ "98": [
+  {
+   "side": "home",
+   "name": "Unai Simón",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Thibaut Courtois",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "99": [
+  {
+   "side": "home",
+   "name": "Ørjan Nyland",
+   "apps": "1",
+   "saves": "6",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Jordan Pickford",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "100": [
+  {
+   "side": "home",
+   "name": "Emiliano Martínez",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "1"
+  },
+  {
+   "side": "away",
+   "name": "Gregor Kobel",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "3"
+  }
+ ],
+ "101": [
+  {
+   "side": "home",
+   "name": "Mike Maignan",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Unai Simón",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "0"
+  }
+ ],
+ "102": [
+  {
+   "side": "home",
+   "name": "Jordan Pickford",
+   "apps": "1",
+   "saves": "3",
+   "shots_faced": "0",
+   "conceded": "2"
+  },
+  {
+   "side": "away",
+   "name": "Emiliano Martínez",
+   "apps": "1",
+   "saves": "1",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ],
+ "103": [
+  {
+   "side": "home",
+   "name": "Mike Maignan",
+   "apps": "1",
+   "saves": "4",
+   "shots_faced": "0",
+   "conceded": "6"
+  },
+  {
+   "side": "away",
+   "name": "Dean Henderson",
+   "apps": "1",
+   "saves": "5",
+   "shots_faced": "0",
+   "conceded": "4"
+  }
+ ],
+ "104": [
+  {
+   "side": "home",
+   "name": "Unai Simón",
+   "apps": "1",
+   "saves": "0",
+   "shots_faced": "0",
+   "conceded": "0"
+  },
+  {
+   "side": "away",
+   "name": "Emiliano Martínez",
+   "apps": "1",
+   "saves": "11",
+   "shots_faced": "0",
+   "conceded": "1"
+  }
+ ]
+}

@@ -1,0 +1,1825 @@
+event_id,match_id,minute,added_time,team,player_id,player_name,event_type,event_subtype,related_player_id,description,data_source
+1,1,9,,Mexico,429157,Julian QUINONES,Goal,open_play,419518,,api.fifa.com
+2,1,9,,Mexico,419518,Erik LIRA,Assist,assist,429157,assist attributed via sofascore.com,sofascore.com
+3,1,67,,Mexico,356731,Raul JIMENEZ,Goal,open_play,403585,,api.fifa.com
+4,1,67,,Mexico,403585,Roberto ALVARADO,Assist,assist,356731,assist attributed via sofascore.com,sofascore.com
+5,1,23,,Mexico,464533,Brian GUTIERREZ,Yellow Card,,,,api.fifa.com
+6,1,90,2,Mexico,395516,Cesar MONTES,Red Card,,,,api.fifa.com
+7,1,17,,South Africa,403616,Teboho MOKOENA,Yellow Card,,,,api.fifa.com
+8,1,49,,South Africa,390475,Sphephelo SITHOLE,Red Card,,,,api.fifa.com
+9,1,74,,South Africa,463221,Nkosinathi SIBISI,Yellow Card,,,,api.fifa.com
+10,1,84,,South Africa,395984,Themba ZWANE,Red Card,,,,api.fifa.com
+11,1,66,,Mexico,448051,Luis CHAVEZ,Substitution,substitution,464533,IN: Luis CHAVEZ / OUT: Brian GUTIERREZ,api.fifa.com
+12,1,66,,Mexico,500037,Gilberto MORA,Substitution,substitution,416576,IN: Gilberto MORA / OUT: Alvaro FIDALGO,api.fifa.com
+13,1,76,,Mexico,400634,Edson ALVAREZ,Substitution,substitution,419518,IN: Edson ALVAREZ / OUT: Erik LIRA,api.fifa.com
+14,1,76,,Mexico,514336,Armando GONZALEZ,Substitution,substitution,356731,IN: Armando GONZALEZ / OUT: Raul JIMENEZ,api.fifa.com
+15,1,79,,Mexico,430766,Alexis VEGA,Substitution,substitution,429157,IN: Alexis VEGA / OUT: Julian QUINONES,api.fifa.com
+16,1,56,,South Africa,494248,Thalente MBATHA,Substitution,substitution,419211,IN: Thalente MBATHA / OUT: Lyle FOSTER,api.fifa.com
+17,1,61,,South Africa,395984,Themba ZWANE,Substitution,substitution,463236,IN: Themba ZWANE / OUT: Jayden ADAMS,api.fifa.com
+18,1,76,,South Africa,430917,Evidence MAKGOPA,Substitution,substitution,481242,IN: Evidence MAKGOPA / OUT: Iqraam RAYNERS,api.fifa.com
+19,1,76,,South Africa,419223,Oswin APPOLLIS,Substitution,substitution,395050,IN: Oswin APPOLLIS / OUT: Aubrey MODIBA,api.fifa.com
+20,1,55,,South Africa,,,VAR Review,,,from sofascore.com,sofascore.com
+21,2,67,,Korea Republic,395084,HWANG Inbeom,Goal,open_play,418490,,api.fifa.com
+22,2,67,,Korea Republic,418490,LEE Kangin,Assist,assist,395084,assist attributed via sofascore.com,sofascore.com
+23,2,80,,Korea Republic,448586,OH Hyeongyu,Goal,open_play,395084,,api.fifa.com
+24,2,80,,Korea Republic,395084,HWANG Inbeom,Assist,assist,448586,assist attributed via sofascore.com,sofascore.com
+25,2,59,,Czechia,441170,Ladislav KREJCI,Goal,open_play,472908,,api.fifa.com
+26,2,59,,Czechia,472908,Vladimir COUFAL,Assist,assist,441170,assist attributed via sofascore.com,sofascore.com
+27,2,90,6,Korea Republic,492315,LEE Gihyuk,Yellow Card,,,,api.fifa.com
+28,2,62,,Korea Republic,395083,HWANG Heechan,Substitution,substitution,390525,IN: HWANG Heechan / OUT: LEE Jaesung,api.fifa.com
+29,2,69,,Korea Republic,448586,OH Hyeongyu,Substitution,substitution,307849,IN: OH Hyeongyu / OUT: SON Heungmin,api.fifa.com
+30,2,69,,Korea Republic,423855,EOM Jisung,Substitution,substitution,423880,IN: EOM Jisung / OUT: LEE Taeseok,api.fifa.com
+31,2,84,,Korea Republic,430385,KIM Jingyu,Substitution,substitution,395084,IN: KIM Jingyu / OUT: HWANG Inbeom,api.fifa.com
+32,2,84,,Korea Republic,479316,PARK Jinseob,Substitution,substitution,402817,IN: PARK Jinseob / OUT: PAIK Seungho,api.fifa.com
+33,2,63,,Czechia,433754,Adam HLOZEK,Substitution,substitution,486082,IN: Adam HLOZEK / OUT: Pavel SULC,api.fifa.com
+34,2,63,,Czechia,483961,Tomas CHORY,Substitution,substitution,401481,IN: Tomas CHORY / OUT: Patrik Schick,api.fifa.com
+35,2,63,,Czechia,433668,Michal SADILEK,Substitution,substitution,484011,IN: Michal SADILEK / OUT: Lukas PROVOD,api.fifa.com
+36,2,84,,Czechia,484003,Mojmir CHYTIL,Substitution,substitution,523097,IN: Mojmir CHYTIL / OUT: Alexandr SOJKA,api.fifa.com
+37,3,78,,Canada,390670,Cyle LARIN,Goal,open_play,493970,,api.fifa.com
+38,3,78,,Canada,493970,Promise DAVID,Assist,assist,390670,assist attributed via sofascore.com,sofascore.com
+39,3,21,,Bosnia and Herzegovina,519954,Jovo LUKIC,Goal,open_play,376230,,api.fifa.com
+40,3,21,,Bosnia and Herzegovina,376230,Sead KOLASINAC,Assist,assist,519954,assist attributed via sofascore.com,sofascore.com
+41,3,11,,Canada,441252,Alistair JOHNSTON,Yellow Card,,,,api.fifa.com
+42,3,53,,Canada,480322,Luc DE FOUGEROLLES,Yellow Card,,,,api.fifa.com
+43,3,44,,Bosnia and Herzegovina,436743,Ermedin DEMIROVIC,Yellow Card,,,,api.fifa.com
+44,3,45,1,Bosnia and Herzegovina,519954,Jovo LUKIC,Yellow Card,,,,api.fifa.com
+45,3,90,3,Bosnia and Herzegovina,489520,Nikola KATIC,Yellow Card,,,,api.fifa.com
+46,3,61,,Canada,493970,Promise DAVID,Substitution,substitution,441257,IN: Promise DAVID / OUT: Jonathan DAVID,api.fifa.com
+47,3,61,,Canada,466687,Ali AHMED,Substitution,substitution,430138,IN: Ali AHMED / OUT: Tajon BUCHANAN,api.fifa.com
+48,3,61,,Canada,448411,Jacob SHAFFELBURG,Substitution,substitution,441259,IN: Jacob SHAFFELBURG / OUT: Liam MILLAR,api.fifa.com
+49,3,76,,Canada,390670,Cyle LARIN,Substitution,substitution,486929,IN: Cyle LARIN / OUT: Tani OLUWASEYI,api.fifa.com
+50,3,90,1,Canada,370986,Jonathan OSORIO,Substitution,substitution,433635,IN: Jonathan OSORIO / OUT: Stephen EUSTAQUIO,api.fifa.com
+51,3,61,,Bosnia and Herzegovina,489523,Armin GIGOVIC,Substitution,substitution,482974,IN: Armin GIGOVIC / OUT: Ivan BASIC,api.fifa.com
+52,3,61,,Bosnia and Herzegovina,485063,Samed BAZDAR,Substitution,substitution,519954,IN: Samed BAZDAR / OUT: Jovo LUKIC,api.fifa.com
+53,3,74,,Bosnia and Herzegovina,504990,Kerim ALAJBEGOVIC,Substitution,substitution,494640,IN: Kerim ALAJBEGOVIC / OUT: Amar MEMIC,api.fifa.com
+54,3,74,,Bosnia and Herzegovina,372436,Ivan SUNJIC,Substitution,substitution,464566,IN: Ivan SUNJIC / OUT: Esmir BAJRAKTAREVIC,api.fifa.com
+55,3,83,,Bosnia and Herzegovina,389886,Dzenis BURNIC,Substitution,substitution,376230,IN: Dzenis BURNIC / OUT: Sead KOLASINAC,api.fifa.com
+56,4,7,,USA,476348,Damian BOBADILLA,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+57,4,31,,USA,466624,Folarin BALOGUN,Goal,open_play,390267,,api.fifa.com
+58,4,31,,USA,390267,Christian PULISIC,Assist,assist,466624,assist attributed via sofascore.com,sofascore.com
+59,4,45,5,USA,466624,Folarin BALOGUN,Goal,open_play,,,api.fifa.com
+60,4,90,8,USA,419068,Giovanni REYNA,Goal,open_play,,,api.fifa.com
+61,4,73,,Paraguay,495046,MAURICIO,Goal,open_play,441234,,api.fifa.com
+62,4,73,,Paraguay,441234,Julio ENCISO,Assist,assist,495046,assist attributed via sofascore.com,sofascore.com
+63,4,59,,USA,390238,Tyler ADAMS,Yellow Card,,,,api.fifa.com
+64,4,9,,Paraguay,479601,Juan Jose CACERES,Yellow Card,,,,api.fifa.com
+65,4,53,,Paraguay,369761,Miguel ALMIRON,Yellow Card,,,,api.fifa.com
+66,4,79,,Paraguay,463128,Diego GOMEZ,Yellow Card,,,,api.fifa.com
+67,4,88,,Paraguay,485802,Alex ARCE,Yellow Card,,,,api.fifa.com
+68,4,90,3,Paraguay,369749,Junior ALONSO,Yellow Card,,,,api.fifa.com
+69,4,,,USA,499912,Sebastian BERHALTER,Substitution,substitution,390267,IN: Sebastian BERHALTER / OUT: Christian PULISIC,api.fifa.com
+70,4,72,,USA,406304,Timothy WEAH,Substitution,substitution,406280,IN: Timothy WEAH / OUT: Sergino DEST,api.fifa.com
+71,4,72,,USA,419082,Ricardo PEPI,Substitution,substitution,466624,IN: Ricardo PEPI / OUT: Folarin BALOGUN,api.fifa.com
+72,4,82,,USA,419068,Giovanni REYNA,Substitution,substitution,448214,IN: Giovanni REYNA / OUT: Malik TILLMAN,api.fifa.com
+73,4,,,Paraguay,495046,MAURICIO,Substitution,substitution,476348,IN: MAURICIO / OUT: Damian BOBADILLA,api.fifa.com
+74,4,62,,Paraguay,485802,Alex ARCE,Substitution,substitution,369768,IN: Alex ARCE / OUT: Antonio SANABRIA,api.fifa.com
+75,4,79,,Paraguay,463125,Ramon SOSA,Substitution,substitution,369761,IN: Ramon SOSA / OUT: Miguel ALMIRON,api.fifa.com
+76,4,79,,Paraguay,486875,Gustavo VELAZQUEZ,Substitution,substitution,479601,IN: Gustavo VELAZQUEZ / OUT: Juan Jose CACERES,api.fifa.com
+77,4,79,,Paraguay,386458,Alejandro ROMERO GAMARRA,Substitution,substitution,463128,IN: Alejandro ROMERO GAMARRA / OUT: Diego GOMEZ,api.fifa.com
+78,5,90,4,Qatar,493221,Miro MUHEIM,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+79,5,17,,Switzerland,393480,Breel EMBOLO,Goal,penalty,,Penalty scored,api.fifa.com
+80,5,13,,Qatar,419459,MAHMOUD ABUNADA,Yellow Card,,,,api.fifa.com
+81,5,23,,Qatar,419473,JASSEM GABER,Yellow Card,,,,api.fifa.com
+82,5,42,,Switzerland,401448,Denis ZAKARIA,Yellow Card,,,,api.fifa.com
+83,5,60,,Qatar,433394,AHMED FATHY,Substitution,substitution,510991,IN: AHMED FATHY / OUT: AYOUB ALOUI,api.fifa.com
+84,5,60,,Qatar,354861,KARIM BOUDIAF,Substitution,substitution,419473,IN: KARIM BOUDIAF / OUT: JASSEM GABER,api.fifa.com
+85,5,60,,Qatar,353251,AHMED ALAAELDIN,Substitution,substitution,419463,IN: AHMED ALAAELDIN / OUT: YUSUF ABDURISAG,api.fifa.com
+86,5,78,,Qatar,498458,MOHAMED MANAI,Substitution,substitution,386348,IN: MOHAMED MANAI / OUT: ASSIM MADIBO,api.fifa.com
+87,5,88,,Qatar,284190,HASSAN ALHAYDOS,Substitution,substitution,429063,IN: HASSAN ALHAYDOS / OUT: EDMILSON JUNIOR,api.fifa.com
+88,5,65,,Switzerland,502727,Johan MANZAMBI,Substitution,substitution,448114,IN: Johan MANZAMBI / OUT: Dan NDOYE,api.fifa.com
+89,5,65,,Switzerland,448103,Fabian RIEDER,Substitution,substitution,433147,IN: Fabian RIEDER / OUT: Michel AEBISCHER,api.fifa.com
+90,5,79,,Switzerland,448112,Zeki AMDOUNI,Substitution,substitution,448131,IN: Zeki AMDOUNI / OUT: Ruben VARGAS,api.fifa.com
+91,5,89,,Switzerland,493221,Miro MUHEIM,Substitution,substitution,313559,IN: Miro MUHEIM / OUT: Ricardo RODRIGUEZ,api.fifa.com
+92,5,89,,Switzerland,448120,Ardon JASHARI,Substitution,substitution,402021,IN: Ardon JASHARI / OUT: Remo FREULER,api.fifa.com
+93,6,32,,Brazil,405742,VINICIUS JUNIOR,Goal,open_play,430605,,api.fifa.com
+94,6,32,,Brazil,430605,BRUNO GUIMARAES,Assist,assist,405742,assist attributed via sofascore.com,sofascore.com
+95,6,21,,Morocco,448598,Ismael SAIBARI,Goal,open_play,430740,,api.fifa.com
+96,6,21,,Morocco,430740,Brahim DIAZ,Assist,assist,448598,assist attributed via sofascore.com,sofascore.com
+97,6,37,,Brazil,308386,CASEMIRO,Yellow Card,,,,api.fifa.com
+98,6,43,,Brazil,430594,ROGER IBANEZ,Yellow Card,,,,api.fifa.com
+99,6,,,Brazil,394456,FABINHO,Substitution,substitution,308386,IN: FABINHO / OUT: CASEMIRO,api.fifa.com
+100,6,,,Brazil,335656,DANILO,Substitution,substitution,430594,IN: DANILO / OUT: ROGER IBANEZ,api.fifa.com
+101,6,61,,Brazil,430609,MATHEUS CUNHA,Substitution,substitution,411726,IN: MATHEUS CUNHA / OUT: LUCAS PAQUETA,api.fifa.com
+102,6,61,,Brazil,448420,LUIZ HENRIQUE,Substitution,substitution,519836,IN: LUIZ HENRIQUE / OUT: IGOR THIAGO,api.fifa.com
+103,6,80,,Brazil,429392,DANILO SANTOS,Substitution,substitution,430605,IN: DANILO SANTOS / OUT: BRUNO GUIMARAES,api.fifa.com
+104,6,64,,Morocco,494293,Chemsdine TALBI,Substitution,substitution,430740,IN: Chemsdine TALBI / OUT: Brahim DIAZ,api.fifa.com
+105,6,64,,Morocco,505097,Samir EL MOURABET,Substitution,substitution,441307,IN: Samir EL MOURABET / OUT: Azzedine OUNAHI,api.fifa.com
+106,6,80,,Morocco,424071,Anass SALAH EDDINE,Substitution,substitution,411680,IN: Anass SALAH EDDINE / OUT: Noussair MAZRAOUI,api.fifa.com
+107,6,80,,Morocco,523288,Ayoube AMAIMOUNI,Substitution,substitution,448612,IN: Ayoube AMAIMOUNI / OUT: Bilal EL KHANNOUSS,api.fifa.com
+108,6,89,,Morocco,433426,Soufiane RAHIMI,Substitution,substitution,448598,IN: Soufiane RAHIMI / OUT: Ismael SAIBARI,api.fifa.com
+109,7,28,,Scotland,401334,John McGinn,Goal,open_play,,,api.fifa.com
+110,7,39,,Haiti,430697,Jean-Ricner Bellegarde,Yellow Card,,,,api.fifa.com
+111,7,46,,Scotland,442428,Aaron HICKEY,Yellow Card,,,,api.fifa.com
+112,7,90,1,Scotland,520217,Findlay CURTIS,Yellow Card,,,,api.fifa.com
+113,7,90,5,Scotland,484051,Kenny McLEAN,Yellow Card,,,,api.fifa.com
+114,7,61,,Haiti,510757,Josue CASIMIR,Substitution,substitution,481027,IN: Josue CASIMIR / OUT: Louicius DEEDSON,api.fifa.com
+115,7,75,,Haiti,485676,Lenny JOSEPH,Substitution,substitution,405879,IN: Lenny JOSEPH / OUT: Wilson Isidor,api.fifa.com
+116,7,85,,Haiti,506483,Yassin FORTUNE,Substitution,substitution,485664,IN: Yassin FORTUNE / OUT: Ruben PROVIDENCE,api.fifa.com
+117,7,75,,Scotland,430098,Lyndon DYKES,Substitution,substitution,433191,IN: Lyndon DYKES / OUT: Che Adams,api.fifa.com
+118,7,75,,Scotland,430097,Ryan Christie,Substitution,substitution,485131,IN: Ryan Christie / OUT: Ben GANNON-DOAK,api.fifa.com
+119,7,75,,Scotland,433694,Nathan PATTERSON,Substitution,substitution,442428,IN: Nathan PATTERSON / OUT: Aaron HICKEY,api.fifa.com
+120,7,82,,Scotland,520217,Findlay CURTIS,Substitution,substitution,401334,IN: Findlay CURTIS / OUT: John McGinn,api.fifa.com
+121,7,82,,Scotland,484051,Kenny McLEAN,Substitution,substitution,484045,IN: Kenny McLEAN / OUT: Lawrence SHANKLAND,api.fifa.com
+122,8,27,,Australia,486306,Nestory IRANKUNDA,Goal,open_play,498421,,api.fifa.com
+123,8,27,,Australia,498421,Paul OKON-ENGSTLER,Assist,assist,486306,assist attributed via sofascore.com,sofascore.com
+124,8,75,,Australia,430452,Connor METCALFE,Goal,open_play,,,api.fifa.com
+125,8,86,,Türkiye,406231,Yunus AKGUN,Yellow Card,,,,api.fifa.com
+126,8,61,,Australia,491166,Nishan VELUPILLAY,Substitution,substitution,486306,IN: Nishan VELUPILLAY / OUT: Nestory IRANKUNDA,api.fifa.com
+127,8,74,,Australia,518200,Tete YENGI,Substitution,substitution,498806,IN: Tete YENGI / OUT: Mohamed TOURE,api.fifa.com
+128,8,74,,Australia,339112,Jason GERIA,Substitution,substitution,430450,IN: Jason GERIA / OUT: Jacob ITALIANO,api.fifa.com
+129,8,83,,Australia,355775,Jackson IRVINE,Substitution,substitution,498421,IN: Jackson IRVINE / OUT: Paul OKON-ENGSTLER,api.fifa.com
+130,8,83,,Australia,349342,Aziz BEHICH,Substitution,substitution,423522,IN: Aziz BEHICH / OUT: Jordan BOS,api.fifa.com
+131,8,,,Türkiye,484112,Kenan YILDIZ,Substitution,substitution,484139,IN: Kenan YILDIZ / OUT: Baris Alper YILMAZ,api.fifa.com
+132,8,62,,Türkiye,406231,Yunus AKGUN,Substitution,substitution,433118,IN: Yunus AKGUN / OUT: Orkun KOKCU,api.fifa.com
+133,8,80,,Türkiye,389907,Salih OZCAN,Substitution,substitution,484092,IN: Salih OZCAN / OUT: Ismail YUKSEK,api.fifa.com
+134,8,80,,Türkiye,430120,Mert MULDUR,Substitution,substitution,433072,IN: Mert MULDUR / OUT: Zeki CELIK,api.fifa.com
+135,8,85,,Türkiye,495347,Deniz GUL,Substitution,substitution,441188,IN: Deniz GUL / OUT: Kerem AKTURKOGLU,api.fifa.com
+136,9,6,,Germany,492363,Felix NMECHA,Goal,open_play,430669,,api.fifa.com
+137,9,6,,Germany,430669,Florian WIRTZ,Assist,assist,492363,assist attributed via sofascore.com,sofascore.com
+138,9,38,,Germany,430667,Nico SCHLOTTERBECK,Goal,open_play,511015,,api.fifa.com
+139,9,38,,Germany,511015,Nathaniel BROWN,Assist,assist,430667,assist attributed via sofascore.com,sofascore.com
+140,9,45,5,Germany,411367,Kai HAVERTZ,Goal,penalty,,Penalty scored,api.fifa.com
+141,9,47,,Germany,429642,Jamal MUSIALA,Goal,open_play,386413,,api.fifa.com
+142,9,47,,Germany,386413,Joshua KIMMICH,Assist,assist,429642,assist attributed via sofascore.com,sofascore.com
+143,9,68,,Germany,511015,Nathaniel BROWN,Goal,open_play,484851,,api.fifa.com
+144,9,68,,Germany,484851,Deniz UNDAV,Assist,assist,511015,assist attributed via sofascore.com,sofascore.com
+145,9,78,,Germany,484851,Deniz UNDAV,Goal,open_play,386413,,api.fifa.com
+146,9,78,,Germany,386413,Joshua KIMMICH,Assist,assist,484851,assist attributed via sofascore.com,sofascore.com
+147,9,88,,Germany,411367,Kai HAVERTZ,Goal,open_play,484851,,api.fifa.com
+148,9,88,,Germany,484851,Deniz UNDAV,Assist,assist,411367,assist attributed via sofascore.com,sofascore.com
+149,9,21,,Curaçao,494989,Livano COMENENCIA,Goal,open_play,,,api.fifa.com
+150,9,64,,Germany,484851,Deniz UNDAV,Substitution,substitution,429642,IN: Deniz UNDAV / OUT: Jamal MUSIALA,api.fifa.com
+151,9,72,,Germany,379953,Leon GORETZKA,Substitution,substitution,492363,IN: Leon GORETZKA / OUT: Felix NMECHA,api.fifa.com
+152,9,72,,Germany,379955,Antonio RUEDIGER,Substitution,substitution,401378,IN: Antonio RUEDIGER / OUT: Jonathan TAH,api.fifa.com
+153,9,72,,Germany,430657,David RAUM,Substitution,substitution,511015,IN: David RAUM / OUT: Nathaniel BROWN,api.fifa.com
+154,9,83,,Germany,430658,Waldemar ANTON,Substitution,substitution,386413,IN: Waldemar ANTON / OUT: Joshua KIMMICH,api.fifa.com
+155,9,,,Curaçao,424047,Jeremy Antonisse,Substitution,substitution,424056,IN: Jeremy Antonisse / OUT: Sontje HANSEN,api.fifa.com
+156,9,65,,Curaçao,466363,Jearl MARGARITHA,Substitution,substitution,407680,IN: Jearl MARGARITHA / OUT: Juergen LOCADIA,api.fifa.com
+157,9,82,,Curaçao,466372,Gervane KASTANEER,Substitution,substitution,485347,IN: Gervane KASTANEER / OUT: Tahith CHONG,api.fifa.com
+158,10,50,,Netherlands,397786,Virgil VAN DIJK,Goal,open_play,430176,,api.fifa.com
+159,10,50,,Netherlands,430176,Ryan GRAVENBERCH,Assist,assist,397786,assist attributed via sofascore.com,sofascore.com
+160,10,64,,Netherlands,489518,Crysencio SUMMERVILLE,Goal,open_play,430176,,api.fifa.com
+161,10,64,,Netherlands,430176,Ryan GRAVENBERCH,Assist,assist,489518,assist attributed via sofascore.com,sofascore.com
+162,10,57,,Japan,405522,Keito Nakamura,Goal,open_play,403304,,api.fifa.com
+163,10,57,,Japan,403304,Takefusa KUBO,Assist,assist,405522,assist attributed via sofascore.com,sofascore.com
+164,10,88,,Japan,448557,Daichi KAMADA,Goal,open_play,403293,,api.fifa.com
+165,10,88,,Japan,403293,Koki OGAWA,Assist,assist,448557,assist attributed via sofascore.com,sofascore.com
+166,10,61,,Netherlands,489518,Crysencio SUMMERVILLE,Yellow Card,,,,api.fifa.com
+167,10,83,,Netherlands,336098,Memphis DEPAY,Yellow Card,,,,api.fifa.com
+168,10,90,1,Netherlands,448140,Micky VAN DE VEN,Yellow Card,,,,api.fifa.com
+169,10,70,,Netherlands,336098,Memphis DEPAY,Substitution,substitution,433066,IN: Memphis DEPAY / OUT: Donyell Malen,api.fifa.com
+170,10,70,,Netherlands,484859,Quinten TIMBER,Substitution,substitution,483526,IN: Quinten TIMBER / OUT: Tijjani REIJNDERS,api.fifa.com
+171,10,70,,Netherlands,448149,Teun KOOPMEINERS,Substitution,substitution,489518,IN: Teun KOOPMEINERS / OUT: Crysencio SUMMERVILLE,api.fifa.com
+172,10,81,,Netherlands,336088,Nathan AKE,Substitution,substitution,430176,IN: Nathan AKE / OUT: Ryan GRAVENBERCH,api.fifa.com
+173,10,84,,Netherlands,424051,Brian BROBBEY,Substitution,substitution,448152,IN: Brian BROBBEY / OUT: Cody GAKPO,api.fifa.com
+174,10,66,,Japan,395321,Junya ITO,Substitution,substitution,430407,IN: Junya ITO / OUT: Daizen MAEDA,api.fifa.com
+175,10,75,,Japan,403289,Takehiro TOMIYASU,Substitution,substitution,430401,IN: Takehiro TOMIYASU / OUT: Tsuyoshi Watanabe,api.fifa.com
+176,10,75,,Japan,403293,Koki OGAWA,Substitution,substitution,403304,IN: Koki OGAWA / OUT: Takefusa KUBO,api.fifa.com
+177,10,75,,Japan,405528,Yukinari Sugawara,Substitution,substitution,391646,IN: Yukinari Sugawara / OUT: Ritsu DOAN,api.fifa.com
+178,10,84,,Japan,520218,Kento SHIOGAI,Substitution,substitution,430413,IN: Kento SHIOGAI / OUT: Ayase UEDA,api.fifa.com
+179,11,90,,Côte d'Ivoire,430822,Amad DIALLO,Goal,open_play,430854,,api.fifa.com
+180,11,90,,Côte d'Ivoire,430854,Wilfried SINGO,Assist,assist,430822,assist attributed via sofascore.com,sofascore.com
+181,11,28,,Côte d'Ivoire,405175,Seko Fofana,Yellow Card,,,,api.fifa.com
+182,11,38,,Côte d'Ivoire,371609,Franck KESSIE,Yellow Card,,,,api.fifa.com
+183,11,40,,Côte d'Ivoire,486317,Guela DOUE,Yellow Card,,,,api.fifa.com
+184,11,73,,Ecuador,419003,Jackson POROZO,Yellow Card,,,,api.fifa.com
+185,11,56,,Côte d'Ivoire,464103,Ange-Yoan BONNY,Substitution,substitution,464133,IN: Ange-Yoan BONNY / OUT: Elye WAHI,api.fifa.com
+186,11,56,,Côte d'Ivoire,430822,Amad DIALLO,Substitution,substitution,506202,IN: Amad DIALLO / OUT: Bazoumana TOURE,api.fifa.com
+187,11,77,,Côte d'Ivoire,430831,Ibrahim SANGARE,Substitution,substitution,405175,IN: Ibrahim SANGARE / OUT: Seko Fofana,api.fifa.com
+188,11,77,,Côte d'Ivoire,514208,Christ Inao OULAI,Substitution,substitution,402261,IN: Christ Inao OULAI / OUT: Nicolas PEPE,api.fifa.com
+189,11,89,,Côte d'Ivoire,477825,Odilon KOSSOUNOU,Substitution,substitution,486317,IN: Odilon KOSSOUNOU / OUT: Guela DOUE,api.fifa.com
+190,11,56,,Ecuador,448312,Nilson ANGULO,Substitution,substitution,463468,IN: Nilson ANGULO / OUT: Alan MINDA,api.fifa.com
+191,11,62,,Ecuador,402974,Angelo PRECIADO,Substitution,substitution,405920,IN: Angelo PRECIADO / OUT: John YEBOAH,api.fifa.com
+192,11,62,,Ecuador,419003,Jackson POROZO,Substitution,substitution,389784,IN: Jackson POROZO / OUT: Alan FRANCO,api.fifa.com
+193,11,77,,Ecuador,448310,Kevin RODRIGUEZ,Substitution,substitution,373400,IN: Kevin RODRIGUEZ / OUT: Enner VALENCIA,api.fifa.com
+194,12,7,,Sweden,489688,Yasin AYARI,Goal,open_play,,,api.fifa.com
+195,12,30,,Sweden,430150,Alexander Isak,Goal,open_play,483327,,api.fifa.com
+196,12,30,,Sweden,483327,Viktor GYOKERES,Assist,assist,430150,assist attributed via sofascore.com,sofascore.com
+197,12,59,,Sweden,483327,Viktor GYOKERES,Goal,open_play,430150,,api.fifa.com
+198,12,59,,Sweden,430150,Alexander Isak,Assist,assist,483327,assist attributed via sofascore.com,sofascore.com
+199,12,84,,Sweden,433795,Mattias SVANBERG,Goal,open_play,430150,,api.fifa.com
+200,12,84,,Sweden,430150,Alexander Isak,Assist,assist,433795,assist attributed via sofascore.com,sofascore.com
+201,12,90,6,Sweden,489688,Yasin AYARI,Goal,open_play,,,api.fifa.com
+202,12,43,,Tunisia,433367,Omar Rekik,Goal,open_play,433378,,api.fifa.com
+203,12,43,,Tunisia,433378,Hannibal MEJBRI,Assist,assist,433367,assist attributed via sofascore.com,sofascore.com
+204,12,54,,Tunisia,336459,Rani Khedira,Yellow Card,,,,api.fifa.com
+205,12,64,,Sweden,489689,Lucas BERGVALL,Substitution,substitution,502946,IN: Lucas BERGVALL / OUT: Benjamin NYGREN,api.fifa.com
+206,12,64,,Sweden,519958,Elliot STROUD,Substitution,substitution,483276,IN: Elliot STROUD / OUT: Gabriel GUDMUNDSSON,api.fifa.com
+207,12,84,,Sweden,433795,Mattias SVANBERG,Substitution,substitution,441135,IN: Mattias SVANBERG / OUT: Jesper KARLSTROM,api.fifa.com
+208,12,90,,Sweden,441137,Anthony ELANGA,Substitution,substitution,430150,IN: Anthony ELANGA / OUT: Alexander Isak,api.fifa.com
+209,12,90,,Sweden,491255,Daniel SVENSSON,Substitution,substitution,502945,IN: Daniel SVENSSON / OUT: Alexander BERNHARDSSON,api.fifa.com
+210,12,72,,Tunisia,448662,Elias ACHOURI,Substitution,substitution,411658,IN: Elias ACHOURI / OUT: Ellyes SKHIRI,api.fifa.com
+211,12,72,,Tunisia,479781,Mohamed HADJ MAHMOUD,Substitution,substitution,419189,IN: Mohamed HADJ MAHMOUD / OUT: Yan Valery,api.fifa.com
+212,12,72,,Tunisia,504502,Sebastian TOUNEKTI,Substitution,substitution,482885,IN: Sebastian TOUNEKTI / OUT: Elias SAAD,api.fifa.com
+213,12,84,,Tunisia,494375,Firas CHAOUAT,Substitution,substitution,433361,IN: Firas CHAOUAT / OUT: Anis SLIMANE,api.fifa.com
+214,12,84,,Tunisia,464484,Ismael GHARBI,Substitution,substitution,336459,IN: Ismael GHARBI / OUT: Rani Khedira,api.fifa.com
+215,13,90,3,Spain,423646,PEDRI,Yellow Card,,,,api.fifa.com
+216,13,16,,Cabo Verde,477832,SIDNY LOPES CABRAL,Yellow Card,,,,api.fifa.com
+217,13,71,,Spain,430733,Mikel MERINO,Substitution,substitution,430718,IN: Mikel MERINO / OUT: Fabian RUIZ,api.fifa.com
+218,13,71,,Spain,484320,Lamine YAMAL,Substitution,substitution,447866,IN: Lamine YAMAL / OUT: GAVI,api.fifa.com
+219,13,81,,Spain,430750,Dani OLMO,Substitution,substitution,405545,IN: Dani OLMO / OUT: Ferran TORRES,api.fifa.com
+220,13,87,,Spain,447855,Nico WILLIAMS,Substitution,substitution,411375,IN: Nico WILLIAMS / OUT: RODRI,api.fifa.com
+221,13,61,,Cabo Verde,401893,NUNO DA COSTA,Substitution,substitution,482782,IN: NUNO DA COSTA / OUT: DAILON LIVRAMENTO,api.fifa.com
+222,13,61,,Cabo Verde,433724,WILLY SEMEDO,Substitution,substitution,477856,IN: WILLY SEMEDO / OUT: JOVANE CABRAL,api.fifa.com
+223,13,61,,Cabo Verde,477827,DEROY DUARTE,Substitution,substitution,480966,IN: DEROY DUARTE / OUT: LAROS DUARTE,api.fifa.com
+224,13,76,,Cabo Verde,477855,JOAO PAULO,Substitution,substitution,477832,IN: JOAO PAULO / OUT: SIDNY LOPES CABRAL,api.fifa.com
+225,13,79,,Cabo Verde,494314,TELMO ARCANJO,Substitution,substitution,401894,IN: TELMO ARCANJO / OUT: JAMIRO MONTEIRO,api.fifa.com
+226,14,66,,Belgium,408950,MOHAMED HANY,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+227,14,19,,Egypt,430482,EMAM ASHOUR,Goal,open_play,344654,,api.fifa.com
+228,14,19,,Egypt,344654,MOHAMED SALAH,Assist,assist,430482,assist attributed via sofascore.com,sofascore.com
+229,14,14,,Belgium,411443,Timothy CASTAGNE,Yellow Card,,,,api.fifa.com
+230,14,75,,Belgium,448373,Maxim DE CUYPER,Yellow Card,,,,api.fifa.com
+231,14,13,,Egypt,461788,MARAWAN ATTIA,Yellow Card,,,,api.fifa.com
+232,14,34,,Egypt,430477,AHMED FATOUH,Yellow Card,,,,api.fifa.com
+233,14,56,,Belgium,495349,Nicolas RASKIN,Substitution,substitution,411443,IN: Nicolas RASKIN / OUT: Timothy CASTAGNE,api.fifa.com
+234,14,56,,Belgium,448373,Maxim DE CUYPER,Substitution,substitution,448364,IN: Maxim DE CUYPER / OUT: Amadou ONANA,api.fifa.com
+235,14,66,,Belgium,358112,Romelu LUKAKU,Substitution,substitution,448362,IN: Romelu LUKAKU / OUT: Charles DE KETELAERE,api.fifa.com
+236,14,85,,Belgium,448343,Hans VANAKEN,Substitution,substitution,358120,IN: Hans VANAKEN / OUT: Kevin DE BRUYNE,api.fifa.com
+237,14,85,,Belgium,494025,Matias FERNANDEZ-PARDO,Substitution,substitution,448341,IN: Matias FERNANDEZ-PARDO / OUT: Jeremy DOKU,api.fifa.com
+238,14,71,,Egypt,344661,RAMY RABIA,Substitution,substitution,430482,IN: RAMY RABIA / OUT: EMAM ASHOUR,api.fifa.com
+239,14,76,,Egypt,433461,ZIZO,Substitution,substitution,483161,IN: ZIZO / OUT: MOSTAFA ZICO,api.fifa.com
+240,14,76,,Egypt,495488,HAMZA ABDELKARIM,Substitution,substitution,344654,IN: HAMZA ABDELKARIM / OUT: MOHAMED SALAH,api.fifa.com
+241,14,88,,Egypt,407022,KARIM HAFEZ,Substitution,substitution,430477,IN: KARIM HAFEZ / OUT: AHMED FATOUH,api.fifa.com
+242,14,88,,Egypt,430465,IBRAHIM ADEL,Substitution,substitution,429095,IN: IBRAHIM ADEL / OUT: HAMDY FATHY,api.fifa.com
+243,15,41,,Saudi Arabia,403312,Abdulelah ALAMRI,Goal,open_play,,,api.fifa.com
+244,15,80,,Uruguay,419100,Maxi ARAUJO,Goal,open_play,,,api.fifa.com
+245,15,44,,Saudi Arabia,403312,Abdulelah ALAMRI,Yellow Card,,,,api.fifa.com
+246,15,63,,Saudi Arabia,403319,NASSER ALDAWSARI,Substitution,substitution,436537,IN: NASSER ALDAWSARI / OUT: MUSAB ALJUWAYR,api.fifa.com
+247,15,81,,Saudi Arabia,430518,NAWAF BU WASHL,Substitution,substitution,512183,IN: NAWAF BU WASHL / OUT: MOHAMMED ABU ALSHAMAT,api.fifa.com
+248,15,90,2,Saudi Arabia,419302,ABDULLAH ALHAMDDAN,Substitution,substitution,419303,IN: ABDULLAH ALHAMDDAN / OUT: MOTEB ALHARBI,api.fifa.com
+249,15,90,2,Saudi Arabia,523333,ALA ALHAJJI,Substitution,substitution,419291,IN: ALA ALHAJJI / OUT: FERAS ALBRIKAN,api.fifa.com
+250,15,90,2,Saudi Arabia,433439,ALI LAJAMI,Substitution,substitution,419281,IN: ALI LAJAMI / OUT: SAUD ABDULHAMID,api.fifa.com
+251,15,,,Uruguay,402876,Agustin CANOBBIO,Substitution,substitution,419126,IN: Agustin CANOBBIO / OUT: Darwin NUNEZ,api.fifa.com
+252,15,,,Uruguay,419134,Juan Manuel SANABRIA,Substitution,substitution,402895,IN: Juan Manuel SANABRIA / OUT: Matias VINA,api.fifa.com
+253,15,72,,Uruguay,402898,Nicolas DE LA CRUZ,Substitution,substitution,441623,IN: Nicolas DE LA CRUZ / OUT: Manuel UGARTE,api.fifa.com
+254,15,81,,Uruguay,419132,Brian RODRIGUEZ,Substitution,substitution,419100,IN: Brian RODRIGUEZ / OUT: Maxi ARAUJO,api.fifa.com
+255,15,90,,Uruguay,332897,Rodrigo AGUIRRE,Substitution,substitution,477536,IN: Rodrigo AGUIRRE / OUT: Federico VINAS,api.fifa.com
+256,16,32,,IR Iran,384797,Ramin REZAEIAN,Goal,open_play,,,api.fifa.com
+257,16,64,,IR Iran,448497,Mohammad MOHEBBI,Goal,open_play,384797,,api.fifa.com
+258,16,64,,IR Iran,384797,Ramin REZAEIAN,Assist,assist,448497,assist attributed via sofascore.com,sofascore.com
+259,16,7,,New Zealand,405454,Elijah JUST,Goal,open_play,274078,,api.fifa.com
+260,16,7,,New Zealand,274078,Chris WOOD,Assist,assist,405454,assist attributed via sofascore.com,sofascore.com
+261,16,54,,New Zealand,405454,Elijah JUST,Goal,open_play,274078,,api.fifa.com
+262,16,54,,New Zealand,274078,Chris WOOD,Assist,assist,405454,assist attributed via sofascore.com,sofascore.com
+263,16,89,,IR Iran,288961,Ehsan HAJISAFI,Yellow Card,,,,api.fifa.com
+264,16,,,IR Iran,403236,Mehdi GHAYEDI,Substitution,substitution,481181,IN: Mehdi GHAYEDI / OUT: Arya YOUSEFI,api.fifa.com
+265,16,53,,IR Iran,416989,Ali Alipour,Substitution,substitution,481180,IN: Ali Alipour / OUT: Shahriyar MOGHANLOO,api.fifa.com
+266,16,65,,IR Iran,288961,Ehsan HAJISAFI,Substitution,substitution,411644,IN: Ehsan HAJISAFI / OUT: Saman GHODDOS,api.fifa.com
+267,16,80,,IR Iran,405639,Amirhossein Hosseinzadeh,Substitution,substitution,388475,IN: Amirhossein Hosseinzadeh / OUT: Mehdi TAREMI,api.fifa.com
+268,16,68,,New Zealand,336641,Ryan THOMAS,Substitution,substitution,390196,IN: Ryan THOMAS / OUT: Callum McCOWATT,api.fifa.com
+269,16,68,,New Zealand,423575,Ben OLD,Substitution,substitution,405469,IN: Ben OLD / OUT: Liberato CACACE,api.fifa.com
+270,16,77,,New Zealand,419567,Callan ELLIOT,Substitution,substitution,331463,IN: Callan ELLIOT / OUT: Tim PAYNE,api.fifa.com
+271,16,90,2,New Zealand,416652,Jesse RANDALL,Substitution,substitution,390209,IN: Jesse RANDALL / OUT: Sarpreet SINGH,api.fifa.com
+272,16,90,2,New Zealand,482775,Tyler BINDON,Substitution,substitution,423595,IN: Tyler BINDON / OUT: Marko STAMENIC,api.fifa.com
+273,17,66,,France,389867,Kylian MBAPPE,Goal,open_play,485655,,api.fifa.com
+274,17,66,,France,485655,Michael OLISE,Assist,assist,389867,assist attributed via sofascore.com,sofascore.com
+275,17,82,,France,484860,Bradley BARCOLA,Goal,open_play,402047,,api.fifa.com
+276,17,82,,France,402047,Adrien RABIOT,Assist,assist,484860,assist attributed via sofascore.com,sofascore.com
+277,17,90,6,France,389867,Kylian MBAPPE,Goal,open_play,,,api.fifa.com
+278,17,90,5,Senegal,496358,Ibrahim MBAYE,Goal,open_play,,,api.fifa.com
+279,17,80,,France,484860,Bradley BARCOLA,Substitution,substitution,398680,IN: Bradley BARCOLA / OUT: Ousmane DEMBELE,api.fifa.com
+280,17,87,,France,431861,Rayan CHERKI,Substitution,substitution,464114,IN: Rayan CHERKI / OUT: Desire DOUE,api.fifa.com
+281,17,75,,Senegal,496358,Ibrahim MBAYE,Substitution,substitution,401889,IN: Ibrahim MBAYE / OUT: Ismaila SARR,api.fifa.com
+282,17,75,,Senegal,486130,Habib DIARRA,Substitution,substitution,464842,IN: Habib DIARRA / OUT: Lamine CAMARA,api.fifa.com
+283,17,83,,Senegal,418781,Bamba DIENG,Substitution,substitution,418795,IN: Bamba DIENG / OUT: Nicolas JACKSON,api.fifa.com
+284,17,83,,Senegal,448815,Iliman NDIAYE,Substitution,substitution,431788,IN: Iliman NDIAYE / OUT: Pape GUEYE,api.fifa.com
+285,17,88,,Senegal,448825,Pathe CISS,Substitution,substitution,332314,IN: Pathe CISS / OUT: Idrissa Gana GUEYE,api.fifa.com
+286,18,39,,Iraq,395186,AYMEN HUSSEIN,Goal,open_play,433074,,api.fifa.com
+287,18,39,,Iraq,433074,AMIR ALAMMARI,Assist,assist,395186,assist attributed via sofascore.com,sofascore.com
+288,18,29,,Norway,419652,Erling HAALAND,Goal,open_play,483505,,api.fifa.com
+289,18,29,,Norway,483505,David MOLLER WOLFE,Assist,assist,419652,assist attributed via sofascore.com,sofascore.com
+290,18,43,,Norway,419652,Erling HAALAND,Goal,open_play,,,api.fifa.com
+291,18,76,,Norway,419672,Leo OSTIGARD,Goal,open_play,400716,,api.fifa.com
+292,18,76,,Norway,400716,Martin ODEGAARD,Assist,assist,419672,assist attributed via sofascore.com,sofascore.com
+293,18,90,6,Norway,395186,AYMEN HUSSEIN,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+294,18,86,,Iraq,434025,ZAID TAHSEEN,Yellow Card,,,,api.fifa.com
+295,18,59,,Iraq,484262,MARKO FARJI,Substitution,substitution,436628,IN: MARKO FARJI / OUT: ALI ALHAMADI,api.fifa.com
+296,18,59,,Iraq,434026,ZIDANE IQBAL,Substitution,substitution,484270,IN: ZIDANE IQBAL / OUT: ZAID ISMAEL,api.fifa.com
+297,18,73,,Iraq,479056,MUSTAFA SAADOON,Substitution,substitution,479553,IN: MUSTAFA SAADOON / OUT: Hussein Ali,api.fifa.com
+298,18,73,,Iraq,523236,AHMED QASEM,Substitution,substitution,464457,IN: AHMED QASEM / OUT: ALI JASIM,api.fifa.com
+299,18,78,,Iraq,422968,MOHANAD ALI,Substitution,substitution,433585,IN: MOHANAD ALI / OUT: IBRAHIM BAYESH,api.fifa.com
+300,18,73,,Norway,419672,Leo OSTIGARD,Substitution,substitution,483505,IN: Leo OSTIGARD / OUT: David MOLLER WOLFE,api.fifa.com
+301,18,73,,Norway,419681,Kristian Thorstvedt,Substitution,substitution,483497,IN: Kristian Thorstvedt / OUT: Fredrik AURSNES,api.fifa.com
+302,18,73,,Norway,494626,Andreas SCHJELDERUP,Substitution,substitution,483448,IN: Andreas SCHJELDERUP / OUT: Antonio NUSA,api.fifa.com
+303,18,73,,Norway,477470,Oscar BOBB,Substitution,substitution,398588,IN: Oscar BOBB / OUT: Alexander SORLOTH,api.fifa.com
+304,18,81,,Norway,483442,Patrick BERG,Substitution,substitution,400716,IN: Patrick BERG / OUT: Martin ODEGAARD,api.fifa.com
+305,19,17,,Argentina,229397,Lionel MESSI,Goal,open_play,428882,,api.fifa.com
+306,19,17,,Argentina,428882,Rodrigo DE PAUL,Assist,assist,229397,assist attributed via sofascore.com,sofascore.com
+307,19,60,,Argentina,229397,Lionel MESSI,Goal,open_play,,,api.fifa.com
+308,19,76,,Argentina,229397,Lionel MESSI,Goal,open_play,,,api.fifa.com
+309,19,,,Argentina,402925,Nahuel MOLINA,Substitution,substitution,402926,IN: Nahuel MOLINA / OUT: Gonzalo MONTIEL,api.fifa.com
+310,19,55,,Argentina,416081,Julian ALVAREZ,Substitution,substitution,402920,IN: Julian ALVAREZ / OUT: Lautaro MARTINEZ,api.fifa.com
+311,19,55,,Argentina,430631,Nico GONZALEZ,Substitution,substitution,418975,IN: Nico GONZALEZ / OUT: Thiago ALMADA,api.fifa.com
+312,19,80,,Argentina,310116,Nicolas OTAMENDI,Substitution,substitution,431196,IN: Nicolas OTAMENDI / OUT: Cristian ROMERO,api.fifa.com
+313,19,80,,Argentina,441422,Nico PAZ,Substitution,substitution,229397,IN: Nico PAZ / OUT: Lionel MESSI,api.fifa.com
+314,19,64,,Algeria,430698,Houssem Aouar,Substitution,substitution,441350,IN: Houssem Aouar / OUT: Hicham BOUDAOUI,api.fifa.com
+315,19,64,,Algeria,379942,Riyad Mahrez,Substitution,substitution,482874,IN: Riyad Mahrez / OUT: Anis HADJ MOUSSA,api.fifa.com
+316,19,64,,Algeria,477790,Mohamed AMOURA,Substitution,substitution,405877,IN: Mohamed AMOURA / OUT: Amine GOUIRI,api.fifa.com
+317,19,82,,Algeria,433679,Ramiz ZERROUKI,Substitution,substitution,379939,IN: Ramiz ZERROUKI / OUT: Nabil Bentaleb,api.fifa.com
+318,19,82,,Algeria,512132,Adil BOULBINA,Substitution,substitution,494291,IN: Adil BOULBINA / OUT: Ibrahim MAZA,api.fifa.com
+319,20,20,,Austria,463283,Romano SCHMID,Goal,open_play,385531,,api.fifa.com
+320,20,20,,Austria,385531,Xaver Schlager,Assist,assist,463283,assist attributed via sofascore.com,sofascore.com
+321,20,76,,Austria,431225,YAZAN ALARAB,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+322,20,90,12,Austria,299200,Marko ARNAUTOVIC,Goal,penalty,,Penalty scored,api.fifa.com
+323,20,50,,Jordan,431212,ALI OLWAN,Goal,open_play,431230,,api.fifa.com
+324,20,50,,Jordan,431230,NOOR ALRAWABDEH,Assist,assist,431212,assist attributed via sofascore.com,sofascore.com
+325,20,77,,Austria,358241,Marcel SABITZER,Yellow Card,,,,api.fifa.com
+326,20,,,Austria,299200,Marko ARNAUTOVIC,Substitution,substitution,430100,IN: Marko ARNAUTOVIC / OUT: Sasa KALAJDZIC,api.fifa.com
+327,20,59,,Austria,463800,Carney CHUKWUEMEKA,Substitution,substitution,385531,IN: Carney CHUKWUEMEKA / OUT: Xaver Schlager,api.fifa.com
+328,20,59,,Austria,520036,Paul WANNER,Substitution,substitution,463288,IN: Paul WANNER / OUT: Phillip MWENE,api.fifa.com
+329,20,59,,Austria,405263,Kevin Danso,Substitution,substitution,316002,IN: Kevin Danso / OUT: David ALABA,api.fifa.com
+330,20,83,,Austria,463286,Patrick WIMMER,Substitution,substitution,463283,IN: Patrick WIMMER / OUT: Romano SCHMID,api.fifa.com
+331,20,72,,Jordan,499102,SALEEM OBAID,Substitution,substitution,489551,IN: SALEEM OBAID / OUT: MOHAMMAD ABUALNADI,api.fifa.com
+332,20,81,,Jordan,431219,SAED ALROSAN,Substitution,substitution,433527,IN: SAED ALROSAN / OUT: ABDALLAH NASIB,api.fifa.com
+333,20,81,,Jordan,396950,MAHMOUD ALMARDI,Substitution,substitution,389437,IN: MAHMOUD ALMARDI / OUT: EHSAN HADDAD,api.fifa.com
+334,20,88,,Jordan,498514,ALI AZAIZEH,Substitution,substitution,511875,IN: ALI AZAIZEH / OUT: ODEH FAKHOURY,api.fifa.com
+335,20,88,,Jordan,45191,MOHAMMAD ALDAOUD,Substitution,substitution,431211,IN: MOHAMMAD ALDAOUD / OUT: MOUSA ALTAMARI,api.fifa.com
+336,21,6,,Portugal,484141,JOAO NEVES,Goal,open_play,418548,,api.fifa.com
+337,21,6,,Portugal,418548,PEDRO NETO,Assist,assist,484141,assist attributed via sofascore.com,sofascore.com
+338,21,45,5,Congo DR,441316,Yoane WISSA,Goal,open_play,,,api.fifa.com
+339,21,13,,Portugal,395205,BERNARDO SILVA,Yellow Card,,,,api.fifa.com
+340,21,88,,Portugal,395212,NELSON SEMEDO,Yellow Card,,,,api.fifa.com
+341,21,90,2,Portugal,492358,TOMAS ARAUJO,Yellow Card,,,,api.fifa.com
+342,21,32,,Congo DR,356532,Chancel MBEMBA,Yellow Card,,,,api.fifa.com
+343,21,,,Portugal,485081,FRANCISCO CONCEICAO,Substitution,substitution,395205,IN: FRANCISCO CONCEICAO / OUT: BERNARDO SILVA,api.fifa.com
+344,21,72,,Portugal,418550,RAFAEL LEAO,Substitution,substitution,418548,IN: RAFAEL LEAO / OUT: PEDRO NETO,api.fifa.com
+345,21,72,,Portugal,395212,NELSON SEMEDO,Substitution,substitution,433195,IN: NELSON SEMEDO / OUT: NUNO MENDES,api.fifa.com
+346,21,83,,Portugal,448081,GONCALO RAMOS,Substitution,substitution,441149,IN: GONCALO RAMOS / OUT: VITINHA,api.fifa.com
+347,21,57,,Congo DR,486147,Noah SADIKI,Substitution,substitution,494458,IN: Noah SADIKI / OUT: Ngalayel MUKAU,api.fifa.com
+348,21,74,,Congo DR,448128,Charles PICKEL,Substitution,substitution,433161,IN: Charles PICKEL / OUT: Edo Kayembe,api.fifa.com
+349,21,74,,Congo DR,477833,Joris KAYEMBE,Substitution,substitution,436572,IN: Joris KAYEMBE / OUT: Arthur MASUAKU,api.fifa.com
+350,21,85,,Congo DR,477853,Gedeon KALULU,Substitution,substitution,426357,IN: Gedeon KALULU / OUT: Aaron WAN-BISSAKA,api.fifa.com
+351,21,85,,Congo DR,477835,Simon BANZA,Substitution,substitution,336425,IN: Simon BANZA / OUT: Cedric BAKAMBU,api.fifa.com
+352,22,12,,England,369419,Harry KANE,Goal,penalty,,Penalty scored,api.fifa.com
+353,22,42,,England,369419,Harry KANE,Goal,open_play,433097,,api.fifa.com
+354,22,42,,England,433097,Declan RICE,Assist,assist,369419,assist attributed via sofascore.com,sofascore.com
+355,22,47,,England,448202,Jude BELLINGHAM,Goal,open_play,481610,,api.fifa.com
+356,22,47,,England,481610,Elliot ANDERSON,Assist,assist,448202,assist attributed via sofascore.com,sofascore.com
+357,22,85,,England,401470,Marcus RASHFORD,Goal,open_play,448196,,api.fifa.com
+358,22,85,,England,448196,Bukayo SAKA,Assist,assist,401470,assist attributed via sofascore.com,sofascore.com
+359,22,36,,Croatia,482774,Martin BATURINA,Goal,open_play,485066,,api.fifa.com
+360,22,36,,Croatia,485066,Petar SUCIC,Assist,assist,482774,assist attributed via sofascore.com,sofascore.com
+361,22,45,5,Croatia,389754,Petar Musa,Goal,open_play,,,api.fifa.com
+362,22,72,,England,492716,Morgan ROGERS,Substitution,substitution,433097,IN: Morgan ROGERS / OUT: Declan RICE,api.fifa.com
+363,22,72,,England,448196,Bukayo SAKA,Substitution,substitution,489732,IN: Bukayo SAKA / OUT: Noni MADUEKE,api.fifa.com
+364,22,72,,England,401470,Marcus RASHFORD,Substitution,substitution,448189,IN: Marcus RASHFORD / OUT: Anthony GORDON,api.fifa.com
+365,22,79,,England,506329,Djed SPENCE,Substitution,substitution,448202,IN: Djed SPENCE / OUT: Jude BELLINGHAM,api.fifa.com
+366,22,87,,England,405841,Marc GUEHI,Substitution,substitution,369434,IN: Marc GUEHI / OUT: John STONES,api.fifa.com
+367,22,58,,Croatia,339987,Mateo KOVACIC,Substitution,substitution,241559,IN: Mateo KOVACIC / OUT: Luka MODRIC,api.fifa.com
+368,22,66,,Croatia,485068,Igor MATANOVIC,Substitution,substitution,389754,IN: Igor MATANOVIC / OUT: Petar Musa,api.fifa.com
+369,22,66,,Croatia,482931,Marco PASALIC,Substitution,substitution,499290,IN: Marco PASALIC / OUT: Luka VUSKOVIC,api.fifa.com
+370,22,78,,Croatia,336472,Andrej KRAMARIC,Substitution,substitution,380005,IN: Andrej KRAMARIC / OUT: Mario PASALIC,api.fifa.com
+371,22,78,,Croatia,409191,Nikola VLASIC,Substitution,substitution,482774,IN: Nikola VLASIC / OUT: Martin BATURINA,api.fifa.com
+372,23,90,5,Ghana,506279,Caleb YIRENKYI,Goal,open_play,,,api.fifa.com
+373,23,16,,Ghana,506279,Caleb YIRENKYI,Yellow Card,,,,api.fifa.com
+374,23,72,,Panama,441242,Cesar BLACKMAN,Yellow Card,,,,api.fifa.com
+375,23,90,9,Panama,418729,Carlos HARVEY,Yellow Card,,,,api.fifa.com
+376,23,,,Ghana,494349,Benjamin ASARE,Substitution,substitution,386473,IN: Benjamin ASARE / OUT: Lawrence Ati ZIGI,api.fifa.com
+377,23,58,,Ghana,486213,Brandon THOMAS-ASANTE,Substitution,substitution,448523,IN: Brandon THOMAS-ASANTE / OUT: Kamaldeen SULEMANA,api.fifa.com
+378,23,58,,Ghana,441342,Abdul FATAWU,Substitution,substitution,448525,IN: Abdul FATAWU / OUT: Ernest NUAMAH,api.fifa.com
+379,23,78,,Ghana,507253,Kwasi SIBO,Substitution,substitution,441341,IN: Kwasi SIBO / OUT: Elisha OWUSU,api.fifa.com
+380,23,87,,Ghana,514401,Prince ADU,Substitution,substitution,353235,IN: Prince ADU / OUT: Jordan AYEW,api.fifa.com
+381,23,63,,Panama,411174,Jose FAJARDO,Substitution,substitution,337251,IN: Jose FAJARDO / OUT: Cecilio Waterman,api.fifa.com
+382,23,63,,Panama,466669,Azarias LONDONO,Substitution,substitution,395581,IN: Azarias LONDONO / OUT: Cristian MARTINEZ,api.fifa.com
+383,23,74,,Panama,372342,Ismael DIAZ,Substitution,substitution,411176,IN: Ismael DIAZ / OUT: Jose Luis RODRIGUEZ,api.fifa.com
+384,23,90,,Panama,269514,Anibal GODOY,Substitution,substitution,441242,IN: Anibal GODOY / OUT: Cesar BLACKMAN,api.fifa.com
+385,24,60,,Uzbekistan,464933,Abbosbek FAYZULLAEV,Goal,open_play,,,api.fifa.com
+386,24,40,,Colombia,431200,Daniel MUNOZ,Goal,open_play,428886,,api.fifa.com
+387,24,40,,Colombia,428886,Luis DIAZ,Assist,assist,431200,assist attributed via sofascore.com,sofascore.com
+388,24,65,,Colombia,428886,Luis DIAZ,Goal,open_play,463902,,api.fifa.com
+389,24,65,,Colombia,463902,Gustavo PUERTA,Assist,assist,428886,assist attributed via sofascore.com,sofascore.com
+390,24,90,9,Colombia,405755,Jaminton CAMPAZ,Goal,open_play,,,api.fifa.com
+391,24,34,,Uzbekistan,464924,Abdukodir KHUSANOV,Yellow Card,,,,api.fifa.com
+392,24,7,,Colombia,394500,Johan MOJICA,Yellow Card,,,,api.fifa.com
+393,24,,,Uzbekistan,385139,Farrukh SAYFIEV,Substitution,substitution,479075,IN: Farrukh SAYFIEV / OUT: Sherzod NASRULLAEV,api.fifa.com
+394,24,,,Uzbekistan,371393,Dostonbek Khamdamov,Substitution,substitution,479080,IN: Dostonbek Khamdamov / OUT: Oston URUNOV,api.fifa.com
+395,24,77,,Uzbekistan,464906,Jakhongir UROZOV,Substitution,substitution,371415,IN: Jakhongir UROZOV / OUT: Rustam ASHURMATOV,api.fifa.com
+396,24,77,,Uzbekistan,481220,Azizbek AMONOV,Substitution,substitution,464933,IN: Azizbek AMONOV / OUT: Abbosbek FAYZULLAEV,api.fifa.com
+397,24,90,3,Uzbekistan,368546,Igor Sergeev,Substitution,substitution,385475,IN: Igor Sergeev / OUT: Eldor SHOMURODOV,api.fifa.com
+398,24,72,,Colombia,405755,Jaminton CAMPAZ,Substitution,substitution,269058,IN: Jaminton CAMPAZ / OUT: James RODRIGUEZ,api.fifa.com
+399,24,80,,Colombia,418881,Cucho HERNANDEZ,Substitution,substitution,428905,IN: Cucho HERNANDEZ / OUT: Luis SUAREZ,api.fifa.com
+400,24,80,,Colombia,473050,Richard RIOS,Substitution,substitution,463902,IN: Richard RIOS / OUT: Gustavo PUERTA,api.fifa.com
+401,24,90,3,Colombia,492189,Andres GOMEZ,Substitution,substitution,428886,IN: Andres GOMEZ / OUT: Luis DIAZ,api.fifa.com
+402,24,90,3,Colombia,470759,Kevin CASTANO,Substitution,substitution,470760,IN: Kevin CASTANO / OUT: Jhon ARIAS,api.fifa.com
+403,26,6,,Czechia,433668,Michal SADILEK,Goal,open_play,523097,,api.fifa.com
+404,26,6,,Czechia,523097,Alexandr SOJKA,Assist,assist,433668,assist attributed via sofascore.com,sofascore.com
+405,26,83,,South Africa,403616,Teboho MOKOENA,Goal,penalty,,Penalty scored,api.fifa.com
+406,26,75,,Czechia,441170,Ladislav KREJCI,Yellow Card,,,,api.fifa.com
+407,26,33,,South Africa,403616,Teboho MOKOENA,Yellow Card,,,,api.fifa.com
+408,26,40,,South Africa,494248,Thalente MBATHA,Yellow Card,,,,api.fifa.com
+409,26,55,,Czechia,486082,Pavel SULC,Substitution,substitution,358003,IN: Pavel SULC / OUT: Vladimir DARIDA,api.fifa.com
+410,26,55,,Czechia,441166,Jaroslav ZELENY,Substitution,substitution,523097,IN: Jaroslav ZELENY / OUT: Alexandr SOJKA,api.fifa.com
+411,26,67,,Czechia,484011,Lukas PROVOD,Substitution,substitution,433754,IN: Lukas PROVOD / OUT: Adam HLOZEK,api.fifa.com
+412,26,67,,Czechia,404885,Tomas SOUCEK,Substitution,substitution,433668,IN: Tomas SOUCEK / OUT: Michal SADILEK,api.fifa.com
+413,26,78,,Czechia,433755,David Zima,Substitution,substitution,486081,IN: David Zima / OUT: Lukas CERV,api.fifa.com
+414,26,,,South Africa,486161,Relebohile MOFOKENG,Substitution,substitution,463236,IN: Relebohile MOFOKENG / OUT: Jayden ADAMS,api.fifa.com
+415,26,66,,South Africa,430917,Evidence MAKGOPA,Substitution,substitution,481242,IN: Evidence MAKGOPA / OUT: Iqraam RAYNERS,api.fifa.com
+416,26,84,,South Africa,506038,Kamogelo SEBELEBELE,Substitution,substitution,463234,IN: Kamogelo SEBELEBELE / OUT: Thapelo MASEKO,api.fifa.com
+417,26,81,,South Africa,,,VAR Review,,,from sofascore.com,sofascore.com
+418,28,74,,Switzerland,502727,Johan MANZAMBI,Goal,open_play,311558,,api.fifa.com
+419,28,74,,Switzerland,311558,Granit XHAKA,Assist,assist,502727,assist attributed via sofascore.com,sofascore.com
+420,28,84,,Switzerland,448131,Ruben VARGAS,Goal,open_play,393480,,api.fifa.com
+421,28,84,,Switzerland,393480,Breel EMBOLO,Assist,assist,448131,assist attributed via sofascore.com,sofascore.com
+422,28,90,,Switzerland,502727,Johan MANZAMBI,Goal,open_play,448131,,api.fifa.com
+423,28,90,,Switzerland,448131,Ruben VARGAS,Assist,assist,502727,assist attributed via sofascore.com,sofascore.com
+424,28,90,7,Switzerland,311558,Granit XHAKA,Goal,penalty,,Penalty scored,api.fifa.com
+425,28,90,3,Bosnia and Herzegovina,522846,Ermin MAHMIC,Goal,open_play,,,api.fifa.com
+426,28,65,,Switzerland,398509,Nico ELVEDI,Yellow Card,,,,api.fifa.com
+427,28,59,,Bosnia and Herzegovina,482976,Amar DEDIC,Yellow Card,,,,api.fifa.com
+428,28,61,,Bosnia and Herzegovina,300409,Edin DZEKO,Yellow Card,,,,api.fifa.com
+429,28,80,,Bosnia and Herzegovina,484022,Tarik MUHAREMOVIC,Red Card,,,,api.fifa.com
+430,28,72,,Switzerland,502727,Johan MANZAMBI,Substitution,substitution,448114,IN: Johan MANZAMBI / OUT: Dan NDOYE,api.fifa.com
+431,28,72,,Switzerland,411226,Djibril SOW,Substitution,substitution,433147,IN: Djibril SOW / OUT: Michel AEBISCHER,api.fifa.com
+432,28,72,,Switzerland,448131,Ruben VARGAS,Substitution,substitution,448103,IN: Ruben VARGAS / OUT: Fabian RIEDER,api.fifa.com
+433,28,86,,Switzerland,510908,Luca JAQUEZ,Substitution,substitution,356412,IN: Luca JAQUEZ / OUT: Silvan WIDMER,api.fifa.com
+434,28,89,,Switzerland,448104,Cedric ITTEN,Substitution,substitution,393480,IN: Cedric ITTEN / OUT: Breel EMBOLO,api.fifa.com
+435,28,63,,Bosnia and Herzegovina,482974,Ivan BASIC,Substitution,substitution,483966,IN: Ivan BASIC / OUT: Benjamin TAHIROVIC,api.fifa.com
+436,28,63,,Bosnia and Herzegovina,464566,Esmir BAJRAKTAREVIC,Substitution,substitution,300409,IN: Esmir BAJRAKTAREVIC / OUT: Edin DZEKO,api.fifa.com
+437,28,85,,Bosnia and Herzegovina,430196,Amir HADZIAHMETOVIC,Substitution,substitution,372436,IN: Amir HADZIAHMETOVIC / OUT: Ivan SUNJIC,api.fifa.com
+438,28,85,,Bosnia and Herzegovina,519954,Jovo LUKIC,Substitution,substitution,436743,IN: Jovo LUKIC / OUT: Ermedin DEMIROVIC,api.fifa.com
+439,28,90,1,Bosnia and Herzegovina,522846,Ermin MAHMIC,Substitution,substitution,504990,IN: Ermin MAHMIC / OUT: Kerim ALAJBEGOVIC,api.fifa.com
+440,27,16,,Canada,390670,Cyle LARIN,Goal,open_play,,,api.fifa.com
+441,27,29,,Canada,441257,Jonathan DAVID,Goal,open_play,,,api.fifa.com
+442,27,45,3,Canada,441257,Jonathan DAVID,Goal,open_play,,,api.fifa.com
+443,27,64,,Canada,423941,Nathan SALIBA,Goal,open_play,,,api.fifa.com
+444,27,75,,Canada,498458,MOHAMED MANAI,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+445,27,90,2,Canada,441257,Jonathan DAVID,Goal,open_play,,,api.fifa.com
+446,27,9,,Canada,371958,Derek CORNELIUS,Yellow Card,,,,api.fifa.com
+447,27,33,,Qatar,419441,HOMAM AHMED,Red Card,,,,api.fifa.com
+448,27,51,,Qatar,386348,ASSIM MADIBO,Red Card,,,,api.fifa.com
+449,27,62,,Qatar,433394,AHMED FATHY,Yellow Card,,,,api.fifa.com
+450,27,,,Canada,466585,Moise BOMBITO,Substitution,substitution,371958,IN: Moise BOMBITO / OUT: Derek CORNELIUS,api.fifa.com
+451,27,56,,Canada,423941,Nathan SALIBA,Substitution,substitution,441258,IN: Nathan SALIBA / OUT: Ismael KONE,api.fifa.com
+452,27,71,,Canada,486929,Tani OLUWASEYI,Substitution,substitution,466687,IN: Tani OLUWASEYI / OUT: Ali AHMED,api.fifa.com
+453,27,71,,Canada,448411,Jacob SHAFFELBURG,Substitution,substitution,480322,IN: Jacob SHAFFELBURG / OUT: Luc DE FOUGEROLLES,api.fifa.com
+454,27,83,,Canada,485064,Niko SIGUR,Substitution,substitution,430138,IN: Niko SIGUR / OUT: Tajon BUCHANAN,api.fifa.com
+455,27,40,,Qatar,386387,SULTAN ALBRAKE,Substitution,substitution,419463,IN: SULTAN ALBRAKE / OUT: YUSUF ABDURISAG,api.fifa.com
+456,27,,,Qatar,433394,AHMED FATHY,Substitution,substitution,429063,IN: AHMED FATHY / OUT: EDMILSON JUNIOR,api.fifa.com
+457,27,,,Qatar,498458,MOHAMED MANAI,Substitution,substitution,419473,IN: MOHAMED MANAI / OUT: JASSEM GABER,api.fifa.com
+458,27,59,,Qatar,486614,ALHASHMI ALHUSSEIN,Substitution,substitution,386347,IN: ALHASHMI ALHUSSEIN / OUT: AKRAM AFIF,api.fifa.com
+459,27,87,,Qatar,356673,LUCAS MENDES,Substitution,substitution,433394,IN: LUCAS MENDES / OUT: AHMED FATHY,api.fifa.com
+460,27,60,,Qatar,,,VAR Review,,,from sofascore.com,sofascore.com
+461,25,50,,Mexico,430763,Luis ROMO,Goal,open_play,,,api.fifa.com
+462,25,4,,Korea Republic,418490,LEE Kangin,Yellow Card,,,,api.fifa.com
+463,25,58,,Korea Republic,402817,PAIK Seungho,Yellow Card,,,,api.fifa.com
+464,25,71,,Mexico,461177,Obed VARGAS,Substitution,substitution,430763,IN: Obed VARGAS / OUT: Luis ROMO,api.fifa.com
+465,25,71,,Mexico,372090,Orbelin PINEDA,Substitution,substitution,464533,IN: Orbelin PINEDA / OUT: Brian GUTIERREZ,api.fifa.com
+466,25,80,,Mexico,430759,Santiago GIMENEZ,Substitution,substitution,356731,IN: Santiago GIMENEZ / OUT: Raul JIMENEZ,api.fifa.com
+467,25,80,,Mexico,441261,Israel REYES,Substitution,substitution,403585,IN: Israel REYES / OUT: Roberto ALVARADO,api.fifa.com
+468,25,84,,Mexico,406135,Cesar HUERTA,Substitution,substitution,429157,IN: Cesar HUERTA / OUT: Julian QUINONES,api.fifa.com
+469,25,57,,Korea Republic,395083,HWANG Heechan,Substitution,substitution,390525,IN: HWANG Heechan / OUT: LEE Jaesung,api.fifa.com
+470,25,57,,Korea Republic,448586,OH Hyeongyu,Substitution,substitution,307849,IN: OH Hyeongyu / OUT: SON Heungmin,api.fifa.com
+471,25,71,,Korea Republic,423855,EOM Jisung,Substitution,substitution,448580,IN: EOM Jisung / OUT: KIM Moonhwan ,api.fifa.com
+472,25,71,,Korea Republic,448585,YANG Hyunjun ,Substitution,substitution,429608,IN: YANG Hyunjun  / OUT: SEOL Youngwoo,api.fifa.com
+473,25,77,,Korea Republic,430387,CHO Guesung,Substitution,substitution,402817,IN: CHO Guesung / OUT: PAIK Seungho,api.fifa.com
+474,31,11,,USA,382312,Cameron BURGESS,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+475,31,43,,USA,464542,Alex FREEMAN,Goal,open_play,406280,,api.fifa.com
+476,31,43,,USA,406280,Sergino DEST,Assist,assist,464542,assist attributed via sofascore.com,sofascore.com
+477,31,56,,USA,441251,Antonee ROBINSON,Yellow Card,,,,api.fifa.com
+478,31,89,,USA,466624,Folarin BALOGUN,Yellow Card,,,,api.fifa.com
+479,31,90,3,USA,419062,Chris RICHARDS,Yellow Card,,,,api.fifa.com
+480,31,16,,Australia,423522,Jordan BOS,Yellow Card,,,,api.fifa.com
+481,31,32,,Australia,448014,Alessandro CIRCATI,Yellow Card,,,,api.fifa.com
+482,31,89,,Australia,430450,Jacob ITALIANO,Yellow Card,,,,api.fifa.com
+483,31,89,,Australia,430442,Harry SOUTTAR,Yellow Card,,,,api.fifa.com
+484,31,74,,USA,499912,Sebastian BERHALTER,Substitution,substitution,419082,IN: Sebastian BERHALTER / OUT: Ricardo PEPI,api.fifa.com
+485,31,80,,USA,423700,Joe SCALLY,Substitution,substitution,406280,IN: Joe SCALLY / OUT: Sergino DEST,api.fifa.com
+486,31,80,,USA,390272,Auston TRUSTY,Substitution,substitution,441251,IN: Auston TRUSTY / OUT: Antonee ROBINSON,api.fifa.com
+487,31,90,6,USA,390276,Haji WRIGHT,Substitution,substitution,466624,IN: Haji WRIGHT / OUT: Folarin BALOGUN,api.fifa.com
+488,31,90,6,USA,419068,Giovanni REYNA,Substitution,substitution,390259,IN: Giovanni REYNA / OUT: Weston McKENNIE,api.fifa.com
+489,31,,,Australia,339112,Jason GERIA,Substitution,substitution,382312,IN: Jason GERIA / OUT: Cameron BURGESS,api.fifa.com
+490,31,,,Australia,430452,Connor METCALFE,Substitution,substitution,491166,IN: Connor METCALFE / OUT: Nishan VELUPILLAY,api.fifa.com
+491,31,,,Australia,486306,Nestory IRANKUNDA,Substitution,substitution,498806,IN: Nestory IRANKUNDA / OUT: Mohamed TOURE,api.fifa.com
+492,31,61,,Australia,448015,Cristian VOLPATO,Substitution,substitution,321697,IN: Cristian VOLPATO / OUT: Mathew LECKIE,api.fifa.com
+493,31,78,,Australia,355775,Jackson IRVINE,Substitution,substitution,498421,IN: Jackson IRVINE / OUT: Paul OKON-ENGSTLER,api.fifa.com
+494,31,43,,USA,,,VAR Review,,,from sofascore.com,sofascore.com
+495,30,2,,Morocco,448598,Ismael SAIBARI,Goal,open_play,430740,,api.fifa.com
+496,30,2,,Morocco,430740,Brahim DIAZ,Assist,assist,448598,assist attributed via sofascore.com,sofascore.com
+497,30,65,,Scotland,401339,Andy ROBERTSON,Yellow Card,,,,api.fifa.com
+498,30,22,,Morocco,403083,Issa Diop,Yellow Card,,,,api.fifa.com
+499,30,60,,Scotland,485131,Ben GANNON-DOAK,Substitution,substitution,401712,IN: Ben GANNON-DOAK / OUT: Kieran Tierney,api.fifa.com
+500,30,71,,Scotland,430098,Lyndon DYKES,Substitution,substitution,433191,IN: Lyndon DYKES / OUT: Che Adams,api.fifa.com
+501,30,71,,Scotland,484051,Kenny McLEAN,Substitution,substitution,430097,IN: Kenny McLEAN / OUT: Ryan Christie,api.fifa.com
+502,30,88,,Scotland,337389,Anthony RALSTON,Substitution,substitution,433694,IN: Anthony RALSTON / OUT: Nathan PATTERSON,api.fifa.com
+503,30,88,,Scotland,442433,Ross STEWART,Substitution,substitution,401334,IN: Ross STEWART / OUT: John McGinn,api.fifa.com
+504,30,83,,Morocco,433426,Soufiane RAHIMI,Substitution,substitution,448598,IN: Soufiane RAHIMI / OUT: Ismael SAIBARI,api.fifa.com
+505,30,83,,Morocco,494293,Chemsdine TALBI,Substitution,substitution,448612,IN: Chemsdine TALBI / OUT: Bilal EL KHANNOUSS,api.fifa.com
+506,30,83,,Morocco,523288,Ayoube AMAIMOUNI,Substitution,substitution,430740,IN: Ayoube AMAIMOUNI / OUT: Brahim DIAZ,api.fifa.com
+507,30,90,,Morocco,505097,Samir EL MOURABET,Substitution,substitution,441307,IN: Samir EL MOURABET / OUT: Azzedine OUNAHI,api.fifa.com
+508,29,23,,Brazil,430609,MATHEUS CUNHA,Goal,open_play,,,api.fifa.com
+509,29,36,,Brazil,430609,MATHEUS CUNHA,Goal,open_play,405742,,api.fifa.com
+510,29,36,,Brazil,405742,VINICIUS JUNIOR,Assist,assist,430609,assist attributed via sofascore.com,sofascore.com
+511,29,45,3,Brazil,405742,VINICIUS JUNIOR,Goal,open_play,,,api.fifa.com
+512,29,65,,Brazil,367981,DOUGLAS SANTOS,Yellow Card,,,,api.fifa.com
+513,29,4,,Haiti,397775,Carlens ARCUS,Yellow Card,,,,api.fifa.com
+514,29,45,4,Haiti,431693,Frantzdy Pierrot,Yellow Card,,,,api.fifa.com
+515,29,72,,Haiti,466838,Danley JEAN JACQUES,Yellow Card,,,,api.fifa.com
+516,29,40,,Brazil,475036,RAYAN,Substitution,substitution,433872,IN: RAYAN / OUT: RAPHINHA,api.fifa.com
+517,29,64,,Brazil,463746,ENDRICK,Substitution,substitution,430609,IN: ENDRICK / OUT: MATHEUS CUNHA,api.fifa.com
+518,29,64,,Brazil,430597,GABRIEL MARTINELLI,Substitution,substitution,411726,IN: GABRIEL MARTINELLI / OUT: LUCAS PAQUETA,api.fifa.com
+519,29,81,,Brazil,429392,DANILO SANTOS,Substitution,substitution,405742,IN: DANILO SANTOS / OUT: VINICIUS JUNIOR,api.fifa.com
+520,29,81,,Brazil,485069,EDERSON SILVA,Substitution,substitution,430605,IN: EDERSON SILVA / OUT: BRUNO GUIMARAES,api.fifa.com
+521,29,,,Haiti,523215,Dominique SIMON,Substitution,substitution,397775,IN: Dominique SIMON / OUT: Carlens ARCUS,api.fifa.com
+522,29,,,Haiti,405879,Wilson Isidor,Substitution,substitution,431693,IN: Wilson Isidor / OUT: Frantzdy Pierrot,api.fifa.com
+523,29,62,,Haiti,481027,Louicius DEEDSON,Substitution,substitution,510757,IN: Louicius DEEDSON / OUT: Josue CASIMIR,api.fifa.com
+524,29,71,,Haiti,485676,Lenny JOSEPH,Substitution,substitution,485664,IN: Lenny JOSEPH / OUT: Ruben PROVIDENCE,api.fifa.com
+525,29,81,,Haiti,466865,Derrick ETIENNE,Substitution,substitution,430697,IN: Derrick ETIENNE / OUT: Jean-Ricner Bellegarde,api.fifa.com
+526,32,2,,Paraguay,424422,Matias GALARZA,Goal,open_play,441234,,api.fifa.com
+527,32,2,,Paraguay,441234,Julio ENCISO,Assist,assist,424422,assist attributed via sofascore.com,sofascore.com
+528,32,63,,Türkiye,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+529,32,71,,Türkiye,484065,Eren ELMALI,Yellow Card,,,,api.fifa.com
+530,32,4,,Paraguay,424422,Matias GALARZA,Yellow Card,,,,api.fifa.com
+531,32,37,,Paraguay,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+532,32,45,3,Paraguay,369761,Miguel ALMIRON,Red Card,,,,api.fifa.com
+533,32,,,Türkiye,484139,Baris Alper YILMAZ,Substitution,substitution,441188,IN: Baris Alper YILMAZ / OUT: Kerem AKTURKOGLU,api.fifa.com
+534,32,60,,Türkiye,486074,Can UZUN,Substitution,substitution,484092,IN: Can UZUN / OUT: Ismail YUKSEK,api.fifa.com
+535,32,60,,Türkiye,495347,Deniz GUL,Substitution,substitution,406231,IN: Deniz GUL / OUT: Yunus AKGUN,api.fifa.com
+536,32,71,,Türkiye,484065,Eren ELMALI,Substitution,substitution,484113,IN: Eren ELMALI / OUT: Ferdi KADIOGLU,api.fifa.com
+537,32,86,,Türkiye,433118,Orkun KOKCU,Substitution,substitution,484082,IN: Orkun KOKCU / OUT: Abdulkerim BARDAKCI,api.fifa.com
+538,32,,,Paraguay,476348,Damian BOBADILLA,Substitution,substitution,489417,IN: Damian BOBADILLA / OUT: Isidro PITTA,api.fifa.com
+539,32,67,,Paraguay,486875,Gustavo VELAZQUEZ,Substitution,substitution,463128,IN: Gustavo VELAZQUEZ / OUT: Diego GOMEZ,api.fifa.com
+540,32,81,,Paraguay,505495,Alexandro MAIDANA,Substitution,substitution,479601,IN: Alexandro MAIDANA / OUT: Juan Jose CACERES,api.fifa.com
+541,32,90,1,Paraguay,463127,Gabriel AVALOS,Substitution,substitution,441234,IN: Gabriel AVALOS / OUT: Julio ENCISO,api.fifa.com
+542,32,90,1,Paraguay,520066,Jose CANALE,Substitution,substitution,424422,IN: Jose CANALE / OUT: Matias GALARZA,api.fifa.com
+543,32,45,,Paraguay,,,VAR Review,,,from sofascore.com,sofascore.com
+544,35,5,,Netherlands,424051,Brian BROBBEY,Goal,open_play,448152,,api.fifa.com
+545,35,5,,Netherlands,448152,Cody GAKPO,Assist,assist,424051,assist attributed via sofascore.com,sofascore.com
+546,35,17,,Netherlands,424051,Brian BROBBEY,Goal,open_play,436612,,api.fifa.com
+547,35,17,,Netherlands,436612,Denzel DUMFRIES,Assist,assist,424051,assist attributed via sofascore.com,sofascore.com
+548,35,47,,Netherlands,448152,Cody GAKPO,Goal,open_play,436612,,api.fifa.com
+549,35,47,,Netherlands,436612,Denzel DUMFRIES,Assist,assist,448152,assist attributed via sofascore.com,sofascore.com
+550,35,54,,Netherlands,448152,Cody GAKPO,Goal,open_play,489518,,api.fifa.com
+551,35,54,,Netherlands,489518,Crysencio SUMMERVILLE,Assist,assist,448152,assist attributed via sofascore.com,sofascore.com
+552,35,89,,Netherlands,489518,Crysencio SUMMERVILLE,Goal,open_play,336098,,api.fifa.com
+553,35,89,,Netherlands,336098,Memphis DEPAY,Assist,assist,489518,assist attributed via sofascore.com,sofascore.com
+554,35,59,,Sweden,441137,Anthony ELANGA,Goal,open_play,430150,,api.fifa.com
+555,35,59,,Sweden,430150,Alexander Isak,Assist,assist,441137,assist attributed via sofascore.com,sofascore.com
+556,35,53,,Sweden,483276,Gabriel GUDMUNDSSON,Yellow Card,,,,api.fifa.com
+557,35,75,,Sweden,489688,Yasin AYARI,Yellow Card,,,,api.fifa.com
+558,35,80,,Sweden,489689,Lucas BERGVALL,Yellow Card,,,,api.fifa.com
+559,35,,,Netherlands,489518,Crysencio SUMMERVILLE,Substitution,substitution,433066,IN: Crysencio SUMMERVILLE / OUT: Donyell Malen,api.fifa.com
+560,35,59,,Netherlands,448149,Teun KOOPMEINERS,Substitution,substitution,422657,IN: Teun KOOPMEINERS / OUT: Frenkie DE JONG,api.fifa.com
+561,35,59,,Netherlands,448157,Guus TIL,Substitution,substitution,483526,IN: Guus TIL / OUT: Tijjani REIJNDERS,api.fifa.com
+562,35,72,,Netherlands,336098,Memphis DEPAY,Substitution,substitution,424051,IN: Memphis DEPAY / OUT: Brian BROBBEY,api.fifa.com
+563,35,90,,Netherlands,448153,Noa LANG,Substitution,substitution,448152,IN: Noa LANG / OUT: Cody GAKPO,api.fifa.com
+564,35,55,,Sweden,441137,Anthony ELANGA,Substitution,substitution,502945,IN: Anthony ELANGA / OUT: Alexander BERNHARDSSON,api.fifa.com
+565,35,55,,Sweden,503047,Besfort ZENELI,Substitution,substitution,441135,IN: Besfort ZENELI / OUT: Jesper KARLSTROM,api.fifa.com
+566,35,55,,Sweden,489689,Lucas BERGVALL,Substitution,substitution,502946,IN: Lucas BERGVALL / OUT: Benjamin NYGREN,api.fifa.com
+567,35,79,,Sweden,514202,Taha ALI,Substitution,substitution,489688,IN: Taha ALI / OUT: Yasin AYARI,api.fifa.com
+568,35,90,3,Sweden,519958,Elliot STROUD,Substitution,substitution,483276,IN: Elliot STROUD / OUT: Gabriel GUDMUNDSSON,api.fifa.com
+569,33,68,,Germany,484851,Deniz UNDAV,Goal,open_play,395471,,api.fifa.com
+570,33,68,,Germany,395471,Nadiem Amiri,Assist,assist,484851,assist attributed via sofascore.com,sofascore.com
+571,33,90,4,Germany,484851,Deniz UNDAV,Goal,open_play,,,api.fifa.com
+572,33,30,,Côte d'Ivoire,371609,Franck KESSIE,Goal,open_play,510922,,api.fifa.com
+573,33,30,,Côte d'Ivoire,510922,Yan DIOMANDE,Assist,assist,371609,assist attributed via sofascore.com,sofascore.com
+574,33,,,Germany,379955,Antonio RUEDIGER,Substitution,substitution,430667,IN: Antonio RUEDIGER / OUT: Nico SCHLOTTERBECK,api.fifa.com
+575,33,60,,Germany,484851,Deniz UNDAV,Substitution,substitution,429642,IN: Deniz UNDAV / OUT: Jamal MUSIALA,api.fifa.com
+576,33,60,,Germany,395471,Nadiem Amiri,Substitution,substitution,484849,IN: Nadiem Amiri / OUT: Aleksandar PAVLOVIC,api.fifa.com
+577,33,60,,Germany,491218,Jamie LEWELING,Substitution,substitution,404353,IN: Jamie LEWELING / OUT: Leroy SANE,api.fifa.com
+578,33,85,,Germany,379953,Leon GORETZKA,Substitution,substitution,411367,IN: Leon GORETZKA / OUT: Kai HAVERTZ,api.fifa.com
+579,33,75,,Côte d'Ivoire,477778,Simon ADINGRA,Substitution,substitution,430822,IN: Simon ADINGRA / OUT: Amad DIALLO,api.fifa.com
+580,33,75,,Côte d'Ivoire,485675,Evann GUESSAND,Substitution,substitution,464103,IN: Evann GUESSAND / OUT: Ange-Yoan BONNY,api.fifa.com
+581,33,75,,Côte d'Ivoire,405175,Seko Fofana,Substitution,substitution,430831,IN: Seko Fofana / OUT: Ibrahim SANGARE,api.fifa.com
+582,33,82,,Côte d'Ivoire,486317,Guela DOUE,Substitution,substitution,430854,IN: Guela DOUE / OUT: Wilfried SINGO,api.fifa.com
+583,33,85,,Côte d'Ivoire,402261,Nicolas PEPE,Substitution,substitution,510922,IN: Nicolas PEPE / OUT: Yan DIOMANDE,api.fifa.com
+584,34,38,,Ecuador,419005,Jordy ALCIVAR,Yellow Card,,,,api.fifa.com
+585,34,39,,Curaçao,466340,Leandro BACUNA,Yellow Card,,,,api.fifa.com
+586,34,53,,Curaçao,466317,Juninho BACUNA,Yellow Card,,,,api.fifa.com
+587,34,56,,Curaçao,494989,Livano COMENENCIA,Yellow Card,,,,api.fifa.com
+588,34,75,,Curaçao,431698,Jurien GAARI,Yellow Card,,,,api.fifa.com
+589,34,90,1,Curaçao,466372,Gervane KASTANEER,Yellow Card,,,,api.fifa.com
+590,34,,,Ecuador,448310,Kevin RODRIGUEZ,Substitution,substitution,419005,IN: Kevin RODRIGUEZ / OUT: Jordy ALCIVAR,api.fifa.com
+591,34,71,,Ecuador,448312,Nilson ANGULO,Substitution,substitution,389782,IN: Nilson ANGULO / OUT: Pervis ESTUPINAN,api.fifa.com
+592,34,83,,Ecuador,402974,Angelo PRECIADO,Substitution,substitution,389784,IN: Angelo PRECIADO / OUT: Alan FRANCO,api.fifa.com
+593,34,89,,Ecuador,402985,Jordy CAICEDO,Substitution,substitution,405920,IN: Jordy CAICEDO / OUT: John YEBOAH,api.fifa.com
+594,34,75,,Curaçao,466361,Roshon VAN EIJMA,Substitution,substitution,506471,IN: Roshon VAN EIJMA / OUT: Deveron FONVILLE,api.fifa.com
+595,34,75,,Curaçao,466363,Jearl MARGARITHA,Substitution,substitution,485347,IN: Jearl MARGARITHA / OUT: Tahith CHONG,api.fifa.com
+596,34,75,,Curaçao,466352,Kenji GORRE,Substitution,substitution,466317,IN: Kenji GORRE / OUT: Juninho BACUNA,api.fifa.com
+597,34,83,,Curaçao,466359,Godfried ROEMERATOE,Substitution,substitution,494989,IN: Godfried ROEMERATOE / OUT: Livano COMENENCIA,api.fifa.com
+598,34,83,,Curaçao,466372,Gervane KASTANEER,Substitution,substitution,407680,IN: Gervane KASTANEER / OUT: Juergen LOCADIA,api.fifa.com
+599,36,4,,Japan,448557,Daichi KAMADA,Goal,open_play,405522,,api.fifa.com
+600,36,4,,Japan,405522,Keito Nakamura,Assist,assist,448557,assist attributed via sofascore.com,sofascore.com
+601,36,31,,Japan,430413,Ayase UEDA,Goal,open_play,405522,,api.fifa.com
+602,36,31,,Japan,405522,Keito Nakamura,Assist,assist,430413,assist attributed via sofascore.com,sofascore.com
+603,36,69,,Japan,395321,Junya ITO,Goal,open_play,430413,,api.fifa.com
+604,36,69,,Japan,430413,Ayase UEDA,Assist,assist,395321,assist attributed via sofascore.com,sofascore.com
+605,36,83,,Japan,430413,Ayase UEDA,Goal,open_play,479294,,api.fifa.com
+606,36,83,,Japan,479294,Kaishu SANO,Assist,assist,430413,assist attributed via sofascore.com,sofascore.com
+607,36,,,Tunisia,425607,Mohamed Amine BEN HMIDA,Substitution,substitution,411653,IN: Mohamed Amine BEN HMIDA / OUT: Dylan BRONN,api.fifa.com
+608,36,,,Tunisia,464484,Ismael GHARBI,Substitution,substitution,482885,IN: Ismael GHARBI / OUT: Elias SAAD,api.fifa.com
+609,36,64,,Tunisia,494375,Firas CHAOUAT,Substitution,substitution,504502,IN: Firas CHAOUAT / OUT: Sebastian TOUNEKTI,api.fifa.com
+610,36,90,,Tunisia,448662,Elias ACHOURI,Substitution,substitution,433362,IN: Elias ACHOURI / OUT: Ali ABDI,api.fifa.com
+611,36,90,,Tunisia,336459,Rani Khedira,Substitution,substitution,411658,IN: Rani Khedira / OUT: Ellyes SKHIRI,api.fifa.com
+612,36,74,,Japan,405528,Yukinari Sugawara,Substitution,substitution,391646,IN: Yukinari Sugawara / OUT: Ritsu DOAN,api.fifa.com
+613,36,74,,Japan,498455,Junnosuke SUZUKI,Substitution,substitution,448557,IN: Junnosuke SUZUKI / OUT: Daichi KAMADA,api.fifa.com
+614,36,78,,Japan,485503,Yuito SUZUKI,Substitution,substitution,405522,IN: Yuito SUZUKI / OUT: Keito Nakamura,api.fifa.com
+615,36,78,,Japan,405527,Ayumu SEKO,Substitution,substitution,403289,IN: Ayumu SEKO / OUT: Takehiro TOMIYASU,api.fifa.com
+616,36,84,,Japan,464339,Keisuke GOTO,Substitution,substitution,430413,IN: Keisuke GOTO / OUT: Ayase UEDA,api.fifa.com
+617,39,10,,Spain,484320,Lamine YAMAL,Goal,open_play,430751,,api.fifa.com
+618,39,10,,Spain,430751,Mikel OYARZABAL,Assist,assist,484320,assist attributed via sofascore.com,sofascore.com
+619,39,21,,Spain,430751,Mikel OYARZABAL,Goal,open_play,335999,,api.fifa.com
+620,39,21,,Spain,335999,Aymeric LAPORTE,Assist,assist,430751,assist attributed via sofascore.com,sofascore.com
+621,39,24,,Spain,430751,Mikel OYARZABAL,Goal,open_play,430750,,api.fifa.com
+622,39,24,,Spain,430750,Dani OLMO,Assist,assist,430751,assist attributed via sofascore.com,sofascore.com
+623,39,49,,Spain,403335,HASSAN ALTAMBAKTI,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+624,39,30,,Saudi Arabia,339745,SALEM ALDAWSARI,Yellow Card,,,,api.fifa.com
+625,39,60,,Saudi Arabia,407993,MOHAMED KANNO,Yellow Card,,,,api.fifa.com
+626,39,,,Spain,423658,Yeremy PINO,Substitution,substitution,484320,IN: Yeremy PINO / OUT: Lamine YAMAL,api.fifa.com
+627,39,,,Spain,405545,Ferran TORRES,Substitution,substitution,430751,IN: Ferran TORRES / OUT: Mikel OYARZABAL,api.fifa.com
+628,39,61,,Spain,430733,Mikel MERINO,Substitution,substitution,430750,IN: Mikel MERINO / OUT: Dani OLMO,api.fifa.com
+629,39,61,,Spain,447855,Nico WILLIAMS,Substitution,substitution,447860,IN: Nico WILLIAMS / OUT: Alex BAENA,api.fifa.com
+630,39,70,,Spain,430718,Fabian RUIZ,Substitution,substitution,423646,IN: Fabian RUIZ / OUT: PEDRI,api.fifa.com
+631,39,,,Saudi Arabia,419302,ABDULLAH ALHAMDDAN,Substitution,substitution,436537,IN: ABDULLAH ALHAMDDAN / OUT: MUSAB ALJUWAYR,api.fifa.com
+632,39,,,Saudi Arabia,407993,MOHAMED KANNO,Substitution,substitution,411624,IN: MOHAMED KANNO / OUT: ABDULLAH ALKHAIBARI,api.fifa.com
+633,39,60,,Saudi Arabia,512183,MOHAMMED ABU ALSHAMAT,Substitution,substitution,419291,IN: MOHAMMED ABU ALSHAMAT / OUT: FERAS ALBRIKAN,api.fifa.com
+634,39,60,,Saudi Arabia,523333,ALA ALHAJJI,Substitution,substitution,403312,IN: ALA ALHAJJI / OUT: Abdulelah ALAMRI,api.fifa.com
+635,39,90,,Saudi Arabia,419300,KHALID ALGHANNAM,Substitution,substitution,403319,IN: KHALID ALGHANNAM / OUT: NASSER ALDAWSARI,api.fifa.com
+636,37,3,,Belgium,358112,Romelu LUKAKU,Yellow Card,,,,api.fifa.com
+637,37,66,,Belgium,514166,Nathan NGOY,Red Card,,,,api.fifa.com
+638,37,33,,IR Iran,371736,Saeid EZATOLAHI,Yellow Card,,,,api.fifa.com
+639,37,58,,Belgium,411443,Timothy CASTAGNE,Substitution,substitution,358122,IN: Timothy CASTAGNE / OUT: Thomas MEUNIER,api.fifa.com
+640,37,58,,Belgium,448343,Hans VANAKEN,Substitution,substitution,495349,IN: Hans VANAKEN / OUT: Nicolas RASKIN,api.fifa.com
+641,37,58,,Belgium,448377,Dodi LUKEBAKIO,Substitution,substitution,433092,IN: Dodi LUKEBAKIO / OUT: Alexis SAELEMAEKERS,api.fifa.com
+642,37,73,,Belgium,448346,Arthur THEATE,Substitution,substitution,358112,IN: Arthur THEATE / OUT: Romelu LUKAKU,api.fifa.com
+643,37,87,,Belgium,494025,Matias FERNANDEZ-PARDO,Substitution,substitution,358120,IN: Matias FERNANDEZ-PARDO / OUT: Kevin DE BRUYNE,api.fifa.com
+644,37,,,IR Iran,379886,Alireza JAHANBAKHSH,Substitution,substitution,448505,IN: Alireza JAHANBAKHSH / OUT: Saleh HARDANI,api.fifa.com
+645,37,66,,IR Iran,390535,Mehdi TORABI,Substitution,substitution,448497,IN: Mehdi TORABI / OUT: Mohammad MOHEBBI,api.fifa.com
+646,37,66,,IR Iran,390537,Milad MOHAMMADI,Substitution,substitution,288961,IN: Milad MOHAMMADI / OUT: Ehsan HAJISAFI,api.fifa.com
+647,37,79,,IR Iran,481180,Shahriyar MOGHANLOO,Substitution,substitution,411644,IN: Shahriyar MOGHANLOO / OUT: Saman GHODDOS,api.fifa.com
+648,37,85,,IR Iran,405639,Amirhossein Hosseinzadeh,Substitution,substitution,371736,IN: Amirhossein Hosseinzadeh / OUT: Saeid EZATOLAHI,api.fifa.com
+649,40,44,,Uruguay,419100,Maxi ARAUJO,Goal,open_play,402884,,api.fifa.com
+650,40,44,,Uruguay,402884,Federico VALVERDE,Assist,assist,419100,assist attributed via sofascore.com,sofascore.com
+651,40,45,6,Uruguay,402876,Agustin CANOBBIO,Goal,open_play,,,api.fifa.com
+652,40,21,,Cabo Verde,477852,KEVIN PINA,Goal,open_play,,,api.fifa.com
+653,40,61,,Cabo Verde,477849,HELIO VARELA,Goal,open_play,,,api.fifa.com
+654,40,20,,Uruguay,386538,Rodrigo BENTANCUR,Yellow Card,,,,api.fifa.com
+655,40,58,,Uruguay,402893,Mathias OLIVERA,Yellow Card,,,,api.fifa.com
+656,40,5,,Cabo Verde,477832,SIDNY LOPES CABRAL,Yellow Card,,,,api.fifa.com
+657,40,90,3,Cabo Verde,409241,DINEY BORGES,Yellow Card,,,,api.fifa.com
+658,40,70,,Uruguay,402898,Nicolas DE LA CRUZ,Substitution,substitution,441623,IN: Nicolas DE LA CRUZ / OUT: Manuel UGARTE,api.fifa.com
+659,40,70,,Uruguay,419126,Darwin NUNEZ,Substitution,substitution,477536,IN: Darwin NUNEZ / OUT: Federico VINAS,api.fifa.com
+660,40,81,,Uruguay,419132,Brian RODRIGUEZ,Substitution,substitution,419100,IN: Brian RODRIGUEZ / OUT: Maxi ARAUJO,api.fifa.com
+661,40,,,Cabo Verde,477827,DEROY DUARTE,Substitution,substitution,494314,IN: DEROY DUARTE / OUT: TELMO ARCANJO,api.fifa.com
+662,40,58,,Cabo Verde,401893,NUNO DA COSTA,Substitution,substitution,477862,IN: NUNO DA COSTA / OUT: GILSON BENCHIMOL,api.fifa.com
+663,40,58,,Cabo Verde,477849,HELIO VARELA,Substitution,substitution,373344,IN: HELIO VARELA / OUT: GARRY RODRIGUES,api.fifa.com
+664,40,70,,Cabo Verde,480966,LAROS DUARTE,Substitution,substitution,477852,IN: LAROS DUARTE / OUT: KEVIN PINA,api.fifa.com
+665,40,80,,Cabo Verde,494313,YANNICK SEMEDO,Substitution,substitution,401894,IN: YANNICK SEMEDO / OUT: JAMIRO MONTEIRO,api.fifa.com
+666,38,15,,New Zealand,463580,Finn SURMAN,Goal,open_play,331463,,api.fifa.com
+667,38,15,,New Zealand,331463,Tim PAYNE,Assist,assist,463580,assist attributed via sofascore.com,sofascore.com
+668,38,58,,Egypt,483161,MOSTAFA ZICO,Goal,open_play,408950,,api.fifa.com
+669,38,58,,Egypt,408950,MOHAMED HANY,Assist,assist,483161,assist attributed via sofascore.com,sofascore.com
+670,38,67,,Egypt,344654,MOHAMED SALAH,Goal,open_play,483161,,api.fifa.com
+671,38,67,,Egypt,483161,MOSTAFA ZICO,Assist,assist,344654,assist attributed via sofascore.com,sofascore.com
+672,38,82,,Egypt,363863,TREZEGUET,Goal,open_play,344654,,api.fifa.com
+673,38,82,,Egypt,344654,MOHAMED SALAH,Assist,assist,363863,assist attributed via sofascore.com,sofascore.com
+674,38,20,,New Zealand,390209,Sarpreet SINGH,Yellow Card,,,,api.fifa.com
+675,38,34,,New Zealand,390196,Callum McCOWATT,Yellow Card,,,,api.fifa.com
+676,38,17,,Egypt,433469,MOHANAD LASHIN,Yellow Card,,,,api.fifa.com
+677,38,66,,New Zealand,423575,Ben OLD,Substitution,substitution,390196,IN: Ben OLD / OUT: Callum McCOWATT,api.fifa.com
+678,38,76,,New Zealand,416652,Jesse RANDALL,Substitution,substitution,405469,IN: Jesse RANDALL / OUT: Liberato CACACE,api.fifa.com
+679,38,76,,New Zealand,336641,Ryan THOMAS,Substitution,substitution,390209,IN: Ryan THOMAS / OUT: Sarpreet SINGH,api.fifa.com
+680,38,85,,New Zealand,440748,Francis DE VRIES,Substitution,substitution,405454,IN: Francis DE VRIES / OUT: Elijah JUST,api.fifa.com
+681,38,85,,New Zealand,482775,Tyler BINDON,Substitution,substitution,331463,IN: Tyler BINDON / OUT: Tim PAYNE,api.fifa.com
+682,38,41,,Egypt,344661,RAMY RABIA,Substitution,substitution,429095,IN: RAMY RABIA / OUT: HAMDY FATHY,api.fifa.com
+683,38,76,,Egypt,363863,TREZEGUET,Substitution,substitution,430476,IN: TREZEGUET / OUT: OMAR MARMOUSH,api.fifa.com
+684,38,76,,Egypt,495488,HAMZA ABDELKARIM,Substitution,substitution,483161,IN: HAMZA ABDELKARIM / OUT: MOSTAFA ZICO,api.fifa.com
+685,38,84,,Egypt,483182,HOSSAM ABDELMAGUID,Substitution,substitution,344654,IN: HOSSAM ABDELMAGUID / OUT: MOHAMED SALAH,api.fifa.com
+686,38,84,,Egypt,433461,ZIZO,Substitution,substitution,430482,IN: ZIZO / OUT: EMAM ASHOUR,api.fifa.com
+687,38,90,9,Egypt,416902,MOHAMED ABDELMONEIM,Substitution,substitution,483182,IN: MOHAMED ABDELMONEIM / OUT: HOSSAM ABDELMAGUID,api.fifa.com
+688,43,38,,Argentina,229397,Lionel MESSI,Goal,open_play,418963,,api.fifa.com
+689,43,38,,Argentina,418963,Facundo MEDINA,Assist,assist,229397,assist attributed via sofascore.com,sofascore.com
+690,43,90,5,Argentina,229397,Lionel MESSI,Goal,open_play,,,api.fifa.com
+691,43,76,,Argentina,418963,Facundo MEDINA,Yellow Card,,,,api.fifa.com
+692,43,90,2,Argentina,332847,Leandro PAREDES,Yellow Card,,,,api.fifa.com
+693,43,40,,Austria,441067,Stefan POSCH,Yellow Card,,,,api.fifa.com
+694,43,76,,Austria,385259,Konrad LAIMER,Yellow Card,,,,api.fifa.com
+695,43,57,,Argentina,310116,Nicolas OTAMENDI,Substitution,substitution,431196,IN: Nicolas OTAMENDI / OUT: Cristian ROMERO,api.fifa.com
+696,43,64,,Argentina,416081,Julian ALVAREZ,Substitution,substitution,418975,IN: Julian ALVAREZ / OUT: Thiago ALMADA,api.fifa.com
+697,43,64,,Argentina,430631,Nico GONZALEZ,Substitution,substitution,402920,IN: Nico GONZALEZ / OUT: Lautaro MARTINEZ,api.fifa.com
+698,43,82,,Argentina,332847,Leandro PAREDES,Substitution,substitution,428882,IN: Leandro PAREDES / OUT: Rodrigo DE PAUL,api.fifa.com
+699,43,82,,Argentina,308322,Nicolas TAGLIAFICO,Substitution,substitution,418963,IN: Nicolas TAGLIAFICO / OUT: Facundo MEDINA,api.fifa.com
+700,43,67,,Austria,463287,Marco FRIEDL,Substitution,substitution,316002,IN: Marco FRIEDL / OUT: David ALABA,api.fifa.com
+701,43,67,,Austria,299200,Marko ARNAUTOVIC,Substitution,substitution,520036,IN: Marko ARNAUTOVIC / OUT: Paul WANNER,api.fifa.com
+702,43,67,,Austria,463282,Alexander PRASS,Substitution,substitution,441067,IN: Alexander PRASS / OUT: Stefan POSCH,api.fifa.com
+703,43,78,,Austria,463286,Patrick WIMMER,Substitution,substitution,463283,IN: Patrick WIMMER / OUT: Romano SCHMID,api.fifa.com
+704,43,85,,Austria,463800,Carney CHUKWUEMEKA,Substitution,substitution,401131,IN: Carney CHUKWUEMEKA / OUT: Michael Gregoritsch,api.fifa.com
+705,41,14,,France,389867,Kylian MBAPPE,Goal,open_play,485655,,api.fifa.com
+706,41,14,,France,485655,Michael OLISE,Assist,assist,389867,assist attributed via sofascore.com,sofascore.com
+707,41,54,,France,389867,Kylian MBAPPE,Goal,open_play,398680,,api.fifa.com
+708,41,54,,France,398680,Ousmane DEMBELE,Assist,assist,389867,assist attributed via sofascore.com,sofascore.com
+709,41,66,,France,398680,Ousmane DEMBELE,Goal,open_play,485655,,api.fifa.com
+710,41,66,,France,485655,Michael OLISE,Assist,assist,398680,assist attributed via sofascore.com,sofascore.com
+711,41,6,,Iraq,433074,AMIR ALAMMARI,Yellow Card,,,,api.fifa.com
+712,41,68,,France,464114,Desire DOUE,Substitution,substitution,398680,IN: Desire DOUE / OUT: Ousmane DEMBELE,api.fifa.com
+713,41,68,,France,431861,Rayan CHERKI,Substitution,substitution,485655,IN: Rayan CHERKI / OUT: Michael OLISE,api.fifa.com
+714,41,83,,France,485666,Maghnes AKLIOUCHE,Substitution,substitution,484860,IN: Maghnes AKLIOUCHE / OUT: Bradley BARCOLA,api.fifa.com
+715,41,83,,France,464055,Malo GUSTO,Substitution,substitution,430707,IN: Malo GUSTO / OUT: Jules KOUNDE,api.fifa.com
+716,41,90,1,France,403109,Marcus THURAM,Substitution,substitution,389867,IN: Marcus THURAM / OUT: Kylian MBAPPE,api.fifa.com
+717,41,26,,Iraq,436628,ALI ALHAMADI,Substitution,substitution,395186,IN: ALI ALHAMADI / OUT: AYMEN HUSSEIN,api.fifa.com
+718,41,60,,Iraq,396158,REBIN SULAKA,Substitution,substitution,434025,IN: REBIN SULAKA / OUT: ZAID TAHSEEN,api.fifa.com
+719,41,60,,Iraq,464458,YOUSSEF AMYN,Substitution,substitution,484270,IN: YOUSSEF AMYN / OUT: ZAID ISMAEL,api.fifa.com
+720,41,68,,Iraq,484262,MARKO FARJI,Substitution,substitution,433585,IN: MARKO FARJI / OUT: IBRAHIM BAYESH,api.fifa.com
+721,41,68,,Iraq,493983,AIMAR SHER,Substitution,substitution,433074,IN: AIMAR SHER / OUT: AMIR ALAMMARI,api.fifa.com
+722,42,43,,Norway,494625,Marcus HOLMGREN PEDERSEN,Goal,open_play,,,api.fifa.com
+723,42,48,,Norway,419652,Erling HAALAND,Goal,open_play,400716,,api.fifa.com
+724,42,48,,Norway,400716,Martin ODEGAARD,Assist,assist,419652,assist attributed via sofascore.com,sofascore.com
+725,42,58,,Norway,419652,Erling HAALAND,Goal,open_play,483442,,api.fifa.com
+726,42,58,,Norway,483442,Patrick BERG,Assist,assist,419652,assist attributed via sofascore.com,sofascore.com
+727,42,53,,Senegal,401889,Ismaila SARR,Goal,open_play,353790,,api.fifa.com
+728,42,53,,Senegal,353790,Sadio MANE,Assist,assist,401889,assist attributed via sofascore.com,sofascore.com
+729,42,90,3,Senegal,401889,Ismaila SARR,Goal,open_play,,,api.fifa.com
+730,42,13,,Norway,494625,Marcus HOLMGREN PEDERSEN,Substitution,substitution,483496,IN: Marcus HOLMGREN PEDERSEN / OUT: Julian RYERSON,api.fifa.com
+731,42,,,Norway,483442,Patrick BERG,Substitution,substitution,483497,IN: Patrick BERG / OUT: Fredrik AURSNES,api.fifa.com
+732,42,71,,Norway,494626,Andreas SCHJELDERUP,Substitution,substitution,483448,IN: Andreas SCHJELDERUP / OUT: Antonio NUSA,api.fifa.com
+733,42,84,,Norway,419672,Leo OSTIGARD,Substitution,substitution,491244,IN: Leo OSTIGARD / OUT: Torbjorn HEGGEM,api.fifa.com
+734,42,84,,Norway,477470,Oscar BOBB,Substitution,substitution,398588,IN: Oscar BOBB / OUT: Alexander SORLOTH,api.fifa.com
+735,42,54,,Senegal,496358,Ibrahim MBAYE,Substitution,substitution,431788,IN: Ibrahim MBAYE / OUT: Pape GUEYE,api.fifa.com
+736,42,54,,Senegal,430671,Ismail JAKOBS,Substitution,substitution,464865,IN: Ismail JAKOBS / OUT: El Hadji Malick DIOUF,api.fifa.com
+737,42,63,,Senegal,448821,Mory DIAW,Substitution,substitution,433806,IN: Mory DIAW / OUT: Edouard MENDY,api.fifa.com
+738,42,63,,Senegal,448825,Pathe CISS,Substitution,substitution,464842,IN: Pathe CISS / OUT: Lamine CAMARA,api.fifa.com
+739,42,72,,Senegal,418798,Pape Matar SARR,Substitution,substitution,339820,IN: Pape Matar SARR / OUT: Kalidou KOULIBALY,api.fifa.com
+740,44,36,,Jordan,433534,NIZAR ALRASHDAN,Goal,open_play,431211,,api.fifa.com
+741,44,36,,Jordan,431211,MOUSA ALTAMARI,Assist,assist,433534,assist attributed via sofascore.com,sofascore.com
+742,44,69,,Algeria,520071,Nadhir BENBOUALI,Goal,open_play,379942,,api.fifa.com
+743,44,69,,Algeria,379942,Riyad Mahrez,Assist,assist,520071,assist attributed via sofascore.com,sofascore.com
+744,44,82,,Algeria,405877,Amine GOUIRI,Goal,open_play,,,api.fifa.com
+745,44,64,,Jordan,489550,HUSAM ABUDAHAB,Yellow Card,,,,api.fifa.com
+746,44,44,,Algeria,433679,Ramiz ZERROUKI,Yellow Card,,,,api.fifa.com
+747,44,76,,Jordan,511875,ODEH FAKHOURY,Substitution,substitution,396950,IN: ODEH FAKHOURY / OUT: MAHMOUD ALMARDI,api.fifa.com
+748,44,84,,Jordan,498514,ALI AZAIZEH,Substitution,substitution,431211,IN: ALI AZAIZEH / OUT: MOUSA ALTAMARI,api.fifa.com
+749,44,84,,Jordan,433526,MOHAMMAD ABUHASHEESH,Substitution,substitution,479389,IN: MOHAMMAD ABUHASHEESH / OUT: MOHANNAD ABUTAHA,api.fifa.com
+750,44,90,1,Jordan,431208,MOHAMMAD ABUZRAIQ,Substitution,substitution,431212,IN: MOHAMMAD ABUZRAIQ / OUT: ALI OLWAN,api.fifa.com
+751,44,90,1,Jordan,499102,SALEEM OBAID,Substitution,substitution,489550,IN: SALEEM OBAID / OUT: HUSAM ABUDAHAB,api.fifa.com
+752,44,,,Algeria,520071,Nadhir BENBOUALI,Substitution,substitution,441350,IN: Nadhir BENBOUALI / OUT: Hicham BOUDAOUI,api.fifa.com
+753,44,,,Algeria,379939,Nabil Bentaleb,Substitution,substitution,433679,IN: Nabil Bentaleb / OUT: Ramiz ZERROUKI,api.fifa.com
+754,44,76,,Algeria,482874,Anis HADJ MOUSSA,Substitution,substitution,379942,IN: Anis HADJ MOUSSA / OUT: Riyad Mahrez,api.fifa.com
+755,44,85,,Algeria,480983,Zineddine BELAID,Substitution,substitution,405877,IN: Zineddine BELAID / OUT: Amine GOUIRI,api.fifa.com
+756,44,85,,Algeria,482869,Jaouen HADJAM,Substitution,substitution,431858,IN: Jaouen HADJAM / OUT: Rayan AIT-NOURI,api.fifa.com
+757,45,6,,Portugal,201200,CRISTIANO RONALDO,Goal,open_play,368649,,api.fifa.com
+758,45,6,,Portugal,368649,JOAO CANCELO,Assist,assist,201200,assist attributed via sofascore.com,sofascore.com
+759,45,17,,Portugal,433195,NUNO MENDES,Goal,open_play,,,api.fifa.com
+760,45,39,,Portugal,201200,CRISTIANO RONALDO,Goal,open_play,395206,,api.fifa.com
+761,45,39,,Portugal,395206,BRUNO FERNANDES,Assist,assist,201200,assist attributed via sofascore.com,sofascore.com
+762,45,60,,Portugal,479110,Abduvohid NEMATOV,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+763,45,87,,Portugal,418550,RAFAEL LEAO,Goal,open_play,441149,,api.fifa.com
+764,45,87,,Portugal,441149,VITINHA,Assist,assist,418550,assist attributed via sofascore.com,sofascore.com
+765,45,68,,Portugal,489704,RENATO VEIGA,Yellow Card,,,,api.fifa.com
+766,45,14,,Uzbekistan,371345,Odiljon XAMROBEKOV,Yellow Card,,,,api.fifa.com
+767,45,,,Portugal,395212,NELSON SEMEDO,Substitution,substitution,368649,IN: NELSON SEMEDO / OUT: JOAO CANCELO,api.fifa.com
+768,45,,,Portugal,485081,FRANCISCO CONCEICAO,Substitution,substitution,418548,IN: FRANCISCO CONCEICAO / OUT: PEDRO NETO,api.fifa.com
+769,45,63,,Portugal,418561,FRANCISCO TRINCAO,Substitution,substitution,418535,IN: FRANCISCO TRINCAO / OUT: JOAO FELIX,api.fifa.com
+770,45,76,,Portugal,395205,BERNARDO SILVA,Substitution,substitution,484141,IN: BERNARDO SILVA / OUT: JOAO NEVES,api.fifa.com
+771,45,83,,Portugal,418550,RAFAEL LEAO,Substitution,substitution,441149,IN: RAFAEL LEAO / OUT: VITINHA,api.fifa.com
+772,45,,,Uzbekistan,479079,Khojiakbar ALIJONOV,Substitution,substitution,479075,IN: Khojiakbar ALIJONOV / OUT: Sherzod NASRULLAEV,api.fifa.com
+773,45,,,Uzbekistan,479106,Akmal MOZGOVOY,Substitution,substitution,371345,IN: Akmal MOZGOVOY / OUT: Odiljon XAMROBEKOV,api.fifa.com
+774,45,73,,Uzbekistan,368546,Igor Sergeev,Substitution,substitution,464933,IN: Igor Sergeev / OUT: Abbosbek FAYZULLAEV,api.fifa.com
+775,45,90,2,Uzbekistan,484303,Ruslanbek JIYANOV,Substitution,substitution,475260,IN: Ruslanbek JIYANOV / OUT: Behruzjon KARIMOV,api.fifa.com
+776,45,90,2,Uzbekistan,464897,Sherzod ESANOV,Substitution,substitution,371348,IN: Sherzod ESANOV / OUT: Otabek Shukurov,api.fifa.com
+777,47,41,,England,433097,Declan RICE,Yellow Card,,,,api.fifa.com
+778,47,60,,Ghana,411376,Inaki WILLIAMS,Yellow Card,,,,api.fifa.com
+779,47,65,,England,448196,Bukayo SAKA,Substitution,substitution,448189,IN: Bukayo SAKA / OUT: Anthony GORDON,api.fifa.com
+780,47,65,,England,463780,Nico OREILLY,Substitution,substitution,506329,IN: Nico OREILLY / OUT: Djed SPENCE,api.fifa.com
+781,47,74,,England,492716,Morgan ROGERS,Substitution,substitution,448202,IN: Morgan ROGERS / OUT: Jude BELLINGHAM,api.fifa.com
+782,47,74,,England,473113,Eberechi EZE,Substitution,substitution,481610,IN: Eberechi EZE / OUT: Elliot ANDERSON,api.fifa.com
+783,47,83,,England,401470,Marcus RASHFORD,Substitution,substitution,489732,IN: Marcus RASHFORD / OUT: Noni MADUEKE,api.fifa.com
+784,47,66,,Ghana,441342,Abdul FATAWU,Substitution,substitution,411376,IN: Abdul FATAWU / OUT: Inaki WILLIAMS,api.fifa.com
+785,47,66,,Ghana,514401,Prince ADU,Substitution,substitution,353235,IN: Prince ADU / OUT: Jordan AYEW,api.fifa.com
+786,47,87,,Ghana,511022,Kojo Peprah OPPONG,Substitution,substitution,520039,IN: Kojo Peprah OPPONG / OUT: Marvin SENAYA,api.fifa.com
+787,47,90,5,Ghana,367536,Baba RAHMAN,Substitution,substitution,514401,IN: Baba RAHMAN / OUT: Prince ADU,api.fifa.com
+788,48,54,,Croatia,430070,Ante BUDIMIR,Goal,open_play,433667,,api.fifa.com
+789,48,54,,Croatia,433667,Josip STANISIC,Assist,assist,430070,assist attributed via sofascore.com,sofascore.com
+790,48,61,,Panama,400416,Edgar Yoel BARCENAS,Yellow Card,,,,api.fifa.com
+791,48,90,2,Croatia,485066,Petar SUCIC,Yellow Card,,,,api.fifa.com
+792,48,77,,Panama,337251,Cecilio Waterman,Substitution,substitution,480310,IN: Cecilio Waterman / OUT: Jiovany RAMOS,api.fifa.com
+793,48,83,,Panama,466669,Azarias LONDONO,Substitution,substitution,411174,IN: Azarias LONDONO / OUT: Jose FAJARDO,api.fifa.com
+794,48,90,,Panama,337232,Eric DAVIS,Substitution,substitution,441242,IN: Eric DAVIS / OUT: Cesar BLACKMAN,api.fifa.com
+795,48,90,,Panama,418747,Tomas RODRIGUEZ,Substitution,substitution,400416,IN: Tomas RODRIGUEZ / OUT: Edgar Yoel BARCENAS,api.fifa.com
+796,48,,,Croatia,430070,Ante BUDIMIR,Substitution,substitution,389754,IN: Ante BUDIMIR / OUT: Petar Musa,api.fifa.com
+797,48,,,Croatia,336472,Andrej KRAMARIC,Substitution,substitution,448180,IN: Andrej KRAMARIC / OUT: Josko GVARDIOL,api.fifa.com
+798,48,72,,Croatia,485066,Petar SUCIC,Substitution,substitution,339987,IN: Petar SUCIC / OUT: Mateo KOVACIC,api.fifa.com
+799,48,72,,Croatia,448160,Luka SUCIC,Substitution,substitution,482931,IN: Luka SUCIC / OUT: Marco PASALIC,api.fifa.com
+800,48,81,,Croatia,380005,Mario PASALIC,Substitution,substitution,241559,IN: Mario PASALIC / OUT: Luka MODRIC,api.fifa.com
+801,46,76,,Colombia,431200,Daniel MUNOZ,Goal,open_play,356704,,api.fifa.com
+802,46,76,,Colombia,356704,Juan QUINTERO,Assist,assist,431200,assist attributed via sofascore.com,sofascore.com
+803,46,56,,Colombia,441622,Jhon LUCUMI,Yellow Card,,,,api.fifa.com
+804,46,90,4,Colombia,395550,Jefferson LERMA,Yellow Card,,,,api.fifa.com
+805,46,90,3,Congo DR,448128,Charles PICKEL,Yellow Card,,,,api.fifa.com
+806,46,58,,Colombia,356704,Juan QUINTERO,Substitution,substitution,269058,IN: Juan QUINTERO / OUT: James RODRIGUEZ,api.fifa.com
+807,46,58,,Colombia,369530,Jhon CORDOBA,Substitution,substitution,428905,IN: Jhon CORDOBA / OUT: Luis SUAREZ,api.fifa.com
+808,46,77,,Colombia,473050,Richard RIOS,Substitution,substitution,470760,IN: Richard RIOS / OUT: Jhon ARIAS,api.fifa.com
+809,46,,,Congo DR,486147,Noah SADIKI,Substitution,substitution,494458,IN: Noah SADIKI / OUT: Ngalayel MUKAU,api.fifa.com
+810,46,57,,Congo DR,477835,Simon BANZA,Substitution,substitution,336425,IN: Simon BANZA / OUT: Cedric BAKAMBU,api.fifa.com
+811,46,71,,Congo DR,477833,Joris KAYEMBE,Substitution,substitution,436572,IN: Joris KAYEMBE / OUT: Arthur MASUAKU,api.fifa.com
+812,46,71,,Congo DR,448128,Charles PICKEL,Substitution,substitution,433161,IN: Charles PICKEL / OUT: Edo Kayembe,api.fifa.com
+813,46,82,,Congo DR,424119,Nathanael MBUKU,Substitution,substitution,433076,IN: Nathanael MBUKU / OUT: Samuel Moutoussamy,api.fifa.com
+814,52,29,,Bosnia and Herzegovina,504990,Kerim ALAJBEGOVIC,Goal,open_play,482974,,api.fifa.com
+815,52,29,,Bosnia and Herzegovina,482974,Ivan BASIC,Assist,assist,504990,assist attributed via sofascore.com,sofascore.com
+816,52,34,,Bosnia and Herzegovina,419459,MAHMOUD ABUNADA,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+817,52,80,,Bosnia and Herzegovina,522846,Ermin MAHMIC,Goal,open_play,,,api.fifa.com
+818,52,42,,Qatar,284190,HASSAN ALHAYDOS,Goal,open_play,429063,,api.fifa.com
+819,52,42,,Qatar,429063,EDMILSON JUNIOR,Assist,assist,284190,assist attributed via sofascore.com,sofascore.com
+820,52,82,,Bosnia and Herzegovina,522846,Ermin MAHMIC,Yellow Card,,,,api.fifa.com
+821,52,78,,Qatar,433394,AHMED FATHY,Yellow Card,,,,api.fifa.com
+822,52,,,Bosnia and Herzegovina,494640,Amar MEMIC,Substitution,substitution,494639,IN: Amar MEMIC / OUT: Arjan MALIC,api.fifa.com
+823,52,,,Bosnia and Herzegovina,483966,Benjamin TAHIROVIC,Substitution,substitution,372436,IN: Benjamin TAHIROVIC / OUT: Ivan SUNJIC,api.fifa.com
+824,52,63,,Bosnia and Herzegovina,430194,Dennis HADZIKADUNIC,Substitution,substitution,489520,IN: Dennis HADZIKADUNIC / OUT: Nikola KATIC,api.fifa.com
+825,52,63,,Bosnia and Herzegovina,522846,Ermin MAHMIC,Substitution,substitution,300409,IN: Ermin MAHMIC / OUT: Edin DZEKO,api.fifa.com
+826,52,82,,Bosnia and Herzegovina,389886,Dzenis BURNIC,Substitution,substitution,504990,IN: Dzenis BURNIC / OUT: Kerim ALAJBEGOVIC,api.fifa.com
+827,52,,,Qatar,345059,ABDULAZIZ HATEM,Substitution,substitution,419473,IN: ABDULAZIZ HATEM / OUT: JASSEM GABER,api.fifa.com
+828,52,55,,Qatar,419436,AHMED ALGANEHI,Substitution,substitution,284190,IN: AHMED ALGANEHI / OUT: HASSAN ALHAYDOS,api.fifa.com
+829,52,72,,Qatar,386366,ALMOEZ ALI,Substitution,substitution,354861,IN: ALMOEZ ALI / OUT: KARIM BOUDIAF,api.fifa.com
+830,52,79,,Qatar,498458,MOHAMED MANAI,Substitution,substitution,433394,IN: MOHAMED MANAI / OUT: AHMED FATHY,api.fifa.com
+831,52,79,,Qatar,353251,AHMED ALAAELDIN,Substitution,substitution,429063,IN: AHMED ALAAELDIN / OUT: EDMILSON JUNIOR,api.fifa.com
+832,51,46,,Switzerland,448131,Ruben VARGAS,Goal,open_play,502727,,api.fifa.com
+833,51,46,,Switzerland,502727,Johan MANZAMBI,Assist,assist,448131,assist attributed via sofascore.com,sofascore.com
+834,51,57,,Switzerland,502727,Johan MANZAMBI,Goal,open_play,393480,,api.fifa.com
+835,51,57,,Switzerland,393480,Breel EMBOLO,Assist,assist,502727,assist attributed via sofascore.com,sofascore.com
+836,51,76,,Canada,493970,Promise DAVID,Goal,open_play,423941,,api.fifa.com
+837,51,76,,Canada,423941,Nathan SALIBA,Assist,assist,493970,assist attributed via sofascore.com,sofascore.com
+838,51,32,,Switzerland,311558,Granit XHAKA,Yellow Card,,,,api.fifa.com
+839,51,32,,Canada,390670,Cyle LARIN,Yellow Card,,,,api.fifa.com
+840,51,87,,Canada,441259,Liam MILLAR,Yellow Card,,,,api.fifa.com
+841,51,74,,Switzerland,356412,Silvan WIDMER,Substitution,substitution,510908,IN: Silvan WIDMER / OUT: Luca JAQUEZ,api.fifa.com
+842,51,74,,Switzerland,433147,Michel AEBISCHER,Substitution,substitution,411226,IN: Michel AEBISCHER / OUT: Djibril SOW,api.fifa.com
+843,51,80,,Switzerland,448114,Dan NDOYE,Substitution,substitution,448131,IN: Dan NDOYE / OUT: Ruben VARGAS,api.fifa.com
+844,51,85,,Switzerland,448104,Cedric ITTEN,Substitution,substitution,393480,IN: Cedric ITTEN / OUT: Breel EMBOLO,api.fifa.com
+845,51,85,,Switzerland,448124,Christian FASSNACHT,Substitution,substitution,502727,IN: Christian FASSNACHT / OUT: Johan MANZAMBI,api.fifa.com
+846,51,58,,Canada,486929,Tani OLUWASEYI,Substitution,substitution,390670,IN: Tani OLUWASEYI / OUT: Cyle LARIN,api.fifa.com
+847,51,58,,Canada,433635,Stephen EUSTAQUIO,Substitution,substitution,448390,IN: Stephen EUSTAQUIO / OUT: Mathieu CHOINIERE,api.fifa.com
+848,51,58,,Canada,441259,Liam MILLAR,Substitution,substitution,466687,IN: Liam MILLAR / OUT: Ali AHMED,api.fifa.com
+849,51,74,,Canada,493970,Promise DAVID,Substitution,substitution,430138,IN: Promise DAVID / OUT: Tajon BUCHANAN,api.fifa.com
+850,51,83,,Canada,448411,Jacob SHAFFELBURG,Substitution,substitution,431696,IN: Jacob SHAFFELBURG / OUT: Richie LARYEA,api.fifa.com
+851,54,39,,Morocco,400721,Achraf HAKIMI,Goal,open_play,,,api.fifa.com
+852,54,45,1,Morocco,448598,Ismael SAIBARI,Goal,open_play,,,api.fifa.com
+853,54,78,,Morocco,433426,Soufiane RAHIMI,Goal,open_play,,,api.fifa.com
+854,54,89,,Morocco,505112,Gessime YASSINE,Goal,open_play,,,api.fifa.com
+855,54,10,,Haiti,356956,Yassine BOUNOU,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+856,54,43,,Haiti,405879,Wilson Isidor,Goal,open_play,,,api.fifa.com
+857,54,79,,Haiti,295922,Johny Placide,Yellow Card,,,,api.fifa.com
+858,54,79,,Haiti,394993,Duckens NAZON,Yellow Card,,,,api.fifa.com
+859,54,90,3,Haiti,510757,Josue CASIMIR,Yellow Card,,,,api.fifa.com
+860,54,70,,Morocco,505112,Gessime YASSINE,Substitution,substitution,411678,IN: Gessime YASSINE / OUT: Ayoub El Kaabi,api.fifa.com
+861,54,70,,Morocco,433426,Soufiane RAHIMI,Substitution,substitution,448598,IN: Soufiane RAHIMI / OUT: Ismael SAIBARI,api.fifa.com
+862,54,70,,Morocco,441307,Azzedine OUNAHI,Substitution,substitution,430740,IN: Azzedine OUNAHI / OUT: Brahim DIAZ,api.fifa.com
+863,54,83,,Morocco,505097,Samir EL MOURABET,Substitution,substitution,485740,IN: Samir EL MOURABET / OUT: Neil EL AYNAOUI,api.fifa.com
+864,54,83,,Morocco,411680,Noussair MAZRAOUI,Substitution,substitution,424071,IN: Noussair MAZRAOUI / OUT: Anass SALAH EDDINE,api.fifa.com
+865,54,67,,Haiti,394993,Duckens NAZON,Substitution,substitution,485664,IN: Duckens NAZON / OUT: Ruben PROVIDENCE,api.fifa.com
+866,54,67,,Haiti,481027,Louicius DEEDSON,Substitution,substitution,405879,IN: Louicius DEEDSON / OUT: Wilson Isidor,api.fifa.com
+867,54,80,,Haiti,397775,Carlens ARCUS,Substitution,substitution,431781,IN: Carlens ARCUS / OUT: Jean-Kevin DUVERNE,api.fifa.com
+868,54,80,,Haiti,523215,Dominique SIMON,Substitution,substitution,466838,IN: Dominique SIMON / OUT: Danley JEAN JACQUES,api.fifa.com
+869,54,83,,Haiti,431693,Frantzdy Pierrot,Substitution,substitution,485676,IN: Frantzdy Pierrot / OUT: Lenny JOSEPH,api.fifa.com
+870,53,7,,Brazil,405742,VINICIUS JUNIOR,Goal,open_play,475036,,api.fifa.com
+871,53,7,,Brazil,475036,RAYAN,Assist,assist,405742,assist attributed via sofascore.com,sofascore.com
+872,53,45,3,Brazil,405742,VINICIUS JUNIOR,Goal,open_play,,,api.fifa.com
+873,53,60,,Brazil,430609,MATHEUS CUNHA,Goal,open_play,430605,,api.fifa.com
+874,53,60,,Brazil,430605,BRUNO GUIMARAES,Assist,assist,430609,assist attributed via sofascore.com,sofascore.com
+875,53,89,,Scotland,430097,Ryan Christie,Yellow Card,,,,api.fifa.com
+876,53,62,,Brazil,335656,DANILO,Yellow Card,,,,api.fifa.com
+877,53,82,,Brazil,394456,FABINHO,Yellow Card,,,,api.fifa.com
+878,53,,,Scotland,401712,Kieran Tierney,Substitution,substitution,401339,IN: Kieran Tierney / OUT: Andy ROBERTSON,api.fifa.com
+879,53,81,,Scotland,337389,Anthony RALSTON,Substitution,substitution,433694,IN: Anthony RALSTON / OUT: Nathan PATTERSON,api.fifa.com
+880,53,81,,Scotland,430097,Ryan Christie,Substitution,substitution,485131,IN: Ryan Christie / OUT: Ben GANNON-DOAK,api.fifa.com
+881,53,90,1,Scotland,520217,Findlay CURTIS,Substitution,substitution,401334,IN: Findlay CURTIS / OUT: John McGinn,api.fifa.com
+882,53,90,1,Scotland,433191,Che Adams,Substitution,substitution,484045,IN: Che Adams / OUT: Lawrence SHANKLAND,api.fifa.com
+883,53,66,,Brazil,394456,FABINHO,Substitution,substitution,308386,IN: FABINHO / OUT: CASEMIRO,api.fifa.com
+884,53,66,,Brazil,430597,GABRIEL MARTINELLI,Substitution,substitution,411726,IN: GABRIEL MARTINELLI / OUT: LUCAS PAQUETA,api.fifa.com
+885,53,76,,Brazil,314197,NEYMAR JR,Substitution,substitution,430609,IN: NEYMAR JR / OUT: MATHEUS CUNHA,api.fifa.com
+886,53,82,,Brazil,463746,ENDRICK,Substitution,substitution,475036,IN: ENDRICK / OUT: RAYAN,api.fifa.com
+887,53,82,,Brazil,335658,ALEX SANDRO,Substitution,substitution,367981,IN: ALEX SANDRO / OUT: DOUGLAS SANTOS,api.fifa.com
+888,50,63,,South Africa,463234,Thapelo MASEKO,Goal,open_play,504193,,api.fifa.com
+889,50,63,,South Africa,504193,Tshepang MOREMI,Assist,assist,463234,assist attributed via sofascore.com,sofascore.com
+890,50,72,,South Africa,395050,Aubrey MODIBA,Yellow Card,,,,api.fifa.com
+891,50,78,,Korea Republic,430387,CHO Guesung,Yellow Card,,,,api.fifa.com
+892,50,62,,South Africa,504193,Tshepang MOREMI,Substitution,substitution,419223,IN: Tshepang MOREMI / OUT: Oswin APPOLLIS,api.fifa.com
+893,50,75,,South Africa,481242,Iqraam RAYNERS,Substitution,substitution,463234,IN: Iqraam RAYNERS / OUT: Thapelo MASEKO,api.fifa.com
+894,50,80,,South Africa,463236,Jayden ADAMS,Substitution,substitution,486161,IN: Jayden ADAMS / OUT: Relebohile MOFOKENG,api.fifa.com
+895,50,,,Korea Republic,307849,SON Heungmin,Substitution,substitution,395083,IN: SON Heungmin / OUT: HWANG Heechan,api.fifa.com
+896,50,,,Korea Republic,430385,KIM Jingyu,Substitution,substitution,402817,IN: KIM Jingyu / OUT: PAIK Seungho,api.fifa.com
+897,50,,,Korea Republic,511828,CASTROP Jens,Substitution,substitution,423880,IN: CASTROP Jens / OUT: LEE Taeseok,api.fifa.com
+898,50,65,,Korea Republic,479316,PARK Jinseob,Substitution,substitution,395088,IN: PARK Jinseob / OUT: KIM Minjae,api.fifa.com
+899,50,74,,Korea Republic,430387,CHO Guesung,Substitution,substitution,448586,IN: CHO Guesung / OUT: OH Hyeongyu,api.fifa.com
+900,49,55,,Mexico,500038,Mateo CHAVEZ,Goal,open_play,430763,,api.fifa.com
+901,49,55,,Mexico,430763,Luis ROMO,Assist,assist,500038,assist attributed via sofascore.com,sofascore.com
+902,49,61,,Mexico,429157,Julian QUINONES,Goal,open_play,403596,,api.fifa.com
+903,49,61,,Mexico,403596,Jorge SANCHEZ,Assist,assist,429157,assist attributed via sofascore.com,sofascore.com
+904,49,90,4,Mexico,416576,Alvaro FIDALGO,Goal,open_play,,,api.fifa.com
+905,49,63,,Mexico,400634,Edson ALVAREZ,Yellow Card,,,,api.fifa.com
+906,49,56,,Czechia,484011,Lukas PROVOD,Substitution,substitution,519985,IN: Lukas PROVOD / OUT: Denis VISINSKY,api.fifa.com
+907,49,64,,Czechia,404885,Tomas SOUCEK,Substitution,substitution,441167,IN: Tomas SOUCEK / OUT: Tomas HOLES,api.fifa.com
+908,49,64,,Czechia,401481,Patrik Schick,Substitution,substitution,433754,IN: Patrik Schick / OUT: Adam HLOZEK,api.fifa.com
+909,49,87,,Czechia,483961,Tomas CHORY,Substitution,substitution,486081,IN: Tomas CHORY / OUT: Lukas CERV,api.fifa.com
+910,49,87,,Czechia,523097,Alexandr SOJKA,Substitution,substitution,404885,IN: Alexandr SOJKA / OUT: Tomas SOUCEK,api.fifa.com
+911,49,63,,Mexico,430759,Santiago GIMENEZ,Substitution,substitution,386339,IN: Santiago GIMENEZ / OUT: Guillermo MARTINEZ,api.fifa.com
+912,49,63,,Mexico,461177,Obed VARGAS,Substitution,substitution,430763,IN: Obed VARGAS / OUT: Luis ROMO,api.fifa.com
+913,49,72,,Mexico,416576,Alvaro FIDALGO,Substitution,substitution,500037,IN: Alvaro FIDALGO / OUT: Gilberto MORA,api.fifa.com
+914,49,78,,Mexico,215285,Guillermo OCHOA,Substitution,substitution,485070,IN: Guillermo OCHOA / OUT: Raul RANGEL,api.fifa.com
+915,49,78,,Mexico,402772,Jesus GALLARDO,Substitution,substitution,500038,IN: Jesus GALLARDO / OUT: Mateo CHAVEZ,api.fifa.com
+916,58,7,,Côte d'Ivoire,402261,Nicolas PEPE,Goal,open_play,,,api.fifa.com
+917,58,64,,Côte d'Ivoire,402261,Nicolas PEPE,Goal,open_play,,,api.fifa.com
+918,58,75,,Curaçao,466317,Juninho BACUNA,Yellow Card,,,,api.fifa.com
+919,58,83,,Curaçao,466372,Gervane KASTANEER,Yellow Card,,,,api.fifa.com
+920,58,34,,Côte d'Ivoire,402261,Nicolas PEPE,Yellow Card,,,,api.fifa.com
+921,58,61,,Curaçao,424047,Jeremy Antonisse,Substitution,substitution,494989,IN: Jeremy Antonisse / OUT: Livano COMENENCIA,api.fifa.com
+922,58,77,,Curaçao,466372,Gervane KASTANEER,Substitution,substitution,431698,IN: Gervane KASTANEER / OUT: Jurien GAARI,api.fifa.com
+923,58,77,,Curaçao,506473,Tyrese NOSLIN,Substitution,substitution,506471,IN: Tyrese NOSLIN / OUT: Deveron FONVILLE,api.fifa.com
+924,58,90,,Curaçao,485379,Shurandy SAMBO,Substitution,substitution,401023,IN: Shurandy SAMBO / OUT: Joshua BRENET,api.fifa.com
+925,58,90,,Curaçao,466346,Brandley KUWAS,Substitution,substitution,407680,IN: Brandley KUWAS / OUT: Juergen LOCADIA,api.fifa.com
+926,58,,,Côte d'Ivoire,514208,Christ Inao OULAI,Substitution,substitution,430822,IN: Christ Inao OULAI / OUT: Amad DIALLO,api.fifa.com
+927,58,67,,Côte d'Ivoire,464133,Elye WAHI,Substitution,substitution,402261,IN: Elye WAHI / OUT: Nicolas PEPE,api.fifa.com
+928,58,67,,Côte d'Ivoire,506202,Bazoumana TOURE,Substitution,substitution,510922,IN: Bazoumana TOURE / OUT: Yan DIOMANDE,api.fifa.com
+929,58,67,,Côte d'Ivoire,477777,Oumar DIAKITE,Substitution,substitution,464103,IN: Oumar DIAKITE / OUT: Ange-Yoan BONNY,api.fifa.com
+930,58,77,,Côte d'Ivoire,335807,Jean Michael SERI,Substitution,substitution,371609,IN: Jean Michael SERI / OUT: Franck KESSIE,api.fifa.com
+931,57,9,,Ecuador,448312,Nilson ANGULO,Goal,open_play,424036,,api.fifa.com
+932,57,9,,Ecuador,424036,Pedro VITE,Assist,assist,448312,assist attributed via sofascore.com,sofascore.com
+933,57,77,,Ecuador,419020,Gonzalo PLATA,Goal,open_play,428885,,api.fifa.com
+934,57,77,,Ecuador,428885,Moises CAICEDO,Assist,assist,419020,assist attributed via sofascore.com,sofascore.com
+935,57,2,,Germany,404353,Leroy SANE,Goal,open_play,430669,,api.fifa.com
+936,57,2,,Germany,430669,Florian WIRTZ,Assist,assist,404353,assist attributed via sofascore.com,sofascore.com
+937,57,43,,Ecuador,424031,Piero HINCAPIE,Yellow Card,,,,api.fifa.com
+938,57,50,,Ecuador,389784,Alan FRANCO,Yellow Card,,,,api.fifa.com
+939,57,89,,Ecuador,419020,Gonzalo PLATA,Yellow Card,,,,api.fifa.com
+940,57,44,,Germany,484849,Aleksandar PAVLOVIC,Yellow Card,,,,api.fifa.com
+941,57,64,,Ecuador,402974,Angelo PRECIADO,Substitution,substitution,389784,IN: Angelo PRECIADO / OUT: Alan FRANCO,api.fifa.com
+942,57,64,,Ecuador,448310,Kevin RODRIGUEZ,Substitution,substitution,373400,IN: Kevin RODRIGUEZ / OUT: Enner VALENCIA,api.fifa.com
+943,57,71,,Ecuador,389782,Pervis ESTUPINAN,Substitution,substitution,424031,IN: Pervis ESTUPINAN / OUT: Piero HINCAPIE,api.fifa.com
+944,57,85,,Ecuador,402985,Jordy CAICEDO,Substitution,substitution,448312,IN: Jordy CAICEDO / OUT: Nilson ANGULO,api.fifa.com
+945,57,85,,Ecuador,402979,Felix TORRES,Substitution,substitution,405920,IN: Felix TORRES / OUT: John YEBOAH,api.fifa.com
+946,57,,,Germany,429640,Angelo Stiller,Substitution,substitution,484849,IN: Angelo Stiller / OUT: Aleksandar PAVLOVIC,api.fifa.com
+947,57,60,,Germany,484851,Deniz UNDAV,Substitution,substitution,411367,IN: Deniz UNDAV / OUT: Kai HAVERTZ,api.fifa.com
+948,57,60,,Germany,514188,Malick THIAW,Substitution,substitution,386413,IN: Malick THIAW / OUT: Joshua KIMMICH,api.fifa.com
+949,57,64,,Germany,484850,Maximilian BEIER,Substitution,substitution,492363,IN: Maximilian BEIER / OUT: Felix NMECHA,api.fifa.com
+950,57,73,,Germany,484848,Pascal GROSS,Substitution,substitution,430669,IN: Pascal GROSS / OUT: Florian WIRTZ,api.fifa.com
+951,59,54,,Tunisia,494374,Hazem MASTOURI,Goal,open_play,,,api.fifa.com
+952,59,3,,Netherlands,411658,Ellyes SKHIRI,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+953,59,7,,Netherlands,424051,Brian BROBBEY,Goal,open_play,,,api.fifa.com
+954,59,62,,Netherlands,489517,Jan Paul VAN HECKE,Goal,open_play,,,api.fifa.com
+955,59,67,,Tunisia,479781,Mohamed HADJ MAHMOUD,Substitution,substitution,336459,IN: Mohamed HADJ MAHMOUD / OUT: Rani Khedira,api.fifa.com
+956,59,67,,Tunisia,448662,Elias ACHOURI,Substitution,substitution,433361,IN: Elias ACHOURI / OUT: Anis SLIMANE,api.fifa.com
+957,59,67,,Tunisia,441362,Mortadha BEN OUANES,Substitution,substitution,425607,IN: Mortadha BEN OUANES / OUT: Mohamed Amine BEN HMIDA,api.fifa.com
+958,59,75,,Tunisia,494375,Firas CHAOUAT,Substitution,substitution,464484,IN: Firas CHAOUAT / OUT: Ismael GHARBI,api.fifa.com
+959,59,90,,Tunisia,504502,Sebastian TOUNEKTI,Substitution,substitution,494374,IN: Sebastian TOUNEKTI / OUT: Hazem MASTOURI,api.fifa.com
+960,59,72,,Netherlands,448149,Teun KOOPMEINERS,Substitution,substitution,422657,IN: Teun KOOPMEINERS / OUT: Frenkie DE JONG,api.fifa.com
+961,59,72,,Netherlands,478364,Justin KLUIVERT,Substitution,substitution,483526,IN: Justin KLUIVERT / OUT: Tijjani REIJNDERS,api.fifa.com
+962,59,72,,Netherlands,489518,Crysencio SUMMERVILLE,Substitution,substitution,433066,IN: Crysencio SUMMERVILLE / OUT: Donyell Malen,api.fifa.com
+963,59,77,,Netherlands,336098,Memphis DEPAY,Substitution,substitution,424051,IN: Memphis DEPAY / OUT: Brian BROBBEY,api.fifa.com
+964,59,84,,Netherlands,448153,Noa LANG,Substitution,substitution,448152,IN: Noa LANG / OUT: Cody GAKPO,api.fifa.com
+965,60,56,,Japan,430407,Daizen MAEDA,Goal,open_play,,,api.fifa.com
+966,60,62,,Sweden,441137,Anthony ELANGA,Goal,open_play,,,api.fifa.com
+967,60,77,,Japan,390541,Shogo TANIGUCHI,Yellow Card,,,,api.fifa.com
+968,60,32,,Sweden,483312,Isak HIEN,Yellow Card,,,,api.fifa.com
+969,60,84,,Sweden,483327,Viktor GYOKERES,Yellow Card,,,,api.fifa.com
+970,60,39,,Japan,390541,Shogo TANIGUCHI,Substitution,substitution,400511,IN: Shogo TANIGUCHI / OUT: Kou ITAKURA,api.fifa.com
+971,60,66,,Japan,403293,Koki OGAWA,Substitution,substitution,430413,IN: Koki OGAWA / OUT: Ayase UEDA,api.fifa.com
+972,60,66,,Japan,395321,Junya ITO,Substitution,substitution,391646,IN: Junya ITO / OUT: Ritsu DOAN,api.fifa.com
+973,60,75,,Japan,291372,Yuto NAGATOMO,Substitution,substitution,405522,IN: Yuto NAGATOMO / OUT: Keito Nakamura,api.fifa.com
+974,60,75,,Japan,430401,Tsuyoshi Watanabe,Substitution,substitution,405527,IN: Tsuyoshi Watanabe / OUT: Ayumu SEKO,api.fifa.com
+975,60,37,,Sweden,489689,Lucas BERGVALL,Substitution,substitution,483312,IN: Lucas BERGVALL / OUT: Isak HIEN,api.fifa.com
+976,60,75,,Sweden,491255,Daniel SVENSSON,Substitution,substitution,502945,IN: Daniel SVENSSON / OUT: Alexander BERNHARDSSON,api.fifa.com
+977,60,75,,Sweden,395286,Ken SEMA,Substitution,substitution,519958,IN: Ken SEMA / OUT: Elliot STROUD,api.fifa.com
+978,60,87,,Sweden,441132,Carl STARFELT,Substitution,substitution,395283,IN: Carl STARFELT / OUT: Victor LINDELOF,api.fifa.com
+979,60,87,,Sweden,502946,Benjamin NYGREN,Substitution,substitution,483276,IN: Benjamin NYGREN / OUT: Gabriel GUDMUNDSSON,api.fifa.com
+980,56,77,,Paraguay,463128,Diego GOMEZ,Yellow Card,,,,api.fifa.com
+981,56,46,,Australia,355775,Jackson IRVINE,Yellow Card,,,,api.fifa.com
+982,56,,,Paraguay,495046,MAURICIO,Substitution,substitution,505495,IN: MAURICIO / OUT: Alexandro MAIDANA,api.fifa.com
+983,56,67,,Paraguay,485802,Alex ARCE,Substitution,substitution,463127,IN: Alex ARCE / OUT: Gabriel AVALOS,api.fifa.com
+984,56,84,,Paraguay,520066,Jose CANALE,Substitution,substitution,431202,IN: Jose CANALE / OUT: Omar ALDERETE,api.fifa.com
+985,56,90,2,Paraguay,369749,Junior ALONSO,Substitution,substitution,424422,IN: Junior ALONSO / OUT: Matias GALARZA,api.fifa.com
+986,56,90,2,Paraguay,476348,Damian BOBADILLA,Substitution,substitution,463128,IN: Damian BOBADILLA / OUT: Diego GOMEZ,api.fifa.com
+987,56,58,,Australia,404319,Ajdin HRUSTIC,Substitution,substitution,448015,IN: Ajdin HRUSTIC / OUT: Cristian VOLPATO,api.fifa.com
+988,56,84,,Australia,498421,Paul OKON-ENGSTLER,Substitution,substitution,355775,IN: Paul OKON-ENGSTLER / OUT: Jackson IRVINE,api.fifa.com
+989,56,84,,Australia,518200,Tete YENGI,Substitution,substitution,486306,IN: Tete YENGI / OUT: Nestory IRANKUNDA,api.fifa.com
+990,55,10,,Türkiye,484087,Arda GULER,Goal,open_play,486074,,api.fifa.com
+991,55,10,,Türkiye,486074,Can UZUN,Assist,assist,484087,assist attributed via sofascore.com,sofascore.com
+992,55,31,,Türkiye,484139,Baris Alper YILMAZ,Goal,open_play,484065,,api.fifa.com
+993,55,31,,Türkiye,484065,Eren ELMALI,Assist,assist,484139,assist attributed via sofascore.com,sofascore.com
+994,55,90,8,Türkiye,336170,Kaan Ayhan,Goal,open_play,,,api.fifa.com
+995,55,3,,USA,390272,Auston TRUSTY,Goal,open_play,499912,,api.fifa.com
+996,55,3,,USA,499912,Sebastian BERHALTER,Assist,assist,390272,assist attributed via sofascore.com,sofascore.com
+997,55,49,,USA,499912,Sebastian BERHALTER,Goal,open_play,,,api.fifa.com
+998,55,19,,USA,499912,Sebastian BERHALTER,Yellow Card,,,,api.fifa.com
+999,55,84,,Türkiye,486074,Can UZUN,Substitution,substitution,484112,IN: Can UZUN / OUT: Kenan YILDIZ,api.fifa.com
+1000,55,84,,Türkiye,401167,Caglar SOYUNCU,Substitution,substitution,433072,IN: Caglar SOYUNCU / OUT: Zeki CELIK,api.fifa.com
+1001,55,88,,Türkiye,336170,Kaan Ayhan,Substitution,substitution,433118,IN: Kaan Ayhan / OUT: Orkun KOKCU,api.fifa.com
+1002,55,90,1,Türkiye,430120,Mert MULDUR,Substitution,substitution,486076,IN: Mert MULDUR / OUT: Oguz AYDIN,api.fifa.com
+1003,55,90,1,Türkiye,472877,Irfan Can KAHVECI,Substitution,substitution,484139,IN: Irfan Can KAHVECI / OUT: Baris Alper YILMAZ,api.fifa.com
+1004,55,58,,USA,390267,Christian PULISIC,Substitution,substitution,406304,IN: Christian PULISIC / OUT: Timothy WEAH,api.fifa.com
+1005,55,76,,USA,406280,Sergino DEST,Substitution,substitution,419068,IN: Sergino DEST / OUT: Giovanni REYNA,api.fifa.com
+1006,55,76,,USA,390278,Alex ZENDEJAS,Substitution,substitution,419055,IN: Alex ZENDEJAS / OUT: Brenden AARONSON,api.fifa.com
+1007,55,76,,USA,464542,Alex FREEMAN,Substitution,substitution,423700,IN: Alex FREEMAN / OUT: Joe SCALLY,api.fifa.com
+1008,55,86,,USA,448214,Malik TILLMAN,Substitution,substitution,390259,IN: Malik TILLMAN / OUT: Weston McKENNIE,api.fifa.com
+1009,66,4,,Senegal,486130,Habib DIARRA,Goal,open_play,370171,,api.fifa.com
+1010,66,4,,Senegal,370171,Abdoulaye Seck,Assist,assist,486130,assist attributed via sofascore.com,sofascore.com
+1011,66,56,,Senegal,401889,Ismaila SARR,Goal,open_play,464842,,api.fifa.com
+1012,66,56,,Senegal,464842,Lamine CAMARA,Assist,assist,401889,assist attributed via sofascore.com,sofascore.com
+1013,66,59,,Senegal,431788,Pape GUEYE,Goal,open_play,401889,,api.fifa.com
+1014,66,59,,Senegal,401889,Ismaila SARR,Assist,assist,431788,assist attributed via sofascore.com,sofascore.com
+1015,66,71,,Senegal,431788,Pape GUEYE,Goal,open_play,448815,,api.fifa.com
+1016,66,71,,Senegal,448815,Iliman NDIAYE,Assist,assist,431788,assist attributed via sofascore.com,sofascore.com
+1017,66,82,,Senegal,448815,Iliman NDIAYE,Goal,open_play,431788,,api.fifa.com
+1018,66,82,,Senegal,431788,Pape GUEYE,Assist,assist,448815,assist attributed via sofascore.com,sofascore.com
+1019,66,18,,Senegal,370171,Abdoulaye Seck,Yellow Card,,,,api.fifa.com
+1020,66,81,,Senegal,431788,Pape GUEYE,Yellow Card,,,,api.fifa.com
+1021,66,13,,Iraq,396158,REBIN SULAKA,Red Card,,,,api.fifa.com
+1022,66,75,,Iraq,433074,AMIR ALAMMARI,Yellow Card,,,,api.fifa.com
+1023,66,90,,Iraq,479072,MERCHAS DOSKI,Yellow Card,,,,api.fifa.com
+1024,66,56,,Senegal,418795,Nicolas JACKSON,Substitution,substitution,464842,IN: Nicolas JACKSON / OUT: Lamine CAMARA,api.fifa.com
+1025,66,56,,Senegal,431788,Pape GUEYE,Substitution,substitution,486130,IN: Pape GUEYE / OUT: Habib DIARRA,api.fifa.com
+1026,66,56,,Senegal,448815,Iliman NDIAYE,Substitution,substitution,496358,IN: Iliman NDIAYE / OUT: Ibrahim MBAYE,api.fifa.com
+1027,66,58,,Senegal,448825,Pathe CISS,Substitution,substitution,370171,IN: Pathe CISS / OUT: Abdoulaye Seck,api.fifa.com
+1028,66,81,,Senegal,484698,Assane DIAO,Substitution,substitution,401889,IN: Assane DIAO / OUT: Ismaila SARR,api.fifa.com
+1029,66,16,,Iraq,434024,MUNAF YOUNUS,Substitution,substitution,523236,IN: MUNAF YOUNUS / OUT: AHMED QASEM,api.fifa.com
+1030,66,,,Iraq,347085,JALAL HASSAN,Substitution,substitution,433571,IN: JALAL HASSAN / OUT: AHMED BASIL,api.fifa.com
+1031,66,57,,Iraq,484276,AHMED MAKNAZI,Substitution,substitution,464457,IN: AHMED MAKNAZI / OUT: ALI JASIM,api.fifa.com
+1032,66,57,,Iraq,434029,ALI YOUSIF,Substitution,substitution,436628,IN: ALI YOUSIF / OUT: ALI ALHAMADI,api.fifa.com
+1033,66,67,,Iraq,506069,KEVIN YAKOB,Substitution,substitution,434026,IN: KEVIN YAKOB / OUT: ZIDANE IQBAL,api.fifa.com
+1034,65,21,,Norway,494627,Thelo AASGAARD,Goal,open_play,494626,,api.fifa.com
+1035,65,21,,Norway,494626,Andreas SCHJELDERUP,Assist,assist,494627,assist attributed via sofascore.com,sofascore.com
+1036,65,7,,France,398680,Ousmane DEMBELE,Goal,open_play,389867,,api.fifa.com
+1037,65,7,,France,389867,Kylian MBAPPE,Assist,assist,398680,assist attributed via sofascore.com,sofascore.com
+1038,65,20,,France,398680,Ousmane DEMBELE,Goal,open_play,389867,,api.fifa.com
+1039,65,20,,France,389867,Kylian MBAPPE,Assist,assist,398680,assist attributed via sofascore.com,sofascore.com
+1040,65,32,,France,398680,Ousmane DEMBELE,Goal,open_play,405893,,api.fifa.com
+1041,65,32,,France,405893,Aurelien TCHOUAMENI,Assist,assist,398680,assist attributed via sofascore.com,sofascore.com
+1042,65,90,4,France,464114,Desire DOUE,Goal,open_play,,,api.fifa.com
+1043,65,10,,Norway,483442,Patrick BERG,Yellow Card,,,,api.fifa.com
+1044,65,74,,France,405893,Aurelien TCHOUAMENI,Yellow Card,,,,api.fifa.com
+1045,65,,,Norway,433067,Morten Thorsby,Substitution,substitution,419681,IN: Morten Thorsby / OUT: Kristian Thorstvedt,api.fifa.com
+1046,65,,,Norway,494625,Marcus HOLMGREN PEDERSEN,Substitution,substitution,483530,IN: Marcus HOLMGREN PEDERSEN / OUT: Fredrik Andre BJORKAN,api.fifa.com
+1047,65,66,,Norway,489696,Sondre LANGAS,Substitution,substitution,520112,IN: Sondre LANGAS / OUT: Henrik FALCHENER,api.fifa.com
+1048,65,83,,Norway,419654,Jens Petter HAUGE,Substitution,substitution,494626,IN: Jens Petter HAUGE / OUT: Andreas SCHJELDERUP,api.fifa.com
+1049,65,83,,Norway,483448,Antonio NUSA,Substitution,substitution,477470,IN: Antonio NUSA / OUT: Oscar BOBB,api.fifa.com
+1050,65,65,,France,484860,Bradley BARCOLA,Substitution,substitution,398680,IN: Bradley BARCOLA / OUT: Ousmane DEMBELE,api.fifa.com
+1051,65,65,,France,431861,Rayan CHERKI,Substitution,substitution,485655,IN: Rayan CHERKI / OUT: Michael OLISE,api.fifa.com
+1052,65,76,,France,419166,Ibrahima KONATE,Substitution,substitution,389876,IN: Ibrahima KONATE / OUT: Dayot UPAMECANO,api.fifa.com
+1053,65,86,,France,464055,Malo GUSTO,Substitution,substitution,430707,IN: Malo GUSTO / OUT: Jules KOUNDE,api.fifa.com
+1054,65,86,,France,403094,Jean-Philippe MATETA,Substitution,substitution,389867,IN: Jean-Philippe MATETA / OUT: Kylian MBAPPE,api.fifa.com
+1055,63,42,,Spain,447860,Alex BAENA,Goal,open_play,382739,,api.fifa.com
+1056,63,42,,Spain,382739,Marcos LLORENTE,Assist,assist,447860,assist attributed via sofascore.com,sofascore.com
+1057,63,54,,Uruguay,419134,Juan Manuel SANABRIA,Yellow Card,,,,api.fifa.com
+1058,63,58,,Uruguay,368660,Guillermo VARELA,Yellow Card,,,,api.fifa.com
+1059,63,90,3,Uruguay,402898,Nicolas DE LA CRUZ,Yellow Card,,,,api.fifa.com
+1060,63,90,4,Uruguay,402876,Agustin CANOBBIO,Red Card,,,,api.fifa.com
+1061,63,46,,Spain,447860,Alex BAENA,Yellow Card,,,,api.fifa.com
+1062,63,45,,Uruguay,402898,Nicolas DE LA CRUZ,Substitution,substitution,441623,IN: Nicolas DE LA CRUZ / OUT: Manuel UGARTE,api.fifa.com
+1063,63,,,Uruguay,368664,Sergio ROCHET,Substitution,substitution,229498,IN: Sergio ROCHET / OUT: Fernando MUSLERA,api.fifa.com
+1064,63,56,,Uruguay,477536,Federico VINAS,Substitution,substitution,402884,IN: Federico VINAS / OUT: Federico VALVERDE,api.fifa.com
+1065,63,70,,Uruguay,419132,Brian RODRIGUEZ,Substitution,substitution,419134,IN: Brian RODRIGUEZ / OUT: Juan Manuel SANABRIA,api.fifa.com
+1066,63,60,,Spain,430718,Fabian RUIZ,Substitution,substitution,423646,IN: Fabian RUIZ / OUT: PEDRI,api.fifa.com
+1067,63,60,,Spain,430750,Dani OLMO,Substitution,substitution,430733,IN: Dani OLMO / OUT: Mikel MERINO,api.fifa.com
+1068,63,66,,Spain,423658,Yeremy PINO,Substitution,substitution,447860,IN: Yeremy PINO / OUT: Alex BAENA,api.fifa.com
+1069,63,76,,Spain,405545,Ferran TORRES,Substitution,substitution,430751,IN: Ferran TORRES / OUT: Mikel OYARZABAL,api.fifa.com
+1070,63,76,,Spain,447855,Nico WILLIAMS,Substitution,substitution,484320,IN: Nico WILLIAMS / OUT: Lamine YAMAL,api.fifa.com
+1071,64,8,,Cabo Verde,482783,WAGNER PINA,Yellow Card,,,,api.fifa.com
+1072,64,4,,Saudi Arabia,419281,SAUD ABDULHAMID,Yellow Card,,,,api.fifa.com
+1073,64,67,,Saudi Arabia,403319,NASSER ALDAWSARI,Yellow Card,,,,api.fifa.com
+1074,64,90,3,Saudi Arabia,419291,FERAS ALBRIKAN,Yellow Card,,,,api.fifa.com
+1075,64,61,,Cabo Verde,477849,HELIO VARELA,Substitution,substitution,433724,IN: HELIO VARELA / OUT: WILLY SEMEDO,api.fifa.com
+1076,64,61,,Cabo Verde,401893,NUNO DA COSTA,Substitution,substitution,482782,IN: NUNO DA COSTA / OUT: DAILON LIVRAMENTO,api.fifa.com
+1077,64,71,,Cabo Verde,480966,LAROS DUARTE,Substitution,substitution,401894,IN: LAROS DUARTE / OUT: JAMIRO MONTEIRO,api.fifa.com
+1078,64,71,,Cabo Verde,373344,GARRY RODRIGUES,Substitution,substitution,355642,IN: GARRY RODRIGUES / OUT: RYAN MENDES,api.fifa.com
+1079,64,90,4,Cabo Verde,477847,STEVEN MOREIRA,Substitution,substitution,482783,IN: STEVEN MOREIRA / OUT: WAGNER PINA,api.fifa.com
+1080,64,33,,Saudi Arabia,433439,ALI LAJAMI,Substitution,substitution,403335,IN: ALI LAJAMI / OUT: HASSAN ALTAMBAKTI,api.fifa.com
+1081,64,,,Saudi Arabia,436537,MUSAB ALJUWAYR,Substitution,substitution,411624,IN: MUSAB ALJUWAYR / OUT: ABDULLAH ALKHAIBARI,api.fifa.com
+1082,64,65,,Saudi Arabia,419302,ABDULLAH ALHAMDDAN,Substitution,substitution,494800,IN: ABDULLAH ALHAMDDAN / OUT: SULTAN MANDASH,api.fifa.com
+1083,64,65,,Saudi Arabia,512183,MOHAMMED ABU ALSHAMAT,Substitution,substitution,339745,IN: MOHAMMED ABU ALSHAMAT / OUT: SALEM ALDAWSARI,api.fifa.com
+1084,64,82,,Saudi Arabia,419303,MOTEB ALHARBI,Substitution,substitution,430518,IN: MOTEB ALHARBI / OUT: NAWAF BU WASHL,api.fifa.com
+1085,61,84,,New Zealand,405454,Elijah JUST,Goal,open_play,,,api.fifa.com
+1086,61,28,,Belgium,448355,Leandro TROSSARD,Goal,open_play,,,api.fifa.com
+1087,61,50,,Belgium,448355,Leandro TROSSARD,Goal,open_play,,,api.fifa.com
+1088,61,66,,Belgium,358120,Kevin DE BRUYNE,Goal,open_play,,,api.fifa.com
+1089,61,86,,Belgium,358112,Romelu LUKAKU,Goal,open_play,,,api.fifa.com
+1090,61,90,4,Belgium,433092,Alexis SAELEMAEKERS,Goal,open_play,,,api.fifa.com
+1091,61,46,,New Zealand,423595,Marko STAMENIC,Yellow Card,,,,api.fifa.com
+1092,61,56,,New Zealand,405454,Elijah JUST,Yellow Card,,,,api.fifa.com
+1093,61,,,New Zealand,423575,Ben OLD,Substitution,substitution,336641,IN: Ben OLD / OUT: Ryan THOMAS,api.fifa.com
+1094,61,,,New Zealand,416652,Jesse RANDALL,Substitution,substitution,390209,IN: Jesse RANDALL / OUT: Sarpreet SINGH,api.fifa.com
+1095,61,64,,New Zealand,390196,Callum McCOWATT,Substitution,substitution,390181,IN: Callum McCOWATT / OUT: Joe BELL,api.fifa.com
+1096,61,64,,New Zealand,261367,Michael BOXALL,Substitution,substitution,331463,IN: Michael BOXALL / OUT: Tim PAYNE,api.fifa.com
+1097,61,79,,New Zealand,440748,Francis DE VRIES,Substitution,substitution,405469,IN: Francis DE VRIES / OUT: Liberato CACACE,api.fifa.com
+1098,61,56,,Belgium,494025,Matias FERNANDEZ-PARDO,Substitution,substitution,448341,IN: Matias FERNANDEZ-PARDO / OUT: Jeremy DOKU,api.fifa.com
+1099,61,72,,Belgium,433092,Alexis SAELEMAEKERS,Substitution,substitution,448355,IN: Alexis SAELEMAEKERS / OUT: Leandro TROSSARD,api.fifa.com
+1100,61,72,,Belgium,448364,Amadou ONANA,Substitution,substitution,358120,IN: Amadou ONANA / OUT: Kevin DE BRUYNE,api.fifa.com
+1101,61,85,,Belgium,495349,Nicolas RASKIN,Substitution,substitution,401444,IN: Nicolas RASKIN / OUT: Youri TIELEMANS,api.fifa.com
+1102,61,85,,Belgium,358112,Romelu LUKAKU,Substitution,substitution,448362,IN: Romelu LUKAKU / OUT: Charles DE KETELAERE,api.fifa.com
+1103,62,5,,Egypt,483183,MAHMOUD SABER,Goal,open_play,,,api.fifa.com
+1104,62,14,,IR Iran,384797,Ramin REZAEIAN,Goal,open_play,,,api.fifa.com
+1105,62,19,,Egypt,483183,MAHMOUD SABER,Yellow Card,,,,api.fifa.com
+1106,62,41,,Egypt,369267,YASSER IBRAHIM,Yellow Card,,,,api.fifa.com
+1107,62,90,2,Egypt,433469,MOHANAD LASHIN,Yellow Card,,,,api.fifa.com
+1108,62,18,,IR Iran,390534,Hossein KANANI,Yellow Card,,,,api.fifa.com
+1109,62,43,,IR Iran,489603,Ali NEMATI,Yellow Card,,,,api.fifa.com
+1110,62,79,,IR Iran,371736,Saeid EZATOLAHI,Yellow Card,,,,api.fifa.com
+1111,62,90,4,IR Iran,346743,Shoja KHALILZADEH,Yellow Card,,,,api.fifa.com
+1112,62,14,,Egypt,369267,YASSER IBRAHIM,Substitution,substitution,416902,IN: YASSER IBRAHIM / OUT: MOHAMED ABDELMONEIM,api.fifa.com
+1113,62,,,Egypt,461788,MARAWAN ATTIA,Substitution,substitution,483183,IN: MARAWAN ATTIA / OUT: MAHMOUD SABER,api.fifa.com
+1114,62,,,Egypt,430476,OMAR MARMOUSH,Substitution,substitution,430482,IN: OMAR MARMOUSH / OUT: EMAM ASHOUR,api.fifa.com
+1115,62,57,,Egypt,433461,ZIZO,Substitution,substitution,344654,IN: ZIZO / OUT: MOHAMED SALAH,api.fifa.com
+1116,62,76,,Egypt,495488,HAMZA ABDELKARIM,Substitution,substitution,483161,IN: HAMZA ABDELKARIM / OUT: MOSTAFA ZICO,api.fifa.com
+1117,62,,,IR Iran,448505,Saleh HARDANI,Substitution,substitution,390534,IN: Saleh HARDANI / OUT: Hossein KANANI,api.fifa.com
+1118,62,67,,IR Iran,481180,Shahriyar MOGHANLOO,Substitution,substitution,411644,IN: Shahriyar MOGHANLOO / OUT: Saman GHODDOS,api.fifa.com
+1119,62,90,1,IR Iran,379886,Alireza JAHANBAKHSH,Substitution,substitution,448497,IN: Alireza JAHANBAKHSH / OUT: Mohammad MOHEBBI,api.fifa.com
+1120,71,62,,England,448202,Jude BELLINGHAM,Goal,open_play,448196,,api.fifa.com
+1121,71,62,,England,448196,Bukayo SAKA,Assist,assist,448202,assist attributed via sofascore.com,sofascore.com
+1122,71,67,,England,369419,Harry KANE,Goal,open_play,448202,,api.fifa.com
+1123,71,67,,England,448202,Jude BELLINGHAM,Assist,assist,369419,assist attributed via sofascore.com,sofascore.com
+1124,71,53,,Panama,411174,Jose FAJARDO,Yellow Card,,,,api.fifa.com
+1125,71,83,,Panama,441240,Andres ANDRADE,Yellow Card,,,,api.fifa.com
+1126,71,60,,England,463809,Jarell QUANSAH,Yellow Card,,,,api.fifa.com
+1127,71,,,Panama,411174,Jose FAJARDO,Substitution,substitution,418747,IN: Jose FAJARDO / OUT: Tomas RODRIGUEZ,api.fifa.com
+1128,71,71,,Panama,372342,Ismael DIAZ,Substitution,substitution,400416,IN: Ismael DIAZ / OUT: Edgar Yoel BARCENAS,api.fifa.com
+1129,71,71,,Panama,466669,Azarias LONDONO,Substitution,substitution,411176,IN: Azarias LONDONO / OUT: Jose Luis RODRIGUEZ,api.fifa.com
+1130,71,88,,Panama,271116,Alberto QUINTERO,Substitution,substitution,418729,IN: Alberto QUINTERO / OUT: Carlos HARVEY,api.fifa.com
+1131,71,88,,Panama,337232,Eric DAVIS,Substitution,substitution,441239,IN: Eric DAVIS / OUT: Jorge GUTIERREZ,api.fifa.com
+1132,71,63,,England,506329,Djed SPENCE,Substitution,substitution,463809,IN: Djed SPENCE / OUT: Jarell QUANSAH,api.fifa.com
+1133,71,63,,England,489732,Noni MADUEKE,Substitution,substitution,448196,IN: Noni MADUEKE / OUT: Bukayo SAKA,api.fifa.com
+1134,71,71,,England,473113,Eberechi EZE,Substitution,substitution,448202,IN: Eberechi EZE / OUT: Jude BELLINGHAM,api.fifa.com
+1135,71,84,,England,356189,Jordan HENDERSON,Substitution,substitution,481610,IN: Jordan HENDERSON / OUT: Elliot ANDERSON,api.fifa.com
+1136,71,84,,England,448203,Ollie WATKINS,Substitution,substitution,369419,IN: Ollie WATKINS / OUT: Harry KANE,api.fifa.com
+1137,72,31,,Croatia,485066,Petar SUCIC,Goal,open_play,,,api.fifa.com
+1138,72,83,,Croatia,409191,Nikola VLASIC,Goal,open_play,241559,,api.fifa.com
+1139,72,83,,Croatia,241559,Luka MODRIC,Assist,assist,409191,assist attributed via sofascore.com,sofascore.com
+1140,72,73,,Ghana,520037,Derrick LUCKASSEN,Goal,open_play,448525,,api.fifa.com
+1141,72,73,,Ghana,448525,Ernest NUAMAH,Assist,assist,520037,assist attributed via sofascore.com,sofascore.com
+1142,72,68,,Croatia,359381,Ivan PERISIC,Yellow Card,,,,api.fifa.com
+1143,72,90,4,Ghana,511022,Kojo Peprah OPPONG,Yellow Card,,,,api.fifa.com
+1144,72,66,,Croatia,485068,Igor MATANOVIC,Substitution,substitution,430070,IN: Igor MATANOVIC / OUT: Ante BUDIMIR,api.fifa.com
+1145,72,78,,Croatia,380005,Mario PASALIC,Substitution,substitution,339987,IN: Mario PASALIC / OUT: Mateo KOVACIC,api.fifa.com
+1146,72,88,,Croatia,482931,Marco PASALIC,Substitution,substitution,482774,IN: Marco PASALIC / OUT: Martin BATURINA,api.fifa.com
+1147,72,88,,Croatia,448180,Josko GVARDIOL,Substitution,substitution,409191,IN: Josko GVARDIOL / OUT: Nikola VLASIC,api.fifa.com
+1148,72,,,Ghana,511022,Kojo Peprah OPPONG,Substitution,substitution,494351,IN: Kojo Peprah OPPONG / OUT: Jonas ADJETEY,api.fifa.com
+1149,72,,,Ghana,441342,Abdul FATAWU,Substitution,substitution,441341,IN: Abdul FATAWU / OUT: Elisha OWUSU,api.fifa.com
+1150,72,71,,Ghana,486213,Brandon THOMAS-ASANTE,Substitution,substitution,353235,IN: Brandon THOMAS-ASANTE / OUT: Jordan AYEW,api.fifa.com
+1151,72,71,,Ghana,448525,Ernest NUAMAH,Substitution,substitution,448523,IN: Ernest NUAMAH / OUT: Kamaldeen SULEMANA,api.fifa.com
+1152,72,85,,Ghana,506279,Caleb YIRENKYI,Substitution,substitution,507253,IN: Caleb YIRENKYI / OUT: Kwasi SIBO,api.fifa.com
+1153,70,68,,Congo DR,441316,Yoane WISSA,Goal,penalty,,Penalty scored,api.fifa.com
+1154,70,78,,Congo DR,477859,Fiston MAYELE,Goal,open_play,,,api.fifa.com
+1155,70,90,1,Congo DR,441316,Yoane WISSA,Goal,open_play,,,api.fifa.com
+1156,70,10,,Uzbekistan,385475,Eldor SHOMURODOV,Goal,open_play,479106,,api.fifa.com
+1157,70,10,,Uzbekistan,479106,Akmal MOZGOVOY,Assist,assist,385475,assist attributed via sofascore.com,sofascore.com
+1158,70,21,,Congo DR,486147,Noah SADIKI,Yellow Card,,,,api.fifa.com
+1159,70,45,4,Congo DR,424119,Nathanael MBUKU,Yellow Card,,,,api.fifa.com
+1160,70,62,,Congo DR,433076,Samuel Moutoussamy,Yellow Card,,,,api.fifa.com
+1161,70,43,,Uzbekistan,464924,Abdukodir KHUSANOV,Yellow Card,,,,api.fifa.com
+1162,70,47,,Uzbekistan,479075,Sherzod NASRULLAEV,Yellow Card,,,,api.fifa.com
+1163,70,51,,Congo DR,477859,Fiston MAYELE,Substitution,substitution,336425,IN: Fiston MAYELE / OUT: Cedric BAKAMBU,api.fifa.com
+1164,70,72,,Congo DR,494458,Ngalayel MUKAU,Substitution,substitution,433076,IN: Ngalayel MUKAU / OUT: Samuel Moutoussamy,api.fifa.com
+1165,70,72,,Congo DR,426506,Meschack ELIA,Substitution,substitution,424119,IN: Meschack ELIA / OUT: Nathanael MBUKU,api.fifa.com
+1166,70,72,,Congo DR,441317,Theo BONGONDA,Substitution,substitution,510989,IN: Theo BONGONDA / OUT: Brian CIPENGA,api.fifa.com
+1167,70,83,,Congo DR,477833,Joris KAYEMBE,Substitution,substitution,436572,IN: Joris KAYEMBE / OUT: Arthur MASUAKU,api.fifa.com
+1168,70,58,,Uzbekistan,371345,Odiljon XAMROBEKOV,Substitution,substitution,371348,IN: Odiljon XAMROBEKOV / OUT: Otabek Shukurov,api.fifa.com
+1169,70,58,,Uzbekistan,479086,Azizjon GANIEV,Substitution,substitution,371393,IN: Azizjon GANIEV / OUT: Dostonbek Khamdamov,api.fifa.com
+1170,70,73,,Uzbekistan,479080,Oston URUNOV,Substitution,substitution,464933,IN: Oston URUNOV / OUT: Abbosbek FAYZULLAEV,api.fifa.com
+1171,70,82,,Uzbekistan,368545,Jamshid ISKANDEROV,Substitution,substitution,479106,IN: Jamshid ISKANDEROV / OUT: Akmal MOZGOVOY,api.fifa.com
+1172,70,82,,Uzbekistan,368546,Igor Sergeev,Substitution,substitution,464906,IN: Igor Sergeev / OUT: Jakhongir UROZOV,api.fifa.com
+1173,69,86,,Colombia,463902,Gustavo PUERTA,Yellow Card,,,,api.fifa.com
+1174,69,60,,Colombia,473050,Richard RIOS,Substitution,substitution,395550,IN: Richard RIOS / OUT: Jefferson LERMA,api.fifa.com
+1175,69,60,,Colombia,428905,Luis SUAREZ,Substitution,substitution,369530,IN: Luis SUAREZ / OUT: Jhon CORDOBA,api.fifa.com
+1176,69,76,,Colombia,470759,Kevin CASTANO,Substitution,substitution,470760,IN: Kevin CASTANO / OUT: Jhon ARIAS,api.fifa.com
+1177,69,76,,Colombia,356704,Juan QUINTERO,Substitution,substitution,269058,IN: Juan QUINTERO / OUT: James RODRIGUEZ,api.fifa.com
+1178,69,87,,Colombia,431200,Daniel MUNOZ,Substitution,substitution,315614,IN: Daniel MUNOZ / OUT: Santiago ARIAS,api.fifa.com
+1179,69,,,Portugal,484141,JOAO NEVES,Substitution,substitution,395216,IN: JOAO NEVES / OUT: RUBEN NEVES,api.fifa.com
+1180,69,,,Portugal,403002,DIOGO DALOT,Substitution,substitution,368649,IN: DIOGO DALOT / OUT: JOAO CANCELO,api.fifa.com
+1181,69,70,,Portugal,418550,RAFAEL LEAO,Substitution,substitution,418535,IN: RAFAEL LEAO / OUT: JOAO FELIX,api.fifa.com
+1182,69,70,,Portugal,491216,SAMU COSTA,Substitution,substitution,441149,IN: SAMU COSTA / OUT: VITINHA,api.fifa.com
+1183,69,90,2,Portugal,441148,MATHEUS NUNES,Substitution,substitution,433195,IN: MATHEUS NUNES / OUT: NUNO MENDES,api.fifa.com
+1184,68,45,,Algeria,511009,Rafik BELGHALI,Goal,open_play,379942,,api.fifa.com
+1185,68,45,,Algeria,379942,Riyad Mahrez,Assist,assist,511009,assist attributed via sofascore.com,sofascore.com
+1186,68,60,,Algeria,379942,Riyad Mahrez,Goal,open_play,430698,,api.fifa.com
+1187,68,60,,Algeria,430698,Houssem Aouar,Assist,assist,379942,assist attributed via sofascore.com,sofascore.com
+1188,68,90,3,Algeria,379942,Riyad Mahrez,Goal,open_play,,,api.fifa.com
+1189,68,28,,Austria,299200,Marko ARNAUTOVIC,Goal,open_play,316002,,api.fifa.com
+1190,68,28,,Austria,316002,David ALABA,Assist,assist,299200,assist attributed via sofascore.com,sofascore.com
+1191,68,55,,Austria,358241,Marcel SABITZER,Goal,open_play,441088,,api.fifa.com
+1192,68,55,,Austria,441088,Nicolas SEIWALD,Assist,assist,358241,assist attributed via sofascore.com,sofascore.com
+1193,68,90,6,Austria,430100,Sasa KALAJDZIC,Goal,open_play,,,api.fifa.com
+1194,68,11,,Austria,299200,Marko ARNAUTOVIC,Yellow Card,,,,api.fifa.com
+1195,68,71,,Algeria,431858,Rayan AIT-NOURI,Substitution,substitution,482869,IN: Rayan AIT-NOURI / OUT: Jaouen HADJAM,api.fifa.com
+1196,68,71,,Algeria,480983,Zineddine BELAID,Substitution,substitution,405877,IN: Zineddine BELAID / OUT: Amine GOUIRI,api.fifa.com
+1197,68,71,,Algeria,511010,Samir CHERGUI,Substitution,substitution,511009,IN: Samir CHERGUI / OUT: Rafik BELGHALI,api.fifa.com
+1198,68,90,4,Algeria,520072,Fares GHEDJEMIS,Substitution,substitution,430698,IN: Fares GHEDJEMIS / OUT: Houssem Aouar,api.fifa.com
+1199,68,,,Austria,401131,Michael Gregoritsch,Substitution,substitution,299200,IN: Michael Gregoritsch / OUT: Marko ARNAUTOVIC,api.fifa.com
+1200,68,,,Austria,520036,Paul WANNER,Substitution,substitution,463283,IN: Paul WANNER / OUT: Romano SCHMID,api.fifa.com
+1201,68,,,Austria,385248,Florian GRILLITSCH,Substitution,substitution,385531,IN: Florian GRILLITSCH / OUT: Xaver Schlager,api.fifa.com
+1202,68,62,,Austria,405263,Kevin Danso,Substitution,substitution,316002,IN: Kevin Danso / OUT: David ALABA,api.fifa.com
+1203,68,90,5,Austria,430100,Sasa KALAJDZIC,Substitution,substitution,463288,IN: Sasa KALAJDZIC / OUT: Phillip MWENE,api.fifa.com
+1204,67,55,,Jordan,431211,MOUSA ALTAMARI,Goal,open_play,389437,,api.fifa.com
+1205,67,55,,Jordan,389437,EHSAN HADDAD,Assist,assist,431211,assist attributed via sofascore.com,sofascore.com
+1206,67,19,,Argentina,395414,Giovani Lo Celso,Goal,open_play,,,api.fifa.com
+1207,67,31,,Argentina,402920,Lautaro MARTINEZ,Goal,penalty,,Penalty scored,api.fifa.com
+1208,67,80,,Argentina,229397,Lionel MESSI,Goal,open_play,,,api.fifa.com
+1209,67,17,,Jordan,479389,MOHANNAD ABUTAHA,Yellow Card,,,,api.fifa.com
+1210,67,64,,Jordan,431225,YAZAN ALARAB,Yellow Card,,,,api.fifa.com
+1211,67,90,4,Jordan,431208,MOHAMMAD ABUZRAIQ,Yellow Card,,,,api.fifa.com
+1212,67,,,Jordan,396950,MAHMOUD ALMARDI,Substitution,substitution,511875,IN: MAHMOUD ALMARDI / OUT: ODEH FAKHOURY,api.fifa.com
+1213,67,,,Jordan,431211,MOUSA ALTAMARI,Substitution,substitution,498514,IN: MOUSA ALTAMARI / OUT: ALI AZAIZEH,api.fifa.com
+1214,67,76,,Jordan,491167,AMER JAMOUS,Substitution,substitution,433534,IN: AMER JAMOUS / OUT: NIZAR ALRASHDAN,api.fifa.com
+1215,67,90,,Jordan,431208,MOHAMMAD ABUZRAIQ,Substitution,substitution,431212,IN: MOHAMMAD ABUZRAIQ / OUT: ALI OLWAN,api.fifa.com
+1216,67,90,,Jordan,499102,SALEEM OBAID,Substitution,substitution,489550,IN: SALEEM OBAID / OUT: HUSAM ABUDAHAB,api.fifa.com
+1217,67,60,,Argentina,418975,Thiago ALMADA,Substitution,substitution,395414,IN: Thiago ALMADA / OUT: Giovani Lo Celso,api.fifa.com
+1218,67,60,,Argentina,229397,Lionel MESSI,Substitution,substitution,402920,IN: Lionel MESSI / OUT: Lautaro MARTINEZ,api.fifa.com
+1219,67,60,,Argentina,430628,Alexis MAC ALLISTER,Substitution,substitution,441422,IN: Alexis MAC ALLISTER / OUT: Nico PAZ,api.fifa.com
+1220,67,71,,Argentina,463661,Valentin BARCO,Substitution,substitution,485595,IN: Valentin BARCO / OUT: Giuliano SIMEONE,api.fifa.com
+1221,67,82,,Argentina,495054,Jose Manuel LOPEZ,Substitution,substitution,416081,IN: Jose Manuel LOPEZ / OUT: Julian ALVAREZ,api.fifa.com
+1222,73,90,2,Canada,433635,Stephen EUSTAQUIO,Goal,open_play,,,api.fifa.com
+1223,73,54,,Canada,423941,Nathan SALIBA,Yellow Card,,,,api.fifa.com
+1224,73,67,,Canada,485064,Niko SIGUR,Yellow Card,,,,api.fifa.com
+1225,73,,,South Africa,494248,Thalente MBATHA,Substitution,substitution,486161,IN: Thalente MBATHA / OUT: Relebohile MOFOKENG,api.fifa.com
+1226,73,86,,South Africa,481242,Iqraam RAYNERS,Substitution,substitution,430917,IN: Iqraam RAYNERS / OUT: Evidence MAKGOPA,api.fifa.com
+1227,73,86,,South Africa,504193,Tshepang MOREMI,Substitution,substitution,463234,IN: Tshepang MOREMI / OUT: Thapelo MASEKO,api.fifa.com
+1228,73,59,,Canada,485064,Niko SIGUR,Substitution,substitution,423941,IN: Niko SIGUR / OUT: Nathan SALIBA,api.fifa.com
+1229,73,59,,Canada,480322,Luc DE FOUGEROLLES,Substitution,substitution,466585,IN: Luc DE FOUGEROLLES / OUT: Moise BOMBITO,api.fifa.com
+1230,73,70,,Canada,493970,Promise DAVID,Substitution,substitution,486929,IN: Promise DAVID / OUT: Tani OLUWASEYI,api.fifa.com
+1231,73,70,,Canada,448411,Jacob SHAFFELBURG,Substitution,substitution,441259,IN: Jacob SHAFFELBURG / OUT: Liam MILLAR,api.fifa.com
+1232,73,75,,Canada,412144,Alphonso DAVIES,Substitution,substitution,430138,IN: Alphonso DAVIES / OUT: Tajon BUCHANAN,api.fifa.com
+1233,74,56,,Brazil,308386,CASEMIRO,Goal,open_play,430601,,api.fifa.com
+1234,74,56,,Brazil,430601,GABRIEL MAGALHAES,Assist,assist,308386,assist attributed via sofascore.com,sofascore.com
+1235,74,90,5,Brazil,430597,GABRIEL MARTINELLI,Goal,open_play,,,api.fifa.com
+1236,74,29,,Japan,479294,Kaishu SANO,Goal,open_play,,,api.fifa.com
+1237,74,14,,Brazil,308386,CASEMIRO,Yellow Card,,,,api.fifa.com
+1238,74,48,,Brazil,335656,DANILO,Yellow Card,,,,api.fifa.com
+1239,74,12,,Japan,479294,Kaishu SANO,Yellow Card,,,,api.fifa.com
+1240,74,45,,Japan,448557,Daichi KAMADA,Yellow Card,,,,api.fifa.com
+1241,74,84,,Japan,498455,Junnosuke SUZUKI,Yellow Card,,,,api.fifa.com
+1242,74,,,Brazil,463746,ENDRICK,Substitution,substitution,411726,IN: ENDRICK / OUT: LUCAS PAQUETA,api.fifa.com
+1243,74,65,,Brazil,430597,GABRIEL MARTINELLI,Substitution,substitution,430609,IN: GABRIEL MARTINELLI / OUT: MATHEUS CUNHA,api.fifa.com
+1244,74,90,1,Brazil,394456,FABINHO,Substitution,substitution,308386,IN: FABINHO / OUT: CASEMIRO,api.fifa.com
+1245,74,90,7,Brazil,429392,DANILO SANTOS,Substitution,substitution,430605,IN: DANILO SANTOS / OUT: BRUNO GUIMARAES,api.fifa.com
+1246,74,66,,Japan,498455,Junnosuke SUZUKI,Substitution,substitution,405522,IN: Junnosuke SUZUKI / OUT: Keito Nakamura,api.fifa.com
+1247,74,66,,Japan,405528,Yukinari Sugawara,Substitution,substitution,391646,IN: Yukinari Sugawara / OUT: Ritsu DOAN,api.fifa.com
+1248,74,78,,Japan,448569,Shuto MACHINO,Substitution,substitution,395321,IN: Shuto MACHINO / OUT: Junya ITO,api.fifa.com
+1249,74,78,,Japan,400514,Ao TANAKA,Substitution,substitution,448557,IN: Ao TANAKA / OUT: Daichi KAMADA,api.fifa.com
+1250,74,90,7,Japan,403293,Koki OGAWA,Substitution,substitution,430407,IN: Koki OGAWA / OUT: Daizen MAEDA,api.fifa.com
+1251,75,54,,Germany,411367,Kai HAVERTZ,Goal,open_play,430669,,api.fifa.com
+1252,75,54,,Germany,430669,Florian WIRTZ,Assist,assist,411367,assist attributed via sofascore.com,sofascore.com
+1253,75,,,Germany,386413,Joshua KIMMICH,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1254,75,,,Germany,429642,Jamal MUSIALA,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1255,75,,,Germany,395471,Nadiem Amiri,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1256,75,42,,Paraguay,441234,Julio ENCISO,Goal,open_play,424422,,api.fifa.com
+1257,75,42,,Paraguay,424422,Matias GALARZA,Assist,assist,441234,assist attributed via sofascore.com,sofascore.com
+1258,75,,,Paraguay,495046,MAURICIO,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1259,75,,,Paraguay,369744,Gustavo GOMEZ,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1260,75,,,Paraguay,424422,Matias GALARZA,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1261,75,,,Paraguay,520066,Jose CANALE,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1262,75,105,1,Germany,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+1263,75,106,,Germany,411367,Kai HAVERTZ,Yellow Card,,,,api.fifa.com
+1264,75,115,,Germany,429642,Jamal MUSIALA,Yellow Card,,,,api.fifa.com
+1265,75,116,,Germany,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+1266,75,65,,Paraguay,385306,Andres CUBAS,Yellow Card,,,,api.fifa.com
+1267,75,105,,Paraguay,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+1268,75,117,,Paraguay,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+1269,75,117,,Paraguay,424422,Matias GALARZA,Yellow Card,,,,api.fifa.com
+1270,75,,,Germany,379953,Leon GORETZKA,Substitution,substitution,492363,IN: Leon GORETZKA / OUT: Felix NMECHA,api.fifa.com
+1271,75,63,,Germany,429642,Jamal MUSIALA,Substitution,substitution,484851,IN: Jamal MUSIALA / OUT: Deniz UNDAV,api.fifa.com
+1272,75,79,,Germany,430658,Waldemar ANTON,Substitution,substitution,484849,IN: Waldemar ANTON / OUT: Aleksandar PAVLOVIC,api.fifa.com
+1273,75,88,,Germany,498416,Nick WOLTEMADE,Substitution,substitution,404353,IN: Nick WOLTEMADE / OUT: Leroy SANE,api.fifa.com
+1274,75,110,,Germany,514188,Malick THIAW,Substitution,substitution,379955,IN: Malick THIAW / OUT: Antonio RUEDIGER,api.fifa.com
+1275,75,110,,Germany,395471,Nadiem Amiri,Substitution,substitution,430669,IN: Nadiem Amiri / OUT: Florian WIRTZ,api.fifa.com
+1276,75,55,,Paraguay,485804,Gustavo CABALLERO,Substitution,substitution,463127,IN: Gustavo CABALLERO / OUT: Gabriel AVALOS,api.fifa.com
+1277,75,57,,Paraguay,495046,MAURICIO,Substitution,substitution,441234,IN: MAURICIO / OUT: Julio ENCISO,api.fifa.com
+1278,75,,,Paraguay,486875,Gustavo VELAZQUEZ,Substitution,substitution,369761,IN: Gustavo VELAZQUEZ / OUT: Miguel ALMIRON,api.fifa.com
+1279,75,99,,Paraguay,406205,Braian OJEDA,Substitution,substitution,479601,IN: Braian OJEDA / OUT: Juan Jose CACERES,api.fifa.com
+1280,75,99,,Paraguay,369768,Antonio SANABRIA,Substitution,substitution,476348,IN: Antonio SANABRIA / OUT: Damian BOBADILLA,api.fifa.com
+1281,75,120,2,Paraguay,394829,Fabian BALBUENA,Substitution,substitution,369749,IN: Fabian BALBUENA / OUT: Junior ALONSO,api.fifa.com
+1282,75,121,,Germany,411367,,Penalty Shootout Miss,penalty_shootout,,from sofascore.com (local_player_ref=423),sofascore.com
+1283,75,121,,Germany,498416,,Penalty Shootout Miss,penalty_shootout,,from sofascore.com (local_player_ref=427),sofascore.com
+1284,75,121,,Paraguay,369768,,Penalty Shootout Miss,penalty_shootout,,from sofascore.com (local_player_ref=347),sofascore.com
+1285,75,121,,Paraguay,394829,,Penalty Shootout Miss,penalty_shootout,,from sofascore.com (local_player_ref=343),sofascore.com
+1286,75,121,,Germany,401378,,Penalty Shootout Miss,penalty_shootout,,from sofascore.com (local_player_ref=420),sofascore.com
+1287,76,72,,Netherlands,448152,Cody GAKPO,Goal,open_play,489518,,api.fifa.com
+1288,76,72,,Netherlands,489518,Crysencio SUMMERVILLE,Assist,assist,448152,assist attributed via sofascore.com,sofascore.com
+1289,76,,,Netherlands,448149,Teun KOOPMEINERS,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1290,76,,,Netherlands,448159,Wout WEGHORST,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1291,76,90,1,Morocco,403083,Issa Diop,Goal,open_play,,,api.fifa.com
+1292,76,,,Morocco,433426,Soufiane RAHIMI,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1293,76,,,Morocco,494293,Chemsdine TALBI,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1294,76,,,Morocco,448598,Ismael SAIBARI,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1295,76,47,,Morocco,403083,Issa Diop,Yellow Card,,,,api.fifa.com
+1296,76,71,,Netherlands,448149,Teun KOOPMEINERS,Substitution,substitution,336088,IN: Teun KOOPMEINERS / OUT: Nathan AKE,api.fifa.com
+1297,76,71,,Netherlands,448159,Wout WEGHORST,Substitution,substitution,424051,IN: Wout WEGHORST / OUT: Brian BROBBEY,api.fifa.com
+1298,76,86,,Netherlands,484859,Quinten TIMBER,Substitution,substitution,430176,IN: Quinten TIMBER / OUT: Ryan GRAVENBERCH,api.fifa.com
+1299,76,86,,Netherlands,483512,Jorrel HATO,Substitution,substitution,448140,IN: Jorrel HATO / OUT: Micky VAN DE VEN,api.fifa.com
+1300,76,110,,Netherlands,402044,Marten DE ROON,Substitution,substitution,422657,IN: Marten DE ROON / OUT: Frenkie DE JONG,api.fifa.com
+1301,76,113,,Netherlands,478364,Justin KLUIVERT,Substitution,substitution,448152,IN: Justin KLUIVERT / OUT: Cody GAKPO,api.fifa.com
+1302,76,75,,Morocco,424071,Anass SALAH EDDINE,Substitution,substitution,448607,IN: Anass SALAH EDDINE / OUT: Chadi RIAD,api.fifa.com
+1303,76,79,,Morocco,505112,Gessime YASSINE,Substitution,substitution,430740,IN: Gessime YASSINE / OUT: Brahim DIAZ,api.fifa.com
+1304,76,79,,Morocco,505097,Samir EL MOURABET,Substitution,substitution,485760,IN: Samir EL MOURABET / OUT: Ayyoub BOUADDI,api.fifa.com
+1305,76,86,,Morocco,433426,Soufiane RAHIMI,Substitution,substitution,441307,IN: Soufiane RAHIMI / OUT: Azzedine OUNAHI,api.fifa.com
+1306,76,86,,Morocco,494293,Chemsdine TALBI,Substitution,substitution,448612,IN: Chemsdine TALBI / OUT: Bilal EL KHANNOUSS,api.fifa.com
+1307,76,121,,Morocco,485740,,Penalty Shootout Miss,penalty_shootout,,from sofascore.com (local_player_ref=258),sofascore.com
+1308,76,121,,Netherlands,478364,,Penalty Shootout Miss,penalty_shootout,,from sofascore.com (local_player_ref=527),sofascore.com
+1309,76,121,,Netherlands,484859,,Penalty Shootout Miss,penalty_shootout,,from sofascore.com (local_player_ref=546),sofascore.com
+1310,76,121,,Morocco,400721,,Penalty Shootout Miss,penalty_shootout,,from sofascore.com (local_player_ref=236),sofascore.com
+1311,76,121,,Netherlands,489518,,Penalty Shootout Miss,penalty_shootout,,from sofascore.com (local_player_ref=544),sofascore.com
+1312,77,74,,Côte d'Ivoire,430822,Amad DIALLO,Goal,open_play,,,api.fifa.com
+1313,77,39,,Norway,483448,Antonio NUSA,Goal,open_play,,,api.fifa.com
+1314,77,86,,Norway,419652,Erling HAALAND,Goal,open_play,483442,,api.fifa.com
+1315,77,86,,Norway,483442,Patrick BERG,Assist,assist,419652,assist attributed via sofascore.com,sofascore.com
+1316,77,45,1,Norway,483448,Antonio NUSA,Yellow Card,,,,api.fifa.com
+1317,77,60,,Côte d'Ivoire,430822,Amad DIALLO,Substitution,substitution,514208,IN: Amad DIALLO / OUT: Christ Inao OULAI,api.fifa.com
+1318,77,60,,Côte d'Ivoire,464133,Elye WAHI,Substitution,substitution,464103,IN: Elye WAHI / OUT: Ange-Yoan BONNY,api.fifa.com
+1319,77,87,,Côte d'Ivoire,477777,Oumar DIAKITE,Substitution,substitution,402261,IN: Oumar DIAKITE / OUT: Nicolas PEPE,api.fifa.com
+1320,77,90,3,Côte d'Ivoire,485675,Evann GUESSAND,Substitution,substitution,510922,IN: Evann GUESSAND / OUT: Yan DIOMANDE,api.fifa.com
+1321,77,90,3,Côte d'Ivoire,506202,Bazoumana TOURE,Substitution,substitution,407343,IN: Bazoumana TOURE / OUT: Ghislain KONAN,api.fifa.com
+1322,77,71,,Norway,494626,Andreas SCHJELDERUP,Substitution,substitution,483448,IN: Andreas SCHJELDERUP / OUT: Antonio NUSA,api.fifa.com
+1323,77,71,,Norway,477470,Oscar BOBB,Substitution,substitution,398588,IN: Oscar BOBB / OUT: Alexander SORLOTH,api.fifa.com
+1324,77,83,,Norway,483497,Fredrik AURSNES,Substitution,substitution,494625,IN: Fredrik AURSNES / OUT: Marcus HOLMGREN PEDERSEN,api.fifa.com
+1325,78,45,,France,389867,Kylian MBAPPE,Goal,open_play,,,api.fifa.com
+1326,78,53,,France,484860,Bradley BARCOLA,Goal,open_play,485655,,api.fifa.com
+1327,78,53,,France,485655,Michael OLISE,Assist,assist,484860,assist attributed via sofascore.com,sofascore.com
+1328,78,74,,France,389867,Kylian MBAPPE,Goal,open_play,485655,,api.fifa.com
+1329,78,74,,France,485655,Michael OLISE,Assist,assist,389867,assist attributed via sofascore.com,sofascore.com
+1330,78,75,,France,464114,Desire DOUE,Substitution,substitution,398680,IN: Desire DOUE / OUT: Ousmane DEMBELE,api.fifa.com
+1331,78,75,,France,464055,Malo GUSTO,Substitution,substitution,430707,IN: Malo GUSTO / OUT: Jules KOUNDE,api.fifa.com
+1332,78,78,,France,408042,Theo HERNANDEZ,Substitution,substitution,368860,IN: Theo HERNANDEZ / OUT: Lucas Digne,api.fifa.com
+1333,78,85,,France,403094,Jean-Philippe MATETA,Substitution,substitution,389867,IN: Jean-Philippe MATETA / OUT: Kylian MBAPPE,api.fifa.com
+1334,78,85,,France,431861,Rayan CHERKI,Substitution,substitution,485655,IN: Rayan CHERKI / OUT: Michael OLISE,api.fifa.com
+1335,78,65,,Sweden,514202,Taha ALI,Substitution,substitution,519958,IN: Taha ALI / OUT: Elliot STROUD,api.fifa.com
+1336,78,65,,Sweden,503047,Besfort ZENELI,Substitution,substitution,489689,IN: Besfort ZENELI / OUT: Lucas BERGVALL,api.fifa.com
+1337,78,82,,Sweden,433795,Mattias SVANBERG,Substitution,substitution,491255,IN: Mattias SVANBERG / OUT: Daniel SVENSSON,api.fifa.com
+1338,78,82,,Sweden,502946,Benjamin NYGREN,Substitution,substitution,489688,IN: Benjamin NYGREN / OUT: Yasin AYARI,api.fifa.com
+1339,78,89,,Sweden,489691,Gustaf NILSSON,Substitution,substitution,430150,IN: Gustaf NILSSON / OUT: Alexander Isak,api.fifa.com
+1340,79,22,,Mexico,429157,Julian QUINONES,Goal,open_play,403585,,api.fifa.com
+1341,79,22,,Mexico,403585,Roberto ALVARADO,Assist,assist,429157,assist attributed via sofascore.com,sofascore.com
+1342,79,31,,Mexico,356731,Raul JIMENEZ,Goal,open_play,429157,,api.fifa.com
+1343,79,31,,Mexico,429157,Julian QUINONES,Assist,assist,356731,assist attributed via sofascore.com,sofascore.com
+1344,79,45,1,Ecuador,389784,Alan FRANCO,Yellow Card,,,,api.fifa.com
+1345,79,90,3,Ecuador,463495,Kendry PAEZ,Yellow Card,,,,api.fifa.com
+1346,79,90,5,Ecuador,424031,Piero HINCAPIE,Red Card,,,,api.fifa.com
+1347,79,90,9,Ecuador,428885,Moises CAICEDO,Yellow Card,,,,api.fifa.com
+1348,79,59,,Mexico,464533,Brian GUTIERREZ,Substitution,substitution,500037,IN: Brian GUTIERREZ / OUT: Gilberto MORA,api.fifa.com
+1349,79,73,,Mexico,430759,Santiago GIMENEZ,Substitution,substitution,356731,IN: Santiago GIMENEZ / OUT: Raul JIMENEZ,api.fifa.com
+1350,79,73,,Mexico,461177,Obed VARGAS,Substitution,substitution,430763,IN: Obed VARGAS / OUT: Luis ROMO,api.fifa.com
+1351,79,80,,Mexico,372090,Orbelin PINEDA,Substitution,substitution,429157,IN: Orbelin PINEDA / OUT: Julian QUINONES,api.fifa.com
+1352,79,80,,Mexico,441261,Israel REYES,Substitution,substitution,403585,IN: Israel REYES / OUT: Roberto ALVARADO,api.fifa.com
+1353,79,,,Ecuador,463489,Yaimar MEDINA,Substitution,substitution,389784,IN: Yaimar MEDINA / OUT: Alan FRANCO,api.fifa.com
+1354,79,,,Ecuador,402974,Angelo PRECIADO,Substitution,substitution,463465,IN: Angelo PRECIADO / OUT: Joel ORDONEZ,api.fifa.com
+1355,79,59,,Ecuador,448310,Kevin RODRIGUEZ,Substitution,substitution,373400,IN: Kevin RODRIGUEZ / OUT: Enner VALENCIA,api.fifa.com
+1356,79,79,,Ecuador,402985,Jordy CAICEDO,Substitution,substitution,405920,IN: Jordy CAICEDO / OUT: John YEBOAH,api.fifa.com
+1357,79,79,,Ecuador,463495,Kendry PAEZ,Substitution,substitution,448312,IN: Kendry PAEZ / OUT: Nilson ANGULO,api.fifa.com
+1358,80,75,,England,369419,Harry KANE,Goal,open_play,448189,,api.fifa.com
+1359,80,75,,England,448189,Anthony GORDON,Assist,assist,369419,assist attributed via sofascore.com,sofascore.com
+1360,80,86,,England,369419,Harry KANE,Goal,open_play,448189,,api.fifa.com
+1361,80,86,,England,448189,Anthony GORDON,Assist,assist,369419,assist attributed via sofascore.com,sofascore.com
+1362,80,7,,Congo DR,510989,Brian CIPENGA,Goal,open_play,,,api.fifa.com
+1363,80,19,,England,448202,Jude BELLINGHAM,Yellow Card,,,,api.fifa.com
+1364,80,27,,Congo DR,486147,Noah SADIKI,Yellow Card,,,,api.fifa.com
+1365,80,60,,England,448196,Bukayo SAKA,Substitution,substitution,489732,IN: Bukayo SAKA / OUT: Noni MADUEKE,api.fifa.com
+1366,80,60,,England,448189,Anthony GORDON,Substitution,substitution,401470,IN: Anthony GORDON / OUT: Marcus RASHFORD,api.fifa.com
+1367,80,70,,England,473113,Eberechi EZE,Substitution,substitution,506329,IN: Eberechi EZE / OUT: Djed SPENCE,api.fifa.com
+1368,80,90,1,England,369434,John STONES,Substitution,substitution,433097,IN: John STONES / OUT: Declan RICE,api.fifa.com
+1369,80,64,,Congo DR,426506,Meschack ELIA,Substitution,substitution,424119,IN: Meschack ELIA / OUT: Nathanael MBUKU,api.fifa.com
+1370,80,76,,Congo DR,441317,Theo BONGONDA,Substitution,substitution,510989,IN: Theo BONGONDA / OUT: Brian CIPENGA,api.fifa.com
+1371,80,76,,Congo DR,433161,Edo Kayembe,Substitution,substitution,494458,IN: Edo Kayembe / OUT: Ngalayel MUKAU,api.fifa.com
+1372,80,89,,Congo DR,477859,Fiston MAYELE,Substitution,substitution,433076,IN: Fiston MAYELE / OUT: Samuel Moutoussamy,api.fifa.com
+1373,80,89,,Congo DR,477833,Joris KAYEMBE,Substitution,substitution,436572,IN: Joris KAYEMBE / OUT: Arthur MASUAKU,api.fifa.com
+1374,81,86,,Belgium,358112,Romelu LUKAKU,Goal,open_play,358122,,api.fifa.com
+1375,81,86,,Belgium,358122,Thomas MEUNIER,Assist,assist,358112,assist attributed via sofascore.com,sofascore.com
+1376,81,89,,Belgium,401444,Youri TIELEMANS,Goal,open_play,448355,,api.fifa.com
+1377,81,89,,Belgium,448355,Leandro TROSSARD,Assist,assist,401444,assist attributed via sofascore.com,sofascore.com
+1378,81,120,5,Belgium,401444,Youri TIELEMANS,Goal,penalty,,Penalty scored,api.fifa.com
+1379,81,24,,Senegal,486130,Habib DIARRA,Goal,open_play,,,api.fifa.com
+1380,81,51,,Senegal,401889,Ismaila SARR,Goal,open_play,430690,,api.fifa.com
+1381,81,51,,Senegal,430690,Moussa Niakhate,Assist,assist,401889,assist attributed via sofascore.com,sofascore.com
+1382,81,64,,Belgium,448360,Brandon MECHELE,Yellow Card,,,,api.fifa.com
+1383,81,90,,Belgium,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+1384,81,67,,Senegal,464842,Lamine CAMARA,Yellow Card,,,,api.fifa.com
+1385,81,,,Belgium,358112,Romelu LUKAKU,Substitution,substitution,448362,IN: Romelu LUKAKU / OUT: Charles DE KETELAERE,api.fifa.com
+1386,81,56,,Belgium,448377,Dodi LUKEBAKIO,Substitution,substitution,448341,IN: Dodi LUKEBAKIO / OUT: Jeremy DOKU,api.fifa.com
+1387,81,56,,Belgium,495349,Nicolas RASKIN,Substitution,substitution,358120,IN: Nicolas RASKIN / OUT: Kevin DE BRUYNE,api.fifa.com
+1388,81,63,,Belgium,497902,Diego MOREIRA,Substitution,substitution,448343,IN: Diego MOREIRA / OUT: Hans VANAKEN,api.fifa.com
+1389,81,78,,Belgium,358122,Thomas MEUNIER,Substitution,substitution,448373,IN: Thomas MEUNIER / OUT: Maxim DE CUYPER,api.fifa.com
+1390,81,109,,Belgium,448364,Amadou ONANA,Substitution,substitution,448355,IN: Amadou ONANA / OUT: Leandro TROSSARD,api.fifa.com
+1391,81,66,,Senegal,464842,Lamine CAMARA,Substitution,substitution,431788,IN: Lamine CAMARA / OUT: Pape GUEYE,api.fifa.com
+1392,81,73,,Senegal,496358,Ibrahim MBAYE,Substitution,substitution,448815,IN: Ibrahim MBAYE / OUT: Iliman NDIAYE,api.fifa.com
+1393,81,73,,Senegal,418798,Pape Matar SARR,Substitution,substitution,486130,IN: Pape Matar SARR / OUT: Habib DIARRA,api.fifa.com
+1394,81,93,,Senegal,418795,Nicolas JACKSON,Substitution,substitution,353790,IN: Nicolas JACKSON / OUT: Sadio MANE,api.fifa.com
+1395,81,93,,Senegal,464865,El Hadji Malick DIOUF,Substitution,substitution,430671,IN: El Hadji Malick DIOUF / OUT: Ismail JAKOBS,api.fifa.com
+1396,81,95,,Senegal,523354,Bara Sapoko NDIAYE,Substitution,substitution,332314,IN: Bara Sapoko NDIAYE / OUT: Idrissa Gana GUEYE,api.fifa.com
+1397,81,120,,Senegal,,,VAR Review,,,from sofascore.com,sofascore.com
+1398,82,45,,USA,466624,Folarin BALOGUN,Goal,open_play,448214,,api.fifa.com
+1399,82,45,,USA,448214,Malik TILLMAN,Assist,assist,466624,assist attributed via sofascore.com,sofascore.com
+1400,82,82,,USA,448214,Malik TILLMAN,Goal,open_play,,,api.fifa.com
+1401,82,64,,USA,466624,Folarin BALOGUN,Red Card,,,,api.fifa.com
+1402,82,80,,Bosnia and Herzegovina,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+1403,82,80,,Bosnia and Herzegovina,489521,Stjepan RADELJIC,Yellow Card,,,,api.fifa.com
+1404,82,87,,USA,499912,Sebastian BERHALTER,Substitution,substitution,406280,IN: Sebastian BERHALTER / OUT: Sergino DEST,api.fifa.com
+1405,82,87,,USA,419082,Ricardo PEPI,Substitution,substitution,390267,IN: Ricardo PEPI / OUT: Christian PULISIC,api.fifa.com
+1406,82,90,5,USA,419068,Giovanni REYNA,Substitution,substitution,390259,IN: Giovanni REYNA / OUT: Weston McKENNIE,api.fifa.com
+1407,82,51,,Bosnia and Herzegovina,522846,Ermin MAHMIC,Substitution,substitution,300409,IN: Ermin MAHMIC / OUT: Edin DZEKO,api.fifa.com
+1408,82,51,,Bosnia and Herzegovina,464566,Esmir BAJRAKTAREVIC,Substitution,substitution,489523,IN: Esmir BAJRAKTAREVIC / OUT: Armin GIGOVIC,api.fifa.com
+1409,82,51,,Bosnia and Herzegovina,483966,Benjamin TAHIROVIC,Substitution,substitution,372436,IN: Benjamin TAHIROVIC / OUT: Ivan SUNJIC,api.fifa.com
+1410,82,75,,Bosnia and Herzegovina,494640,Amar MEMIC,Substitution,substitution,489520,IN: Amar MEMIC / OUT: Nikola KATIC,api.fifa.com
+1411,82,75,,Bosnia and Herzegovina,482984,Haris TABAKOVIC,Substitution,substitution,376230,IN: Haris TABAKOVIC / OUT: Sead KOLASINAC,api.fifa.com
+1412,82,64,,USA,,,VAR Review,,,from sofascore.com,sofascore.com
+1413,83,36,,Spain,430751,Mikel OYARZABAL,Goal,open_play,430735,,api.fifa.com
+1414,83,36,,Spain,430735,Marc CUCURELLA,Assist,assist,430751,assist attributed via sofascore.com,sofascore.com
+1415,83,66,,Spain,430144,Pedro PORRO,Goal,open_play,447860,,api.fifa.com
+1416,83,66,,Spain,447860,Alex BAENA,Assist,assist,430144,assist attributed via sofascore.com,sofascore.com
+1417,83,89,,Spain,430751,Mikel OYARZABAL,Goal,open_play,430735,,api.fifa.com
+1418,83,89,,Spain,430735,Marc CUCURELLA,Assist,assist,430751,assist attributed via sofascore.com,sofascore.com
+1419,83,83,,Austria,441067,Stefan POSCH,Yellow Card,,,,api.fifa.com
+1420,83,71,,Spain,405545,Ferran TORRES,Substitution,substitution,447860,IN: Ferran TORRES / OUT: Alex BAENA,api.fifa.com
+1421,83,71,,Spain,430733,Mikel MERINO,Substitution,substitution,430750,IN: Mikel MERINO / OUT: Dani OLMO,api.fifa.com
+1422,83,85,,Spain,447866,GAVI,Substitution,substitution,484320,IN: GAVI / OUT: Lamine YAMAL,api.fifa.com
+1423,83,90,3,Spain,484728,Marc PUBILL,Substitution,substitution,335999,IN: Marc PUBILL / OUT: Aymeric LAPORTE,api.fifa.com
+1424,83,90,3,Spain,430718,Fabian RUIZ,Substitution,substitution,423646,IN: Fabian RUIZ / OUT: PEDRI,api.fifa.com
+1425,83,,,Austria,385248,Florian GRILLITSCH,Substitution,substitution,385531,IN: Florian GRILLITSCH / OUT: Xaver Schlager,api.fifa.com
+1426,83,,,Austria,463800,Carney CHUKWUEMEKA,Substitution,substitution,441088,IN: Carney CHUKWUEMEKA / OUT: Nicolas SEIWALD,api.fifa.com
+1427,83,60,,Austria,299200,Marko ARNAUTOVIC,Substitution,substitution,401131,IN: Marko ARNAUTOVIC / OUT: Michael Gregoritsch,api.fifa.com
+1428,83,60,,Austria,430100,Sasa KALAJDZIC,Substitution,substitution,463283,IN: Sasa KALAJDZIC / OUT: Romano SCHMID,api.fifa.com
+1429,83,85,,Austria,463282,Alexander PRASS,Substitution,substitution,441067,IN: Alexander PRASS / OUT: Stefan POSCH,api.fifa.com
+1430,84,68,,Portugal,201200,CRISTIANO RONALDO,Goal,penalty,,Penalty scored,api.fifa.com
+1431,84,90,4,Portugal,448081,GONCALO RAMOS,Goal,open_play,,,api.fifa.com
+1432,84,53,,Croatia,359381,Ivan PERISIC,Goal,open_play,433667,,api.fifa.com
+1433,84,53,,Croatia,433667,Josip STANISIC,Assist,assist,359381,assist attributed via sofascore.com,sofascore.com
+1434,84,17,,Portugal,384752,RUBEN DIAS,Yellow Card,,,,api.fifa.com
+1435,84,59,,Croatia,241559,Luka MODRIC,Yellow Card,,,,api.fifa.com
+1436,84,90,8,Croatia,359381,Ivan PERISIC,Yellow Card,,,,api.fifa.com
+1437,84,62,,Portugal,485081,FRANCISCO CONCEICAO,Substitution,substitution,418548,IN: FRANCISCO CONCEICAO / OUT: PEDRO NETO,api.fifa.com
+1438,84,62,,Portugal,395205,BERNARDO SILVA,Substitution,substitution,441149,IN: BERNARDO SILVA / OUT: VITINHA,api.fifa.com
+1439,84,62,,Portugal,395212,NELSON SEMEDO,Substitution,substitution,395206,IN: NELSON SEMEDO / OUT: BRUNO FERNANDES,api.fifa.com
+1440,84,62,,Portugal,448081,GONCALO RAMOS,Substitution,substitution,368649,IN: GONCALO RAMOS / OUT: JOAO CANCELO,api.fifa.com
+1441,84,81,,Portugal,395216,RUBEN NEVES,Substitution,substitution,201200,IN: RUBEN NEVES / OUT: CRISTIANO RONALDO,api.fifa.com
+1442,84,,,Croatia,485068,Igor MATANOVIC,Substitution,substitution,430070,IN: Igor MATANOVIC / OUT: Ante BUDIMIR,api.fifa.com
+1443,84,68,,Croatia,380005,Mario PASALIC,Substitution,substitution,482774,IN: Mario PASALIC / OUT: Martin BATURINA,api.fifa.com
+1444,84,90,2,Croatia,448180,Josko GVARDIOL,Substitution,substitution,409191,IN: Josko GVARDIOL / OUT: Nikola VLASIC,api.fifa.com
+1445,84,90,6,Croatia,336472,Andrej KRAMARIC,Substitution,substitution,339987,IN: Andrej KRAMARIC / OUT: Mateo KOVACIC,api.fifa.com
+1446,84,103,,Croatia,,,VAR Review,,,from sofascore.com,sofascore.com
+1447,85,10,,Switzerland,393480,Breel EMBOLO,Goal,open_play,502727,,api.fifa.com
+1448,85,10,,Switzerland,502727,Johan MANZAMBI,Assist,assist,393480,assist attributed via sofascore.com,sofascore.com
+1449,85,46,,Switzerland,448114,Dan NDOYE,Goal,open_play,,,api.fifa.com
+1450,85,36,,Algeria,477795,Fares CHAIBI,Yellow Card,,,,api.fifa.com
+1451,85,72,,Algeria,441350,Hicham BOUDAOUI,Yellow Card,,,,api.fifa.com
+1452,85,70,,Switzerland,448103,Fabian RIEDER,Substitution,substitution,448131,IN: Fabian RIEDER / OUT: Ruben VARGAS,api.fifa.com
+1453,85,70,,Switzerland,448127,Noah OKAFOR,Substitution,substitution,502727,IN: Noah OKAFOR / OUT: Johan MANZAMBI,api.fifa.com
+1454,85,82,,Switzerland,448112,Zeki AMDOUNI,Substitution,substitution,393480,IN: Zeki AMDOUNI / OUT: Breel EMBOLO,api.fifa.com
+1455,85,87,,Switzerland,433147,Michel AEBISCHER,Substitution,substitution,448114,IN: Michel AEBISCHER / OUT: Dan NDOYE,api.fifa.com
+1456,85,87,,Switzerland,356412,Silvan WIDMER,Substitution,substitution,401448,IN: Silvan WIDMER / OUT: Denis ZAKARIA,api.fifa.com
+1457,85,58,,Algeria,482869,Jaouen HADJAM,Substitution,substitution,430698,IN: Jaouen HADJAM / OUT: Houssem Aouar,api.fifa.com
+1458,85,58,,Algeria,405877,Amine GOUIRI,Substitution,substitution,433679,IN: Amine GOUIRI / OUT: Ramiz ZERROUKI,api.fifa.com
+1459,85,71,,Algeria,441350,Hicham BOUDAOUI,Substitution,substitution,379939,IN: Hicham BOUDAOUI / OUT: Nabil Bentaleb,api.fifa.com
+1460,85,71,,Algeria,482874,Anis HADJ MOUSSA,Substitution,substitution,379942,IN: Anis HADJ MOUSSA / OUT: Riyad Mahrez,api.fifa.com
+1461,85,82,,Algeria,512132,Adil BOULBINA,Substitution,substitution,511009,IN: Adil BOULBINA / OUT: Rafik BELGHALI,api.fifa.com
+1462,86,55,,Australia,408950,MOHAMED HANY,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+1463,86,,,Australia,355775,Jackson IRVINE,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1464,86,,,Australia,406606,Awer MABIL,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1465,86,13,,Egypt,430482,EMAM ASHOUR,Goal,open_play,,,api.fifa.com
+1466,86,,,Egypt,483183,MAHMOUD SABER,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1467,86,,,Egypt,344661,RAMY RABIA,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1468,86,,,Egypt,344654,MOHAMED SALAH,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1469,86,,,Egypt,483182,HOSSAM ABDELMAGUID,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1470,86,91,,Egypt,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+1471,86,104,,Egypt,424106,Haissem HASSAN,Yellow Card,,,,api.fifa.com
+1472,86,120,,Egypt,369267,YASSER IBRAHIM,Yellow Card,,,,api.fifa.com
+1473,86,,,Australia,494411,Kai TREWIN,Substitution,substitution,423522,IN: Kai TREWIN / OUT: Jordan BOS,api.fifa.com
+1474,86,74,,Australia,404319,Ajdin HRUSTIC,Substitution,substitution,448015,IN: Ajdin HRUSTIC / OUT: Cristian VOLPATO,api.fifa.com
+1475,86,74,,Australia,498806,Mohamed TOURE,Substitution,substitution,486306,IN: Mohamed TOURE / OUT: Nestory IRANKUNDA,api.fifa.com
+1476,86,,,Australia,406606,Awer MABIL,Substitution,substitution,430452,IN: Awer MABIL / OUT: Connor METCALFE,api.fifa.com
+1477,86,,,Australia,498421,Paul OKON-ENGSTLER,Substitution,substitution,430440,IN: Paul OKON-ENGSTLER / OUT: Aiden ONEILL,api.fifa.com
+1478,86,119,,Australia,339117,Mathew RYAN,Substitution,substitution,494557,IN: Mathew RYAN / OUT: Patrick BEACH,api.fifa.com
+1479,86,67,,Egypt,424106,Haissem HASSAN,Substitution,substitution,483161,IN: Haissem HASSAN / OUT: MOSTAFA ZICO,api.fifa.com
+1480,86,67,,Egypt,483182,HOSSAM ABDELMAGUID,Substitution,substitution,429095,IN: HOSSAM ABDELMAGUID / OUT: HAMDY FATHY,api.fifa.com
+1481,86,80,,Egypt,363863,TREZEGUET,Substitution,substitution,407022,IN: TREZEGUET / OUT: KARIM HAFEZ,api.fifa.com
+1482,86,,,Egypt,495488,HAMZA ABDELKARIM,Substitution,substitution,430476,IN: HAMZA ABDELKARIM / OUT: OMAR MARMOUSH,api.fifa.com
+1483,86,120,1,Egypt,483183,MAHMOUD SABER,Substitution,substitution,461788,IN: MAHMOUD SABER / OUT: MARAWAN ATTIA,api.fifa.com
+1484,86,121,,Australia,430442,,Penalty Shootout Miss,penalty_shootout,,from sofascore.com (local_player_ref=383),sofascore.com
+1485,86,121,,Australia,504931,,Penalty Shootout Miss,penalty_shootout,,from sofascore.com (local_player_ref=389),sofascore.com
+1486,87,29,,Argentina,229397,Lionel MESSI,Goal,open_play,,,api.fifa.com
+1487,87,92,,Argentina,402921,Lisandro MARTINEZ,Goal,open_play,,,api.fifa.com
+1488,87,111,,Argentina,409241,DINEY BORGES,Own Goal,own_goal,,Own goal by opposing player (beneficiary shown),api.fifa.com
+1489,87,59,,Cabo Verde,477827,DEROY DUARTE,Goal,open_play,,,api.fifa.com
+1490,87,103,,Cabo Verde,477832,SIDNY LOPES CABRAL,Goal,open_play,,,api.fifa.com
+1491,87,115,,Argentina,402926,Gonzalo MONTIEL,Yellow Card,,,,api.fifa.com
+1492,87,68,,Cabo Verde,477852,KEVIN PINA,Yellow Card,,,,api.fifa.com
+1493,87,63,,Argentina,430631,Nico GONZALEZ,Substitution,substitution,418975,IN: Nico GONZALEZ / OUT: Thiago ALMADA,api.fifa.com
+1494,87,63,,Argentina,416081,Julian ALVAREZ,Substitution,substitution,402920,IN: Julian ALVAREZ / OUT: Lautaro MARTINEZ,api.fifa.com
+1495,87,84,,Argentina,332847,Leandro PAREDES,Substitution,substitution,428882,IN: Leandro PAREDES / OUT: Rodrigo DE PAUL,api.fifa.com
+1496,87,85,,Argentina,308322,Nicolas TAGLIAFICO,Substitution,substitution,418963,IN: Nicolas TAGLIAFICO / OUT: Facundo MEDINA,api.fifa.com
+1497,87,104,,Argentina,402926,Gonzalo MONTIEL,Substitution,substitution,402925,IN: Gonzalo MONTIEL / OUT: Nahuel MOLINA,api.fifa.com
+1498,87,67,,Cabo Verde,482782,DAILON LIVRAMENTO,Substitution,substitution,401893,IN: DAILON LIVRAMENTO / OUT: NUNO DA COSTA,api.fifa.com
+1499,87,67,,Cabo Verde,401894,JAMIRO MONTEIRO,Substitution,substitution,480966,IN: JAMIRO MONTEIRO / OUT: LAROS DUARTE,api.fifa.com
+1500,87,80,,Cabo Verde,477849,HELIO VARELA,Substitution,substitution,477856,IN: HELIO VARELA / OUT: JOVANE CABRAL,api.fifa.com
+1501,87,80,,Cabo Verde,433724,WILLY SEMEDO,Substitution,substitution,355642,IN: WILLY SEMEDO / OUT: RYAN MENDES,api.fifa.com
+1502,87,100,,Cabo Verde,477862,GILSON BENCHIMOL,Substitution,substitution,477852,IN: GILSON BENCHIMOL / OUT: KEVIN PINA,api.fifa.com
+1503,87,100,,Cabo Verde,494313,YANNICK SEMEDO,Substitution,substitution,477827,IN: YANNICK SEMEDO / OUT: DEROY DUARTE,api.fifa.com
+1504,88,14,,Colombia,470760,Jhon ARIAS,Goal,open_play,428905,,api.fifa.com
+1505,88,14,,Colombia,428905,Luis SUAREZ,Assist,assist,470760,assist attributed via sofascore.com,sofascore.com
+1506,88,12,,Colombia,470760,Jhon ARIAS,Yellow Card,,,,api.fifa.com
+1507,88,78,,Colombia,473050,Richard RIOS,Yellow Card,,,,api.fifa.com
+1508,88,49,,Ghana,506279,Caleb YIRENKYI,Yellow Card,,,,api.fifa.com
+1509,88,66,,Ghana,441342,Abdul FATAWU,Yellow Card,,,,api.fifa.com
+1510,88,76,,Ghana,448522,Alidu SEIDU,Yellow Card,,,,api.fifa.com
+1511,88,8,,Colombia,428905,Luis SUAREZ,Substitution,substitution,369530,IN: Luis SUAREZ / OUT: Jhon CORDOBA,api.fifa.com
+1512,88,,,Colombia,473050,Richard RIOS,Substitution,substitution,269058,IN: Richard RIOS / OUT: James RODRIGUEZ,api.fifa.com
+1513,88,72,,Colombia,356704,Juan QUINTERO,Substitution,substitution,470760,IN: Juan QUINTERO / OUT: Jhon ARIAS,api.fifa.com
+1514,88,90,,Colombia,405755,Jaminton CAMPAZ,Substitution,substitution,428886,IN: Jaminton CAMPAZ / OUT: Luis DIAZ,api.fifa.com
+1515,88,13,,Ghana,448522,Alidu SEIDU,Substitution,substitution,520039,IN: Alidu SEIDU / OUT: Marvin SENAYA,api.fifa.com
+1516,88,62,,Ghana,441342,Abdul FATAWU,Substitution,substitution,411376,IN: Abdul FATAWU / OUT: Inaki WILLIAMS,api.fifa.com
+1517,88,62,,Ghana,441341,Elisha OWUSU,Substitution,substitution,507253,IN: Elisha OWUSU / OUT: Kwasi SIBO,api.fifa.com
+1518,88,79,,Ghana,514401,Prince ADU,Substitution,substitution,506279,IN: Prince ADU / OUT: Caleb YIRENKYI,api.fifa.com
+1519,88,79,,Ghana,448525,Ernest NUAMAH,Substitution,substitution,353235,IN: Ernest NUAMAH / OUT: Jordan AYEW,api.fifa.com
+1520,90,50,,Morocco,441307,Azzedine OUNAHI,Goal,open_play,400721,,api.fifa.com
+1521,90,50,,Morocco,400721,Achraf HAKIMI,Assist,assist,441307,assist attributed via sofascore.com,sofascore.com
+1522,90,82,,Morocco,441307,Azzedine OUNAHI,Goal,open_play,430740,,api.fifa.com
+1523,90,82,,Morocco,430740,Brahim DIAZ,Assist,assist,441307,assist attributed via sofascore.com,sofascore.com
+1524,90,90,8,Morocco,433426,Soufiane RAHIMI,Goal,open_play,,,api.fifa.com
+1525,90,40,,Canada,431696,Richie LARYEA,Yellow Card,,,,api.fifa.com
+1526,90,43,,Canada,441257,Jonathan DAVID,Yellow Card,,,,api.fifa.com
+1527,90,49,,Canada,480322,Luc DE FOUGEROLLES,Yellow Card,,,,api.fifa.com
+1528,90,67,,Canada,390670,Cyle LARIN,Yellow Card,,,,api.fifa.com
+1529,90,20,,Morocco,485767,Redouane HALHAL,Yellow Card,,,,api.fifa.com
+1530,90,40,,Morocco,400721,Achraf HAKIMI,Yellow Card,,,,api.fifa.com
+1531,90,45,,Morocco,441307,Azzedine OUNAHI,Yellow Card,,,,api.fifa.com
+1532,90,45,6,Morocco,448612,Bilal EL KHANNOUSS,Yellow Card,,,,api.fifa.com
+1533,90,63,,Canada,390670,Cyle LARIN,Substitution,substitution,486929,IN: Cyle LARIN / OUT: Tani OLUWASEYI,api.fifa.com
+1534,90,78,,Canada,493970,Promise DAVID,Substitution,substitution,466687,IN: Promise DAVID / OUT: Ali AHMED,api.fifa.com
+1535,90,78,,Canada,448411,Jacob SHAFFELBURG,Substitution,substitution,431696,IN: Jacob SHAFFELBURG / OUT: Richie LARYEA,api.fifa.com
+1536,90,87,,Canada,423933,Jayden Nelson,Substitution,substitution,430138,IN: Jayden Nelson / OUT: Tajon BUCHANAN,api.fifa.com
+1537,90,87,,Canada,370986,Jonathan OSORIO,Substitution,substitution,485064,IN: Jonathan OSORIO / OUT: Niko SIGUR,api.fifa.com
+1538,90,22,,Morocco,433426,Soufiane RAHIMI,Substitution,substitution,448598,IN: Soufiane RAHIMI / OUT: Ismael SAIBARI,api.fifa.com
+1539,90,63,,Morocco,372266,Sofyan AMRABAT,Substitution,substitution,485760,IN: Sofyan AMRABAT / OUT: Ayyoub BOUADDI,api.fifa.com
+1540,90,63,,Morocco,494293,Chemsdine TALBI,Substitution,substitution,448612,IN: Chemsdine TALBI / OUT: Bilal EL KHANNOUSS,api.fifa.com
+1541,90,87,,Morocco,395760,Marwane SAADANE,Substitution,substitution,403083,IN: Marwane SAADANE / OUT: Issa Diop,api.fifa.com
+1542,90,87,,Morocco,505097,Samir EL MOURABET,Substitution,substitution,441307,IN: Samir EL MOURABET / OUT: Azzedine OUNAHI,api.fifa.com
+1543,89,70,,France,389867,Kylian MBAPPE,Goal,penalty,,Penalty scored,api.fifa.com
+1544,89,90,,Paraguay,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+1545,89,19,,France,484860,Bradley BARCOLA,Yellow Card,,,,api.fifa.com
+1546,89,81,,France,485677,Manu KONE,Yellow Card,,,,api.fifa.com
+1547,89,90,7,France,485655,Michael OLISE,Yellow Card,,,,api.fifa.com
+1548,89,58,,Paraguay,520066,Jose CANALE,Substitution,substitution,431202,IN: Jose CANALE / OUT: Omar ALDERETE,api.fifa.com
+1549,89,61,,Paraguay,485804,Gustavo CABALLERO,Substitution,substitution,441234,IN: Gustavo CABALLERO / OUT: Julio ENCISO,api.fifa.com
+1550,89,71,,Paraguay,463127,Gabriel AVALOS,Substitution,substitution,369761,IN: Gabriel AVALOS / OUT: Miguel ALMIRON,api.fifa.com
+1551,89,71,,Paraguay,495046,MAURICIO,Substitution,substitution,463128,IN: MAURICIO / OUT: Diego GOMEZ,api.fifa.com
+1552,89,61,,France,464114,Desire DOUE,Substitution,substitution,484860,IN: Desire DOUE / OUT: Bradley BARCOLA,api.fifa.com
+1553,89,84,,France,431861,Rayan CHERKI,Substitution,substitution,398680,IN: Rayan CHERKI / OUT: Ousmane DEMBELE,api.fifa.com
+1554,91,90,10,Brazil,314197,NEYMAR JR,Goal,penalty,,Penalty scored,api.fifa.com
+1555,91,79,,Norway,419652,Erling HAALAND,Goal,open_play,494626,,api.fifa.com
+1556,91,79,,Norway,494626,Andreas SCHJELDERUP,Assist,assist,419652,assist attributed via sofascore.com,sofascore.com
+1557,91,90,,Norway,419652,Erling HAALAND,Goal,open_play,,,api.fifa.com
+1558,91,90,6,Brazil,314197,NEYMAR JR,Yellow Card,,,,api.fifa.com
+1559,91,58,,Brazil,463746,ENDRICK,Substitution,substitution,430609,IN: ENDRICK / OUT: MATHEUS CUNHA,api.fifa.com
+1560,91,67,,Brazil,314197,NEYMAR JR,Substitution,substitution,430597,IN: NEYMAR JR / OUT: GABRIEL MARTINELLI,api.fifa.com
+1561,91,67,,Brazil,429392,DANILO SANTOS,Substitution,substitution,475036,IN: DANILO SANTOS / OUT: RAYAN,api.fifa.com
+1562,91,79,,Brazil,485069,EDERSON SILVA,Substitution,substitution,430605,IN: EDERSON SILVA / OUT: BRUNO GUIMARAES,api.fifa.com
+1563,91,,,Norway,494626,Andreas SCHJELDERUP,Substitution,substitution,483448,IN: Andreas SCHJELDERUP / OUT: Antonio NUSA,api.fifa.com
+1564,91,,,Norway,477470,Oscar BOBB,Substitution,substitution,398588,IN: Oscar BOBB / OUT: Alexander SORLOTH,api.fifa.com
+1565,91,63,,Norway,483497,Fredrik AURSNES,Substitution,substitution,483496,IN: Fredrik AURSNES / OUT: Julian RYERSON,api.fifa.com
+1566,91,90,5,Norway,419672,Leo OSTIGARD,Substitution,substitution,483505,IN: Leo OSTIGARD / OUT: David MOLLER WOLFE,api.fifa.com
+1567,91,3,,Norway,,,VAR Review,,,from sofascore.com,sofascore.com
+1568,91,14,,Brazil,,,VAR Review,,,from sofascore.com,sofascore.com
+1569,92,42,,Mexico,429157,Julian QUINONES,Goal,open_play,,,api.fifa.com
+1570,92,69,,Mexico,356731,Raul JIMENEZ,Goal,penalty,,Penalty scored,api.fifa.com
+1571,92,36,,England,448202,Jude BELLINGHAM,Goal,open_play,448196,,api.fifa.com
+1572,92,36,,England,448196,Bukayo SAKA,Assist,assist,448202,assist attributed via sofascore.com,sofascore.com
+1573,92,38,,England,448202,Jude BELLINGHAM,Goal,open_play,369419,,api.fifa.com
+1574,92,38,,England,369419,Harry KANE,Assist,assist,448202,assist attributed via sofascore.com,sofascore.com
+1575,92,60,,England,369419,Harry KANE,Goal,penalty,,Penalty scored,api.fifa.com
+1576,92,71,,Mexico,403596,Jorge SANCHEZ,Yellow Card,,,,api.fifa.com
+1577,92,90,8,Mexico,425701,Johan VASQUEZ,Yellow Card,,,,api.fifa.com
+1578,92,1,,England,433097,Declan RICE,Yellow Card,,,,api.fifa.com
+1579,92,54,,England,463809,Jarell QUANSAH,Red Card,,,,api.fifa.com
+1580,92,68,,England,405841,Marc GUEHI,Yellow Card,,,,api.fifa.com
+1581,92,72,,England,463780,Nico OREILLY,Yellow Card,,,,api.fifa.com
+1582,92,90,8,England,356189,Jordan HENDERSON,Yellow Card,,,,api.fifa.com
+1583,92,,,Mexico,400634,Edson ALVAREZ,Substitution,substitution,395516,IN: Edson ALVAREZ / OUT: Cesar MONTES,api.fifa.com
+1584,92,61,,Mexico,430759,Santiago GIMENEZ,Substitution,substitution,500037,IN: Santiago GIMENEZ / OUT: Gilberto MORA,api.fifa.com
+1585,92,61,,Mexico,464533,Brian GUTIERREZ,Substitution,substitution,430763,IN: Brian GUTIERREZ / OUT: Luis ROMO,api.fifa.com
+1586,92,79,,Mexico,416576,Alvaro FIDALGO,Substitution,substitution,403596,IN: Alvaro FIDALGO / OUT: Jorge SANCHEZ,api.fifa.com
+1587,92,81,,Mexico,386339,Guillermo MARTINEZ,Substitution,substitution,429157,IN: Guillermo MARTINEZ / OUT: Julian QUINONES,api.fifa.com
+1588,92,57,,England,369434,John STONES,Substitution,substitution,448196,IN: John STONES / OUT: Bukayo SAKA,api.fifa.com
+1589,92,75,,England,494345,Dan BURN,Substitution,substitution,481610,IN: Dan BURN / OUT: Elliot ANDERSON,api.fifa.com
+1590,92,75,,England,506329,Djed SPENCE,Substitution,substitution,463780,IN: Djed SPENCE / OUT: Nico OREILLY,api.fifa.com
+1591,92,90,,England,492716,Morgan ROGERS,Substitution,substitution,369419,IN: Morgan ROGERS / OUT: Harry KANE,api.fifa.com
+1592,92,54,,England,,,VAR Review,,,from sofascore.com,sofascore.com
+1593,92,69,,England,,,VAR Review,,,from sofascore.com,sofascore.com
+1594,93,90,1,Spain,430733,Mikel MERINO,Goal,open_play,,,api.fifa.com
+1595,93,89,,Portugal,395205,BERNARDO SILVA,Yellow Card,,,,api.fifa.com
+1596,93,90,3,Portugal,489704,RENATO VEIGA,Yellow Card,,,,api.fifa.com
+1597,93,90,8,Spain,405545,Ferran TORRES,Yellow Card,,,,api.fifa.com
+1598,93,56,,Portugal,395212,NELSON SEMEDO,Substitution,substitution,433195,IN: NELSON SEMEDO / OUT: NUNO MENDES,api.fifa.com
+1599,93,71,,Portugal,418550,RAFAEL LEAO,Substitution,substitution,418535,IN: RAFAEL LEAO / OUT: JOAO FELIX,api.fifa.com
+1600,93,71,,Portugal,403002,DIOGO DALOT,Substitution,substitution,368649,IN: DIOGO DALOT / OUT: JOAO CANCELO,api.fifa.com
+1601,93,83,,Portugal,395205,BERNARDO SILVA,Substitution,substitution,441149,IN: BERNARDO SILVA / OUT: VITINHA,api.fifa.com
+1602,93,83,,Portugal,485081,FRANCISCO CONCEICAO,Substitution,substitution,418548,IN: FRANCISCO CONCEICAO / OUT: PEDRO NETO,api.fifa.com
+1603,93,75,,Spain,405545,Ferran TORRES,Substitution,substitution,447860,IN: Ferran TORRES / OUT: Alex BAENA,api.fifa.com
+1604,93,85,,Spain,430733,Mikel MERINO,Substitution,substitution,430750,IN: Mikel MERINO / OUT: Dani OLMO,api.fifa.com
+1605,93,85,,Spain,430718,Fabian RUIZ,Substitution,substitution,423646,IN: Fabian RUIZ / OUT: PEDRI,api.fifa.com
+1606,93,90,7,Spain,447864,Borja IGLESIAS,Substitution,substitution,430751,IN: Borja IGLESIAS / OUT: Mikel OYARZABAL,api.fifa.com
+1607,94,31,,USA,448214,Malik TILLMAN,Goal,open_play,,,api.fifa.com
+1608,94,0,,Belgium,448362,Charles DE KETELAERE,Goal,open_play,,,api.fifa.com
+1609,94,33,,Belgium,448362,Charles DE KETELAERE,Goal,open_play,448355,,api.fifa.com
+1610,94,33,,Belgium,448355,Leandro TROSSARD,Assist,assist,448362,assist attributed via sofascore.com,sofascore.com
+1611,94,57,,Belgium,448343,Hans VANAKEN,Goal,open_play,,,api.fifa.com
+1612,94,90,3,Belgium,358112,Romelu LUKAKU,Goal,open_play,,,api.fifa.com
+1613,94,35,,USA,390259,Weston McKENNIE,Yellow Card,,,,api.fifa.com
+1614,94,69,,USA,448214,Malik TILLMAN,Yellow Card,,,,api.fifa.com
+1615,94,,,USA,419068,Giovanni REYNA,Substitution,substitution,406280,IN: Giovanni REYNA / OUT: Sergino DEST,api.fifa.com
+1616,94,59,,USA,499912,Sebastian BERHALTER,Substitution,substitution,390267,IN: Sebastian BERHALTER / OUT: Christian PULISIC,api.fifa.com
+1617,94,72,,USA,419082,Ricardo PEPI,Substitution,substitution,390238,IN: Ricardo PEPI / OUT: Tyler ADAMS,api.fifa.com
+1618,94,90,2,USA,390276,Haji WRIGHT,Substitution,substitution,466624,IN: Haji WRIGHT / OUT: Folarin BALOGUN,api.fifa.com
+1619,94,90,2,USA,486390,Max ARFSTEN,Substitution,substitution,441251,IN: Max ARFSTEN / OUT: Antonee ROBINSON,api.fifa.com
+1620,94,21,,Belgium,448343,Hans VANAKEN,Substitution,substitution,448364,IN: Hans VANAKEN / OUT: Amadou ONANA,api.fifa.com
+1621,94,67,,Belgium,358112,Romelu LUKAKU,Substitution,substitution,448362,IN: Romelu LUKAKU / OUT: Charles DE KETELAERE,api.fifa.com
+1622,94,67,,Belgium,448341,Jeremy DOKU,Substitution,substitution,448377,IN: Jeremy DOKU / OUT: Dodi LUKEBAKIO,api.fifa.com
+1623,94,89,,Belgium,433092,Alexis SAELEMAEKERS,Substitution,substitution,448355,IN: Alexis SAELEMAEKERS / OUT: Leandro TROSSARD,api.fifa.com
+1624,94,89,,Belgium,290821,Axel WITSEL,Substitution,substitution,495349,IN: Axel WITSEL / OUT: Nicolas RASKIN,api.fifa.com
+1625,95,79,,Argentina,431196,Cristian ROMERO,Goal,open_play,,,api.fifa.com
+1626,95,83,,Argentina,229397,Lionel MESSI,Goal,open_play,,,api.fifa.com
+1627,95,90,2,Argentina,448252,Enzo FERNANDEZ,Goal,open_play,,,api.fifa.com
+1628,95,15,,Egypt,369267,YASSER IBRAHIM,Goal,open_play,344654,,api.fifa.com
+1629,95,15,,Egypt,344654,MOHAMED SALAH,Assist,assist,369267,assist attributed via sofascore.com,sofascore.com
+1630,95,67,,Egypt,483161,MOSTAFA ZICO,Goal,open_play,424106,,api.fifa.com
+1631,95,67,,Egypt,424106,Haissem HASSAN,Assist,assist,483161,assist attributed via sofascore.com,sofascore.com
+1632,95,21,,Egypt,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+1633,95,90,3,Egypt,416906,MOSTAFA SHOUBIR,Yellow Card,,,,api.fifa.com
+1634,95,90,4,Egypt,429095,HAMDY FATHY,Yellow Card,,,,api.fifa.com
+1635,95,90,4,Egypt,,,Red Card,coach_or_staff_red,,Coach/staff booking,api.fifa.com
+1636,95,90,8,Egypt,461788,MARAWAN ATTIA,Yellow Card,,,,api.fifa.com
+1637,95,90,9,Egypt,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+1638,95,90,,Egypt,424106,Haissem HASSAN,Yellow Card,,,,api.fifa.com
+1639,95,66,,Argentina,402920,Lautaro MARTINEZ,Substitution,substitution,428882,IN: Lautaro MARTINEZ / OUT: Rodrigo DE PAUL,api.fifa.com
+1640,95,66,,Argentina,430631,Nico GONZALEZ,Substitution,substitution,308322,IN: Nico GONZALEZ / OUT: Nicolas TAGLIAFICO,api.fifa.com
+1641,95,73,,Argentina,402926,Gonzalo MONTIEL,Substitution,substitution,402925,IN: Gonzalo MONTIEL / OUT: Nahuel MOLINA,api.fifa.com
+1642,95,90,5,Argentina,310116,Nicolas OTAMENDI,Substitution,substitution,431196,IN: Nicolas OTAMENDI / OUT: Cristian ROMERO,api.fifa.com
+1643,95,90,5,Argentina,418963,Facundo MEDINA,Substitution,substitution,416081,IN: Facundo MEDINA / OUT: Julian ALVAREZ,api.fifa.com
+1644,95,,,Egypt,429095,HAMDY FATHY,Substitution,substitution,430482,IN: HAMDY FATHY / OUT: EMAM ASHOUR,api.fifa.com
+1645,95,73,,Egypt,363863,TREZEGUET,Substitution,substitution,424106,IN: TREZEGUET / OUT: Haissem HASSAN,api.fifa.com
+1646,95,80,,Egypt,430476,OMAR MARMOUSH,Substitution,substitution,483161,IN: OMAR MARMOUSH / OUT: MOSTAFA ZICO,api.fifa.com
+1647,95,90,6,Egypt,433461,ZIZO,Substitution,substitution,433469,IN: ZIZO / OUT: MOHANAD LASHIN,api.fifa.com
+1648,96,,,Switzerland,311558,Granit XHAKA,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1649,96,,,Switzerland,448112,Zeki AMDOUNI,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1650,96,,,Switzerland,448104,Cedric ITTEN,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1651,96,,,Switzerland,448131,Ruben VARGAS,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1652,96,,,Colombia,356704,Juan QUINTERO,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1653,96,,,Colombia,405755,Jaminton CAMPAZ,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1654,96,,,Colombia,428886,Luis DIAZ,Penalty Shootout Goal,penalty_shootout,,Shootout kick scored,api.fifa.com
+1655,96,51,,Switzerland,311558,Granit XHAKA,Yellow Card,,,,api.fifa.com
+1656,96,59,,Switzerland,401448,Denis ZAKARIA,Yellow Card,,,,api.fifa.com
+1657,96,105,,Switzerland,493221,Miro MUHEIM,Yellow Card,,,,api.fifa.com
+1658,96,60,,Colombia,428905,Luis SUAREZ,Yellow Card,,,,api.fifa.com
+1659,96,94,,Colombia,386013,Davinson SANCHEZ,Yellow Card,,,,api.fifa.com
+1660,96,95,,Colombia,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+1661,96,,,Switzerland,411226,Djibril SOW,Substitution,substitution,448120,IN: Djibril SOW / OUT: Ardon JASHARI,api.fifa.com
+1662,96,71,,Switzerland,493221,Miro MUHEIM,Substitution,substitution,313559,IN: Miro MUHEIM / OUT: Ricardo RODRIGUEZ,api.fifa.com
+1663,96,87,,Switzerland,448104,Cedric ITTEN,Substitution,substitution,393480,IN: Cedric ITTEN / OUT: Breel EMBOLO,api.fifa.com
+1664,96,87,,Switzerland,356412,Silvan WIDMER,Substitution,substitution,401448,IN: Silvan WIDMER / OUT: Denis ZAKARIA,api.fifa.com
+1665,96,90,1,Switzerland,448131,Ruben VARGAS,Substitution,substitution,448114,IN: Ruben VARGAS / OUT: Dan NDOYE,api.fifa.com
+1666,96,103,,Switzerland,448112,Zeki AMDOUNI,Substitution,substitution,448103,IN: Zeki AMDOUNI / OUT: Fabian RIEDER,api.fifa.com
+1667,96,66,,Colombia,405755,Jaminton CAMPAZ,Substitution,substitution,470760,IN: Jaminton CAMPAZ / OUT: Jhon ARIAS,api.fifa.com
+1668,96,66,,Colombia,356704,Juan QUINTERO,Substitution,substitution,269058,IN: Juan QUINTERO / OUT: James RODRIGUEZ,api.fifa.com
+1669,96,82,,Colombia,473050,Richard RIOS,Substitution,substitution,395550,IN: Richard RIOS / OUT: Jefferson LERMA,api.fifa.com
+1670,96,82,,Colombia,418881,Cucho HERNANDEZ,Substitution,substitution,428905,IN: Cucho HERNANDEZ / OUT: Luis SUAREZ,api.fifa.com
+1671,96,118,,Colombia,395552,Yerry MINA,Substitution,substitution,441622,IN: Yerry MINA / OUT: Jhon LUCUMI,api.fifa.com
+1672,97,60,,France,389867,Kylian MBAPPE,Goal,open_play,398680,,api.fifa.com
+1673,97,60,,France,398680,Ousmane DEMBELE,Assist,assist,389867,assist attributed via sofascore.com,sofascore.com
+1674,97,66,,France,398680,Ousmane DEMBELE,Goal,open_play,389867,,api.fifa.com
+1675,97,66,,France,389867,Kylian MBAPPE,Assist,assist,398680,assist attributed via sofascore.com,sofascore.com
+1676,97,63,,Morocco,403083,Issa Diop,Yellow Card,,,,api.fifa.com
+1677,97,71,,France,483549,Warren ZAIRE-EMERY,Substitution,substitution,485677,IN: Warren ZAIRE-EMERY / OUT: Manu KONE,api.fifa.com
+1678,97,77,,France,403094,Jean-Philippe MATETA,Substitution,substitution,389867,IN: Jean-Philippe MATETA / OUT: Kylian MBAPPE,api.fifa.com
+1679,97,77,,France,484860,Bradley BARCOLA,Substitution,substitution,464114,IN: Bradley BARCOLA / OUT: Desire DOUE,api.fifa.com
+1680,97,87,,France,464055,Malo GUSTO,Substitution,substitution,430707,IN: Malo GUSTO / OUT: Jules KOUNDE,api.fifa.com
+1681,97,62,,Morocco,372266,Sofyan AMRABAT,Substitution,substitution,485760,IN: Sofyan AMRABAT / OUT: Ayyoub BOUADDI,api.fifa.com
+1682,97,62,,Morocco,433426,Soufiane RAHIMI,Substitution,substitution,448612,IN: Soufiane RAHIMI / OUT: Bilal EL KHANNOUSS,api.fifa.com
+1683,97,74,,Morocco,485756,Zakaria EL OUAHDI,Substitution,substitution,424071,IN: Zakaria EL OUAHDI / OUT: Anass SALAH EDDINE,api.fifa.com
+1684,97,74,,Morocco,505112,Gessime YASSINE,Substitution,substitution,430740,IN: Gessime YASSINE / OUT: Brahim DIAZ,api.fifa.com
+1685,97,85,,Morocco,524320,Amine SBAI,Substitution,substitution,494293,IN: Amine SBAI / OUT: Chemsdine TALBI,api.fifa.com
+1686,98,30,,Spain,430718,Fabian RUIZ,Goal,open_play,,,api.fifa.com
+1687,98,88,,Spain,430733,Mikel MERINO,Goal,open_play,,,api.fifa.com
+1688,98,41,,Belgium,448362,Charles DE KETELAERE,Goal,open_play,358106,,api.fifa.com
+1689,98,41,,Belgium,358106,Thibaut COURTOIS,Assist,assist,448362,assist attributed via sofascore.com,sofascore.com
+1690,98,43,,Spain,474973,Pau CUBARSI,Yellow Card,,,,api.fifa.com
+1691,98,90,3,Spain,335999,Aymeric LAPORTE,Yellow Card,,,,api.fifa.com
+1692,98,85,,Belgium,358120,Kevin DE BRUYNE,Yellow Card,,,,api.fifa.com
+1693,98,90,5,Belgium,290821,Axel WITSEL,Yellow Card,,,,api.fifa.com
+1694,98,55,,Spain,405545,Ferran TORRES,Substitution,substitution,447860,IN: Ferran TORRES / OUT: Alex BAENA,api.fifa.com
+1695,98,55,,Spain,423646,PEDRI,Substitution,substitution,430718,IN: PEDRI / OUT: Fabian RUIZ,api.fifa.com
+1696,98,79,,Spain,447855,Nico WILLIAMS,Substitution,substitution,430751,IN: Nico WILLIAMS / OUT: Mikel OYARZABAL,api.fifa.com
+1697,98,86,,Spain,430733,Mikel MERINO,Substitution,substitution,430750,IN: Mikel MERINO / OUT: Dani OLMO,api.fifa.com
+1698,98,60,,Belgium,358112,Romelu LUKAKU,Substitution,substitution,448343,IN: Romelu LUKAKU / OUT: Hans VANAKEN,api.fifa.com
+1699,98,60,,Belgium,290821,Axel WITSEL,Substitution,substitution,448355,IN: Axel WITSEL / OUT: Leandro TROSSARD,api.fifa.com
+1700,98,60,,Belgium,506088,Joaquin SEYS,Substitution,substitution,448373,IN: Joaquin SEYS / OUT: Maxim DE CUYPER,api.fifa.com
+1701,98,71,,Belgium,495348,Senne LAMMENS,Substitution,substitution,358106,IN: Senne LAMMENS / OUT: Thibaut COURTOIS,api.fifa.com
+1702,98,86,,Belgium,433092,Alexis SAELEMAEKERS,Substitution,substitution,358120,IN: Alexis SAELEMAEKERS / OUT: Kevin DE BRUYNE,api.fifa.com
+1703,99,36,,Norway,494626,Andreas SCHJELDERUP,Goal,open_play,400716,,api.fifa.com
+1704,99,36,,Norway,400716,Martin ODEGAARD,Assist,assist,494626,assist attributed via sofascore.com,sofascore.com
+1705,99,45,2,England,448202,Jude BELLINGHAM,Goal,open_play,,,api.fifa.com
+1706,99,93,,England,448202,Jude BELLINGHAM,Goal,open_play,,,api.fifa.com
+1707,99,117,,Norway,483516,Kristoffer AJER,Yellow Card,,,,api.fifa.com
+1708,99,60,,Norway,483497,Fredrik AURSNES,Substitution,substitution,483496,IN: Fredrik AURSNES / OUT: Julian RYERSON,api.fifa.com
+1709,99,67,,Norway,477470,Oscar BOBB,Substitution,substitution,398588,IN: Oscar BOBB / OUT: Alexander SORLOTH,api.fifa.com
+1710,99,67,,Norway,483448,Antonio NUSA,Substitution,substitution,494626,IN: Antonio NUSA / OUT: Andreas SCHJELDERUP,api.fifa.com
+1711,99,90,,Norway,494625,Marcus HOLMGREN PEDERSEN,Substitution,substitution,483505,IN: Marcus HOLMGREN PEDERSEN / OUT: David MOLLER WOLFE,api.fifa.com
+1712,99,,,Norway,419672,Leo OSTIGARD,Substitution,substitution,491244,IN: Leo OSTIGARD / OUT: Torbjorn HEGGEM,api.fifa.com
+1713,99,,,Norway,419662,Jorgen STRAND LARSEN,Substitution,substitution,419652,IN: Jorgen STRAND LARSEN / OUT: Erling HAALAND,api.fifa.com
+1714,99,,,England,473113,Eberechi EZE,Substitution,substitution,433097,IN: Eberechi EZE / OUT: Declan RICE,api.fifa.com
+1715,99,,,England,448196,Bukayo SAKA,Substitution,substitution,489732,IN: Bukayo SAKA / OUT: Noni MADUEKE,api.fifa.com
+1716,99,71,,England,439641,Reece JAMES,Substitution,substitution,448189,IN: Reece JAMES / OUT: Anthony GORDON,api.fifa.com
+1717,99,86,,England,506329,Djed SPENCE,Substitution,substitution,463780,IN: Djed SPENCE / OUT: Nico OREILLY,api.fifa.com
+1718,99,89,,England,492716,Morgan ROGERS,Substitution,substitution,403049,IN: Morgan ROGERS / OUT: Ezri KONSA,api.fifa.com
+1719,99,111,,England,494345,Dan BURN,Substitution,substitution,448202,IN: Dan BURN / OUT: Jude BELLINGHAM,api.fifa.com
+1720,100,10,,Argentina,430628,Alexis MAC ALLISTER,Goal,open_play,229397,,api.fifa.com
+1721,100,10,,Argentina,229397,Lionel MESSI,Assist,assist,430628,assist attributed via sofascore.com,sofascore.com
+1722,100,112,,Argentina,416081,Julian ALVAREZ,Goal,open_play,495054,,api.fifa.com
+1723,100,112,,Argentina,495054,Jose Manuel LOPEZ,Assist,assist,416081,assist attributed via sofascore.com,sofascore.com
+1724,100,120,1,Argentina,402920,Lautaro MARTINEZ,Goal,open_play,,,api.fifa.com
+1725,100,67,,Switzerland,448114,Dan NDOYE,Goal,open_play,313559,,api.fifa.com
+1726,100,67,,Switzerland,313559,Ricardo RODRIGUEZ,Assist,assist,448114,assist attributed via sofascore.com,sofascore.com
+1727,100,97,,Argentina,418975,Thiago ALMADA,Yellow Card,,,,api.fifa.com
+1728,100,98,,Argentina,402920,Lautaro MARTINEZ,Yellow Card,,,,api.fifa.com
+1729,100,114,,Argentina,495054,Jose Manuel LOPEZ,Yellow Card,,,,api.fifa.com
+1730,100,44,,Switzerland,393480,Breel EMBOLO,Yellow Card,,,,api.fifa.com
+1731,100,72,,Switzerland,393480,Breel EMBOLO,Red Card,second_yellow,,,api.fifa.com
+1732,100,78,,Argentina,430631,Nico GONZALEZ,Substitution,substitution,308322,IN: Nico GONZALEZ / OUT: Nicolas TAGLIAFICO,api.fifa.com
+1733,100,85,,Argentina,402920,Lautaro MARTINEZ,Substitution,substitution,428882,IN: Lautaro MARTINEZ / OUT: Rodrigo DE PAUL,api.fifa.com
+1734,100,85,,Argentina,402926,Gonzalo MONTIEL,Substitution,substitution,402925,IN: Gonzalo MONTIEL / OUT: Nahuel MOLINA,api.fifa.com
+1735,100,,,Argentina,418975,Thiago ALMADA,Substitution,substitution,448252,IN: Thiago ALMADA / OUT: Enzo FERNANDEZ,api.fifa.com
+1736,100,,,Argentina,310116,Nicolas OTAMENDI,Substitution,substitution,431196,IN: Nicolas OTAMENDI / OUT: Cristian ROMERO,api.fifa.com
+1737,100,110,,Argentina,495054,Jose Manuel LOPEZ,Substitution,substitution,332847,IN: Jose Manuel LOPEZ / OUT: Leandro PAREDES,api.fifa.com
+1738,100,86,,Switzerland,493221,Miro MUHEIM,Substitution,substitution,448103,IN: Miro MUHEIM / OUT: Fabian RIEDER,api.fifa.com
+1739,100,86,,Switzerland,356412,Silvan WIDMER,Substitution,substitution,411226,IN: Silvan WIDMER / OUT: Djibril SOW,api.fifa.com
+1740,100,86,,Switzerland,448112,Zeki AMDOUNI,Substitution,substitution,448114,IN: Zeki AMDOUNI / OUT: Dan NDOYE,api.fifa.com
+1741,100,90,5,Switzerland,448136,Eray COEMERT,Substitution,substitution,313559,IN: Eray COEMERT / OUT: Ricardo RODRIGUEZ,api.fifa.com
+1742,100,96,,Switzerland,448120,Ardon JASHARI,Substitution,substitution,401448,IN: Ardon JASHARI / OUT: Denis ZAKARIA,api.fifa.com
+1743,100,115,,Switzerland,448131,Ruben VARGAS,Substitution,substitution,402021,IN: Ruben VARGAS / OUT: Remo FREULER,api.fifa.com
+1744,101,22,,Spain,430751,Mikel OYARZABAL,Goal,penalty,,Penalty scored,api.fifa.com
+1745,101,58,,Spain,430144,Pedro PORRO,Goal,open_play,430750,,api.fifa.com
+1746,101,58,,Spain,430750,Dani OLMO,Assist,assist,430144,assist attributed via sofascore.com,sofascore.com
+1747,101,8,,France,402047,Adrien RABIOT,Yellow Card,,,,api.fifa.com
+1748,101,86,,France,389867,Kylian MBAPPE,Yellow Card,,,,api.fifa.com
+1749,101,31,,Spain,430735,Marc CUCURELLA,Yellow Card,,,,api.fifa.com
+1750,101,30,,France,405881,Maxence Lacroix,Substitution,substitution,419177,IN: Maxence Lacroix / OUT: William SALIBA,api.fifa.com
+1751,101,,,France,485677,Manu KONE,Substitution,substitution,402047,IN: Manu KONE / OUT: Adrien RABIOT,api.fifa.com
+1752,101,57,,France,464114,Desire DOUE,Substitution,substitution,484860,IN: Desire DOUE / OUT: Bradley BARCOLA,api.fifa.com
+1753,101,72,,France,431861,Rayan CHERKI,Substitution,substitution,485655,IN: Rayan CHERKI / OUT: Michael OLISE,api.fifa.com
+1754,101,72,,France,408042,Theo HERNANDEZ,Substitution,substitution,368860,IN: Theo HERNANDEZ / OUT: Lucas Digne,api.fifa.com
+1755,101,74,,Spain,405545,Ferran TORRES,Substitution,substitution,430751,IN: Ferran TORRES / OUT: Mikel OYARZABAL,api.fifa.com
+1756,101,77,,Spain,423646,PEDRI,Substitution,substitution,430718,IN: PEDRI / OUT: Fabian RUIZ,api.fifa.com
+1757,101,77,,Spain,430733,Mikel MERINO,Substitution,substitution,430750,IN: Mikel MERINO / OUT: Dani OLMO,api.fifa.com
+1758,101,83,,Spain,447855,Nico WILLIAMS,Substitution,substitution,447860,IN: Nico WILLIAMS / OUT: Alex BAENA,api.fifa.com
+1759,101,83,,Spain,382739,Marcos LLORENTE,Substitution,substitution,430144,IN: Marcos LLORENTE / OUT: Pedro PORRO,api.fifa.com
+1760,102,55,,England,448189,Anthony GORDON,Goal,open_play,492716,,api.fifa.com
+1761,102,55,,England,492716,Morgan ROGERS,Assist,assist,448189,assist attributed via sofascore.com,sofascore.com
+1762,102,85,,Argentina,448252,Enzo FERNANDEZ,Goal,open_play,229397,,api.fifa.com
+1763,102,85,,Argentina,229397,Lionel MESSI,Assist,assist,448252,assist attributed via sofascore.com,sofascore.com
+1764,102,90,2,Argentina,402920,Lautaro MARTINEZ,Goal,open_play,,,api.fifa.com
+1765,102,37,,England,481610,Elliot ANDERSON,Yellow Card,,,,api.fifa.com
+1766,102,42,,Argentina,402921,Lisandro MARTINEZ,Yellow Card,,,,api.fifa.com
+1767,102,51,,Argentina,431196,Cristian ROMERO,Yellow Card,,,,api.fifa.com
+1768,102,90,4,Argentina,428882,Rodrigo DE PAUL,Yellow Card,,,,api.fifa.com
+1769,102,72,,England,403049,Ezri KONSA,Substitution,substitution,448189,IN: Ezri KONSA / OUT: Anthony GORDON,api.fifa.com
+1770,102,82,,England,494345,Dan BURN,Substitution,substitution,439641,IN: Dan BURN / OUT: Reece JAMES,api.fifa.com
+1771,102,82,,England,463780,Nico OREILLY,Substitution,substitution,433097,IN: Nico OREILLY / OUT: Declan RICE,api.fifa.com
+1772,102,90,6,England,448198,Ivan TONEY,Substitution,substitution,369434,IN: Ivan TONEY / OUT: John STONES,api.fifa.com
+1773,102,90,6,England,401470,Marcus RASHFORD,Substitution,substitution,506329,IN: Marcus RASHFORD / OUT: Djed SPENCE,api.fifa.com
+1774,102,64,,Argentina,430631,Nico GONZALEZ,Substitution,substitution,332847,IN: Nico GONZALEZ / OUT: Leandro PAREDES,api.fifa.com
+1775,102,72,,Argentina,310116,Nicolas OTAMENDI,Substitution,substitution,402921,IN: Nicolas OTAMENDI / OUT: Lisandro MARTINEZ,api.fifa.com
+1776,102,72,,Argentina,402926,Gonzalo MONTIEL,Substitution,substitution,402925,IN: Gonzalo MONTIEL / OUT: Nahuel MOLINA,api.fifa.com
+1777,102,72,,Argentina,428882,Rodrigo DE PAUL,Substitution,substitution,485595,IN: Rodrigo DE PAUL / OUT: Giuliano SIMEONE,api.fifa.com
+1778,102,81,,Argentina,402920,Lautaro MARTINEZ,Substitution,substitution,308322,IN: Lautaro MARTINEZ / OUT: Nicolas TAGLIAFICO,api.fifa.com
+1779,103,48,,France,389867,Kylian MBAPPE,Goal,open_play,485655,,api.fifa.com
+1780,103,48,,France,485655,Michael OLISE,Assist,assist,389867,assist attributed via sofascore.com,sofascore.com
+1781,103,54,,France,484860,Bradley BARCOLA,Goal,open_play,389867,,api.fifa.com
+1782,103,54,,France,389867,Kylian MBAPPE,Assist,assist,484860,assist attributed via sofascore.com,sofascore.com
+1783,103,66,,France,389867,Kylian MBAPPE,Goal,open_play,485655,,api.fifa.com
+1784,103,66,,France,485655,Michael OLISE,Assist,assist,389867,assist attributed via sofascore.com,sofascore.com
+1785,103,90,6,France,398680,Ousmane DEMBELE,Goal,open_play,,,api.fifa.com
+1786,103,3,,England,433097,Declan RICE,Goal,open_play,,,api.fifa.com
+1787,103,18,,England,403049,Ezri KONSA,Goal,open_play,433097,,api.fifa.com
+1788,103,18,,England,433097,Declan RICE,Assist,assist,403049,assist attributed via sofascore.com,sofascore.com
+1789,103,37,,England,448196,Bukayo SAKA,Goal,open_play,401470,,api.fifa.com
+1790,103,37,,England,401470,Marcus RASHFORD,Assist,assist,448196,assist attributed via sofascore.com,sofascore.com
+1791,103,45,1,England,448196,Bukayo SAKA,Goal,open_play,,,api.fifa.com
+1792,103,87,,England,448196,Bukayo SAKA,Goal,penalty,,Penalty scored,api.fifa.com
+1793,103,90,8,England,448202,Jude BELLINGHAM,Goal,open_play,,,api.fifa.com
+1794,103,,,France,389876,Dayot UPAMECANO,Substitution,substitution,419166,IN: Dayot UPAMECANO / OUT: Ibrahima KONATE,api.fifa.com
+1795,103,,,France,484860,Bradley BARCOLA,Substitution,substitution,464114,IN: Bradley BARCOLA / OUT: Desire DOUE,api.fifa.com
+1796,103,,,France,368860,Lucas Digne,Substitution,substitution,408042,IN: Lucas Digne / OUT: Theo HERNANDEZ,api.fifa.com
+1797,103,,,France,398680,Ousmane DEMBELE,Substitution,substitution,431861,IN: Ousmane DEMBELE / OUT: Rayan CHERKI,api.fifa.com
+1798,103,90,1,France,430707,Jules KOUNDE,Substitution,substitution,464055,IN: Jules KOUNDE / OUT: Malo GUSTO,api.fifa.com
+1799,103,,,England,448203,Ollie WATKINS,Substitution,substitution,401470,IN: Ollie WATKINS / OUT: Marcus RASHFORD,api.fifa.com
+1800,103,79,,England,481610,Elliot ANDERSON,Substitution,substitution,448198,IN: Elliot ANDERSON / OUT: Ivan TONEY,api.fifa.com
+1801,103,79,,England,448202,Jude BELLINGHAM,Substitution,substitution,473113,IN: Jude BELLINGHAM / OUT: Eberechi EZE,api.fifa.com
+1802,103,83,,England,439641,Reece JAMES,Substitution,substitution,463809,IN: Reece JAMES / OUT: Jarell QUANSAH,api.fifa.com
+1803,103,90,2,England,439691,Trevoh CHALOBAH,Substitution,substitution,405841,IN: Trevoh CHALOBAH / OUT: Marc GUEHI,api.fifa.com
+1804,104,106,,Spain,405545,Ferran TORRES,Goal,open_play,447855,,api.fifa.com
+1805,104,106,,Spain,447855,Nico WILLIAMS,Assist,assist,405545,assist attributed via sofascore.com,sofascore.com
+1806,104,41,,Argentina,402921,Lisandro MARTINEZ,Yellow Card,,,,api.fifa.com
+1807,104,52,,Argentina,332847,Leandro PAREDES,Yellow Card,,,,api.fifa.com
+1808,104,82,,Argentina,448252,Enzo FERNANDEZ,Yellow Card,,,,api.fifa.com
+1809,104,90,2,Argentina,431196,Cristian ROMERO,Yellow Card,,,,api.fifa.com
+1810,104,90,3,Argentina,448252,Enzo FERNANDEZ,Red Card,second_yellow,,,api.fifa.com
+1811,104,105,,Argentina,,,Yellow Card,coach_or_staff,,Coach/staff booking,api.fifa.com
+1812,104,111,,Argentina,430628,Alexis MAC ALLISTER,Yellow Card,,,,api.fifa.com
+1813,104,62,,Spain,405545,Ferran TORRES,Substitution,substitution,430751,IN: Ferran TORRES / OUT: Mikel OYARZABAL,api.fifa.com
+1814,104,62,,Spain,423646,PEDRI,Substitution,substitution,430718,IN: PEDRI / OUT: Fabian RUIZ,api.fifa.com
+1815,104,75,,Spain,447855,Nico WILLIAMS,Substitution,substitution,447860,IN: Nico WILLIAMS / OUT: Alex BAENA,api.fifa.com
+1816,104,75,,Spain,430733,Mikel MERINO,Substitution,substitution,430750,IN: Mikel MERINO / OUT: Dani OLMO,api.fifa.com
+1817,104,99,,Spain,430754,Martin ZUBIMENDI,Substitution,substitution,411375,IN: Martin ZUBIMENDI / OUT: RODRI,api.fifa.com
+1818,104,99,,Spain,405562,Eric GARCIA,Substitution,substitution,335999,IN: Eric GARCIA / OUT: Aymeric LAPORTE,api.fifa.com
+1819,104,44,,Argentina,310116,Nicolas OTAMENDI,Substitution,substitution,402921,IN: Nicolas OTAMENDI / OUT: Lisandro MARTINEZ,api.fifa.com
+1820,104,,,Argentina,332847,Leandro PAREDES,Substitution,substitution,430631,IN: Leandro PAREDES / OUT: Nico GONZALEZ,api.fifa.com
+1821,104,58,,Argentina,402925,Nahuel MOLINA,Substitution,substitution,402926,IN: Nahuel MOLINA / OUT: Gonzalo MONTIEL,api.fifa.com
+1822,104,70,,Argentina,418963,Facundo MEDINA,Substitution,substitution,431196,IN: Facundo MEDINA / OUT: Cristian ROMERO,api.fifa.com
+1823,104,70,,Argentina,485595,Giuliano SIMEONE,Substitution,substitution,428882,IN: Giuliano SIMEONE / OUT: Rodrigo DE PAUL,api.fifa.com
+1824,104,102,,Argentina,402934,Marcos SENESI,Substitution,substitution,416081,IN: Marcos SENESI / OUT: Julian ALVAREZ,api.fifa.com

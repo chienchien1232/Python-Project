@@ -1,0 +1,1249 @@
+player_id,player_name,positions,teams,n_matches,date_of_birth,height_cm,nationality,data_source
+431223,ABDALLAH ALFAKHORI,GK,Jordan,3,,,,api.fifa.com
+433527,ABDALLAH NASIB,DEF,Jordan,3,,,,api.fifa.com
+345059,ABDULAZIZ HATEM,MID,Qatar,3,,,,api.fifa.com
+419302,ABDULLAH ALHAMDDAN,FWD,Saudi Arabia,3,,,,api.fifa.com
+411624,ABDULLAH ALKHAIBARI,MID,Saudi Arabia,3,,,,api.fifa.com
+353251,AHMED ALAAELDIN,FWD,Qatar,3,,,,api.fifa.com
+419436,AHMED ALGANEHI,MID,Qatar,3,,,,api.fifa.com
+339746,AHMED ALKASSAR,GK,Saudi Arabia,3,,,,api.fifa.com
+433571,AHMED BASIL,GK,Iraq,3,,,,api.fifa.com
+433394,AHMED FATHY,MID,Qatar,3,,,,api.fifa.com
+430477,AHMED FATOUH,DEF,Egypt,3,,,,api.fifa.com
+484276,AHMED MAKNAZI,DEF,Iraq,3,,,,api.fifa.com
+523236,AHMED QASEM,FWD,Iraq,3,,,,api.fifa.com
+430512,AIMAN YAHYA,FWD,Saudi Arabia,3,,,,api.fifa.com
+493983,AIMAR SHER,MID,Iraq,3,,,,api.fifa.com
+481183,AKAM HASHIM,DEF,Iraq,3,,,,api.fifa.com
+386347,AKRAM AFIF,FWD,Qatar,3,,,,api.fifa.com
+523333,ALA ALHAJJI,MID,Saudi Arabia,3,,,,api.fifa.com
+335658,ALEX SANDRO,DEF,Brazil,5,,,,api.fifa.com
+486614,ALHASHMI ALHUSSEIN,DEF,Qatar,3,,,,api.fifa.com
+436628,ALI ALHAMADI,FWD,Iraq,3,,,,api.fifa.com
+498514,ALI AZAIZEH,FWD,Jordan,3,,,,api.fifa.com
+464457,ALI JASIM,FWD,Iraq,3,,,,api.fifa.com
+433439,ALI LAJAMI,DEF,Saudi Arabia,3,,,,api.fifa.com
+419326,ALI MAJRASHI,DEF,Saudi Arabia,3,,,,api.fifa.com
+431212,ALI OLWAN,FWD,Jordan,3,,,,api.fifa.com
+434029,ALI YOUSIF,FWD,Iraq,3,,,,api.fifa.com
+308370,ALISSON,GK,Brazil,5,,,,api.fifa.com
+386366,ALMOEZ ALI,FWD,Qatar,3,,,,api.fifa.com
+491167,AMER JAMOUS,MID,Jordan,3,,,,api.fifa.com
+433074,AMIR ALAMMARI,MID,Iraq,3,,,,api.fifa.com
+511889,ANAS BADAWI,DEF,Jordan,3,,,,api.fifa.com
+386348,ASSIM MADIBO,MID,Qatar,2,,,,api.fifa.com
+395186,AYMEN HUSSEIN,FWD,Iraq,3,,,,api.fifa.com
+510991,AYOUB ALOUI,DEF,Qatar,3,,,,api.fifa.com
+442428,Aaron HICKEY,DEF,Scotland,3,,,,api.fifa.com
+477864,Aaron TSHIBOLA,MID,Congo DR,4,,,,api.fifa.com
+426357,Aaron WAN-BISSAKA,DEF,Congo DR,4,,,,api.fifa.com
+464933,Abbosbek FAYZULLAEV,MID,Uzbekistan,3,,,,api.fifa.com
+370171,Abdoulaye Seck,DEF,Senegal,4,,,,api.fifa.com
+464924,Abdukodir KHUSANOV,DEF,Uzbekistan,3,,,,api.fifa.com
+441342,Abdul FATAWU,FWD,Ghana,4,,,,api.fifa.com
+441336,Abdul MUMIN,DEF,Ghana,4,,,,api.fifa.com
+403312,Abdulelah ALAMRI,DEF,Saudi Arabia,3,,,,api.fifa.com
+484082,Abdulkerim BARDAKCI,DEF,Türkiye,3,,,,api.fifa.com
+479042,Abdulla ABDULLAEV,DEF,Uzbekistan,3,,,,api.fifa.com
+479110,Abduvohid NEMATOV,GK,Uzbekistan,3,,,,api.fifa.com
+400721,Achraf HAKIMI,DEF,Morocco,6,,,,api.fifa.com
+512127,Achref ABADA,DEF,Algeria,4,,,,api.fifa.com
+385833,Adalberto CARRASQUILLA,MID,Panama,3,,,,api.fifa.com
+516043,Adam AROUS,DEF,Tunisia,2,,,,api.fifa.com
+433754,Adam HLOZEK,FWD,Czechia,3,,,,api.fifa.com
+512132,Adil BOULBINA,FWD,Algeria,4,,,,api.fifa.com
+402047,Adrien RABIOT,MID,France,8,,,,api.fifa.com
+402876,Agustin CANOBBIO,MID,Uruguay,3,,,,api.fifa.com
+371553,Ahmed Reda TAGNAOUTI,GK,Morocco,6,,,,api.fifa.com
+430440,Aiden ONEILL,MID,Australia,4,,,,api.fifa.com
+376285,Aissa MANDI,DEF,Algeria,4,,,,api.fifa.com
+404319,Ajdin HRUSTIC,FWD,Australia,4,,,,api.fifa.com
+479106,Akmal MOZGOVOY,MID,Uzbekistan,3,,,,api.fifa.com
+389784,Alan FRANCO,MID,Ecuador,4,,,,api.fifa.com
+463468,Alan MINDA,MID,Ecuador,4,,,,api.fifa.com
+403090,Alban Lafont,GK,Côte d'Ivoire,4,,,,api.fifa.com
+271116,Alberto QUINTERO,MID,Panama,3,,,,api.fifa.com
+386458,Alejandro ROMERO GAMARRA,FWD,Paraguay,5,,,,api.fifa.com
+484849,Aleksandar PAVLOVIC,MID,Germany,4,,,,api.fifa.com
+448014,Alessandro CIRCATI,DEF,Australia,4,,,,api.fifa.com
+375600,Alessandro SCHOEPF,MID,Austria,4,,,,api.fifa.com
+485802,Alex ARCE,FWD,Paraguay,5,,,,api.fifa.com
+447860,Alex BAENA,MID,Spain,8,,,,api.fifa.com
+464542,Alex FREEMAN,DEF,USA,5,,,,api.fifa.com
+391297,Alex GRIMALDO,DEF,Spain,8,,,,api.fifa.com
+423574,Alex PAULSEN,GK,New Zealand,3,,,,api.fifa.com
+371142,Alex RUFER,MID,New Zealand,3,,,,api.fifa.com
+390278,Alex ZENDEJAS,FWD,USA,5,,,,api.fifa.com
+502945,Alexander BERNHARDSSON,DEF,Sweden,4,,,,api.fifa.com
+430150,Alexander Isak,FWD,Sweden,4,,,,api.fifa.com
+429639,Alexander NUEBEL,GK,Germany,4,,,,api.fifa.com
+463282,Alexander PRASS,MID,Austria,4,,,,api.fifa.com
+371739,Alexander SCHLAGER,GK,Austria,4,,,,api.fifa.com
+398588,Alexander SORLOTH,FWD,Norway,6,,,,api.fifa.com
+523097,Alexandr SOJKA,MID,Czechia,3,,,,api.fifa.com
+466835,Alexandre PIERRE,GK,Haiti,3,,,,api.fifa.com
+505495,Alexandro MAIDANA,DEF,Paraguay,5,,,,api.fifa.com
+430628,Alexis MAC ALLISTER,MID,Argentina,8,,,,api.fifa.com
+433092,Alexis SAELEMAEKERS,MID,Belgium,6,,,,api.fifa.com
+430766,Alexis VEGA,FWD,Mexico,5,,,,api.fifa.com
+514070,Alfie JONES,DEF,Canada,3,,,,api.fifa.com
+433362,Ali ABDI,DEF,Tunisia,3,,,,api.fifa.com
+466687,Ali AHMED,FWD,Canada,5,,,,api.fifa.com
+416989,Ali Alipour,FWD,IR Iran,3,,,,api.fifa.com
+489603,Ali NEMATI,DEF,IR Iran,3,,,,api.fifa.com
+448522,Alidu SEIDU,DEF,Ghana,4,,,,api.fifa.com
+380007,Alireza BEIRANVAND,GK,IR Iran,3,,,,api.fifa.com
+379886,Alireza JAHANBAKHSH,MID,IR Iran,3,,,,api.fifa.com
+441252,Alistair JOHNSTON,DEF,Canada,5,,,,api.fifa.com
+412144,Alphonso DAVIES,DEF,Canada,5,,,,api.fifa.com
+441180,Altay BAYINDIR,GK,Türkiye,3,,,,api.fifa.com
+416576,Alvaro FIDALGO,MID,Mexico,5,,,,api.fifa.com
+385998,Alvaro MONTERO,GK,Colombia,5,,,,api.fifa.com
+430822,Amad DIALLO,FWD,Côte d'Ivoire,4,,,,api.fifa.com
+448364,Amadou ONANA,MID,Belgium,5,,,,api.fifa.com
+482976,Amar DEDIC,DEF,Bosnia and Herzegovina,4,,,,api.fifa.com
+494640,Amar MEMIC,MID,Bosnia and Herzegovina,4,,,,api.fifa.com
+405877,Amine GOUIRI,FWD,Algeria,4,,,,api.fifa.com
+524320,Amine SBAI,FWD,Morocco,6,,,,api.fifa.com
+430196,Amir HADZIAHMETOVIC,MID,Bosnia and Herzegovina,4,,,,api.fifa.com
+385031,Amir MURILLO,DEF,Panama,3,,,,api.fifa.com
+405639,Amirhossein Hosseinzadeh,FWD,IR Iran,3,,,,api.fifa.com
+475921,Amirmohammad RAZAGHINIA,MID,IR Iran,3,,,,api.fifa.com
+424071,Anass SALAH EDDINE,DEF,Morocco,6,,,,api.fifa.com
+494626,Andreas SCHJELDERUP,MID,Norway,6,,,,api.fifa.com
+336472,Andrej KRAMARIC,FWD,Croatia,4,,,,api.fifa.com
+441240,Andres ANDRADE,DEF,Panama,3,,,,api.fifa.com
+385306,Andres CUBAS,MID,Paraguay,5,,,,api.fifa.com
+492189,Andres GOMEZ,FWD,Colombia,5,,,,api.fifa.com
+401339,Andy ROBERTSON,DEF,Scotland,3,,,,api.fifa.com
+464103,Ange-Yoan BONNY,FWD,Côte d'Ivoire,4,,,,api.fifa.com
+402974,Angelo PRECIADO,DEF,Ecuador,4,,,,api.fifa.com
+429640,Angelo Stiller,MID,Germany,4,,,,api.fifa.com
+411301,Angus Gunn,GK,Scotland,3,,,,api.fifa.com
+269514,Anibal GODOY,MID,Panama,3,,,,api.fifa.com
+482874,Anis HADJ MOUSSA,FWD,Algeria,4,,,,api.fifa.com
+433361,Anis SLIMANE,MID,Tunisia,3,,,,api.fifa.com
+430070,Ante BUDIMIR,FWD,Croatia,4,,,,api.fifa.com
+441137,Anthony ELANGA,FWD,Sweden,4,,,,api.fifa.com
+448189,Anthony GORDON,FWD,England,8,,,,api.fifa.com
+337389,Anthony RALSTON,DEF,Scotland,3,,,,api.fifa.com
+448299,Anthony VALENCIA,MID,Ecuador,4,,,,api.fifa.com
+494279,Antoine MENDY,DEF,Senegal,4,,,,api.fifa.com
+448531,Antoine SEMENYO,MID,Ghana,4,,,,api.fifa.com
+441251,Antonee ROBINSON,DEF,USA,5,,,,api.fifa.com
+483448,Antonio NUSA,FWD,Norway,6,,,,api.fifa.com
+379955,Antonio RUEDIGER,DEF,Germany,4,,,,api.fifa.com
+369768,Antonio SANABRIA,FWD,Paraguay,5,,,,api.fifa.com
+400514,Ao TANAKA,MID,Japan,4,,,,api.fifa.com
+484087,Arda GULER,FWD,Türkiye,3,,,,api.fifa.com
+448120,Ardon JASHARI,MID,Switzerland,6,,,,api.fifa.com
+494639,Arjan MALIC,DEF,Bosnia and Herzegovina,4,,,,api.fifa.com
+485324,Arjany MARTHA,MID,Curaçao,3,,,,api.fifa.com
+514336,Armando GONZALEZ,FWD,Mexico,5,,,,api.fifa.com
+511141,Armando OBISPO,DEF,Curaçao,3,,,,api.fifa.com
+489523,Armin GIGOVIC,MID,Bosnia and Herzegovina,4,,,,api.fifa.com
+436572,Arthur MASUAKU,DEF,Congo DR,4,,,,api.fifa.com
+448346,Arthur THEATE,DEF,Belgium,6,,,,api.fifa.com
+481181,Arya YOUSEFI,DEF,IR Iran,3,,,,api.fifa.com
+475195,Assan OUEDRAOGO,MID,Germany,4,,,,api.fifa.com
+484698,Assane DIAO,FWD,Senegal,4,,,,api.fifa.com
+395050,Aubrey MODIBA,DEF,South Africa,4,,,,api.fifa.com
+523173,Augustine BOAKYE,MID,Ghana,4,,,,api.fifa.com
+484864,Aurele AMENDA,DEF,Switzerland,6,,,,api.fifa.com
+405893,Aurelien TCHOUAMENI,MID,France,8,,,,api.fifa.com
+390272,Auston TRUSTY,DEF,USA,5,,,,api.fifa.com
+518264,Avazbek ULMASALIYEV,DEF,Uzbekistan,3,,,,api.fifa.com
+406606,Awer MABIL,FWD,Australia,4,,,,api.fifa.com
+403063,Axel Tuanzebe,DEF,Congo DR,4,,,,api.fifa.com
+290821,Axel WITSEL,MID,Belgium,6,,,,api.fifa.com
+430413,Ayase UEDA,FWD,Japan,4,,,,api.fifa.com
+433365,Aymen DAHMEN,GK,Tunisia,3,,,,api.fifa.com
+335999,Aymeric LAPORTE,DEF,Spain,8,,,,api.fifa.com
+411678,Ayoub El Kaabi,FWD,Morocco,6,,,,api.fifa.com
+523288,Ayoube AMAIMOUNI,FWD,Morocco,6,,,,api.fifa.com
+405527,Ayumu SEKO,DEF,Japan,4,,,,api.fifa.com
+485760,Ayyoub BOUADDI,MID,Morocco,6,,,,api.fifa.com
+466669,Azarias LONDONO,FWD,Panama,3,,,,api.fifa.com
+349342,Aziz BEHICH,DEF,Australia,4,,,,api.fifa.com
+481220,Azizbek AMONOV,FWD,Uzbekistan,3,,,,api.fifa.com
+479086,Azizjon GANIEV,MID,Uzbekistan,3,,,,api.fifa.com
+441307,Azzedine OUNAHI,MID,Morocco,6,,,,api.fifa.com
+464374,BAE Junho,MID,Korea Republic,3,,,,api.fifa.com
+395205,BERNARDO SILVA,MID,Portugal,5,,,,api.fifa.com
+385067,BOUALEM KHOUKHI,DEF,Qatar,3,,,,api.fifa.com
+431889,BREMER,DEF,Brazil,5,,,,api.fifa.com
+395206,BRUNO FERNANDES,MID,Portugal,5,,,,api.fifa.com
+430605,BRUNO GUIMARAES,MID,Brazil,5,,,,api.fifa.com
+367536,Baba RAHMAN,DEF,Ghana,4,,,,api.fifa.com
+418781,Bamba DIENG,FWD,Senegal,4,,,,api.fifa.com
+523354,Bara Sapoko NDIAYE,MID,Senegal,4,,,,api.fifa.com
+484139,Baris Alper YILMAZ,FWD,Türkiye,3,,,,api.fifa.com
+424081,Bart Verbruggen,GK,Netherlands,4,,,,api.fifa.com
+506202,Bazoumana TOURE,FWD,Côte d'Ivoire,4,,,,api.fifa.com
+475260,Behruzjon KARIMOV,DEF,Uzbekistan,3,,,,api.fifa.com
+485131,Ben GANNON-DOAK,FWD,Scotland,3,,,,api.fifa.com
+423575,Ben OLD,MID,New Zealand,3,,,,api.fifa.com
+419577,Ben WAINE,FWD,New Zealand,3,,,,api.fifa.com
+494349,Benjamin ASARE,GK,Ghana,4,,,,api.fifa.com
+502946,Benjamin NYGREN,MID,Sweden,4,,,,api.fifa.com
+483966,Benjamin TAHIROVIC,MID,Bosnia and Herzegovina,4,,,,api.fifa.com
+503047,Besfort ZENELI,MID,Sweden,4,,,,api.fifa.com
+448612,Bilal EL KHANNOUSS,MID,Morocco,6,,,,api.fifa.com
+447864,Borja IGLESIAS,FWD,Spain,8,,,,api.fifa.com
+385472,Botirali ERGASHEV,GK,Uzbekistan,3,,,,api.fifa.com
+484860,Bradley BARCOLA,FWD,France,8,,,,api.fifa.com
+419225,Bradley Cross,DEF,South Africa,4,,,,api.fifa.com
+430740,Brahim DIAZ,FWD,Morocco,6,,,,api.fifa.com
+406205,Braian OJEDA,MID,Paraguay,5,,,,api.fifa.com
+466346,Brandley KUWAS,FWD,Curaçao,3,,,,api.fifa.com
+448360,Brandon MECHELE,DEF,Belgium,6,,,,api.fifa.com
+486213,Brandon THOMAS-ASANTE,FWD,Ghana,4,,,,api.fifa.com
+393480,Breel EMBOLO,FWD,Switzerland,6,,,,api.fifa.com
+419055,Brenden AARONSON,FWD,USA,5,,,,api.fifa.com
+424051,Brian BROBBEY,FWD,Netherlands,4,,,,api.fifa.com
+510989,Brian CIPENGA,FWD,Congo DR,4,,,,api.fifa.com
+464533,Brian GUTIERREZ,MID,Mexico,5,,,,api.fifa.com
+419132,Brian RODRIGUEZ,FWD,Uruguay,3,,,,api.fifa.com
+483471,Brice SAMBA,GK,France,8,,,,api.fifa.com
+448196,Bukayo SAKA,FWD,England,8,,,,api.fifa.com
+308386,CASEMIRO,MID,Brazil,5,,,,api.fifa.com
+511828,CASTROP Jens,DEF,Korea Republic,3,,,,api.fifa.com
+430387,CHO Guesung,FWD,Korea Republic,3,,,,api.fifa.com
+522282,CHO Wije,DEF,Korea Republic,3,,,,api.fifa.com
+406281,CJ DOS SANTOS,GK,Cabo Verde,4,,,,api.fifa.com
+201200,CRISTIANO RONALDO,FWD,Portugal,5,,,,api.fifa.com
+401167,Caglar SOYUNCU,DEF,Türkiye,3,,,,api.fifa.com
+506279,Caleb YIRENKYI,MID,Ghana,4,,,,api.fifa.com
+419567,Callan ELLIOT,DEF,New Zealand,3,,,,api.fifa.com
+390196,Callum McCOWATT,MID,New Zealand,3,,,,api.fifa.com
+382312,Cameron BURGESS,DEF,Australia,4,,,,api.fifa.com
+430437,Cameron DEVLIN,MID,Australia,4,,,,api.fifa.com
+360642,Camilo VARGAS,GK,Colombia,5,,,,api.fifa.com
+486074,Can UZUN,FWD,Türkiye,3,,,,api.fifa.com
+424556,Carl SAINTE,MID,Haiti,3,,,,api.fifa.com
+441132,Carl STARFELT,DEF,Sweden,4,,,,api.fifa.com
+397775,Carlens ARCUS,DEF,Haiti,3,,,,api.fifa.com
+441260,Carlos ACEVEDO,GK,Mexico,5,,,,api.fifa.com
+418729,Carlos HARVEY,DEF,Panama,3,,,,api.fifa.com
+463800,Carney CHUKWUEMEKA,MID,Austria,4,,,,api.fifa.com
+337251,Cecilio Waterman,FWD,Panama,3,,,,api.fifa.com
+336425,Cedric BAKAMBU,FWD,Congo DR,4,,,,api.fifa.com
+448104,Cedric ITTEN,FWD,Switzerland,6,,,,api.fifa.com
+441242,Cesar BLACKMAN,DEF,Panama,3,,,,api.fifa.com
+406135,Cesar HUERTA,FWD,Mexico,5,,,,api.fifa.com
+395516,Cesar MONTES,DEF,Mexico,4,,,,api.fifa.com
+441402,Cesar SAMUDIO,GK,Panama,3,,,,api.fifa.com
+441243,Cesar YANIS,MID,Panama,3,,,,api.fifa.com
+448607,Chadi RIAD,DEF,Morocco,6,,,,api.fifa.com
+356532,Chancel MBEMBA,DEF,Congo DR,4,,,,api.fifa.com
+448362,Charles DE KETELAERE,FWD,Belgium,6,,,,api.fifa.com
+448128,Charles PICKEL,MID,Congo DR,4,,,,api.fifa.com
+433191,Che Adams,FWD,Scotland,3,,,,api.fifa.com
+494293,Chemsdine TALBI,MID,Morocco,6,,,,api.fifa.com
+486168,Cherif NDIAYE,FWD,Senegal,4,,,,api.fifa.com
+464546,Chris BRADY,GK,USA,5,,,,api.fifa.com
+419062,Chris RICHARDS,DEF,USA,5,,,,api.fifa.com
+274078,Chris WOOD,FWD,New Zealand,3,,,,api.fifa.com
+514208,Christ Inao OULAI,MID,Côte d'Ivoire,4,,,,api.fifa.com
+448124,Christian FASSNACHT,FWD,Switzerland,6,,,,api.fifa.com
+390267,Christian PULISIC,FWD,USA,4,,,,api.fifa.com
+494350,Christopher Bonsu BAAH,FWD,Ghana,4,,,,api.fifa.com
+486260,Christopher OPERI,DEF,Côte d'Ivoire,4,,,,api.fifa.com
+448152,Cody GAKPO,FWD,Netherlands,4,,,,api.fifa.com
+430452,Connor METCALFE,MID,Australia,4,,,,api.fifa.com
+215553,Craig GORDON,GK,Scotland,3,,,,api.fifa.com
+395581,Cristian MARTINEZ,MID,Panama,3,,,,api.fifa.com
+385994,Cristian ROLDAN,MID,USA,2,,,,api.fifa.com
+431196,Cristian ROMERO,DEF,Argentina,8,,,,api.fifa.com
+448015,Cristian VOLPATO,FWD,Australia,4,,,,api.fifa.com
+489518,Crysencio SUMMERVILLE,FWD,Netherlands,4,,,,api.fifa.com
+418881,Cucho HERNANDEZ,FWD,Colombia,5,,,,api.fifa.com
+390670,Cyle LARIN,FWD,Canada,5,,,,api.fifa.com
+482782,DAILON LIVRAMENTO,FWD,Cabo Verde,4,,,,api.fifa.com
+335656,DANILO,DEF,Brazil,5,,,,api.fifa.com
+429392,DANILO SANTOS,MID,Brazil,5,,,,api.fifa.com
+477827,DEROY DUARTE,MID,Cabo Verde,4,,,,api.fifa.com
+409241,DINEY BORGES,DEF,Cabo Verde,4,,,,api.fifa.com
+403001,DIOGO COSTA,GK,Portugal,5,,,,api.fifa.com
+403002,DIOGO DALOT,DEF,Portugal,5,,,,api.fifa.com
+367981,DOUGLAS SANTOS,DEF,Brazil,5,,,,api.fifa.com
+448557,Daichi KAMADA,MID,Japan,4,,,,api.fifa.com
+430407,Daizen MAEDA,MID,Japan,4,,,,api.fifa.com
+476348,Damian BOBADILLA,MID,Paraguay,5,,,,api.fifa.com
+494345,Dan BURN,DEF,England,8,,,,api.fifa.com
+448114,Dan NDOYE,FWD,Switzerland,6,,,,api.fifa.com
+430750,Dani OLMO,FWD,Spain,8,,,,api.fifa.com
+494429,Danial IRI,DEF,IR Iran,3,,,,api.fifa.com
+431200,Daniel MUNOZ,DEF,Colombia,5,,,,api.fifa.com
+491255,Daniel SVENSSON,DEF,Sweden,4,,,,api.fifa.com
+466838,Danley JEAN JACQUES,MID,Haiti,3,,,,api.fifa.com
+419126,Darwin NUNEZ,FWD,Uruguay,3,,,,api.fifa.com
+520035,David AFFENGRUBER,DEF,Austria,4,,,,api.fifa.com
+316002,David ALABA,DEF,Austria,4,,,,api.fifa.com
+483936,David DOUDERA,DEF,Czechia,3,,,,api.fifa.com
+483990,David JURASEK,DEF,Czechia,1,,,,api.fifa.com
+483505,David MOLLER WOLFE,DEF,Norway,6,,,,api.fifa.com
+228686,David OSPINA,GK,Colombia,5,,,,api.fifa.com
+430657,David RAUM,DEF,Germany,4,,,,api.fifa.com
+447853,David RAYA,GK,Spain,8,,,,api.fifa.com
+433755,David Zima,DEF,Czechia,3,,,,api.fifa.com
+386013,Davinson SANCHEZ,DEF,Colombia,5,,,,api.fifa.com
+441255,Dayne ST. CLAIR,GK,Canada,5,,,,api.fifa.com
+389876,Dayot UPAMECANO,DEF,France,8,,,,api.fifa.com
+403046,Dean Henderson,GK,England,8,,,,api.fifa.com
+433097,Declan RICE,MID,England,8,,,,api.fifa.com
+394376,Deiver MACHADO,DEF,Colombia,5,,,,api.fifa.com
+441068,Dejan LJUBICIC,MID,Austria,4,,,,api.fifa.com
+463476,Denil CASTILLO,MID,Ecuador,4,,,,api.fifa.com
+519985,Denis VISINSKY,FWD,Czechia,3,,,,api.fifa.com
+401448,Denis ZAKARIA,MID,Switzerland,6,,,,api.fifa.com
+495347,Deniz GUL,FWD,Türkiye,3,,,,api.fifa.com
+484851,Deniz UNDAV,FWD,Germany,4,,,,api.fifa.com
+519837,Dennis DARGAHI,FWD,IR Iran,3,,,,api.fifa.com
+430194,Dennis HADZIKADUNIC,DEF,Bosnia and Herzegovina,4,,,,api.fifa.com
+436612,Denzel DUMFRIES,DEF,Netherlands,4,,,,api.fifa.com
+371958,Derek CORNELIUS,DEF,Canada,5,,,,api.fifa.com
+466865,Derrick ETIENNE,FWD,Haiti,3,,,,api.fifa.com
+520037,Derrick LUCKASSEN,DEF,Ghana,4,,,,api.fifa.com
+464114,Desire DOUE,FWD,France,8,,,,api.fifa.com
+506471,Deveron FONVILLE,DEF,Curaçao,3,,,,api.fifa.com
+463128,Diego GOMEZ,MID,Paraguay,4,,,,api.fifa.com
+497902,Diego MOREIRA,MID,Belgium,6,,,,api.fifa.com
+506329,Djed SPENCE,DEF,England,8,,,,api.fifa.com
+411226,Djibril SOW,MID,Switzerland,6,,,,api.fifa.com
+448377,Dodi LUKEBAKIO,FWD,Belgium,6,,,,api.fifa.com
+484073,Dominic HYAM,DEF,Scotland,3,,,,api.fifa.com
+448179,Dominik KOTARSKI,GK,Croatia,4,,,,api.fifa.com
+369029,Dominik LIVAKOVIC,GK,Croatia,4,,,,api.fifa.com
+523215,Dominique SIMON,MID,Haiti,3,,,,api.fifa.com
+433066,Donyell Malen,FWD,Netherlands,4,,,,api.fifa.com
+371393,Dostonbek Khamdamov,MID,Uzbekistan,3,,,,api.fifa.com
+394993,Duckens NAZON,FWD,Haiti,3,,,,api.fifa.com
+372424,Duje CALETA-CAR,DEF,Croatia,4,,,,api.fifa.com
+477829,Dylan BATUBINSIKA,DEF,Congo DR,4,,,,api.fifa.com
+411653,Dylan BRONN,DEF,Tunisia,3,,,,api.fifa.com
+389886,Dzenis BURNIC,MID,Bosnia and Herzegovina,4,,,,api.fifa.com
+395427,EDERSON,GK,Brazil,5,,,,api.fifa.com
+485069,EDERSON SILVA,MID,Brazil,5,,,,api.fifa.com
+429063,EDMILSON JUNIOR,FWD,Qatar,3,,,,api.fifa.com
+389437,EHSAN HADDAD,DEF,Jordan,3,,,,api.fifa.com
+430482,EMAM ASHOUR,MID,Egypt,5,,,,api.fifa.com
+463746,ENDRICK,FWD,Brazil,5,,,,api.fifa.com
+423855,EOM Jisung,MID,Korea Republic,3,,,,api.fifa.com
+473113,Eberechi EZE,MID,England,8,,,,api.fifa.com
+400416,Edgar Yoel BARCENAS,MID,Panama,3,,,,api.fifa.com
+480313,Edgardo FARINA,DEF,Panama,3,,,,api.fifa.com
+300409,Edin DZEKO,FWD,Bosnia and Herzegovina,4,,,,api.fifa.com
+433161,Edo Kayembe,MID,Congo DR,4,,,,api.fifa.com
+433806,Edouard MENDY,GK,Senegal,2,,,,api.fifa.com
+400634,Edson ALVAREZ,DEF,Mexico,5,,,,api.fifa.com
+483535,Egil SELVIK,GK,Norway,6,,,,api.fifa.com
+288961,Ehsan HAJISAFI,DEF,IR Iran,3,,,,api.fifa.com
+464865,El Hadji Malick DIOUF,DEF,Senegal,4,,,,api.fifa.com
+385475,Eldor SHOMURODOV,FWD,Uzbekistan,3,,,,api.fifa.com
+448662,Elias ACHOURI,FWD,Tunisia,3,,,,api.fifa.com
+482885,Elias SAAD,FWD,Tunisia,3,,,,api.fifa.com
+405454,Elijah JUST,MID,New Zealand,3,,,,api.fifa.com
+441341,Elisha OWUSU,MID,Ghana,4,,,,api.fifa.com
+481610,Elliot ANDERSON,MID,England,8,,,,api.fifa.com
+519958,Elliot STROUD,DEF,Sweden,4,,,,api.fifa.com
+411658,Ellyes SKHIRI,MID,Tunisia,3,,,,api.fifa.com
+390650,Eloy ROOM,GK,Curaçao,3,,,,api.fifa.com
+464133,Elye WAHI,FWD,Côte d'Ivoire,4,,,,api.fifa.com
+473062,Emiliano MARTINEZ,MID,Uruguay,3,,,,api.fifa.com
+308300,Emiliano MARTINEZ,GK,Argentina,8,,,,api.fifa.com
+486268,Emmanuel AGBADOU,DEF,Côte d'Ivoire,4,,,,api.fifa.com
+373400,Enner VALENCIA,FWD,Ecuador,4,,,,api.fifa.com
+448252,Enzo FERNANDEZ,MID,Argentina,8,,,,api.fifa.com
+448136,Eray COEMERT,DEF,Switzerland,6,,,,api.fifa.com
+484065,Eren ELMALI,DEF,Türkiye,3,,,,api.fifa.com
+337232,Eric DAVIS,DEF,Panama,3,,,,api.fifa.com
+405562,Eric GARCIA,DEF,Spain,8,,,,api.fifa.com
+493061,Eric SMITH,DEF,Sweden,4,,,,api.fifa.com
+419518,Erik LIRA,MID,Mexico,5,,,,api.fifa.com
+419652,Erling HAALAND,FWD,Norway,6,,,,api.fifa.com
+436743,Ermedin DEMIROVIC,FWD,Bosnia and Herzegovina,4,,,,api.fifa.com
+522846,Ermin MAHMIC,MID,Bosnia and Herzegovina,4,,,,api.fifa.com
+448525,Ernest NUAMAH,FWD,Ghana,4,,,,api.fifa.com
+464566,Esmir BAJRAKTAREVIC,FWD,Bosnia and Herzegovina,4,,,,api.fifa.com
+419172,Evan NDICKA,DEF,Côte d'Ivoire,4,,,,api.fifa.com
+485675,Evann GUESSAND,FWD,Côte d'Ivoire,4,,,,api.fifa.com
+430917,Evidence MAKGOPA,FWD,South Africa,4,,,,api.fifa.com
+389485,Exequiel PALACIOS,MID,Argentina,8,,,,api.fifa.com
+403049,Ezri KONSA,DEF,England,8,,,,api.fifa.com
+394456,FABINHO,MID,Brazil,5,,,,api.fifa.com
+368744,FAHAD TALIB,GK,Iraq,3,,,,api.fifa.com
+419291,FERAS ALBRIKAN,FWD,Saudi Arabia,3,,,,api.fifa.com
+485081,FRANCISCO CONCEICAO,FWD,Portugal,5,,,,api.fifa.com
+418561,FRANCISCO TRINCAO,FWD,Portugal,5,,,,api.fifa.com
+436863,FRANS PUTROS,DEF,Iraq,3,,,,api.fifa.com
+394829,Fabian BALBUENA,DEF,Paraguay,5,,,,api.fifa.com
+448103,Fabian RIEDER,MID,Switzerland,6,,,,api.fifa.com
+430718,Fabian RUIZ,MID,Spain,8,,,,api.fifa.com
+418963,Facundo MEDINA,DEF,Argentina,8,,,,api.fifa.com
+439956,Facundo PELLISTRI,FWD,Uruguay,3,,,,api.fifa.com
+477795,Fares CHAIBI,MID,Algeria,4,,,,api.fifa.com
+520072,Fares GHEDJEMIS,FWD,Algeria,4,,,,api.fifa.com
+385139,Farrukh SAYFIEV,DEF,Uzbekistan,3,,,,api.fifa.com
+402884,Federico VALVERDE,MID,Uruguay,3,,,,api.fifa.com
+477536,Federico VINAS,FWD,Uruguay,3,,,,api.fifa.com
+492363,Felix NMECHA,MID,Germany,4,,,,api.fifa.com
+402979,Felix TORRES,DEF,Ecuador,4,,,,api.fifa.com
+484113,Ferdi KADIOGLU,DEF,Türkiye,3,,,,api.fifa.com
+229498,Fernando MUSLERA,GK,Uruguay,3,,,,api.fifa.com
+405545,Ferran TORRES,FWD,Spain,8,,,,api.fifa.com
+385030,Fidel ESCOBAR,DEF,Panama,3,,,,api.fifa.com
+520217,Findlay CURTIS,FWD,Scotland,3,,,,api.fifa.com
+463580,Finn SURMAN,DEF,New Zealand,3,,,,api.fifa.com
+494375,Firas CHAOUAT,FWD,Tunisia,3,,,,api.fifa.com
+477859,Fiston MAYELE,FWD,Congo DR,4,,,,api.fifa.com
+385248,Florian GRILLITSCH,MID,Austria,4,,,,api.fifa.com
+520034,Florian WIEGELE,GK,Austria,4,,,,api.fifa.com
+430669,Florian WIRTZ,MID,Germany,4,,,,api.fifa.com
+466624,Folarin BALOGUN,FWD,USA,5,,,,api.fifa.com
+440748,Francis DE VRIES,DEF,New Zealand,3,,,,api.fifa.com
+371609,Franck KESSIE,MID,Côte d'Ivoire,4,,,,api.fifa.com
+431693,Frantzdy Pierrot,FWD,Haiti,3,,,,api.fifa.com
+483497,Fredrik AURSNES,MID,Norway,6,,,,api.fifa.com
+483530,Fredrik Andre BJORKAN,DEF,Norway,6,,,,api.fifa.com
+422657,Frenkie DE JONG,MID,Netherlands,4,,,,api.fifa.com
+430601,GABRIEL MAGALHAES,DEF,Brazil,5,,,,api.fifa.com
+430597,GABRIEL MARTINELLI,FWD,Brazil,5,,,,api.fifa.com
+373344,GARRY RODRIGUES,MID,Cabo Verde,4,,,,api.fifa.com
+447866,GAVI,MID,Spain,8,,,,api.fifa.com
+477862,GILSON BENCHIMOL,FWD,Cabo Verde,4,,,,api.fifa.com
+384751,GONCALO GUEDES,FWD,Portugal,5,,,,api.fifa.com
+441146,GONCALO INACIO,DEF,Portugal,5,,,,api.fifa.com
+448081,GONCALO RAMOS,FWD,Portugal,5,,,,api.fifa.com
+463127,Gabriel AVALOS,FWD,Paraguay,5,,,,api.fifa.com
+483276,Gabriel GUDMUNDSSON,DEF,Sweden,4,,,,api.fifa.com
+336439,Gael KAKUTA,FWD,Congo DR,4,,,,api.fifa.com
+466862,Garven METUSALA,DEF,Haiti,3,,,,api.fifa.com
+447991,Gaston OLVEIRA,GK,Paraguay,5,,,,api.fifa.com
+318647,Gatito FERNANDEZ,GK,Paraguay,5,,,,api.fifa.com
+477853,Gedeon KALULU,DEF,Congo DR,4,,,,api.fifa.com
+495431,George HIRST,FWD,Scotland,3,,,,api.fifa.com
+394824,Geronimo RULLI,GK,Argentina,8,,,,api.fifa.com
+466372,Gervane KASTANEER,FWD,Curaçao,3,,,,api.fifa.com
+505112,Gessime YASSINE,MID,Morocco,6,,,,api.fifa.com
+407343,Ghislain KONAN,DEF,Côte d'Ivoire,4,,,,api.fifa.com
+441333,Gideon MENSAH,DEF,Ghana,4,,,,api.fifa.com
+500037,Gilberto MORA,MID,Mexico,5,,,,api.fifa.com
+368652,Giorgian DE ARRASCAETA,MID,Uruguay,1,,,,api.fifa.com
+395414,Giovani Lo Celso,MID,Argentina,8,,,,api.fifa.com
+419068,Giovanni REYNA,MID,USA,5,,,,api.fifa.com
+485595,Giuliano SIMEONE,FWD,Argentina,8,,,,api.fifa.com
+466359,Godfried ROEMERATOE,MID,Curaçao,3,,,,api.fifa.com
+402926,Gonzalo MONTIEL,DEF,Argentina,8,,,,api.fifa.com
+419020,Gonzalo PLATA,FWD,Ecuador,4,,,,api.fifa.com
+448295,Gonzalo VALLE,GK,Ecuador,4,,,,api.fifa.com
+311558,Granit XHAKA,MID,Switzerland,6,,,,api.fifa.com
+359634,Grant Hanley,DEF,Scotland,3,,,,api.fifa.com
+448107,Gregor KOBEL,GK,Switzerland,6,,,,api.fifa.com
+486317,Guela DOUE,DEF,Côte d'Ivoire,4,,,,api.fifa.com
+386339,Guillermo MARTINEZ,FWD,Mexico,5,,,,api.fifa.com
+215285,Guillermo OCHOA,GK,Mexico,5,,,,api.fifa.com
+368660,Guillermo VARELA,DEF,Uruguay,3,,,,api.fifa.com
+483304,Gustaf LAGERBIELKE,DEF,Sweden,4,,,,api.fifa.com
+489691,Gustaf NILSSON,FWD,Sweden,4,,,,api.fifa.com
+485804,Gustavo CABALLERO,MID,Paraguay,5,,,,api.fifa.com
+369744,Gustavo GOMEZ,DEF,Paraguay,5,,,,api.fifa.com
+463902,Gustavo PUERTA,DEF,Colombia,5,,,,api.fifa.com
+486875,Gustavo VELAZQUEZ,DEF,Paraguay,5,,,,api.fifa.com
+448157,Guus TIL,MID,Netherlands,4,,,,api.fifa.com
+429095,HAMDY FATHY,MID,Egypt,4,,,,api.fifa.com
+495488,HAMZA ABDELKARIM,FWD,Egypt,5,,,,api.fifa.com
+284190,HASSAN ALHAYDOS,FWD,Qatar,3,,,,api.fifa.com
+403335,HASSAN ALTAMBAKTI,DEF,Saudi Arabia,3,,,,api.fifa.com
+401924,HASSAN KADISH,DEF,Saudi Arabia,3,,,,api.fifa.com
+477849,HELIO VARELA,MID,Cabo Verde,4,,,,api.fifa.com
+419441,HOMAM AHMED,DEF,Qatar,2,,,,api.fifa.com
+483182,HOSSAM ABDELMAGUID,DEF,Egypt,4,,,,api.fifa.com
+489550,HUSAM ABUDAHAB,DEF,Jordan,3,,,,api.fifa.com
+395083,HWANG Heechan,MID,Korea Republic,3,,,,api.fifa.com
+395084,HWANG Inbeom,MID,Korea Republic,3,,,,api.fifa.com
+486130,Habib DIARRA,MID,Senegal,4,,,,api.fifa.com
+424106,Haissem HASSAN,FWD,Egypt,5,,,,api.fifa.com
+390276,Haji WRIGHT,FWD,USA,5,,,,api.fifa.com
+369304,Hakan CALHANOGLU,MID,Türkiye,3,,,,api.fifa.com
+448363,Hannes DELCROIX,DEF,Haiti,3,,,,api.fifa.com
+433378,Hannibal MEJBRI,MID,Tunisia,3,,,,api.fifa.com
+448343,Hans VANAKEN,MID,Belgium,6,,,,api.fifa.com
+482984,Haris TABAKOVIC,FWD,Bosnia and Herzegovina,4,,,,api.fifa.com
+369419,Harry KANE,FWD,England,8,,,,api.fifa.com
+430442,Harry SOUTTAR,DEF,Australia,4,,,,api.fifa.com
+494374,Hazem MASTOURI,FWD,Tunisia,3,,,,api.fifa.com
+520112,Henrik FALCHENER,DEF,Norway,6,,,,api.fifa.com
+514639,Herman JOHANSSON,DEF,Sweden,4,,,,api.fifa.com
+441236,Hernan GALINDEZ,GK,Ecuador,4,,,,api.fifa.com
+441350,Hicham BOUDAOUI,MID,Algeria,4,,,,api.fifa.com
+403274,Hiroki ITO,DEF,Japan,4,,,,api.fifa.com
+483319,Hjalmar EKDAL,DEF,Sweden,4,,,,api.fifa.com
+314255,Hossein HOSSEINI,GK,IR Iran,3,,,,api.fifa.com
+390534,Hossein KANANI,DEF,IR Iran,3,,,,api.fifa.com
+430698,Houssem Aouar,MID,Algeria,4,,,,api.fifa.com
+506775,Hugo SOCHUREK,MID,Czechia,3,,,,api.fifa.com
+479553,Hussein Ali,DEF,Iraq,3,,,,api.fifa.com
+430465,IBRAHIM ADEL,FWD,Egypt,5,,,,api.fifa.com
+433585,IBRAHIM BAYESH,MID,Iraq,3,,,,api.fifa.com
+431209,IBRAHIM SADEH,MID,Jordan,3,,,,api.fifa.com
+519836,IGOR THIAGO,FWD,Brazil,5,,,,api.fifa.com
+512791,ISSA LAYE,DEF,Qatar,3,,,,api.fifa.com
+494291,Ibrahim MAZA,MID,Algeria,4,,,,api.fifa.com
+496358,Ibrahim MBAYE,FWD,Senegal,4,,,,api.fifa.com
+430831,Ibrahim SANGARE,MID,Côte d'Ivoire,4,,,,api.fifa.com
+419166,Ibrahima KONATE,DEF,France,8,,,,api.fifa.com
+332314,Idrissa Gana GUEYE,MID,Senegal,4,,,,api.fifa.com
+485068,Igor MATANOVIC,FWD,Croatia,4,,,,api.fifa.com
+368546,Igor Sergeev,FWD,Uzbekistan,3,,,,api.fifa.com
+448815,Iliman NDIAYE,FWD,Senegal,4,,,,api.fifa.com
+506039,Ime OKON,DEF,South Africa,4,,,,api.fifa.com
+411376,Inaki WILLIAMS,FWD,Ghana,4,,,,api.fifa.com
+481242,Iqraam RAYNERS,FWD,South Africa,4,,,,api.fifa.com
+472877,Irfan Can KAHVECI,FWD,Türkiye,3,,,,api.fifa.com
+483312,Isak HIEN,DEF,Sweden,3,,,,api.fifa.com
+489417,Isidro PITTA,FWD,Paraguay,5,,,,api.fifa.com
+372342,Ismael DIAZ,MID,Panama,3,,,,api.fifa.com
+464484,Ismael GHARBI,MID,Tunisia,3,,,,api.fifa.com
+441258,Ismael KONE,MID,Canada,2,,,,api.fifa.com
+448598,Ismael SAIBARI,MID,Morocco,6,,,,api.fifa.com
+430671,Ismail JAKOBS,DEF,Senegal,4,,,,api.fifa.com
+484092,Ismail YUKSEK,MID,Türkiye,3,,,,api.fifa.com
+401889,Ismaila SARR,FWD,Senegal,4,,,,api.fifa.com
+441261,Israel REYES,DEF,Mexico,5,,,,api.fifa.com
+403083,Issa Diop,DEF,Morocco,6,,,,api.fifa.com
+482974,Ivan BASIC,MID,Bosnia and Herzegovina,4,,,,api.fifa.com
+359381,Ivan PERISIC,FWD,Croatia,4,,,,api.fifa.com
+372436,Ivan SUNJIC,MID,Bosnia and Herzegovina,4,,,,api.fifa.com
+448198,Ivan TONEY,FWD,England,8,,,,api.fifa.com
+514526,Ivor PANDUR,GK,Croatia,4,,,,api.fifa.com
+347085,JALAL HASSAN,GK,Iraq,3,,,,api.fifa.com
+401894,JAMIRO MONTEIRO,MID,Cabo Verde,4,,,,api.fifa.com
+419473,JASSEM GABER,DEF,Qatar,3,,,,api.fifa.com
+494506,JEHAD THIKRI,DEF,Saudi Arabia,3,,,,api.fifa.com
+397753,JO Hyeonwoo,GK,Korea Republic,3,,,,api.fifa.com
+368649,JOAO CANCELO,DEF,Portugal,5,,,,api.fifa.com
+418535,JOAO FELIX,FWD,Portugal,5,,,,api.fifa.com
+484141,JOAO NEVES,MID,Portugal,5,,,,api.fifa.com
+477855,JOAO PAULO,MID,Cabo Verde,4,,,,api.fifa.com
+368689,JOSE SA,GK,Portugal,5,,,,api.fifa.com
+477856,JOVANE CABRAL,MID,Cabo Verde,4,,,,api.fifa.com
+430147,Jack Hendry,DEF,Scotland,3,,,,api.fifa.com
+355775,Jackson IRVINE,MID,Australia,4,,,,api.fifa.com
+419003,Jackson POROZO,DEF,Ecuador,4,,,,api.fifa.com
+430450,Jacob ITALIANO,DEF,Australia,2,,,,api.fifa.com
+448411,Jacob SHAFFELBURG,MID,Canada,5,,,,api.fifa.com
+489685,Jacob WIDELL ZETTERSTROM,GK,Sweden,4,,,,api.fifa.com
+464906,Jakhongir UROZOV,DEF,Uzbekistan,3,,,,api.fifa.com
+429642,Jamal MUSIALA,MID,Germany,4,,,,api.fifa.com
+269058,James RODRIGUEZ,MID,Colombia,5,,,,api.fifa.com
+485080,James TRAFFORD,GK,England,8,,,,api.fifa.com
+491218,Jamie LEWELING,MID,Germany,4,,,,api.fifa.com
+405755,Jaminton CAMPAZ,FWD,Colombia,5,,,,api.fifa.com
+368545,Jamshid ISKANDEROV,MID,Uzbekistan,3,,,,api.fifa.com
+441171,Jan KUCHTA,FWD,Czechia,3,,,,api.fifa.com
+489517,Jan Paul VAN HECKE,DEF,Netherlands,4,,,,api.fifa.com
+482869,Jaouen HADJAM,DEF,Algeria,4,,,,api.fifa.com
+463809,Jarell QUANSAH,DEF,England,6,,,,api.fifa.com
+441166,Jaroslav ZELENY,DEF,Czechia,3,,,,api.fifa.com
+339112,Jason GERIA,DEF,Australia,4,,,,api.fifa.com
+463236,Jayden ADAMS,MID,South Africa,4,,,,api.fifa.com
+423933,Jayden Nelson,FWD,Canada,5,,,,api.fifa.com
+335807,Jean Michael SERI,MID,Côte d'Ivoire,4,,,,api.fifa.com
+431781,Jean-Kevin DUVERNE,DEF,Haiti,3,,,,api.fifa.com
+403094,Jean-Philippe MATETA,FWD,France,8,,,,api.fifa.com
+430697,Jean-Ricner Bellegarde,MID,Haiti,3,,,,api.fifa.com
+466363,Jearl MARGARITHA,FWD,Curaçao,3,,,,api.fifa.com
+395550,Jefferson LERMA,MID,Colombia,5,,,,api.fifa.com
+419654,Jens Petter HAUGE,MID,Norway,6,,,,api.fifa.com
+514326,Jeremy AREVALO,FWD,Ecuador,4,,,,api.fifa.com
+424047,Jeremy Antonisse,FWD,Curaçao,3,,,,api.fifa.com
+448341,Jeremy DOKU,FWD,Belgium,5,,,,api.fifa.com
+486150,Jerome OPOKU,DEF,Ghana,4,,,,api.fifa.com
+441135,Jesper KARLSTROM,MID,Sweden,4,,,,api.fifa.com
+416652,Jesse RANDALL,FWD,New Zealand,3,,,,api.fifa.com
+402772,Jesus GALLARDO,DEF,Mexico,5,,,,api.fifa.com
+470760,Jhon ARIAS,MID,Colombia,5,,,,api.fifa.com
+369530,Jhon CORDOBA,FWD,Colombia,5,,,,api.fifa.com
+441622,Jhon LUCUMI,DEF,Colombia,5,,,,api.fifa.com
+441162,Jindrich STANEK,GK,Czechia,3,,,,api.fifa.com
+480310,Jiovany RAMOS,DEF,Panama,3,,,,api.fifa.com
+484691,Joan GARCIA,GK,Spain,8,,,,api.fifa.com
+439538,Joaquin PIQUEREZ,MID,Uruguay,3,,,,api.fifa.com
+506088,Joaquin SEYS,DEF,Belgium,6,,,,api.fifa.com
+390181,Joe BELL,MID,New Zealand,3,,,,api.fifa.com
+423700,Joe SCALLY,DEF,USA,5,,,,api.fifa.com
+463465,Joel ORDONEZ,DEF,Ecuador,4,,,,api.fifa.com
+448402,Joel WATERMAN,DEF,Canada,5,,,,api.fifa.com
+502727,Johan MANZAMBI,MID,Switzerland,4,,,,api.fifa.com
+394500,Johan MOJICA,DEF,Colombia,5,,,,api.fifa.com
+425701,Johan VASQUEZ,DEF,Mexico,5,,,,api.fifa.com
+401334,John McGinn,MID,Scotland,3,,,,api.fifa.com
+442430,John SOUTTAR,DEF,Scotland,3,,,,api.fifa.com
+369434,John STONES,DEF,England,8,,,,api.fifa.com
+405920,John YEBOAH,FWD,Ecuador,4,,,,api.fifa.com
+295922,Johny Placide,GK,Haiti,3,,,,api.fifa.com
+494351,Jonas ADJETEY,DEF,Ghana,4,,,,api.fifa.com
+441257,Jonathan DAVID,FWD,Canada,5,,,,api.fifa.com
+370986,Jonathan OSORIO,MID,Canada,5,,,,api.fifa.com
+401378,Jonathan TAH,DEF,Germany,4,,,,api.fifa.com
+353235,Jordan AYEW,FWD,Ghana,4,,,,api.fifa.com
+423522,Jordan BOS,DEF,Australia,4,,,,api.fifa.com
+356189,Jordan HENDERSON,MID,England,8,,,,api.fifa.com
+336022,Jordan PICKFORD,GK,England,8,,,,api.fifa.com
+419005,Jordy ALCIVAR,MID,Ecuador,4,,,,api.fifa.com
+402985,Jordy CAICEDO,FWD,Ecuador,4,,,,api.fifa.com
+425580,Jorge CARRASCAL,MID,Colombia,5,,,,api.fifa.com
+441239,Jorge GUTIERREZ,DEF,Panama,3,,,,api.fifa.com
+403596,Jorge SANCHEZ,DEF,Mexico,5,,,,api.fifa.com
+419662,Jorgen STRAND LARSEN,FWD,Norway,6,,,,api.fifa.com
+477833,Joris KAYEMBE,DEF,Congo DR,4,,,,api.fifa.com
+483512,Jorrel HATO,DEF,Netherlands,4,,,,api.fifa.com
+520066,Jose CANALE,DEF,Paraguay,5,,,,api.fifa.com
+418715,Jose CORDOBA,DEF,Panama,3,,,,api.fifa.com
+411174,Jose FAJARDO,FWD,Panama,3,,,,api.fifa.com
+411176,Jose Luis RODRIGUEZ,MID,Panama,3,,,,api.fifa.com
+495054,Jose Manuel LOPEZ,FWD,Argentina,8,,,,api.fifa.com
+368655,Jose Maria GIMENEZ,DEF,Uruguay,3,,,,api.fifa.com
+506277,Joseph ANANG,GK,Ghana,4,,,,api.fifa.com
+401023,Joshua BRENET,DEF,Curaçao,3,,,,api.fifa.com
+386413,Joshua KIMMICH,DEF,Germany,4,,,,api.fifa.com
+433667,Josip STANISIC,DEF,Croatia,4,,,,api.fifa.com
+448171,Josip SUTALO,DEF,Croatia,4,,,,api.fifa.com
+448180,Josko GVARDIOL,DEF,Croatia,4,,,,api.fifa.com
+510757,Josue CASIMIR,FWD,Haiti,3,,,,api.fifa.com
+466853,Josue DUVERGER,GK,Haiti,3,,,,api.fifa.com
+519954,Jovo LUKIC,FWD,Bosnia and Herzegovina,4,,,,api.fifa.com
+479601,Juan Jose CACERES,DEF,Paraguay,5,,,,api.fifa.com
+430624,Juan MUSSO,GK,Argentina,8,,,,api.fifa.com
+419134,Juan Manuel SANABRIA,MID,Uruguay,3,,,,api.fifa.com
+489849,Juan PORTILLA,MID,Colombia,5,,,,api.fifa.com
+356704,Juan QUINTERO,MID,Colombia,5,,,,api.fifa.com
+448202,Jude BELLINGHAM,MID,England,8,,,,api.fifa.com
+407680,Juergen LOCADIA,FWD,Curaçao,3,,,,api.fifa.com
+430707,Jules KOUNDE,DEF,France,8,,,,api.fifa.com
+416081,Julian ALVAREZ,FWD,Argentina,8,,,,api.fifa.com
+429157,Julian QUINONES,FWD,Mexico,5,,,,api.fifa.com
+483496,Julian RYERSON,FWD,Norway,6,,,,api.fifa.com
+441234,Julio ENCISO,FWD,Paraguay,5,,,,api.fifa.com
+466317,Juninho BACUNA,MID,Curaçao,3,,,,api.fifa.com
+369749,Junior ALONSO,DEF,Paraguay,5,,,,api.fifa.com
+498455,Junnosuke SUZUKI,DEF,Japan,4,,,,api.fifa.com
+395321,Junya ITO,MID,Japan,4,,,,api.fifa.com
+431698,Jurien GAARI,DEF,Curaçao,3,,,,api.fifa.com
+478364,Justin KLUIVERT,MID,Netherlands,4,,,,api.fifa.com
+354861,KARIM BOUDIAF,MID,Qatar,3,,,,api.fifa.com
+407022,KARIM HAFEZ,DEF,Egypt,5,,,,api.fifa.com
+482780,KELVIN PIRES,DEF,Cabo Verde,4,,,,api.fifa.com
+477852,KEVIN PINA,MID,Cabo Verde,4,,,,api.fifa.com
+506069,KEVIN YAKOB,MID,Iraq,3,,,,api.fifa.com
+419300,KHALID ALGHANNAM,FWD,Saudi Arabia,3,,,,api.fifa.com
+430385,KIM Jingyu,MID,Korea Republic,3,,,,api.fifa.com
+395088,KIM Minjae,DEF,Korea Republic,3,,,,api.fifa.com
+448580,KIM Moonhwan ,DEF,Korea Republic,3,,,,api.fifa.com
+274281,KIM Seunggyu,GK,Korea Republic,3,,,,api.fifa.com
+418485,KIM Taehyeon,DEF,Korea Republic,3,,,,api.fifa.com
+336170,Kaan Ayhan,MID,Türkiye,3,,,,api.fifa.com
+411367,Kai HAVERTZ,FWD,Germany,4,,,,api.fifa.com
+494411,Kai TREWIN,DEF,Australia,4,,,,api.fifa.com
+479294,Kaishu SANO,MID,Japan,4,,,,api.fifa.com
+339820,Kalidou KOULIBALY,DEF,Senegal,4,,,,api.fifa.com
+448523,Kamaldeen SULEMANA,FWD,Ghana,4,,,,api.fifa.com
+506038,Kamogelo SEBELEBELE,FWD,South Africa,4,,,,api.fifa.com
+506481,Keeto THERMONCY,DEF,Haiti,3,,,,api.fifa.com
+464339,Keisuke GOTO,FWD,Japan,4,,,,api.fifa.com
+403305,Keisuke OSAKO,GK,Japan,4,,,,api.fifa.com
+405522,Keito Nakamura,MID,Japan,4,,,,api.fifa.com
+395286,Ken SEMA,MID,Sweden,4,,,,api.fifa.com
+484112,Kenan YILDIZ,FWD,Türkiye,3,,,,api.fifa.com
+463495,Kendry PAEZ,MID,Ecuador,4,,,,api.fifa.com
+466352,Kenji GORRE,FWD,Curaçao,3,,,,api.fifa.com
+484051,Kenny McLEAN,MID,Scotland,3,,,,api.fifa.com
+520218,Kento SHIOGAI,FWD,Japan,4,,,,api.fifa.com
+441188,Kerem AKTURKOGLU,FWD,Türkiye,3,,,,api.fifa.com
+504990,Kerim ALAJBEGOVIC,FWD,Bosnia and Herzegovina,4,,,,api.fifa.com
+470759,Kevin CASTANO,MID,Colombia,5,,,,api.fifa.com
+358120,Kevin DE BRUYNE,MID,Belgium,6,,,,api.fifa.com
+405263,Kevin Danso,DEF,Austria,4,,,,api.fifa.com
+466365,Kevin FELIDA,MID,Curaçao,3,,,,api.fifa.com
+448310,Kevin RODRIGUEZ,FWD,Ecuador,4,,,,api.fifa.com
+512039,Khalil AYARI,MID,Tunisia,3,,,,api.fifa.com
+479079,Khojiakbar ALIJONOV,DEF,Uzbekistan,3,,,,api.fifa.com
+463218,Khuliso MUDAU,DEF,South Africa,4,,,,api.fifa.com
+504192,Khulumani NDAMANE,DEF,South Africa,4,,,,api.fifa.com
+401712,Kieran Tierney,DEF,Scotland,3,,,,api.fifa.com
+482621,Kobbie MAINOO,MID,England,7,,,,api.fifa.com
+511022,Kojo Peprah OPPONG,DEF,Ghana,4,,,,api.fifa.com
+403293,Koki OGAWA,FWD,Japan,4,,,,api.fifa.com
+448366,Koni DE WINTER,DEF,Belgium,6,,,,api.fifa.com
+385259,Konrad LAIMER,MID,Austria,4,,,,api.fifa.com
+269592,Kosta BARBAROUSES,FWD,New Zealand,3,,,,api.fifa.com
+400511,Kou ITAKURA,DEF,Japan,4,,,,api.fifa.com
+403642,Krepin DIATTA,DEF,Senegal,4,,,,api.fifa.com
+419681,Kristian Thorstvedt,MID,Norway,6,,,,api.fifa.com
+448164,Kristijan JAKIC,DEF,Croatia,4,,,,api.fifa.com
+483516,Kristoffer AJER,DEF,Norway,6,,,,api.fifa.com
+360496,Kristoffer NORDFELDT,GK,Sweden,4,,,,api.fifa.com
+507253,Kwasi SIBO,MID,Ghana,4,,,,api.fifa.com
+389867,Kylian MBAPPE,FWD,France,8,,,,api.fifa.com
+480966,LAROS DUARTE,MID,Cabo Verde,4,,,,api.fifa.com
+429600,LEE Donggyeong,MID,Korea Republic,3,,,,api.fifa.com
+492315,LEE Gihyuk,MID,Korea Republic,3,,,,api.fifa.com
+423874,LEE Hanbeom,DEF,Korea Republic,3,,,,api.fifa.com
+390525,LEE Jaesung,MID,Korea Republic,3,,,,api.fifa.com
+418490,LEE Kangin,MID,Korea Republic,3,,,,api.fifa.com
+423880,LEE Taeseok,DEF,Korea Republic,3,,,,api.fifa.com
+371956,LEO PEREIRA,DEF,Brazil,5,,,,api.fifa.com
+477831,LOGAN COSTA,DEF,Cabo Verde,4,,,,api.fifa.com
+356673,LUCAS MENDES,DEF,Qatar,3,,,,api.fifa.com
+411726,LUCAS PAQUETA,MID,Brazil,4,,,,api.fifa.com
+448420,LUIZ HENRIQUE,FWD,Brazil,5,,,,api.fifa.com
+484817,Lachlan BAYLISS,MID,New Zealand,3,,,,api.fifa.com
+441170,Ladislav KREJCI,DEF,Czechia,3,,,,api.fifa.com
+464842,Lamine CAMARA,MID,Senegal,4,,,,api.fifa.com
+484320,Lamine YAMAL,FWD,Spain,8,,,,api.fifa.com
+402920,Lautaro MARTINEZ,FWD,Argentina,8,,,,api.fifa.com
+386473,Lawrence Ati ZIGI,GK,Ghana,4,,,,api.fifa.com
+484045,Lawrence SHANKLAND,FWD,Scotland,3,,,,api.fifa.com
+466340,Leandro BACUNA,MID,Curaçao,3,,,,api.fifa.com
+332847,Leandro PAREDES,MID,Argentina,8,,,,api.fifa.com
+448355,Leandro TROSSARD,FWD,Belgium,6,,,,api.fifa.com
+485676,Lenny JOSEPH,FWD,Haiti,3,,,,api.fifa.com
+419672,Leo OSTIGARD,DEF,Norway,6,,,,api.fifa.com
+379953,Leon GORETZKA,MID,Germany,4,,,,api.fifa.com
+404353,Leroy SANE,MID,Germany,4,,,,api.fifa.com
+442434,Lewis FERGUSON,MID,Scotland,3,,,,api.fifa.com
+442429,Liam KELLY,GK,Scotland,3,,,,api.fifa.com
+441259,Liam MILLAR,MID,Canada,5,,,,api.fifa.com
+405469,Liberato CACACE,DEF,New Zealand,3,,,,api.fifa.com
+229397,Lionel MESSI,FWD,Argentina,8,,,,api.fifa.com
+441313,Lionel MPASI,GK,Congo DR,4,,,,api.fifa.com
+402921,Lisandro MARTINEZ,DEF,Argentina,8,,,,api.fifa.com
+494989,Livano COMENENCIA,MID,Curaçao,3,,,,api.fifa.com
+390205,Logan ROGERSON,FWD,New Zealand,2,,,,api.fifa.com
+481027,Louicius DEEDSON,FWD,Haiti,3,,,,api.fifa.com
+480322,Luc DE FOUGEROLLES,DEF,Canada,5,,,,api.fifa.com
+510908,Luca JAQUEZ,DEF,Switzerland,4,,,,api.fifa.com
+389879,Luca ZIDANE,GK,Algeria,4,,,,api.fifa.com
+489689,Lucas BERGVALL,MID,Sweden,4,,,,api.fifa.com
+368860,Lucas Digne,DEF,France,8,,,,api.fifa.com
+411470,Lucas HERNANDEZ,DEF,France,8,,,,api.fifa.com
+504931,Lucas HERRINGTON,DEF,Australia,4,,,,api.fifa.com
+448051,Luis CHAVEZ,MID,Mexico,5,,,,api.fifa.com
+428886,Luis DIAZ,FWD,Colombia,5,,,,api.fifa.com
+267702,Luis MEJIA,GK,Panama,3,,,,api.fifa.com
+430763,Luis ROMO,MID,Mexico,5,,,,api.fifa.com
+428905,Luis SUAREZ,FWD,Colombia,5,,,,api.fifa.com
+241559,Luka MODRIC,MID,Croatia,4,,,,api.fifa.com
+448160,Luka SUCIC,MID,Croatia,4,,,,api.fifa.com
+499290,Luka VUSKOVIC,DEF,Croatia,4,,,,api.fifa.com
+486081,Lukas CERV,MID,Czechia,3,,,,api.fifa.com
+511118,Lukas HORNICEK,GK,Czechia,3,,,,api.fifa.com
+484011,Lukas PROVOD,MID,Czechia,3,,,,api.fifa.com
+483553,Lutsharel GEERTRUIDA,DEF,Netherlands,4,,,,api.fifa.com
+419211,Lyle FOSTER,FWD,South Africa,4,,,,api.fifa.com
+430098,Lyndon DYKES,FWD,Scotland,3,,,,api.fifa.com
+395860,MAHDY SOLIMAN,GK,Egypt,5,,,,api.fifa.com
+419459,MAHMOUD ABUNADA,GK,Qatar,3,,,,api.fifa.com
+396950,MAHMOUD ALMARDI,FWD,Jordan,3,,,,api.fifa.com
+483183,MAHMOUD SABER,MID,Egypt,5,,,,api.fifa.com
+461788,MARAWAN ATTIA,MID,Egypt,5,,,,api.fifa.com
+407114,MARCIO ROSA,GK,Cabo Verde,4,,,,api.fifa.com
+484262,MARKO FARJI,FWD,Iraq,3,,,,api.fifa.com
+332946,MARQUINHOS,DEF,Brazil,5,,,,api.fifa.com
+430609,MATHEUS CUNHA,FWD,Brazil,5,,,,api.fifa.com
+441148,MATHEUS NUNES,MID,Portugal,5,,,,api.fifa.com
+495046,MAURICIO,MID,Paraguay,5,,,,api.fifa.com
+479072,MERCHAS DOSKI,DEF,Iraq,3,,,,api.fifa.com
+416056,MESHAAL BARSHAM,GK,Qatar,3,,,,api.fifa.com
+416902,MOHAMED ABDELMONEIM,DEF,Egypt,3,,,,api.fifa.com
+512079,MOHAMED ALAA,GK,Egypt,5,,,,api.fifa.com
+408948,MOHAMED ELSHENAWY,GK,Egypt,5,,,,api.fifa.com
+408950,MOHAMED HANY,DEF,Egypt,5,,,,api.fifa.com
+407993,MOHAMED KANNO,MID,Saudi Arabia,3,,,,api.fifa.com
+498458,MOHAMED MANAI,FWD,Qatar,3,,,,api.fifa.com
+344654,MOHAMED SALAH,FWD,Egypt,5,,,,api.fifa.com
+489551,MOHAMMAD ABUALNADI,DEF,Jordan,3,,,,api.fifa.com
+520068,MOHAMMAD ABUGHOUSH,MID,Jordan,3,,,,api.fifa.com
+433526,MOHAMMAD ABUHASHEESH,DEF,Jordan,3,,,,api.fifa.com
+431208,MOHAMMAD ABUZRAIQ,FWD,Jordan,3,,,,api.fifa.com
+45191,MOHAMMAD ALDAOUD,MID,Jordan,3,,,,api.fifa.com
+512183,MOHAMMED ABU ALSHAMAT,DEF,Saudi Arabia,3,,,,api.fifa.com
+396885,MOHAMMED ALOWAIS,GK,Saudi Arabia,3,,,,api.fifa.com
+385070,MOHAMMED MUNTARI,FWD,Qatar,3,,,,api.fifa.com
+422968,MOHANAD ALI,FWD,Iraq,3,,,,api.fifa.com
+433469,MOHANAD LASHIN,MID,Egypt,4,,,,api.fifa.com
+479389,MOHANNAD ABUTAHA,MID,Jordan,3,,,,api.fifa.com
+416906,MOSTAFA SHOUBIR,GK,Egypt,5,,,,api.fifa.com
+483161,MOSTAFA ZICO,MID,Egypt,5,,,,api.fifa.com
+419303,MOTEB ALHARBI,DEF,Saudi Arabia,3,,,,api.fifa.com
+431211,MOUSA ALTAMARI,FWD,Jordan,3,,,,api.fifa.com
+434024,MUNAF YOUNUS,DEF,Iraq,3,,,,api.fifa.com
+436537,MUSAB ALJUWAYR,MID,Saudi Arabia,3,,,,api.fifa.com
+479056,MUSTAFA SAADOON,DEF,Iraq,3,,,,api.fifa.com
+485666,Maghnes AKLIOUCHE,MID,France,8,,,,api.fifa.com
+514188,Malick THIAW,DEF,Germany,4,,,,api.fifa.com
+448214,Malik TILLMAN,MID,USA,5,,,,api.fifa.com
+464055,Malo GUSTO,DEF,France,8,,,,api.fifa.com
+499800,Mamadou SARR,DEF,Senegal,4,,,,api.fifa.com
+485677,Manu KONE,MID,France,8,,,,api.fifa.com
+405178,Manuel AKANJI,DEF,Switzerland,6,,,,api.fifa.com
+228912,Manuel NEUER,GK,Germany,4,,,,api.fifa.com
+441623,Manuel UGARTE,MID,Uruguay,3,,,,api.fifa.com
+430735,Marc CUCURELLA,DEF,Spain,8,,,,api.fifa.com
+405841,Marc GUEHI,DEF,England,8,,,,api.fifa.com
+484728,Marc PUBILL,DEF,Spain,8,,,,api.fifa.com
+358241,Marcel SABITZER,MID,Austria,4,,,,api.fifa.com
+463287,Marco FRIEDL,DEF,Austria,4,,,,api.fifa.com
+482931,Marco PASALIC,FWD,Croatia,4,,,,api.fifa.com
+382739,Marcos LLORENTE,DEF,Spain,8,,,,api.fifa.com
+402934,Marcos SENESI,DEF/MID,Argentina,8,,,,api.fifa.com
+494625,Marcus HOLMGREN PEDERSEN,DEF,Norway,5,,,,api.fifa.com
+401470,Marcus RASHFORD,FWD,England,8,,,,api.fifa.com
+403109,Marcus THURAM,FWD,France,8,,,,api.fifa.com
+448174,Marin PONGRACIC,DEF,Croatia,4,,,,api.fifa.com
+380005,Mario PASALIC,MID,Croatia,4,,,,api.fifa.com
+448151,Mark FLEKKEN,GK,Netherlands,4,,,,api.fifa.com
+419077,Mark McKENZIE,DEF,USA,4,,,,api.fifa.com
+466844,Markhus LACROIX,DEF,Haiti,3,,,,api.fifa.com
+299200,Marko ARNAUTOVIC,FWD,Austria,4,,,,api.fifa.com
+423595,Marko STAMENIC,MID,New Zealand,3,,,,api.fifa.com
+402044,Marten DE ROON,MID,Netherlands,4,,,,api.fifa.com
+482774,Martin BATURINA,MID,Croatia,4,,,,api.fifa.com
+389740,Martin ERLIC,DEF,Croatia,4,,,,api.fifa.com
+489300,Martin EXPERIENCE,DEF,Haiti,3,,,,api.fifa.com
+400716,Martin ODEGAARD,MID,Norway,6,,,,api.fifa.com
+491228,Martin ZLOMISLIC,GK,Bosnia and Herzegovina,4,,,,api.fifa.com
+430754,Martin ZUBIMENDI,MID,Spain,8,,,,api.fifa.com
+484862,Marvin KELLER,GK,Switzerland,6,,,,api.fifa.com
+520039,Marvin SENAYA,DEF,Ghana,4,,,,api.fifa.com
+395760,Marwane SAADANE,DEF,Morocco,6,,,,api.fifa.com
+484012,Matej KOVAR,GK,Czechia,3,,,,api.fifa.com
+500038,Mateo CHAVEZ,DEF,Mexico,5,,,,api.fifa.com
+339987,Mateo KOVACIC,MID,Croatia,4,,,,api.fifa.com
+321697,Mathew LECKIE,FWD,Australia,2,,,,api.fifa.com
+339117,Mathew RYAN,GK,Australia,4,,,,api.fifa.com
+402893,Mathias OLIVERA,DEF,Uruguay,3,,,,api.fifa.com
+448390,Mathieu CHOINIERE,MID,Canada,5,,,,api.fifa.com
+494025,Matias FERNANDEZ-PARDO,FWD,Belgium,6,,,,api.fifa.com
+424422,Matias GALARZA,MID,Paraguay,5,,,,api.fifa.com
+402895,Matias VINA,DEF,Uruguay,3,,,,api.fifa.com
+483481,Mats WIEFFER,DEF,Netherlands,4,,,,api.fifa.com
+499913,Matt FREESE,GK,USA,5,,,,api.fifa.com
+448217,Matt TURNER,GK,USA,5,,,,api.fifa.com
+514171,Matthieu EPOLO,GK,Congo DR,4,,,,api.fifa.com
+433795,Mattias SVANBERG,MID,Sweden,4,,,,api.fifa.com
+486390,Max ARFSTEN,DEF,USA,5,,,,api.fifa.com
+368535,Max CROCOMBE,GK,New Zealand,3,,,,api.fifa.com
+405881,Maxence Lacroix,DEF,France,8,,,,api.fifa.com
+419100,Maxi ARAUJO,MID,Uruguay,3,,,,api.fifa.com
+448373,Maxim DE CUYPER,DEF,Belgium,6,,,,api.fifa.com
+331732,Maxime CREPEAU,GK,Canada,5,,,,api.fifa.com
+484850,Maximilian BEIER,FWD,Germany,4,,,,api.fifa.com
+504199,Mbekezeli MBOKAZI,DEF,South Africa,4,,,,api.fifa.com
+403236,Mehdi GHAYEDI,FWD,IR Iran,3,,,,api.fifa.com
+388475,Mehdi TAREMI,FWD,IR Iran,3,,,,api.fifa.com
+390535,Mehdi TORABI,MID,IR Iran,3,,,,api.fifa.com
+520070,Melvin MASTIL,GK,Algeria,4,,,,api.fifa.com
+336098,Memphis DEPAY,FWD,Netherlands,4,,,,api.fifa.com
+441179,Merih DEMIRAL,DEF,Türkiye,3,,,,api.fifa.com
+360498,Mert GUNOK,GK,Türkiye,3,,,,api.fifa.com
+430120,Mert MULDUR,DEF,Türkiye,3,,,,api.fifa.com
+426506,Meschack ELIA,FWD,Congo DR,4,,,,api.fifa.com
+261367,Michael BOXALL,DEF,New Zealand,3,,,,api.fifa.com
+401131,Michael Gregoritsch,FWD,Austria,4,,,,api.fifa.com
+485655,Michael OLISE,FWD,France,8,,,,api.fifa.com
+491269,Michael SVOBODA,DEF,Austria,4,,,,api.fifa.com
+390218,Michael WOUD,GK,New Zealand,3,,,,api.fifa.com
+433668,Michal SADILEK,MID,Czechia,3,,,,api.fifa.com
+433147,Michel AEBISCHER,MID,Switzerland,5,,,,api.fifa.com
+448140,Micky VAN DE VEN,DEF,Netherlands,4,,,,api.fifa.com
+369761,Miguel ALMIRON,MID,Paraguay,4,,,,api.fifa.com
+448332,Mike MAIGNAN,GK,France,8,,,,api.fifa.com
+499803,Mike PENDERS,GK,Belgium,6,,,,api.fifa.com
+430733,Mikel MERINO,MID,Spain,8,,,,api.fifa.com
+430751,Mikel OYARZABAL,FWD,Spain,8,,,,api.fifa.com
+390537,Milad MOHAMMADI,DEF,IR Iran,3,,,,api.fifa.com
+436599,Miles ROBINSON,DEF,USA,5,,,,api.fifa.com
+331149,Milos DEGENEK,DEF,Australia,4,,,,api.fifa.com
+493221,Miro MUHEIM,DEF,Switzerland,4,,,,api.fifa.com
+522842,Mladen JURKAS,GK,Bosnia and Herzegovina,4,,,,api.fifa.com
+477790,Mohamed AMOURA,FWD,Algeria,1,,,,api.fifa.com
+425607,Mohamed Amine BEN HMIDA,DEF,Tunisia,3,,,,api.fifa.com
+433600,Mohamed Amine TOUGAI,DEF,Algeria,4,,,,api.fifa.com
+479781,Mohamed HADJ MAHMOUD,MID,Tunisia,3,,,,api.fifa.com
+486259,Mohamed KONE,GK,Côte d'Ivoire,4,,,,api.fifa.com
+498806,Mohamed TOURE,FWD,Australia,4,,,,api.fifa.com
+482670,Mohammad GHORBANI,MID,IR Iran,3,,,,api.fifa.com
+448497,Mohammad MOHEBBI,MID,IR Iran,3,,,,api.fifa.com
+466585,Moise BOMBITO,DEF,Canada,5,,,,api.fifa.com
+428885,Moises CAICEDO,MID,Ecuador,4,,,,api.fifa.com
+419002,Moises RAMIREZ,GK,Ecuador,4,,,,api.fifa.com
+484003,Mojmir CHYTIL,FWD,Czechia,3,,,,api.fifa.com
+433380,Montassar TALBI,DEF,Tunisia,3,,,,api.fifa.com
+492716,Morgan ROGERS,MID,England,8,,,,api.fifa.com
+441362,Mortadha BEN OUANES,DEF,Tunisia,3,,,,api.fifa.com
+433067,Morten Thorsby,MID,Norway,6,,,,api.fifa.com
+448821,Mory DIAW,GK,Senegal,4,,,,api.fifa.com
+520245,Mouhib CHAMAKH,GK,Tunisia,3,,,,api.fifa.com
+430690,Moussa Niakhate,DEF,Senegal,4,,,,api.fifa.com
+506335,Moutaz NEFFATI,DEF,Tunisia,2,,,,api.fifa.com
+395755,Munir EL KAJOUI,GK,Morocco,6,,,,api.fifa.com
+433466,NABIL DONGA,MID,Egypt,5,,,,api.fifa.com
+403319,NASSER ALDAWSARI,MID,Saudi Arabia,3,,,,api.fifa.com
+419287,NAWAF ALAQIDI,GK,Saudi Arabia,3,,,,api.fifa.com
+430518,NAWAF BU WASHL,DEF,Saudi Arabia,3,,,,api.fifa.com
+395212,NELSON SEMEDO,DEF,Portugal,5,,,,api.fifa.com
+314197,NEYMAR JR,FWD,Brazil,3,,,,api.fifa.com
+433534,NIZAR ALRASHDAN,MID,Jordan,3,,,,api.fifa.com
+431230,NOOR ALRAWABDEH,MID,Jordan,3,,,,api.fifa.com
+483127,NOUR BANIATEYAH,GK,Jordan,3,,,,api.fifa.com
+401893,NUNO DA COSTA,MID,Cabo Verde,4,,,,api.fifa.com
+433195,NUNO MENDES,DEF,Portugal,5,,,,api.fifa.com
+379939,Nabil Bentaleb,MID,Algeria,4,,,,api.fifa.com
+520071,Nadhir BENBOUALI,FWD,Algeria,3,,,,api.fifa.com
+395471,Nadiem Amiri,MID,Germany,4,,,,api.fifa.com
+402925,Nahuel MOLINA,DEF,Argentina,8,,,,api.fifa.com
+419572,Nando PIJNAKER,DEF,New Zealand,3,,,,api.fifa.com
+336088,Nathan AKE,DEF,Netherlands,4,,,,api.fifa.com
+514166,Nathan NGOY,DEF,Belgium,5,,,,api.fifa.com
+433694,Nathan PATTERSON,DEF,Scotland,3,,,,api.fifa.com
+423941,Nathan SALIBA,MID,Canada,5,,,,api.fifa.com
+424119,Nathanael MBUKU,MID,Congo DR,4,,,,api.fifa.com
+511015,Nathaniel BROWN,DEF,Germany,3,,,,api.fifa.com
+485740,Neil EL AYNAOUI,MID,Morocco,6,,,,api.fifa.com
+486306,Nestory IRANKUNDA,FWD,Australia,4,,,,api.fifa.com
+494458,Ngalayel MUKAU,MID,Congo DR,4,,,,api.fifa.com
+398681,Ngolo KANTE,MID,France,8,,,,api.fifa.com
+498416,Nick WOLTEMADE,FWD,Germany,4,,,,api.fifa.com
+398509,Nico ELVEDI,DEF,Switzerland,6,,,,api.fifa.com
+430631,Nico GONZALEZ,MID,Argentina,8,,,,api.fifa.com
+463780,Nico OREILLY,DEF,England,8,,,,api.fifa.com
+441422,Nico PAZ,FWD,Argentina,8,,,,api.fifa.com
+430667,Nico SCHLOTTERBECK,DEF,Germany,2,,,,api.fifa.com
+447855,Nico WILLIAMS,FWD,Spain,8,,,,api.fifa.com
+402898,Nicolas DE LA CRUZ,MID,Uruguay,3,,,,api.fifa.com
+418795,Nicolas JACKSON,FWD,Senegal,4,,,,api.fifa.com
+310116,Nicolas OTAMENDI,DEF,Argentina,8,,,,api.fifa.com
+402261,Nicolas PEPE,FWD,Côte d'Ivoire,4,,,,api.fifa.com
+495349,Nicolas RASKIN,MID,Belgium,6,,,,api.fifa.com
+441088,Nicolas SEIWALD,MID,Austria,4,,,,api.fifa.com
+308322,Nicolas TAGLIAFICO,DEF,Argentina,8,,,,api.fifa.com
+482969,Nihad MUJAKIC,DEF,Bosnia and Herzegovina,4,,,,api.fifa.com
+485064,Niko SIGUR,DEF,Canada,5,,,,api.fifa.com
+489520,Nikola KATIC,DEF,Bosnia and Herzegovina,4,,,,api.fifa.com
+389753,Nikola Moro,MID,Croatia,4,,,,api.fifa.com
+482978,Nikola VASILJ,GK,Bosnia and Herzegovina,4,,,,api.fifa.com
+409191,Nikola VLASIC,MID,Croatia,4,,,,api.fifa.com
+448312,Nilson ANGULO,FWD,Ecuador,4,,,,api.fifa.com
+491166,Nishan VELUPILLAY,FWD,Australia,4,,,,api.fifa.com
+463221,Nkosinathi SIBISI,DEF,South Africa,4,,,,api.fifa.com
+448153,Noa LANG,FWD,Netherlands,4,,,,api.fifa.com
+448127,Noah OKAFOR,FWD,Switzerland,6,,,,api.fifa.com
+486147,Noah SADIKI,MID,Congo DR,4,,,,api.fifa.com
+489732,Noni MADUEKE,FWD,England,8,,,,api.fifa.com
+411680,Noussair MAZRAOUI,DEF,Morocco,6,,,,api.fifa.com
+511875,ODEH FAKHOURY,FWD,Jordan,3,,,,api.fifa.com
+448586,OH Hyeongyu,FWD,Korea Republic,3,,,,api.fifa.com
+430476,OMAR MARMOUSH,FWD,Egypt,5,,,,api.fifa.com
+461177,Obed VARGAS,MID,Mexico,5,,,,api.fifa.com
+371345,Odiljon XAMROBEKOV,MID,Uzbekistan,3,,,,api.fifa.com
+477825,Odilon KOSSOUNOU,DEF,Côte d'Ivoire,4,,,,api.fifa.com
+486076,Oguz AYDIN,FWD,Türkiye,3,,,,api.fifa.com
+306538,Oliver Baumann,GK,Germany,4,,,,api.fifa.com
+448203,Ollie WATKINS,FWD,England,8,,,,api.fifa.com
+502245,Olwethu MAKHANYA,DEF,South Africa,4,,,,api.fifa.com
+431202,Omar ALDERETE,DEF,Paraguay,5,,,,api.fifa.com
+433367,Omar Rekik,DEF,Tunisia,3,,,,api.fifa.com
+372090,Orbelin PINEDA,MID,Mexico,5,,,,api.fifa.com
+373235,Orjan NYLAND,GK,Norway,6,,,,api.fifa.com
+433118,Orkun KOKCU,MID,Türkiye,3,,,,api.fifa.com
+494531,Orlando GILL,GK,Paraguay,5,,,,api.fifa.com
+441241,Orlando MOSQUERA,GK,Panama,3,,,,api.fifa.com
+477470,Oscar BOBB,MID,Norway,6,,,,api.fifa.com
+479080,Oston URUNOV,MID,Uzbekistan,3,,,,api.fifa.com
+419223,Oswin APPOLLIS,FWD,South Africa,4,,,,api.fifa.com
+371348,Otabek Shukurov,MID,Uzbekistan,3,,,,api.fifa.com
+477777,Oumar DIAKITE,FWD,Côte d'Ivoire,4,,,,api.fifa.com
+398680,Ousmane DEMBELE,FWD,France,8,,,,api.fifa.com
+477802,Ousmane DIOMANDE,DEF,Côte d'Ivoire,4,,,,api.fifa.com
+477817,Oussama BENBOT,GK,Algeria,4,,,,api.fifa.com
+463817,Owen GOODMAN,GK,Canada,5,,,,api.fifa.com
+406249,Ozan KABAK,DEF,Türkiye,3,,,,api.fifa.com
+402817,PAIK Seungho,MID,Korea Republic,3,,,,api.fifa.com
+479316,PARK Jinseob,DEF,Korea Republic,3,,,,api.fifa.com
+423646,PEDRI,MID,Spain,8,,,,api.fifa.com
+416051,PEDRO MIGUEL,DEF,Qatar,3,,,,api.fifa.com
+418548,PEDRO NETO,FWD,Portugal,5,,,,api.fifa.com
+477770,PICO LOPES,DEF,Cabo Verde,4,,,,api.fifa.com
+431788,Pape GUEYE,MID,Senegal,4,,,,api.fifa.com
+418798,Pape Matar SARR,MID,Senegal,4,,,,api.fifa.com
+430834,Parfait GUIAGON,MID,Côte d'Ivoire,4,,,,api.fifa.com
+484848,Pascal GROSS,MID,Germany,4,,,,api.fifa.com
+448825,Pathe CISS,MID,Senegal,4,,,,api.fifa.com
+494557,Patrick BEACH,GK,Australia,4,,,,api.fifa.com
+483442,Patrick BERG,MID,Norway,6,,,,api.fifa.com
+441065,Patrick PENTZ,GK,Austria,4,,,,api.fifa.com
+463286,Patrick WIMMER,FWD,Austria,4,,,,api.fifa.com
+401481,Patrik Schick,FWD,Czechia,3,,,,api.fifa.com
+474973,Pau CUBARSI,DEF,Spain,8,,,,api.fifa.com
+331135,Paul Izzo,GK,Australia,4,,,,api.fifa.com
+498421,Paul OKON-ENGSTLER,MID,Australia,4,,,,api.fifa.com
+520036,Paul WANNER,MID,Austria,4,,,,api.fifa.com
+486082,Pavel SULC,FWD,Czechia,3,,,,api.fifa.com
+448507,Payam NIAZMAND,GK,IR Iran,3,,,,api.fifa.com
+430144,Pedro PORRO,DEF,Spain,8,,,,api.fifa.com
+424036,Pedro VITE,MID,Ecuador,4,,,,api.fifa.com
+389782,Pervis ESTUPINAN,DEF,Ecuador,4,,,,api.fifa.com
+389754,Petar Musa,FWD,Croatia,4,,,,api.fifa.com
+485066,Petar SUCIC,MID,Croatia,4,,,,api.fifa.com
+372243,Philipp Lienhart,DEF,Austria,4,,,,api.fifa.com
+463288,Phillip MWENE,DEF,Austria,4,,,,api.fifa.com
+424031,Piero HINCAPIE,DEF,Ecuador,4,,,,api.fifa.com
+514401,Prince ADU,FWD,Ghana,4,,,,api.fifa.com
+493970,Promise DAVID,FWD,Canada,5,,,,api.fifa.com
+484859,Quinten TIMBER,MID,Netherlands,3,,,,api.fifa.com
+418550,RAFAEL LEAO,FWD,Portugal,5,,,,api.fifa.com
+384850,RAJAEI AYED,MID,Jordan,3,,,,api.fifa.com
+344661,RAMY RABIA,DEF,Egypt,5,,,,api.fifa.com
+433872,RAPHINHA,FWD,Brazil,3,,,,api.fifa.com
+475036,RAYAN,FWD,Brazil,5,,,,api.fifa.com
+396158,REBIN SULAKA,DEF,Iraq,3,,,,api.fifa.com
+489704,RENATO VEIGA,DEF,Portugal,5,,,,api.fifa.com
+411375,RODRI,MID,Spain,8,,,,api.fifa.com
+430594,ROGER IBANEZ,DEF,Brazil,5,,,,api.fifa.com
+384752,RUBEN DIAS,DEF,Portugal,5,,,,api.fifa.com
+395216,RUBEN NEVES,MID,Portugal,5,,,,api.fifa.com
+448092,RUI SILVA,GK,Portugal,5,,,,api.fifa.com
+355642,RYAN MENDES,FWD,Cabo Verde,4,,,,api.fifa.com
+520246,Raed CHIKHAOUI,DEF,Tunisia,3,,,,api.fifa.com
+511009,Rafik BELGHALI,DEF,Algeria,4,,,,api.fifa.com
+384797,Ramin REZAEIAN,DEF,IR Iran,3,,,,api.fifa.com
+433679,Ramiz ZERROUKI,MID,Algeria,4,,,,api.fifa.com
+463125,Ramon SOSA,MID,Paraguay,5,,,,api.fifa.com
+395113,Ramy BENSEBAINI,DEF,Algeria,4,,,,api.fifa.com
+336459,Rani Khedira,MID,Tunisia,3,,,,api.fifa.com
+356731,Raul JIMENEZ,FWD,Mexico,5,,,,api.fifa.com
+485070,Raul RANGEL,GK,Mexico,5,,,,api.fifa.com
+431858,Rayan AIT-NOURI,DEF,Algeria,4,,,,api.fifa.com
+431861,Rayan CHERKI,MID,France,8,,,,api.fifa.com
+520247,Rayan ELLOUMI,FWD,Tunisia,3,,,,api.fifa.com
+485767,Redouane HALHAL,DEF,Morocco,6,,,,api.fifa.com
+439641,Reece JAMES,DEF,England,7,,,,api.fifa.com
+486161,Relebohile MOFOKENG,FWD,South Africa,4,,,,api.fifa.com
+402021,Remo FREULER,MID,Switzerland,6,,,,api.fifa.com
+275917,Ricardo Ade,DEF,Haiti,3,,,,api.fifa.com
+395059,Ricardo GOSS,GK,South Africa,4,,,,api.fifa.com
+419082,Ricardo PEPI,FWD,USA,5,,,,api.fifa.com
+313559,Ricardo RODRIGUEZ,DEF,Switzerland,6,,,,api.fifa.com
+473050,Richard RIOS,MID,Colombia,5,,,,api.fifa.com
+431696,Richie LARYEA,DEF,Canada,5,,,,api.fifa.com
+398569,Riechedly Bazoer,DEF,Curaçao,3,,,,api.fifa.com
+391646,Ritsu DOAN,MID,Japan,4,,,,api.fifa.com
+379942,Riyad Mahrez,FWD,Algeria,4,,,,api.fifa.com
+403585,Roberto ALVARADO,FWD,Mexico,5,,,,api.fifa.com
+486080,Robin HRANAC,DEF,Czechia,3,,,,api.fifa.com
+464127,Robin RISSER,GK,France,8,,,,api.fifa.com
+506028,Robin ROEFS,GK,Netherlands,4,,,,api.fifa.com
+344582,Roderick MILLER,DEF,Panama,3,,,,api.fifa.com
+332897,Rodrigo AGUIRRE,FWD,Uruguay,3,,,,api.fifa.com
+386538,Rodrigo BENTANCUR,MID,Uruguay,3,,,,api.fifa.com
+428882,Rodrigo DE PAUL,MID,Argentina,8,,,,api.fifa.com
+419142,Rodrigo ZALAZAR,MID,Uruguay,3,,,,api.fifa.com
+463283,Romano SCHMID,MID,Austria,4,,,,api.fifa.com
+358112,Romelu LUKAKU,FWD,Belgium,6,,,,api.fifa.com
+419101,Ronald ARAUJO,DEF,Uruguay,1,,,,api.fifa.com
+395986,Ronwen WILLIAMS,GK,South Africa,4,,,,api.fifa.com
+406595,Roozbeh CHESHMI,MID,IR Iran,3,,,,api.fifa.com
+466361,Roshon VAN EIJMA,DEF,Curaçao,3,,,,api.fifa.com
+442433,Ross STEWART,FWD,Scotland,3,,,,api.fifa.com
+485664,Ruben PROVIDENCE,FWD,Haiti,3,,,,api.fifa.com
+448131,Ruben VARGAS,FWD,Switzerland,6,,,,api.fifa.com
+484303,Ruslanbek JIYANOV,MID,Uzbekistan,3,,,,api.fifa.com
+371415,Rustam ASHURMATOV,DEF,Uzbekistan,3,,,,api.fifa.com
+430097,Ryan Christie,MID,Scotland,3,,,,api.fifa.com
+430176,Ryan GRAVENBERCH,MID,Netherlands,4,,,,api.fifa.com
+336641,Ryan THOMAS,MID,New Zealand,3,,,,api.fifa.com
+431219,SAED ALROSAN,DEF,Jordan,3,,,,api.fifa.com
+419461,SALAH ZAKARIA,GK,Qatar,3,,,,api.fifa.com
+499102,SALEEM OBAID,DEF,Jordan,3,,,,api.fifa.com
+425804,SALEH ALSHEHRI,FWD,Saudi Arabia,3,,,,api.fifa.com
+339745,SALEM ALDAWSARI,FWD,Saudi Arabia,3,,,,api.fifa.com
+491216,SAMU COSTA,DEF,Portugal,5,,,,api.fifa.com
+419281,SAUD ABDULHAMID,DEF,Saudi Arabia,3,,,,api.fifa.com
+429608,SEOL Youngwoo,DEF,Korea Republic,3,,,,api.fifa.com
+477832,SIDNY LOPES CABRAL,DEF,Cabo Verde,3,,,,api.fifa.com
+307849,SON Heungmin,FWD,Korea Republic,3,,,,api.fifa.com
+402820,SONG Bumkeun,GK,Korea Republic,3,,,,api.fifa.com
+477847,STEVEN MOREIRA,DEF,Cabo Verde,4,,,,api.fifa.com
+297266,STOPIRA,DEF,Cabo Verde,4,,,,api.fifa.com
+386387,SULTAN ALBRAKE,DEF,Qatar,3,,,,api.fifa.com
+494800,SULTAN MANDASH,FWD,Saudi Arabia,3,,,,api.fifa.com
+372294,Sabri BEN HESSEN,GK,Tunisia,3,,,,api.fifa.com
+353790,Sadio MANE,FWD,Senegal,4,,,,api.fifa.com
+371736,Saeid EZATOLAHI,MID,IR Iran,3,,,,api.fifa.com
+448505,Saleh HARDANI,DEF,IR Iran,3,,,,api.fifa.com
+389907,Salih OZCAN,MID,Türkiye,3,,,,api.fifa.com
+411644,Saman GHODDOS,MID,IR Iran,3,,,,api.fifa.com
+485063,Samed BAZDAR,FWD,Bosnia and Herzegovina,4,,,,api.fifa.com
+484072,Samet AKAYDIN,DEF,Türkiye,3,,,,api.fifa.com
+511010,Samir CHERGUI,DEF,Algeria,4,,,,api.fifa.com
+505097,Samir EL MOURABET,MID,Morocco,6,,,,api.fifa.com
+433076,Samuel Moutoussamy,MID,Congo DR,4,,,,api.fifa.com
+504200,Samukele KABINI,DEF,South Africa,4,,,,api.fifa.com
+404645,Sander BERGE,MID,Norway,6,,,,api.fifa.com
+514479,Sander TANGVIK,GK,Norway,6,,,,api.fifa.com
+315614,Santiago ARIAS,DEF,Colombia,5,,,,api.fifa.com
+402904,Santiago BUENO,DEF,Uruguay,3,,,,api.fifa.com
+430759,Santiago GIMENEZ,FWD,Mexico,5,,,,api.fifa.com
+402897,Santiago MELE,GK,Uruguay,3,,,,api.fifa.com
+390209,Sarpreet SINGH,MID,New Zealand,3,,,,api.fifa.com
+430100,Sasa KALAJDZIC,FWD,Austria,4,,,,api.fifa.com
+442431,Scott MCKENNA,DEF,Scotland,3,,,,api.fifa.com
+433787,Scott McTominay,MID,Scotland,3,,,,api.fifa.com
+376230,Sead KOLASINAC,DEF,Bosnia and Herzegovina,4,,,,api.fifa.com
+499912,Sebastian BERHALTER,MID,USA,5,,,,api.fifa.com
+419108,Sebastian CACERES,DEF,Uruguay,3,,,,api.fifa.com
+504502,Sebastian TOUNEKTI,MID,Tunisia,3,,,,api.fifa.com
+405175,Seko Fofana,MID,Côte d'Ivoire,4,,,,api.fifa.com
+495348,Senne LAMMENS,GK,Belgium,6,,,,api.fifa.com
+406280,Sergino DEST,DEF,USA,5,,,,api.fifa.com
+368664,Sergio ROCHET,GK,Uruguay,3,,,,api.fifa.com
+481180,Shahriyar MOGHANLOO,FWD,IR Iran,3,,,,api.fifa.com
+466350,Sherel FLORANUS,DEF,Curaçao,3,,,,api.fifa.com
+464897,Sherzod ESANOV,MID,Uzbekistan,3,,,,api.fifa.com
+479075,Sherzod NASRULLAEV,DEF,Uzbekistan,3,,,,api.fifa.com
+390541,Shogo TANIGUCHI,DEF,Japan,4,,,,api.fifa.com
+346743,Shoja KHALILZADEH,DEF,IR Iran,3,,,,api.fifa.com
+485379,Shurandy SAMBO,DEF,Curaçao,3,,,,api.fifa.com
+448569,Shuto MACHINO,FWD,Japan,3,,,,api.fifa.com
+356412,Silvan WIDMER,DEF,Switzerland,6,,,,api.fifa.com
+477778,Simon ADINGRA,FWD,Côte d'Ivoire,4,,,,api.fifa.com
+477835,Simon BANZA,FWD,Congo DR,4,,,,api.fifa.com
+494246,Sipho CHAINE,GK,South Africa,4,,,,api.fifa.com
+372266,Sofyan AMRABAT,MID,Morocco,6,,,,api.fifa.com
+489696,Sondre LANGAS,DEF,Norway,6,,,,api.fifa.com
+424056,Sontje HANSEN,FWD,Curaçao,3,,,,api.fifa.com
+433426,Soufiane RAHIMI,FWD,Morocco,6,,,,api.fifa.com
+390475,Sphephelo SITHOLE,MID,South Africa,3,,,,api.fifa.com
+441067,Stefan POSCH,DEF,Austria,4,,,,api.fifa.com
+514334,Stepan CHALOUPEK,DEF,Czechia,3,,,,api.fifa.com
+433635,Stephen EUSTAQUIO,MID,Canada,5,,,,api.fifa.com
+504329,Steve KAPUADI,DEF,Congo DR,4,,,,api.fifa.com
+489521,Stjepan RADELJIC,DEF,Bosnia and Herzegovina,4,,,,api.fifa.com
+486639,TAHSIN MOHAMMED,FWD,Qatar,3,,,,api.fifa.com
+506124,TAREK ALAA,DEF,Egypt,5,,,,api.fifa.com
+494314,TELMO ARCANJO,MID,Cabo Verde,3,,,,api.fifa.com
+492358,TOMAS ARAUJO,DEF,Portugal,5,,,,api.fifa.com
+363863,TREZEGUET,FWD,Egypt,5,,,,api.fifa.com
+514202,Taha ALI,FWD,Sweden,4,,,,api.fifa.com
+485347,Tahith CHONG,MID,Curaçao,3,,,,api.fifa.com
+430138,Tajon BUCHANAN,FWD,Canada,5,,,,api.fifa.com
+403304,Takefusa KUBO,MID,Japan,2,,,,api.fifa.com
+403289,Takehiro TOMIYASU,DEF,Japan,4,,,,api.fifa.com
+486929,Tani OLUWASEYI,FWD,Canada,5,,,,api.fifa.com
+484022,Tarik MUHAREMOVIC,DEF,Bosnia and Herzegovina,3,,,,api.fifa.com
+403616,Teboho MOKOENA,MID,South Africa,3,,,,api.fifa.com
+518200,Tete YENGI,FWD,Australia,4,,,,api.fifa.com
+448149,Teun KOOPMEINERS,MID,Netherlands,4,,,,api.fifa.com
+510850,Thabang MATULUDI,DEF,South Africa,4,,,,api.fifa.com
+494248,Thalente MBATHA,MID,South Africa,4,,,,api.fifa.com
+463234,Thapelo MASEKO,FWD,South Africa,4,,,,api.fifa.com
+494627,Thelo AASGAARD,MID,Norway,6,,,,api.fifa.com
+395984,Themba ZWANE,MID,South Africa,1,,,,api.fifa.com
+441317,Theo BONGONDA,MID,Congo DR,4,,,,api.fifa.com
+408042,Theo HERNANDEZ,DEF,France,8,,,,api.fifa.com
+418975,Thiago ALMADA,FWD,Argentina,8,,,,api.fifa.com
+358106,Thibaut COURTOIS,GK,Belgium,6,,,,api.fifa.com
+358122,Thomas MEUNIER,DEF,Belgium,6,,,,api.fifa.com
+369089,Thomas PARTEY,MID,Ghana,3,,,,api.fifa.com
+483526,Tijjani REIJNDERS,MID,Netherlands,4,,,,api.fifa.com
+331463,Tim PAYNE,DEF,New Zealand,3,,,,api.fifa.com
+339510,Tim REAM,DEF,USA,5,,,,api.fifa.com
+411443,Timothy CASTAGNE,DEF,Belgium,6,,,,api.fifa.com
+486196,Timothy FAYULU,GK,Congo DR,4,,,,api.fifa.com
+406304,Timothy WEAH,FWD,USA,5,,,,api.fifa.com
+483961,Tomas CHORY,FWD,Czechia,3,,,,api.fifa.com
+441167,Tomas HOLES,DEF,Czechia,3,,,,api.fifa.com
+418747,Tomas RODRIGUEZ,FWD,Panama,3,,,,api.fifa.com
+404885,Tomas SOUCEK,MID,Czechia,3,,,,api.fifa.com
+274102,Tommy SMITH,DEF,New Zealand,3,,,,api.fifa.com
+511710,Tomoki HAYAKAWA,GK,Japan,4,,,,api.fifa.com
+485065,Toni FRUK,MID,Croatia,4,,,,api.fifa.com
+491244,Torbjorn HEGGEM,DEF,Norway,6,,,,api.fifa.com
+439691,Trevoh CHALOBAH,DEF,England,7,,,,api.fifa.com
+466382,Trevor DOORNBUSCH,GK,Curaçao,3,,,,api.fifa.com
+504193,Tshepang MOREMI,FWD,South Africa,4,,,,api.fifa.com
+430401,Tsuyoshi Watanabe,DEF,Japan,4,,,,api.fifa.com
+390238,Tyler ADAMS,MID,USA,5,,,,api.fifa.com
+482775,Tyler BINDON,DEF,New Zealand,3,,,,api.fifa.com
+523007,Tyler FLETCHER,MID,Scotland,3,,,,api.fifa.com
+506473,Tyrese NOSLIN,FWD,Curaçao,3,,,,api.fifa.com
+466370,Tyrick BODAK,GK,Curaçao,3,,,,api.fifa.com
+441181,Ugurcan CAKIR,GK,Türkiye,3,,,,api.fifa.com
+479084,Umar ESHMURODOV,DEF,Uzbekistan,3,,,,api.fifa.com
+430753,Unai SIMON,GK,Spain,8,,,,api.fifa.com
+479077,Utkir YUSUPOV,GK,Uzbekistan,3,,,,api.fifa.com
+405742,VINICIUS JUNIOR,FWD,Brazil,5,,,,api.fifa.com
+441149,VITINHA,MID,Portugal,5,,,,api.fifa.com
+364752,VOZINHA,GK,Cabo Verde,4,,,,api.fifa.com
+463661,Valentin BARCO,MID,Argentina,8,,,,api.fifa.com
+395283,Victor LINDELOF,DEF,Sweden,4,,,,api.fifa.com
+492859,Victor MUNOZ,FWD,Spain,8,,,,api.fifa.com
+483327,Viktor GYOKERES,FWD,Sweden,4,,,,api.fifa.com
+483264,Viktor JOHANSSON,GK,Sweden,4,,,,api.fifa.com
+397786,Virgil VAN DIJK,DEF,Netherlands,4,,,,api.fifa.com
+472908,Vladimir COUFAL,DEF,Czechia,3,,,,api.fifa.com
+358003,Vladimir DARIDA,MID,Czechia,3,,,,api.fifa.com
+482783,WAGNER PINA,DEF,Cabo Verde,4,,,,api.fifa.com
+396315,WEVERTON,GK,Brazil,5,,,,api.fifa.com
+433724,WILLY SEMEDO,MID,Cabo Verde,4,,,,api.fifa.com
+430658,Waldemar ANTON,DEF,Germany,4,,,,api.fifa.com
+483549,Warren ZAIRE-EMERY,MID,France,8,,,,api.fifa.com
+390259,Weston McKENNIE,MID,USA,5,,,,api.fifa.com
+430854,Wilfried SINGO,DEF,Côte d'Ivoire,4,,,,api.fifa.com
+498439,Wilguens PAUGAIN,DEF,Haiti,3,,,,api.fifa.com
+476345,Willer DITTA,DEF,Colombia,5,,,,api.fifa.com
+419177,William SALIBA,DEF,France,8,,,,api.fifa.com
+448290,Willian PACHO,DEF,Ecuador,4,,,,api.fifa.com
+405879,Wilson Isidor,FWD,Haiti,3,,,,api.fifa.com
+485409,Woodensky PIERRE,MID,Haiti,3,,,,api.fifa.com
+448159,Wout WEGHORST,FWD,Netherlands,4,,,,api.fifa.com
+385531,Xaver Schlager,MID,Austria,4,,,,api.fifa.com
+448585,YANG Hyunjun ,MID,Korea Republic,3,,,,api.fifa.com
+494313,YANNICK SEMEDO,MID,Cabo Verde,4,,,,api.fifa.com
+369267,YASSER IBRAHIM,DEF,Egypt,5,,,,api.fifa.com
+431225,YAZAN ALARAB,DEF,Jordan,3,,,,api.fifa.com
+397894,YAZEED ABULAILA,GK,Jordan,3,,,,api.fifa.com
+464458,YOUSSEF AMYN,MID,Iraq,3,,,,api.fifa.com
+419463,YUSUF ABDURISAG,FWD,Qatar,3,,,,api.fifa.com
+405873,Yahia Fofana,GK,Côte d'Ivoire,4,,,,api.fifa.com
+463489,Yaimar MEDINA,DEF,Ecuador,4,,,,api.fifa.com
+510922,Yan DIOMANDE,FWD,Côte d'Ivoire,4,,,,api.fifa.com
+419189,Yan Valery,DEF,Tunisia,3,,,,api.fifa.com
+489688,Yasin AYARI,MID,Sweden,4,,,,api.fifa.com
+506483,Yassin FORTUNE,FWD,Haiti,3,,,,api.fifa.com
+356956,Yassine BOUNOU,GK,Morocco,6,,,,api.fifa.com
+433631,Yassine TITRAOUI,MID,Algeria,4,,,,api.fifa.com
+494277,Yehvann DIOUF,GK,Senegal,4,,,,api.fifa.com
+423658,Yeremy PINO,FWD,Spain,8,,,,api.fifa.com
+395552,Yerry MINA,DEF,Colombia,5,,,,api.fifa.com
+441316,Yoane WISSA,FWD,Congo DR,4,,,,api.fifa.com
+401444,Youri TIELEMANS,MID,Belgium,5,,,,api.fifa.com
+494742,Youssef BELAMMARI,DEF,Morocco,6,,,,api.fifa.com
+485503,Yuito SUZUKI,MID,Japan,4,,,,api.fifa.com
+405528,Yukinari Sugawara,DEF,Japan,4,,,,api.fifa.com
+406231,Yunus AKGUN,FWD,Türkiye,3,,,,api.fifa.com
+291372,Yuto NAGATOMO,DEF,Japan,4,,,,api.fifa.com
+402022,Yvon MVOGO,GK,Switzerland,6,,,,api.fifa.com
+484270,ZAID ISMAEL,MID,Iraq,3,,,,api.fifa.com
+434025,ZAID TAHSEEN,DEF,Iraq,3,,,,api.fifa.com
+434026,ZIDANE IQBAL,MID,Iraq,3,,,,api.fifa.com
+436538,ZIYAD ALJOHANI,MID,Saudi Arabia,3,,,,api.fifa.com
+433461,ZIZO,FWD,Egypt,5,,,,api.fifa.com
+485756,Zakaria EL OUAHDI,DEF,Morocco,6,,,,api.fifa.com
+448112,Zeki AMDOUNI,FWD,Switzerland,6,,,,api.fifa.com
+433072,Zeki CELIK,DEF,Türkiye,3,,,,api.fifa.com
+448369,Zeno DEBAST,DEF,Belgium,1,,,,api.fifa.com
+480983,Zineddine BELAID,DEF,Algeria,4,,,,api.fifa.com
+405530,Zion Suzuki,GK,Japan,4,,,,api.fifa.com

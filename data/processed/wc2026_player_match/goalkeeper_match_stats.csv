@@ -1,0 +1,628 @@
+match_id,player_id,player_name,team,opponent_team,starter,minutes_played,saves,shots_faced,goals_conceded_on_pitch,clean_sheet,penalty_saves,punches,data_source
+1,1,José Raúl Rangel,Mexico,South Africa,1,92,2,0,0,1,0,0,api.fifa.com+espn.com
+1,12,Carlos Acevedo,Mexico,South Africa,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+1,13,Francisco Guillermo Ochoa,Mexico,South Africa,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+1,27,Ronwen Hayden Williams,South Africa,Mexico,1,92,2,0,2,0,0,1,api.fifa.com+espn.com
+1,42,Sipho Justin Chaine,South Africa,Mexico,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+1,48,Stuart Ricardo Goss,South Africa,Mexico,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+2,53,Seunggyu Kim,Korea Republic,Czechia,1,96,4,0,1,0,0,0,api.fifa.com+espn.com
+2,64,Bumkeun Song,Korea Republic,Czechia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+2,73,Hyeonwoo Jo,Korea Republic,Czechia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+2,79,Mat ě j Kovar,Czechia,Korea Republic,1,96,4,0,2,0,0,0,api.fifa.com+espn.com
+2,94,Jind ř ich Stanek,Czechia,Korea Republic,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+2,101,Lukáš Hornicek,Czechia,Korea Republic,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+3,120,Maxime Crepeau,Canada,Bosnia and Herzegovina,1,93,2,0,1,0,0,0,api.fifa.com+espn.com
+3,105,Dayne Tristan St. Clair,Canada,Bosnia and Herzegovina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+3,122,Owen Olamidayo Goodman,Canada,Bosnia and Herzegovina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+3,131,Nikola Vasilj,Bosnia and Herzegovina,Canada,1,93,1,0,1,0,0,0,api.fifa.com+espn.com
+3,142,Mladen Jurkas,Bosnia and Herzegovina,Canada,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+3,152,Martin Zlomislic,Bosnia and Herzegovina,Canada,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+4,336,Matthew Andrew Geary Freese,USA,Paraguay,1,98,0,0,1,0,0,0,api.fifa.com+espn.com
+4,313,Matthew Charles Turner,USA,Paraguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+4,337,Christopher Keith Brady,USA,Paraguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+4,350,Orlando Daniel Gill,Paraguay,USA,1,98,3,0,4,0,0,0,api.fifa.com+espn.com
+4,339,Roberto Junior Fernandez,Paraguay,USA,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+4,360,Gastón Hernán Olveira,Paraguay,USA,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+5,157,Ibrahim Mahmoud Abunada,Qatar,Switzerland,1,94,5,0,1,0,0,0,api.fifa.com+espn.com
+5,177,Zakaria Salah Zakaria,Qatar,Switzerland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+5,178,Aissa Meshaal Barsham,Qatar,Switzerland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+5,183,Gregor Kobel,Switzerland,Qatar,1,94,3,0,1,0,0,0,api.fifa.com+espn.com
+5,194,Yvon Landry Mvogo,Switzerland,Qatar,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+5,203,Marvin Keller,Switzerland,Qatar,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+6,209,Ramsés Alisson,Brazil,Morocco,1,90,2,0,1,0,0,0,api.fifa.com+espn.com
+6,220,Weverton Weverton,Brazil,Morocco,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+6,231,Ederson Ederson,Brazil,Morocco,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+6,235,Yassine Bounou,Morocco,Brazil,1,90,4,0,1,0,0,0,api.fifa.com+espn.com
+6,246,Monir El Kajoui,Morocco,Brazil,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+6,256,Ahmed Reda Tagnaouti,Morocco,Brazil,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+7,261,Johny Placide,Haiti,Scotland,1,95,1,0,1,0,0,0,api.fifa.com+espn.com
+7,272,Alexandre Jr Pierre,Haiti,Scotland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+7,283,Josue Duverger,Haiti,Scotland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+7,287,Angus Fraser James Gunn,Scotland,Haiti,1,95,2,0,0,1,0,0,api.fifa.com+espn.com
+7,298,Liam Patrick Kelly,Scotland,Haiti,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+7,307,Craig Sinclair Gordon,Scotland,Haiti,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+8,382,Patrick Thomas Beach,Australia,Türkiye,1,90,8,0,0,1,0,0,api.fifa.com+espn.com
+8,365,Mathew David Ryan,Australia,Türkiye,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+8,376,Paul David Izzo,Australia,Türkiye,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+8,413,Ugurcan Cakir,Türkiye,Australia,1,90,2,0,2,0,0,0,api.fifa.com+espn.com
+8,391,Fehmi Mert Gunok,Türkiye,Australia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+8,402,Altay Bayindir,Türkiye,Australia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+9,417,Manuel Peter Neuer,Germany,Curaçao,1,90,1,0,1,0,0,0,api.fifa.com+espn.com
+9,428,Oliver Baumann,Germany,Curaçao,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+9,437,Alexander Nuebel,Germany,Curaçao,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+9,443,Eloy Victor Room,Curaçao,Germany,1,90,4,0,7,0,0,0,api.fifa.com+espn.com
+9,467,Tyrick Jeremy Bodak,Curaçao,Germany,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+9,468,Trevor Irving Doornbusch,Curaçao,Germany,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+10,521,Bart Verbruggen,Netherlands,Japan,1,91,1,0,2,0,0,0,api.fifa.com+espn.com
+10,533,Robin Gerardus Petrus Roefs,Netherlands,Japan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+10,543,Mark Maria Hubertus Flekken,Netherlands,Japan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+10,547,Zion Suzuki,Japan,Netherlands,1,91,4,0,2,0,0,0,api.fifa.com+espn.com
+10,558,Keisuke Osako,Japan,Netherlands,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+10,569,Tomoki Hayakawa,Japan,Netherlands,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+11,469,Yahia Fofana,Côte d'Ivoire,Ecuador,1,90,1,0,0,1,0,0,api.fifa.com+espn.com
+11,484,Mohamed Kone,Côte d'Ivoire,Ecuador,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+11,491,Alban-Marc Lafont,Côte d'Ivoire,Ecuador,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+11,495,Hernán Ismael Galindez,Ecuador,Côte d'Ivoire,1,90,3,0,1,0,0,0,api.fifa.com+espn.com
+11,506,Wellington Moisés Ramirez,Ecuador,Côte d'Ivoire,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+11,516,Gonzalo Roberto Valle,Ecuador,Côte d'Ivoire,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+12,595,Bo Kristoffer Nordfeldt,Sweden,Tunisia,1,96,1,0,1,0,0,0,api.fifa.com+espn.com
+12,573,Jacob Mikael Widell Zetterstrom,Sweden,Tunisia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+12,584,Tobias Viktor Johansson,Sweden,Tunisia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+12,599,Abdelmouhib Chamakh,Tunisia,Sweden,1,96,1,0,5,0,0,0,api.fifa.com+espn.com
+12,614,Aymen Dahmen,Tunisia,Sweden,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+12,620,Sabri Ben Hessen,Tunisia,Sweden,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+13,751,Unai Simon,Spain,Cabo Verde,1,93,1,0,0,1,0,0,api.fifa.com+espn.com
+13,729,David Raya,Spain,Cabo Verde,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+13,741,Joan Garcia,Spain,Cabo Verde,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+13,755,José Vozinha,Cabo Verde,Spain,1,93,7,0,0,1,0,0,api.fifa.com+espn.com
+13,766,Salomão Marcio,Cabo Verde,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+13,777,Joaquim Cj Dos Santos,Cabo Verde,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+14,625,Thibaut Nicolas Courtois,Belgium,Egypt,1,90,2,0,1,0,0,0,api.fifa.com+espn.com
+14,636,Senne Lammens,Belgium,Egypt,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+14,637,Mike Louis Penders,Belgium,Egypt,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+14,673,Abdelaziz Mohame Mostafa,Egypt,Belgium,1,90,3,0,1,0,0,0,api.fifa.com+espn.com
+14,651,Elsayed Mohamed Mohamed Elshenawy,Egypt,Belgium,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+14,666,Mohamed Soliman Mahdy Soliman,Egypt,Belgium,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+14,676,Alaaeldin Soliman Mohamed Alaa,Egypt,Belgium,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+15,801,Khalil Mohammed Alowais,Saudi Arabia,Uruguay,1,92,9,0,1,0,0,0,api.fifa.com+espn.com
+15,781,Dhahi Nawaf Alaqidi,Saudi Arabia,Uruguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+15,802,Ali Ahmed,Saudi Arabia,Uruguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+15,829,Nestor Fernando Muslera,Uruguay,Saudi Arabia,1,92,2,0,1,0,0,0,api.fifa.com+espn.com
+15,807,Sergio Ramón Rochet,Uruguay,Saudi Arabia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+15,818,Santiago Andres Mele,Uruguay,Saudi Arabia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+16,677,Ali Reza Beiranvand,IR Iran,New Zealand,1,92,6,0,2,0,0,0,api.fifa.com+espn.com
+16,688,Seyedpayam Niazmand,IR Iran,New Zealand,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+16,698,Seyedhossein Hosseini,IR Iran,New Zealand,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+16,703,Maxime Teremoana Crocombe,New Zealand,IR Iran,1,92,2,0,2,0,0,0,api.fifa.com+espn.com
+16,714,Alexander Noah Paulsen,New Zealand,IR Iran,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+16,724,Michael Cornelis Woud,New Zealand,IR Iran,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+17,848,Mike Peterson Maignan,France,Senegal,1,96,2,0,1,0,0,0,api.fifa.com+espn.com
+17,833,Brice Lauriche Samba,France,Senegal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+17,855,Robin François Philippe Risser,France,Senegal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+17,874,Edouard Osoque Mendy,Senegal,France,1,96,5,0,3,0,0,0,api.fifa.com+espn.com
+17,859,Yehvann Djibril Victor Diouf,Senegal,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+17,881,Mory Diaw,Senegal,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+18,896,Hasan Hachim Jalal Hassan,Iraq,Norway,1,96,2,0,4,0,0,0,api.fifa.com+espn.com
+18,885,Talib Raheem Fahad Talib,Iraq,Norway,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+18,906,Basil Fadhil Ahmed,Iraq,Norway,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+18,911,Ørjan Haskjold Nyland,Norway,Iraq,1,96,0,0,1,0,0,0,api.fifa.com+espn.com
+18,922,Sander Tangvik,Norway,Iraq,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+18,923,Egil Selvik,Norway,Iraq,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+19,959,Damián Emiliano Martinez,Argentina,Algeria,1,90,0,0,0,1,0,0,api.fifa.com+espn.com
+19,937,Juan Agustín Musso,Argentina,Algeria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+19,948,Geronimo Rulli,Argentina,Algeria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+19,985,Luca Zinedine Zidane,Algeria,Argentina,1,90,3,0,3,0,0,0,api.fifa.com+espn.com
+19,963,Melvin Feycal Mastil,Algeria,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+19,978,Oussama Benbot,Algeria,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+20,989,Alexander Schlager,Austria,Jordan,1,102,3,0,1,0,0,0,api.fifa.com+espn.com
+20,1000,Florian Wiegele,Austria,Jordan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+20,1001,Patrick Pentz,Austria,Jordan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+20,1015,Mo'ien Hasan Yazeed Abulaila,Jordan,Austria,1,102,1,0,3,0,0,1,api.fifa.com+espn.com
+20,1026,Zaid Khaleel Nour Baniateyah,Jordan,Austria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+20,1036,Ra'ed Mahmoud Abdallah Alfakhori,Jordan,Austria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+21,1041,Diogo Diogo Costa,Portugal,Congo DR,1,92,1,0,1,0,0,0,api.fifa.com+espn.com
+21,1052,Pedro Jose Sa,Portugal,Congo DR,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+21,1062,Tiago Rui Silva,Portugal,Congo DR,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+21,1067,Lionel Nzau Mpasi,Congo DR,Portugal,1,92,0,0,1,0,0,0,api.fifa.com+espn.com
+21,1082,Timothy Bruce Munzoko Fayulu,Congo DR,Portugal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+21,1087,Matthieu Luka Epolo,Congo DR,Portugal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+22,1145,Jordan Lee Pickford,England,Croatia,1,90,3,0,2,0,0,0,api.fifa.com+espn.com
+22,1157,Dean Bradley Henderson,England,Croatia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+22,1167,James Harrington Trafford,England,Croatia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+22,1171,Dominik Livakovic,Croatia,England,1,90,7,0,4,0,0,0,api.fifa.com+espn.com
+22,1182,Ivor Pandur,Croatia,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+22,1193,Dominik Kotarski,Croatia,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+23,1197,Lawrence Ati Zigi,Ghana,Panama,1,99,1,0,0,1,0,0,api.fifa.com+espn.com
+23,1208,Joseph Tetteh Anang,Ghana,Panama,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+23,1212,Benjamin Asare,Ghana,Panama,0,44,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+23,1244,Orlando Mosquera,Panama,Ghana,1,99,2,0,1,0,0,0,api.fifa.com+espn.com
+23,1223,Luis Ricardo Mejia,Panama,Ghana,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+23,1234,Cesar Jair Samudio,Panama,Ghana,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+24,1093,Utkir Yusupov,Uzbekistan,Colombia,1,99,1,0,3,0,0,0,api.fifa.com+espn.com
+24,1104,Abduvakhid Nematov,Uzbekistan,Colombia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+24,1108,Botirali Ergashev,Uzbekistan,Colombia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+24,1130,Camilo Andres Vargas,Colombia,Uzbekistan,1,99,1,0,1,0,0,0,api.fifa.com+espn.com
+24,1119,David Ospina,Colombia,Uzbekistan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+24,1142,Álvaro David Montero,Colombia,Uzbekistan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+26,79,Mat ě j Kovar,Czechia,South Africa,1,90,3,0,1,0,0,0,api.fifa.com+espn.com
+26,94,Jind ř ich Stanek,Czechia,South Africa,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+26,101,Lukáš Hornicek,Czechia,South Africa,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+26,27,Ronwen Hayden Williams,South Africa,Czechia,1,90,2,0,1,0,0,1,api.fifa.com+espn.com
+26,42,Sipho Justin Chaine,South Africa,Czechia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+26,48,Stuart Ricardo Goss,South Africa,Czechia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+28,183,Gregor Kobel,Switzerland,Bosnia and Herzegovina,1,97,2,0,1,0,0,0,api.fifa.com+espn.com
+28,194,Yvon Landry Mvogo,Switzerland,Bosnia and Herzegovina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+28,203,Marvin Keller,Switzerland,Bosnia and Herzegovina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+28,131,Nikola Vasilj,Bosnia and Herzegovina,Switzerland,1,97,3,0,4,0,0,0,api.fifa.com+espn.com
+28,142,Mladen Jurkas,Bosnia and Herzegovina,Switzerland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+28,152,Martin Zlomislic,Bosnia and Herzegovina,Switzerland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+27,120,Maxime Crepeau,Canada,Qatar,1,92,0,0,0,1,0,0,api.fifa.com+espn.com
+27,105,Dayne Tristan St. Clair,Canada,Qatar,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+27,122,Owen Olamidayo Goodman,Canada,Qatar,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+27,157,Ibrahim Mahmoud Abunada,Qatar,Canada,1,92,4,0,6,0,0,0,api.fifa.com+espn.com
+27,177,Zakaria Salah Zakaria,Qatar,Canada,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+27,178,Aissa Meshaal Barsham,Qatar,Canada,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+25,1,José Raúl Rangel,Mexico,Korea Republic,1,90,2,0,0,1,0,0,api.fifa.com+espn.com
+25,12,Carlos Acevedo,Mexico,Korea Republic,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+25,13,Francisco Guillermo Ochoa,Mexico,Korea Republic,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+25,53,Seunggyu Kim,Korea Republic,Mexico,1,90,3,0,1,0,0,0,api.fifa.com+espn.com
+25,64,Bumkeun Song,Korea Republic,Mexico,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+25,73,Hyeonwoo Jo,Korea Republic,Mexico,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+31,336,Matthew Andrew Geary Freese,USA,Australia,1,96,2,0,0,1,0,0,api.fifa.com+espn.com
+31,313,Matthew Charles Turner,USA,Australia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+31,337,Christopher Keith Brady,USA,Australia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+31,382,Patrick Thomas Beach,Australia,USA,1,96,1,0,2,0,0,0,api.fifa.com+espn.com
+31,365,Mathew David Ryan,Australia,USA,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+31,376,Paul David Izzo,Australia,USA,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+30,287,Angus Fraser James Gunn,Scotland,Morocco,1,90,1,0,1,0,0,0,api.fifa.com+espn.com
+30,298,Liam Patrick Kelly,Scotland,Morocco,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+30,307,Craig Sinclair Gordon,Scotland,Morocco,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+30,235,Yassine Bounou,Morocco,Scotland,1,90,0,0,0,1,0,0,api.fifa.com+espn.com
+30,246,Monir El Kajoui,Morocco,Scotland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+30,256,Ahmed Reda Tagnaouti,Morocco,Scotland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+29,209,Ramsés Alisson,Brazil,Haiti,1,90,3,0,0,1,0,0,api.fifa.com+espn.com
+29,220,Weverton Weverton,Brazil,Haiti,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+29,231,Ederson Ederson,Brazil,Haiti,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+29,261,Johny Placide,Haiti,Brazil,1,90,2,0,3,0,0,0,api.fifa.com+espn.com
+29,272,Alexandre Jr Pierre,Haiti,Brazil,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+29,283,Josue Duverger,Haiti,Brazil,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+32,413,Ugurcan Cakir,Türkiye,Paraguay,1,91,1,0,1,0,0,0,api.fifa.com+espn.com
+32,391,Fehmi Mert Gunok,Türkiye,Paraguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+32,402,Altay Bayindir,Türkiye,Paraguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+32,350,Orlando Daniel Gill,Paraguay,Türkiye,1,91,5,0,0,1,0,0,api.fifa.com+espn.com
+32,339,Roberto Junior Fernandez,Paraguay,Türkiye,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+32,360,Gastón Hernán Olveira,Paraguay,Türkiye,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+35,521,Bart Verbruggen,Netherlands,Sweden,1,93,7,0,1,0,0,0,api.fifa.com+espn.com
+35,533,Robin Gerardus Petrus Roefs,Netherlands,Sweden,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+35,543,Mark Maria Hubertus Flekken,Netherlands,Sweden,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+35,595,Bo Kristoffer Nordfeldt,Sweden,Netherlands,1,93,2,0,5,0,0,0,api.fifa.com+espn.com
+35,573,Jacob Mikael Widell Zetterstrom,Sweden,Netherlands,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+35,584,Tobias Viktor Johansson,Sweden,Netherlands,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+33,417,Manuel Peter Neuer,Germany,Côte d'Ivoire,1,94,1,0,1,0,0,0,api.fifa.com+espn.com
+33,428,Oliver Baumann,Germany,Côte d'Ivoire,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+33,437,Alexander Nuebel,Germany,Côte d'Ivoire,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+33,469,Yahia Fofana,Côte d'Ivoire,Germany,1,94,5,0,2,0,0,1,api.fifa.com+espn.com
+33,484,Mohamed Kone,Côte d'Ivoire,Germany,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+33,491,Alban-Marc Lafont,Côte d'Ivoire,Germany,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+34,495,Hernán Ismael Galindez,Ecuador,Curaçao,1,91,3,0,0,1,0,0,api.fifa.com+espn.com
+34,506,Wellington Moisés Ramirez,Ecuador,Curaçao,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+34,516,Gonzalo Roberto Valle,Ecuador,Curaçao,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+34,443,Eloy Victor Room,Curaçao,Ecuador,1,91,15,0,0,1,0,0,api.fifa.com+espn.com
+34,467,Tyrick Jeremy Bodak,Curaçao,Ecuador,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+34,468,Trevor Irving Doornbusch,Curaçao,Ecuador,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+36,614,Aymen Dahmen,Tunisia,Japan,1,90,1,0,4,0,0,0,api.fifa.com+espn.com
+36,599,Abdelmouhib Chamakh,Tunisia,Japan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+36,620,Sabri Ben Hessen,Tunisia,Japan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+36,547,Zion Suzuki,Japan,Tunisia,1,90,0,0,0,1,0,0,api.fifa.com+espn.com
+36,558,Keisuke Osako,Japan,Tunisia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+36,569,Tomoki Hayakawa,Japan,Tunisia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+39,751,Unai Simon,Spain,Saudi Arabia,1,90,1,0,0,1,0,0,api.fifa.com+espn.com
+39,729,David Raya,Spain,Saudi Arabia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+39,741,Joan Garcia,Spain,Saudi Arabia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+39,801,Khalil Mohammed Alowais,Saudi Arabia,Spain,1,90,5,0,4,0,0,0,api.fifa.com+espn.com
+39,781,Dhahi Nawaf Alaqidi,Saudi Arabia,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+39,802,Ali Ahmed,Saudi Arabia,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+37,625,Thibaut Nicolas Courtois,Belgium,IR Iran,1,90,3,0,0,1,0,0,api.fifa.com+espn.com
+37,636,Senne Lammens,Belgium,IR Iran,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+37,637,Mike Louis Penders,Belgium,IR Iran,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+37,677,Ali Reza Beiranvand,IR Iran,Belgium,1,90,7,0,0,1,0,0,api.fifa.com+espn.com
+37,688,Seyedpayam Niazmand,IR Iran,Belgium,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+37,698,Seyedhossein Hosseini,IR Iran,Belgium,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+40,829,Nestor Fernando Muslera,Uruguay,Cabo Verde,1,93,2,0,2,0,0,0,api.fifa.com+espn.com
+40,807,Sergio Ramón Rochet,Uruguay,Cabo Verde,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+40,818,Santiago Andres Mele,Uruguay,Cabo Verde,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+40,755,José Vozinha,Cabo Verde,Uruguay,1,93,0,0,2,0,0,0,api.fifa.com+espn.com
+40,766,Salomão Marcio,Cabo Verde,Uruguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+40,777,Joaquim Cj Dos Santos,Cabo Verde,Uruguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+38,703,Maxime Teremoana Crocombe,New Zealand,Egypt,1,99,4,0,3,0,0,0,api.fifa.com+espn.com
+38,714,Alexander Noah Paulsen,New Zealand,Egypt,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+38,724,Michael Cornelis Woud,New Zealand,Egypt,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+38,673,Abdelaziz Mohame Mostafa,Egypt,New Zealand,1,99,4,0,1,0,0,0,api.fifa.com+espn.com
+38,651,Elsayed Mohamed Mohamed Elshenawy,Egypt,New Zealand,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+38,666,Mohamed Soliman Mahdy Soliman,Egypt,New Zealand,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+38,676,Alaaeldin Soliman Mohamed Alaa,Egypt,New Zealand,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+43,959,Damián Emiliano Martinez,Argentina,Austria,1,95,1,0,0,1,0,0,api.fifa.com+espn.com
+43,937,Juan Agustín Musso,Argentina,Austria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+43,948,Geronimo Rulli,Argentina,Austria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+43,989,Alexander Schlager,Austria,Argentina,1,95,2,0,2,0,0,0,api.fifa.com+espn.com
+43,1000,Florian Wiegele,Austria,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+43,1001,Patrick Pentz,Austria,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+41,848,Mike Peterson Maignan,France,Iraq,1,91,0,0,0,1,0,0,api.fifa.com+espn.com
+41,833,Brice Lauriche Samba,France,Iraq,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+41,855,Robin François Philippe Risser,France,Iraq,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+41,906,Basil Fadhil Ahmed,Iraq,France,1,91,2,0,3,0,0,2,api.fifa.com+espn.com
+41,885,Talib Raheem Fahad Talib,Iraq,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+41,896,Hasan Hachim Jalal Hassan,Iraq,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+42,911,Ørjan Haskjold Nyland,Norway,Senegal,1,93,2,0,2,0,0,0,api.fifa.com+espn.com
+42,922,Sander Tangvik,Norway,Senegal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+42,923,Egil Selvik,Norway,Senegal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+42,874,Edouard Osoque Mendy,Senegal,Norway,1,63,3,0,3,0,0,0,api.fifa.com+espn.com
+42,859,Yehvann Djibril Victor Diouf,Senegal,Norway,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+42,881,Mory Diaw,Senegal,Norway,0,30,3,0,0,1,0,0,api.fifa.com+espn.com
+44,1015,Mo'ien Hasan Yazeed Abulaila,Jordan,Algeria,1,91,6,0,2,0,0,0,api.fifa.com+espn.com
+44,1026,Zaid Khaleel Nour Baniateyah,Jordan,Algeria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+44,1036,Ra'ed Mahmoud Abdallah Alfakhori,Jordan,Algeria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+44,985,Luca Zinedine Zidane,Algeria,Jordan,1,91,3,0,1,0,0,0,api.fifa.com+espn.com
+44,963,Melvin Feycal Mastil,Algeria,Jordan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+44,978,Oussama Benbot,Algeria,Jordan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+45,1041,Diogo Diogo Costa,Portugal,Uzbekistan,1,92,2,0,0,1,0,0,api.fifa.com+espn.com
+45,1052,Pedro Jose Sa,Portugal,Uzbekistan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+45,1062,Tiago Rui Silva,Portugal,Uzbekistan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+45,1104,Abduvakhid Nematov,Uzbekistan,Portugal,1,92,4,0,5,0,0,0,api.fifa.com+espn.com
+45,1093,Utkir Yusupov,Uzbekistan,Portugal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+45,1108,Botirali Ergashev,Uzbekistan,Portugal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+47,1145,Jordan Lee Pickford,England,Ghana,1,95,0,0,0,1,0,0,api.fifa.com+espn.com
+47,1157,Dean Bradley Henderson,England,Ghana,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+47,1167,James Harrington Trafford,England,Ghana,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+47,1212,Benjamin Asare,Ghana,England,1,95,3,0,0,1,0,0,api.fifa.com+espn.com
+47,1197,Lawrence Ati Zigi,Ghana,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+47,1208,Joseph Tetteh Anang,Ghana,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+48,1244,Orlando Mosquera,Panama,Croatia,1,92,1,0,1,0,0,0,api.fifa.com+espn.com
+48,1223,Luis Ricardo Mejia,Panama,Croatia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+48,1234,Cesar Jair Samudio,Panama,Croatia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+48,1171,Dominik Livakovic,Croatia,Panama,1,92,1,0,0,1,0,0,api.fifa.com+espn.com
+48,1182,Ivor Pandur,Croatia,Panama,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+48,1193,Dominik Kotarski,Croatia,Panama,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+46,1130,Camilo Andres Vargas,Colombia,Congo DR,1,94,1,0,0,1,0,0,api.fifa.com+espn.com
+46,1119,David Ospina,Colombia,Congo DR,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+46,1142,Álvaro David Montero,Colombia,Congo DR,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+46,1067,Lionel Nzau Mpasi,Congo DR,Colombia,1,94,8,0,1,0,0,0,api.fifa.com+espn.com
+46,1082,Timothy Bruce Munzoko Fayulu,Congo DR,Colombia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+46,1087,Matthieu Luka Epolo,Congo DR,Colombia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+52,131,Nikola Vasilj,Bosnia and Herzegovina,Qatar,1,90,2,0,1,0,0,0,api.fifa.com+espn.com
+52,142,Mladen Jurkas,Bosnia and Herzegovina,Qatar,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+52,152,Martin Zlomislic,Bosnia and Herzegovina,Qatar,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+52,157,Ibrahim Mahmoud Abunada,Qatar,Bosnia and Herzegovina,1,90,3,0,3,0,0,0,api.fifa.com+espn.com
+52,177,Zakaria Salah Zakaria,Qatar,Bosnia and Herzegovina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+52,178,Aissa Meshaal Barsham,Qatar,Bosnia and Herzegovina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+51,183,Gregor Kobel,Switzerland,Canada,1,90,6,0,1,0,0,0,api.fifa.com+espn.com
+51,194,Yvon Landry Mvogo,Switzerland,Canada,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+51,203,Marvin Keller,Switzerland,Canada,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+51,120,Maxime Crepeau,Canada,Switzerland,1,90,2,0,2,0,0,0,api.fifa.com+espn.com
+51,105,Dayne Tristan St. Clair,Canada,Switzerland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+51,122,Owen Olamidayo Goodman,Canada,Switzerland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+54,235,Yassine Bounou,Morocco,Haiti,1,93,1,0,2,0,0,0,api.fifa.com+espn.com
+54,246,Monir El Kajoui,Morocco,Haiti,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+54,256,Ahmed Reda Tagnaouti,Morocco,Haiti,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+54,261,Johny Placide,Haiti,Morocco,1,93,8,0,4,0,0,0,api.fifa.com+espn.com
+54,272,Alexandre Jr Pierre,Haiti,Morocco,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+54,283,Josue Duverger,Haiti,Morocco,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+53,287,Angus Fraser James Gunn,Scotland,Brazil,1,91,5,0,3,0,0,0,api.fifa.com+espn.com
+53,298,Liam Patrick Kelly,Scotland,Brazil,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+53,307,Craig Sinclair Gordon,Scotland,Brazil,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+53,209,Ramsés Alisson,Brazil,Scotland,1,91,5,0,0,1,0,0,api.fifa.com+espn.com
+53,220,Weverton Weverton,Brazil,Scotland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+53,231,Ederson Ederson,Brazil,Scotland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+50,27,Ronwen Hayden Williams,South Africa,Korea Republic,1,90,2,0,0,1,0,0,api.fifa.com+espn.com
+50,42,Sipho Justin Chaine,South Africa,Korea Republic,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+50,48,Stuart Ricardo Goss,South Africa,Korea Republic,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+50,53,Seunggyu Kim,Korea Republic,South Africa,1,90,3,0,1,0,0,0,api.fifa.com+espn.com
+50,64,Bumkeun Song,Korea Republic,South Africa,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+50,73,Hyeonwoo Jo,Korea Republic,South Africa,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+49,79,Mat ě j Kovar,Czechia,Mexico,1,94,2,0,3,0,0,0,api.fifa.com+espn.com
+49,94,Jind ř ich Stanek,Czechia,Mexico,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+49,101,Lukáš Hornicek,Czechia,Mexico,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+49,1,José Raúl Rangel,Mexico,Czechia,1,78,1,0,0,1,0,0,api.fifa.com+espn.com
+49,12,Carlos Acevedo,Mexico,Czechia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+49,13,Francisco Guillermo Ochoa,Mexico,Czechia,0,16,1,0,0,1,0,0,api.fifa.com+espn.com
+58,443,Eloy Victor Room,Curaçao,Côte d'Ivoire,1,90,1,0,2,0,0,0,api.fifa.com+espn.com
+58,467,Tyrick Jeremy Bodak,Curaçao,Côte d'Ivoire,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+58,468,Trevor Irving Doornbusch,Curaçao,Côte d'Ivoire,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+58,469,Yahia Fofana,Côte d'Ivoire,Curaçao,1,90,2,0,0,1,0,0,api.fifa.com+espn.com
+58,484,Mohamed Kone,Côte d'Ivoire,Curaçao,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+58,491,Alban-Marc Lafont,Côte d'Ivoire,Curaçao,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+57,495,Hernán Ismael Galindez,Ecuador,Germany,1,90,2,0,1,0,0,0,api.fifa.com+espn.com
+57,506,Wellington Moisés Ramirez,Ecuador,Germany,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+57,516,Gonzalo Roberto Valle,Ecuador,Germany,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+57,417,Manuel Peter Neuer,Germany,Ecuador,1,90,1,0,2,0,0,1,api.fifa.com+espn.com
+57,428,Oliver Baumann,Germany,Ecuador,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+57,437,Alexander Nuebel,Germany,Ecuador,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+59,614,Aymen Dahmen,Tunisia,Netherlands,1,90,4,0,3,0,0,0,api.fifa.com+espn.com
+59,599,Abdelmouhib Chamakh,Tunisia,Netherlands,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+59,620,Sabri Ben Hessen,Tunisia,Netherlands,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+59,521,Bart Verbruggen,Netherlands,Tunisia,1,90,3,0,1,0,0,0,api.fifa.com+espn.com
+59,533,Robin Gerardus Petrus Roefs,Netherlands,Tunisia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+59,543,Mark Maria Hubertus Flekken,Netherlands,Tunisia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+60,547,Zion Suzuki,Japan,Sweden,1,90,4,0,1,0,0,1,api.fifa.com+espn.com
+60,558,Keisuke Osako,Japan,Sweden,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+60,569,Tomoki Hayakawa,Japan,Sweden,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+60,573,Jacob Mikael Widell Zetterstrom,Sweden,Japan,1,90,2,0,1,0,0,0,api.fifa.com+espn.com
+60,584,Tobias Viktor Johansson,Sweden,Japan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+60,595,Bo Kristoffer Nordfeldt,Sweden,Japan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+56,350,Orlando Daniel Gill,Paraguay,Australia,1,92,5,0,0,1,0,0,api.fifa.com+espn.com
+56,339,Roberto Junior Fernandez,Paraguay,Australia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+56,360,Gastón Hernán Olveira,Paraguay,Australia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+56,382,Patrick Thomas Beach,Australia,Paraguay,1,92,2,0,0,1,0,0,api.fifa.com+espn.com
+56,365,Mathew David Ryan,Australia,Paraguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+56,376,Paul David Izzo,Australia,Paraguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+55,413,Ugurcan Cakir,Türkiye,USA,1,98,5,0,2,0,0,0,api.fifa.com+espn.com
+55,391,Fehmi Mert Gunok,Türkiye,USA,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+55,402,Altay Bayindir,Türkiye,USA,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+55,313,Matthew Charles Turner,USA,Türkiye,1,98,0,0,3,0,0,0,api.fifa.com+espn.com
+55,336,Matthew Andrew Geary Freese,USA,Türkiye,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+55,337,Christopher Keith Brady,USA,Türkiye,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+66,881,Mory Diaw,Senegal,Iraq,1,90,1,0,0,1,0,0,api.fifa.com+espn.com
+66,859,Yehvann Djibril Victor Diouf,Senegal,Iraq,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+66,906,Basil Fadhil Ahmed,Iraq,Senegal,1,90,1,0,5,0,0,1,api.fifa.com+espn.com
+66,885,Talib Raheem Fahad Talib,Iraq,Senegal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+66,896,Hasan Hachim Jalal Hassan,Iraq,Senegal,0,44,0,0,0,0,0,1,api.fifa.com+derived-known-zero
+65,923,Egil Selvik,Norway,France,1,94,5,0,4,0,0,0,api.fifa.com+espn.com
+65,911,Ørjan Haskjold Nyland,Norway,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+65,922,Sander Tangvik,Norway,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+65,848,Mike Peterson Maignan,France,Norway,1,94,3,0,1,0,0,0,api.fifa.com+espn.com
+65,833,Brice Lauriche Samba,France,Norway,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+65,855,Robin François Philippe Risser,France,Norway,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+63,829,Nestor Fernando Muslera,Uruguay,Spain,1,94,0,0,1,0,0,0,api.fifa.com+espn.com
+63,807,Sergio Ramón Rochet,Uruguay,Spain,0,44,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+63,818,Santiago Andres Mele,Uruguay,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+63,751,Unai Simon,Spain,Uruguay,1,94,2,0,0,1,0,0,api.fifa.com+espn.com
+63,729,David Raya,Spain,Uruguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+63,741,Joan Garcia,Spain,Uruguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+64,755,José Vozinha,Cabo Verde,Saudi Arabia,1,94,3,0,0,1,0,0,api.fifa.com+espn.com
+64,766,Salomão Marcio,Cabo Verde,Saudi Arabia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+64,777,Joaquim Cj Dos Santos,Cabo Verde,Saudi Arabia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+64,801,Khalil Mohammed Alowais,Saudi Arabia,Cabo Verde,1,94,2,0,0,1,0,0,api.fifa.com+espn.com
+64,781,Dhahi Nawaf Alaqidi,Saudi Arabia,Cabo Verde,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+64,802,Ali Ahmed,Saudi Arabia,Cabo Verde,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+61,703,Maxime Teremoana Crocombe,New Zealand,Belgium,1,94,5,0,5,0,0,1,api.fifa.com+espn.com
+61,714,Alexander Noah Paulsen,New Zealand,Belgium,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+61,724,Michael Cornelis Woud,New Zealand,Belgium,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+61,625,Thibaut Nicolas Courtois,Belgium,New Zealand,1,94,1,0,1,0,0,0,api.fifa.com+espn.com
+61,636,Senne Lammens,Belgium,New Zealand,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+61,637,Mike Louis Penders,Belgium,New Zealand,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+62,673,Abdelaziz Mohame Mostafa,Egypt,IR Iran,1,94,2,0,1,0,0,0,api.fifa.com+espn.com
+62,651,Elsayed Mohamed Mohamed Elshenawy,Egypt,IR Iran,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+62,666,Mohamed Soliman Mahdy Soliman,Egypt,IR Iran,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+62,676,Alaaeldin Soliman Mohamed Alaa,Egypt,IR Iran,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+62,677,Ali Reza Beiranvand,IR Iran,Egypt,1,94,2,0,1,0,0,1,api.fifa.com+espn.com
+62,688,Seyedpayam Niazmand,IR Iran,Egypt,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+62,698,Seyedhossein Hosseini,IR Iran,Egypt,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+71,1244,Orlando Mosquera,Panama,England,1,90,4,0,2,0,0,0,api.fifa.com+espn.com
+71,1223,Luis Ricardo Mejia,Panama,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+71,1234,Cesar Jair Samudio,Panama,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+71,1145,Jordan Lee Pickford,England,Panama,1,90,2,0,0,1,0,1,api.fifa.com+espn.com
+71,1157,Dean Bradley Henderson,England,Panama,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+71,1167,James Harrington Trafford,England,Panama,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+72,1171,Dominik Livakovic,Croatia,Ghana,1,94,0,0,1,0,0,0,api.fifa.com+espn.com
+72,1182,Ivor Pandur,Croatia,Ghana,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+72,1193,Dominik Kotarski,Croatia,Ghana,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+72,1212,Benjamin Asare,Ghana,Croatia,1,94,2,0,2,0,0,0,api.fifa.com+espn.com
+72,1197,Lawrence Ati Zigi,Ghana,Croatia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+72,1208,Joseph Tetteh Anang,Ghana,Croatia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+70,1067,Lionel Nzau Mpasi,Congo DR,Uzbekistan,1,91,1,0,1,0,0,0,api.fifa.com+espn.com
+70,1082,Timothy Bruce Munzoko Fayulu,Congo DR,Uzbekistan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+70,1087,Matthieu Luka Epolo,Congo DR,Uzbekistan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+70,1104,Abduvakhid Nematov,Uzbekistan,Congo DR,1,91,1,0,3,0,0,0,api.fifa.com+espn.com
+70,1093,Utkir Yusupov,Uzbekistan,Congo DR,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+70,1108,Botirali Ergashev,Uzbekistan,Congo DR,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+69,1130,Camilo Andres Vargas,Colombia,Portugal,1,92,2,0,0,1,0,0,api.fifa.com+espn.com
+69,1119,David Ospina,Colombia,Portugal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+69,1142,Álvaro David Montero,Colombia,Portugal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+69,1041,Diogo Diogo Costa,Portugal,Colombia,1,92,6,0,0,1,0,1,api.fifa.com+espn.com
+69,1052,Pedro Jose Sa,Portugal,Colombia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+69,1062,Tiago Rui Silva,Portugal,Colombia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+68,978,Oussama Benbot,Algeria,Austria,1,96,0,0,3,0,0,0,api.fifa.com+espn.com
+68,963,Melvin Feycal Mastil,Algeria,Austria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+68,985,Luca Zinedine Zidane,Algeria,Austria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+68,989,Alexander Schlager,Austria,Algeria,1,96,2,0,3,0,0,0,api.fifa.com+espn.com
+68,1000,Florian Wiegele,Austria,Algeria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+68,1001,Patrick Pentz,Austria,Algeria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+67,1015,Mo'ien Hasan Yazeed Abulaila,Jordan,Argentina,1,94,1,0,3,0,0,0,api.fifa.com+espn.com
+67,1026,Zaid Khaleel Nour Baniateyah,Jordan,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+67,1036,Ra'ed Mahmoud Abdallah Alfakhori,Jordan,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+67,959,Damián Emiliano Martinez,Argentina,Jordan,1,94,0,0,1,0,0,0,api.fifa.com+espn.com
+67,937,Juan Agustín Musso,Argentina,Jordan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+67,948,Geronimo Rulli,Argentina,Jordan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+73,27,Ronwen Hayden Williams,South Africa,Canada,1,92,5,0,1,0,0,0,api.fifa.com+espn.com
+73,42,Sipho Justin Chaine,South Africa,Canada,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+73,48,Stuart Ricardo Goss,South Africa,Canada,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+73,120,Maxime Crepeau,Canada,South Africa,1,92,1,0,0,1,0,0,api.fifa.com+espn.com
+73,105,Dayne Tristan St. Clair,Canada,South Africa,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+73,122,Owen Olamidayo Goodman,Canada,South Africa,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+74,209,Ramsés Alisson,Brazil,Japan,1,97,1,0,1,0,0,0,api.fifa.com+espn.com
+74,220,Weverton Weverton,Brazil,Japan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+74,231,Ederson Ederson,Brazil,Japan,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+74,547,Zion Suzuki,Japan,Brazil,1,97,4,0,2,0,0,1,api.fifa.com+espn.com
+74,558,Keisuke Osako,Japan,Brazil,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+74,569,Tomoki Hayakawa,Japan,Brazil,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+75,417,Manuel Peter Neuer,Germany,Paraguay,1,122,2,0,1,0,0,0,api.fifa.com+espn.com
+75,428,Oliver Baumann,Germany,Paraguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+75,437,Alexander Nuebel,Germany,Paraguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+75,350,Orlando Daniel Gill,Paraguay,Germany,1,122,6,0,1,0,0,0,api.fifa.com+espn.com
+75,339,Roberto Junior Fernandez,Paraguay,Germany,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+75,360,Gastón Hernán Olveira,Paraguay,Germany,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+76,521,Bart Verbruggen,Netherlands,Morocco,1,120,5,0,1,0,0,0,api.fifa.com+espn.com
+76,533,Robin Gerardus Petrus Roefs,Netherlands,Morocco,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+76,543,Mark Maria Hubertus Flekken,Netherlands,Morocco,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+76,235,Yassine Bounou,Morocco,Netherlands,1,120,1,0,1,0,0,0,api.fifa.com+espn.com
+76,246,Monir El Kajoui,Morocco,Netherlands,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+76,256,Ahmed Reda Tagnaouti,Morocco,Netherlands,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+77,469,Yahia Fofana,Côte d'Ivoire,Norway,1,93,1,0,2,0,0,0,api.fifa.com+espn.com
+77,484,Mohamed Kone,Côte d'Ivoire,Norway,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+77,491,Alban-Marc Lafont,Côte d'Ivoire,Norway,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+77,911,Ørjan Haskjold Nyland,Norway,Côte d'Ivoire,1,93,4,0,1,0,0,0,api.fifa.com+espn.com
+77,922,Sander Tangvik,Norway,Côte d'Ivoire,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+77,923,Egil Selvik,Norway,Côte d'Ivoire,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+78,848,Mike Peterson Maignan,France,Sweden,1,90,3,0,0,1,0,0,api.fifa.com+espn.com
+78,833,Brice Lauriche Samba,France,Sweden,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+78,855,Robin François Philippe Risser,France,Sweden,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+78,573,Jacob Mikael Widell Zetterstrom,Sweden,France,1,90,9,0,3,0,0,0,api.fifa.com+espn.com
+78,584,Tobias Viktor Johansson,Sweden,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+78,595,Bo Kristoffer Nordfeldt,Sweden,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+79,1,José Raúl Rangel,Mexico,Ecuador,1,99,1,0,0,1,0,0,api.fifa.com+espn.com
+79,12,Carlos Acevedo,Mexico,Ecuador,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+79,13,Francisco Guillermo Ochoa,Mexico,Ecuador,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+79,495,Hernán Ismael Galindez,Ecuador,Mexico,1,99,1,0,2,0,0,0,api.fifa.com+espn.com
+79,506,Wellington Moisés Ramirez,Ecuador,Mexico,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+79,516,Gonzalo Roberto Valle,Ecuador,Mexico,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+80,1145,Jordan Lee Pickford,England,Congo DR,1,91,1,0,1,0,0,0,api.fifa.com+espn.com
+80,1157,Dean Bradley Henderson,England,Congo DR,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+80,1167,James Harrington Trafford,England,Congo DR,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+80,1067,Lionel Nzau Mpasi,Congo DR,England,1,91,5,0,2,0,0,1,api.fifa.com+espn.com
+80,1082,Timothy Bruce Munzoko Fayulu,Congo DR,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+80,1087,Matthieu Luka Epolo,Congo DR,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+81,625,Thibaut Nicolas Courtois,Belgium,Senegal,1,125,3,0,2,0,0,0,api.fifa.com+espn.com
+81,636,Senne Lammens,Belgium,Senegal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+81,637,Mike Louis Penders,Belgium,Senegal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+81,881,Mory Diaw,Senegal,Belgium,1,125,3,0,3,0,0,0,api.fifa.com+espn.com
+81,859,Yehvann Djibril Victor Diouf,Senegal,Belgium,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+82,336,Matthew Andrew Geary Freese,USA,Bosnia and Herzegovina,1,95,3,0,0,1,0,0,api.fifa.com+espn.com
+82,313,Matthew Charles Turner,USA,Bosnia and Herzegovina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+82,337,Christopher Keith Brady,USA,Bosnia and Herzegovina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+82,131,Nikola Vasilj,Bosnia and Herzegovina,USA,1,95,0,0,2,0,0,1,api.fifa.com+espn.com
+82,142,Mladen Jurkas,Bosnia and Herzegovina,USA,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+82,152,Martin Zlomislic,Bosnia and Herzegovina,USA,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+83,751,Unai Simon,Spain,Austria,1,93,0,0,0,1,0,0,api.fifa.com+espn.com
+83,729,David Raya,Spain,Austria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+83,741,Joan Garcia,Spain,Austria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+83,989,Alexander Schlager,Austria,Spain,1,93,6,0,3,0,0,1,api.fifa.com+espn.com
+83,1000,Florian Wiegele,Austria,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+83,1001,Patrick Pentz,Austria,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+84,1041,Diogo Diogo Costa,Portugal,Croatia,1,98,5,0,1,0,0,0,api.fifa.com+espn.com
+84,1052,Pedro Jose Sa,Portugal,Croatia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+84,1062,Tiago Rui Silva,Portugal,Croatia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+84,1171,Dominik Livakovic,Croatia,Portugal,1,98,2,0,2,0,0,1,api.fifa.com+espn.com
+84,1182,Ivor Pandur,Croatia,Portugal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+84,1193,Dominik Kotarski,Croatia,Portugal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+85,183,Gregor Kobel,Switzerland,Algeria,1,90,2,0,0,1,0,0,api.fifa.com+espn.com
+85,194,Yvon Landry Mvogo,Switzerland,Algeria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+85,203,Marvin Keller,Switzerland,Algeria,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+85,985,Luca Zinedine Zidane,Algeria,Switzerland,1,90,2,0,2,0,0,0,api.fifa.com+espn.com
+85,963,Melvin Feycal Mastil,Algeria,Switzerland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+85,978,Oussama Benbot,Algeria,Switzerland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+86,382,Patrick Thomas Beach,Australia,Egypt,1,119,3,0,1,0,0,0,api.fifa.com+espn.com
+86,365,Mathew David Ryan,Australia,Egypt,0,2,3,0,0,1,0,0,api.fifa.com+espn.com
+86,376,Paul David Izzo,Australia,Egypt,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+86,673,Abdelaziz Mohame Mostafa,Egypt,Australia,1,121,1,0,1,0,0,0,api.fifa.com+espn.com
+86,651,Elsayed Mohamed Mohamed Elshenawy,Egypt,Australia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+86,666,Mohamed Soliman Mahdy Soliman,Egypt,Australia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+86,676,Alaaeldin Soliman Mohamed Alaa,Egypt,Australia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+87,959,Damián Emiliano Martinez,Argentina,Cabo Verde,1,120,3,0,2,0,0,0,api.fifa.com+espn.com
+87,937,Juan Agustín Musso,Argentina,Cabo Verde,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+87,948,Geronimo Rulli,Argentina,Cabo Verde,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+87,755,José Vozinha,Cabo Verde,Argentina,1,120,8,0,3,0,0,0,api.fifa.com+espn.com
+87,766,Salomão Marcio,Cabo Verde,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+87,777,Joaquim Cj Dos Santos,Cabo Verde,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+88,1130,Camilo Andres Vargas,Colombia,Ghana,1,90,0,0,0,1,0,0,api.fifa.com+espn.com
+88,1119,David Ospina,Colombia,Ghana,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+88,1142,Álvaro David Montero,Colombia,Ghana,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+88,1197,Lawrence Ati Zigi,Ghana,Colombia,1,90,7,0,1,0,0,0,api.fifa.com+espn.com
+88,1208,Joseph Tetteh Anang,Ghana,Colombia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+88,1212,Benjamin Asare,Ghana,Colombia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+90,120,Maxime Crepeau,Canada,Morocco,1,98,1,0,3,0,0,0,api.fifa.com+espn.com
+90,105,Dayne Tristan St. Clair,Canada,Morocco,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+90,122,Owen Olamidayo Goodman,Canada,Morocco,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+90,235,Yassine Bounou,Morocco,Canada,1,98,3,0,0,1,0,2,api.fifa.com+espn.com
+90,246,Monir El Kajoui,Morocco,Canada,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+90,256,Ahmed Reda Tagnaouti,Morocco,Canada,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+89,350,Orlando Daniel Gill,Paraguay,France,1,97,4,0,1,0,0,0,api.fifa.com+espn.com
+89,339,Roberto Junior Fernandez,Paraguay,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+89,360,Gastón Hernán Olveira,Paraguay,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+89,848,Mike Peterson Maignan,France,Paraguay,1,97,0,0,0,1,0,0,api.fifa.com+espn.com
+89,833,Brice Lauriche Samba,France,Paraguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+89,855,Robin François Philippe Risser,France,Paraguay,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+91,209,Ramsés Alisson,Brazil,Norway,1,100,3,0,2,0,0,0,api.fifa.com+espn.com
+91,220,Weverton Weverton,Brazil,Norway,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+91,231,Ederson Ederson,Brazil,Norway,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+91,911,Ørjan Haskjold Nyland,Norway,Brazil,1,100,4,0,1,0,0,0,api.fifa.com+espn.com
+91,922,Sander Tangvik,Norway,Brazil,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+91,923,Egil Selvik,Norway,Brazil,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+92,1,José Raúl Rangel,Mexico,England,1,98,2,0,3,0,0,1,api.fifa.com+espn.com
+92,12,Carlos Acevedo,Mexico,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+92,13,Francisco Guillermo Ochoa,Mexico,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+92,1145,Jordan Lee Pickford,England,Mexico,1,98,3,0,2,0,0,0,api.fifa.com+espn.com
+92,1157,Dean Bradley Henderson,England,Mexico,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+92,1167,James Harrington Trafford,England,Mexico,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+93,1041,Diogo Diogo Costa,Portugal,Spain,1,98,5,0,1,0,0,0,api.fifa.com+espn.com
+93,1052,Pedro Jose Sa,Portugal,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+93,1062,Tiago Rui Silva,Portugal,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+93,751,Unai Simon,Spain,Portugal,1,98,2,0,0,1,0,0,api.fifa.com+espn.com
+93,729,David Raya,Spain,Portugal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+93,741,Joan Garcia,Spain,Portugal,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+94,336,Matthew Andrew Geary Freese,USA,Belgium,1,93,3,0,4,0,0,0,api.fifa.com+espn.com
+94,313,Matthew Charles Turner,USA,Belgium,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+94,337,Christopher Keith Brady,USA,Belgium,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+94,625,Thibaut Nicolas Courtois,Belgium,USA,1,93,1,0,1,0,0,0,api.fifa.com+espn.com
+94,636,Senne Lammens,Belgium,USA,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+94,637,Mike Louis Penders,Belgium,USA,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+95,959,Damián Emiliano Martinez,Argentina,Egypt,1,99,0,0,2,0,0,0,api.fifa.com+espn.com
+95,937,Juan Agustín Musso,Argentina,Egypt,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+95,948,Geronimo Rulli,Argentina,Egypt,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+95,673,Abdelaziz Mohame Mostafa,Egypt,Argentina,1,99,4,0,3,0,0,0,api.fifa.com+espn.com
+95,651,Elsayed Mohamed Mohamed Elshenawy,Egypt,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+95,666,Mohamed Soliman Mahdy Soliman,Egypt,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+95,676,Alaaeldin Soliman Mohamed Alaa,Egypt,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+96,183,Gregor Kobel,Switzerland,Colombia,1,120,3,0,0,1,0,0,api.fifa.com+espn.com
+96,194,Yvon Landry Mvogo,Switzerland,Colombia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+96,203,Marvin Keller,Switzerland,Colombia,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+96,1130,Camilo Andres Vargas,Colombia,Switzerland,1,120,2,0,0,1,0,0,api.fifa.com+espn.com
+96,1119,David Ospina,Colombia,Switzerland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+96,1142,Álvaro David Montero,Colombia,Switzerland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+97,848,Mike Peterson Maignan,France,Morocco,1,90,1,0,0,1,0,0,api.fifa.com+espn.com
+97,833,Brice Lauriche Samba,France,Morocco,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+97,855,Robin François Philippe Risser,France,Morocco,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+97,235,Yassine Bounou,Morocco,France,1,90,6,0,2,0,0,0,api.fifa.com+espn.com
+97,246,Monir El Kajoui,Morocco,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+97,256,Ahmed Reda Tagnaouti,Morocco,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+98,751,Unai Simon,Spain,Belgium,1,95,1,0,1,0,0,0,api.fifa.com+espn.com
+98,729,David Raya,Spain,Belgium,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+98,741,Joan Garcia,Spain,Belgium,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+98,625,Thibaut Nicolas Courtois,Belgium,Spain,1,71,4,0,1,0,0,0,api.fifa.com+espn.com
+98,636,Senne Lammens,Belgium,Spain,0,24,4,0,1,0,0,0,api.fifa.com+espn.com
+98,637,Mike Louis Penders,Belgium,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+99,911,Ørjan Haskjold Nyland,Norway,England,1,120,6,0,2,0,0,0,api.fifa.com+espn.com
+99,922,Sander Tangvik,Norway,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+99,923,Egil Selvik,Norway,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+99,1145,Jordan Lee Pickford,England,Norway,1,120,3,0,1,0,0,0,api.fifa.com+espn.com
+99,1157,Dean Bradley Henderson,England,Norway,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+99,1167,James Harrington Trafford,England,Norway,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+100,959,Damián Emiliano Martinez,Argentina,Switzerland,1,121,4,0,1,0,0,0,api.fifa.com+espn.com
+100,937,Juan Agustín Musso,Argentina,Switzerland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+100,948,Geronimo Rulli,Argentina,Switzerland,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+100,183,Gregor Kobel,Switzerland,Argentina,1,121,4,0,3,0,0,0,api.fifa.com+espn.com
+100,194,Yvon Landry Mvogo,Switzerland,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+100,203,Marvin Keller,Switzerland,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+101,848,Mike Peterson Maignan,France,Spain,1,90,0,0,2,0,0,0,api.fifa.com+espn.com
+101,833,Brice Lauriche Samba,France,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+101,855,Robin François Philippe Risser,France,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+101,751,Unai Simon,Spain,France,1,90,3,0,0,1,0,0,api.fifa.com+espn.com
+101,729,David Raya,Spain,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+101,741,Joan Garcia,Spain,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+102,1145,Jordan Lee Pickford,England,Argentina,1,96,3,0,2,0,0,0,api.fifa.com+espn.com
+102,1157,Dean Bradley Henderson,England,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+102,1167,James Harrington Trafford,England,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+102,959,Damián Emiliano Martinez,Argentina,England,1,96,1,0,1,0,0,0,api.fifa.com+espn.com
+102,937,Juan Agustín Musso,Argentina,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+102,948,Geronimo Rulli,Argentina,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+103,848,Mike Peterson Maignan,France,England,1,98,4,0,6,0,0,0,api.fifa.com+espn.com
+103,833,Brice Lauriche Samba,France,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+103,855,Robin François Philippe Risser,France,England,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+103,1157,Dean Bradley Henderson,England,France,1,98,5,0,4,0,0,0,api.fifa.com+espn.com
+103,1145,Jordan Lee Pickford,England,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+103,1167,James Harrington Trafford,England,France,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+104,751,Unai Simon,Spain,Argentina,1,120,0,0,0,1,0,0,api.fifa.com+espn.com
+104,729,David Raya,Spain,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+104,741,Joan Garcia,Spain,Argentina,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+104,959,Damián Emiliano Martinez,Argentina,Spain,1,120,11,0,1,0,0,0,api.fifa.com+espn.com
+104,937,Juan Agustín Musso,Argentina,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
+104,948,Geronimo Rulli,Argentina,Spain,0,0,0,0,0,0,0,0,api.fifa.com+derived-known-zero
