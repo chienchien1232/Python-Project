@@ -24,3 +24,11 @@ def q(sql, params=None):
     if con is None:
         return pd.DataFrame()
     return pd.read_sql(sql, con, params=params or [])
+
+
+def load_analytics_csv(filename):
+    """Doc output cua Nhóm B tu data/processed/analytics/. Tra None neu thieu."""
+    path = os.path.join(ANALYTICS, filename)
+    if not os.path.exists(path):
+        return None
+    return pd.read_csv(path)

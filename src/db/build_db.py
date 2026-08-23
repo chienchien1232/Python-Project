@@ -9,14 +9,23 @@ Usage:
     python src/db/build_db.py --check    # kiem tra so dong DB vs CSV nguon
 """
 import csv
+import json
 import os
 import sqlite3
 import sys
+import unicodedata
 
 CSV = "data/processed/csv"
 WC = "data/processed/wc2026_player_match"
 DB_DIR = "data/db"
 DB = os.path.join(DB_DIR, "wc2026_full.db")
+
+
+def norm(s):
+    s = unicodedata.normalize("NFD", s or "")
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    import re as _re
+    return _re.sub(r"[^a-z0-9]", "", s.lower()).strip()
 
 
 def load(path, delim=","):
@@ -71,7 +80,59 @@ def build():
     counts["referees"] = len(seen)
 
     # ---------- facts ----------
-    for name in ("matches", "match_events", "match_lineups",
+    matches_rows, matches_cols = load(f"{CSV}/matches.csv")
+
+    # enrich attendance tu FIFA calendar (du lieu that, nguon chinh thuc)
+    cal_path = "data/raw/fifa/calendar.json"
+    if os.path.exists(cal_path):
+        cal = json.load(open(cal_path, encoding="utf-8"))
+        ALIAS = {"korearepublic": "southkorea", "unitedstates": "usa",
+                 "bosniaherzegovina": "bosniaandherzegovina",
+                 "capeverde": "caboverde", "drcongo": "congodr",
+                 "ivorycoast": "cotedivoire"}
+
+        def nk(s):
+            k = norm(s)
+            return ALIAS.get(k, k)
+
+        def day(s):
+            return int(str(s)[8:10])
+
+        from collections import defaultdict
+        pair_bucket = defaultdict(list)
+        for c in cal:
+            h = nk(c["Home"]["TeamName"][0]["Description"])
+            a = nk(c["Away"]["TeamName"][0]["Description"])
+            pair_bucket[frozenset((h, a))].append(c)
+
+        teams_rows, _ = load(f"{CSV}/teams.csv")
+        t2n = {r["team_id"]: r["team_name"] for r in teams_rows}
+        att_map = {}
+        used_cal = set()
+        for lm in matches_rows:
+            h = nk(t2n[lm["home_team_id"]])
+            a = nk(t2n[lm["away_team_id"]])
+            cands = [c for c in pair_bucket.get(frozenset((h, a)), [])
+                     if id(c) not in used_cal]
+            if not cands:
+                continue
+            pick = min(cands,
+                       key=lambda c: min(abs(day(c["Date"]) - day(lm["date"])),
+                                         28 - abs(day(c["Date"]) - day(lm["date"]))))
+            used_cal.add(id(pick))
+            if pick.get("Attendance") not in (None, ""):
+                att_map[lm["match_id"]] = int(pick["Attendance"])
+
+        matches_cols = matches_cols + ["attendance"]
+        for lm in matches_rows:
+            lm["attendance"] = att_map.get(lm["match_id"], None)
+        print(f"  enriched attendance: {len(att_map)}/{len(matches_rows)} tran")
+
+    create_table(con, "matches", matches_cols)
+    insert_rows(con, "matches", matches_cols, matches_rows)
+    counts["matches"] = len(matches_rows)
+
+    for name in ("match_events", "match_lineups",
                  "match_team_stats", "matches_detailed"):
         rows, cols = load(f"{CSV}/{name}.csv")
         create_table(con, name, cols)
@@ -138,6 +199,37 @@ def build():
     con.execute("""CREATE VIEW v_goalkeepers AS
         SELECT * FROM goalkeeper_match_stats WHERE starter = 1""")
 
+    con.execute("""CREATE VIEW v_player_season AS
+        SELECT player_id,
+               MAX(player_name)                                   AS player_name,
+               MAX(position)                                      AS position,
+               MAX(player_team)                                   AS team,
+               COUNT(*)                                           AS matches_played,
+               SUM(CASE WHEN minutes_played > 0 THEN 1 ELSE 0 END) AS appearances,
+               SUM(minutes_played)                                AS minutes,
+               ROUND(90.0*SUM(goals)/NULLIF(SUM(minutes_played),0),2)      AS goals_p90,
+               ROUND(90.0*SUM(assists)/NULLIF(SUM(minutes_played),0),2)    AS assists_p90,
+               ROUND(90.0*SUM(shots)/NULLIF(SUM(minutes_played),0),2)      AS shots_p90,
+               ROUND(90.0*SUM(shots_on_target)/NULLIF(SUM(minutes_played),0),2) AS sot_p90,
+               SUM(shots_on_target)                               AS shots_on_target,
+               ROUND(90.0*SUM(passes)/NULLIF(SUM(minutes_played),0),2)     AS passes_p90,
+               ROUND(100.0*SUM(accurate_passes)/NULLIF(SUM(passes),0),1)   AS pass_accuracy_pct,
+               SUM(accurate_passes)                               AS accurate_passes,
+               ROUND(90.0*SUM(crosses)/NULLIF(SUM(minutes_played),0),2)    AS crosses_p90,
+               ROUND(90.0*SUM(tackles)/NULLIF(SUM(minutes_played),0),2)    AS tackles_p90,
+               ROUND(90.0*SUM(interceptions)/NULLIF(SUM(minutes_played),0),2) AS interceptions_p90,
+               ROUND(90.0*SUM(clearances)/NULLIF(SUM(minutes_played),0),2)  AS clearances_p90,
+               ROUND(90.0*SUM(blocks)/NULLIF(SUM(minutes_played),0),2)      AS blocks_p90,
+               ROUND(90.0*SUM(recoveries)/NULLIF(SUM(minutes_played),0),2)   AS recoveries_p90,
+               SUM(aerial_duels_won)                              AS aerial_duels_won,
+               SUM(dribbles_attempted)                            AS dribbles_attempted,
+               SUM(fouls_committed)                               AS fouls_committed,
+               SUM(fouls_won)                                     AS fouls_won,
+               SUM(yellow_cards)                                  AS yellow_cards,
+               SUM(red_cards)                                     AS red_cards
+        FROM player_match_stats
+        WHERE minutes_played > 0
+        GROUP BY player_id""")
     con.commit()
 
     # ---------- verify ----------

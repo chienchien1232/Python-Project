@@ -1,0 +1,44 @@
+/* ===== WC2026 Analytics - Sporty Dark Design System ===== */
+:root {
+  --bg: #0E1117;
+  --card: #171E2B;
+  --border: #232C3D;
+  --accent: #00E676;
+  --gold: #FFD600;
+  --danger: #FF5252;
+  --info: #2196F3;
+  --text: #E8EDF4;
+}
+
+div[data-testid="stMetric"] {
+  background: linear-gradient(145deg, #171E2B, #121826);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+div[data-testid="stMetric"] label { color: #8FA3BF; }
+div[data-testid="stMetric"] div[data-testid="stMetricValue"] {
+  font-family: "Barlow Condensed", "Inter", sans-serif;
+  font-weight: 700; letter-spacing: .5px;
+}
+
+h1, h2, h3 { letter-spacing: .4px; }
+h1:before { content: "⚽ "; }
+
+.stDataFrame { border: 1px solid var(--border); border-radius: 10px; }
+
+/* Badge anomalous match */
+.badge-anomaly {
+  background: rgba(255, 82, 82, .15);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  border-radius: 999px;
+  padding: 3px 12px; font-weight: 600;
+}
+
+/* Pitch container (Best XI) */
+.pitch-wrap {
+  background:
+    repeating-linear-gradient(0deg, #0d2818 0 34px, #0f2e1c 34px 68px);
+  border: 2px solid #123c25; border-radius: 14px; padding: 10px;
+}
