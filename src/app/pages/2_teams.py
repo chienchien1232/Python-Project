@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
 """TAB TEAMS - 48 doi tuyen + ho so + radar phong cach + AI cluster."""
+
 import os
 import sys
+
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+if APP_DIR not in sys.path:
+    sys.path.insert(0, APP_DIR)
 
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-sys.path.insert(0, "..")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from helpers import q, load_analytics_csv  # noqa: E402
 
 st.title("🌍 Đội tuyển")
@@ -26,10 +31,12 @@ df = q("""SELECT t.team_id, t.team_name AS Đội_tuyển,
           GROUP BY t.team_id""")
 df["HS_bàn"] = df["Bàn_thắng"] - df["Bàn_thua"]
 
-cluster_p = os.path.join("..", "..", "data", "processed", "analytics",
-                         "team_clusters.csv")
-tc = load_analytics_csv("team_clusters.csv") or (
-    pd.read_csv(cluster_p) if os.path.exists(os.path.abspath(cluster_p)) else None)
+cluster_p = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__)))), "data", "processed", "analytics",
+    "team_clusters.csv")
+tc = load_analytics_csv("team_clusters.csv")
+if tc is None and os.path.exists(cluster_p):
+    tc = pd.read_csv(cluster_p)
 if tc is not None and "team_name" in tc.columns:
     df = df.merge(tc[["team_name", "cluster_label"]], left_on="Đội_tuyển",
                   right_on="team_name", how="left")

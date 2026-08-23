@@ -1,18 +1,25 @@
 # -*- coding: utf-8 -*-
 """TAB MATCHES - Trung tam tran dau + chi tiet."""
+
+import os
 import sys
+
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+if APP_DIR not in sys.path:
+    sys.path.insert(0, APP_DIR)
+
 
 import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-sys.path.insert(0, "..")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from helpers import q  # noqa: E402
 
 st.title("🗓️ Match Center")
 
 stages = ["Tất cả"] + [r[0] for r in q(
-    "SELECT DISTINCT stage_name FROM matches_detailed ORDER BY stage_id").values.tolist()]
+    "SELECT DISTINCT stage_name FROM matches_detailed ORDER BY stage_name").values.tolist()]
 dates = ["Tất cả"] + [r[0] for r in q(
     "SELECT DISTINCT date FROM matches ORDER BY date").values.tolist()]
 
@@ -100,10 +107,14 @@ if mid:
             c2.write(lb)
 
     # lineups theo doi
-    lu = q("""SELECT l.team_id, l.is_starting_xi, l.shirt_number, l.player_name,
-                     l.tactical_position, l.minutes_played, p.position
-              FROM (SELECT * FROM match_lineups WHERE match_id = ?) l
+    lu = q("""SELECT l.team_id, l.is_starting_xi, pm.shirt_number,
+                     p.player_name, l.tactical_position, l.minutes_played,
+                     p.position
+              FROM match_lineups l
               LEFT JOIN players p ON p.player_id = l.player_id
+              LEFT JOIN player_match_stats pm
+                     ON pm.match_id = l.match_id AND pm.player_id = l.player_id
+              WHERE l.match_id = ?
               ORDER BY l.team_id, l.is_starting_xi DESC, l.lineup_id""",
             (str(mid),))
     if not lu.empty and "player_name" in lu.columns:

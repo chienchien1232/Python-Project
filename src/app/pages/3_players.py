@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
 """TAB PLAYERS - Master table Per-90 + ho so + AI Similarity + Market Value."""
+
 import os
 import sys
+
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+if APP_DIR not in sys.path:
+    sys.path.insert(0, APP_DIR)
 
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-sys.path.insert(0, "..")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from helpers import q, load_analytics_csv  # noqa: E402
 
 st.title("👤 Cầu thủ")
@@ -20,6 +25,10 @@ if df.empty:
 
 clusters = load_analytics_csv("player_clusters.csv")
 mv = load_analytics_csv("market_value_estimates.csv")
+if clusters is not None:
+    clusters["player_id"] = clusters["player_id"].astype(str)
+if mv is not None:
+    mv["player_id"] = mv["player_id"].astype(str)
 
 min_apps = st.slider("Tối thiểu số trận", 0, int(df["matches_played"].max()), 3)
 search = st.text_input("🔍 Tìm tên:")
@@ -50,11 +59,10 @@ c1.metric("Vị trí", p["position"])
 c2.metric("Phút thi đấu", int(p["minutes"]))
 c3.metric("Trận (đá chính)", f"{int(p['matches_played'])} ({int(p.get('appearances', 0))})")
 
-# thong tin ca nhan tu players + squads
-info = q("""SELECT p.club_team, s.date_of_birth, s.height_cm, s.caps,
-                   s.market_value_eur
-            FROM players p LEFT JOIN squads_and_players s
-              ON s.player_id = p.player_id WHERE p.player_id = ?""", (pid,))
+# thong tin ca nhan tu players (bang da chua du cac cot nay)
+info = q("""SELECT club_team, date_of_birth, height_cm, caps,
+                   market_value_eur
+            FROM players WHERE player_id = ?""", (pid,))
 club, foot_note = "", ""
 if not info.empty:
     r = info.iloc[0]
@@ -96,8 +104,9 @@ fig.update_layout(polar=dict(radialaxis=dict(range=[0, 100])),
 st.plotly_chart(fig, use_container_width=True)
 
 # AI similarity top5
-sim_path = os.path.join("..", "..", "data", "processed", "analytics",
-                        "similarity_matrix.parquet")
+sim_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
+            os.path.abspath(__file__)))), "data", "processed", "analytics",
+            "similarity_matrix.parquet")
 if os.path.exists(os.path.abspath(sim_path)):
     sim = pd.read_parquet(sim_path)
     target = next((x for x in sim.index if f"#{pid}" in x), None)

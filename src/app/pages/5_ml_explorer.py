@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
 """TAB ML ADVANCED EXPLORER - Clustering / PCA / Anomaly."""
+
 import os
 import sys
+
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+if APP_DIR not in sys.path:
+    sys.path.insert(0, APP_DIR)
 
 import pandas as pd
 import streamlit as st
 
-sys.path.insert(0, "..")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from helpers import q, load_analytics_csv  # noqa: E402
 
 st.title("🧠 ML Advanced Explorer")
@@ -48,8 +53,9 @@ with t1:
 # ---------- Sub-tab 2: PCA Map ----------
 with t2:
     st.subheader("PCA Map — khám phá cấu trúc dữ liệu")
-    html_p = os.path.join("..", "..", "data", "processed", "analytics",
-                          "pca_interactive.html")
+    html_p = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
+            os.path.abspath(__file__)))), "data", "processed", "analytics",
+            "pca_interactive.html")
     if os.path.exists(os.path.abspath(html_p)):
         with open(os.path.abspath(html_p), encoding="utf-8") as f:
             html_bytes = f.read()

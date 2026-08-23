@@ -54,7 +54,8 @@ def build():
     counts = {}
 
     # ---------- dimensions ----------
-    for name in ("teams", "venues", "tournament_stages"):
+    for name in ("teams", "venues", "tournament_stages",
+                 "squads_and_players"):
         rows, cols = load(f"{CSV}/{name}.csv")
         create_table(con, name, cols)
         insert_rows(con, name, cols, rows)
@@ -78,6 +79,41 @@ def build():
             seen[rid] = nm
     con.executemany("INSERT INTO referees VALUES (?, ?)", list(seen.items()))
     counts["referees"] = len(seen)
+
+    # ---------- ep kieu so cho cac cot thong ke (CSV dang text) ----------
+    NUMERIC_INT = {
+        "match_team_stats": ["total_shots", "shots_on_target", "corners",
+                             "fouls", "offsides", "saves"],
+        "player_match_stats": ["shirt_number", "minutes_played", "goals",
+                               "assists", "shots", "shots_on_target",
+                               "passes", "accurate_passes", "crosses",
+                               "tackles", "interceptions", "clearances",
+                               "blocks", "recoveries", "duels_won",
+                               "aerial_duels_won", "dribbles_attempted",
+                               "fouls_committed", "fouls_won", "offsides",
+                               "yellow_cards", "red_cards"],
+        "match_lineups": ["minutes_played"],
+    }
+    NUMERIC_FLOAT = {
+        "match_team_stats": ["possession_pct"],
+    }
+
+    def coerce(table, rows):
+        for c in NUMERIC_INT.get(table, []):
+            for r in rows:
+                if r.get(c) not in (None, ""):
+                    try:
+                        r[c] = int(float(r[c]))
+                    except (ValueError, TypeError):
+                        r[c] = None
+        for c in NUMERIC_FLOAT.get(table, []):
+            for r in rows:
+                if r.get(c) not in (None, ""):
+                    try:
+                        r[c] = float(r[c])
+                    except (ValueError, TypeError):
+                        r[c] = None
+        return rows
 
     # ---------- facts ----------
     matches_rows, matches_cols = load(f"{CSV}/matches.csv")
@@ -135,12 +171,14 @@ def build():
     for name in ("match_events", "match_lineups",
                  "match_team_stats", "matches_detailed"):
         rows, cols = load(f"{CSV}/{name}.csv")
+        rows = coerce(name, rows)
         create_table(con, name, cols)
         insert_rows(con, name, cols, rows)
         counts[name] = len(rows)
 
     for name in ("player_match_stats", "goalkeeper_match_stats"):
         rows, cols = load(f"{WC}/{name}.csv")
+        rows = coerce(name, rows)
         create_table(con, name, cols)
         insert_rows(con, name, cols, rows)
         counts[name] = len(rows)

@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
 """TAB COMPARE - Cau thu vs Cau thu & Doi tuyen vs Doi tuyen."""
+
 import os
 import sys
+
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+if APP_DIR not in sys.path:
+    sys.path.insert(0, APP_DIR)
 
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-sys.path.insert(0, "..")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from helpers import q, load_analytics_csv  # noqa: E402
 
 st.title("⚔️ So sánh")
@@ -57,8 +62,9 @@ with tab_pvp:
         st.dataframe(pd.DataFrame(rows), use_container_width=True,
                      hide_index=True)
 
-        sim_path = os.path.join("..", "..", "data", "processed", "analytics",
-                                "similarity_matrix.parquet")
+        sim_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
+            os.path.abspath(__file__)))), "data", "processed", "analytics",
+            "similarity_matrix.parquet")
         if os.path.exists(os.path.abspath(sim_path)):
             sim = pd.read_parquet(sim_path)
             key_a = next((x for x in sim.index

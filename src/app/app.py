@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """TAB HOME - Tong quan giai dau."""
 import os
+import sys
 
 import pandas as pd
 import plotly.express as px
@@ -58,7 +59,7 @@ rank_sqls = {
                      SUM(tackles)+SUM(interceptions) v
                      FROM player_match_stats GROUP BY player_id ORDER BY v DESC LIMIT 5""",
 }
-r1, r2, r3, r4 = st.columns(4)
+r1, r2, r3, r4, r5 = st.columns(5)
 for col, (title, sql) in zip((r1, r2, r3, r4), rank_sqls.items()):
     d = q(sql)
     d.columns = ["Cầu thủ", "Đội", "Giá trị"]
@@ -68,9 +69,10 @@ for col, (title, sql) in zip((r1, r2, r3, r4), rank_sqls.items()):
 gks = q("""SELECT g.player_name nm, g.team tm, SUM(g.saves) v
            FROM goalkeeper_match_stats g GROUP BY g.player_id
            ORDER BY v DESC LIMIT 5""")
-r5.markdown("**🧤 Cứu thua**")
+
 gk_show = gks.copy()
 gk_show.columns = ["Thủ môn", "Đội", "Saves"]
+r5.markdown("**🧤 Cứu thua**")
 r5.dataframe(gk_show, use_container_width=True, hide_index=True)
 
 # ---------- Charts ----------
@@ -79,7 +81,7 @@ st.subheader("📈 Biểu đồ tổng quan")
 by_stage = q("""SELECT s.stage_name AS Vòng,
                        SUM(m.home_score+m.away_score) AS Bàn
                 FROM matches m JOIN tournament_stages s ON s.stage_id=m.stage_id
-                GROUP BY s.stage_id ORDER BY m.match_number""")
+                GROUP BY s.stage_id ORDER BY MIN(m.date)""")
 fig1 = px.bar(by_stage, x="Vòng", y="Bàn", color="Bàn",
               color_continuous_scale=["#123c25", "#00E676"],
               title="Bàn thắng theo vòng đấu")
@@ -94,7 +96,7 @@ fig2 = px.histogram(ages, x="Tuổi", nbins=15,
                     color_discrete_sequence=["#2196F3"])
 st.plotly_chart(fig2, use_container_width=True)
 
-shots_goals = q("""SELECT player_name AS Cầu_thủ, team AS Đội,
+shots_goals = q("""SELECT player_name AS Cầu_thủ, player_team AS Đội,
                           SUM(shots) AS Sút, SUM(goals) AS Bàn
                    FROM player_match_stats GROUP BY player_id
                    HAVING SUM(shots) >= 3""")
