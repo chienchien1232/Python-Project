@@ -1,0 +1,63 @@
+player_id,player_name,team,matches,minutes,saves,shots_faced,conceded,clean_sheets,starts,save_pct,saves_p90
+1,José Raúl Rangel,Mexico,5,457,8,0,3,4,5,72.73,1.575
+27,Ronwen Hayden Williams,South Africa,4,364,11,0,4,1,4,73.33,2.72
+53,Seunggyu Kim,Korea Republic,3,276,10,0,3,0,3,76.92,3.261
+79,Mat ě j Kovar,Czechia,3,280,9,0,6,0,3,60.0,2.893
+120,Maxime Crepeau,Canada,5,465,6,0,6,2,5,50.0,1.161
+131,Nikola Vasilj,Bosnia and Herzegovina,4,375,6,0,8,0,4,42.86,1.44
+336,Matthew Andrew Geary Freese,USA,4,382,8,0,5,2,4,61.54,1.885
+350,Orlando Daniel Gill,Paraguay,5,500,23,0,6,2,5,79.31,4.14
+157,Ibrahim Mahmoud Abunada,Qatar,3,276,12,0,10,0,3,54.55,3.913
+183,Gregor Kobel,Switzerland,6,612,20,0,6,2,6,76.92,2.941
+209,Ramsés Alisson,Brazil,5,468,14,0,4,2,5,77.78,2.692
+235,Yassine Bounou,Morocco,6,581,15,0,6,2,6,71.43,2.324
+261,Johny Placide,Haiti,3,278,11,0,8,0,3,57.89,3.561
+287,Angus Fraser James Gunn,Scotland,3,276,8,0,4,1,3,66.67,2.609
+382,Patrick Thomas Beach,Australia,4,397,14,0,3,2,4,82.35,3.174
+413,Ugurcan Cakir,Türkiye,3,279,8,0,5,0,3,61.54,2.581
+417,Manuel Peter Neuer,Germany,4,396,5,0,5,0,4,50.0,1.136
+443,Eloy Victor Room,Curaçao,3,271,20,0,9,1,3,68.97,6.642
+521,Bart Verbruggen,Netherlands,4,394,16,0,5,0,4,76.19,3.655
+547,Zion Suzuki,Japan,4,368,12,0,5,1,4,70.59,2.935
+469,Yahia Fofana,Côte d'Ivoire,4,367,9,0,4,2,4,69.23,2.207
+495,Hernán Ismael Galindez,Ecuador,4,370,9,0,4,1,4,69.23,2.189
+595,Bo Kristoffer Nordfeldt,Sweden,2,189,3,0,6,0,2,33.33,1.429
+599,Abdelmouhib Chamakh,Tunisia,1,96,1,0,5,0,1,16.67,0.938
+751,Unai Simon,Spain,8,773,10,0,1,7,8,90.91,1.164
+755,José Vozinha,Cabo Verde,4,400,18,0,5,2,4,78.26,4.05
+625,Thibaut Nicolas Courtois,Belgium,6,563,14,0,6,1,6,70.0,2.238
+673,Abdelaziz Mohame Mostafa,Egypt,5,503,14,0,7,0,5,66.67,2.505
+801,Khalil Mohammed Alowais,Saudi Arabia,3,276,16,0,5,1,3,76.19,5.217
+829,Nestor Fernando Muslera,Uruguay,3,279,4,0,4,0,3,50.0,1.29
+677,Ali Reza Beiranvand,IR Iran,3,276,15,0,3,1,3,83.33,4.891
+703,Maxime Teremoana Crocombe,New Zealand,3,285,11,0,10,0,3,52.38,3.474
+848,Mike Peterson Maignan,France,8,746,13,0,10,4,8,56.52,1.568
+874,Edouard Osoque Mendy,Senegal,2,159,8,0,6,0,2,57.14,4.528
+896,Hasan Hachim Jalal Hassan,Iraq,2,140,2,0,4,0,1,33.33,1.286
+911,Ørjan Haskjold Nyland,Norway,5,502,16,0,7,0,5,69.57,2.869
+959,Damián Emiliano Martinez,Argentina,8,835,20,0,8,2,8,71.43,2.156
+985,Luca Zinedine Zidane,Algeria,3,271,8,0,6,0,3,57.14,2.657
+989,Alexander Schlager,Austria,4,386,13,0,9,0,4,59.09,3.031
+1015,Mo'ien Hasan Yazeed Abulaila,Jordan,3,287,8,0,8,0,3,50.0,2.509
+1041,Diogo Diogo Costa,Portugal,5,472,19,0,3,2,5,86.36,3.623
+1067,Lionel Nzau Mpasi,Congo DR,4,368,14,0,5,0,4,73.68,3.424
+1145,Jordan Lee Pickford,England,7,680,15,0,8,2,7,65.22,1.985
+1171,Dominik Livakovic,Croatia,4,374,10,0,7,1,4,58.82,2.406
+1197,Lawrence Ati Zigi,Ghana,2,189,8,0,1,1,2,88.89,3.81
+1212,Benjamin Asare,Ghana,3,233,5,0,2,1,2,71.43,1.931
+1244,Orlando Mosquera,Panama,3,281,7,0,4,0,3,63.64,2.242
+1093,Utkir Yusupov,Uzbekistan,1,99,1,0,3,0,1,25.0,0.909
+1130,Camilo Andres Vargas,Colombia,5,495,6,0,1,4,5,85.71,1.091
+614,Aymen Dahmen,Tunisia,2,180,5,0,7,0,2,41.67,2.5
+906,Basil Fadhil Ahmed,Iraq,2,181,3,0,8,0,2,27.27,1.492
+881,Mory Diaw,Senegal,3,245,7,0,3,2,2,70.0,2.571
+1104,Abduvakhid Nematov,Uzbekistan,2,183,5,0,8,0,2,38.46,2.459
+13,Francisco Guillermo Ochoa,Mexico,1,16,1,0,0,1,0,100.0,5.625
+573,Jacob Mikael Widell Zetterstrom,Sweden,2,180,11,0,4,0,2,73.33,5.5
+313,Matthew Charles Turner,USA,1,98,0,0,3,0,1,0.0,0.0
+923,Egil Selvik,Norway,1,94,5,0,4,0,1,55.56,4.787
+807,Sergio Ramón Rochet,Uruguay,1,44,0,0,0,0,0,,0.0
+978,Oussama Benbot,Algeria,1,96,0,0,3,0,1,0.0,0.0
+365,Mathew David Ryan,Australia,1,2,3,0,0,1,0,100.0,135.0
+636,Senne Lammens,Belgium,1,24,4,0,1,0,0,80.0,15.0
+1157,Dean Bradley Henderson,England,1,98,5,0,4,0,1,55.56,4.592

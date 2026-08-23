@@ -1,0 +1,8 @@
+player_id,player_name,position,team,nationality,matches,minutes,total_goals,goals_p90,total_assists,assists_p90,total_shots,shots_p90,total_shots_on_target,shots_on_target_p90,total_passes,passes_p90,total_accurate_passes,accurate_passes_p90,total_crosses,crosses_p90,total_tackles,tackles_p90,total_interceptions,interceptions_p90,total_clearances,clearances_p90,total_blocks,blocks_p90,total_recoveries,recoveries_p90,total_duels_won,duels_won_p90,total_aerial_duels_won,aerial_duels_won_p90,total_dribbles_attempted,dribbles_attempted_p90,total_fouls_committed,fouls_committed_p90,total_fouls_won,fouls_won_p90,total_offsides,offsides_p90,pass_accuracy_pct,analytics_score,saves_p90,save_pct,final_score
+1197,Lawrence Ati Zigi,GK,Ghana,,2,189,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,89.4,3.81,88.89,93.87
+755,José Vozinha,GK,Cabo Verde,,4,400,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,87.3,4.05,78.26,91.66
+350,Orlando Daniel Gill,GK,Paraguay,,5,500,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,87.0,4.14,79.31,91.35
+801,Khalil Mohammed Alowais,GK,Saudi Arabia,,3,276,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,85.7,5.217,76.19,89.99
+1041,Diogo Diogo Costa,GK,Portugal,,5,472,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,85.5,3.623,86.36,89.78
+871,Iliman Cheikh Baroy Ndiaye,FWD,Senegal,Senegal,3,120,1.0,0.75,1.0,0.75,3.0,2.25,2.0,1.5,59.0,44.25,53.0,39.75,2.0,1.5,2.0,1.5,3.0,2.25,0.0,0.0,2.0,1.5,3.0,2.25,0.0,0.0,0.0,0.0,12.0,9.0,2.0,1.5,1.0,0.75,0.0,0.0,89.83,84.5,,,88.72
+1151,Bukayo Ayoyinka Saka,FWD,England,England,7,387,3.0,0.698,3.0,0.698,13.0,3.023,7.0,1.628,101.0,23.488,81.0,18.837,23.0,5.349,16.0,3.721,0.0,0.0,1.0,0.233,10.0,2.326,12.0,2.791,1.0,0.233,1.0,0.233,21.0,4.884,4.0,0.93,9.0,2.093,4.0,0.93,80.2,81.7,,,85.79

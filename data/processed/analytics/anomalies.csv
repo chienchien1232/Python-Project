@@ -1,0 +1,73 @@
+player_name,position,team,minutes,total_goals,goals_p90,tackles_p90,interceptions_p90,anomaly
+Lionel Andrés Messi,FWD,Argentina,765,8,0.941,1.647,0.0,0
+Kylian Mbappe,FWD,France,720,10,1.25,1.0,0.125,0
+Harry Edward Kane,FWD,England,666,6,0.811,0.946,0.0,0
+Mikel Oyarzabal,FWD,Spain,664,5,0.678,1.491,0.136,0
+Jude Victor William Bellingham,MID,England,639,7,0.986,2.394,0.282,0
+Masour Ousmane Dembele,FWD,France,597,6,0.905,1.96,0.302,0
+Achraf Hakimi,DEF,Morocco,581,1,0.155,3.563,0.929,1
+Erling Braut Haaland,FWD,Norway,502,7,1.255,0.0,0.179,0
+José Vinicius,FWD,Brazil,459,4,0.784,1.373,0.196,0
+Ronaldo Cristiano Ronaldo,FWD,Portugal,455,3,0.593,0.989,0.198,0
+Charles Marc De Ketelaere,FWD,Belgium,438,3,0.616,2.877,0.0,0
+Jonathan Christian David,FWD,Canada,433,3,0.624,1.247,0.831,0
+Julián Andrés Quinones,FWD,Mexico,418,4,0.861,1.292,0.215,0
+Bradley Jean-Manuel Essolisa Barcola,FWD,France,394,3,0.685,3.883,0.914,0
+Bukayo Ayoyinka Saka,FWD,England,387,3,0.698,3.721,0.0,0
+Ismael Saibari,MID,Morocco,384,3,0.703,2.578,0.234,0
+Ismaila Sarr,FWD,Senegal,374,4,0.963,0.963,0.722,0
+Cody Mathès Gakpo,FWD,Netherlands,371,3,0.728,0.97,0.243,0
+Yoane Wissa,FWD,Congo DR,368,3,0.734,0.245,0.0,0
+Ronwen Hayden Williams,GK,South Africa,364,0,0.0,0.0,0.247,1
+Joshua Walter Kimmich,DEF,Germany,359,0,0.0,3.008,1.755,1
+Kai Lukas Havertz,FWD,Germany,357,3,0.756,1.513,0.504,0
+Raúl Alonso Jimenez,FWD,Mexico,327,3,0.826,1.376,0.0,0
+Lautaro Javier Martinez,FWD,Argentina,326,3,0.828,3.865,0.276,0
+Folarin Jolaoluwa Balogun,FWD,USA,324,3,0.833,1.111,0.0,0
+Matheus Matheus Cunha,FWD,Brazil,292,3,0.925,2.466,0.616,0
+Nathaniel Christopher Brown,DEF,Germany,288,1,0.312,5.625,0.625,1
+Orlando Mosquera,GK,Panama,281,0,0.0,0.0,0.0,1
+Gihyuk Lee,MID,Korea Republic,276,0,0.0,1.957,2.283,1
+Ali Reza Beiranvand,GK,IR Iran,276,0,0.0,0.0,0.326,1
+Ramin Rezaeian,DEF,IR Iran,276,2,0.652,2.935,0.652,1
+Elijah Henry Just,MID,New Zealand,271,3,0.996,3.321,0.332,0
+Maximiliano Javier Araujo,MID,Uruguay,256,2,0.703,1.406,0.703,1
+Romelu Lukaku,FWD,Belgium,241,3,1.12,0.0,0.373,0
+Julian Ryerson,FWD,Norway,232,0,0.0,7.759,0.776,1
+Brian Ebenezer Adjei Brobbey,FWD,Netherlands,227,3,1.189,0.793,0.0,0
+Thiago Ezequiel Almada,FWD,Argentina,216,0,0.0,2.5,1.25,1
+Mikel Merino,MID,Spain,213,2,0.845,4.648,0.845,1
+Johan Kula Manzambi,MID,Switzerland,209,3,1.292,2.584,0.0,1
+Thomas Andre Meunier,DEF,Belgium,195,0,0.0,2.769,0.0,1
+Behruzjon Karimov,DEF,Uzbekistan,191,0,0.0,5.183,1.414,1
+Nico Cédric Schlotterbeck,DEF,Germany,184,1,0.489,3.913,3.424,1
+Merih Demiral,DEF,Türkiye,181,0,0.0,1.989,0.994,1
+Hakan Calhanoglu,MID,Türkiye,181,0,0.0,3.978,1.492,1
+Soufiane Rahimi,FWD,Morocco,169,2,1.065,3.195,0.0,0
+Ferdi Erenay Kadioglu,DEF,Türkiye,161,0,0.0,2.236,1.677,1
+Deniz Undav,FWD,Germany,153,3,1.765,1.176,0.0,1
+Habib Mbacke Diarra,MID,Senegal,150,2,1.2,3.0,0.6,0
+Richard Rios,MID,Colombia,150,0,0.0,9.6,1.2,1
+Nathanaël Mbuku,MID,Congo DR,148,0,0.0,3.649,0.0,1
+Ismailİsma Yuksek,MID,Türkiye,140,0,0.0,8.357,2.571,1
+Leo Skiri Ostigard,DEF,Norway,131,1,0.687,2.748,0.687,1
+Juan Fernando Quintero,MID,Colombia,124,0,0.0,0.0,0.726,1
+Nicholas Williams,FWD,Spain,121,0,0.0,0.0,0.744,1
+Auston Levi-Jesaiah Trusty,DEF,USA,114,1,0.789,1.579,3.158,1
+Paulo Joao Paulo,MID,Cabo Verde,111,0,0.0,3.243,4.054,1
+Mert Muldur,DEF,Türkiye,108,0,0.0,4.167,0.0,1
+David Raum,DEF,Germany,108,0,0.0,6.667,0.833,1
+Álvaro Fidalgo,MID,Mexico,107,1,0.841,0.841,1.682,1
+Marco Pasalic,FWD,Croatia,102,0,0.0,4.412,1.765,1
+Carney Chibueze Chukwuemeka,MID,Austria,98,0,0.0,4.592,1.837,1
+Saber Abdelmohsen Mahmoud,MID,Egypt,95,1,0.947,2.842,0.0,0
+Thelonious Gerard Aasgaard,MID,Norway,94,1,0.957,3.83,1.915,0
+David Doudera,DEF,Czechia,94,0,0.0,0.957,0.0,1
+Giovanni Alejandro Reyna,MID,USA,94,1,0.957,0.0,0.0,0
+Alexis Jesse Saelemaekers,MID,Belgium,93,1,0.968,1.935,0.0,1
+Joseph Michael Scally,DEF,USA,92,0,0.0,0.978,3.913,1
+Shahriyar Moghanloo,FWD,IR Iran,91,0,0.0,4.945,0.0,1
+Isidro Miguel Pitta,FWD,Paraguay,91,0,0.0,0.0,0.0,1
+Oguz Aydin,FWD,Türkiye,91,0,0.0,7.912,0.0,1
+Promise Oluwatobi Emmanuel David,FWD,Canada,90,1,1.0,4.0,0.0,1
+Hazem Mastouri,FWD,Tunisia,90,1,1.0,2.0,1.0,0
