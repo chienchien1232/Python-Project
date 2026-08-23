@@ -1,73 +1,96 @@
 # -*- coding: utf-8 -*-
-"""3.7 Optimal Best XI - tu dong tao doi hinh tieu bieu.
+"""3.7 Optimal Best XI - Linear Programming (PuLP) theo spec.
 
-Rang buoc: formation (mac dinh 4-3-3) theo bucket DEF/MID/FWD + 1 GK.
-Score = Analytics Score dieu chinh Elo doi thu trung binh (toggle).
-Gioi han: vi tri chi co 4 bucket generic -> khong phan canh trai/phai.
+Constraint Control Panel:
+  - Formation: 4-3-3 / 4-2-3-1 / 3-5-2 / 4-4-2 / 3-4-3 ...
+  - Budget slider: tong market_value_eur cua XI <= budget (trieu EUR)
+  - Max-per-nation: so cau thu toi da cung 1 doi tuyen
+Muc tieu: max tong Analytics Score.
 """
-import csv
 import os
 import sys
+
+import pandas as pd
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-import pandas as pd
+try:
+    import pulp
+except ImportError:
+    sys.exit("Can thu vien PuLP: pip install pulp")
 
 SCORES = "data/processed/analytics/analytics_scores.csv"
-TEAMS = "data/processed/csv/teams.csv"
+SQ = "data/processed/csv/squads_and_players.csv"
 OUT = "data/processed/analytics"
-MIN_MIN = 90
+
+FORMATIONS = {
+    "4-3-3": {"GK": 1, "DEF": 4, "MID": 3, "FWD": 3},
+    "4-2-3-1": {"GK": 1, "DEF": 4, "MID": 5, "FWD": 1},
+    "3-5-2": {"GK": 1, "DEF": 3, "MID": 5, "FWD": 2},
+    "4-4-2": {"GK": 1, "DEF": 4, "MID": 4, "FWD": 2},
+    "3-4-3": {"GK": 1, "DEF": 3, "MID": 4, "FWD": 3},
+}
 
 
-def load_elo():
-    with open(TEAMS, newline="", encoding="utf-8-sig") as f:
-        return {r["team_name"]: float(r["elo_rating"]) for r in csv.DictReader(f)}
+def main(formation="4-3-3", budget_meur=None, max_per_nation=None):
+    df = pd.read_csv(SCORES, dtype={"player_id": str})
+    df = df[df["minutes"] >= MIN_MIN] if (MIN_MIN := 90) else df
+    sq = pd.read_csv(SQ, dtype={"player_id": str})[
+        ["player_id", "market_value_eur", "date_of_birth"]]
+    df = df.merge(sq, on="player_id", how="left")
+    df["value_meur"] = (df["market_value_eur"] / 1e6).round(1)
+    df = df[df["value_meur"].notna()]
 
+    prob = pulp.LpProblem("BestXI", pulp.LpMaximize)
+    x = {i: pulp.LpVariable(f"x_{i}", cat="Binary") for i in df.index}
+    prob += pulp.lpSum(df.loc[i, "overall_score"] * x[i] for i in df.index)
 
-def main(formation=(1, 4, 3, 3), elo_adjust=False):
-    df = pd.read_csv(SCORES)
-    df = df[df["minutes"] >= MIN_MIN].copy()
-    elo = load_elo()
+    prob += pulp.lpSum(x.values()) == 11, "total_11"
+    for pos, need in FORMATIONS[formation].items():
+        idx = df.index[df["position"] == pos]
+        prob += pulp.lpSum(x[i] for i in idx) == need, f"need_{pos}"
+    if budget_meur:
+        prob += pulp.lpSum(df.loc[i, "value_meur"] * x[i] for i in df.index) \
+            <= budget_meur, "budget"
+    if max_per_nation:
+        for nat, grp in df.groupby("team"):
+            prob += pulp.lpSum(x[i] for i in grp.index) <= max_per_nation, \
+                f"nat_{nat}"
 
-    if elo_adjust:
-        # thuong so khi thang/draw/tran kho khan: +score nho theo elo doi thu
-        def opp_bonus(row):
-            opp_elo = elo.get(row.get("opponent_team", ""), 1700)
-            return min(max((opp_elo - 1650) / 1000.0, 0), 0.05)
-        df["final_score"] = (df["analytics_score"] * (1 + df.apply(opp_bonus, axis=1))).round(2)
-    else:
-        df["final_score"] = df["analytics_score"]
+    status = prob.solve(pulp.PULP_CBC_CMD(msg=False))
+    if pulp.LpStatus[status] != "Optimal":
+        print(f"Khong tim du phuong an toi uu ({pulp.LpStatus[status]}). "
+              f"Giam rang buoc budget/max-nation.")
+        return
 
-    picks = []
-    used = set()
-    for role, n in zip(("GK", "DEF", "MID", "FWD"), formation):
-        pool = df[(df["position"] == role) & (~df.index.isin(used))]
-        top = pool.nlargest(n, "final_score")
-        used.update(top.index)
-        for _, r in top.iterrows():
-            picks.append({"role": role, "player_id": r["player_id"],
-                          "player_name": r["player_name"], "team": r["team"],
-                          "matches": r["matches"], "minutes": r["minutes"],
-                          "score": r["final_score"]})
+    xi = df[[x[i].value() == 1 for i in df.index]].copy()
+    order = {"GK": 0, "DEF": 1, "MID": 2, "FWD": 3}
+    xi["_o"] = xi["position"].map(order)
+    xi = xi.sort_values("_o")
+    total_score = xi["overall_score"].sum().round(1)
+    total_val = xi["value_meur"].sum().round(1)
 
-    xi = pd.DataFrame(picks)
-    xi.to_csv(f"{OUT}/best_xi.csv", index=False)
+    out = xi[["position", "player_name", "team",
+              "minutes", "overall_score", "value_meur"]]\
+        .rename(columns={"overall_score": "score", "value_meur": "value_eurm"})
+    out.to_csv(f"{OUT}/best_xi.csv", index=False)
 
-    print(f"BEST XI ({formation[0]}-{formation[1]}-{formation[2]}-{formation[3]})")
-    print("=" * 46)
-    for _, r in xi.iterrows():
-        print(f"  [{r['role']:>3}] {r['player_name']:26s} {r['team']:20s} "
-              f"score={r['score']:.1f} | {r['matches']} trän / {r['minutes']}'")
-
-    bench = df[~df.index.isin(used)].nlargest(7, "final_score")
-    bench.to_csv(f"{OUT}/best_xi_bench.csv", index=False)
-    print("\nDự bị (7):")
-    for _, r in bench.iterrows():
-        print(f"  [{r['position']:>3}] {r['player_name']:26s} score={r['final_score']:.1f}")
+    print(f"BEST XI [{formation}] | Tong score: {total_score} | "
+          f"Tong gia: {total_val}M EUR")
+    print("=" * 62)
+    for _, r in out.iterrows():
+        print(f"  [{r['position']:>3}] {r['player_name']:28s} "
+              f"{r['team'][:18]:18s} score={r['score']:5.1f} "
+              f"gia={r['value_eurm']:6.1f}M")
 
 
 if __name__ == "__main__":
-    import sys
-    elo_adj = "--elo" in sys.argv
-    main(elo_adjust=elo_adj)
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--formation", default="4-3-3", choices=FORMATIONS.keys())
+    ap.add_argument("--budget", type=float, default=None,
+                    help="Ngan sach toi da (trieu EUR)")
+    ap.add_argument("--max-nation", type=int, default=None)
+    a = ap.parse_args()
+    main(a.formation, a.budget, a.max_nation)

@@ -1,12 +1,12 @@
-role,player_id,player_name,team,matches,minutes,score
-GK,677,Ali Reza Beiranvand,IR Iran,3,276,93.87
-DEF,783,Mohammed Ali Lajami,Saudi Arabia,3,152,89.88
-DEF,1238,Andres Alberto Andrade,Panama,3,281,87.99
-DEF,619,Mohamed Amine Ben Hmida,Tunisia,3,207,83.26
-DEF,431,Nico Cédric Schlotterbeck,Germany,2,184,80.54
-MID,326,Sebastian Matthew Berhalter,USA,5,206,88.2
-MID,509,Pedro Jeampierre Vite,Ecuador,4,370,85.47
-MID,517,Moisés Isaac Caicedo,Ecuador,4,370,83.06
-FWD,946,Lionel Andrés Messi,Argentina,8,765,94.71
-FWD,842,Kylian Mbappe,France,8,720,91.88
-FWD,215,José Vinicius,Brazil,5,459,89.04
+position,player_name,team,minutes,score,value_eurm
+GK,Lawrence Ati Zigi,Ghana,189,89.0,1.5
+DEF,Abdülker Bardakci,Türkiye,274,78.5,4.7
+DEF,Pedro Antonio Porro,Spain,579,77.0,90.7
+DEF,Nico Cédric Schlotterbeck,Germany,184,75.4,55.0
+MID,Sebastian Matthew Berhalter,USA,206,79.5,8.0
+MID,Pape Alassane Gueye,Senegal,237,75.5,40.0
+MID,Nathan-Dylan Saliba,Canada,185,75.3,7.5
+MID,Malik Leon Tillman,USA,378,74.5,30.0
+MID,Moisés Isaac Caicedo,Ecuador,370,73.8,14.3
+FWD,Lionel Andrés Messi,Argentina,765,82.7,15.0
+FWD,Iliman Cheikh Baroy Ndiaye,Senegal,120,82.6,55.0
