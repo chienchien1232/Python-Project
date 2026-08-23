@@ -28,7 +28,7 @@ def main():
     sq = pd.read_csv(SQ, dtype={"player_id": str})
     sq["value_log"] = np.log1p(sq["market_value_eur"])
 
-    df = feat.merge(sq[["player_id", "market_value_eur", "caps",
+    df = feat.merge(sq[["player_id", "value_log", "caps",
                         "date_of_birth"]], on="player_id", how="inner")
     df = df[df["minutes"] >= 90].copy()
     df["age"] = 2026 - df["date_of_birth"].str[:4].astype(float)

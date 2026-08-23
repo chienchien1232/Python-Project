@@ -54,8 +54,8 @@ with t1:
 with t2:
     st.subheader("PCA Map — khám phá cấu trúc dữ liệu")
     html_p = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
-            os.path.abspath(__file__)))), "data", "processed", "analytics",
-            "pca_interactive.html")
+        os.path.dirname(os.path.abspath(__file__))))),
+        "data", "processed", "analytics", "pca_interactive.html")
     if os.path.exists(os.path.abspath(html_p)):
         with open(os.path.abspath(html_p), encoding="utf-8") as f:
             html_bytes = f.read()

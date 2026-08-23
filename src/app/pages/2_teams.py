@@ -32,8 +32,8 @@ df = q("""SELECT t.team_id, t.team_name AS Đội_tuyển,
 df["HS_bàn"] = df["Bàn_thắng"] - df["Bàn_thua"]
 
 cluster_p = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
-    os.path.abspath(__file__)))), "data", "processed", "analytics",
-    "team_clusters.csv")
+        os.path.dirname(os.path.abspath(__file__))))),
+        "data", "processed", "analytics", "team_clusters.csv")
 tc = load_analytics_csv("team_clusters.csv")
 if tc is None and os.path.exists(cluster_p):
     tc = pd.read_csv(cluster_p)

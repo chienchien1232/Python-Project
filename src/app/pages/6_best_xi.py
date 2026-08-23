@@ -18,7 +18,7 @@ except ImportError:
     st.error("Cần thư viện PuLP: pip install pulp")
     st.stop()
 
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 ANALYTICS = os.path.join(ROOT, "data", "processed", "analytics")
 
 if hasattr(sys.stdout, "reconfigure"):

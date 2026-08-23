@@ -105,8 +105,8 @@ st.plotly_chart(fig, use_container_width=True)
 
 # AI similarity top5
 sim_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
-            os.path.abspath(__file__)))), "data", "processed", "analytics",
-            "similarity_matrix.parquet")
+        os.path.dirname(os.path.abspath(__file__))))),
+        "data", "processed", "analytics", "similarity_matrix.parquet")
 if os.path.exists(os.path.abspath(sim_path)):
     sim = pd.read_parquet(sim_path)
     target = next((x for x in sim.index if f"#{pid}" in x), None)
