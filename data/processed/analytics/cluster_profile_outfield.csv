@@ -1,5 +1,5 @@
-cluster,goals_p90,assists_p90,shots_p90,shots_on_target_p90,passes_p90,accurate_passes_p90,crosses_p90,tackles_p90,interceptions_p90,clearances_p90,blocks_p90,recoveries_p90,duels_won_p90,aerial_duels_won_p90,dribbles_attempted_p90,fouls_committed_p90,fouls_won_p90,offsides_p90
-0,0.3,0.06,2.04,0.84,16.55,12.6,0.61,1.79,0.17,0.75,1.12,1.38,2.84,2.57,1.69,1.33,1.16,0.55
-1,0.04,0.02,0.56,0.14,56.55,50.95,0.75,2.64,1.22,5.0,2.33,5.51,2.38,2.22,1.37,0.9,0.66,0.04
-2,0.32,0.17,2.15,0.78,35.62,29.9,3.62,2.48,0.47,0.63,1.64,2.11,0.65,0.59,5.48,0.88,1.69,0.25
-3,0.03,0.04,0.71,0.17,36.91,31.56,1.46,3.57,0.77,2.26,2.38,3.4,0.82,0.76,1.86,1.18,0.82,0.09
+cluster,goals_p90,assists_p90,shots_p90,shots_on_target_p90,passes_p90,accurate_passes_p90,crosses_p90,tackles_p90,interceptions_p90,clearances_p90,blocks_p90,recoveries_p90,duels_won_p90,aerial_duels_won_p90,dribbles_attempted_p90,fouls_committed_p90,fouls_won_p90,offsides_p90,cluster_label,n_players,top_players
+0,0.3,0.06,2.04,0.84,16.55,12.6,0.61,1.79,0.17,0.75,1.12,1.38,2.84,2.57,1.69,1.33,1.16,0.55,Finisher / Goal Scorer,89,Harry Edward Kane; Mikel Oyarzabal; Breel Donald Embolo
+1,0.04,0.02,0.56,0.14,56.55,50.95,0.75,2.64,1.22,5.0,2.33,5.51,2.38,2.22,1.37,0.9,0.66,0.04,Ball Progressor,186,Pau Cubarsi; Aymeric Laporte; Rodrigo Rodri
+2,0.32,0.17,2.15,0.78,35.62,29.9,3.62,2.48,0.47,0.63,1.64,2.11,0.65,0.59,5.48,0.88,1.69,0.25,Playmaker / Chance Creator,129,Lionel Andrés Messi; Kylian Mbappe; Lamine Yamal Yamal
+3,0.03,0.04,0.71,0.17,36.91,31.56,1.46,3.57,0.77,2.26,2.38,3.4,0.82,0.76,1.86,1.18,0.82,0.09,Box-to-Box / All-rounder,301,Alexis Mac Allister; Marc Cucurella; Enzo Jeremías Fernandez

@@ -41,8 +41,6 @@ def main():
         km = KMeans(n_clusters=k, n_init=10, random_state=42).fit(X)
         sub["cluster"] = km.labels_
         profile = sub.groupby("cluster")[feats].mean().round(2)
-        profile.to_csv(f"{OUT}/cluster_profile_outfield.csv")
-        print(f"OUTFIELD: {len(sub)} players -> {k} cum | profile saved")
 
         # ---- dien giai ten cum theo centroid z-score (spec 3.1) ----
         pop_mean = sub[feats].mean()
@@ -68,6 +66,18 @@ def main():
             labels[c] = best_g
             print(f"  Cum {c}: {best_g}")
         sub["cluster_label"] = sub["cluster"].map(labels)
+
+        # ---- profile + so cau thu + dai dien (cho ML Explorer) ----
+        profile = sub.groupby("cluster")[feats].mean().round(2)
+        profile["cluster_label"] = profile.index.map(labels)
+        profile["n_players"] = sub.groupby("cluster").size()
+        profile["top_players"] = (
+            sub.sort_values("minutes", ascending=False)
+            .groupby("cluster")["player_name"]
+            .apply(lambda s: "; ".join(s.head(3)))
+        )
+        profile.to_csv(f"{OUT}/cluster_profile_outfield.csv")
+        print(f"OUTFIELD: {len(sub)} players -> {k} cum | profile saved")
         out_parts.append(sub)
 
     # ---- GK rieng tu gk_features ----
@@ -86,20 +96,36 @@ def main():
             zg = pd.DataFrame(Xg, columns=gcols)
             zg["cluster"] = kmg.labels_
             cent_z = zg.groupby("cluster")[gcols].mean()
-            prof = gk.groupby("cluster")[gcols].mean().round(2)
-            prof.to_csv(f"{OUT}/cluster_profile_gk.csv")
             glbl = {}
             for c in range(kg):
-                glbl[c] = ("Shot Stopper"
-                           if cent_z.loc[c, "saves_p90"] >= cent_z.loc[c, "save_pct"]
-                           else "Safe Hands")
+                z_saves = float(cent_z.loc[c, "saves_p90"])
+                z_pct = float(cent_z.loc[c, "save_pct"])
+                if z_saves >= 0 and z_saves >= z_pct:
+                    glbl[c] = "Shot Stopper"      # cuu nhieu cu phut (tai trong lon)
+                elif z_pct >= 0:
+                    glbl[c] = "Safe Hands"        # hieu suat cuu cao
+                else:
+                    glbl[c] = "Backup / Limited Minutes"  # ca 2 deu duoi TB
+            prof = gk.groupby("cluster")[gcols].mean().round(2)
+            prof["cluster_label"] = prof.index.map(glbl)
+            prof["n_players"] = gk.groupby("cluster").size()
+            prof["top_players"] = (
+                gk.sort_values("minutes", ascending=False)
+                .groupby("cluster")["player_name"]
+                .apply(lambda s: "; ".join(s.head(3)))
+            )
+            prof.to_csv(f"{OUT}/cluster_profile_gk.csv")
             gk["cluster_label"] = gk["cluster"].map(glbl)
             print(f"GK: {len(gk)} players -> {kg} cum | {glbl}")
             out_parts.append(gk.assign(position="GK"))
 
     result = pd.concat(out_parts)
+    # An toan: output bat buoc co ca cau thu ngoai san va GK
+    n_gk = (result["position"] == "GK").sum()
+    n_out = (result["position"] != "GK").sum()
+    assert n_out > 0 and n_gk > 0, f"player_clusters.csv thieu thanh phan (out={n_out}, gk={n_gk})"
     result.to_csv(f"{OUT}/player_clusters.csv", index=False)
-    print("saved:", f"{OUT}/player_clusters.csv")
+    print(f"saved: {OUT}/player_clusters.csv | outfield={n_out}, gk={n_gk}")
 
 
 if __name__ == "__main__":

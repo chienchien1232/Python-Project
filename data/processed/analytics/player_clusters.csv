@@ -708,8 +708,8 @@ player_id,player_name,position,team,nationality,matches,minutes,total_goals,goal
 27,Ronwen Hayden Williams,GK,South Africa,,4,364,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,11.0,0.0,4.0,1.0,4.0,73.33,2.72
 53,Seunggyu Kim,GK,Korea Republic,,3,276,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,10.0,0.0,3.0,0.0,3.0,76.92,3.261
 79,Mat ě j Kovar,GK,Czechia,,3,280,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,9.0,0.0,6.0,0.0,3.0,60.0,2.893
-120,Maxime Crepeau,GK,Canada,,5,465,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,6.0,0.0,6.0,2.0,5.0,50.0,1.161
-131,Nikola Vasilj,GK,Bosnia and Herzegovina,,4,375,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,6.0,0.0,8.0,0.0,4.0,42.86,1.44
+120,Maxime Crepeau,GK,Canada,,5,465,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,6.0,0.0,6.0,2.0,5.0,50.0,1.161
+131,Nikola Vasilj,GK,Bosnia and Herzegovina,,4,375,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,6.0,0.0,8.0,0.0,4.0,42.86,1.44
 336,Matthew Andrew Geary Freese,GK,USA,,4,382,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,8.0,0.0,5.0,2.0,4.0,61.54,1.885
 350,Orlando Daniel Gill,GK,Paraguay,,5,500,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,23.0,0.0,6.0,2.0,5.0,79.31,4.14
 157,Ibrahim Mahmoud Abunada,GK,Qatar,,3,276,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,12.0,0.0,10.0,0.0,3.0,54.55,3.913
@@ -720,25 +720,25 @@ player_id,player_name,position,team,nationality,matches,minutes,total_goals,goal
 287,Angus Fraser James Gunn,GK,Scotland,,3,276,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,8.0,0.0,4.0,1.0,3.0,66.67,2.609
 382,Patrick Thomas Beach,GK,Australia,,4,397,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,14.0,0.0,3.0,2.0,4.0,82.35,3.174
 413,Ugurcan Cakir,GK,Türkiye,,3,279,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,8.0,0.0,5.0,0.0,3.0,61.54,2.581
-417,Manuel Peter Neuer,GK,Germany,,4,396,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,5.0,0.0,5.0,0.0,4.0,50.0,1.136
+417,Manuel Peter Neuer,GK,Germany,,4,396,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,5.0,0.0,5.0,0.0,4.0,50.0,1.136
 443,Eloy Victor Room,GK,Curaçao,,3,271,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,20.0,0.0,9.0,1.0,3.0,68.97,6.642
 521,Bart Verbruggen,GK,Netherlands,,4,394,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,16.0,0.0,5.0,0.0,4.0,76.19,3.655
 547,Zion Suzuki,GK,Japan,,4,368,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,12.0,0.0,5.0,1.0,4.0,70.59,2.935
 469,Yahia Fofana,GK,Côte d'Ivoire,,4,367,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,9.0,0.0,4.0,2.0,4.0,69.23,2.207
 495,Hernán Ismael Galindez,GK,Ecuador,,4,370,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,9.0,0.0,4.0,1.0,4.0,69.23,2.189
-595,Bo Kristoffer Nordfeldt,GK,Sweden,,2,189,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,3.0,0.0,6.0,0.0,2.0,33.33,1.429
-599,Abdelmouhib Chamakh,GK,Tunisia,,1,96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,1.0,0.0,5.0,0.0,1.0,16.67,0.938
+595,Bo Kristoffer Nordfeldt,GK,Sweden,,2,189,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,3.0,0.0,6.0,0.0,2.0,33.33,1.429
+599,Abdelmouhib Chamakh,GK,Tunisia,,1,96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,1.0,0.0,5.0,0.0,1.0,16.67,0.938
 751,Unai Simon,GK,Spain,,8,773,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,10.0,0.0,1.0,7.0,8.0,90.91,1.164
 755,José Vozinha,GK,Cabo Verde,,4,400,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,18.0,0.0,5.0,2.0,4.0,78.26,4.05
 625,Thibaut Nicolas Courtois,GK,Belgium,,6,563,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,14.0,0.0,6.0,1.0,6.0,70.0,2.238
 673,Abdelaziz Mohame Mostafa,GK,Egypt,,5,503,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,14.0,0.0,7.0,0.0,5.0,66.67,2.505
 801,Khalil Mohammed Alowais,GK,Saudi Arabia,,3,276,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,16.0,0.0,5.0,1.0,3.0,76.19,5.217
-829,Nestor Fernando Muslera,GK,Uruguay,,3,279,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,4.0,0.0,4.0,0.0,3.0,50.0,1.29
+829,Nestor Fernando Muslera,GK,Uruguay,,3,279,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,4.0,0.0,4.0,0.0,3.0,50.0,1.29
 677,Ali Reza Beiranvand,GK,IR Iran,,3,276,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,15.0,0.0,3.0,1.0,3.0,83.33,4.891
 703,Maxime Teremoana Crocombe,GK,New Zealand,,3,285,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,11.0,0.0,10.0,0.0,3.0,52.38,3.474
-848,Mike Peterson Maignan,GK,France,,8,746,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,13.0,0.0,10.0,4.0,8.0,56.52,1.568
+848,Mike Peterson Maignan,GK,France,,8,746,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,13.0,0.0,10.0,4.0,8.0,56.52,1.568
 874,Edouard Osoque Mendy,GK,Senegal,,2,159,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,8.0,0.0,6.0,0.0,2.0,57.14,4.528
-896,Hasan Hachim Jalal Hassan,GK,Iraq,,2,140,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,2.0,0.0,4.0,0.0,1.0,33.33,1.286
+896,Hasan Hachim Jalal Hassan,GK,Iraq,,2,140,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,2.0,0.0,4.0,0.0,1.0,33.33,1.286
 911,Ørjan Haskjold Nyland,GK,Norway,,5,502,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,16.0,0.0,7.0,0.0,5.0,69.57,2.869
 959,Damián Emiliano Martinez,GK,Argentina,,8,835,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,20.0,0.0,8.0,2.0,8.0,71.43,2.156
 985,Luca Zinedine Zidane,GK,Algeria,,3,271,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,8.0,0.0,6.0,0.0,3.0,57.14,2.657
@@ -751,14 +751,14 @@ player_id,player_name,position,team,nationality,matches,minutes,total_goals,goal
 1197,Lawrence Ati Zigi,GK,Ghana,,2,189,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,8.0,0.0,1.0,1.0,2.0,88.89,3.81
 1212,Benjamin Asare,GK,Ghana,,3,233,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,5.0,0.0,2.0,1.0,2.0,71.43,1.931
 1244,Orlando Mosquera,GK,Panama,,3,281,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,7.0,0.0,4.0,0.0,3.0,63.64,2.242
-1093,Utkir Yusupov,GK,Uzbekistan,,1,99,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,1.0,0.0,3.0,0.0,1.0,25.0,0.909
+1093,Utkir Yusupov,GK,Uzbekistan,,1,99,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,1.0,0.0,3.0,0.0,1.0,25.0,0.909
 1130,Camilo Andres Vargas,GK,Colombia,,5,495,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,6.0,0.0,1.0,4.0,5.0,85.71,1.091
-614,Aymen Dahmen,GK,Tunisia,,2,180,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,5.0,0.0,7.0,0.0,2.0,41.67,2.5
-906,Basil Fadhil Ahmed,GK,Iraq,,2,181,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,3.0,0.0,8.0,0.0,2.0,27.27,1.492
+614,Aymen Dahmen,GK,Tunisia,,2,180,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,5.0,0.0,7.0,0.0,2.0,41.67,2.5
+906,Basil Fadhil Ahmed,GK,Iraq,,2,181,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,3.0,0.0,8.0,0.0,2.0,27.27,1.492
 881,Mory Diaw,GK,Senegal,,3,245,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,7.0,0.0,3.0,2.0,2.0,70.0,2.571
-1104,Abduvakhid Nematov,GK,Uzbekistan,,2,183,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,5.0,0.0,8.0,0.0,2.0,38.46,2.459
+1104,Abduvakhid Nematov,GK,Uzbekistan,,2,183,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,5.0,0.0,8.0,0.0,2.0,38.46,2.459
 573,Jacob Mikael Widell Zetterstrom,GK,Sweden,,2,180,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,11.0,0.0,4.0,0.0,2.0,73.33,5.5
-313,Matthew Charles Turner,GK,USA,,1,98,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,0.0,0.0,3.0,0.0,1.0,0.0,0.0
+313,Matthew Charles Turner,GK,USA,,1,98,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,0.0,0.0,3.0,0.0,1.0,0.0,0.0
 923,Egil Selvik,GK,Norway,,1,94,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,5.0,0.0,4.0,0.0,1.0,55.56,4.787
-978,Oussama Benbot,GK,Algeria,,1,96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Shot Stopper,0.0,0.0,3.0,0.0,1.0,0.0,0.0
+978,Oussama Benbot,GK,Algeria,,1,96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,Backup / Limited Minutes,0.0,0.0,3.0,0.0,1.0,0.0,0.0
 1157,Dean Bradley Henderson,GK,England,,1,98,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,Safe Hands,5.0,0.0,4.0,0.0,1.0,55.56,4.592

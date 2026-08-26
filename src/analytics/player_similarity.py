@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""3.2 Player Similarity - cosine top-K tren feature per-90."""
+"""3.2 Player Similarity - cosine top-K tren feature per-90 (chi outfield)."""
 import os
 
 import pandas as pd
@@ -17,6 +17,8 @@ MIN_MIN = 90
 def main():
     df = pd.read_csv(FEAT)
     df = df[df["minutes"] >= MIN_MIN].copy()
+    # Loai GK: toan bo chi so ngoai san cua GK = 0 -> cosine similarity vo nghia
+    df = df[df["position"].isin(["DEF", "MID", "FWD"])].copy()
     feats = [c for c in df.columns if c not in DROP and not c.startswith("total_")]
     X = StandardScaler().fit_transform(df[feats].fillna(0))
     sim = cosine_similarity(X)  # cung nhom vi tri thi giong nhat; co the loc them
