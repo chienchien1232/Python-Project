@@ -73,15 +73,24 @@ def build_features(m):
     return agg[METRICS].astype(float).round(3)
 
 
-def pick_best_k(X, k_min=4, k_max=6):
-    """Chon k tot nhat theo silhouette (toi da 6 phong cach theo spec)."""
+def pick_best_k(X, k_min=4, k_max=6, save_path=None):
+    """Chon k tot nhat theo silhouette (toi da 6 phong cach theo spec).
+
+    Cung luu inertia (elbow) de doi chieu: voi n=48 doi, silhouette thuong
+    thap (~0.15-0.2) vi phong cach choi la pho, khong roi rac ro rang -> nen
+    trinh bay ca 2 duong cong trong bao cao thay vi chi 1 con so silhouette.
+    """
+    rows = []
     best_k, best_s, best_model = k_min, -1.0, None
     for k in range(k_min, k_max + 1):
         km = KMeans(n_clusters=k, n_init=10, random_state=42).fit(X)
         s = silhouette_score(X, km.labels_)
-        print(f"  k={k} silhouette={s:.3f}")
+        print(f"  k={k} silhouette={s:.3f} inertia={km.inertia_:.1f}")
+        rows.append({"k": k, "silhouette": round(s, 4), "inertia": round(km.inertia_, 2)})
         if s > best_s:
             best_k, best_s, best_model = k, s, km
+    if save_path:
+        pd.DataFrame(rows).to_csv(save_path, index=False)
     return best_model, best_s
 
 
@@ -129,7 +138,7 @@ def main():
 
     X = StandardScaler().fit_transform(agg[METRICS])
     print("Chon so phong cach (k):")
-    km, best_s = pick_best_k(X)
+    km, best_s = pick_best_k(X, save_path=f"{OUT}/cluster_k_selection_team.csv")
     agg["cluster"] = km.labels_
 
     # z-score centroid tung nhom -> gan phong cach chuan + do tin cay

@@ -23,19 +23,19 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 634,Leandro Trossard,FWD,Belgium,6,510,85.1,77.6,54.0,40.5,75.7
 884,Pape Alassane Gueye,MID,Senegal,4,237,90.6,74.1,74.2,66.4,75.5
 431,Nico Cédric Schlotterbeck,DEF,Germany,2,184,74.7,43.0,72.3,82.0,75.4
-1162,Anthony Michael Gordon,FWD,England,6,409,84.3,81.0,39.6,47.2,75.3
 129,Nathan-Dylan Saliba,MID,Canada,3,185,83.2,77.6,63.8,77.7,75.3
+1162,Anthony Michael Gordon,FWD,England,6,409,84.3,81.0,39.6,47.2,75.3
 1238,Andres Alberto Andrade,DEF,Panama,3,281,29.6,45.2,70.9,89.3,75.2
-745,Nicholas Williams,FWD,Spain,6,121,76.2,82.7,66.3,53.0,74.5
 329,Malik Leon Tillman,MID,USA,5,378,88.2,84.9,52.5,72.9,74.5
+745,Nicholas Williams,FWD,Spain,6,121,76.2,82.7,66.3,53.0,74.5
+497,Piero Martin Hincapie,DEF,Ecuador,4,347,40.7,62.2,69.4,83.8,74.4
 544,Crysencio Jilbert Sylverio Cir Summerville,FWD,Netherlands,4,252,84.7,80.4,37.6,39.7,74.4
 660,Hamed Mahrous Mohamed Salah,FWD,Egypt,5,437,84.7,84.5,43.2,23.2,74.4
-497,Piero Martin Hincapie,DEF,Ecuador,4,347,40.7,62.2,69.4,83.8,74.4
 876,Ismaila Sarr,FWD,Senegal,4,374,93.8,67.9,19.8,35.9,74.1
 422,Joshua Walter Kimmich,DEF,Germany,4,359,56.5,88.1,94.1,67.7,73.9
-517,Moisés Isaac Caicedo,MID,Ecuador,4,370,54.3,78.9,88.5,68.6,73.8
 1065,Alexandre Nuno,DEF,Portugal,5,410,65.2,74.6,78.2,73.6,73.8
 16,Julián Andrés Quinones,FWD,Mexico,5,418,90.7,68.7,39.1,28.1,73.8
+517,Moisés Isaac Caicedo,MID,Ecuador,4,370,54.3,78.9,88.5,68.6,73.8
 328,Alexander Michael Freeman,DEF,USA,5,404,66.7,52.3,81.0,75.8,73.6
 531,Cody Mathès Gakpo,FWD,Netherlands,4,371,91.7,67.7,32.1,28.9,73.5
 573,Jacob Mikael Widell Zetterstrom,GK,Sweden,2,180,,,,,73.4
@@ -57,17 +57,17 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 40,Mbekezeli Mfanufikile Mbokazi,DEF,South Africa,4,364,50.9,56.6,69.1,77.7,71.2
 762,Paulo Joao Paulo,MID,Cabo Verde,2,111,47.6,72.7,69.9,89.1,71.1
 822,Mathías Olivera,DEF,Uruguay,3,279,40.4,51.1,89.4,73.2,71.0
-1024,Mohammad Mousa Mousa Altamari,FWD,Jordan,3,216,92.1,66.4,17.6,19.2,70.9
 653,Hany Gamal Mohamed Hany,DEF,Egypt,5,503,46.0,67.1,73.4,74.9,70.9
 128,Promise Oluwatobi Emmanuel David,FWD,Canada,4,90,90.4,57.7,6.5,60.6,70.9
-473,Wilfried Stephane Singo,DEF,Côte d'Ivoire,2,172,54.0,70.5,63.8,75.7,70.6
-217,Matheus Matheus Cunha,FWD,Brazil,5,292,87.3,53.7,45.2,46.8,70.6
+1024,Mohammad Mousa Mousa Altamari,FWD,Jordan,3,216,92.1,66.4,17.6,19.2,70.9
 30,Teboho Mokoena,MID,South Africa,3,274,69.8,60.4,81.3,72.6,70.6
 243,Soufiane Rahimi,FWD,Morocco,6,169,88.4,60.5,23.8,44.9,70.6
 193,Dan Ndoye,FWD,Switzerland,6,411,85.5,62.0,29.1,51.8,70.6
+473,Wilfried Stephane Singo,DEF,Côte d'Ivoire,2,172,54.0,70.5,63.8,75.7,70.6
+217,Matheus Matheus Cunha,FWD,Brazil,5,292,87.3,53.7,45.2,46.8,70.6
 747,Lamine Yamal Yamal,FWD,Spain,8,676,82.4,65.0,55.7,34.8,70.6
-526,Paul Jan-Paul Van Hecke,DEF,Netherlands,4,394,63.0,45.5,86.0,70.8,70.5
 236,Achraf Hakimi,DEF,Morocco,6,581,82.5,91.4,89.0,58.9,70.5
+526,Paul Jan-Paul Van Hecke,DEF,Netherlands,4,394,63.0,45.5,86.0,70.8,70.5
 619,Mohamed Amine Ben Hmida,DEF,Tunisia,3,207,34.5,39.2,50.2,88.1,70.3
 852,Désiré Nonka-Maho Doue,FWD,France,8,463,81.6,59.8,54.0,49.3,70.2
 878,Ibrahim Mbaye,FWD,Senegal,4,168,79.8,64.2,68.9,34.2,70.2
@@ -75,325 +75,325 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 488,Emmanuel Elysee Djedje Agbadou,DEF,Côte d'Ivoire,3,277,47.7,34.4,70.2,79.8,70.1
 1057,Alexandre Rafael Leao,FWD,Portugal,5,176,79.9,65.2,65.7,31.7,70.0
 1048,Miguel Bruno,MID,Portugal,5,436,64.3,83.3,77.4,50.9,69.9
-400,Hakan Calhanoglu,MID,Türkiye,2,181,64.4,62.3,92.2,60.9,69.8
 977,Rayan Ait-Nouri,DEF,Algeria,4,290,41.2,68.9,86.0,69.4,69.8
+400,Hakan Calhanoglu,MID,Türkiye,2,181,64.4,62.3,92.2,60.9,69.8
 54,Hanbeom Lee,DEF,Korea Republic,3,276,37.6,50.5,82.8,73.9,69.7
-836,Dayotchanculle Oswald Upamecano,DEF,France,8,675,44.0,40.8,75.9,76.7,69.7
 748,Pedro Pedri,MID,Spain,8,512,53.1,63.8,88.4,71.4,69.7
+836,Dayotchanculle Oswald Upamecano,DEF,France,8,675,44.0,40.8,75.9,76.7,69.7
 58,Inbeom Hwang,MID,Korea Republic,3,264,79.2,67.9,83.4,50.3,69.6
 367,Alessandro Circati,DEF,Australia,4,399,40.0,48.9,56.3,82.5,69.6
 883,El Hadji Malick Diouf,DEF,Senegal,3,182,31.0,47.0,63.5,81.7,69.5
 8,Álvaro Fidalgo,MID,Mexico,3,107,87.1,69.9,89.8,34.2,69.4
 265,Hannes Piterson Delcroix,DEF,Haiti,3,278,30.5,44.4,76.2,77.6,69.3
-907,Ghazi Salih Merchas,DEF,Iraq,3,277,39.0,62.4,57.7,79.2,69.2
 393,Merih Demiral,DEF,Türkiye,2,181,60.3,48.3,84.8,68.9,69.2
-433,Florian Richard Wirtz,MID,Germany,4,367,66.1,83.2,76.4,47.4,69.1
+907,Ghazi Salih Merchas,DEF,Iraq,3,277,39.0,62.4,57.7,79.2,69.2
 317,Antonee Robinson,DEF,USA,4,365,37.6,57.9,70.5,75.7,69.1
+433,Florian Richard Wirtz,MID,Germany,4,367,66.1,83.2,76.4,47.4,69.1
 501,Pervis Josue Estupinan,DEF,Ecuador,2,90,29.6,47.4,83.9,74.4,69.1
 844,Bradley Jean-Manuel Essolisa Barcola,FWD,France,8,394,84.6,47.6,49.4,56.3,69.0
 406,Ismailİsma Yuksek,MID,Türkiye,2,140,48.9,48.4,87.5,90.8,68.9
 1169,Tehuti Djed-Hotep Spence,DEF,England,8,424,51.7,60.3,65.9,74.1,68.8
-485,Guela Maho-Lewis Doue,DEF,Côte d'Ivoire,4,284,36.8,65.4,75.9,72.4,68.8
 192,Granit Xhaka,MID,Switzerland,6,612,73.2,76.8,83.2,41.3,68.8
-649,Nathan Ngoy,DEF,Belgium,4,344,38.9,43.1,76.0,75.7,68.8
+485,Guela Maho-Lewis Doue,DEF,Côte d'Ivoire,4,284,36.8,65.4,75.9,72.4,68.8
 813,Diego Nicolás De La Cruz,MID,Uruguay,3,92,65.8,69.8,69.5,69.1,68.8
-749,Mikel Oyarzabal,FWD,Spain,8,664,88.2,57.1,30.0,29.2,68.7
+649,Nathan Ngoy,DEF,Belgium,4,344,38.9,43.1,76.0,75.7,68.8
 357,Julio Cesar Enciso,FWD,Paraguay,5,399,78.8,76.4,24.7,38.0,68.7
 135,Sead Kolasinac,DEF,Bosnia and Herzegovina,4,345,40.5,73.9,60.0,75.4,68.7
+749,Mikel Oyarzabal,FWD,Spain,8,664,88.2,57.1,30.0,29.2,68.7
 655,Abdelaziz Moustafa Ramy Rabia,DEF,Egypt,5,391,44.6,43.1,73.2,75.4,68.6
 1141,Davinson Sanchez,DEF,Colombia,5,495,51.4,48.0,76.0,72.3,68.5
-840,Aurélien Djani Tchouameni,MID,France,4,370,43.3,64.8,83.4,77.8,68.4
 812,Rodrigo Bentancur,MID,Uruguay,3,279,44.5,61.9,77.0,86.9,68.4
+840,Aurélien Djani Tchouameni,MID,France,4,370,43.3,64.8,83.4,77.8,68.4
 134,Tarik Muharemovic,DEF,Bosnia and Herzegovina,3,268,34.5,40.9,62.9,80.1,68.2
 767,CABRALSidny Sidny Lopes,DEF,Cabo Verde,3,289,74.8,66.9,49.2,73.3,68.0
 920,Martín Odegaard,MID,Norway,5,487,66.9,82.0,84.2,36.0,68.0
+282,Jean-Kévin Duverne,DEF,Haiti,2,170,41.3,50.0,53.3,80.4,68.0
 645,Timothy Castagne,DEF,Belgium,6,495,42.6,51.2,72.1,73.6,68.0
 872,Ismail Joshua Jakobs,DEF,Senegal,3,222,35.6,50.9,77.9,73.0,68.0
-282,Jean-Kévin Duverne,DEF,Haiti,2,170,41.3,50.0,53.3,80.4,68.0
 639,Thomas Andre Meunier,DEF,Belgium,3,195,61.6,71.4,72.5,66.9,67.9
-1129,Jhon Adolfo Arias,MID,Colombia,5,384,78.6,56.1,83.8,57.6,67.9
 143,Ivan Basic,MID,Bosnia and Herzegovina,3,185,52.5,85.5,82.8,44.1,67.9
+1129,Jhon Adolfo Arias,MID,Colombia,5,384,78.6,56.1,83.8,57.6,67.9
 514,Nilson David Angulo,FWD,Ecuador,4,218,77.0,62.5,45.9,52.4,67.8
 513,Gonzalo Jordy Plata,FWD,Ecuador,4,370,79.9,58.0,48.1,44.0,67.7
-237,Noussair Mazraoui,DEF,Morocco,6,488,35.3,56.7,74.5,72.7,67.7
 85,Ladislav Krejci,DEF,Czechia,3,280,65.5,45.8,65.1,72.6,67.7
-743,Alejandro Baena,MID,Spain,7,486,82.8,80.4,58.6,48.1,67.4
+237,Noussair Mazraoui,DEF,Morocco,6,488,35.3,56.7,74.5,72.7,67.7
 1153,Harry Edward Kane,FWD,England,7,666,89.2,57.3,13.7,26.1,67.4
 230,MARTINELLIGabriel Gabriel,FWD,Brazil,4,150,75.0,62.1,65.5,40.9,67.4
-442,Deniz Undav,FWD,Germany,4,153,91.8,53.4,20.6,14.0,67.3
+743,Alejandro Baena,MID,Spain,7,486,82.8,80.4,58.6,48.1,67.4
 423,Kai Lukas Havertz,FWD,Germany,4,357,84.7,49.9,44.6,37.4,67.3
+442,Deniz Undav,FWD,Germany,4,153,91.8,53.4,20.6,14.0,67.3
 931,Andreas Rædergård Schjelderup,MID,Norway,6,262,83.9,79.0,54.6,52.6,67.3
-1235,Jiovany Javier Ramos,DEF,Panama,2,176,44.2,46.5,73.2,72.5,67.2
-521,Bart Verbruggen,GK,Netherlands,4,394,,,,,67.2
 868,Sadio Mane,FWD,Senegal,4,372,68.1,84.5,47.4,39.1,67.2
 213,Henrique,MID,Brazil,5,437,64.0,54.2,68.0,84.4,67.2
-583,Anthony David Junior Elanga,FWD,Sweden,4,224,81.3,66.9,43.3,12.9,67.1
+521,Bart Verbruggen,GK,Netherlands,4,394,,,,,67.2
+1235,Jiovany Javier Ramos,DEF,Panama,2,176,44.2,46.5,73.2,72.5,67.2
 224,Douglas Douglas Santos,DEF,Brazil,5,459,33.9,47.0,80.2,71.6,67.1
+583,Anthony David Junior Elanga,FWD,Sweden,4,224,81.3,66.9,43.3,12.9,67.1
 757,Alberto Diney,DEF,Cabo Verde,4,400,49.9,32.6,49.3,81.6,67.1
 873,Krepin Diatta,DEF,Senegal,4,404,39.1,66.5,83.8,66.1,67.0
 718,Finn Surman,DEF,New Zealand,3,285,64.1,42.7,67.4,71.3,66.9
 268,Martin Yves Roberns Didier Experience,DEF,Haiti,3,278,38.6,61.7,52.2,77.2,66.8
-185,Silvan Dominic Widmer,DEF,Switzerland,5,173,34.1,44.2,48.2,82.0,66.7
 111,Stephen Eustaquio,MID,Canada,5,405,61.6,67.9,82.7,53.3,66.7
+185,Silvan Dominic Widmer,DEF,Switzerland,5,173,34.1,44.2,48.2,82.0,66.7
+1180,Luka Modric,MID,Croatia,4,331,43.3,76.6,87.1,52.8,66.6
 581,Alexander Isak,FWD,Sweden,4,362,85.9,58.8,26.3,20.4,66.6
 56,Minjae Kim,DEF,Korea Republic,3,251,45.9,42.4,86.3,67.5,66.6
 1075,Kibambe Brian Cipenga,FWD,Congo DR,2,148,82.9,55.3,30.7,41.2,66.6
-1180,Luka Modric,MID,Croatia,4,331,43.3,76.6,87.1,52.8,66.6
 734,Mikel Merino,MID,Spain,8,213,80.9,57.2,61.5,71.0,66.5
 736,Fabian Ruiz,MID,Spain,8,333,74.2,60.7,87.3,45.9,66.4
 186,Nico Elvedi,DEF,Switzerland,6,612,40.5,50.8,79.3,69.1,66.4
 324,Miles Gordon Robinson,DEF,USA,1,98,38.8,35.6,73.0,73.7,66.3
+315,Christopher Jeffrey Richards,DEF,USA,4,382,33.2,43.7,83.2,69.7,66.2
+961,Facundo Axel Medina,DEF,Argentina,5,311,36.9,64.9,74.8,68.5,66.2
+628,Brandon Erik Mechele,DEF,Belgium,6,587,48.4,42.8,77.3,69.4,66.2
 434,Nathaniel Christopher Brown,DEF,Germany,3,288,78.4,72.1,67.6,62.8,66.2
 1187,Petar Sucic,MID,Croatia,4,302,79.0,79.1,58.1,48.5,66.2
-628,Brandon Erik Mechele,DEF,Belgium,6,587,48.4,42.8,77.3,69.4,66.2
-961,Facundo Axel Medina,DEF,Argentina,5,311,36.9,64.9,74.8,68.5,66.2
-315,Christopher Jeffrey Richards,DEF,USA,4,382,33.2,43.7,83.2,69.7,66.2
 1222,Marvin Elom Senaya,DEF,Ghana,4,293,38.9,55.1,41.6,80.6,66.1
-955,Nicolas Hernan Gonzalo Otamendi,DEF,Argentina,6,246,38.0,53.8,82.7,67.3,66.1
 108,Luc De Fougerolles,DEF,Canada,5,385,48.2,55.4,63.1,71.9,66.1
+955,Nicolas Hernan Gonzalo Otamendi,DEF,Argentina,6,246,38.0,53.8,82.7,67.3,66.1
 738,Daniel Olmo,FWD,Spain,8,501,66.9,76.6,62.5,38.4,66.0
-881,Mory Diaw,GK,Senegal,3,245,,,,,65.8
 318,Auston Levi-Jesaiah Trusty,DEF,USA,2,114,78.1,38.4,47.0,74.6,65.8
-1053,Renato Renato Veiga,DEF,Portugal,5,472,37.5,45.1,81.6,68.5,65.7
-234,Vitor Rayan,FWD,Brazil,4,296,65.3,77.0,60.3,45.5,65.7
+881,Mory Diaw,GK,Senegal,3,245,,,,,65.8
 148,Nikola Katic,DEF,Bosnia and Herzegovina,4,328,35.0,32.2,62.3,77.5,65.7
+234,Vitor Rayan,FWD,Brazil,4,296,65.3,77.0,60.3,45.5,65.7
+1053,Renato Renato Veiga,DEF,Portugal,5,472,37.5,45.1,81.6,68.5,65.7
 665,Hafez Ramadan Karim Hafez,DEF,Egypt,3,181,38.2,56.0,73.7,69.1,65.6
 342,Juan Jose Caceres,DEF,Paraguay,5,448,46.3,52.1,24.1,84.6,65.4
 46,Khuliso Johnson Mudau,DEF,South Africa,4,364,35.9,64.2,70.4,68.9,65.4
-260,Anass Salah Eddine,DEF,Morocco,4,212,34.6,54.6,86.9,64.9,65.2
-418,Antonio Ruediger,DEF,Germany,4,262,33.7,40.9,87.5,67.1,65.2
 388,Paul Michael Junior Okon-Engstler,MID,Australia,4,198,42.7,68.3,56.9,87.6,65.2
+260,Anass Salah Eddine,DEF,Morocco,4,212,34.6,54.6,86.9,64.9,65.2
 750,Pau Cubarsi,DEF,Spain,8,773,46.0,49.4,88.3,63.4,65.2
-846,Adrien Thibault Marie Rabiot,MID,France,7,652,56.9,62.7,71.2,68.4,65.1
+418,Antonio Ruediger,DEF,Germany,4,262,33.7,40.9,87.5,67.1,65.2
 189,Breel Donald Embolo,FWD,Switzerland,6,509,81.6,61.6,14.4,34.0,65.1
+846,Adrien Thibault Marie Rabiot,MID,France,7,652,56.9,62.7,71.2,68.4,65.1
 589,Viktor Einar Gyokeres,FWD,Sweden,4,369,83.6,60.0,13.4,26.4,65.0
 866,Lamine Camara,MID,Senegal,4,253,50.9,79.9,72.8,50.1,64.9
 681,Milad Mohammadi,DEF,IR Iran,3,210,52.2,50.3,47.7,75.0,64.8
-564,Ayase Ueda,FWD,Japan,4,331,86.0,56.5,10.7,21.6,64.7
 570,Kaishu Sano,MID,Japan,3,278,70.1,60.5,68.9,61.3,64.7
+564,Ayase Ueda,FWD,Japan,4,331,86.0,56.5,10.7,21.6,64.7
 706,Tyler Grant Bindon,DEF,New Zealand,3,109,60.0,46.1,51.1,73.0,64.6
-71,Kangin Lee,MID,Korea Republic,3,276,63.1,91.3,78.1,20.4,64.6
 943,Rodrigo Javier De Paul,MID,Argentina,7,501,51.3,75.2,83.5,43.6,64.6
-958,Lautaro Javier Martinez,FWD,Argentina,7,326,82.2,47.5,28.6,45.4,64.5
+71,Kangin Lee,MID,Korea Republic,3,276,63.1,91.3,78.1,20.4,64.6
 1148,Declan Rice,MID,England,7,656,71.2,68.3,78.3,40.8,64.5
+958,Lautaro Javier Martinez,FWD,Argentina,7,326,82.2,47.5,28.6,45.4,64.5
 576,Isak Malcolm Kwaku Hien,DEF,Sweden,3,226,29.6,44.9,74.1,70.4,64.5
 735,Ferran Torres,FWD,Spain,8,302,81.5,53.9,28.7,31.8,64.4
 568,Takehiro Tomiyasu,DEF,Japan,3,191,36.2,51.1,71.4,69.0,64.4
-462,Joshua Benjamin Brenet,DEF,Curaçao,2,181,36.8,44.4,35.6,81.7,64.3
-494,Christ Ravynel Inao Oulai,MID,Côte d'Ivoire,4,211,44.5,58.0,71.6,80.3,64.3
 758,Carlos Pico Lopes,DEF,Cabo Verde,4,400,37.3,40.4,50.2,77.5,64.3
 27,Ronwen Hayden Williams,GK,South Africa,4,364,,,,,64.3
+462,Joshua Benjamin Brenet,DEF,Curaçao,2,181,36.8,44.4,35.6,81.7,64.3
 877,Moussa Niakhate,DEF,Senegal,4,404,42.3,72.6,84.2,60.0,64.3
+494,Christ Ravynel Inao Oulai,MID,Côte d'Ivoire,4,211,44.5,58.0,71.6,80.3,64.3
 53,Seunggyu Kim,GK,Korea Republic,3,276,,,,,64.3
-524,Virgil Van Dijk,DEF,Netherlands,4,394,61.5,42.0,85.0,61.5,64.2
-23,Jesús Daniel Gallardo,DEF,Mexico,5,395,41.8,56.3,57.8,71.4,64.2
 744,Rodrigo Rodri,MID,Spain,8,746,40.1,55.9,88.4,69.1,64.2
-332,Folarin Jolaoluwa Balogun,FWD,USA,4,324,85.5,54.7,14.8,18.8,64.1
+23,Jesús Daniel Gallardo,DEF,Mexico,5,395,41.8,56.3,57.8,71.4,64.2
+524,Virgil Van Dijk,DEF,Netherlands,4,394,61.5,42.0,85.0,61.5,64.2
 715,Liberato Gianpaolo Cacace,DEF,New Zealand,3,223,50.6,63.6,54.0,69.8,64.1
-55,Gihyuk Lee,MID,Korea Republic,3,276,33.4,51.7,88.6,78.7,64.0
-929,Thelonious Gerard Aasgaard,MID,Norway,1,94,81.1,53.1,56.5,70.7,64.0
-849,William Alain André Gabriel Saliba,DEF,France,6,494,33.1,35.6,79.0,68.9,64.0
+332,Folarin Jolaoluwa Balogun,FWD,USA,4,324,85.5,54.7,14.8,18.8,64.1
 500,Willian Joel Pacho,DEF,Ecuador,4,370,44.1,42.7,73.3,67.8,64.0
-1225,Jose Angel Cordoba,DEF,Panama,3,281,31.3,42.4,78.6,68.1,63.9
-486,Ibrahim Sangare,MID,Côte d'Ivoire,4,271,37.4,56.3,78.7,79.5,63.9
+929,Thelonious Gerard Aasgaard,MID,Norway,1,94,81.1,53.1,56.5,70.7,64.0
+55,Gihyuk Lee,MID,Korea Republic,3,276,33.4,51.7,88.6,78.7,64.0
+849,William Alain André Gabriel Saliba,DEF,France,6,494,33.1,35.6,79.0,68.9,64.0
 632,Youri Marion Tielemans,MID,Belgium,5,483,73.8,63.2,69.4,51.4,63.9
-547,Zion Suzuki,GK,Japan,4,368,,,,,63.8
+486,Ibrahim Sangare,MID,Côte d'Ivoire,4,271,37.4,56.3,78.7,79.5,63.9
+1225,Jose Angel Cordoba,DEF,Panama,3,281,31.3,42.4,78.6,68.1,63.9
 408,Mert Muldur,DEF,Türkiye,3,108,48.1,71.8,87.3,57.3,63.8
-38,Thapelo Maseko,FWD,South Africa,3,245,77.6,56.0,19.5,50.7,63.7
+547,Zion Suzuki,GK,Japan,4,368,,,,,63.8
 910,Dhia Jirjis Frans,DEF,Iraq,1,90,29.6,35.2,52.5,77.9,63.7
+38,Thapelo Maseko,FWD,South Africa,3,245,77.6,56.0,19.5,50.7,63.7
 228,Lucas Lucas Paqueta,MID,Brazil,4,288,52.3,63.5,73.9,62.8,63.7
 438,David Raum,DEF,Germany,2,108,55.4,52.0,65.8,66.3,63.7
+1168,Reece Lewis James,DEF,England,5,331,34.5,51.3,80.8,64.7,63.6
 858,Maxence Guy Lacroix,DEF,France,3,252,33.7,36.4,70.8,70.7,63.6
 322,Christian Mate Pulisic,FWD,USA,4,284,67.4,80.4,44.4,20.0,63.6
-1194,Marco Pasalic,FWD,Croatia,3,102,68.1,65.7,36.1,61.3,63.6
 607,Hazem Mastouri,FWD,Tunisia,1,90,83.7,48.7,12.5,41.9,63.6
-1168,Reece Lewis James,DEF,England,5,331,34.5,51.3,80.8,64.7,63.6
+1194,Marco Pasalic,FWD,Croatia,3,102,68.1,65.7,36.1,61.3,63.6
 574,Gustaf Johan Lagerbielke,DEF,Sweden,4,369,44.9,44.4,61.6,70.4,63.5
 410,Ferdi Erenay Kadioglu,DEF,Türkiye,2,161,41.2,69.3,92.1,56.6,63.4
-1067,Lionel Nzau Mpasi,GK,Congo DR,4,368,,,,,63.3
 960,Enzo Jeremías Fernandez,MID,Argentina,7,714,71.5,54.7,84.4,46.0,63.3
+1067,Lionel Nzau Mpasi,GK,Congo DR,4,368,,,,,63.3
 1063,Vitor Vitinha,MID,Portugal,5,381,50.5,70.9,85.3,42.6,63.3
 216,GUIMARAESBruno Bruno,MID,Brazil,5,428,61.8,77.9,56.0,53.5,63.1
-1154,Jude Victor William Bellingham,MID,England,8,639,94.1,76.3,44.9,40.5,63.1
 211,Gabriel Gabriel Magalhaes,DEF,Brazil,5,468,39.4,58.2,85.8,60.3,63.1
 117,Derek Austin Cornelius,DEF,Canada,4,367,45.8,41.9,60.1,70.6,63.1
+1154,Jude Victor William Bellingham,MID,England,8,639,94.1,76.3,44.9,40.5,63.1
 559,Keito Nakamura,MID,Japan,4,310,81.8,69.0,52.8,50.8,63.0
-319,Giovanni Alejandro Reyna,MID,USA,4,94,83.3,66.2,71.1,34.7,63.0
 392,Mehmet Zeki Celik,DEF,Türkiye,2,164,51.2,41.4,63.3,68.4,63.0
+319,Giovanni Alejandro Reyna,MID,USA,4,94,83.3,66.2,71.1,34.7,63.0
+479,Yan Diomande,FWD,Côte d'Ivoire,4,335,53.3,86.9,66.4,52.6,62.9
 809,Sebastián Enzo Caceres,DEF,Uruguay,3,279,41.8,49.0,72.7,65.5,62.9
+149,Kerim Alajbegovic,FWD,Bosnia and Herzegovina,4,287,71.7,65.5,38.5,32.6,62.9
 137,Amar Dedic,DEF,Bosnia and Herzegovina,3,285,51.4,44.3,34.4,77.4,62.9
 187,Manuel Obafemi Akanji,DEF,Switzerland,6,612,44.5,47.3,81.4,62.4,62.9
-149,Kerim Alajbegovic,FWD,Bosnia and Herzegovina,4,287,71.7,65.5,38.5,32.6,62.9
-479,Yan Diomande,FWD,Côte d'Ivoire,4,335,53.3,86.9,66.4,52.6,62.9
-1023,Iyad Ali Ali Olwan,FWD,Jordan,3,283,79.4,55.4,21.6,31.4,62.8
-258,Neil Yoni El Aynaoui,MID,Morocco,6,571,49.8,50.0,81.7,69.7,62.8
 941,Leandro Daniel Paredes,MID,Argentina,7,491,49.4,52.9,89.3,58.9,62.8
+258,Neil Yoni El Aynaoui,MID,Morocco,6,571,49.8,50.0,81.7,69.7,62.8
+1023,Iyad Ali Ali Olwan,FWD,Jordan,3,283,79.4,55.4,21.6,31.4,62.8
 1210,Gideon Mensah,DEF,Ghana,4,378,31.7,46.6,59.7,71.5,62.7
 106,Alistair William Johnston,DEF,Canada,5,465,50.8,58.0,59.2,66.5,62.6
 112,Ismaël Kenneth Jordan Kone,MID,Canada,2,149,43.6,64.5,77.6,60.5,62.6
-835,Lucas Digne,DEF,France,6,473,43.0,53.3,78.7,61.9,62.5
 1146,Ezri Ngoyo Konsa,DEF,England,8,675,58.6,56.8,86.1,56.3,62.5
 349,Mauricio Mauricio,MID,Paraguay,4,179,80.1,61.7,47.7,64.3,62.5
-1147,Nico Oreilly,DEF,England,7,476,51.1,53.3,68.5,63.7,62.4
-1236,Carlos Miguel Harvey,DEF,Panama,3,279,45.4,47.6,39.8,75.3,62.4
+835,Lucas Digne,DEF,France,6,473,43.0,53.3,78.7,61.9,62.5
 837,Jules Olivier Kounde,DEF,France,8,621,36.4,55.9,75.3,63.6,62.4
+1236,Carlos Miguel Harvey,DEF,Panama,3,279,45.4,47.6,39.8,75.3,62.4
+1147,Nico Oreilly,DEF,England,7,476,51.1,53.3,68.5,63.7,62.4
 401,Kenan Yildiz,FWD,Türkiye,3,219,62.2,69.5,76.1,31.1,62.3
 481,Christopher Tea Domoraud Operi,DEF,Côte d'Ivoire,1,90,32.6,46.6,85.2,62.0,62.2
 793,Meshari Nawaf Bu Washl,DEF,Saudi Arabia,2,93,32.3,42.3,44.9,76.1,62.1
 975,Jaouen Djimmy Hadjam,DEF,Algeria,3,109,44.9,41.7,61.9,68.4,62.1
+4,Edson Omar Alvarez,DEF,Mexico,4,245,37.7,50.1,76.3,63.2,62.0
 627,Arthur Nicolas Theate,DEF,Belgium,3,236,50.2,34.4,78.8,62.9,62.0
 1086,Yoane Wissa,FWD,Congo DR,4,368,80.3,50.6,29.3,22.2,62.0
-4,Edson Omar Alvarez,DEF,Mexico,4,245,37.7,50.1,76.3,63.2,62.0
 439,Felix Kalu Nmecha,MID,Germany,4,352,77.4,50.0,55.7,70.4,62.0
 742,Aymeric Laporte,DEF,Spain,8,752,54.2,60.6,83.7,56.2,61.9
 652,Ahmed Ibrahim Yasser,DEF,Egypt,5,489,54.5,39.4,67.5,64.9,61.8
 1055,Pedro Joao Neves,MID,Portugal,5,408,60.8,51.9,81.2,55.0,61.8
-248,Issa Laye Lucas Jean Diop,DEF,Morocco,5,477,54.2,37.3,76.0,62.3,61.7
 172,KHOUKHIBoualem Boualem,DEF,Qatar,3,276,36.6,37.7,45.6,75.2,61.7
 608,Hannibal Mejbri,MID,Tunisia,3,276,60.9,84.7,50.6,45.9,61.7
-158,Miguel Pedro,DEF,Qatar,3,276,48.9,50.5,26.8,77.1,61.6
+248,Issa Laye Lucas Jean Diop,DEF,Morocco,5,477,54.2,37.3,76.0,62.3,61.7
 1043,Rúben Ruben Dias,DEF,Portugal,4,380,31.0,42.7,77.3,64.7,61.6
+158,Miguel Pedro,DEF,Qatar,3,276,48.9,50.5,26.8,77.1,61.6
 553,Ao Tanaka,MID,Japan,3,199,42.0,50.2,79.3,73.3,61.6
+292,Kieran Tierney,DEF,Scotland,2,104,39.5,59.8,53.3,68.2,61.5
+511,Ángelo Smit Preciado,DEF,Ecuador,4,106,34.4,57.6,46.9,71.6,61.5
 814,Federico Santiago Valverde,MID,Uruguay,3,241,70.5,68.2,61.0,46.9,61.5
 602,Omar Rekik,DEF,Tunisia,2,186,67.7,47.5,58.7,63.8,61.5
-511,Ángelo Smit Preciado,DEF,Ecuador,4,106,34.4,57.6,46.9,71.6,61.5
-292,Kieran Tierney,DEF,Scotland,2,104,39.5,59.8,53.3,68.2,61.5
 244,Brahim Diaz,FWD,Morocco,6,468,61.5,81.1,49.0,24.0,61.4
-188,Denis Lemi Zakaria,MID,Switzerland,4,364,56.3,51.8,68.7,69.2,61.3
 680,Shojae Khalilzadeh,DEF,IR Iran,3,276,35.8,31.8,54.7,72.7,61.3
-460,Armando Maria Obispo,DEF,Curaçao,3,271,31.5,29.8,47.1,76.3,61.3
+188,Denis Lemi Zakaria,MID,Switzerland,4,364,56.3,51.8,68.7,69.2,61.3
 914,Leo Skiri Ostigard,DEF,Norway,4,131,75.2,41.8,61.3,62.3,61.3
-751,Unai Simon,GK,Spain,8,773,,,,,61.2
+460,Armando Maria Obispo,DEF,Curaçao,3,271,31.5,29.8,47.1,76.3,61.3
 435,Leroy Aziz Sane,MID,Germany,4,328,75.8,59.9,71.7,40.4,61.2
-325,Timothy Michael Ream,DEF,USA,4,382,33.0,43.3,83.0,61.6,61.2
-1124,Richard Rios,MID,Colombia,5,150,61.8,61.0,47.6,74.4,61.2
 704,Timothy John Payne,DEF,New Zealand,3,226,43.3,71.5,51.7,65.6,61.2
+751,Unai Simon,GK,Spain,8,773,,,,,61.2
+1124,Richard Rios,MID,Colombia,5,150,61.8,61.0,47.6,74.4,61.2
+325,Timothy Michael Ream,DEF,USA,4,382,33.0,43.3,83.0,61.6,61.2
 264,Ricardo Ade,DEF,Haiti,3,278,50.1,46.6,59.9,65.8,61.1
-641,Charles Marc De Ketelaere,FWD,Belgium,5,438,77.8,43.2,23.9,50.4,61.0
 838,Emmanuel Boris Kone,MID,France,5,443,54.6,56.4,74.4,58.4,61.0
 942,Lisandro Martinez,DEF,Argentina,7,641,60.8,49.5,83.6,55.5,61.0
-475,Odilon Dorgeless Kossounou,DEF,Côte d'Ivoire,4,278,30.5,36.4,71.3,66.6,60.9
+641,Charles Marc De Ketelaere,FWD,Belgium,5,438,77.8,43.2,23.9,50.4,61.0
 695,Ali Nemati,DEF,IR Iran,3,276,35.4,41.3,63.2,67.6,60.9
-202,Michel Aebischer,MID,Switzerland,4,156,55.0,61.5,67.5,58.4,60.9
+475,Odilon Dorgeless Kossounou,DEF,Côte d'Ivoire,4,278,30.5,36.4,71.3,66.6,60.9
 851,Théo Bernard François Hernandez,DEF,France,5,318,40.8,57.2,71.2,61.4,60.9
-368,Jacob Michael Italiano,DEF,Australia,2,170,41.3,46.5,31.1,76.3,60.8
+202,Michel Aebischer,MID,Switzerland,4,156,55.0,61.5,67.5,58.4,60.9
 629,Maxim Peter De Cuyper,DEF,Belgium,6,449,59.6,52.3,66.4,60.5,60.8
 567,Hiroki Ito,DEF,Japan,4,368,33.4,45.6,74.1,63.5,60.8
+368,Jacob Michael Italiano,DEF,Australia,2,170,41.3,46.5,31.1,76.3,60.8
 242,Azz-Eddine Ounahi,MID,Morocco,6,440,75.8,65.5,81.3,22.1,60.7
+752,Marc Cucurella,DEF,Spain,8,773,53.0,67.9,80.0,54.3,60.7
 1120,Daniel Munoz,DEF,Colombia,5,408,65.0,46.7,74.4,57.7,60.7
 114,Jonathan Christian David,FWD,Canada,5,433,80.0,44.6,23.1,32.0,60.7
-752,Marc Cucurella,DEF,Spain,8,773,53.0,67.9,80.0,54.3,60.7
 647,Nicolas Thierry Raskin,MID,Belgium,6,354,44.5,55.3,74.8,65.8,60.6
+541,Frenkie De Jong,MID,Netherlands,4,332,37.3,54.4,79.6,67.5,60.6
 663,Mohamed Aboelfetouh Ahmed Fatouh,DEF,Egypt,3,281,45.2,58.8,80.2,56.9,60.6
 991,Kevin Danso,DEF,Austria,4,265,38.2,49.9,73.2,61.9,60.6
-541,Frenkie De Jong,MID,Netherlands,4,332,37.3,54.4,79.6,67.5,60.6
 70,Hyeongyu Oh,FWD,Korea Republic,3,134,84.2,42.1,13.6,22.8,60.5
+1178,Mateo Kovacic,MID,Croatia,4,278,62.4,51.5,82.8,46.9,60.4
 956,Alexis Mac Allister,MID,Argentina,8,775,65.6,50.7,71.2,57.1,60.4
 1017,Mousa Musallam Abdallah Nasib,DEF,Jordan,3,266,30.6,30.6,28.9,80.8,60.4
-1178,Mateo Kovacic,MID,Croatia,4,278,62.4,51.5,82.8,46.9,60.4
-240,Ayyoub Bouaddi,MID,Morocco,5,384,42.2,54.5,74.0,68.3,60.4
 879,Habib Mbacke Diarra,MID,Senegal,3,150,83.3,52.0,59.5,53.2,60.4
+240,Ayyoub Bouaddi,MID,Morocco,5,384,42.2,54.5,74.0,68.3,60.4
 972,Fares Chaibi,MID,Algeria,4,367,60.8,55.3,81.1,45.2,60.3
 335,Joseph Michael Scally,DEF,USA,2,92,29.6,63.1,75.0,60.1,60.3
 102,Alexandr Sojka,MID,Czechia,3,146,43.9,80.3,54.2,55.0,60.2
 452,Leandro Jones Johan Bacuna,MID,Curaçao,3,271,57.1,57.5,61.1,64.9,60.2
 889,Hashim Rahman Akam Hashim,DEF,Iraq,3,277,39.4,48.4,58.2,66.2,60.1
-525,Nathan Benjamin Ake,DEF,Netherlands,3,171,35.4,52.8,81.5,58.1,60.0
 992,Xaver Schlager,MID,Austria,4,343,45.7,56.6,61.3,74.2,60.0
+525,Nathan Benjamin Ake,DEF,Netherlands,3,171,35.4,52.8,81.5,58.1,60.0
 118,Jacob Everett Shaffelburg,MID,Canada,5,102,48.5,62.1,65.7,60.4,59.9
-84,ě pán Chaloupek,DEF,Czechia,1,96,29.6,22.7,13.0,86.8,59.9
+820,Agustin Canobbio,MID,Uruguay,3,231,75.0,64.9,50.9,50.9,59.9
 361,Matias Galarza,MID,Paraguay,4,402,67.5,68.7,25.2,78.0,59.9
 932,Oscar Bobb,MID,Norway,6,235,60.8,59.6,67.7,51.9,59.9
-820,Agustin Canobbio,MID,Uruguay,3,231,75.0,64.9,50.9,50.9,59.9
 6,Erik Antonio Lira,MID,Mexico,4,363,39.6,67.9,72.6,53.9,59.9
+84,ě pán Chaloupek,DEF,Czechia,1,96,29.6,22.7,13.0,86.8,59.9
 252,Chadi Riad,DEF,Morocco,4,348,37.0,41.5,77.1,60.8,59.8
 7,Luis Francisco Romo,MID,Mexico,4,268,70.8,63.6,53.7,52.0,59.7
-644,Hans Vanaken,MID,Belgium,6,326,65.0,55.9,72.6,46.6,59.6
 1097,Rustamjon Ashurmatov,DEF,Uzbekistan,3,260,29.6,29.9,49.1,73.1,59.6
 819,Guillermo Varela,DEF,Uruguay,3,279,36.4,49.3,69.2,61.9,59.6
 919,Erling Braut Haaland,FWD,Norway,5,502,85.6,34.0,9.1,31.0,59.6
+644,Hans Vanaken,MID,Belgium,6,326,65.0,55.9,72.6,46.6,59.6
+648,Amadou Ba Onana,MID,Belgium,4,115,43.6,53.7,65.8,72.7,59.5
+590,Yasin Ayari,MID,Sweden,4,347,79.1,63.5,38.9,59.7,59.5
 1170,Jarell Amorin Quansah,DEF,England,3,200,30.9,47.4,64.3,64.7,59.5
 309,Mc,MID,Scotland,3,123,43.6,57.2,69.3,65.1,59.5
-590,Yasin Ayari,MID,Sweden,4,347,79.1,63.5,38.9,59.7,59.5
-648,Amadou Ba Onana,MID,Belgium,4,115,43.6,53.7,65.8,72.7,59.5
 981,Nabil Bentaleb,MID,Algeria,4,294,36.6,53.3,84.4,60.2,59.5
-930,Antonio Eromonsele Nordby Nusa,FWD,Norway,6,379,74.1,54.1,23.1,28.3,59.4
 81,Tomáš Holes,DEF,Czechia,2,154,32.9,44.1,46.5,70.6,59.4
 212,MARQUINHOSMarcos,DEF,Brazil,5,468,33.9,43.3,87.3,57.1,59.4
+930,Antonio Eromonsele Nordby Nusa,FWD,Norway,6,379,74.1,54.1,23.1,28.3,59.4
 1176,Josip Sutalo,DEF,Croatia,4,374,36.7,41.6,75.8,60.7,59.4
-1184,Ivan Perisic,FWD,Croatia,4,374,63.8,49.9,61.3,56.1,59.3
 308,Nathan Kenneth Patterson,DEF,Scotland,3,189,34.8,45.3,69.1,62.4,59.3
 1095,Khojiakbar Alijonov,DEF,Uzbekistan,2,135,37.5,51.1,28.2,74.7,59.3
-593,Alexander Olof Bernhardsson,DEF,Sweden,3,220,51.9,56.6,31.9,70.0,59.2
-403,Evren Eren Elmali,DEF,Türkiye,2,118,44.8,79.7,70.1,54.6,59.2
+1184,Ivan Perisic,FWD,Croatia,4,374,63.8,49.9,61.3,56.1,59.3
 151,Stjepan Radeljic,DEF,Bosnia and Herzegovina,2,185,35.2,50.3,78.3,58.3,59.2
+403,Evren Eren Elmali,DEF,Türkiye,2,118,44.8,79.7,70.1,54.6,59.2
+593,Alexander Olof Bernhardsson,DEF,Sweden,3,220,51.9,56.6,31.9,70.0,59.2
 1226,Fidel Escobar,DEF,Panama,1,90,32.6,35.9,29.0,77.4,59.1
-1106,Eldor Shomurodov,FWD,Uzbekistan,3,276,74.3,47.3,20.2,44.0,59.1
 421,Aleksandar Pavlovic,MID,Germany,4,319,50.1,54.6,84.6,46.1,59.1
 1138,Juan Fernando Quintero,MID,Colombia,4,124,52.2,79.8,79.0,20.0,59.1
-396,Orkun Kokcu,MID,Türkiye,3,155,46.1,67.4,56.2,61.9,59.0
+1106,Eldor Shomurodov,FWD,Uzbekistan,3,276,74.3,47.3,20.2,44.0,59.1
 426,Jamal Musiala,MID,Germany,4,273,75.0,66.9,49.7,46.2,59.0
+396,Orkun Kokcu,MID,Türkiye,3,155,46.1,67.4,56.2,61.9,59.0
 811,Manuel Ugarte,MID,Uruguay,3,187,54.4,38.4,71.9,74.7,59.0
-786,Essa Nasser Aldawsari,MID,Saudi Arabia,3,213,41.4,53.1,60.8,77.9,58.9
-760,Lenini Kevin Pina,MID,Cabo Verde,4,357,65.9,45.9,53.5,74.2,58.9
 384,Cristian Volpato,FWD,Australia,3,167,62.0,64.5,49.6,37.5,58.9
 219,Raphael Raphinha,FWD,Brazil,2,130,64.9,62.4,36.2,39.8,58.9
+786,Essa Nasser Aldawsari,MID,Saudi Arabia,3,213,41.4,53.1,60.8,77.9,58.9
+760,Lenini Kevin Pina,MID,Cabo Verde,4,357,65.9,45.9,53.5,74.2,58.9
 792,Abdullah Saud Abdulhamid,DEF,Saudi Arabia,3,276,39.5,48.6,45.1,68.2,58.8
 1150,Keaninkin Marc-Isreal Guehi,DEF,England,8,685,36.4,55.0,84.2,54.6,58.7
 9,Raúl Alonso Jimenez,FWD,Mexico,4,327,82.9,34.5,15.8,28.0,58.6
-270,Jean Ricner Bellegarde,MID,Haiti,3,269,47.0,66.7,66.8,49.9,58.6
 778,Fabricio Wagner Pina,DEF,Cabo Verde,1,94,43.9,66.0,48.5,63.2,58.6
+270,Jean Ricner Bellegarde,MID,Haiti,3,269,47.0,66.7,66.8,49.9,58.6
 381,Nestory Irankunda,FWD,Australia,4,263,77.0,47.6,14.1,29.3,58.6
 1047,Ronaldo Cristiano Ronaldo,FWD,Portugal,5,455,79.8,38.5,30.0,19.7,58.5
 528,Ryan Jiro Gravenberch,MID,Netherlands,4,350,52.9,71.5,52.2,53.6,58.5
-25,Roberto Carlos Alvarado,FWD,Mexico,5,444,50.8,80.8,58.4,43.7,58.4
 191,Johan Kula Manzambi,MID,Switzerland,4,209,96.2,79.1,32.6,29.2,58.4
 1044,Tomás Tomas Araujo,DEF,Portugal,1,92,32.4,38.7,86.7,56.6,58.4
+25,Roberto Carlos Alvarado,FWD,Mexico,5,444,50.8,80.8,58.4,43.7,58.4
 601,Montassar Omar Talbi,DEF,Tunisia,3,276,32.5,33.0,59.9,66.4,58.4
-970,Houssem-Eddine Chaabane Aouar,MID,Algeria,3,178,65.7,73.3,69.4,23.3,58.3
-1042,SEMEDONélson Nelson,DEF,Portugal,4,142,37.3,67.8,85.1,51.3,58.3
-287,Angus Fraser James Gunn,GK,Scotland,3,276,,,,,58.3
-1219,Derrick Luckassen,DEF,Ghana,2,184,63.7,43.9,69.9,56.0,58.3
 1051,João Joao Felix,FWD,Portugal,3,204,61.0,61.7,33.6,59.7,58.3
+1042,SEMEDONélson Nelson,DEF,Portugal,4,142,37.3,67.8,85.1,51.3,58.3
+1219,Derrick Luckassen,DEF,Ghana,2,184,63.7,43.9,69.9,56.0,58.3
 15,Israel Reyes,DEF,Mexico,4,215,35.9,38.3,67.3,62.3,58.3
+287,Angus Fraser James Gunn,GK,Scotland,3,276,,,,,58.3
+970,Houssem-Eddine Chaabane Aouar,MID,Algeria,3,178,65.7,73.3,69.4,23.3,58.3
+996,David Alaba,DEF,Austria,4,281,44.8,59.1,80.0,53.1,58.2
 316,Tyler Shaan Adams,MID,USA,4,361,32.6,50.4,73.3,73.0,58.2
 561,Daichi Kamada,MID,Japan,4,333,68.9,54.9,69.3,42.6,58.2
-996,David Alaba,DEF,Austria,4,281,44.8,59.1,80.0,53.1,58.2
 96,Michal Sadilek,MID,Czechia,3,194,76.7,57.9,56.8,44.6,58.1
 864,Ismaila Pathe Ciss,MID,Senegal,4,195,51.7,38.5,78.2,66.6,58.1
-395,Salih Ozcan,MID,Türkiye,2,108,29.6,53.9,66.4,77.1,58.0
 662,Yousry Fouad Haissem Hassan,FWD,Egypt,2,127,52.7,85.1,49.6,27.5,58.0
-1002,Saša Kalajdzic,FWD,Austria,3,136,79.0,46.8,13.9,14.5,58.0
+395,Salih Ozcan,MID,Türkiye,2,108,29.6,53.9,66.4,77.1,58.0
 221,Luiz Danilo,DEF,Brazil,5,422,33.4,48.0,80.9,56.1,58.0
-722,Mc,MID,New Zealand,3,164,61.5,49.4,66.0,57.0,57.9
+1002,Saša Kalajdzic,FWD,Austria,3,136,79.0,46.8,13.9,14.5,58.0
 950,Exequiel Alejandro Palacios,MID,Argentina,1,94,29.6,45.4,85.6,67.8,57.9
-1118,Jakhongir Urozov,DEF,Uzbekistan,2,104,34.5,32.1,34.0,74.0,57.9
+722,Mc,MID,New Zealand,3,164,61.5,49.4,66.0,57.0,57.9
 710,Marko Seufatu Nikola Stamenic,MID,New Zealand,3,285,41.0,43.8,75.9,70.4,57.9
+1118,Jakhongir Urozov,DEF,Uzbekistan,2,104,34.5,32.1,34.0,74.0,57.9
 560,Junya Ito,MID,Japan,4,217,74.6,68.6,47.2,42.2,57.8
+1,José Raúl Rangel,GK,Mexico,5,457,,,,,57.7
+1068,Wan Wan-Bissaka,DEF,Congo DR,4,361,35.7,46.5,44.5,67.6,57.7
 831,Juan Manuel Sanabria,MID,Uruguay,3,207,39.4,47.7,68.8,73.2,57.7
 638,Dodi Lukebakio,FWD,Belgium,3,168,63.5,60.9,42.4,33.1,57.7
 900,Fouad Aboud Amir Alammari,MID,Iraq,3,254,38.3,61.2,56.8,70.1,57.7
-1068,Wan Wan-Bissaka,DEF,Congo DR,4,361,35.7,46.5,44.5,67.6,57.7
-1,José Raúl Rangel,GK,Mexico,5,457,,,,,57.7
-503,John Yeboah,FWD,Ecuador,4,315,63.2,58.1,43.1,40.3,57.6
-1019,Mousa Mahmoud Yazan Alarab,DEF,Jordan,3,287,35.7,34.2,46.9,68.7,57.6
-923,Egil Selvik,GK,Norway,1,94,,,,,57.6
-874,Edouard Osoque Mendy,GK,Senegal,2,159,,,,,57.6
 993,Stefan Posch,DEF,Austria,4,350,37.9,43.3,36.0,70.4,57.6
+874,Edouard Osoque Mendy,GK,Senegal,2,159,,,,,57.6
+923,Egil Selvik,GK,Norway,1,94,,,,,57.6
+1019,Mousa Mahmoud Yazan Alarab,DEF,Jordan,3,287,35.7,34.2,46.9,68.7,57.6
+503,John Yeboah,FWD,Ecuador,4,315,63.2,58.1,43.1,40.3,57.6
+312,Mc,DEF,Scotland,1,91,29.6,32.9,73.4,60.9,57.5
 631,Kevin De Bruyne,MID,Belgium,5,386,80.3,61.9,62.5,28.9,57.5
 113,Cyle Christopher Larin,FWD,Canada,4,202,83.1,28.3,20.0,27.6,57.5
 1135,Johan Andrés Mojica,DEF,Colombia,4,403,46.9,58.0,58.8,58.7,57.5
-312,Mc,DEF,Scotland,1,91,29.6,32.9,73.4,60.9,57.5
-962,Nahuel Molina,DEF,Argentina,7,535,32.5,40.3,62.5,62.7,57.4
 916,Patrick Berg,MID,Norway,6,466,47.8,68.8,62.3,46.6,57.4
+962,Nahuel Molina,DEF,Argentina,7,535,32.5,40.3,62.5,62.7,57.4
 669,Attia Fahim Marawan Attia,MID,Egypt,5,453,38.0,49.6,82.7,56.9,57.4
 1116,Behruzjon Karimov,DEF,Uzbekistan,2,191,44.3,56.1,30.3,68.6,57.3
-785,Mohammed Hassan Altambakti,DEF,Saudi Arabia,3,215,33.2,35.9,41.4,70.1,57.2
 562,Tsuyoshi Watanabe,DEF,Japan,2,90,32.6,53.7,60.3,60.9,57.2
-47,Ime Daniel Okon,DEF,South Africa,4,364,34.9,37.9,79.7,56.5,57.1
+785,Mohammed Hassan Altambakti,DEF,Saudi Arabia,3,215,33.2,35.9,41.4,70.1,57.2
+389,Lucas Herrington,DEF,Australia,2,213,30.8,33.0,68.7,61.7,57.1
 121,Tajon Trevor Buchanan,FWD,Canada,5,380,60.5,62.7,33.0,48.2,57.1
 1172,Josip Stanisic,DEF,Croatia,4,374,39.8,69.4,57.9,57.7,57.1
-389,Lucas Herrington,DEF,Australia,2,213,30.8,33.0,68.7,61.7,57.1
+47,Ime Daniel Okon,DEF,South Africa,4,364,34.9,37.9,79.7,56.5,57.1
 235,Yassine Bounou,GK,Morocco,6,581,,,,,57.0
 938,Marcos Nicolás Senesi,DEF,Argentina,2,112,35.7,51.7,81.0,53.4,57.0
 1157,Dean Bradley Henderson,GK,England,1,98,,,,,56.9
@@ -402,100 +402,100 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 539,Brian Ebenezer Adjei Brobbey,FWD,Netherlands,4,227,77.4,39.2,20.9,20.9,56.6
 803,Ibrahim Mohamed,MID,Saudi Arabia,3,230,55.5,38.9,66.1,69.0,56.5
 915,David Møller Moller Wolfe,DEF,Norway,5,444,40.9,63.4,58.2,57.4,56.5
-1099,Otabek Shukurov,MID,Uzbekistan,3,249,41.8,56.9,60.4,63.4,56.4
 278,Wilson Isidor,FWD,Haiti,3,186,77.2,34.2,18.1,35.8,56.4
+1099,Otabek Shukurov,MID,Uzbekistan,3,249,41.8,56.9,60.4,63.4,56.4
 945,Julián Alvarez,FWD,Argentina,8,619,70.8,40.2,41.7,31.5,56.3
+678,Saleh Hardani,DEF,IR Iran,2,134,31.5,44.4,18.7,74.7,56.2
+1060,Pedro Joao Cancelo,DEF,Portugal,5,409,47.9,68.8,63.3,53.1,56.2
 863,Idrissa Gana Gueye,MID,Senegal,4,366,49.4,46.8,79.5,49.6,56.2
 1094,Abdukodir Khusanov,DEF,Uzbekistan,3,282,29.6,26.9,36.5,72.0,56.2
-1060,Pedro Joao Cancelo,DEF,Portugal,5,409,47.9,68.8,63.3,53.1,56.2
-678,Saleh Hardani,DEF,IR Iran,2,134,31.5,44.4,18.7,74.7,56.2
-164,Junior Edmilson,FWD,Qatar,3,259,63.3,61.8,22.8,35.6,56.1
 1092,Arthur Fuka Masuaku,DEF,Congo DR,4,317,36.0,63.9,67.3,54.4,56.1
 383,Harry James Souttar,DEF,Australia,4,399,41.3,35.0,56.5,62.0,56.1
+164,Junior Edmilson,FWD,Qatar,3,259,63.3,61.8,22.8,35.6,56.1
 1132,Gustavo Adolfo Puerta,DEF,Colombia,5,476,67.9,72.3,75.0,45.1,56.1
 784,Ali Abdulelah Alamri,DEF,Saudi Arabia,3,246,70.8,33.8,45.1,60.8,56.0
 579,Lucas Erik Holger Bergvall,MID,Sweden,4,188,41.7,59.7,66.5,52.6,56.0
-515,Alan Steven Franco,MID,Ecuador,4,308,34.6,45.3,73.2,68.4,55.9
 1134,Jefferson Andrés Lerma,MID,Colombia,5,425,48.2,53.3,73.5,47.4,55.9
-469,Yahia Fofana,GK,Côte d'Ivoire,4,367,,,,,55.8
+515,Alan Steven Franco,MID,Ecuador,4,308,34.6,45.3,73.2,68.4,55.9
 411,Barı ş Alper Yilmaz,FWD,Türkiye,3,225,71.0,49.8,25.2,17.3,55.8
 420,Jonathan Glao Tah,DEF,Germany,4,378,42.4,44.2,89.2,48.8,55.8
+469,Yahia Fofana,GK,Côte d'Ivoire,4,367,,,,,55.8
+667,Mostafa Ahmed Mohanad Lashin,MID,Egypt,4,379,36.3,46.7,64.9,72.1,55.5
 1224,Cesar Rodolfo Blackman,DEF,Panama,2,180,54.9,46.4,53.0,58.0,55.5
 257,Bilal El Khannouss,MID,Morocco,6,467,59.1,61.9,57.8,42.8,55.5
-667,Mostafa Ahmed Mohanad Lashin,MID,Egypt,4,379,36.3,46.7,64.9,72.1,55.5
 447,Sherel Constancio Floranus,DEF,Curaçao,3,271,36.8,30.7,46.6,65.6,55.4
-1005,Carney Chibueze Chukwuemeka,MID,Austria,3,98,63.5,50.2,33.2,76.9,55.3
-550,Kou Itakura,DEF,Japan,2,129,29.6,35.4,85.7,52.7,55.3
 646,Alexis Jesse Saelemaekers,MID,Belgium,4,93,87.3,64.8,51.4,22.2,55.3
+1005,Carney Chibueze Chukwuemeka,MID,Austria,3,98,63.5,50.2,33.2,76.9,55.3
 682,Saeid Ezatolahi,MID,IR Iran,3,271,57.4,43.8,34.1,88.7,55.3
-658,Ashour Metwaly Emam,MID,Egypt,5,469,74.8,59.9,54.4,34.8,55.2
+550,Kou Itakura,DEF,Japan,2,129,29.6,35.4,85.7,52.7,55.3
 150,Esmir Bajraktarevic,FWD,Bosnia and Herzegovina,4,242,58.9,54.4,39.2,52.6,55.2
+658,Ashour Metwaly Emam,MID,Egypt,5,469,74.8,59.9,54.4,34.8,55.2
 918,Sander Gard Bolin Berge,MID,Norway,5,502,30.6,44.6,88.8,53.8,55.2
 1173,Marin Pongracic,DEF,Croatia,3,284,38.7,40.7,76.3,53.1,55.1
 471,N'clomande Ghislain Konan,DEF,Côte d'Ivoire,3,277,45.7,55.1,66.2,52.9,55.1
-888,Tahseen Abd Zaid Zaid,DEF,Iraq,2,156,39.0,41.8,44.0,63.7,55.1
 733,Marcos Llorente,DEF,Spain,3,194,40.2,73.9,91.8,42.2,55.1
 535,Micky Van De Ven,DEF,Netherlands,3,270,50.3,45.3,62.2,55.1,55.1
+888,Tahseen Abd Zaid Zaid,DEF,Iraq,2,156,39.0,41.8,44.0,63.7,55.1
 939,Nicolás Alejandro Tagliafico,DEF,Argentina,7,487,31.8,56.7,59.2,57.1,55.0
-386,Jackson Alexander Irvine,MID,Australia,4,230,52.5,54.7,61.6,50.3,54.9
 1190,Igor Matanovic,FWD,Croatia,3,97,68.0,47.2,12.9,43.7,54.9
+386,Jackson Alexander Irvine,MID,Australia,4,230,52.5,54.7,61.6,50.3,54.9
 979,Rafik Belghali,DEF,Algeria,4,334,65.5,53.2,76.0,46.3,54.8
-59,Heung Min Son,FWD,Korea Republic,3,170,61.2,60.6,45.8,14.1,54.8
-713,Elijah Henry Just,MID,New Zealand,3,271,87.3,46.6,45.6,47.7,54.8
 861,Kalidou Koulibaly,DEF,Senegal,2,168,32.8,34.1,58.9,60.5,54.8
-924,Fredrik Aursnes,MID,Norway,6,367,36.7,49.7,65.3,64.4,54.7
+713,Elijah Henry Just,MID,New Zealand,3,271,87.3,46.6,45.6,47.7,54.8
+59,Heung Min Son,FWD,Korea Republic,3,170,61.2,60.6,45.8,14.1,54.8
 238,Sofyan Amrabat,MID,Morocco,3,156,31.2,47.5,77.2,59.6,54.7
+924,Fredrik Aursnes,MID,Norway,6,367,36.7,49.7,65.3,64.4,54.7
 116,Tanitoluwa Oluwatimilehin Oluwaseyi,FWD,Canada,5,262,64.2,52.0,14.5,48.9,54.6
-635,Jeremy Baffour Doku,FWD,Belgium,5,318,53.9,66.2,38.8,43.9,54.5
-1186,Martin Baturina,MID,Croatia,4,326,67.8,64.1,43.5,43.5,54.5
-334,Mc,DEF,USA,1,98,29.6,41.4,67.3,56.5,54.5
-994,Nicolas Seiwald,MID,Austria,4,386,44.0,56.2,60.1,55.1,54.5
 195,Ricardo Ivan Rodriguez,DEF,Switzerland,6,532,40.0,65.1,66.2,51.3,54.5
+1186,Martin Baturina,MID,Croatia,4,326,67.8,64.1,43.5,43.5,54.5
+635,Jeremy Baffour Doku,FWD,Belgium,5,318,53.9,66.2,38.8,43.9,54.5
+994,Nicolas Seiwald,MID,Austria,4,386,44.0,56.2,60.1,55.1,54.5
+334,Mc,DEF,USA,1,98,29.6,41.4,67.3,56.5,54.5
 380,Aziz Behich,DEF,Australia,3,220,49.4,58.6,39.6,59.7,54.5
 2,Jorge Eduardo Sanchez,DEF,Mexico,4,362,52.7,62.0,58.2,52.3,54.5
-826,Maximiliano Javier Araujo,MID,Uruguay,3,256,81.6,65.1,41.1,32.9,54.4
 275,Ruben Fritzner Providence,FWD,Haiti,3,223,58.1,61.2,37.6,33.8,54.4
-1161,Morgan Elliot Rogers,MID,England,7,362,57.7,72.8,44.7,39.0,54.3
+826,Maximiliano Javier Araujo,MID,Uruguay,3,256,81.6,65.1,41.1,32.9,54.4
 771,Johnson Willy,MID,Cabo Verde,3,133,48.8,56.1,42.9,68.1,54.3
+1161,Morgan Elliot Rogers,MID,England,7,362,57.7,72.8,44.7,39.0,54.3
 449,Juninho Gracielo Bacuna,MID,Curaçao,3,255,58.1,55.7,35.4,67.6,54.1
-168,Karim Karim Boudiaf,MID,Qatar,2,106,36.0,48.8,77.6,50.9,54.0
-1200,Jonas Adjei Adjetey,DEF,Ghana,3,288,45.0,30.9,50.9,60.3,54.0
 476,Franck Yannick Kessie,MID,Côte d'Ivoire,4,354,68.0,48.9,68.0,35.0,54.0
-505,Kevin Jose Rodriguez,FWD,Ecuador,4,123,63.1,50.6,30.1,35.1,53.9
-124,Ali Ahmed,FWD,Canada,4,239,52.8,63.1,34.6,56.3,53.9
-190,Remo Marco Freuler,MID,Switzerland,6,601,41.3,45.9,74.1,53.3,53.9
+1200,Jonas Adjei Adjetey,DEF,Ghana,3,288,45.0,30.9,50.9,60.3,54.0
+168,Karim Karim Boudiaf,MID,Qatar,2,106,36.0,48.8,77.6,50.9,54.0
 344,Júnior Osmar Ignacio Alonso,DEF,Paraguay,5,409,43.6,34.4,17.6,71.0,53.9
+124,Ali Ahmed,FWD,Canada,4,239,52.8,63.1,34.6,56.3,53.9
+505,Kevin Jose Rodriguez,FWD,Ecuador,4,123,63.1,50.6,30.1,35.1,53.9
+190,Remo Marco Freuler,MID,Switzerland,6,601,41.3,45.9,74.1,53.3,53.9
 685,Mehdi Taremi,FWD,IR Iran,3,264,60.3,53.4,30.8,42.3,53.8
-806,Waheeb Mohammed Abu Alshamat,DEF,Saudi Arabia,3,140,49.5,48.5,53.3,55.4,53.7
 259,Redouane Halhal,DEF,Morocco,2,191,33.7,54.7,76.5,49.3,53.7
-600,Ali Abdi,DEF,Tunisia,3,276,37.2,41.6,24.0,68.2,53.6
-62,Jae Sung Lee,MID,Korea Republic,2,119,53.0,54.4,51.6,55.3,53.6
+806,Waheeb Mohammed Abu Alshamat,DEF,Saudi Arabia,3,140,49.5,48.5,53.3,55.4,53.7
 169,Mohamed Ayoub Aloui,DEF,Qatar,2,152,31.2,28.9,10.7,75.8,53.6
+62,Jae Sung Lee,MID,Korea Republic,2,119,53.0,54.4,51.6,55.3,53.6
+600,Ali Abdi,DEF,Tunisia,3,276,37.2,41.6,24.0,68.2,53.6
 1201,Thomas Teye Partey,MID,Ghana,3,279,41.5,53.1,63.6,53.4,53.5
 995,Marko Arnautovic,FWD,Austria,4,201,76.6,33.0,17.4,12.3,53.4
-5,Johan Felipe Vasquez,DEF,Mexico,4,379,35.9,42.4,75.1,50.7,53.3
-1088,Mangulu Chancel Mbemba,DEF,Congo DR,4,368,35.4,48.1,49.7,58.3,53.3
 450,Livano Shyron Liomar Comenencia,MID,Curaçao,3,234,78.5,39.8,27.9,74.6,53.3
-291,Grant Campbell Hanley,DEF,Scotland,2,185,29.6,32.5,70.2,54.9,53.2
-498,Joel Leandro Ordonez,DEF,Ecuador,3,279,36.4,33.7,52.1,59.7,53.2
-964,Aissa Mandi,DEF,Algeria,4,367,32.5,50.9,84.6,46.6,53.2
+1088,Mangulu Chancel Mbemba,DEF,Congo DR,4,368,35.4,48.1,49.7,58.3,53.3
+5,Johan Felipe Vasquez,DEF,Mexico,4,379,35.9,42.4,75.1,50.7,53.3
 901,Jasim Elaibi Ali Jasim,FWD,Iraq,2,130,60.8,44.5,36.4,50.3,53.2
-299,Jack William Hendry,DEF,Scotland,3,276,35.8,50.5,78.5,48.0,53.1
-540,Teun Koopmeiners,MID,Netherlands,4,122,38.7,44.4,67.7,60.6,53.1
-1035,Mahmoud Ahmed Nizar Alrashdan,MID,Jordan,3,269,68.2,45.2,25.2,78.4,53.1
-1058,Pedro Pedro Neto,FWD,Portugal,5,401,46.3,74.6,58.8,30.9,53.1
+291,Grant Campbell Hanley,DEF,Scotland,2,185,29.6,32.5,70.2,54.9,53.2
+964,Aissa Mandi,DEF,Algeria,4,367,32.5,50.9,84.6,46.6,53.2
+498,Joel Leandro Ordonez,DEF,Ecuador,3,279,36.4,33.7,52.1,59.7,53.2
 633,Romelu Lukaku,FWD,Belgium,6,241,78.8,23.5,13.4,25.1,53.1
+1058,Pedro Pedro Neto,FWD,Portugal,5,401,46.3,74.6,58.8,30.9,53.1
+540,Teun Koopmeiners,MID,Netherlands,4,122,38.7,44.4,67.7,60.6,53.1
 1233,Edgar Yoel Barcenas,MID,Panama,3,260,41.4,57.3,60.1,50.4,53.1
-157,Ibrahim Mahmoud Abunada,GK,Qatar,3,276,,,,,53.0
-1066,Francisco Francisco Conceicao,FWD,Portugal,4,139,46.9,67.4,73.6,30.0,53.0
-261,Johny Placide,GK,Haiti,3,278,,,,,53.0
-346,Diego Alexander Gomez,MID,Paraguay,4,309,45.1,40.5,35.4,91.8,53.0
-542,Denzel Justus Morris Dumfries,DEF,Netherlands,4,394,61.2,74.3,58.3,46.3,53.0
+299,Jack William Hendry,DEF,Scotland,3,276,35.8,50.5,78.5,48.0,53.1
+1035,Mahmoud Ahmed Nizar Alrashdan,MID,Jordan,3,269,68.2,45.2,25.2,78.4,53.1
 1080,Noah Junior Sadiki,MID,Congo DR,4,261,36.7,52.5,58.8,60.9,53.0
-32,Aubrey Maphosa Modiba,DEF,South Africa,4,348,51.0,58.3,51.2,52.9,52.9
-940,Gonzalo Ariel Montiel,DEF,Argentina,6,250,32.8,46.3,48.4,58.8,52.9
-277,Danley Jean Jacques,MID,Haiti,3,265,33.5,51.1,58.6,64.7,52.9
+157,Ibrahim Mahmoud Abunada,GK,Qatar,3,276,,,,,53.0
+261,Johny Placide,GK,Haiti,3,278,,,,,53.0
+1066,Francisco Francisco Conceicao,FWD,Portugal,4,139,46.9,67.4,73.6,30.0,53.0
+542,Denzel Justus Morris Dumfries,DEF,Netherlands,4,394,61.2,74.3,58.3,46.3,53.0
+346,Diego Alexander Gomez,MID,Paraguay,4,309,45.1,40.5,35.4,91.8,53.0
 898,Aamar Iqbal Zidane,MID,Iraq,3,195,36.9,56.0,79.7,35.3,52.9
+32,Aubrey Maphosa Modiba,DEF,South Africa,4,348,51.0,58.3,51.2,52.9,52.9
+277,Danley Jean Jacques,MID,Haiti,3,265,33.5,51.1,58.6,64.7,52.9
+940,Gonzalo Ariel Montiel,DEF,Argentina,6,250,32.8,46.3,48.4,58.8,52.9
 31,Thalente Wandile Mbatha,MID,South Africa,4,260,51.3,40.6,48.8,72.7,52.8
 297,Ryan Christie,MID,Scotland,3,101,46.9,50.8,42.4,70.3,52.8
 577,Gabriel Johan Gudmundsson,DEF,Sweden,4,334,32.8,56.9,47.0,57.3,52.8
@@ -504,27 +504,27 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 911,Ørjan Haskjold Nyland,GK,Norway,5,502,,,,,52.7
 33,Oswin Reagan Appollis,FWD,South Africa,4,260,55.3,53.9,49.6,36.2,52.5
 1149,John Stones,DEF,England,5,345,34.4,37.6,72.5,51.1,52.4
-1245,Michael Amir Murillo,DEF,Panama,3,281,56.0,64.6,46.6,51.6,52.3
 661,Mohamed Zaky Mostafa Zico,MID,Egypt,5,375,81.5,59.1,16.8,56.3,52.3
-1165,Eberechi Oluchi Eze,MID,England,4,140,49.0,63.0,76.9,17.2,52.2
+1245,Michael Amir Murillo,DEF,Panama,3,281,56.0,64.6,46.6,51.6,52.3
 971,Amine Ferid Gouiri,FWD,Algeria,4,252,70.0,34.0,33.2,19.2,52.2
+1165,Eberechi Oluchi Eze,MID,England,4,140,49.0,63.0,76.9,17.2,52.2
 351,Jose Maria Canale,DEF,Paraguay,4,170,29.6,38.6,12.1,71.4,52.1
-466,Deveron Lenny Fonville,DEF,Curaçao,3,242,37.5,44.3,28.6,63.6,52.1
 470,Ousmane Diomande,DEF,Côte d'Ivoire,1,90,32.6,38.4,85.3,46.6,52.1
+466,Deveron Lenny Fonville,DEF,Curaçao,3,242,37.5,44.3,28.6,63.6,52.1
 1004,Phillip Mwene,DEF,Austria,2,154,36.0,51.1,61.4,51.7,52.0
 1037,Manel Farhan Ehsan Haddad,DEF,Jordan,3,266,44.2,60.9,28.4,59.6,52.0
 902,Hussein Ghadhban Aymen,FWD,Iraq,2,122,74.3,29.4,9.6,27.4,51.9
-1121,Jhon Janer Lucumi,DEF,Colombia,5,493,35.0,35.0,71.1,50.9,51.8
 1027,Nayef Ahmad Mahmoud Almardi,FWD,Jordan,3,141,55.5,60.6,38.7,22.9,51.8
 170,Elamin Homam,DEF,Qatar,2,127,37.3,37.5,28.0,64.6,51.8
-768,Deroy Deroy Duarte,MID,Cabo Verde,4,270,66.7,35.5,47.2,64.2,51.8
+1121,Jhon Janer Lucumi,DEF,Colombia,5,493,35.0,35.0,71.1,50.9,51.8
 377,Aiden Connor Oneill,MID,Australia,4,399,39.3,60.9,53.6,49.2,51.8
+768,Deroy Deroy Duarte,MID,Cabo Verde,4,270,66.7,35.5,47.2,64.2,51.8
 1070,Axel Tuanzebe,DEF,Congo DR,4,368,33.1,40.9,55.5,55.4,51.7
+850,Warren Marie Jean-Pierre Zaire-Emery,MID,France,2,117,35.6,40.4,80.3,49.0,51.6
+160,Gueye Issa Laye,DEF,Qatar,3,276,34.4,39.5,49.6,57.1,51.6
+1114,Abbosbek Fayzullaev,MID,Uzbekistan,3,223,73.1,53.3,18.3,65.5,51.6
 1164,Azuka Tristan Madueke,FWD,England,5,362,55.3,57.2,43.9,25.0,51.6
 1212,Benjamin Asare,GK,Ghana,3,233,,,,,51.6
-850,Warren Marie Jean-Pierre Zaire-Emery,MID,France,2,117,35.6,40.4,80.3,49.0,51.6
-1114,Abbosbek Fayzullaev,MID,Uzbekistan,3,223,73.1,53.3,18.3,65.5,51.6
-160,Gueye Issa Laye,DEF,Qatar,3,276,34.4,39.5,49.6,57.1,51.6
 672,Mohamed Abdelsalam Omar,FWD,Egypt,5,350,57.8,57.0,31.2,23.6,51.5
 1174,Joško Gvardiol,DEF,Croatia,4,194,38.7,48.8,54.1,53.1,51.4
 39,Sphephelo S'miso Sithole,MID,South Africa,3,231,30.7,36.9,59.4,77.5,51.4
@@ -533,10 +533,10 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 204,Fabian Rieder,MID,Switzerland,5,310,58.9,61.3,38.8,44.0,50.9
 1073,Nathanaël Mbuku,MID,Congo DR,3,148,64.8,68.6,38.7,30.5,50.8
 908,Ismael Khaleel Zaid Ismael,MID,Iraq,2,119,31.9,35.1,67.5,67.5,50.7
-1111,Azizjon Ganiev,MID,Uzbekistan,2,125,39.5,56.4,59.4,44.0,50.7
-780,Sandro Helio Varela,MID,Cabo Verde,3,108,84.7,56.5,46.7,20.4,50.7
 976,Hicham Boudaoui,MID,Algeria,3,174,32.7,40.3,69.0,59.3,50.7
 115,Liam Alan Millar,MID,Canada,3,163,43.0,57.9,47.5,51.4,50.7
+780,Sandro Helio Varela,MID,Cabo Verde,3,108,84.7,56.5,46.7,20.4,50.7
+1111,Azizjon Ganiev,MID,Uzbekistan,2,125,39.5,56.4,59.4,44.0,50.7
 804,Saad Moteb Alharbi,DEF,Saudi Arabia,3,194,34.8,55.4,39.2,56.2,50.6
 538,Donyell Malen,FWD,Netherlands,3,235,61.6,52.4,23.9,11.9,50.6
 1110,Abdulla Abdullaev,DEF,Uzbekistan,2,191,32.2,35.8,50.2,56.3,50.6
@@ -549,37 +549,37 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 968,Ramiz Larbi Zerrouki,MID,Algeria,3,157,29.6,34.0,76.7,59.7,50.2
 959,Damián Emiliano Martinez,GK,Argentina,8,835,,,,,50.1
 989,Alexander Schlager,GK,Austria,4,386,,,,,50.1
-1034,Mahmoud Saleh Mohannad Abutaha,MID,Jordan,3,280,38.8,44.8,29.0,86.2,50.0
 549,Shogo Taniguchi,DEF,Japan,3,239,31.8,43.4,75.5,45.6,50.0
+1034,Mahmoud Saleh Mohannad Abutaha,MID,Jordan,3,280,38.8,44.8,29.0,86.2,50.0
 699,Ramin Rezaeian,DEF,IR Iran,3,276,82.5,74.1,38.3,44.3,49.9
 82,Robin Hranac,DEF,Czechia,3,280,29.6,33.4,56.8,53.6,49.8
 1181,Ante Budimir,FWD,Croatia,3,208,68.0,37.0,3.2,28.3,49.8
 1018,Ali Mohammad Husam Abudahab,DEF,Jordan,2,181,29.6,30.4,25.5,64.3,49.7
 465,Riechedly Guillermo Bazoer,DEF,Curaçao,1,90,29.6,28.6,47.1,57.5,49.7
 87,Adam Hlozek,FWD,Czechia,3,164,59.4,52.1,13.2,24.8,49.5
-1203,Abdul Fatawu Fatawu,FWD,Ghana,4,142,49.0,64.4,27.8,35.4,49.4
 679,Ehsan Hajisafi,DEF,IR Iran,2,93,44.0,50.6,17.8,60.6,49.4
+1203,Abdul Fatawu Fatawu,FWD,Ghana,4,142,49.0,64.4,27.8,35.4,49.4
 1109,Dostonbek Khamdamov,MID,Uzbekistan,2,102,42.1,44.4,49.6,61.1,49.4
 856,Mathis Rayan Cherki,MID,France,7,195,51.3,57.0,66.0,22.2,49.4
 625,Thibaut Nicolas Courtois,GK,Belgium,6,563,,,,,49.3
-927,Torbjørn Lysaker Heggem,DEF,Norway,5,493,43.0,37.7,74.9,43.4,49.1
 711,Christopher Grant Wood,FWD,New Zealand,3,285,62.1,46.0,12.9,21.7,49.1
 1098,Akmal Mozgovoy,MID,Uzbekistan,3,225,44.4,60.8,36.3,51.8,49.1
+927,Torbjørn Lysaker Heggem,DEF,Norway,5,493,43.0,37.7,74.9,43.4,49.1
 1220,Ernest Nuamah Nuamah,FWD,Ghana,3,92,47.3,69.7,21.8,33.8,49.0
 582,Erik Benjamin Nygren,MID,Sweden,4,130,39.0,47.7,64.5,42.2,48.8
 262,Carlens Jean Fedlaire Ruby Arcus,DEF,Haiti,3,198,30.9,48.7,45.7,52.9,48.8
 1012,Paul Wanner,MID,Austria,4,247,41.1,47.2,40.4,65.3,48.8
 575,Victor Jörgen Lindelof,DEF,Sweden,4,366,38.2,37.1,72.5,44.5,48.7
+3,César Jasib Montes,DEF,Mexico,4,383,40.5,44.0,63.7,45.7,48.6
 145,Amar Memic,MID,Bosnia and Herzegovina,4,235,54.8,52.8,24.1,63.2,48.6
 703,Maxime Teremoana Crocombe,GK,New Zealand,3,285,,,,,48.6
-3,César Jasib Montes,DEF,Mexico,4,383,40.5,44.0,63.7,45.7,48.6
 609,Ismael Seifallah Gharbi,MID,Tunisia,3,131,47.6,53.4,50.2,41.7,48.5
-1022,Mahmoud Ali Noor Alrawabdeh,MID,Jordan,3,287,45.8,50.5,33.8,62.6,48.4
 664,Fathy Abdelhalim Hamdy Fathy,MID,Egypt,4,286,30.5,41.8,63.4,55.6,48.4
-74,Youngwoo Seol,DEF,Korea Republic,3,257,38.3,56.0,73.8,40.2,48.3
+1022,Mahmoud Ali Noor Alrawabdeh,MID,Jordan,3,287,45.8,50.5,33.8,62.6,48.4
 615,Ellyes Joris Skhiri,MID,Tunisia,3,252,31.7,35.6,57.2,67.9,48.3
-90,Lukáš Cerv,MID,Czechia,2,165,61.4,51.1,33.6,49.2,48.3
+74,Youngwoo Seol,DEF,Korea Republic,3,257,38.3,56.0,73.8,40.2,48.3
 79,Mat ě j Kovar,GK,Czechia,3,280,,,,,48.3
+90,Lukáš Cerv,MID,Czechia,2,165,61.4,51.1,33.6,49.2,48.3
 336,Matthew Andrew Geary Freese,GK,USA,4,382,,,,,48.3
 671,Saber Abdelmohsen Mahmoud,MID,Egypt,2,95,79.9,47.8,50.9,20.6,48.2
 556,Ritsu Doan,MID,Japan,4,281,36.0,54.6,49.6,48.8,48.2
@@ -587,19 +587,19 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 303,Ben Gannon Gannon-Doak,FWD,Scotland,3,186,48.1,52.9,49.7,34.9,48.1
 340,Victor Gustavo Velazquez,DEF,Paraguay,5,261,30.6,35.2,28.9,59.5,48.1
 245,Ismael Saibari,MID,Morocco,5,384,80.1,48.0,34.3,36.6,48.1
-697,Mohammad Ghorbani,MID,IR Iran,1,94,58.0,35.5,22.6,79.9,47.9
 136,Benjamin Tahirovic,MID,Bosnia and Herzegovina,4,244,34.0,45.4,54.5,55.6,47.9
-936,Julian Ryerson,FWD,Norway,4,232,34.9,58.4,80.9,59.5,47.8
+697,Mohammad Ghorbani,MID,IR Iran,1,94,58.0,35.5,22.6,79.9,47.9
 98,Jaroslav Zeleny,DEF,Czechia,2,131,41.4,55.7,37.2,51.0,47.8
+936,Julian Ryerson,FWD,Norway,4,232,34.9,58.4,80.9,59.5,47.8
 414,Oguz Aydin,FWD,Türkiye,1,91,35.0,65.8,65.5,54.3,47.7
 548,Yukinari Sugawara,DEF,Japan,4,153,55.3,49.5,49.5,45.6,47.7
 26,Brian Gutierrez,MID,Mexico,4,214,46.8,56.4,45.6,40.1,47.7
-869,Nicolas Jackson,FWD,Senegal,4,242,61.5,31.7,20.5,38.4,47.6
+95,Lukáš Provod,MID,Czechia,3,124,41.9,51.2,42.3,53.2,47.6
+271,Don Deedson Deedson,FWD,Haiti,3,115,47.9,54.1,31.6,45.8,47.6
 405,Ozan Muhammed Kabak,DEF,Türkiye,1,98,34.7,31.5,29.3,58.6,47.6
 1196,Petar Musa,FWD,Croatia,2,158,67.0,28.3,3.7,32.9,47.6
-271,Don Deedson Deedson,FWD,Haiti,3,115,47.9,54.1,31.6,45.8,47.6
 997,Marcel Sabitzer,MID,Austria,4,386,67.9,53.1,38.9,33.6,47.6
-95,Lukáš Provod,MID,Czechia,3,124,41.9,51.2,42.3,53.2,47.6
+869,Nicolas Jackson,FWD,Senegal,4,242,61.5,31.7,20.5,38.4,47.6
 952,Thiago Ezequiel Almada,FWD,Argentina,4,216,41.5,48.2,72.8,54.9,47.6
 495,Hernán Ismael Galindez,GK,Ecuador,4,370,,,,,47.5
 1185,Mario Pasalic,MID,Croatia,4,135,56.6,30.1,48.8,59.9,47.5
@@ -607,33 +607,33 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 174,Hussain Sultan,DEF,Qatar,2,142,29.6,36.1,34.4,56.2,47.2
 43,Sekotori Evidence Makgopa,FWD,South Africa,4,216,59.5,29.1,7.2,64.2,47.1
 348,Miguel Angel Almiron,MID,Paraguay,4,320,45.4,55.8,20.5,63.9,46.9
-984,Ibrahim Maza,MID,Algeria,4,359,64.3,52.4,39.8,33.6,46.9
 708,Joe Zen Robert Bell,MID,New Zealand,3,255,34.8,33.8,59.1,60.0,46.9
+984,Ibrahim Maza,MID,Algeria,4,359,64.3,52.4,39.8,33.6,46.9
 83,Vladimír Coufal,DEF,Czechia,3,280,42.6,73.1,43.8,44.2,46.8
-11,Santiago Tomás Gimenez,FWD,Mexico,4,104,59.2,43.2,4.3,28.8,46.7
 827,Federico Sebastian Vinas,FWD,Uruguay,3,198,59.6,35.9,6.1,42.9,46.7
+11,Santiago Tomás Gimenez,FWD,Mexico,4,104,59.2,43.2,4.3,28.8,46.7
 167,Hassan Akram,FWD,Qatar,3,243,43.0,63.9,46.9,21.8,46.5
 241,Chemsdine Talbi,MID,Morocco,5,187,44.1,53.4,47.3,38.8,46.4
 953,Giuliano Simeone,FWD,Argentina,3,193,38.8,51.8,58.3,61.6,46.3
 320,Mc,MID,USA,5,468,49.6,50.7,53.8,30.9,46.3
-769,Michael Laros Duarte,MID,Cabo Verde,4,174,64.4,51.2,27.7,44.0,46.2
-557,Daizen Maeda,MID,Japan,3,253,68.1,39.9,34.3,48.1,46.2
-369,Jordan Jacob Bos,DEF,Australia,4,392,56.4,53.4,42.7,44.5,46.2
-1228,Cristian Jesus Martinez,MID,Panama,3,245,37.2,59.9,36.0,47.2,46.2
-1074,Samuel Alain Moutoussamy,MID,Congo DR,4,335,38.9,38.7,49.8,57.3,46.2
+1199,Caleb Marfo Yirenkyi,MID,Ghana,4,282,61.5,40.0,35.5,52.0,46.2
 372,Connor Isaac Metcalfe,MID,Australia,4,347,67.9,37.4,30.3,55.2,46.2
 892,Bayesh Kamil Ibrahim Bayesh,MID,Iraq,3,236,41.3,51.9,25.6,63.9,46.2
-1199,Caleb Marfo Yirenkyi,MID,Ghana,4,282,61.5,40.0,35.5,52.0,46.2
+557,Daizen Maeda,MID,Japan,3,253,68.1,39.9,34.3,48.1,46.2
+369,Jordan Jacob Bos,DEF,Australia,4,392,56.4,53.4,42.7,44.5,46.2
+769,Michael Laros Duarte,MID,Cabo Verde,4,174,64.4,51.2,27.7,44.0,46.2
+1074,Samuel Alain Moutoussamy,MID,Congo DR,4,335,38.9,38.7,49.8,57.3,46.2
+1228,Cristian Jesus Martinez,MID,Panama,3,245,37.2,59.9,36.0,47.2,46.2
 534,Tijjani Martinus Jan Reijnders,MID,Netherlands,3,201,57.2,58.3,43.4,25.4,46.1
 689,Mohammadhossein Kanani,DEF,IR Iran,2,184,48.4,26.2,35.3,52.7,46.1
 1171,Dominik Livakovic,GK,Croatia,4,374,,,,,46.0
 60,Seungho Paik,MID,Korea Republic,3,251,30.6,45.9,71.6,32.7,46.0
-847,Ibrahima Konate,DEF,France,2,116,31.9,37.6,45.6,49.8,45.9
 373,Mohamed Toure,FWD,Australia,3,217,57.1,44.0,13.0,21.8,45.9
+847,Ibrahima Konate,DEF,France,2,116,31.9,37.6,45.6,49.8,45.9
 1218,Kamal Deen Sulemana,FWD,Ghana,2,129,43.9,53.0,39.6,42.8,45.6
-353,Gustavo Raul Gomez,DEF,Paraguay,5,500,32.8,26.4,25.7,57.3,45.4
 1003,Philipp Lienhart,DEF,Austria,2,198,38.6,39.5,76.9,37.1,45.4
 696,Shahriyar Moghanloo,FWD,IR Iran,3,91,44.6,47.6,22.7,67.0,45.4
+353,Gustavo Raul Gomez,DEF,Paraguay,5,500,32.8,26.4,25.7,57.3,45.4
 1025,Burhan Shehadeh Odeh Fakhoury,FWD,Jordan,3,197,52.6,45.0,16.6,33.3,45.2
 1214,Jerome Opoku,DEF,Ghana,3,284,31.3,42.6,42.9,48.6,45.1
 1145,Jordan Lee Pickford,GK,England,7,680,,,,,44.9
@@ -641,12 +641,12 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 232,IBANEZRoger Roger,DEF,Brazil,1,90,36.2,42.8,42.2,47.4,44.8
 119,Moïse Bombito Bombito,DEF,Canada,3,201,45.9,33.3,61.8,40.9,44.8
 463,Tahith Jose Girigorio Djorkaef Chong,MID,Curaçao,3,247,61.2,50.8,25.8,42.7,44.6
-774,Isaac Ryan,FWD,Cabo Verde,4,337,45.8,45.7,34.7,44.8,44.6
 921,Jørgen Strand Strand Larsen,FWD,Norway,1,94,55.3,38.9,16.8,27.6,44.6
+774,Isaac Ryan,FWD,Cabo Verde,4,337,45.8,45.7,34.7,44.8,44.6
 690,Seyed Saman Ghoddos,MID,IR Iran,3,211,45.1,35.2,24.8,74.8,44.5
-413,Ugurcan Cakir,GK,Türkiye,3,279,,,,,44.4
-65,Taeseok Lee,DEF,Korea Republic,2,159,32.9,50.4,46.1,44.8,44.4
 790,Mohammed Salem Aldawsari,FWD,Saudi Arabia,3,247,44.2,52.6,29.7,39.4,44.4
+65,Taeseok Lee,DEF,Korea Republic,2,159,32.9,50.4,46.1,44.8,44.4
+413,Ugurcan Cakir,GK,Türkiye,3,279,,,,,44.4
 618,Yan Valery,DEF,Tunisia,3,252,33.7,40.8,30.4,51.5,44.4
 36,Relebohile Mofokeng,FWD,South Africa,3,216,49.9,41.4,28.9,36.1,44.3
 673,Abdelaziz Mohame Mostafa,GK,Egypt,5,503,,,,,44.2
@@ -660,49 +660,49 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 140,Ermedin Demirovic,FWD,Bosnia and Herzegovina,4,363,56.0,32.8,8.1,33.5,43.2
 712,Sarpreet Singh,MID,New Zealand,3,262,55.9,47.5,32.3,38.3,43.1
 480,Elye Delmas Wahi,FWD,Côte d'Ivoire,3,112,58.4,29.5,17.0,17.9,43.0
-281,Josue Jeremie Casimir,FWD,Haiti,3,189,40.1,54.9,33.9,37.5,42.9
-985,Luca Zinedine Zidane,GK,Algeria,3,271,,,,,42.9
-397,Muhammed Kerem Akturkoglu,FWD,Türkiye,2,176,54.1,43.3,9.9,13.6,42.9
 848,Mike Peterson Maignan,GK,France,8,746,,,,,42.9
+985,Luca Zinedine Zidane,GK,Algeria,3,271,,,,,42.9
+281,Josue Jeremie Casimir,FWD,Haiti,3,189,40.1,54.9,33.9,37.5,42.9
+397,Muhammed Kerem Akturkoglu,FWD,Türkiye,2,176,54.1,43.3,9.9,13.6,42.9
 227,Felipe Endrick,FWD,Brazil,4,121,46.6,43.1,20.9,42.8,42.8
-893,Ibrahim Karim Ali Alhamadi,FWD,Iraq,3,181,47.2,45.1,13.3,40.5,42.6
 1229,Jose Luis Rodriguez,MID,Panama,3,237,55.4,54.8,25.4,35.1,42.6
+893,Ibrahim Karim Ali Alhamadi,FWD,Iraq,3,181,47.2,45.1,13.3,40.5,42.6
 623,Anis Slimane,MID,Tunisia,3,241,48.3,40.8,35.9,46.5,42.5
 776,MOREIRASteven Steven,DEF,Cabo Verde,4,307,37.7,45.3,41.6,43.0,42.4
 499,Jordy Jose Alcivar,MID,Ecuador,1,91,36.8,36.6,59.4,36.8,42.4
 445,Juriën Godfried Juan Gaari,DEF,Curaçao,2,168,38.6,32.5,27.0,49.6,42.3
 1072,Ngal’ayel Mukau,MID,Congo DR,4,246,37.1,43.6,34.5,52.5,42.2
-917,Alexander Sorloth,FWD,Norway,5,395,44.2,44.8,31.8,35.5,42.2
 144,Ivan Sunjic,MID,Bosnia and Herzegovina,4,245,44.0,34.8,52.5,39.5,42.2
-93,Pavel Sulc,FWD,Czechia,3,192,43.3,41.0,24.5,55.6,42.1
+917,Alexander Sorloth,FWD,Norway,5,395,44.2,44.8,31.8,35.5,42.2
 887,Haydar Hussein Hussein,DEF,Iraq,2,164,38.8,37.1,27.8,48.2,42.1
+93,Pavel Sulc,FWD,Czechia,3,192,43.3,41.0,24.5,55.6,42.1
 1140,Deiver Machado,DEF,Colombia,1,92,32.4,55.6,49.8,38.8,42.0
 290,Mc,MID,Scotland,3,276,62.6,33.5,47.3,30.4,42.0
-45,Nkosinathi Emmanuel Sibisi,DEF,South Africa,1,92,29.6,31.4,55.4,41.2,41.9
 280,Frantzdy Pierrot,FWD,Haiti,3,195,52.4,39.0,8.6,24.5,41.9
+45,Nkosinathi Emmanuel Sibisi,DEF,South Africa,1,92,29.6,31.4,55.4,41.2,41.9
 1127,Jhon Andrés Cordoba,FWD,Colombia,3,104,54.3,36.3,8.9,20.3,41.9
 787,Fahad Musab Aljuwayr,MID,Saudi Arabia,3,197,34.7,51.4,50.8,26.7,41.7
-1211,Elisha Owusu,MID,Ghana,3,200,33.5,40.6,42.9,48.0,41.6
 588,Jesper Kewe Karlstrom,MID,Sweden,2,139,38.5,28.5,28.2,73.2,41.6
+1211,Elisha Owusu,MID,Ghana,3,200,33.5,40.6,42.9,48.0,41.6
 926,Marcus Holmgren Holmgren Pedersen,DEF,Norway,4,237,64.8,50.0,55.5,31.7,41.6
 341,Omar Federico Alderete,DEF,Paraguay,4,331,33.0,34.0,20.6,50.6,41.2
 321,Ricardo Daniel Pepi,FWD,USA,5,227,44.8,44.0,27.2,28.8,41.2
 352,Adrián Andrés Cubas,MID,Paraguay,5,500,32.3,30.0,24.0,78.6,41.1
 197,Djibril Ibrahima Sow,MID,Switzerland,4,275,44.3,49.7,47.7,21.4,41.0
-289,Andrew Henry Robertson,DEF,Scotland,3,276,31.4,50.6,65.6,32.7,40.9
 424,Leon Christoph Goretzka,MID,Germany,3,101,45.9,38.8,30.5,50.0,40.9
-1038,Ahmad Ali Ali Azaizeh,FWD,Jordan,3,115,43.6,41.8,31.7,30.7,40.7
+289,Andrew Henry Robertson,DEF,Scotland,3,276,31.4,50.6,65.6,32.7,40.9
 454,Juniffer Naigelino Hansen,FWD,Curaçao,1,90,55.6,24.0,14.1,27.3,40.7
+1038,Ahmad Ali Ali Azaizeh,FWD,Jordan,3,115,43.6,41.8,31.7,30.7,40.7
 1215,Inaki Williams,FWD,Ghana,2,128,44.6,46.2,18.7,23.9,40.3
 1050,Bernardo Bernardo Silva,MID,Portugal,4,159,37.6,32.0,53.4,38.4,40.1
-1231,Tomas Abdiel Rodriguez,FWD,Panama,2,92,52.2,31.3,9.5,22.5,39.7
 276,Lenny Alvin Pico Joseph,FWD,Haiti,3,122,47.6,38.5,7.7,31.2,39.7
-721,Benjamin Craig Old,MID,New Zealand,3,101,36.8,49.6,33.3,35.2,39.4
+1231,Tomas Abdiel Rodriguez,FWD,Panama,2,92,52.2,31.3,9.5,22.5,39.7
 141,Edin Dzeko,FWD,Bosnia and Herzegovina,3,177,41.9,45.6,22.6,27.2,39.4
+721,Benjamin Craig Old,MID,New Zealand,3,101,36.8,49.6,33.3,35.2,39.4
 925,Fredrik André Bjorkan,DEF,Norway,1,94,32.3,26.6,32.6,44.5,39.1
 63,Hee Chan Hwang,MID,Korea Republic,3,157,41.8,51.2,38.7,22.8,39.1
-1204,Kwasi Sibo,MID,Ghana,4,263,31.6,33.7,53.0,37.1,39.0
 1244,Orlando Mosquera,GK,Panama,3,281,,,,,39.0
+1204,Kwasi Sibo,MID,Ghana,4,263,31.6,33.7,53.0,37.1,39.0
 362,Gustavo Ruben Caballero,MID,Paraguay,2,103,58.6,43.7,3.8,52.4,38.9
 580,Daniel Jonathan Svensson,DEF,Sweden,3,103,36.1,40.0,55.3,33.1,38.5
 296,Che Sac Everton Fred Adams,FWD,Scotland,3,147,47.3,33.5,5.4,34.3,38.4
@@ -716,8 +716,8 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 171,Abdurisag Yusuf Abdurisag,FWD,Qatar,2,100,35.9,42.9,6.2,51.9,36.3
 1083,Cedric Bakambu,FWD,Congo DR,3,193,42.5,35.2,10.8,27.1,36.0
 1205,Jordan Pierre Ayew,FWD,Ghana,4,303,32.1,53.4,18.3,30.2,35.9
-314,Sergiño Gianni Dest,DEF,USA,5,354,59.2,72.2,44.2,22.9,35.7
 1015,Mo'ien Hasan Yazeed Abulaila,GK,Jordan,3,287,,,,,35.7
+314,Sergiño Gianni Dest,DEF,USA,5,354,59.2,72.2,44.2,22.9,35.7
 773,Dailon Dailon Livramento,FWD,Cabo Verde,3,175,38.4,41.2,18.6,22.9,35.6
 306,Lawrence Shankland,FWD,Scotland,2,173,40.5,36.1,8.6,33.0,35.5
 1101,Odiljon Xamrobekov,MID,Uzbekistan,2,125,35.3,34.8,43.7,26.0,34.9
@@ -725,8 +725,8 @@ player_id,player_name,position,team,matches,minutes,attacking_score,chance_creat
 725,Ryan Jared Thomas,MID,New Zealand,3,141,29.6,44.3,15.7,46.3,34.7
 41,Iqraam Rayners,FWD,South Africa,4,163,35.7,38.2,29.3,25.3,34.6
 775,Miguel Nuno Da Costa,MID,Cabo Verde,4,167,40.9,48.8,16.5,30.4,34.5
-354,Damián Josue Bobadilla,MID,Paraguay,4,242,29.6,29.9,13.3,64.7,34.4
 596,Elliot Karl Stroud,DEF,Sweden,4,173,40.7,50.5,33.6,30.9,34.4
+354,Damián Josue Bobadilla,MID,Paraguay,4,242,29.6,29.9,13.3,64.7,34.4
 100,Tomáš Soucek,MID,Czechia,3,142,34.5,32.0,29.0,41.4,34.1
 451,Jürgen Leonardo Locadia,FWD,Curaçao,3,238,35.2,39.0,15.5,33.0,34.0
 364,Alexandro Maidana,DEF,Paraguay,2,102,29.6,29.6,15.9,41.2,33.8

@@ -15,15 +15,26 @@ DROP = {"player_id", "player_name", "position", "team", "nationality",
 MIN_MIN = 90
 
 
-def best_k(X, kmin=4, kmax=8):
+def best_k(X, kmin=4, kmax=8, save_path=None):
+    """Chon k theo silhouette; luu ca inertia (elbow) de minh hoa/kiem chung.
+
+    Silhouette thap (~0.1) o outfield la dieu thuong gap voi du lieu bong da
+    thuc te (cac vai tro/loi choi khong tach biet ro rang) -> ket hop them
+    duong elbow (inertia) giup minh bach hoa viec chon k thay vi chi dua vao
+    1 con so silhouette duy nhat.
+    """
+    rows = []
     best, best_s = kmin, -1
     for k in range(kmin, kmax + 1):
         km = KMeans(n_clusters=k, n_init=10, random_state=42).fit(X)
         s = silhouette_score(X, km.labels_)
-        print(f"  k={k} silhouette={s:.3f}")
+        print(f"  k={k} silhouette={s:.3f} inertia={km.inertia_:.1f}")
+        rows.append({"k": k, "silhouette": round(s, 4), "inertia": round(km.inertia_, 2)})
         if s > best_s:
             best, best_s = k, s
     print(f"  -> chon k={best}")
+    if save_path:
+        pd.DataFrame(rows).to_csv(save_path, index=False)
     return best
 
 
@@ -37,7 +48,7 @@ def main():
     sub = df[df["position"].isin(["DEF", "MID", "FWD"])].copy()
     if not sub.empty:
         X = StandardScaler().fit_transform(sub[feats].fillna(0))
-        k = best_k(X, 4, 8)
+        k = best_k(X, 4, 8, save_path=f"{OUT}/cluster_k_selection_outfield.csv")
         km = KMeans(n_clusters=k, n_init=10, random_state=42).fit(X)
         sub["cluster"] = km.labels_
         profile = sub.groupby("cluster")[feats].mean().round(2)
@@ -88,7 +99,7 @@ def main():
         gcols = ["save_pct", "saves_p90"]
         if len(gk) >= 3:
             Xg = StandardScaler().fit_transform(gk[gcols].fillna(0))
-            kg = best_k(Xg, 2, 5)
+            kg = best_k(Xg, 2, 5, save_path=f"{OUT}/cluster_k_selection_gk.csv")
             kmg = KMeans(n_clusters=kg, n_init=10, random_state=42).fit(Xg)
             gk["cluster"] = kmg.labels_
             gk["position"] = "GK"

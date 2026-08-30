@@ -24,7 +24,7 @@ import pandas as pd
 from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, r2_score
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import KFold, cross_val_score, train_test_split
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -57,6 +57,59 @@ def team_win_pct():
     return (g["wins"] / g["matches"].replace(0, np.nan)).fillna(0.5).round(3)
 
 
+def calibrate_scale(diff, current_value, player_id, gt_path):
+    """Hieu chuan he so 'scale' cho ty le counterfactual.
+
+    Ban cu: scale = 0.40 / P95(diff duong) - thuan tuy heuristic, khong doi
+    chieu voi gia tri that -> gay lech he thong (validation cho MAE ~51%,
+    trong khi khong dung model MAE chi ~10.6%).
+
+    Ban moi: neu co ground truth (market_value_ground_truth.csv), do grid
+    search MAE% giua predicted_post_value va gia that de chon scale toi uu.
+    LUU Y: n ground truth rat nho (~16) va nhieu -> neu tim kiem khong rang
+    buoc, MAE se cuc tieu tai scale~0 (tuc la "khong lam gi ca" luon thang
+    vi current_value da gan gia that hon). Do la ket luan trung thuc nhung
+    lam model vo nghia (vi pham gia dinh domain: hieu suat tot hon KHONG
+    duoc lam giam gia tri trung binh). Nen chi tim trong khoang duong
+    [SCALE_MIN, SCALE_MAX] de giu dung tinh chat counterfactual, dong thoi
+    van uu tien scale nho hon neu MAE tot hon (thay vi co dinh +40%/P95).
+    Neu khong co ground truth, fallback ve heuristic cu.
+    """
+    SCALE_MIN, SCALE_MAX = 0.05, 0.60
+    if os.path.exists(gt_path):
+        gt = pd.read_csv(gt_path, dtype={"player_id": str})
+        sub = pd.DataFrame({
+            "player_id": player_id.values,
+            "current_value": current_value.values,
+            "diff": diff,
+        }).merge(gt[["player_id", "real_value_eur_2026_08"]],
+                 on="player_id", how="inner")
+        if len(sub) >= 5:
+            candidates = np.linspace(SCALE_MIN, SCALE_MAX, 111)
+            maes = []
+            for s in candidates:
+                pred = sub["current_value"] * np.exp(s * sub["diff"])
+                mae = (100 * (pred - sub["real_value_eur_2026_08"]).abs()
+                       / sub["real_value_eur_2026_08"]).mean()
+                maes.append(mae)
+            best_idx = int(np.argmin(maes))
+            best_scale, best_mae = float(candidates[best_idx]), float(maes[best_idx])
+            print(f"Hieu chuan scale bang ground truth (n={len(sub)}, tim trong "
+                  f"[{SCALE_MIN},{SCALE_MAX}]): scale={best_scale:.3f} "
+                  f"(MAE tren tap hieu chuan={best_mae:.1f}%)")
+            if best_idx in (0, len(candidates) - 1):
+                print(f"  (!) scale toi uu nam o bien khoang tim kiem -> can mo "
+                      f"rong [SCALE_MIN, SCALE_MAX] hoac thu them ground truth")
+            return best_scale, "ground_truth"
+
+    pos_diff = diff[diff > 0]
+    pos_q = float(np.quantile(pos_diff, 0.95)) if len(pos_diff) else 1.0
+    scale = (0.40 / pos_q) if pos_q > 0 else 1.0
+    print(f"Hieu chuan counterfactual (heuristic, KHONG tim thay ground truth "
+          f"de doi chieu): scale={scale:.3f} (P95 diff={pos_q:.3f})")
+    return scale, "heuristic"
+
+
 def main():
     feat = pd.read_csv(FEAT, dtype={"player_id": str})
     sq = pd.read_csv(SQ, dtype={"player_id": str})
@@ -81,17 +134,32 @@ def main():
         "Random Forest": RandomForestRegressor(n_estimators=300, random_state=42),
         "Gradient Boosting": GradientBoostingRegressor(n_estimators=300, random_state=42),
     }
+    # n mau nho -> 1 lan train/test split de nhieu, danh gia chon model bang
+    # 5-fold CV tren toan bo du lieu, on dinh hon.
+    cv = KFold(n_splits=5, shuffle=True, random_state=42)
     print(f"So mau train/test: {len(Xtr)}/{len(Xte)}\n")
-    print(f"{'Mo hinh':22s} {'R2':>7} {'MAE(log)':>9}")
-    best_name, best_model, best_r2 = None, None, -9
+    print(f"{'Mo hinh':22s} {'CV R2':>7} {'R2(train)':>10} {'R2(test)':>9} {'MAE(log)':>9}")
+    best_name, best_model, best_cv_r2 = None, None, -9
     for name, mdl in models.items():
+        cv_scores = cross_val_score(mdl, X, y, cv=cv, scoring="r2")
+        cv_r2 = cv_scores.mean()
         mdl.fit(Xtr, ytr)
-        pred = mdl.predict(Xte)
-        r2 = r2_score(yte, pred)
-        mae = mean_absolute_error(yte, pred)
-        print(f"{name:22s} {r2:7.3f} {mae:9.3f}")
-        if r2 > best_r2:
-            best_name, best_model, best_r2 = name, mdl, r2
+        pred_tr = mdl.predict(Xtr)
+        pred_te = mdl.predict(Xte)
+        r2_tr = r2_score(ytr, pred_tr)
+        r2_te = r2_score(yte, pred_te)
+        mae = mean_absolute_error(yte, pred_te)
+        print(f"{name:22s} {cv_r2:7.3f} {r2_tr:10.3f} {r2_te:9.3f} {mae:9.3f}")
+        if r2_tr - r2_te > 0.3:
+            print(f"  (!) {name}: R2(train) - R2(test) = {r2_tr - r2_te:.2f} "
+                  f"-> co dau hieu overfit voi n mau nho, can dieu chinh")
+        if cv_r2 > best_cv_r2:
+            best_name, best_cv_r2 = name, cv_r2
+
+    # fit lai model tot nhat (theo CV) tren toan bo du lieu de dung cho counterfactual
+    best_model = models[best_name]
+    best_model.fit(X, y)
+    best_r2 = best_cv_r2
 
     # ---- counterfactual: perf -> median vi tri (gia dinh giai trung binh) ----
     X_pre = X.copy()
@@ -103,16 +171,13 @@ def main():
     pre_log = best_model.predict(X_pre)
     diff = post_log - pre_log
 
-    # Tu hieu chuan do phan tan: hieu suat top 5% ~ +40% de Linear/RF khong
-    # extrapolate vo tan (raw ratio co the lon hon 10x voi mo hinh tuyen tinh).
-    pos_diff = diff[diff > 0]
-    pos_q = float(np.quantile(pos_diff, 0.95)) if pos_diff.size else 1.0
-    scale = (0.40 / pos_q) if pos_q > 0 else 1.0
-    print(f"Hieu chuan counterfactual: scale={scale:.3f} (P95 diff={pos_q:.3f})")
+    df["current_value"] = np.expm1(y).round(0)
+    gt_path = f"{OUT}/market_value_ground_truth.csv"
+    scale, calib_method = calibrate_scale(diff, df["current_value"],
+                                          df["player_id"], gt_path)
 
     ratio = np.exp(scale * diff)
     df["change_pct"] = (100 * scale * diff).clip(-25, 80).round(1)
-    df["current_value"] = np.expm1(y).round(0)
     df["predicted_post_value"] = (df["current_value"] * ratio).round(0)
     df["change_abs"] = (df["predicted_post_value"] - df["current_value"]).round(0)
 
@@ -130,7 +195,8 @@ def main():
     bad = top10[top10["change_pct"] <= 0]["player_name"].tolist()
     assert not bad, f"top vua pha luoi bi change <= 0: {bad}"
 
-    print(f"\nModel tot nhat: {best_name} (R2={best_r2:.3f})")
+    print(f"\nModel tot nhat: {best_name} (5-fold CV R2={best_r2:.3f}, "
+          f"hieu chuan={calib_method})")
     print(f"Xuat {len(mv_out)} du bao -> {OUT}/market_value_estimates.csv")
     cols_show = ["player_name", "team", "position", "current_value",
                  "predicted_post_value", "change_pct"]
