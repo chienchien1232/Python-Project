@@ -16,7 +16,6 @@ Features: profile (age, age^2, caps, position) + san luong that (minutes,
 total_goals, total_assists) + per-90 + thanh tich doi (team_win_pct).
 LUU Y: van thieu ground truth gia-tri-sau-giai -> ket qua la ESTIMATE.
 """
-import os
 import sys
 
 import numpy as np

@@ -1,14 +1,25 @@
 [theme]
 base = "dark"
-primaryColor = "#ccff00"
-backgroundColor = "#080c09"
-secondaryBackgroundColor = "#111612"
+primaryColor = "#e8e8e3"
+backgroundColor = "#080808"
+secondaryBackgroundColor = "#141414"
 textColor = "#F8FAFC"
 font = "sans serif"
+borderColor = "#343434"
+dataframeBorderColor = "#343434"
+dataframeHeaderBackgroundColor = "#151515"
+showWidgetBorder = true
+baseRadius = "none"
+buttonRadius = "none"
 
 [browser]
 gatherUsageStats = false
 
-[server]
-headless = true
+[client]
+showSidebarNavigation = false
+toolbarMode = "minimal"
 
+[server]
+enableStaticServing = true
+headless = true
+port = 8520

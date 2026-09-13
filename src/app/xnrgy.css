@@ -1,0 +1,398 @@
+/* XNRGY-inspired system for the six analytical pages. Overview does not load it. */
+:root {
+  --x-blue: #1b1b1a;
+  --x-blue-bright: #f1f0eb;
+  --x-ink: #0d0d0d;
+  --x-ink-2: #151514;
+  --x-paper: #efefed;
+  --x-paper-2: #e5e5e2;
+  --x-line: rgba(13, 13, 13, .16);
+  --x-white: #f7f7f4;
+  --x-ease: cubic-bezier(.16, 1, .3, 1);
+}
+
+.stApp:has(.xnrg-shell) {
+  color: var(--x-ink);
+  background:
+    linear-gradient(90deg, transparent calc(25% - .5px), rgba(13,16,32,.045) 25%, transparent calc(25% + .5px),
+      transparent calc(50% - .5px), rgba(13,16,32,.045) 50%, transparent calc(50% + .5px),
+      transparent calc(75% - .5px), rgba(13,16,32,.045) 75%, transparent calc(75% + .5px)),
+    var(--x-paper);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.stApp:has(.xnrg-shell) header[data-testid="stHeader"] {
+  height: 0;
+  background: transparent !important;
+  border: 0;
+}
+
+.stApp:has(.xnrg-shell) [data-testid="stMainBlockContainer"] {
+  max-width: 1600px;
+  padding: 0 2.5rem 6rem;
+}
+
+.xnrg-shell {
+  height: 0;
+  position: relative;
+  z-index: 200;
+}
+
+/* CSS-only page wipe: reliable across Streamlit reruns and multipage navigation. */
+.xnrg-shell::before,
+.xnrg-shell::after {
+  position: fixed;
+  z-index: 2147483000;
+  pointer-events: none;
+  color: var(--x-white);
+  animation: xnrg-page-open .78s var(--x-ease) both;
+  transform-origin: top;
+}
+.xnrg-shell::before {
+  content: "";
+  inset: 0;
+  background: var(--x-blue);
+}
+.xnrg-shell::after {
+  content: "WORLDCUP / 2026";
+  right: 28px;
+  bottom: 24px;
+  font: 700 10px/1 Arial,sans-serif;
+  letter-spacing: .16em;
+}
+@keyframes xnrg-page-open {
+  0%, 16% { opacity: 1; transform: scaleY(1); }
+  99% { opacity: 1; transform: scaleY(0); }
+  100% { opacity: 0; visibility: hidden; transform: scaleY(0); }
+}
+
+.xnrg-page-index {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  color: rgba(255,255,255,.52);
+  font-size: 9px;
+  line-height: 1;
+  letter-spacing: .14em;
+}
+
+.stApp:has(.xnrg-shell) .wc-edition {
+  padding: 13px 16px;
+  color: var(--x-white);
+  border: 1px solid rgba(255,255,255,.42);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.stApp:has(.xnrg-shell) .wc-edition b {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 13px;
+  transition: transform .45s var(--x-ease);
+}
+.stApp:has(.xnrg-shell) .wc-edition:hover b { transform: translate(4px,-4px); }
+
+/* Full-bleed cinematic analytical hero. */
+.stApp:has(.xnrg-shell) .wc-hero-wrapper {
+  position: relative;
+  isolation: isolate;
+  min-height: min(680px, calc(100vh - 78px));
+  margin: 0 !important;
+  padding: clamp(36px,5vw,76px) clamp(24px,5vw,76px) 44px;
+  overflow: hidden;
+  color: var(--x-white);
+  background:
+    linear-gradient(90deg, rgba(4,6,11,.86), rgba(5,9,18,.48) 56%, rgba(5,7,14,.88)),
+    radial-gradient(circle at 24% 75%, rgba(20,108,118,.78), transparent 34%),
+    radial-gradient(circle at 82% 26%, rgba(255,255,255,.10), transparent 30%),
+    #071016;
+}
+
+.stApp:has(.xnrg-shell) .wc-hero-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -16% -8%;
+  z-index: -1;
+  opacity: .52;
+  background:
+    linear-gradient(78deg, transparent 49.7%, rgba(255,255,255,.22) 49.8% 50.05%, transparent 50.15%),
+    linear-gradient(168deg, transparent 49.75%, rgba(255,255,255,.12) 49.9% 50.05%, transparent 50.2%),
+    radial-gradient(ellipse at 52% 54%, transparent 0 13%, rgba(255,255,255,.16) 13.15% 13.3%, transparent 13.45%);
+  transform: rotate(-8deg) scale(1.12);
+}
+
+.stApp:has(.xnrg-shell) .wc-hero-wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -5%;
+  bottom: -1px;
+  width: 38%;
+  height: 43%;
+  background: var(--x-ink);
+  clip-path: polygon(14% 0,100% 0,100% 100%,0 100%);
+}
+
+.stApp:has(.xnrg-shell) .wc-hero-badge-row {
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,.25);
+}
+.stApp:has(.xnrg-shell) .wc-hero-badge,
+.stApp:has(.xnrg-shell) .wc-hero-dates {
+  color: rgba(255,255,255,.74);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+.stApp:has(.xnrg-shell) .wc-badge-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--x-blue-bright);
+  box-shadow: 0 0 0 5px rgba(36,73,255,.16);
+}
+
+.stApp:has(.xnrg-shell) .wc-hero-title {
+  max-width: none;
+  margin: auto 0 0 !important;
+  padding: 46px 0 34px;
+  font-size: clamp(70px,10vw,150px) !important;
+  font-weight: 300;
+  line-height: .78;
+  letter-spacing: -.07em;
+}
+.stApp:has(.xnrg-shell) .wc-hero-title > span { display: block; }
+.stApp:has(.xnrg-shell) .wc-hero-title .title-white { color: var(--x-white); }
+.stApp:has(.xnrg-shell) .wc-hero-title .title-lime {
+  position: relative;
+  width: fit-content;
+  margin: .12em 0 0 auto;
+  padding: .18em .22em .22em;
+  color: var(--x-white);
+  background: var(--x-ink);
+  text-shadow: none;
+}
+.stApp:has(.xnrg-shell) .wc-hero-title .title-lime::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: .62em;
+  height: 100%;
+  background: var(--x-blue);
+  clip-path: polygon(100% 0,100% 100%,0 100%);
+}
+.stApp:has(.xnrg-shell) .wc-hero-desc {
+  width: min(550px,60%);
+  margin: 0 0 0 auto !important;
+  color: rgba(255,255,255,.76);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* Light technical-grid content and oversized metrics. */
+.stApp:has(.xnrg-shell) .kpi-row-container {
+  gap: 0;
+  margin: 0 0 86px !important;
+  color: var(--x-ink);
+  border: 0;
+  border-bottom: 1px solid var(--x-line);
+  background: rgba(255,255,255,.18);
+}
+.stApp:has(.xnrg-shell) .kpi-sport-card {
+  min-height: 190px;
+  padding: 34px 26px;
+  color: var(--x-ink);
+  border: 0;
+  border-right: 1px solid var(--x-line);
+  border-radius: 0;
+  background: transparent;
+}
+.stApp:has(.xnrg-shell) .kpi-sport-card:hover {
+  color: var(--x-white);
+  background: var(--x-blue);
+}
+.stApp:has(.xnrg-shell) .kpi-sport-num {
+  margin-top: auto;
+  color: inherit;
+  font-size: clamp(48px,5vw,78px);
+  font-weight: 300;
+  letter-spacing: -.065em;
+}
+.stApp:has(.xnrg-shell) .kpi-sport-label {
+  color: inherit;
+  font-size: 9px;
+  letter-spacing: .11em;
+}
+
+.stApp:has(.xnrg-shell) .section-header {
+  position: relative;
+  gap: 14px;
+  margin: 94px 0 34px;
+  padding: 34px 0 0;
+  color: var(--x-ink);
+  border-top: 1px solid var(--x-line);
+  font-size: clamp(32px,4.5vw,68px) !important;
+  font-weight: 300;
+  line-height: .95;
+  letter-spacing: -.055em;
+}
+.stApp:has(.xnrg-shell) .section-header::before {
+  width: 7px;
+  height: 7px;
+  flex-basis: 7px;
+  border-radius: 50%;
+  background: var(--x-blue);
+  -webkit-mask: none;
+  mask: none;
+}
+
+.stApp:has(.xnrg-shell) h1,
+.stApp:has(.xnrg-shell) h2,
+.stApp:has(.xnrg-shell) h3,
+.stApp:has(.xnrg-shell) h4 { color: var(--x-ink); }
+.stApp:has(.xnrg-shell) [data-testid="stMarkdownContainer"] p,
+.stApp:has(.xnrg-shell) [data-testid="stCaptionContainer"] { color: #444858; }
+
+/* Form controls: compact white panels with the electric selection color. */
+.stApp:has(.xnrg-shell) [data-testid="stWidgetLabel"] p {
+  color: #4b4f5c;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.stApp:has(.xnrg-shell) [data-baseweb="select"] > div,
+.stApp:has(.xnrg-shell) [data-baseweb="input"],
+.stApp:has(.xnrg-shell) [data-testid="stTextInput"] input,
+.stApp:has(.xnrg-shell) [data-testid="stNumberInput"] input {
+  min-height: 50px;
+  color: var(--x-ink);
+  border: 1px solid var(--x-line);
+  border-radius: 0;
+  background: rgba(255,255,255,.62);
+  box-shadow: none;
+}
+.stApp:has(.xnrg-shell) [data-baseweb="select"] > div:focus-within,
+.stApp:has(.xnrg-shell) [data-baseweb="input"]:focus-within {
+  border-color: var(--x-blue);
+  box-shadow: inset 3px 0 0 var(--x-blue);
+}
+.stApp:has(.xnrg-shell) [data-testid="stRadio"] label { color: var(--x-ink); }
+.stApp:has(.xnrg-shell) [data-testid="stRadio"] [data-checked="true"] > div:first-child,
+.stApp:has(.xnrg-shell) [role="slider"] { background: var(--x-blue) !important; }
+
+.stApp:has(.xnrg-shell) [data-testid="stTabs"] [data-baseweb="tab-list"] {
+  gap: 0;
+  border: 1px solid var(--x-line);
+  background: rgba(255,255,255,.34);
+}
+.stApp:has(.xnrg-shell) [data-testid="stTabs"] [data-baseweb="tab"] {
+  flex: 1;
+  min-height: 58px;
+  padding: 0 18px;
+  color: #595d69;
+  border-right: 1px solid var(--x-line);
+}
+.stApp:has(.xnrg-shell) [data-testid="stTabs"] [aria-selected="true"] {
+  color: var(--x-white);
+  background: var(--x-blue);
+}
+.stApp:has(.xnrg-shell) [data-testid="stTabs"] [data-baseweb="tab-highlight"] { display: none; }
+
+/* Analytical surfaces behave like XNRGY's dark feature cards. */
+.stApp:has(.xnrg-shell) .champions-card,
+.stApp:has(.xnrg-shell) .match-hero-card,
+.stApp:has(.xnrg-shell) .leaderboard-card {
+  color: var(--x-white);
+  border: 0;
+  border-radius: 0;
+  background: var(--x-ink);
+  box-shadow: none;
+}
+.stApp:has(.xnrg-shell) .match-hero-card { padding: clamp(24px,3vw,46px); }
+.stApp:has(.xnrg-shell) .match-stage-badge {
+  color: var(--x-white);
+  border: 0;
+  border-radius: 0;
+  background: var(--x-blue);
+}
+.stApp:has(.xnrg-shell) .match-score-numbers,
+.stApp:has(.xnrg-shell) .lb-val { color: var(--x-white); }
+.stApp:has(.xnrg-shell) .match-bar-home { background: var(--x-blue-bright); box-shadow: none; }
+.stApp:has(.xnrg-shell) .match-bar-away { background: #e8e8e5; box-shadow: none; }
+
+.stApp:has(.xnrg-shell) [data-testid="stPlotlyChart"] {
+  padding: 10px;
+  border: 1px solid var(--x-line);
+  background: var(--x-ink);
+}
+.stApp:has(.xnrg-shell) [data-testid="stAlert"] {
+  color: var(--x-ink);
+  border-radius: 0;
+  border: 1px solid var(--x-line);
+  background: rgba(255,255,255,.48);
+}
+.stApp:has(.xnrg-shell) [data-testid="stMetric"] {
+  color: var(--x-ink);
+  border-top: 1px solid var(--x-line);
+}
+.stApp:has(.xnrg-shell) [data-testid="stMetricLabel"] p,
+.stApp:has(.xnrg-shell) [data-testid="stMetricValue"] { color: var(--x-ink); }
+
+.stApp:has(.xnrg-shell) .stButton > button,
+.stApp:has(.xnrg-shell) [data-testid="stDownloadButton"] > button {
+  min-height: 48px;
+  padding: 0 20px;
+  color: var(--x-white) !important;
+  border: 0;
+  border-radius: 0;
+  background: var(--x-blue);
+  box-shadow: none;
+}
+.stApp:has(.xnrg-shell) .stButton > button:hover,
+.stApp:has(.xnrg-shell) [data-testid="stDownloadButton"] > button:hover {
+  color: var(--x-white) !important;
+  background: var(--x-ink);
+}
+
+/* Dataframe wrapper supplied by table_ui.py / table_theme.css. */
+.stApp:has(.xnrg-shell) .data-table-meta {
+  margin-top: 26px;
+  padding: 17px 18px 12px;
+  color: rgba(255,255,255,.62);
+  border: 0;
+  background: var(--x-ink);
+}
+.stApp:has(.xnrg-shell) .data-table-label { color: var(--x-white); }
+.stApp:has(.xnrg-shell) .data-table-label::before { background: var(--x-blue-bright); }
+.stApp:has(.xnrg-shell) [data-testid="stDataFrame"] {
+  border: 0 !important;
+  border-top: 1px solid rgba(255,255,255,.14) !important;
+  background: var(--x-ink);
+}
+
+.stApp:has(.xnrg-shell) .wc-scroll-progress { background: var(--x-blue-bright); }
+
+@media (max-width: 1000px) {
+  .stApp:has(.xnrg-shell) [data-testid="stMainBlockContainer"] { padding: 0 1rem 4rem; }
+  .xnrg-page-index,.stApp:has(.xnrg-shell) .wc-edition { display: none; }
+  .stApp:has(.xnrg-shell) .wc-hero-title { font-size: clamp(62px,12vw,112px) !important; }
+}
+
+@media (max-width: 750px) {
+  .stApp:has(.xnrg-shell) .wc-hero-wrapper { min-height: 540px; padding: 28px 16px 30px; }
+  .stApp:has(.xnrg-shell) .wc-hero-title { font-size: clamp(50px,17vw,82px) !important; line-height: .86; }
+  .stApp:has(.xnrg-shell) .wc-hero-title .title-lime { margin-top: .18em; }
+  .stApp:has(.xnrg-shell) .wc-hero-desc { width: 84%; font-size: 12px; }
+  .stApp:has(.xnrg-shell) .kpi-row-container { grid-template-columns: repeat(2,1fr); }
+  .stApp:has(.xnrg-shell) .kpi-sport-card { min-height: 145px; padding: 24px 16px; }
+  .stApp:has(.xnrg-shell) .section-header { margin-top: 64px; font-size: clamp(28px,10vw,48px) !important; }
+  .stApp:has(.xnrg-shell) [data-testid="stTabs"] [data-baseweb="tab-list"] { overflow-x: auto; }
+  .stApp:has(.xnrg-shell) [data-testid="stTabs"] [data-baseweb="tab"] { flex: 0 0 auto; min-width: 150px; }
+  .xnrg-shell::after { right: 16px; bottom: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xnrg-shell::before, .xnrg-shell::after { display: none; }
+}

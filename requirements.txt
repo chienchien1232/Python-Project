@@ -7,7 +7,7 @@ matplotlib
 seaborn
 
 # Web dashboard
-streamlit
+streamlit>=1.63,<2
 
 # Excel support
 openpyxl

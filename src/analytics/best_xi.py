@@ -7,7 +7,6 @@ Constraint Control Panel:
   - Max-per-nation: so cau thu toi da cung 1 doi tuyen
 Muc tieu: max tong Analytics Score.
 """
-import os
 import sys
 
 import pandas as pd

@@ -1,0 +1,311 @@
+/* Dark editorial system shared by Teams, Players, Compare, ML and Best XI.
+   Match pages keep their dedicated programme layer. */
+:root {
+  --x-blue: #242422;
+  --x-blue-bright: #f1f0eb;
+  --unified-bg: #080808;
+  --unified-panel: #0e0e0e;
+  --unified-panel-2: #151515;
+  --unified-line: #343434;
+  --unified-line-strong: #686862;
+  --unified-text: #f1f0eb;
+  --unified-muted: #9b9b95;
+  --unified-blue: #f1f0eb;
+  --unified-red: #8f8f89;
+  --unified-ease: cubic-bezier(.16,1,.3,1);
+}
+
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) {
+  color: var(--unified-text) !important;
+  background:
+    linear-gradient(90deg, transparent calc(25% - .5px), rgba(255,255,255,.025) 25%, transparent calc(25% + .5px),
+      transparent calc(50% - .5px), rgba(255,255,255,.025) 50%, transparent calc(50% + .5px),
+      transparent calc(75% - .5px), rgba(255,255,255,.025) 75%, transparent calc(75% + .5px)),
+    var(--unified-bg) !important;
+}
+
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stMainBlockContainer"] {
+  max-width: 1600px;
+  padding: 0 2.5rem 6rem;
+}
+
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) h1,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) h2,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) h3,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) h4,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) h5,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) h6 {
+  color: var(--unified-text) !important;
+}
+
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stMarkdownContainer"] p,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stCaptionContainer"] {
+  color: var(--unified-muted) !important;
+}
+
+/* Section rhythm mirrors the match programme's numbered editorial bands. */
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .section-header {
+  margin: clamp(54px,7vw,100px) 0 28px !important;
+  padding: 24px 0 0 !important;
+  border-top: 1px solid var(--unified-line-strong) !important;
+  color: var(--unified-text) !important;
+  font-size: clamp(27px,3.4vw,50px) !important;
+  font-weight: 400 !important;
+  line-height: .98 !important;
+  letter-spacing: -.045em !important;
+  text-transform: uppercase;
+}
+
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .section-header::after {
+  content: " / 2026";
+  margin-left: 10px;
+  color: var(--unified-muted);
+  font-size: 9px;
+  letter-spacing: .13em;
+  vertical-align: top;
+}
+
+/* KPI index. */
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .kpi-row-container {
+  display: grid !important;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 0 !important;
+  margin: 42px 0 70px !important;
+  border-top: 1px solid var(--unified-line-strong) !important;
+  border-bottom: 1px solid var(--unified-line-strong) !important;
+  background: transparent !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .kpi-sport-card {
+  min-height: 150px;
+  padding: 27px 18px !important;
+  border: 0 !important;
+  border-right: 1px solid var(--unified-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .kpi-sport-card:last-child { border-right: 0 !important; }
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .kpi-sport-card:hover { background: #111 !important; transform: none !important; }
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .kpi-sport-num {
+  color: var(--unified-text) !important;
+  font-size: clamp(34px,4vw,62px) !important;
+  font-weight: 400 !important;
+  letter-spacing: -.055em !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .kpi-sport-label {
+  color: var(--unified-muted) !important;
+  font-size: 9px !important;
+  letter-spacing: .12em !important;
+}
+
+/* Profile, comparison and summary cards. */
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .match-hero-card,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .champions-card,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .leaderboard-card,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stExpander"] {
+  color: var(--unified-text) !important;
+  border: 1px solid var(--unified-line) !important;
+  border-radius: 0 !important;
+  background: var(--unified-panel) !important;
+  box-shadow: none !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stVerticalBlockBorderWrapper"] {
+  border: 0 !important;
+  border-top: 1px solid var(--unified-line-strong) !important;
+  border-bottom: 1px solid var(--unified-line) !important;
+  border-radius: 0 !important;
+  background: var(--unified-panel) !important;
+  box-shadow: none !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .match-hero-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(22px,3vw,44px) !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .match-hero-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,var(--unified-blue) 0 33%,#eee 33% 66%,var(--unified-red) 66%);
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .match-team-name-big,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .match-score-numbers { color: var(--unified-text) !important; }
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .match-venue-text,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .match-hero-meta { color: var(--unified-muted) !important; }
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .match-stage-badge,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .match-status-pill {
+  color: var(--unified-text) !important;
+  border-color: var(--unified-line-strong) !important;
+  background: transparent !important;
+}
+
+/* Filters and choices are treated as a single control strip. */
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stWidgetLabel"] p,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stRadio"] label,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stCheckbox"] label {
+  color: var(--unified-muted) !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-baseweb="select"] > div,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-baseweb="input"],
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stNumberInput"] input,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stTextInput"] input {
+  color: var(--unified-text) !important;
+  border-color: var(--unified-line) !important;
+  border-radius: 0 !important;
+  background: #000 !important;
+}
+/* Dropdown menus render in a portal — keep them black too. */
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-baseweb="popover"],
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-baseweb="menu"] {
+  background: #000 !important;
+  border-color: var(--unified-line) !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-baseweb="menu"] [role="option"] {
+  background: #000 !important;
+  color: var(--unified-text) !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-baseweb="select"] svg,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-baseweb="input"] svg { fill: var(--unified-text) !important; }
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [role="slider"] { background: var(--unified-blue) !important; }
+
+/* Tabs and native data surfaces. */
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stTabs"] [data-baseweb="tab-list"] {
+  border-bottom-color: var(--unified-line) !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stTabs"] [data-baseweb="tab"] { color: var(--unified-muted) !important; }
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stTabs"] [aria-selected="true"] { color: var(--unified-text) !important; }
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stTabs"] [data-baseweb="tab-highlight"] { background: var(--unified-text) !important; }
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stDataFrame"],
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stTable"] {
+  border-color: var(--unified-line) !important;
+  background: var(--unified-panel) !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stPlotlyChart"] {
+  border: 0 !important;
+  border-top: 1px solid var(--unified-line-strong) !important;
+  border-bottom: 1px solid var(--unified-line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .data-table-meta {
+  color: var(--unified-muted) !important;
+  border-top-color: var(--unified-line-strong) !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .data-table-label { color: var(--unified-text) !important; }
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .data-table-label::before { background: var(--unified-blue) !important; }
+
+/* Metrics, messages and actions. */
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stMetric"] {
+  padding: 18px 0;
+  border-top: 1px solid var(--unified-line) !important;
+  color: var(--unified-text) !important;
+  background: transparent !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stMetricValue"] { color: var(--unified-text) !important; }
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stAlert"] {
+  border-radius: 0 !important;
+  border-color: var(--unified-line) !important;
+  color: var(--unified-text) !important;
+  background: var(--unified-panel-2) !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .stButton > button,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stDownloadButton"] > button {
+  min-height: 44px;
+  border: 1px solid var(--unified-line-strong) !important;
+  border-radius: 0 !important;
+  color: var(--unified-text) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) .stButton > button:hover,
+.stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stDownloadButton"] > button:hover {
+  color: #080808 !important;
+  background: var(--unified-text) !important;
+}
+
+/* Subtle scroll entrances, matching the photographic opening. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .stApp:has(.xnrg-shell):not(:has(.match-experience)) .kpi-row-container,
+    .stApp:has(.xnrg-shell):not(:has(.match-experience)) .match-hero-card,
+    .stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stPlotlyChart"],
+    .stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stDataFrame"] {
+      animation: unified-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 4% entry 32%;
+    }
+  }
+}
+@keyframes unified-rise {
+  from { opacity: 0; transform: translateY(34px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .stApp:has(.xnrg-shell):not(:has(.match-experience)) [data-testid="stMainBlockContainer"] { padding-inline: 1rem; }
+  .stApp:has(.xnrg-shell):not(:has(.match-experience)) .kpi-row-container { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .stApp:has(.xnrg-shell):not(:has(.match-experience)) .kpi-sport-card:nth-child(2) { border-right: 0 !important; }
+  .stApp:has(.xnrg-shell):not(:has(.match-experience)) .kpi-sport-card:nth-child(-n+2) { border-bottom: 1px solid var(--unified-line) !important; }
+}
+
+@media (max-width: 560px) {
+  .stApp:has(.xnrg-shell):not(:has(.match-experience)) .section-header { font-size: 29px !important; }
+  .stApp:has(.xnrg-shell):not(:has(.match-experience)) .kpi-sport-card { min-height: 112px; padding: 19px 12px !important; }
+  .stApp:has(.xnrg-shell):not(:has(.match-experience)) .kpi-sport-num { font-size: 31px !important; }
+  .stApp:has(.xnrg-shell):not(:has(.match-experience)) .match-hero-card { padding: 20px 14px !important; }
+}
+/* Monochrome workspace tabs used by the merged Players + Compare experience. */
+.stApp [data-baseweb="tab-list"] {
+  gap: 1px !important;
+  background: rgba(255,255,255,.16) !important;
+  border-bottom: 0 !important;
+}
+.stApp [data-baseweb="tab"] {
+  min-height: 46px !important;
+  padding: 0 18px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #090909 !important;
+  color: rgba(255,255,255,.62) !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+}
+.stApp [data-baseweb="tab"][aria-selected="true"] {
+  background: #f2f1ec !important;
+  color: #050505 !important;
+}
+.stApp [data-baseweb="tab-highlight"] { background-color:#f2f1ec !important; }
+.stApp [data-testid="stTabs"] [data-baseweb="tab-list"] {
+  position: sticky !important;
+  top: 10px !important;
+  z-index: 80 !important;
+  display: flex !important;
+  width: 100% !important;
+  box-shadow: 0 14px 36px rgba(0,0,0,.3) !important;
+}
+.ml-workspace-intro {
+  display: grid;
+  grid-template-columns: 120px minmax(0,1fr);
+  gap: 24px;
+  align-items: end;
+  margin: clamp(38px,6vw,84px) 0 24px;
+  padding-top: 22px;
+  border-top: 1px solid #686862;
+}
+.ml-workspace-intro span {
+  color:#9b9b95;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.13em;
+}
+.ml-workspace-intro h2 {
+  margin:0 !important;
+  font-size:clamp(31px,4vw,62px) !important;
+  font-weight:400 !important;
+  line-height:.9 !important;
+  letter-spacing:-.05em !important;
+  text-transform:uppercase;
+}

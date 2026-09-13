@@ -1,0 +1,915 @@
+:root { --story-ease: cubic-bezier(.16,1,.3,1); }
+
+/* Paint the document dark before any component CSS arrives so page
+   transitions never flash white. */
+html { background:#050505; }
+.stApp { background:#050505; }
+
+/* Split monochrome page transition: two dark panels leave in opposite
+   directions, replacing the previous black-and-white wipe. */
+.xnrg-shell {
+  height: 0;
+  position: relative;
+  z-index: 200;
+}
+.xnrg-shell::before,
+.xnrg-shell::after {
+  content: "" !important;
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 50vw !important;
+  pointer-events: none !important;
+  z-index: 2147483000 !important;
+  opacity: 1;
+}
+.xnrg-shell::before {
+  left: 0 !important;
+  right: auto !important;
+  background: #050505 !important;
+  transform-origin: top;
+  animation: monochrome-wipe-up .7s var(--story-ease) both !important;
+}
+.xnrg-shell::after {
+  left: 50vw !important;
+  right: auto !important;
+  background: #0d0d0f !important;
+  transform-origin: bottom;
+  animation: monochrome-wipe-down .7s var(--story-ease) both !important;
+}
+@keyframes monochrome-wipe-up {
+  0%,22% { transform: scaleY(1); opacity:1; }
+  99% { transform: scaleY(0); opacity:1; }
+  100% { transform: scaleY(0); opacity:0; visibility:hidden; }
+}
+@keyframes monochrome-wipe-down {
+  0%,30% { transform: scaleY(1); opacity:1; }
+  99% { transform: scaleY(0); opacity:1; }
+  100% { transform: scaleY(0); opacity:0; visibility:hidden; }
+}
+.stApp:has(.photo-story-shell) .wc-scroll-progress { background: #f2f1ec !important; }
+
+/* Float the global navigation over the full-screen photographic opening. */
+.stApp:has(.photo-story-shell) [data-testid="stMainBlockContainer"] {
+  padding-top: 0 !important;
+}
+.stApp:has(.photo-story-shell) .stMain {
+  overflow-x: clip !important;
+  scroll-timeline-name: --appScroll;
+  scroll-timeline-axis: block;
+}
+.stApp:has(.photo-story-shell) header[data-testid="stHeader"] {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+}
+/* The index label would ghost behind the translucent navbar once the hero
+   slides underneath it, so it stays hidden on photographic pages. */
+.stApp:has(.photo-story-shell) .xnrg-page-index { display: none; }
+
+.photo-story-shell {
+  position: relative;
+  height: 150vh;
+  min-height: 980px;
+  width: 100vw;
+  max-width: none;
+  margin: 0 0 clamp(58px,8vw,120px) calc(50% - 50vw);
+  /* Full-bleed hero: pull the shell up beneath the sticky pill navbar so
+     the image reaches the top of the viewport. */
+  margin-top: -84px;
+  view-timeline-name: --photoStory;
+  view-timeline-axis: block;
+}
+.photo-story-shell.is-cover {
+  height: 112vh;
+  min-height: 760px;
+  margin-bottom: -12vh;
+}
+.photo-story-shell.is-cover::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 100vh;
+  top: 100svh;
+  left: 0;
+  width: 100%;
+  height: 12vh;
+  background: #050505;
+  border-top: 1px solid rgba(255,255,255,.22);
+}
+/* Clearance: the cover shell pulls following content up by 12vh under the
+   transition band above. Push the first KPI row back down so big numerals
+   are never covered/clipped at rest. */
+.stApp:has(.photo-story-shell.page-teams.is-cover) .kpi-row-container {
+  /* The shared dashboard skin also sets this margin with !important. Keep
+     the KPI row below the cover transition so large values are never clipped. */
+  margin-top: 12vh !important;
+}
+.photo-story-shell.is-cover .photo-story-stage {
+  box-shadow: 0 28px 80px rgba(0,0,0,.45);
+}
+.photo-story-shell.is-cover .photo-story-copy {
+  bottom: clamp(34px,6vh,82px);
+}
+.photo-story-shell.page-matches .photo-story-image { object-position: center 62%; }
+.photo-story-shell.page-teams .photo-story-image { object-position: center 50%; }
+.photo-story-shell.page-players .photo-story-image { object-position: center 42%; }
+.photo-story-shell.page-ml .photo-story-image { object-position: center 52%; }
+.photo-story-shell.page-best-xi .photo-story-image { object-position: center 50%; }
+.photo-story-shell.page-match-detail .photo-story-image { object-position: center 54%; }
+.photo-story-stage {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  min-height: 0;
+  overflow: hidden;
+  border: 0;
+  background: #050505;
+  isolation: isolate;
+}
+.photo-story-image {
+  position: absolute;
+  inset: -5%;
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  object-position: center 58%;
+  filter: saturate(.78) contrast(1.08) brightness(.7);
+  transform: scale(1.02);
+  z-index: -3;
+}
+/* Overview uses the supplied artwork exactly as delivered. No desaturation,
+   contrast lift or dark overlay is applied to its pixels. */
+.photo-story-shell.page-overview .photo-story-image {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  filter: none;
+}
+.photo-story-shell.page-overview .photo-story-shade {
+  background: transparent;
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .photo-story-shell.page-overview .photo-story-image {
+      animation-name: overview-image-drift;
+    }
+  }
+}
+@keyframes overview-image-drift {
+  from { transform: scale(1); }
+  to { transform: scale(1.045); }
+}
+.photo-story-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(180deg,#030303c9 0%,transparent 29%,transparent 56%,#030303d9 100%),
+    linear-gradient(90deg,#030303ad 0%,transparent 58%,#03030342 100%);
+}
+.photo-story-rule {
+  display: none;
+}
+.photo-story-top {
+  position: absolute;
+  top: 30px;
+  left: 38px;
+  right: 38px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.photo-story-copy {
+  position: absolute;
+  inset: auto 38px 30px;
+  color: #f4f2ec;
+  transform: translateY(22vh);
+}
+.photo-story-copy h1 {
+  margin: 0;
+  max-width: 1200px;
+  font-family: var(--font-display, "Arial Narrow", Arial, sans-serif);
+  font-size: clamp(78px,10.5vw,164px);
+  font-weight: 300;
+  line-height: .78;
+  letter-spacing: -.065em;
+  text-transform: uppercase;
+  text-shadow: 0 4px 40px #0009;
+  color: #fff !important;
+}
+.photo-story-copy h1 span { display: block; white-space: nowrap; }
+.photo-story-copy h1 span:first-child { color: #fff !important; }
+.photo-story-copy h1 span:last-child {
+  margin-left: clamp(0px,10vw,150px);
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+.photo-story-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 28px;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid #ffffff7a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.photo-story-foot p { max-width: 520px; margin: 0; line-height: 1.55; }
+
+/* Overview story book. Sport Cover-inspired grid lines and oversized editorial
+   type sit above three full-bleed chapters while each image covers the last. */
+.editorial-reel {
+  position: relative;
+  width: 100vw;
+  max-width: none;
+  height: auto;
+  min-height: 0;
+  margin: 0 0 clamp(70px,9vw,140px) calc(50% - 50vw);
+  background: #050505;
+}
+.editorial-reel-stage {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  overflow: visible;
+  background: #050505;
+}
+.editorial-reel-panel {
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  min-height: 980px;
+  color: #fff;
+  background: #050505;
+  view-timeline-name: --storyChapter;
+  view-timeline-axis: block;
+}
+.editorial-reel-image {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.76) contrast(1.08) brightness(.68);
+  transform: scale(1.06);
+  will-change:transform,filter;
+}
+.reel-panel-1 .editorial-reel-image { object-position:center 64%; }
+.reel-panel-2 .editorial-reel-image { object-position:center 58%; }
+.reel-panel-3 .editorial-reel-image { object-position:43% 44%; }
+.editorial-reel-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,.02) 54%,rgba(0,0,0,.28) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,.12) 40%,rgba(0,0,0,.9) 100%);
+}
+.editorial-reel-caption {
+  position: absolute;
+  z-index:3;
+  inset: auto clamp(20px,3.2vw,50px) clamp(26px,4vw,62px);
+  display: grid;
+  grid-template-columns:minmax(0,1fr) minmax(210px,.34fr);
+  gap: 12px 38px;
+  align-items: end;
+  text-transform: uppercase;
+}
+.editorial-reel-caption > span,
+.editorial-reel-caption > small {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+.editorial-reel-caption > small { color: rgba(255,255,255,.78); text-align: right; }
+.editorial-reel-caption h2 {
+  grid-column:1 / -1;
+  max-width:1250px;
+  margin: 0 !important;
+  color: #fff !important;
+  font-family: var(--font-display,"Arial Narrow",Arial,sans-serif) !important;
+  font-size: clamp(70px,9.8vw,158px) !important;
+  font-weight: 300 !important;
+  line-height: .82 !important;
+  letter-spacing: -.065em !important;
+}
+.editorial-reel-caption > p {
+  max-width:650px;
+  margin:2px 0px 0 0 !important;
+  color:rgba(255,255,255,.82) !important;
+  font-size:clamp(10px,.9vw,14px);
+  font-weight:600;
+  line-height:1.55;
+  letter-spacing:.025em;
+  text-transform:none;
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion:no-preference) {
+    .editorial-reel-image {
+      animation: chapter-image-drift linear both;
+      animation-timeline: --storyChapter;
+      animation-range: entry 0% exit 100%;
+    }
+    .editorial-reel-caption > span,
+    .editorial-reel-caption > small {
+      animation: chapter-copy-in linear both;
+      animation-timeline: --storyChapter;
+      animation-range: entry 12% cover 31%;
+    }
+    .editorial-reel-caption h2 {
+      animation: chapter-title-in linear both;
+      animation-timeline: --storyChapter;
+      animation-range: entry 16% cover 38%;
+    }
+    /* Phase 1 — reel captions alternate entry sides per panel. */
+    .reel-panel-1 .editorial-reel-caption h2,
+    .reel-panel-3 .editorial-reel-caption h2 { animation-name:chapter-title-from-left; }
+    .reel-panel-2 .editorial-reel-caption h2,
+    .reel-panel-4 .editorial-reel-caption h2 { animation-name:chapter-title-from-right; }
+    .reel-panel-1 .editorial-reel-caption > p,
+    .reel-panel-3 .editorial-reel-caption > p { animation-name:chapter-copy-from-left; }
+    .reel-panel-2 .editorial-reel-caption > p,
+    .reel-panel-4 .editorial-reel-caption > p { animation-name:chapter-copy-from-right; }
+    .editorial-reel-caption > p {
+      animation: chapter-copy-in linear both;
+      animation-timeline: --storyChapter;
+      animation-range: entry 22% cover 43%;
+    }
+  }
+}
+@keyframes chapter-title-from-left {
+  from { opacity:0; transform:translateX(-6vw); clip-path:inset(0 100% 0 0); }
+  to { opacity:1; transform:none; clip-path:inset(0); }
+}
+@keyframes chapter-title-from-right {
+  from { opacity:0; transform:translateX(6vw); clip-path:inset(0 0 0 100%); }
+  to { opacity:1; transform:none; clip-path:inset(0); }
+}
+@keyframes chapter-copy-from-left { from { opacity:0; transform:translateX(-3vw); } to { opacity:1; transform:none; } }
+@keyframes chapter-copy-from-right { from { opacity:0; transform:translateX(3vw); } to { opacity:1; transform:none; } }
+@keyframes chapter-image-drift {
+  from { transform:scale(1.12) translateY(-1.5%); filter:saturate(.62) contrast(1.12) brightness(.55); }
+  to { transform:scale(1.025) translateY(1.5%); filter:saturate(.82) contrast(1.06) brightness(.72); }
+}
+@keyframes chapter-title-in {
+  from { opacity:0; transform:translateY(82px); clip-path:inset(0 0 100% 0); }
+  to { opacity:1; transform:translateY(0); clip-path:inset(0); }
+}
+@keyframes chapter-copy-in {
+  from { opacity:0; transform:translateY(30px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes reel-cover-right {
+  0%,18% { clip-path:inset(0 100% 0 0); }
+  36%,100% { clip-path:inset(0); }
+}
+@keyframes reel-cover-up {
+  0%,40% { clip-path:inset(100% 0 0 0); }
+  59%,100% { clip-path:inset(0); }
+}
+@keyframes reel-cover-left {
+  0%,64% { clip-path:inset(0 0 0 100%); }
+  83%,100% { clip-path:inset(0); }
+}
+@keyframes reel-image-drift { from { transform:scale(1.015); } to { transform:scale(1.12); } }
+
+.media-flag,
+.match-team-flag-big,
+.team-flag-photo {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 46px;
+  height: 32px;
+  overflow: hidden;
+  border: 1px solid #ffffff2e;
+  background: #121212;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  vertical-align: middle;
+}
+.media-flag img,
+.match-team-flag-big img,
+.team-flag-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.media-flag.is-small { width: 27px; height: 19px; }
+
+.player-portrait {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 150px;
+  height: 190px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border: 1px solid #ffffff2b;
+  background: linear-gradient(145deg,#222,#080808);
+  color: #777;
+  font-size: 30px;
+  font-weight: 300;
+}
+.player-portrait img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(1.08) contrast(1.03);
+  transition: filter .45s var(--story-ease), transform .7s var(--story-ease);
+}
+.player-portrait:hover img { filter: saturate(1.18) contrast(1.04); transform: scale(1.035); }
+.player-portrait.is-small { width: 46px; height: 58px; font-size: 11px; }
+.player-portrait.is-medium { width: 110px; height: 138px; }
+/* The shared photographic story replaces the old decorative top heroes. */
+.stApp:has(.photo-story-shell) .editorial-hero,
+.stApp:has(.photo-story-shell) .match-calendar-hero,
+.stApp:has(.photo-story-shell) [data-testid="stHorizontalBlock"]:has(.wc-hero-wrapper),
+.stApp:has(.photo-story-shell) > div .wc-hero-wrapper { display: none; }
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion:no-preference) {
+    .photo-story-image {
+      animation: story-image-drift linear both;
+      animation-timeline: --photoStory;
+      animation-range: entry 0% exit 100%;
+    }
+    .photo-story-copy {
+      animation: story-copy-rise linear both;
+      animation-timeline: --photoStory;
+      animation-range: entry 10% exit 70%;
+    }
+    .photo-story-shade {
+      animation: story-shade-in linear both;
+      animation-timeline: --photoStory;
+      animation-range: entry 20% exit 85%;
+    }
+  }
+}
+@keyframes story-image-drift { from { transform:scale(1.02) translateY(-1%); } to { transform:scale(1.15) translateY(5%); } }
+@keyframes story-copy-rise { from { transform:translateY(22vh); } to { transform:translateY(-8vh); } }
+@keyframes story-shade-in { from { opacity:.72; } to { opacity:1; } }
+
+/* Phase 1 — hero load entrance: first title line slides from the left,
+   second from the right; kicker, description and scroll cue follow with
+   staggered fades. The scroll-linked drift above keeps running on the
+   wrapping copy block, so there is no layout shift. */
+@media (prefers-reduced-motion:no-preference) {
+  .photo-story-copy h1 span:first-child { animation:story-line-from-left 1.1s var(--story-ease) both; }
+  .photo-story-copy h1 span:last-child { animation:story-line-from-right 1.1s var(--story-ease) .12s both; }
+  .photo-story-top { animation:story-fade-down .9s var(--story-ease) .05s both; }
+  .photo-story-foot p { animation:story-fade-up .9s var(--story-ease) .25s both; }
+  .photo-story-foot > span:last-child { animation:story-fade-up .9s var(--story-ease) .38s both; }
+}
+@keyframes story-line-from-left { from { opacity:0; transform:translateX(-9vw); } to { opacity:1; transform:none; } }
+@keyframes story-line-from-right { from { opacity:0; transform:translateX(9vw); } to { opacity:1; transform:none; } }
+@keyframes story-fade-down { from { opacity:0; transform:translateY(-12px); } to { opacity:1; transform:none; } }
+@keyframes story-fade-up { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+
+@media (max-width: 900px) {
+  .photo-story-shell { height: 135vh; min-height: 900px; margin-top: -76px; }
+  .photo-story-shell.is-cover { height: 110vh; min-height: 720px; margin-bottom:-10vh; }
+  .photo-story-shell.is-cover::after { height:10vh; }
+  .stApp:has(.photo-story-shell.page-teams.is-cover) .kpi-row-container { margin-top: 10vh !important; }
+  .photo-story-stage { top: 0; height: 100vh; height: 100svh; min-height: 0; }
+  .photo-story-copy h1 { font-size: clamp(54px,13vw,104px); }
+  .editorial-reel { height:auto; min-height:0; }
+  .editorial-reel-panel { height:145vh; min-height:860px; }
+  .editorial-reel-caption { grid-template-columns:minmax(0,1fr) minmax(170px,.38fr); }
+}
+@media (max-width: 560px) {
+  .photo-story-shell { height: 125vh; min-height: 810px; margin-bottom:58px; margin-top: -64px; }
+  .photo-story-shell.is-cover { height:108vh; min-height:680px; margin-bottom:-8vh; }
+  .photo-story-shell.is-cover::after { height:8vh; }
+  .stApp:has(.photo-story-shell.page-teams.is-cover) .kpi-row-container { margin-top: 8vh !important; }
+  .photo-story-stage { top: 0; height: 100vh; height: 100svh; min-height: 0; }
+  .photo-story-top { top:20px; left:16px; right:16px; font-size:7px; }
+  .photo-story-copy { inset:auto 16px 22px; }
+  .photo-story-copy h1 { font-size:clamp(46px,14vw,70px); line-height:.84; }
+  .photo-story-copy h1 span { white-space:normal; }
+  .photo-story-copy h1 span:last-child { margin-left:0; }
+  .photo-story-foot { align-items:flex-start; flex-direction:column; font-size:8px; }
+  .player-portrait { width:120px; height:150px; }
+  .editorial-reel { height:auto; min-height:0; }
+  .editorial-reel-panel { height:142vh; min-height:820px; }
+  .editorial-reel-caption { grid-template-columns:1fr; gap:8px; }
+  .editorial-reel-caption > small { text-align:left; }
+  .editorial-reel-caption h2 { font-size:clamp(54px,15vw,82px) !important; }
+  .editorial-reel-caption > p { max-width:92%; font-size:10px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .photo-story-image,.photo-story-copy,.photo-story-shade { animation:none !important; transform:none !important; }
+  .xnrg-shell::before,.xnrg-shell::after { display:none !important; }
+  .editorial-reel { height:auto; min-height:0; }
+  .editorial-reel-stage { position:relative; display:grid; grid-template-columns:1fr; height:auto; }
+  .editorial-reel-panel { position:relative; inset:auto; height:auto; min-height:100vh; clip-path:none !important; animation:none !important; }
+}
+
+/* Overview order: restore the original four-frame sliding summary, then show
+   the three user-supplied images as separate vertical history chapters. */
+.editorial-reel {
+  position:relative;
+  width:100vw;
+  max-width:none;
+  height:245vh;
+  min-height:1500px;
+  margin:0 0 clamp(70px,9vw,140px) calc(50% - 50vw);
+  background:#050505;
+  view-timeline-name:--editorialReel;
+  view-timeline-axis:block;
+}
+.editorial-reel-stage {
+  position:sticky;
+  top:0;
+  width:100vw;
+  height:100vh;
+  height:100svh;
+  overflow:hidden;
+  background:#050505;
+}
+.editorial-reel-panel {
+  position:absolute;
+  inset:0;
+  width:auto;
+  height:auto;
+  min-height:0;
+  overflow:hidden;
+  color:#fff;
+  background:#050505;
+  isolation:isolate;
+  will-change:clip-path;
+  view-timeline-name:none;
+}
+.editorial-reel-panel:nth-child(1) { z-index:1; clip-path:inset(0); }
+.editorial-reel-panel:nth-child(2) { z-index:2; clip-path:inset(0 100% 0 0); }
+.editorial-reel-panel:nth-child(3) { z-index:3; clip-path:inset(100% 0 0 0); }
+.editorial-reel-panel:nth-child(4) { z-index:4; clip-path:inset(0 0 0 100%); }
+.editorial-reel .editorial-reel-image {
+  position:absolute;
+  inset:0;
+  z-index:-3;
+  display:block;
+  width:auto;
+  height:auto;
+  background-image:url("/app/static/football-story-grid-v1.png");
+  background-repeat:no-repeat;
+  background-size:200% 200%;
+  filter:saturate(.9) contrast(1.06) brightness(.78);
+  transform:scale(1.015);
+}
+.editorial-reel .reel-panel-1 .editorial-reel-image { background-position:0 0; }
+.editorial-reel .reel-panel-2 .editorial-reel-image { background-position:100% 0; }
+.editorial-reel .reel-panel-3 .editorial-reel-image { background-position:0 100%; }
+.editorial-reel .reel-panel-4 .editorial-reel-image { background-position:100% 100%; }
+.editorial-reel .editorial-reel-shade {
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:linear-gradient(180deg,rgba(0,0,0,.08) 28%,rgba(0,0,0,.84) 100%);
+}
+.editorial-reel .editorial-reel-panel::before {
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  z-index:2;
+  height:1px;
+  background:rgba(255,255,255,.62);
+}
+.editorial-reel .editorial-reel-caption {
+  position:absolute;
+  z-index:3;
+  inset:auto clamp(20px,3.2vw,50px) clamp(26px,4vw,62px);
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:11px 25px;
+  align-items:end;
+  text-transform:uppercase;
+}
+.editorial-reel .editorial-reel-caption > span,
+.editorial-reel .editorial-reel-caption > small {
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+.editorial-reel .editorial-reel-caption > small { color:rgba(255,255,255,.72); text-align:right; }
+.editorial-reel .editorial-reel-caption h2 {
+  grid-column:1/-1;
+  max-width:1200px;
+  margin:0 !important;
+  color:#fff !important;
+  font-family:var(--font-display,"Arial Narrow",Arial,sans-serif) !important;
+  font-size:clamp(70px,11vw,174px) !important;
+  font-weight:300 !important;
+  line-height:.82 !important;
+  letter-spacing:-.065em !important;
+}
+
+.worldcup-chronicle {
+  width:100vw;
+  max-width:none;
+  margin:0 0 clamp(40px,5vw,80px) calc(50% - 50vw);
+  border-top:1px solid rgba(255,255,255,.55);
+  background:#050505;
+}
+.worldcup-chronicle-panel {
+  position:relative;
+  width:100%;
+  height:145vh;
+  min-height:980px;
+  background:#050505;
+  view-timeline-name:--worldcupChapter;
+  view-timeline-axis:block;
+}
+.worldcup-chronicle-frame {
+  position:sticky;
+  top:0;
+  display:grid;
+  grid-template-columns:minmax(0,7fr) minmax(300px,3fr);
+  width:100%;
+  height:100vh;
+  height:100svh;
+  overflow:hidden;
+  border-bottom:1px solid rgba(255,255,255,.52);
+  background:#050505;
+}
+.worldcup-chronicle-panel:nth-child(even) .worldcup-chronicle-media { order:2; }
+.worldcup-chronicle-panel:nth-child(even) .worldcup-chronicle-copy { order:1; }
+.worldcup-chronicle-media {
+  position:relative;
+  min-width:0;
+  overflow:hidden;
+  border-right:1px solid rgba(255,255,255,.42);
+  background:#0a0a0a;
+}
+.worldcup-chronicle-panel:nth-child(even) .worldcup-chronicle-media {
+  border-right:0;
+  border-left:1px solid rgba(255,255,255,.42);
+}
+.worldcup-chronicle-media::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.24));
+  pointer-events:none;
+}
+.worldcup-chronicle-media img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transform:scale(1.04);
+  will-change:transform,filter;
+}
+/* Phase 1 — per-chapter focal points keep each subject inside the frame. */
+.chronicle-panel-1 .worldcup-chronicle-media img { object-position:30% 42%; }
+.chronicle-panel-2 .worldcup-chronicle-media img { object-position:50% 45%; }
+.chronicle-panel-3 .worldcup-chronicle-media img { object-position:65% 48%; }
+.worldcup-chronicle-copy {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  padding:clamp(22px,3.2vw,52px);
+  color:#101010;
+  background:#eeece5;
+}
+.worldcup-chronicle-panel:nth-child(even) .worldcup-chronicle-copy {
+  color:#f2f1ec;
+  background:#080808;
+}
+.worldcup-chronicle-copy::before,
+.worldcup-chronicle-copy::after {
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  background:currentColor;
+  opacity:.2;
+}
+.worldcup-chronicle-copy::before { top:50%; right:0; left:0; height:1px; }
+.worldcup-chronicle-copy::after { top:0; bottom:0; left:50%; width:1px; }
+.worldcup-chronicle-copy header {
+  position:relative;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  padding-bottom:18px;
+  border-bottom:1px solid currentColor;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.worldcup-chronicle-body {
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:10px 20px;
+  align-content:end;
+  flex:1;
+}
+.worldcup-chronicle-kicker,
+.worldcup-chronicle-body > small {
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.worldcup-chronicle-body > small { text-align:right; opacity:.62; }
+.stApp:has(.photo-story-shell) .worldcup-chronicle h2 {
+  grid-column:1/-1;
+  margin:12px 0 18px !important;
+  color:inherit !important;
+  font-family:var(--font-display,"Arial Narrow",Arial,sans-serif) !important;
+  font-size:clamp(58px,7.2vw,116px) !important;
+  font-weight:300 !important;
+  line-height:.82 !important;
+  letter-spacing:-.064em !important;
+  text-transform:uppercase;
+}
+.worldcup-chronicle-body > p {
+  max-width:560px;
+  margin:0 !important;
+  color:inherit !important;
+  font-size:clamp(11px,.92vw,14px);
+  font-weight:600;
+  line-height:1.65;
+  opacity:.78;
+}
+.worldcup-chronicle-stat {
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+  gap:12px;
+  padding-top:14px;
+  border-top:1px solid currentColor;
+}
+.worldcup-chronicle-stat strong {
+  font-family:var(--font-display,"Arial Narrow",Arial,sans-serif);
+  font-size:clamp(42px,5vw,76px);
+  font-weight:300;
+  line-height:.72;
+  letter-spacing:-.05em;
+}
+.worldcup-chronicle-stat span {
+  max-width:96px;
+  font-size:7px;
+  font-weight:800;
+  line-height:1.35;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+@supports (animation-timeline:view()) {
+  @media (prefers-reduced-motion:no-preference) {
+    .editorial-reel .reel-panel-2 { animation:reel-cover-right linear both; animation-timeline:--editorialReel; animation-range:entry 0% exit 100%; }
+    .editorial-reel .reel-panel-3 { animation:reel-cover-up linear both; animation-timeline:--editorialReel; animation-range:entry 0% exit 100%; }
+    .editorial-reel .reel-panel-4 { animation:reel-cover-left linear both; animation-timeline:--editorialReel; animation-range:entry 0% exit 100%; }
+    .editorial-reel .editorial-reel-image { animation:reel-image-drift linear both; animation-timeline:--editorialReel; animation-range:entry 0% exit 100%; }
+    .worldcup-chronicle-media img { animation:chronicle-image-in linear both; animation-timeline:--worldcupChapter; animation-range:entry 0% exit 100%; }
+    .worldcup-chronicle-copy header { animation:chronicle-meta-in linear both; animation-timeline:--worldcupChapter; animation-range:entry 8% cover 26%; }
+    .worldcup-chronicle-kicker,
+    .worldcup-chronicle-body > small { animation:chronicle-copy-in linear both; animation-timeline:--worldcupChapter; animation-range:entry 13% cover 31%; }
+    .worldcup-chronicle-body h2 { animation:chronicle-title-in linear both; animation-timeline:--worldcupChapter; animation-range:entry 17% cover 38%; }
+    .worldcup-chronicle-body > p { animation:chronicle-copy-in linear both; animation-timeline:--worldcupChapter; animation-range:entry 23% cover 43%; }
+    .worldcup-chronicle-stat { animation:chronicle-stat-in linear both; animation-timeline:--worldcupChapter; animation-range:entry 28% cover 48%; }
+  }
+}
+@keyframes chronicle-image-in {
+  from { transform:scale(1.13); filter:saturate(.62) contrast(1.08); }
+  to { transform:scale(1.02); filter:saturate(1) contrast(1); }
+}
+
+/* Phase 1 — chronicle copy enters from the side it sits on: odd panels
+   carry copy on the right, even panels on the left. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion:no-preference) {
+    .chronicle-panel-1 .worldcup-chronicle-copy header,
+    .chronicle-panel-3 .worldcup-chronicle-copy header { animation-name:chronicle-meta-from-right; }
+    .chronicle-panel-2 .worldcup-chronicle-copy header { animation-name:chronicle-meta-from-left; }
+    .chronicle-panel-1 .worldcup-chronicle-kicker,
+    .chronicle-panel-1 .worldcup-chronicle-body > small,
+    .chronicle-panel-3 .worldcup-chronicle-kicker,
+    .chronicle-panel-3 .worldcup-chronicle-body > small { animation-name:chronicle-copy-from-right; }
+    .chronicle-panel-2 .worldcup-chronicle-kicker,
+    .chronicle-panel-2 .worldcup-chronicle-body > small { animation-name:chronicle-copy-from-left; }
+    .chronicle-panel-1 .worldcup-chronicle-body h2,
+    .chronicle-panel-3 .worldcup-chronicle-body h2 { animation-name:chronicle-title-from-right; }
+    .chronicle-panel-2 .worldcup-chronicle-body h2 { animation-name:chronicle-title-from-left; }
+    .chronicle-panel-1 .worldcup-chronicle-body > p,
+    .chronicle-panel-3 .worldcup-chronicle-body > p { animation-name:chronicle-copy-from-right; }
+    .chronicle-panel-2 .worldcup-chronicle-body > p { animation-name:chronicle-copy-from-left; }
+    .chronicle-panel-1 .worldcup-chronicle-stat,
+    .chronicle-panel-3 .worldcup-chronicle-stat { animation-name:chronicle-stat-from-right; }
+    .chronicle-panel-2 .worldcup-chronicle-stat { animation-name:chronicle-stat-from-left; }
+  }
+}
+@keyframes chronicle-meta-from-right { from { opacity:0; transform:translateX(26px); } to { opacity:1; transform:none; } }
+@keyframes chronicle-meta-from-left { from { opacity:0; transform:translateX(-26px); } to { opacity:1; transform:none; } }
+@keyframes chronicle-copy-from-right { from { opacity:0; transform:translateX(3.5vw); } to { opacity:1; transform:none; } }
+@keyframes chronicle-copy-from-left { from { opacity:0; transform:translateX(-3.5vw); } to { opacity:1; transform:none; } }
+@keyframes chronicle-title-from-right {
+  from { opacity:0; transform:translateX(5vw); clip-path:inset(0 0 0 100%); }
+  to { opacity:1; transform:none; clip-path:inset(0); }
+}
+@keyframes chronicle-title-from-left {
+  from { opacity:0; transform:translateX(-5vw); clip-path:inset(0 100% 0 0); }
+  to { opacity:1; transform:none; clip-path:inset(0); }
+}
+@keyframes chronicle-stat-from-right { from { opacity:0; transform:translateX(34px); } to { opacity:1; transform:none; } }
+@keyframes chronicle-stat-from-left { from { opacity:0; transform:translateX(-34px); } to { opacity:1; transform:none; } }
+
+/* Phase 1 — Overview-only horizontal reveals for section titles and the
+   editorial hero lines. Scoped to .page-overview so the other six pages
+   keep their current motion until Phase 2. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion:no-preference) {
+    .stApp:has(.photo-story-shell.page-overview) .section-header { animation-name:ov-title-in-left; }
+  }
+}
+@media (prefers-reduced-motion:no-preference) {
+  .stApp:has(.photo-story-shell.page-overview) .editorial-title .hero-line-first { animation-name:ov-line-from-left; }
+  .stApp:has(.photo-story-shell.page-overview) .editorial-title .hero-line-last { animation-name:ov-line-from-right; }
+}
+@keyframes ov-title-in-left {
+  from { opacity:.1; transform:translateX(-4vw); }
+  to { opacity:1; transform:none; }
+}
+@keyframes ov-line-from-left { from { opacity:0; transform:translateX(-6vw); } to { opacity:1; transform:none; } }
+@keyframes ov-line-from-right { from { opacity:0; transform:translateX(6vw); } to { opacity:1; transform:none; } }
+@keyframes chronicle-meta-in { from { opacity:0; transform:translateY(-18px); } to { opacity:1; transform:none; } }
+@keyframes chronicle-title-in { from { opacity:0; transform:translateY(70px); clip-path:inset(0 0 100%); } to { opacity:1; transform:none; clip-path:inset(0); } }
+@keyframes chronicle-copy-in { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:none; } }
+@keyframes chronicle-stat-in { from { opacity:0; transform:translateX(34px); } to { opacity:1; transform:none; } }
+
+@media (max-width:900px) {
+  .editorial-reel { height:225vh; min-height:1300px; }
+  .worldcup-chronicle-panel { height:140vh; min-height:900px; }
+  .worldcup-chronicle-frame { grid-template-columns:minmax(0,1.4fr) minmax(240px,.9fr); }
+  .worldcup-chronicle-copy { padding:24px; }
+  .stApp:has(.photo-story-shell) .worldcup-chronicle h2 { font-size:clamp(48px,7vw,78px) !important; }
+  .worldcup-chronicle-body { grid-template-columns:1fr; }
+  .worldcup-chronicle-body > small { text-align:left; }
+  .worldcup-chronicle-stat { justify-content:flex-start; }
+}
+@media (max-width:560px) {
+  .editorial-reel { height:215vh; min-height:1180px; }
+  .editorial-reel .editorial-reel-caption { grid-template-columns:1fr; gap:8px; }
+  .editorial-reel .editorial-reel-caption > small { text-align:left; }
+  .editorial-reel .editorial-reel-caption h2 { font-size:clamp(54px,15vw,82px) !important; }
+  .worldcup-chronicle-panel { height:auto; min-height:0; }
+  .worldcup-chronicle-frame { position:relative; grid-template-columns:1fr; grid-template-rows:auto auto; height:auto; min-height:0; }
+  .worldcup-chronicle-media img { height:auto; aspect-ratio:4/3; }
+  .worldcup-chronicle-panel:nth-child(even) .worldcup-chronicle-media,
+  .worldcup-chronicle-panel:nth-child(even) .worldcup-chronicle-copy { order:initial; }
+  .worldcup-chronicle-media,
+  .worldcup-chronicle-panel:nth-child(even) .worldcup-chronicle-media { border:0; border-bottom:1px solid rgba(255,255,255,.42); }
+  .worldcup-chronicle-copy { padding:18px 16px; }
+  .worldcup-chronicle-copy header { padding-bottom:10px; }
+  .worldcup-chronicle-body { gap:6px; }
+  .stApp:has(.photo-story-shell) .worldcup-chronicle h2 { margin:7px 0 8px !important; font-size:clamp(42px,12vw,64px) !important; }
+  .worldcup-chronicle-body > p { font-size:9px; line-height:1.48; }
+  .worldcup-chronicle-stat { padding-top:7px; }
+  .worldcup-chronicle-stat strong { font-size:36px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .editorial-reel { height:auto; min-height:0; }
+  .editorial-reel-stage { position:relative; display:grid; grid-template-columns:repeat(2,1fr); height:auto; }
+  .editorial-reel-panel { position:relative; inset:auto; min-height:55vh; clip-path:none !important; animation:none !important; }
+  .worldcup-chronicle-panel { height:auto; min-height:100vh; }
+  .worldcup-chronicle-frame { position:relative; min-height:100vh; }
+}
+
+/* The floating navigation is rendered before the hero in Streamlit's flow.
+   Pull only Overview farther upward so its artwork starts at the viewport
+   edge instead of leaving the empty band above it. */
+.photo-story-shell.page-overview { margin-top: -154px; }
+@media (max-width:900px) {
+  .photo-story-shell.page-overview { margin-top: -146px; }
+}
+@media (max-width:560px) {
+  .photo-story-shell.page-overview { margin-top: -134px; }
+}
