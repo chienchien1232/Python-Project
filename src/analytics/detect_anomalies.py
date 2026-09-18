@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """3.4 Anomaly Detection - IsolationForest theo nhom vi tri + luat Z-score."""
-import os
-
 import pandas as pd
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler

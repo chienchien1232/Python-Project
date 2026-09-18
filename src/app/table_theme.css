@@ -1,0 +1,238 @@
+/* Shared minimal data index. Streamlit's native grid keeps its sorting,
+   selection, search, export and fullscreen behavior; this layer only sets
+   the surrounding rhythm and supported surface colors. */
+:root {
+  --data-paper: #f2f1ec;
+  --data-muted: #a9a9a2;
+  --data-rule: #363634;
+  --data-rule-strong: #5d5d57;
+  --data-surface: #0d0d0d;
+  --data-surface-raised: #151514;
+  --data-ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+/* The heading is a long, fine rule shared by every data surface. */
+.data-table-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  min-height: 38px;
+  margin-top: 30px;
+  padding: 14px 0 8px;
+  border-top: 1px solid var(--data-rule-strong);
+  color: var(--data-muted);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.data-table-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--data-paper);
+  font-weight: 600;
+}
+
+.data-table-label::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  flex: 0 0 4px;
+  background: currentColor;
+}
+
+.data-table-label:empty { display: none; }
+.data-table-count { display: inline-flex; align-items: center; gap: 12px; font-variant-numeric: tabular-nums; }
+.data-table-count > span { white-space: nowrap; }
+.data-table-divider { color: #686862; }
+
+/* Native dataframe canvas plus static Streamlit tables. */
+[data-testid="stDataFrame"],
+[data-testid="stTable"] {
+  border: 0 !important;
+  border-top: 1px solid var(--data-rule-strong) !important;
+  border-bottom: 1px solid var(--data-rule-strong) !important;
+  border-radius: 0 !important;
+  background: var(--data-surface) !important;
+  box-shadow: none !important;
+  font-variant-numeric: tabular-nums;
+}
+
+[data-testid="stDataFrame"] { overflow: visible; }
+[data-testid="stDataFrame"]:focus-within {
+  border-top-color: var(--data-paper) !important;
+  border-bottom-color: var(--data-paper) !important;
+}
+
+/* GlideDataEditor paints its grid to a canvas. These variables are the
+   authoritative text colors for the canvas header, so keep column titles
+   fully opaque and slightly stronger than body values on every route. */
+[data-testid="stDataFrame"] .stDataFrameGlideDataEditor {
+  --gdg-text-header: #ffffff !important;
+  --gdg-text-group-header: #ffffff !important;
+  --gdg-text-header-selected: #0d0d0d !important;
+  --gdg-bg-header: var(--data-surface-raised) !important;
+  --gdg-bg-header-has-focus: #242422 !important;
+  --gdg-bg-header-hovered: #242422 !important;
+  --gdg-bg-icon-header: #ffffff !important;
+  --gdg-fg-icon-header: var(--data-surface) !important;
+  --gdg-header-font-style: 700 15px !important;
+}
+[data-testid="stDataFrame"] [role="columnheader"] {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Glide paints the data rows and the column header on separate canvases. The
+   header canvas keeps Streamlit's fadedText60 alpha, so lift that layer on its
+   own while leaving row values close to their source colours. */
+[data-testid="stDataFrame"] canvas[data-testid="data-grid-canvas"] {
+  filter: brightness(1.08) contrast(1.02);
+}
+[data-testid="stDataFrame"] canvas:not([data-testid="data-grid-canvas"]) {
+  filter: brightness(1.65) contrast(1.14);
+}
+
+[data-testid="stDataFrame"] [data-testid="stElementToolbar"] {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  border: 0;
+  border-bottom: 1px solid var(--data-rule);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+[data-testid="stDataFrame"] [data-testid="stElementToolbar"] button {
+  min-width: 32px;
+  min-height: 30px;
+  color: var(--data-muted);
+  border-radius: 0;
+  background: transparent;
+  transition: color .2s ease, background-color .2s ease;
+}
+
+[data-testid="stDataFrame"] [data-testid="stElementToolbar"] button:hover,
+[data-testid="stDataFrame"] [data-testid="stElementToolbar"] button:focus-visible {
+  color: var(--data-surface);
+  background: var(--data-paper);
+}
+
+[data-testid="stTable"] table { width: 100%; border-collapse: collapse; }
+[data-testid="stTable"] th {
+  color: #ffffff;
+  background: var(--data-surface-raised);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+[data-testid="stTable"] th,
+[data-testid="stTable"] td {
+  padding: 12px 14px;
+  border-color: var(--data-rule);
+}
+[data-testid="stTable"] tbody tr { transition: background-color .2s ease; }
+[data-testid="stTable"] tbody tr:hover { background: #171716; }
+
+/* Widget controls belong to the same fine-rule system. */
+[data-testid="stWidgetLabel"] p {
+  color: var(--data-muted);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .025em;
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"] > div,
+[data-testid="stMultiSelect"] [data-baseweb="select"] > div,
+[data-testid="stTextInput"] [data-baseweb="input"],
+[data-testid="stNumberInput"] [data-baseweb="input"] {
+  min-height: 44px;
+  color: var(--data-paper);
+  border: 1px solid var(--data-rule);
+  border-radius: 0;
+  background: var(--data-surface);
+  transition: border-color .25s ease, background-color .25s ease;
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"] > div:focus-within,
+[data-testid="stMultiSelect"] [data-baseweb="select"] > div:focus-within,
+[data-testid="stTextInput"] [data-baseweb="input"]:focus-within,
+[data-testid="stNumberInput"] [data-baseweb="input"]:focus-within {
+  border-color: var(--data-rule-strong);
+  background: var(--data-surface-raised);
+}
+
+[data-testid="stMultiSelect"] [data-baseweb="tag"] {
+  border-radius: 0;
+  background: #292927;
+  color: var(--data-paper);
+}
+
+[data-testid="stTabs"] [data-baseweb="tab-list"] {
+  gap: 28px;
+  border-bottom: 1px solid var(--data-rule);
+}
+[data-testid="stTabs"] [data-baseweb="tab"] {
+  min-height: 44px;
+  height: auto;
+  padding: 0 0 15px;
+  color: var(--data-muted);
+  border-radius: 0;
+  background: transparent;
+  transition: color .25s ease;
+}
+[data-testid="stTabs"] [data-baseweb="tab"] p {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .065em;
+  text-transform: uppercase;
+}
+[data-testid="stTabs"] [data-baseweb="tab"][aria-selected="true"],
+[data-testid="stTabs"] [data-baseweb="tab"]:hover { color: var(--data-paper); }
+[data-testid="stTabs"] [data-baseweb="tab-highlight"] {
+  height: 1px;
+  background: var(--data-paper);
+  transition: left .45s var(--data-ease), width .45s var(--data-ease);
+}
+[data-testid="stTabs"] [data-baseweb="tab-border"] { height: 0; }
+[data-testid="stTabs"] [data-baseweb="tab-panel"] { padding-top: 28px; }
+
+[data-testid="stDownloadButton"] > button {
+  min-height: 44px;
+  border: 1px solid #66665e;
+  border-radius: 0;
+  color: var(--data-paper);
+  background: transparent;
+  box-shadow: none;
+  transition: background-color .3s ease, color .3s ease;
+}
+[data-testid="stDownloadButton"] > button:hover {
+  color: var(--data-surface);
+  border-color: var(--data-paper);
+  background: var(--data-paper);
+}
+[data-testid="stDownloadButton"] > button p {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .045em;
+}
+
+@media (max-width: 640px) {
+  .data-table-meta { gap: 8px 14px; margin-top: 22px; font-size: 10px; flex-wrap: wrap; }
+  .data-table-count { gap: 8px; }
+  [data-testid="stTable"] th,
+  [data-testid="stTable"] td { padding: 10px 9px; }
+  [data-testid="stTabs"] [data-baseweb="tab-list"] { gap: 22px; }
+  [data-testid="stTabs"] [data-baseweb="tab"] p { font-size: 10px; }
+  [data-testid="stTabs"] [data-baseweb="tab-panel"] { padding-top: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-testid="stTabs"] [data-baseweb="tab-highlight"] { transition: none; }
+}
