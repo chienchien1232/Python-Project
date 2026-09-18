@@ -1,18 +1,22 @@
-﻿# Core data manipulation
-pandas
-numpy
+# ==============================================================================
+# World Cup Data Analytics & Web App - Dependencies
+# ==============================================================================
 
-# Visualization
-matplotlib
-seaborn
+# Core Data Manipulation & Computation
+pandas>=2.0.0
+numpy>=1.24.0
 
-# Web dashboard
-streamlit>=1.63,<2
+# Web Dashboard & Interactive UI
+streamlit>=1.35.0,<2.0.0
 
-# Excel support
-openpyxl
+# Interactive & Statistical Visualizations
+plotly>=5.18.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
 
-# Machine learning
-scikit-learn
-plotly
-pulp
+# Machine Learning & Optimization Solvers
+scikit-learn>=1.3.0
+pulp>=2.8.0
+
+# File Formats & Excel I/O
+openpyxl>=3.1.0

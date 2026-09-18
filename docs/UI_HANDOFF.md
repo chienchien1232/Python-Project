@@ -16,8 +16,8 @@ Môi trường đã tạo tại `.venv` với Python 3.12. Chạy `./start-dashb
 Trong `.streamlit/config.toml`, sidebar multipage và toolbar mặc định đã tắt
 (`showSidebarNavigation=false`, `toolbarMode=minimal`) để không hiện menu cũ khi tải.
 
-Máy mới: tạo môi trường Python 3.12 rồi cài `pip install -r requirements-lock.txt`
-để dùng đúng các phiên bản đã kiểm tra. Dữ liệu trong `data/` phải được giữ cùng dự án.
+Máy mới: tạo môi trường Python 3.12 rồi cài `pip install -r requirements.txt`
+để cài đặt các gói cần thiết. Dữ liệu trong `data/` phải được giữ cùng dự án.
 
 ## Kiểm tra
 

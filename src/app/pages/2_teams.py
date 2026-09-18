@@ -21,7 +21,7 @@ from media_ui import flag_image, player_portrait, render_photo_story  # noqa: E4
 
 # ── Page configuration ────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Teams & Squads | WorldCup Stats '26",
+    page_title="Đội tuyển & Đội hình | WorldCup Stats '26",
     page_icon="◉",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -77,14 +77,14 @@ def flag(team_name: str) ->str:
 # ── Top Navigation Bar ────────────────────────────────────────────────────────
 from navigation import nav_link, render_navigation
 from table_ui import data_table
-render_navigation('Teams')
+render_navigation('Đội tuyển')
 
 render_photo_story(
-    "NATIONAL TEAM DIRECTORY / 2026",
-    "48 NATIONS.",
-    "ONE CUP.",
-    "Squads, tactical identities and every route through the tournament.",
-    index="6 CONFEDERATIONS",
+    "DANH BẠ ĐỘI TUYỂN / 2026",
+    "48 QUỐC GIA.",
+    "MỘT CHIẾC CÚP.",
+    "Đội hình, bản sắc chiến thuật và hành trình qua giải đấu.",
+    index="6 LIÊN ĐOÀN",
     page="teams",
 )
 
@@ -129,10 +129,10 @@ tc = load_analytics_csv("team_clusters.csv")
 if tc is not None and "team_name" in tc.columns:
     tc["team_name"] = tc["team_name"].apply(clean_name)
     df_teams = df_teams.merge(tc[["team_name", "cluster_label"]], left_on="Team", right_on="team_name", how="left")
-    df_teams["AI_Cluster"] = df_teams["cluster_label"].fillna("Standard Profile")
+    df_teams["AI_Cluster"] = df_teams["cluster_label"].fillna("Tiêu chuẩn")
     df_teams = df_teams.drop(columns=["team_name", "cluster_label"], errors="ignore")
 else:
-    df_teams["AI_Cluster"] = "Standard Profile"
+    df_teams["AI_Cluster"] = "Tiêu chuẩn"
 
 tot_val = round(df_teams["Squad_Value_MEur"].sum() / 1000, 1)
 avg_val = int(round(df_teams["Squad_Value_MEur"].mean()))
@@ -142,26 +142,26 @@ avg_val = int(round(df_teams["Squad_Value_MEur"].mean()))
 st.markdown(
     '<div class="wc-hero-wrapper" style="margin-bottom:20px">'
     '<div class="wc-hero-badge-row">'
-    '<div class="wc-hero-badge"><span class="wc-badge-dot"></span>TEAM DIRECTORY</div>'
-    '<div class="wc-hero-dates">48 QUALIFIED NATIONS · 6 CONFEDERATIONS</div>'
+    '<div class="wc-hero-badge"><span class="wc-badge-dot"></span>DANH BẠ ĐỘI TUYỂN</div>'
+    '<div class="wc-hero-dates">48 ĐỘI THAM DỰ · 6 LIÊN ĐOÀN BÓNG ĐÁ</div>'
     '</div>'
     '<div class="wc-hero-title" style="font-size:52px;margin-bottom:10px">'
-    '<span class="title-white">TOURNAMENT</span>'
-    '<span class="title-lime">TEAMS.</span>'
+    '<span class="title-white">ĐỘI TUYỂN</span>'
+    '<span class="title-lime">GIẢI ĐẤU.</span>'
     '</div>'
     '<div class="wc-hero-desc" style="max-width:760px;margin-bottom:16px">'
-    'Comprehensive team dossiers for all 48 national squads competing in the 2026 FIFA World Cup. '
-    'Inspect market valuations, official 26-man squads, tactical radar footprints, and AI cluster styles.'
+    'Hồ sơ chi tiết của 48 đội tuyển quốc gia tranh tài tại FIFA World Cup 2026. '
+    'Phân tích giá trị thị trường, danh sách 26 cầu thủ chính thức, biểu đồ phong cách chiến thuật và phân cụm AI.'
     '</div>'
     '</div>',
     unsafe_allow_html=True,
 )
 st.markdown(
     '<div class="kpi-row-container" style="margin-bottom:28px">'
-    f'<div class="kpi-sport-card"><div class="kpi-sport-num">{len(df_teams)}</div><div class="kpi-sport-label">NATIONS</div></div>'
-    f'<div class="kpi-sport-card"><div class="kpi-sport-num">6</div><div class="kpi-sport-label">CONFEDERATIONS</div></div>'
-    f'<div class="kpi-sport-card"><div class="kpi-sport-num">€{tot_val}B</div><div class="kpi-sport-label">TOTAL MARKET VALUE</div></div>'
-    f'<div class="kpi-sport-card"><div class="kpi-sport-num">€{avg_val}M</div><div class="kpi-sport-label">AVG SQUAD VALUE</div></div>'
+    f'<div class="kpi-sport-card"><div class="kpi-sport-num">{len(df_teams)}</div><div class="kpi-sport-label">ĐỘI TUYỂN</div></div>'
+    f'<div class="kpi-sport-card"><div class="kpi-sport-num">6</div><div class="kpi-sport-label">LIÊN ĐOÀN</div></div>'
+    f'<div class="kpi-sport-card"><div class="kpi-sport-num">€{tot_val}B</div><div class="kpi-sport-label">TỔNG GIÁ TRỊ THỊ TRƯỜNG</div></div>'
+    f'<div class="kpi-sport-card"><div class="kpi-sport-num">€{avg_val}M</div><div class="kpi-sport-label">GIÁ TRỊ TRUNG BÌNH</div></div>'
     '</div>',
     unsafe_allow_html=True,
 )
@@ -170,18 +170,18 @@ st.markdown(
 # ── Team Selection & Deep-Dive Profile ────────────────────────────────────────
 st.markdown(
     '<div class="tm-select-head"><span class="tm-dot"></span>'
-    'SELECT NATIONAL TEAM<span class="tm-year">/ 2026</span></div>',
+    'CHỌN ĐỘI TUYỂN QUỐC GIA<span class="tm-year">/ 2026</span></div>',
     unsafe_allow_html=True,
 )
 
 col_s1, col_s2 = st.columns([1.2, 1.8])
 
 with col_s1:
-    confed_list = ["All Confederations"] + sorted(df_teams["Confederation"].dropna().unique().tolist())
-    sel_confed = st.selectbox("Filter by Confederation", confed_list)
+    confed_list = ["Tất cả liên đoàn"] + sorted(df_teams["Confederation"].dropna().unique().tolist())
+    sel_confed = st.selectbox("Lọc theo Liên đoàn", confed_list)
 
 filtered_teams = df_teams.copy()
-if sel_confed != "All Confederations":
+if sel_confed != "Tất cả liên đoàn":
     filtered_teams = filtered_teams[filtered_teams["Confederation"] == sel_confed]
 
 team_options = {}
@@ -193,8 +193,8 @@ for _, r in filtered_teams.sort_values("Team").iterrows():
 
 with col_s2:
     sel_opt = st.selectbox(
-        "Choose team to inspect complete dossier:",
-        list(team_options.keys()) if team_options else ["No teams available"]
+        "Chọn đội tuyển để xem hồ sơ chi tiết:",
+        list(team_options.keys()) if team_options else ["Không có đội tuyển nào"]
     )
 
 selected_team = team_options.get(sel_opt, df_teams["Team"].iloc[0] if not df_teams.empty else "Spain")
@@ -205,10 +205,10 @@ if selected_team:
     t_row = df_teams[df_teams["Team"] == selected_team].iloc[0]
     t_flag = flag(selected_team)
     t_flag_img = flag_image(selected_team, t_row.get("Code"), "team-flag-photo")
-    t_mgr = clean_name(t_row.get("Manager", "Unknown"))
+    t_mgr = clean_name(t_row.get("Manager", "Chưa rõ"))
     t_rank = int(t_row["FIFA_Rank"]) if pd.notna(t_row.get("FIFA_Rank")) else "N/A"
     t_val = float(t_row.get("Squad_Value_MEur", 0.0))
-    t_cluster = t_row.get("AI_Cluster", "Standard Profile")
+    t_cluster = t_row.get("AI_Cluster", "Tiêu chuẩn")
     t_wins = int(t_row["Wins"])
     t_draws = int(t_row["Draws"])
     t_losses = int(t_row["Losses"])
@@ -222,9 +222,9 @@ if selected_team:
         f'<div class="match-hero-card">'
         f'<div class="match-hero-meta">'
         f'<div><span class="match-stage-badge">{t_row["Confederation"]}</span> '
-        f'<span style="background:rgba(255,255,255,0.08);color:#f2f1ec;border:1px solid rgba(255,255,255,0.35);border-radius:0;padding:4px 12px;font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;margin-left:6px">Group {t_row.get("Group_Letter", "-")}</span> '
+        f'<span style="background:rgba(255,255,255,0.08);color:#f2f1ec;border:1px solid rgba(255,255,255,0.35);border-radius:0;padding:4px 12px;font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;margin-left:6px">Bảng {t_row.get("Group_Letter", "-")}</span> '
         f'<span style="background:rgba(232,232,227,0.12);color:#e8e8e3;border:1px solid rgba(232,232,227,0.35);border-radius:0;padding:4px 12px;font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;margin-left:6px"> {t_cluster}</span></div>'
-        f'<div class="match-venue-text">FIFA Rank: <strong>#{t_rank}</strong> &nbsp;·&nbsp; Head Coach: <strong>{t_mgr}</strong></div>'
+        f'<div class="match-venue-text">XH FIFA: <strong>#{t_rank}</strong> &nbsp;·&nbsp; HLV trưởng: <strong>{t_mgr}</strong></div>'
         f'</div>'
         f'<div class="match-scoreboard-main" style="margin:14px 0">'
         f'<div style="display:flex;align-items:center;gap:18px">'
@@ -236,14 +236,14 @@ if selected_team:
         f'</div>'
         f'<div style="display:flex;gap:20px;align-items:center">'
         f'<div style="text-align:right">'
-        f'<div style="font-size:11px;font-weight:800;color:#64748b;letter-spacing:1.2px;text-transform:uppercase">TOURNAMENT RECORD</div>'
-        f'<div style="font-family:var(--font-sport);font-size:26px;font-weight:900;color:#FFFFFF">{t_wins}W &nbsp;{t_draws}D &nbsp;{t_losses}L</div>'
-        f'<div style="font-size:12.5px;color:#94a3b8">{t_gf} scored · {t_ga} conceded ({t_gd:+d})</div>'
+        f'<div style="font-size:11px;font-weight:800;color:#64748b;letter-spacing:1.2px;text-transform:uppercase">THÀNH TÍCH THI ĐẤU</div>'
+        f'<div style="font-family:var(--font-sport);font-size:26px;font-weight:900;color:#FFFFFF">{t_wins}T &nbsp;{t_draws}H &nbsp;{t_losses}B</div>'
+        f'<div style="font-size:12.5px;color:#94a3b8">{t_gf} ghi bàn · {t_ga} thủng lưới ({t_gd:+d})</div>'
         f'</div>'
         f'<div style="text-align:right;border-left:1px solid rgba(255,255,255,0.08);padding-left:20px">'
-        f'<div style="font-size:11px;font-weight:800;color:#64748b;letter-spacing:1.2px;text-transform:uppercase">SQUAD VALUATION</div>'
+        f'<div style="font-size:11px;font-weight:800;color:#64748b;letter-spacing:1.2px;text-transform:uppercase">GIÁ TRỊ ĐỘI HÌNH</div>'
         f'<div style="font-family:var(--font-sport);font-size:26px;font-weight:900;color:#e8e8e3">€{t_val:.0f}M</div>'
-        f'<div style="font-size:12.5px;color:#94a3b8">26 Players Roster</div>'
+        f'<div style="font-size:12.5px;color:#94a3b8">Danh sách 26 cầu thủ</div>'
         f'</div>'
         f'</div>'
         f'</div>'
@@ -353,7 +353,7 @@ if selected_team:
         vals = [0.0] * 6
         lavgs = [1.0] * 6
         if has_stats:
-            axes = ["Possession %", "Total Shots", "Shots on Target", "Corner Kicks", "Defensive Saves", "Fouls"]
+            axes = ["Kiểm soát bóng %", "Tổng số cú sút", "Sút trúng đích", "Phạt góc", "Cứu thua", "Phạm lỗi"]
             metric_keys = ["possession", "shots", "sot", "corners", "saves", "fouls"]
 
             vals = [float(per_match.iloc[0][k]) if pd.notna(per_match.iloc[0][k]) else 0.0 for k in metric_keys]
@@ -367,8 +367,6 @@ if selected_team:
                 r=pct + [pct[0]],
                 theta=axes + [axes[0]],
                 fill="toself",
-                # Muted aqua keeps the selected team legible on black without
-                # introducing a neon accent into the minimal visual system.
                 fillcolor="rgba(168, 218, 220, 0.22)",
                 name=selected_team,
                 line=dict(color="#a8dadc", width=2.5),
@@ -377,7 +375,7 @@ if selected_team:
             fig_radar.add_trace(go.Scatterpolar(
                 r=[50] * (len(axes) + 1),
                 theta=axes + [axes[0]],
-                name="Tournament Avg (Baseline 50)",
+                name="Trung bình giải (Mốc 50)",
                 line=dict(color="#d7c3a3", dash="dash", width=1.6),
             ))
             fig_radar.update_layout(
@@ -411,23 +409,23 @@ if selected_team:
                     '<div class="tm-kpi"><div class="tm-kpi-lbl">' + lbl + '</div>'
                     f'<div class="tm-kpi-val">{val_txt} '
                     f'<span class="tm-kpi-delta {cls}">{arrow} {d_txt}</span></div>'
-                    '<div class="tm-kpi-sub">vs. tournament avg</div></div>'
+                    '<div class="tm-kpi-sub">so với trung bình giải</div></div>'
                 )
 
             with st.container(border=True):
                 st.markdown(
                     '<div class="tm-panel-head"><span class="tm-dot"></span>'
-                    'TACTICAL RADAR PROFILE (VS TOURNAMENT AVERAGE)'
+                    'HỒ SƠ CHIẾN THUẬT RADAR (SO VỚI TRUNG BÌNH GIẢI)'
                     '<span class="tm-year">/ 2026</span></div>',
                     unsafe_allow_html=True,
                 )
                 st.plotly_chart(fig_radar, width="stretch")
                 st.markdown(
                     '<div class="tm-kpis">'
-                    + _drow("Avg Possession", f"{vals[0]:.1f}%", d_poss, f"{d_poss:+.1f}%")
-                    + _drow("Avg Shots / 90", f"{vals[1]:.1f}", d_shots, f"{d_shots:+.1f}")
-                    + _drow("Shots on Target", f"{vals[2]:.1f}", d_sot, f"{d_sot:+.1f}")
-                    + _drow("Goals per Match", f"{team_gpm:.1f}", d_gpm, f"{d_gpm:+.1f}")
+                    + _drow("Kiểm soát bóng TB", f"{vals[0]:.1f}%", d_poss, f"{d_poss:+.1f}%")
+                    + _drow("Cú sút TB / 90p", f"{vals[1]:.1f}", d_shots, f"{d_shots:+.1f}")
+                    + _drow("Sút trúng đích", f"{vals[2]:.1f}", d_sot, f"{d_sot:+.1f}")
+                    + _drow("Bàn thắng / Trận", f"{team_gpm:.1f}", d_gpm, f"{d_gpm:+.1f}")
                     + '</div>',
                     unsafe_allow_html=True,
                 )
@@ -435,11 +433,11 @@ if selected_team:
             with st.container(border=True):
                 st.markdown(
                     '<div class="tm-panel-head"><span class="tm-dot"></span>'
-                    'TACTICAL RADAR PROFILE (VS TOURNAMENT AVERAGE)'
+                    'HỒ SƠ CHIẾN THUẬT RADAR (SO VỚI TRUNG BÌNH GIẢI)'
                     '<span class="tm-year">/ 2026</span></div>',
                     unsafe_allow_html=True,
                 )
-            st.info("Match statistics not yet accumulated for this team.")
+            st.info("Chưa có số liệu thống kê tích lũy cho đội tuyển này.")
 
     with col_t_right:
         # Tournament Matches of this Team (query unchanged)
@@ -457,12 +455,12 @@ if selected_team:
             hc1, hc2 = st.columns([3, 1.6], gap="small", vertical_alignment="center")
             with hc1:
                 st.markdown(
-                    '<div class="tm-panel-head"><span class="tm-dot"></span>MATCH RESULTS'
+                    '<div class="tm-panel-head"><span class="tm-dot"></span>KẾT QUẢ THI ĐẤU'
                     '<span class="tm-year">/ 2026</span></div>',
                     unsafe_allow_html=True,
                 )
             with hc2:
-                nav_link("pages/1_matches.py", "View All Matches →")
+                nav_link("pages/1_matches.py", "Xem toàn bộ trận đấu →")
             if not m_list.empty:
                 rows_html = ""
                 for _, mr in m_list.iterrows():
@@ -473,11 +471,11 @@ if selected_team:
 
                     # Determine Win/Draw/Loss badge for the selected team
                     if (h_name == selected_team and hs > as_) or (a_name == selected_team and as_ > hs):
-                        res_badge = '<span class="tm-badge win">WIN</span>'
+                        res_badge = '<span class="tm-badge win">THẮNG</span>'
                     elif hs == as_:
-                        res_badge = '<span class="tm-badge draw">DRAW</span>'
+                        res_badge = '<span class="tm-badge draw">HÒA</span>'
                     else:
-                        res_badge = '<span class="tm-badge loss">LOSS</span>'
+                        res_badge = '<span class="tm-badge loss">THUA</span>'
 
                     rows_html += (
                         '<div class="tm-match">'
@@ -495,7 +493,7 @@ if selected_team:
                     )
                 st.markdown(rows_html, unsafe_allow_html=True)
             else:
-                st.info("No matches recorded for this team.")
+                st.info("Chưa có trận đấu nào được ghi nhận cho đội tuyển này.")
 
         # ── Squad roster carousel (query unchanged — layout only) ──
         squad_list = q("""
@@ -516,7 +514,7 @@ if selected_team:
             for name, pos, caps, club in squad_list[["Player", "Pos", "Caps", "Club"]].itertuples(index=False, name=None):
                 pos_txt = html_lib.escape(str(pos)) if pd.notna(pos) else "—"
                 try:
-                    caps_txt = f"{int(float(caps))} caps" if pd.notna(caps) else ""
+                    caps_txt = f"{int(float(caps))} trận" if pd.notna(caps) else ""
                 except (TypeError, ValueError):
                     caps_txt = ""
                 club_txt = clean_name(club) if pd.notna(club) else ""
@@ -535,89 +533,89 @@ if selected_team:
                 with rc1:
                     st.markdown(
                         '<div class="tm-panel-head"><span class="tm-dot"></span>'
-                        'OFFICIAL 26-MAN SQUAD ROSTER'
-                        f'<span class="tm-year">{n_squad} PLAYERS / 2026</span></div>',
+                        'DANH SÁCH 26 CẦU THỦ CHÍNH THỨC'
+                        f'<span class="tm-year">{n_squad} CẦU THỦ / 2026</span></div>',
                         unsafe_allow_html=True,
                     )
                 with rc2:
-                    nav_link("pages/3_players.py", "View Full Squad →")
+                    nav_link("pages/3_players.py", "Xem chi tiết cầu thủ →")
                 st.markdown(
                     '<div class="tm-roster-wrap">'
                     '<button class="tm-roster-nav" '
                     'onclick="document.getElementById(\'tmRosterRail\').scrollBy({left:-440,behavior:\'smooth\'})" '
-                    'aria-label="Scroll roster left">←</button>'
+                    'aria-label="Cuộn danh sách sang trái">←</button>'
                     f'<div class="tm-roster-rail" id="tmRosterRail">{cards_html}</div>'
                     '<button class="tm-roster-nav" '
                     'onclick="document.getElementById(\'tmRosterRail\').scrollBy({left:440,behavior:\'smooth\'})" '
-                    'aria-label="Scroll roster right">→</button>'
+                    'aria-label="Cuộn danh sách sang phải">→</button>'
                     '</div>',
                     unsafe_allow_html=True,
                 )
-            with st.expander("Full squad register (table)", expanded=False):
+            with st.expander("Bảng danh sách toàn đội tuyển", expanded=False):
                 table_df = squad_list.copy()
-                table_df.columns = ["Player", "Position", "Club Team", "Caps", "Height (cm)", "Value (€M)"]
-                data_table(table_df, width="stretch", height=280, label="Official squad register")
+                table_df.columns = ["Cầu thủ", "Vị trí", "Câu lạc bộ", "Số lần khoác áo", "Chiều cao (cm)", "Giá trị (€M)"]
+                data_table(table_df, width="stretch", height=280, label="Bảng đăng ký danh sách đội hình")
 
 # ── Full 48-Teams Tournament Standings Table ──────────────────────────────────
 with st.container(border=True):
     st.markdown(
         '<div class="tm-panel-head"><span class="tm-dot"></span>'
-        'ALL 48 NATIONS OVERVIEW &amp; TACTICAL CLUSTERS'
+        'TỔNG QUAN 48 ĐỘI TUYỂN &amp; PHÂN CỤM CHIẾN THUẬT'
         '<span class="tm-year">/ 2026</span></div>',
         unsafe_allow_html=True,
     )
     f_n1, f_n2, f_n3 = st.columns([1.4, 1.0, 1.0])
     with f_n1:
-        search_nation = st.text_input("Search nations...", value="", placeholder="Search nations...")
+        search_nation = st.text_input("Tìm kiếm đội tuyển...", value="", placeholder="Nhập tên đội tuyển...")
     with f_n2:
-        confed_opts = ["All Confederations"] + sorted(df_teams["Confederation"].dropna().unique().tolist())
-        sel_confed_tbl = st.selectbox("Confederation", confed_opts, key="nations_confed")
+        confed_opts = ["Tất cả liên đoàn"] + sorted(df_teams["Confederation"].dropna().unique().tolist())
+        sel_confed_tbl = st.selectbox("Liên đoàn", confed_opts, key="nations_confed")
     with f_n3:
-        style_opts = ["All Tactical Styles"] + sorted(df_teams["AI_Cluster"].dropna().unique().tolist())
-        sel_style_tbl = st.selectbox("Tactical style", style_opts, key="nations_style")
+        style_opts = ["Tất cả phong cách chiến thuật"] + sorted(df_teams["AI_Cluster"].dropna().unique().tolist())
+        sel_style_tbl = st.selectbox("Phong cách chiến thuật", style_opts, key="nations_style")
 
     display_teams = df_teams[["Team", "Confederation", "Group_Letter", "FIFA_Rank", "Manager", "Matches_Played", "Wins", "Draws", "Losses", "Goals_For", "Goals_Against", "Goal_Diff", "Squad_Value_MEur", "AI_Cluster"]].copy()
-    display_teams.columns = ["Nation", "Confederation", "Group", "FIFA Rank", "Head Coach", "P", "W", "D", "L", "GF", "GA", "GD", "Value (€M)", "AI Tactical Style"]
+    display_teams.columns = ["Đội tuyển", "Liên đoàn", "Bảng", "XH FIFA", "HLV trưởng", "Trận", "T", "H", "B", "BT", "BB", "HS", "Giá trị (€M)", "Phong cách chiến thuật AI"]
     if search_nation:
-        display_teams = display_teams[display_teams["Nation"].str.contains(search_nation, case=False, na=False)]
-    if sel_confed_tbl != "All Confederations":
-        display_teams = display_teams[display_teams["Confederation"] == sel_confed_tbl]
-    if sel_style_tbl != "All Tactical Styles":
-        display_teams = display_teams[display_teams["AI Tactical Style"] == sel_style_tbl]
+        display_teams = display_teams[display_teams["Đội tuyển"].str.contains(search_nation, case=False, na=False)]
+    if sel_confed_tbl != "Tất cả liên đoàn":
+        display_teams = display_teams[display_teams["Liên đoàn"] == sel_confed_tbl]
+    if sel_style_tbl != "Tất cả phong cách chiến thuật":
+        display_teams = display_teams[display_teams["Phong cách chiến thuật AI"] == sel_style_tbl]
 
     code_map = dict(zip(df_teams["Team"], df_teams["Code"]))
     display_teams.insert(
         0, "Flag",
-        display_teams["Nation"].map(
+        display_teams["Đội tuyển"].map(
             lambda n: f"https://api.fifa.com/api/v3/picture/flags-sq-4/{code_map.get(n, '')}"
             if code_map.get(n) else ""
         ),
     )
 
     data_table(
-        display_teams.sort_values(["W", "GD", "GF"], ascending=[False, False, False]),
+        display_teams.sort_values(["T", "HS", "BT"], ascending=[False, False, False]),
         width="stretch",
-        label="Nation performance index",
-        column_config={"Flag": st.column_config.ImageColumn("Flag", help="National flag", width="small")},
+        label="Bảng thành tích các đội tuyển",
+        column_config={"Flag": st.column_config.ImageColumn("Cờ", help="Quốc kỳ", width="small")},
     )
 
 
 # ── AI Tactical Cluster Analysis Summary ──────────────────────────────────────
 if tc is not None and "cluster_label" in tc.columns:
-    st.markdown("<div class='section-header'>AI Cluster Characteristics Breakdown</div>", unsafe_allow_html=True)
+    st.markdown("<div class='section-header'>Đặc trưng các nhóm phong cách chiến thuật AI</div>", unsafe_allow_html=True)
 
     stat_feature_cols = [c for c in ["possession", "shots", "sot", "corners", "saves", "gf", "ga", "gd"] if c in tc.columns]
     if stat_feature_cols:
         cluster_summary = tc.groupby("cluster_label")[stat_feature_cols].mean().round(2).reset_index()
-        cluster_summary.columns = ["AI Tactical Style", "Avg Possession %", "Avg Shots", "Avg SOT", "Avg Corners", "Avg Saves", "Avg Goals For", "Avg Goals Against", "Avg Goal Diff"]
-        data_table(cluster_summary, width="stretch", label="AI tactical cluster index")
+        cluster_summary.columns = ["Phong cách chiến thuật AI", "Kiểm soát bóng TB %", "Cú sút TB", "Sút trúng đích TB", "Phạt góc TB", "Cứu thua TB", "Bàn thắng TB", "Bàn thua TB", "Hiệu số TB"]
+        data_table(cluster_summary, width="stretch", label="Bảng tổng hợp phong cách chiến thuật AI")
 
 
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("<div style='height:30px'></div>", unsafe_allow_html=True)
 st.markdown(
     "<div style='text-align:center;color:#64748b;font-size:12.5px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.06)'>"
-    "WorldCup Stats '26 Analytics Platform &nbsp;·&nbsp; Data powered by FIFA, ESPN &amp; official match records &nbsp;·&nbsp; Built with Python &amp; Streamlit"
+    "WorldCup Stats '26 Analytics Platform &nbsp;·&nbsp; Dữ liệu từ FIFA, ESPN &amp; biên bản trận đấu chính thức &nbsp;·&nbsp; Phát triển bằng Python &amp; Streamlit"
     "</div>",
     unsafe_allow_html=True,
 )

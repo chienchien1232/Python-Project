@@ -10,7 +10,7 @@ def data_table(
     width: Any = "stretch",
     height: Any = "auto",
     *,
-    label: str = "Data index",
+    label: str = "Chỉ mục dữ liệu",
     **kwargs: Any,
 ) -> Any:
     """Add a small index heading and roomier rows without replacing the grid.
@@ -32,9 +32,9 @@ def data_table(
         rows, columns = shape[:2]
         counts = (
             '<span class="data-table-count">'
-            f'<span>{rows:,} {"record" if rows == 1 else "records"}</span>'
+            f'<span>{rows:,} bản ghi</span>'
             '<span class="data-table-divider" aria-hidden="true">/</span>'
-            f'<span>{columns:,} {"field" if columns == 1 else "fields"}</span>'
+            f'<span>{columns:,} trường dữ liệu</span>'
             "</span>"
         )
 

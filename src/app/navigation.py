@@ -7,12 +7,12 @@ from streamlit.errors import StreamlitPageNotFoundError
 
 # Client-side destinations (resolved relative to the app entrypoint).
 NAV_PAGES = (
-    ("app.py", "Overview"),
-    ("pages/1_matches.py", "Matches"),
-    ("pages/2_teams.py", "Teams"),
-    ("pages/3_players.py", "Players"),
-    ("pages/5_ml_explorer.py", "ML Analytics"),
-    ("pages/6_best_xi.py", "Best XI"),
+    ("app.py", "Tổng quan"),
+    ("pages/1_matches.py", "Trận đấu"),
+    ("pages/2_teams.py", "Đội tuyển"),
+    ("pages/3_players.py", "Cầu thủ"),
+    ("pages/5_ml_explorer.py", "Phân tích ML"),
+    ("pages/6_best_xi.py", "Đội hình tiêu biểu"),
 )
 
 # Plain-anchor fallback URLs (used only when page_link cannot resolve,
@@ -51,26 +51,29 @@ def nav_link(path, label, disabled=False, query_params=None):
     )
 
 
-def render_navigation(active):
+@st.cache_data(show_spinner=False)
+def _load_nav_css(is_xnrgy_page: bool) -> str:
     root = Path(__file__).resolve().parent
-    is_xnrgy_page = active != "Overview"
-    # Tables are a shared product surface, including the Overview page. Load
-    # their theme once for every route so native dataframes never fall back to
-    # Streamlit's default blue/rounded treatment during a page switch.
-    st.html(root / "table_theme.css")
-    if is_xnrgy_page:
-        st.html(root / "xnrgy.css")
-        st.html(root / "unified_pages.css")
-    # Load the photographic/navigation layer last so the full-screen opening
-    # and floating menu stay consistent across every page-specific theme.
-    st.html(root / "photo_story.css")
+    css_parts = []
+    for filename in ("table_theme.css", *(("xnrgy.css", "unified_pages.css") if is_xnrgy_page else ()), "photo_story.css"):
+        p = root / filename
+        if p.exists():
+            css_parts.append(p.read_text(encoding="utf-8"))
+    return "<style>" + "\n".join(css_parts) + "</style>"
+
+
+def render_navigation(active):
+    is_xnrgy_page = active not in ("Overview", "Tổng quan")
+    st.html(_load_nav_css(is_xnrgy_page))
+
 
     edition = (
-        '<span class="wc-edition">EXPLORE DATA <b>↗</b></span>' if is_xnrgy_page
-        else '<span class="wc-edition">THE TOURNAMENT ARCHIVE ↗</span>'
+        '<span class="wc-edition">KHÁM PHÁ DỮ LIỆU <b>↗</b></span>' if is_xnrgy_page
+        else '<span class="wc-edition">KHO LƯU TRỮ GIẢI ĐẤU ↗</span>'
     )
+    slug = active.lower().replace(" ", "-")
     st.markdown(
-        '<div class="xnrg-shell" data-page="' + active.lower().replace(" ", "-") + '">'
+        '<div class="xnrg-shell" data-page="' + slug + '">'
         '<span class="xnrg-page-index">WORLD CUP / 2026</span></div>'
         '<div class="wc-scroll-progress" aria-hidden="true"></div>',
         unsafe_allow_html=True,
@@ -80,18 +83,28 @@ def render_navigation(active):
     # never inherit the pill-bar styling.
     st.markdown('<div class="vc-nav-anchor" aria-hidden="true">navbar</div>', unsafe_allow_html=True)
     nav_cols = st.columns([1, 1, 1, 1, 1, 1, 1.4], gap="small")
+    alias_map = {
+        "Overview": "Tổng quan",
+        "Matches": "Trận đấu",
+        "Teams": "Đội tuyển",
+        "Players": "Cầu thủ",
+        "ML Analytics": "Phân tích ML",
+        "Best XI": "Đội hình tiêu biểu",
+    }
+    normalized_active = alias_map.get(active, active)
     for col, (path, label) in zip(nav_cols[:6], NAV_PAGES):
+        is_current = (label == normalized_active)
         with col:
             if path == "app.py":
                 # The main script is not resolvable via page_link, so the
                 # home item stays a plain anchor (full reload only here).
                 st.markdown(
-                    f'<a class="wc-nav-home{" is-active" if label == active else ""}" '
+                    f'<a class="wc-nav-home{" is-active" if is_current else ""}" '
                     f'href="/" target="_self">{label.upper()}</a>',
                     unsafe_allow_html=True,
                 )
             else:
-                nav_link(path, label.upper(), disabled=(label == active))
+                nav_link(path, label.upper(), disabled=is_current)
     with nav_cols[6]:
         st.markdown(edition, unsafe_allow_html=True)
     # Scroll-direction watcher: hides the floating navbar when scrolling down,

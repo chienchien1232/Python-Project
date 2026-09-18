@@ -10,6 +10,8 @@ REQUIRED_PACKAGES = [
     "streamlit",
     "openpyxl",
     "sklearn",
+    "plotly",
+    "pulp",
 ]
 
 FAILED = []

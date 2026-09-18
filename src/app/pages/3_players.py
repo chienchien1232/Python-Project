@@ -22,7 +22,7 @@ from media_ui import country_palette, flag_image, player_portrait, render_photo_
 
 # ── Page configuration ────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Players & Statistics | WorldCup Stats '26",
+    page_title="Hồ sơ & Thống kê Cầu thủ | WorldCup Stats '26",
     page_icon="◉",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -59,11 +59,11 @@ from table_ui import data_table
 render_navigation('Players')
 
 render_photo_story(
-    "PLAYER PERFORMANCE ARCHIVE / 2026",
-    "THE PLAYERS.",
-    "BEHIND DATA.",
-    "Profiles, roles and the performances that shaped the tournament.",
-    index="1,248 PLAYERS",
+    "KHO DỮ LIỆU CẦU THỦ / 2026",
+    "CÁC NGÔI SAO.",
+    "SAU CON SỐ.",
+    "Hồ sơ, vai trò chiến thuật và những màn trình diễn định hình giải đấu.",
+    index="1.248 CẦU THỦ",
     page="players",
 )
 
@@ -98,9 +98,9 @@ st.markdown(
 )
 ws_dir, ws_cmp = st.columns(2, gap="small")
 with ws_dir:
-    st.markdown('<a class="wc-nav-fallback" href="#player-directory" target="_self">PLAYER DIRECTORY</a>', unsafe_allow_html=True)
+    st.markdown('<a class="wc-nav-fallback" href="#player-directory" target="_self">DANH BẠ CẦU THỦ</a>', unsafe_allow_html=True)
 with ws_cmp:
-    st.markdown('<a class="wc-nav-fallback" href="#player-compare" target="_self">COMPARE PLAYERS + TEAMS</a>', unsafe_allow_html=True)
+    st.markdown('<a class="wc-nav-fallback" href="#player-compare" target="_self">SO SÁNH CẦU THỦ &amp; ĐỘI BÓNG</a>', unsafe_allow_html=True)
 
 st.markdown('<div id="player-directory"></div>', unsafe_allow_html=True)
 
@@ -108,7 +108,7 @@ st.markdown('<div id="player-directory"></div>', unsafe_allow_html=True)
 # ── Load Dataset ──────────────────────────────────────────────────────────────
 df = q("SELECT * FROM v_player_season ORDER BY minutes DESC")
 if df.empty:
-    st.error("Player season database view not found.")
+    st.error("Không tìm thấy bảng dữ liệu mùa giải của cầu thủ.")
     st.stop()
 
 df["player_name"] = df["player_name"].apply(clean_name)
@@ -126,16 +126,16 @@ if mv is not None:
 st.markdown(
     '<div class="wc-hero-wrapper" style="margin-bottom:20px">'
     '<div class="wc-hero-badge-row">'
-    '<div class="wc-hero-badge"><span class="wc-badge-dot"></span>PLAYER DIRECTORY</div>'
-    '<div class="wc-hero-dates">1,248 SQUAD MEMBERS · COMPREHENSIVE PER-90 RATINGS</div>'
+    '<div class="wc-hero-badge"><span class="wc-badge-dot"></span>DANH BẠ CẦU THỦ</div>'
+    '<div class="wc-hero-dates">1.248 TUYỂN THỦ · ĐÁNH GIÁ TOÀN DIỆN MỖI 90 PHÚT</div>'
     '</div>'
     '<div class="wc-hero-title" style="font-size:52px;margin-bottom:10px">'
-    '<span class="title-white">PLAYER</span>'
-    '<span class="title-lime">STATISTICS.</span>'
+    '<span class="title-white">THỐNG KÊ</span>'
+    '<span class="title-lime">CẦU THỦ.</span>'
     '</div>'
     '<div class="wc-hero-desc" style="max-width:760px;margin-bottom:16px">'
-    'Browse in-depth player statistics normalized per 90 minutes. Inspect positional percentile radar charts, '
-    'AI-calculated player similarity profiles, and post-tournament market value estimations.'
+    'Khám phá số liệu thống kê chuyên sâu của cầu thủ được chuẩn hóa mỗi 90 phút thi đấu. Đánh giá biểu đồ radar phân vị theo vị trí, '
+    'hồ sơ cầu thủ tương đồng tính toán bằng AI và dự báo định giá thị trường sau giải đấu.'
     '</div>'
     '</div>',
     unsafe_allow_html=True,
@@ -146,34 +146,34 @@ top_assists = "Lionel Messi (5A)"
 
 st.markdown(
     '<div class="kpi-row-container" style="margin-bottom:28px">'
-    f'<div class="kpi-sport-card"><div class="kpi-sport-num">{tot_p:,}</div><div class="kpi-sport-label">PLAYERS LOGGED</div></div>'
-    f'<div class="kpi-sport-card"><div class="kpi-sport-num">Mbappé</div><div class="kpi-sport-label">GOLDEN BOOT (10 GOALS)</div></div>'
-    f'<div class="kpi-sport-card"><div class="kpi-sport-num"> Rodri</div><div class="kpi-sport-label">GOLDEN BALL (MVP)</div></div>'
-    f'<div class="kpi-sport-card"><div class="kpi-sport-num">48</div><div class="kpi-sport-label">NATIONAL SQUADS</div></div>'
+    f'<div class="kpi-sport-card"><div class="kpi-sport-num">{tot_p:,}</div><div class="kpi-sport-label">CẦU THỦ GHI NHẬN</div></div>'
+    f'<div class="kpi-sport-card"><div class="kpi-sport-num">Mbappé</div><div class="kpi-sport-label">VUA PHÁ LƯỚI (10 BÀN)</div></div>'
+    f'<div class="kpi-sport-card"><div class="kpi-sport-num"> Rodri</div><div class="kpi-sport-label">QUẢ BÓNG VÀNG (MVP)</div></div>'
+    f'<div class="kpi-sport-card"><div class="kpi-sport-num">48</div><div class="kpi-sport-label">ĐỘI TUYỂN QUỐC GIA</div></div>'
     '</div>',
     unsafe_allow_html=True,
 )
 
 
 # ── Master Per-90 Table & Filters ─────────────────────────────────────────────
-st.markdown("<div class='section-header'>Master Player Per-90 Statistics</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'>Bảng Thống Kê Tổng Hợp Cầu Thủ (Mỗi 90 Phút)</div>", unsafe_allow_html=True)
 
 col_f1, col_f2, col_f3 = st.columns([1.2, 1.2, 1.6])
 with col_f1:
-    pos_options = ["All Positions"] + sorted(df["position"].dropna().unique().tolist())
-    sel_pos = st.selectbox("Position", pos_options)
+    pos_options = ["Tất cả vị trí"] + sorted(df["position"].dropna().unique().tolist())
+    sel_pos = st.selectbox("Vị trí", pos_options)
 with col_f2:
-    team_options = ["All Teams"] + sorted(df["team"].dropna().unique().tolist())
-    sel_team = st.selectbox("National Team", team_options)
+    team_options = ["Tất cả đội tuyển"] + sorted(df["team"].dropna().unique().tolist())
+    sel_team = st.selectbox("Đội tuyển quốc gia", team_options)
 with col_f3:
-    search_q = st.text_input(" Search Player Name:")
+    search_q = st.text_input(" Tìm kiếm tên cầu thủ:")
 
-min_apps = st.slider("Minimum Matches Played", 0, int(df["matches_played"].max()), 2)
+min_apps = st.slider("Số trận thi đấu tối thiểu", 0, int(df["matches_played"].max()), 2)
 
 view = df[df["matches_played"] >= min_apps].copy()
-if sel_pos != "All Positions":
+if sel_pos != "Tất cả vị trí":
     view = view[view["position"] == sel_pos]
-if sel_team != "All Teams":
+if sel_team != "Tất cả đội tuyển":
     view = view[view["team"] == sel_team]
 if search_q:
     view = view[view["player_name"].str.contains(search_q, case=False, na=False)]
@@ -192,18 +192,34 @@ if "AI Tactical Role" in view.columns:
 
 show_cols = [c for c in show_cols if c in view.columns]
 display_view = view[show_cols].copy()
-display_view.columns = [c.replace("_p90", "/90").replace("_", " ").title() for c in display_view.columns]
+col_rename = {
+    "player_name": "Cầu thủ",
+    "position": "Vị trí",
+    "team": "Đội tuyển",
+    "matches_played": "Số trận",
+    "minutes": "Số phút",
+    "goals_p90": "Bàn thắng/90",
+    "assists_p90": "Kiến tạo/90",
+    "shots_p90": "Dứt điểm/90",
+    "passes_p90": "Chuyền bóng/90",
+    "pass_accuracy_pct": "Chính xác chuyền %",
+    "tackles_p90": "Tắc bóng/90",
+    "interceptions_p90": "Cắt bóng/90",
+    "clearances_p90": "Phá bóng/90",
+    "AI Tactical Role": "Vai trò AI",
+}
+display_view = display_view.rename(columns=col_rename)
 
-data_table(display_view, width="stretch", height=320, label="Player performance index")
+data_table(display_view, width="stretch", height=320, label="Chỉ số hiệu suất cầu thủ")
 
 
 # ── Detailed Player Dossier Profile ───────────────────────────────────────────
-st.markdown("<div class='section-header'>Detailed Player Profile &amp; Radar</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'>Hồ Sơ Cầu Thủ Chi Tiết &amp; Biểu Đồ Radar</div>", unsafe_allow_html=True)
 
 player_list = sorted(df["player_name"].unique().tolist())
 default_idx = player_list.index("Kylian Mbappé") if "Kylian Mbappé" in player_list else 0
 
-sel_pname = st.selectbox("Select Player to inspect complete profile:", player_list, index=default_idx)
+sel_pname = st.selectbox("Chọn cầu thủ để xem hồ sơ chi tiết:", player_list, index=default_idx)
 
 if sel_pname:
     p = df[df["player_name"] == sel_pname].iloc[0]
@@ -228,30 +244,30 @@ if sel_pname:
         if pd.notna(r_info.get("date_of_birth")):
             try:
                 dob = dt.date.fromisoformat(str(r_info["date_of_birth"])[:10])
-                dob_txt = dob.strftime("%d %b %Y")
-                age_txt = f"({int((dt.date.today() - dob).days // 365.25)} years)"
+                dob_txt = dob.strftime("%d/%m/%Y")
+                age_txt = f"({int((dt.date.today() - dob).days // 365.25)} tuổi)"
             except ValueError:
                 dob_txt = str(r_info["date_of_birth"])
         if pd.notna(r_info.get("height_cm")):
             h_m = f"{float(r_info['height_cm']) / 100:.2f} m"
 
-    cluster_badge = "Standard Profile"
+    cluster_badge = "Hồ sơ tiêu chuẩn"
     if clusters is not None:
         hit = clusters[clusters["player_id"] == pid]
         if not hit.empty:
-            cluster_badge = hit.iloc[0].get("cluster_label", "Standard Profile")
+            cluster_badge = hit.iloc[0].get("cluster_label", "Hồ sơ tiêu chuẩn")
 
-    POS_FULL = {"FWD": "FORWARD (FW)", "MID": "MIDFIELDER (MF)", "DEF": "DEFENDER (DF)", "GK": "GOALKEEPER (GK)"}
+    POS_FULL = {"FWD": "TIỀN ĐẠO (FW)", "MID": "TIỀN VỆ (MF)", "DEF": "HẬU VỆ (DF)", "GK": "THỦ MÔN (GK)"}
     POS_SHORT = {"FWD": "FW", "MID": "MF", "DEF": "DF", "GK": "GK"}
     pos_full = POS_FULL.get(p_pos, p_pos)
     pos_short = POS_SHORT.get(p_pos, p_pos)
     TAGLINES = {
-        "FWD": "CLINICAL. DECISIVE. ALWAYS A THREAT.",
-        "MID": "CONTROL. VISION. RELENTLESS ENGINE.",
-        "DEF": "COMMANDING. RELENTLESS. IMPENETRABLE.",
-        "GK": "COMMANDING. FEARLESS. THE LAST LINE.",
+        "FWD": "SẮC BÉN. QUYẾT ĐOÁN. LUÔN LÀ MỐI ĐE DỌA.",
+        "MID": "KIỂM SOÁT. NHÃN QUAN. ĐỘNG CƠ BỀN BỈ.",
+        "DEF": "CHỈ HUY. QUYẾT LIỆT. BỨC TƯỜNG THÉP.",
+        "GK": "VỮNG CHÃI. DŨNG CẢM. CHỐT CHẶN CUỐI CÙNG.",
     }
-    tagline = TAGLINES.get(p_pos, "DISCIPLINE. PRECISION. BIG-MOMENT PLAYER.")
+    tagline = TAGLINES.get(p_pos, "KỶ LUẬT. CHÍNH XÁC. TỎA SÁNG ĐÚNG LÚC.")
     palette_code, palette_primary, palette_secondary, palette_primary_rgb, palette_secondary_rgb = country_palette(p_team)
     stadium_src = html_lib.escape(static_url("hero-players-v1.png"), quote=True)
     profile_vars = (
@@ -326,34 +342,34 @@ if sel_pname:
         f'<div class="pp-sub">{html_lib.escape(p_team.upper())}<span class="pp-sep">•</span>{html_lib.escape(pos_full)}</div>'
         f'<div class="pp-quote">&ldquo;{tagline}&rdquo;</div>'
         f'<div class="pp-stats">'
-        f'<div class="pp-stat"><div class="pp-stat-lbl">Matches</div><div class="pp-stat-val">{int(p["matches_played"])}</div></div>'
-        f'<div class="pp-stat"><div class="pp-stat-lbl">Minutes</div><div class="pp-stat-val">{int(p["minutes"])}</div></div>'
-        f'<div class="pp-stat"><div class="pp-stat-lbl">Goals / 90</div><div class="pp-stat-val">{float(p.get("goals_p90", 0)):.2f}</div></div>'
-        f'<div class="pp-stat"><div class="pp-stat-lbl">Assists / 90</div><div class="pp-stat-val">{float(p.get("assists_p90", 0)):.2f}</div></div>'
-        f'<div class="pp-stat"><div class="pp-stat-lbl">Market Valuation</div><div class="pp-stat-val">€{mv_meur:.1f}M</div><div class="pp-stat-sub">Pre-Tournament Value</div></div>'
+        f'<div class="pp-stat"><div class="pp-stat-lbl">Trận đấu</div><div class="pp-stat-val">{int(p["matches_played"])}</div></div>'
+        f'<div class="pp-stat"><div class="pp-stat-lbl">Số phút</div><div class="pp-stat-val">{int(p["minutes"])}</div></div>'
+        f'<div class="pp-stat"><div class="pp-stat-lbl">Bàn thắng / 90</div><div class="pp-stat-val">{float(p.get("goals_p90", 0)):.2f}</div></div>'
+        f'<div class="pp-stat"><div class="pp-stat-lbl">Kiến tạo / 90</div><div class="pp-stat-val">{float(p.get("assists_p90", 0)):.2f}</div></div>'
+        f'<div class="pp-stat"><div class="pp-stat-lbl">Định giá thị trường</div><div class="pp-stat-val">€{mv_meur:.1f}M</div><div class="pp-stat-sub">Trước giải đấu</div></div>'
         f'</div>'
         f'<div class="pp-meta">'
-        f'<div class="pp-meta-cell"><div class="pp-meta-lbl">Date of Birth</div><div class="pp-meta-val">{html_lib.escape(dob_txt)}</div><div class="pp-meta-sub">{html_lib.escape(age_txt)}</div></div>'
-        f'<div class="pp-meta-cell"><div class="pp-meta-lbl">Height</div><div class="pp-meta-val">{html_lib.escape(h_m)}</div></div>'
-        f'<div class="pp-meta-cell"><div class="pp-meta-lbl">Caps</div><div class="pp-meta-val">{html_lib.escape(str(caps))}</div></div>'
-        f'<div class="pp-meta-cell"><div class="pp-meta-lbl">Club</div><div class="pp-meta-val" style="font-size:14px">{html_lib.escape(club)}</div></div>'
+        f'<div class="pp-meta-cell"><div class="pp-meta-lbl">Ngày sinh</div><div class="pp-meta-val">{html_lib.escape(dob_txt)}</div><div class="pp-meta-sub">{html_lib.escape(age_txt)}</div></div>'
+        f'<div class="pp-meta-cell"><div class="pp-meta-lbl">Chiều cao</div><div class="pp-meta-val">{html_lib.escape(h_m)}</div></div>'
+        f'<div class="pp-meta-cell"><div class="pp-meta-lbl">Khoác áo ĐTQG</div><div class="pp-meta-val">{html_lib.escape(str(caps))}</div></div>'
+        f'<div class="pp-meta-cell"><div class="pp-meta-lbl">Câu lạc bộ</div><div class="pp-meta-val" style="font-size:14px">{html_lib.escape(club)}</div></div>'
         f'</div>'
         f'</div>'
         f'</section>',
         unsafe_allow_html=True
     )
-    st.markdown('<a class="wc-nav-fallback" href="#player-compare" target="_self">⇄ OPEN PLAYER COMPARISON</a>', unsafe_allow_html=True)
+    st.markdown('<a class="wc-nav-fallback" href="#player-compare" target="_self">⇄ MỞ SO SÁNH CẦU THỦ</a>', unsafe_allow_html=True)
     col_p_left, col_p_right = st.columns([1.15, 1.0], gap="large")
 
     with col_p_left:
         # Radar Percentile vs Positional Peers (computations unchanged)
         radar_axes = [
-            ("shots_p90", "Shots/90", False),
-            ("assists_p90", "Assists/90", False),
-            ("goals_p90", "Goals/90", False),
-            ("dribbles_p90", "Dribbles/90", True),
-            ("tackles_p90", "Tackles/90", False),
-            ("passes_p90", "Passes/90", False),
+            ("shots_p90", "Dứt điểm/90", False),
+            ("assists_p90", "Kiến tạo/90", False),
+            ("goals_p90", "Bàn thắng/90", False),
+            ("dribbles_p90", "Rê bóng/90", True),
+            ("tackles_p90", "Tắc bóng/90", False),
+            ("passes_p90", "Chuyền bóng/90", False),
         ]
 
         peers = df[(df["position"] == p["position"]) & (df["minutes"] >= 90)].copy()
@@ -382,7 +398,7 @@ if sel_pname:
         with st.container(border=True):
             st.markdown(
                 f'<div class="pp-panel-head"><span class="pp-dot"></span>'
-                f'PERCENTILE VS {html_lib.escape(p_pos)} PEERS (MIN 90 MINS)'
+                f'PHÂN VỊ SO VỚI CÁC {html_lib.escape(p_pos)} CÙNG VỊ TRÍ (TỐI THIỂU 90 PHÚT)'
                 f'<span class="pp-year">/ 2026</span></div>',
                 unsafe_allow_html=True,
             )
@@ -392,8 +408,6 @@ if sel_pname:
                     r=r_vals + [r_vals[0]],
                     theta=labels_r + [labels_r[0]],
                     fill="toself",
-                    # Use the same muted aqua/sand pair as the team radar so
-                    # the analytical views remain visually consistent.
                     fillcolor="rgba(168, 218, 220, 0.22)",
                     name=sel_pname,
                     line=dict(color="#a8dadc", width=2.5),
@@ -402,7 +416,7 @@ if sel_pname:
                 fig_p_radar.add_trace(go.Scatterpolar(
                     r=[50] * (len(labels_r) + 1),
                     theta=labels_r + [labels_r[0]],
-                    name=f"{p_pos} Peer Average",
+                    name=f"Trung bình vị trí {p_pos}",
                     line=dict(color="#d7c3a3", dash="dash", width=1.5),
                 ))
                 fig_p_radar.update_layout(
@@ -426,14 +440,14 @@ if sel_pname:
                 )
                 st.plotly_chart(fig_p_radar, width="stretch")
             else:
-                st.info("Not enough peer data for radar.")
+                st.info("Chưa có đủ dữ liệu cầu thủ cùng vị trí để tạo biểu đồ radar.")
 
     with col_p_right:
         # AI Player Similarity Top 5 (computations unchanged, editorial rows)
         with st.container(border=True):
             st.markdown(
                 '<div class="pp-panel-head"><span class="pp-dot"></span>'
-                'AI PLAYER SIMILARITY (TOP 5 MATCHES)'
+                'CẦU THỦ TƯƠNG ĐỒNG THEO AI (TOP 5 PHÙ HỢP)'
                 '<span class="pp-year">/ 2026</span></div>',
                 unsafe_allow_html=True,
             )
@@ -455,7 +469,7 @@ if sel_pname:
                                 + '</span>'
                                 f'<span class="pp-sim-name">{html_lib.escape(clean_target_name)}</span>'
                                 f'<span class="pp-sim-pct">{pct_sim:.1f}%</span>'
-                                '<span class="pp-sim-lbl">similarity</span>'
+                                '<span class="pp-sim-lbl">tương đồng</span>'
                                 f'<span class="pp-sim-bar"><i style="width:{bar_w:.1f}%"></i></span>'
                                 '</div>'
                             )
@@ -482,18 +496,18 @@ if sel_pname:
                             unsafe_allow_html=True,
                         )
                     else:
-                        st.info("No direct similarity vector found for this player.")
+                        st.info("Không tìm thấy vector tương đồng trực tiếp cho cầu thủ này.")
                 except Exception:
-                    st.info("Similarity matrix loading error.")
+                    st.info("Lỗi khi tải ma trận tương đồng.")
             else:
-                st.info("Run `python src/analytics/player_similarity.py` to generate similarity vectors.")
+                st.info("Chạy lệnh `python src/analytics/player_similarity.py` để tạo các vector tương đồng.")
 
         # Post-Tournament Market Value Estimation
         if mv is not None:
             mrow = mv[mv["player_id"] == pid]
             if not mrow.empty:
                 r_mv = mrow.iloc[0]
-                st.markdown("<div class='section-header' style='font-size:20px'>Market Value AI Regression</div>", unsafe_allow_html=True)
+                st.markdown("<div class='section-header' style='font-size:20px'>Hồi Quy Định Giá Thị Trường Bằng AI</div>", unsafe_allow_html=True)
                 v_pre = float(r_mv["current_value"]) / 1e6
                 v_post = float(r_mv["predicted_post_value"]) / 1e6
                 chg = float(r_mv["change_pct"])
@@ -501,9 +515,9 @@ if sel_pname:
                 st.markdown(
                     f'<div style="background:#141414;border:0;border-top:1px solid rgba(255,255,255,0.18);border-bottom:1px solid rgba(255,255,255,0.10);border-radius:0;padding:18px">'
                     f'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:center">'
-                    f'<div><div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase">PRE-TOURNAMENT</div><div style="font-family:var(--font-sport);font-size:22px;font-weight:900;color:#FFFFFF">€{v_pre:.1f}M</div></div>'
-                    f'<div><div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase">PREDICTED POST</div><div style="font-family:var(--font-sport);font-size:22px;font-weight:900;color:#e8e8e3">€{v_post:.1f}M</div></div>'
-                    f'<div><div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase">NET CHANGE</div><div style="font-family:var(--font-sport);font-size:22px;font-weight:900;color:{"#00e676" if chg>=0 else "#ff5252"}">{chg:+.1f}%</div></div>'
+                    f'<div><div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase">TRƯỚC GIẢI ĐẤU</div><div style="font-family:var(--font-sport);font-size:22px;font-weight:900;color:#FFFFFF">€{v_pre:.1f}M</div></div>'
+                    f'<div><div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase">DỰ BÁO SAU GIẢI</div><div style="font-family:var(--font-sport);font-size:22px;font-weight:900;color:#e8e8e3">€{v_post:.1f}M</div></div>'
+                    f'<div><div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase">MỨC BIẾN ĐỘNG</div><div style="font-family:var(--font-sport);font-size:22px;font-weight:900;color:{"#00e676" if chg>=0 else "#ff5252"}">{chg:+.1f}%</div></div>'
                     f'</div>'
                     f'</div>',
                     unsafe_allow_html=True
@@ -512,7 +526,7 @@ if sel_pname:
 
 # ── Player & Team Comparison (always visible on this page) ────────────────────
 st.markdown('<div id="player-compare"></div>', unsafe_allow_html=True)
-st.markdown("<div class='section-header'>Player & Team Comparison</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'>So Sánh Cầu Thủ &amp; Đội Tuyển</div>", unsafe_allow_html=True)
 from compare_ui import render_compare_workspace
 
 render_compare_workspace()
@@ -522,7 +536,7 @@ render_compare_workspace()
 st.markdown("<div style='height:30px'></div>", unsafe_allow_html=True)
 st.markdown(
     "<div style='text-align:center;color:#64748b;font-size:12.5px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.06)'>"
-    "WorldCup Stats '26 Analytics Platform &nbsp;·&nbsp; Data powered by FIFA, ESPN &amp; official match records &nbsp;·&nbsp; Built with Python &amp; Streamlit"
+    "Nền tảng Phân tích WorldCup Stats '26 &nbsp;·&nbsp; Dữ liệu từ FIFA, ESPN &amp; biên bản thi đấu chính thức &nbsp;·&nbsp; Phát triển bằng Python &amp; Streamlit"
     "</div>",
     unsafe_allow_html=True,
 )

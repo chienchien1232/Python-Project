@@ -50,7 +50,7 @@ def flag(team_name: str) -> str:
 
 def render_compare_workspace() -> None:
     """Render the full player-v-player and team-v-team comparison tools."""
-    tab_pvp, tab_tvt = st.tabs([" Player vs Player", " Team vs Team"])
+    tab_pvp, tab_tvt = st.tabs([" Cầu thủ vs Cầu thủ", " Đội tuyển vs Đội tuyển"])
 
 
     # ==============================================================================
@@ -59,7 +59,7 @@ def render_compare_workspace() -> None:
     with tab_pvp:
         df_p = q("SELECT * FROM v_player_season WHERE minutes >= 90")
         if df_p.empty:
-            st.error("No player dataset loaded.")
+            st.error("Chưa tải được tập dữ liệu cầu thủ.")
         else:
             df_p["player_name"] = df_p["player_name"].apply(clean_name)
             df_p["team"] = df_p["team"].apply(clean_name)
@@ -70,9 +70,9 @@ def render_compare_workspace() -> None:
 
             c1, c2 = st.columns(2)
             with c1:
-                pA_name = st.selectbox("Select Player A:", p_names, index=idx_a)
+                pA_name = st.selectbox("Chọn Cầu thủ A:", p_names, index=idx_a)
             with c2:
-                pB_name = st.selectbox("Select Player B:", p_names, index=idx_b)
+                pB_name = st.selectbox("Chọn Cầu thủ B:", p_names, index=idx_b)
 
             rA = df_p[df_p["player_name"] == pA_name].iloc[0]
             rB = df_p[df_p["player_name"] == pB_name].iloc[0]
@@ -141,11 +141,11 @@ def render_compare_workspace() -> None:
             firstB, lastB = _split_name(pB_name)
 
             H2H_STAT_ROWS = [
-                ("goals_p90", "Goals (per 90)", "g", "{:.2f}"),
-                ("assists_p90", "Assists (per 90)", "a", "{:.2f}"),
-                ("shots_p90", "Shots (per 90)", "s", "{:.1f}"),
-                ("dribbles_p90", "Dribbles (per 90)", "d", "{:.1f}"),
-                ("pass_accuracy_pct", "Pass Accuracy", "p", "{:.0f}%"),
+                ("goals_p90", "Bàn thắng (mỗi 90p)", "g", "{:.2f}"),
+                ("assists_p90", "Kiến tạo (mỗi 90p)", "a", "{:.2f}"),
+                ("shots_p90", "Dứt điểm (mỗi 90p)", "s", "{:.1f}"),
+                ("dribbles_p90", "Rê bóng (mỗi 90p)", "d", "{:.1f}"),
+                ("pass_accuracy_pct", "Chính xác chuyền", "p", "{:.0f}%"),
             ]
             H2H_ICONS = {"g": "◉", "a": "➤", "s": "◎", "d": "≋", "p": "⬡"}
 
@@ -247,12 +247,12 @@ def render_compare_workspace() -> None:
                 f'<div class="h2h-first">{html_lib.escape(firstA)}</div>'
                 f'<div class="h2h-last">{html_lib.escape(lastA)}</div>'
                 f'<div class="h2h-sub">{html_lib.escape(str(rA["team"]))} · {html_lib.escape(str(rA["position"]))}</div>'
-                f'<div class="h2h-trio"><div><b>{ageA}</b><span>AGE</span></div>'
+                f'<div class="h2h-trio"><div><b>{ageA}</b><span>TUỔI</span></div>'
                 f'<div><b>{cmA}</b><span>CM</span></div>'
-                f'<div><b>{capsA}</b><span>CAPS</span></div></div>'
+                f'<div><b>{capsA}</b><span>TRẬN ĐTQG</span></div></div>'
                 f'{rowsA_html}'
                 f'</div><div class="h2h-sign">{html_lib.escape(lastA.title())}</div></div>'
-                f'<div class="h2h-vs"><i class="slash b"></i><b>VS</b><span>H2H RADAR</span><i class="slash r"></i></div>'
+                f'<div class="h2h-vs"><i class="slash b"></i><b>VS</b><span>ĐỐI ĐẦU RADAR</span><i class="slash r"></i></div>'
                 f'<div class="h2h-panel is-b" data-team-code="{html_lib.escape(codeB, quote=True)}" style="{panel_varsB}">'
                 f'<img class="h2h-stadium" src="{stadium_src}" alt="" aria-hidden="true" loading="lazy">'
                 f'<div class="h2h-giant">{gB}</div>'
@@ -260,9 +260,9 @@ def render_compare_workspace() -> None:
                 f'<div class="h2h-first">{html_lib.escape(firstB)}</div>'
                 f'<div class="h2h-last">{html_lib.escape(lastB)}</div>'
                 f'<div class="h2h-sub">{html_lib.escape(str(rB["team"]))} · {html_lib.escape(str(rB["position"]))}</div>'
-                f'<div class="h2h-trio"><div><b>{ageB}</b><span>AGE</span></div>'
+                f'<div class="h2h-trio"><div><b>{ageB}</b><span>TUỔI</span></div>'
                 f'<div><b>{cmB}</b><span>CM</span></div>'
-                f'<div><b>{capsB}</b><span>CAPS</span></div></div>'
+                f'<div><b>{capsB}</b><span>TRẬN ĐTQG</span></div></div>'
                 f'{rowsB_html}'
                 f'</div>'
                 f'<div class="h2h-photo">' + player_portrait(pB_name, "player-portrait h2h-profile-portrait") + '</div>'
@@ -274,13 +274,13 @@ def render_compare_workspace() -> None:
             col_radar, col_table = st.columns([1.15, 1.0], gap="large")
 
             axes_p = [
-                ("goals_p90", "Goals/90", False, "{:.2f}"),
-                ("assists_p90", "Assists/90", False, "{:.2f}"),
-                ("shots_p90", "Shots/90", False, "{:.1f}"),
-                ("dribbles_p90", "Dribbles/90", True, "{:.1f}"),
-                ("pass_accuracy_pct", "Pass Accuracy", False, "{:.0f}%"),
-                ("passes_p90", "Passes/90", False, "{:.1f}"),
-                ("tackles_p90", "Tackles/90", False, "{:.1f}"),
+                ("goals_p90", "Bàn thắng/90", False, "{:.2f}"),
+                ("assists_p90", "Kiến tạo/90", False, "{:.2f}"),
+                ("shots_p90", "Dứt điểm/90", False, "{:.1f}"),
+                ("dribbles_p90", "Rê bóng/90", True, "{:.1f}"),
+                ("pass_accuracy_pct", "Chính xác chuyền", False, "{:.0f}%"),
+                ("passes_p90", "Chuyền bóng/90", False, "{:.1f}"),
+                ("tackles_p90", "Tắc bóng/90", False, "{:.1f}"),
             ]
 
             def _ax_val(row, key, derived, driv):
@@ -313,14 +313,12 @@ def render_compare_workspace() -> None:
                 with st.container(border=True):
                     st.markdown(
                         '<div class="h2h-panel-head"><span class="h2h-dot"></span>'
-                        'HEAD-TO-HEAD PER 90 RADAR PROFILE'
+                        'HỒ SƠ RADAR ĐỐI ĐẦU MỖI 90 PHÚT'
                         '<span class="h2h-year">/ 2026</span></div>',
                         unsafe_allow_html=True,
                     )
                     fig_h2h = go.Figure()
                     for r_item, driv, p_label, clr, fill_clr in [
-                        # Muted aqua and sand separate both players clearly
-                        # while preserving the monochrome page foundation.
                         (rA, dA, pA_name, "#a8dadc", "rgba(168,218,220,0.20)"),
                         (rB, dB, pB_name, "#d7c3a3", "rgba(215,195,163,0.18)"),
                     ]:
@@ -394,11 +392,11 @@ def render_compare_workspace() -> None:
                         )
                     st.markdown(
                         '<div class="h2h-panel-head"><span class="h2h-dot"></span>'
-                        'DIRECT METRIC COMPARISON'
-                        f'<span class="h2h-year">{len(axes_p)} RECORDS / 4 FIELDS</span></div>'
+                        'SO SÁNH CHỈ SỐ TRỰC TIẾP'
+                        f'<span class="h2h-year">{len(axes_p)} BẢN GHI / 4 TRƯỜNG DỮ LIỆU</span></div>'
                         '<table class="h2h-table"><thead><tr>'
-                        f'<th>Metric</th><th>{html_lib.escape(pA_name)}</th>'
-                        f'<th>{html_lib.escape(pB_name)}</th><th>Delta (A - B)</th>'
+                        f'<th>Chỉ số</th><th>{html_lib.escape(pA_name)}</th>'
+                        f'<th>{html_lib.escape(pB_name)}</th><th>Chênh lệch (A - B)</th>'
                         '</tr></thead><tbody>' + comp_rows_html + '</tbody></table>',
                         unsafe_allow_html=True,
                     )
@@ -413,9 +411,9 @@ def render_compare_workspace() -> None:
                             val_sim = float(sim.loc[key_b, key_a]) * 100
                             st.markdown(
                                 f'<div style="background:#0e0e0e;border:1px solid #343434;border-radius:0;padding:14px;margin-top:16px">'
-                                f'<div style="font-size:11px;font-weight:700;color:#9b9b95;text-transform:uppercase;letter-spacing:1px">AI PLAYSTYLE SIMILARITY</div>'
+                                f'<div style="font-size:11px;font-weight:700;color:#9b9b95;text-transform:uppercase;letter-spacing:1px">ĐỘ TƯƠNG ĐỒNG PHONG CÁCH THEO AI</div>'
                                 f'<div style="font-size:26px;font-weight:400;color:#f1f0eb;margin:4px 0">{val_sim:.1f}%</div>'
-                                f'<div style="font-size:12px;color:#9b9b95">Direct cosine distance over 18 normalized Per-90 tactical features</div>'
+                                f'<div style="font-size:12px;color:#9b9b95">Khoảng cách cosine trực tiếp qua 18 chỉ số chiến thuật chuẩn hóa mỗi 90 phút</div>'
                                 f'</div>',
                                 unsafe_allow_html=True
                             )
@@ -436,9 +434,9 @@ def render_compare_workspace() -> None:
 
         c_t1, c_t2 = st.columns(2)
         with c_t1:
-            tA_name = st.selectbox("Select Team A:", teams_all, index=idx_ta)
+            tA_name = st.selectbox("Chọn Đội tuyển A:", teams_all, index=idx_ta)
         with c_t2:
-            tB_name = st.selectbox("Select Team B:", teams_all, index=idx_tb)
+            tB_name = st.selectbox("Chọn Đội tuyển B:", teams_all, index=idx_tb)
 
         fl_ta = flag(tA_name)
         fl_tb = flag(tB_name)
@@ -452,19 +450,19 @@ def render_compare_workspace() -> None:
             f'<div class="match-team-block home">'
             f'<div>'
             f'<div class="match-team-name-big" style="color:#f1f0eb;font-size:28px">{tA_name}</div>'
-            f'<div style="color:#9b9b95;font-size:12px">{fl_ta} Qualified Nation</div>'
+            f'<div style="color:#9b9b95;font-size:12px">{fl_ta} Quốc gia tham dự</div>'
             f'</div>'
             f'{fl_ta_img}'
             f'</div>'
             f'<div class="match-score-display" style="min-width:110px">'
             f'<div class="match-score-numbers" style="font-size:28px;color:#f1f0eb">VS</div>'
-            f'<div class="match-status-pill">TEAM H2H</div>'
+            f'<div class="match-status-pill">ĐỐI ĐẦU ĐỘI TUYỂN</div>'
             f'</div>'
             f'<div class="match-team-block away">'
             f'{fl_tb_img}'
             f'<div>'
             f'<div class="match-team-name-big" style="color:#9b9b95;font-size:28px">{tB_name}</div>'
-            f'<div style="color:#9b9b95;font-size:12px">{fl_tb} Qualified Nation</div>'
+            f'<div style="color:#9b9b95;font-size:12px">{fl_tb} Quốc gia tham dự</div>'
             f'</div>'
             f'</div>'
             f'</div>'
@@ -475,7 +473,7 @@ def render_compare_workspace() -> None:
         col_h2h_matches, col_h2h_stats = st.columns([1.1, 1.0], gap="large")
 
         with col_h2h_matches:
-            st.markdown("<div class='section-header' style='font-size:20px;margin-top:0'>Matches Between Teams at Tournament</div>", unsafe_allow_html=True)
+            st.markdown("<div class='section-header' style='font-size:20px;margin-top:0'>Các Trận Đối Đầu Giữa Hai Đội Tại Giải</div>", unsafe_allow_html=True)
             h2h_m = q("""
                 SELECT d.date AS Date, d.stage_name AS Stage,
                        d.home_team_name AS Home_Team, d.home_score AS Home_Score,
@@ -506,10 +504,10 @@ def render_compare_workspace() -> None:
                 m_h2h_html += '</div>'
                 st.markdown(m_h2h_html, unsafe_allow_html=True)
             else:
-                st.info(f"{tA_name} and {tB_name} did not face each other directly during the 2026 World Cup.")
+                st.info(f"{tA_name} và {tB_name} không gặp nhau trực tiếp tại World Cup 2026.")
 
         with col_h2h_stats:
-            st.markdown("<div class='section-header' style='font-size:20px;margin-top:0'>Tournament Aggregated Statistics</div>", unsafe_allow_html=True)
+            st.markdown("<div class='section-header' style='font-size:20px;margin-top:0'>Thống Kê Tổng Hợp Cả Giải Đấu</div>", unsafe_allow_html=True)
 
             stat_t = q("""
                 SELECT t.team_name,
@@ -528,12 +526,12 @@ def render_compare_workspace() -> None:
             if len(stat_t) >= 1:
                 stat_t["team_name"] = stat_t["team_name"].apply(clean_name)
                 stat_specs_team = [
-                    ("Possession %", "avg_possession", "%"),
-                    ("Avg Shots / 90", "avg_shots", ""),
-                    ("Shots on Target", "avg_sot", ""),
-                    ("Corner Kicks", "avg_corners", ""),
-                    ("Goalkeeper Saves", "avg_saves", ""),
-                    ("Fouls Committed", "avg_fouls", ""),
+                    ("Kiểm soát bóng %", "avg_possession", "%"),
+                    ("Dứt điểm TB / 90", "avg_shots", ""),
+                    ("Dứt điểm trúng đích", "avg_sot", ""),
+                    ("Phạt góc", "avg_corners", ""),
+                    ("Cứu thua thủ môn", "avg_saves", ""),
+                    ("Phạm lỗi", "avg_fouls", ""),
                 ]
 
                 tA_row = stat_t[stat_t["team_name"] == tA_name]

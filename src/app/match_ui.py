@@ -35,13 +35,18 @@ def is_completed(match: pd.Series) -> bool:
 def match_status(match: pd.Series) -> str:
     status = str(match.get("Status", "")).strip()
     if "live" in status.lower():
-        return "LIVE"
+        return "TRỰC TIẾP"
     if is_completed(match):
         result_type = str(match.get("Result_Type", "")).strip().lower()
         if result_type and result_type not in {"regular", "nan", "none"}:
-            return result_type.upper()
-        return "FULL TIME"
-    return "UPCOMING"
+            type_map = {
+                "extra time": "HIỆP PHỤ",
+                "penalties": "LUÂN LƯU",
+                "aet": "SAU HIỆP PHỤ",
+            }
+            return type_map.get(result_type, result_type.upper())
+        return "KẾT THÚC"
+    return "SẮP DIỄN RA"
 
 
 def score_value(value: Any) -> str:
@@ -70,12 +75,12 @@ def render_calendar_hero(match_count: int) -> str:
         '<div class="match-motion-layer match-motion-grid"></div>'
         '<div class="match-motion-layer match-motion-ring"></div>'
         '<div class="match-motion-layer match-motion-slash"></div>'
-        '<div class="match-hero-meta"><span>MATCH CALENDAR / 2026</span>'
-        f'<span>{match_count:03d} FIXTURES &amp; RESULTS</span></div>'
-        '<div class="match-calendar-title"><span>TOURNAMENT</span><span>MATCHES.</span></div>'
+        '<div class="match-hero-meta"><span>LỊCH THI ĐẤU / 2026</span>'
+        f'<span>{match_count:03d} TRẬN ĐẤU &amp; KẾT QUẢ</span></div>'
+        '<div class="match-calendar-title"><span>CÁC TRẬN ĐẤU</span><span>GIẢI ĐẤU.</span></div>'
         '<div class="match-calendar-intro">'
-        '<p>Explore every fixture and result from the 2026 FIFA World Cup.</p>'
-        '<span>SELECT A MATCH<br>ENTER THE STORY</span>'
+        '<p>Khám phá mọi trận đấu và kết quả từ FIFA World Cup 2026.</p>'
+        '<span>CHỌN MỘT TRẬN ĐẤU<br>XEM CHI TIẾT</span>'
         '</div></section>'
     )
 
@@ -85,8 +90,8 @@ def render_stat_strip(match_count: int, goals: int, average: float, attendance: 
         f"{attendance / 1_000_000:.2f}M" if attendance >= 1_000_000 else f"{attendance:,}"
     )
     items = (
-        (match_count, "MATCHES"), (goals, "GOALS"),
-        (f"{average:.2f}", "GOALS / MATCH"), (compact_attendance, "ATTENDANCE"),
+        (match_count, "TRẬN ĐẤU"), (goals, "BÀN THẮNG"),
+        (f"{average:.2f}", "BÀN / TRẬN"), (compact_attendance, "KHÁN GIẢ"),
     )
     cells = "".join(
         f'<div class="match-stat-cell"><strong>{value}</strong><span>{label}</span></div>'
@@ -110,14 +115,15 @@ def render_match_card(match: pd.Series, anomalous: bool = False) -> str:
     attendance = match.get("Attendance")
     attendance_text = f"{int(attendance):,}" if pd.notna(attendance) and attendance else "—"
     referee = safe(match.get("Referee"))
-    anomaly = '<span class="match-anomaly">ANOMALY</span>' if anomalous else ""
+    anomaly = '<span class="match-anomaly">BẤT THƯỜNG</span>' if anomalous else ""
     live_class = " is-live" if live else ""
     match_id = int(match["ID"])
+    stage_name = safe(match.get("Stage")).upper()
     return (
         f'<a class="fixture-card{live_class}" href="{detail_url(match_id)}" target="_self" '
-        f'aria-label="View match {match_id}: {home} versus {away}">'
+        f'aria-label="Xem chi tiết trận {match_id}: {home} gặp {away}">'
         '<div class="fixture-card-top">'
-        f'<span>MATCH {match_id:02d}</span><span>{safe(match.get("Stage")).upper()}</span></div>'
+        f'<span>TRẬN {match_id:02d}</span><span>{stage_name}</span></div>'
         f'<div class="fixture-card-date">{format_date(match.get("Date"))}</div>'
         f'<div class="fixture-card-city">{safe(match.get("City")).upper()}</div>'
         f'<div class="fixture-card-venue">{safe(match.get("Stadium"))}</div>'
@@ -128,8 +134,8 @@ def render_match_card(match: pd.Series, anomalous: bool = False) -> str:
         '</div>'
         f'<div class="fixture-status"><span>{match_status(match)}</span>{anomaly}</div>'
         '<div class="fixture-facts">'
-        f'<span>ATTENDANCE <b>{attendance_text}</b></span><span>REFEREE <b>{referee}</b></span></div>'
-        '<div class="fixture-cta"><span>VIEW MATCH DETAILS</span><b aria-hidden="true">→</b></div>'
+        f'<span>KHÁN GIẢ <b>{attendance_text}</b></span><span>TRỌNG TÀI <b>{referee}</b></span></div>'
+        '<div class="fixture-cta"><span>XEM CHI TIẾT TRẬN ĐẤU</span><b aria-hidden="true">→</b></div>'
         '</a>'
     )
 
@@ -160,12 +166,12 @@ def render_detail_hero(match: pd.Series) -> str:
         if completed else '<strong class="versus">VS</strong>'
     )
     facts = (
-        ("DATE", format_date(match.get("Date"))),
-        ("STADIUM", safe(match.get("Stadium")).upper()),
-        ("CITY", safe(match.get("City")).upper()),
-        ("ATTENDANCE", f"{int(match['Attendance']):,}" if pd.notna(match.get("Attendance")) and match.get("Attendance") else "—"),
-        ("REFEREE", safe(match.get("Referee")).upper()),
-        ("MANAGERS", f'{safe(match.get("Home_Manager")).upper()}<br>{safe(match.get("Away_Manager")).upper()}'),
+        ("NGÀY", format_date(match.get("Date"))),
+        ("SÂN VẬN ĐỘNG", safe(match.get("Stadium")).upper()),
+        ("THÀNH PHỐ", safe(match.get("City")).upper()),
+        ("KHÁN GIẢ", f"{int(match['Attendance']):,}" if pd.notna(match.get("Attendance")) and match.get("Attendance") else "—"),
+        ("TRỌNG TÀI", safe(match.get("Referee")).upper()),
+        ("HUẤN LUYỆN VIÊN", f'{safe(match.get("Home_Manager")).upper()}<br>{safe(match.get("Away_Manager")).upper()}'),
     )
     fact_html = "".join(
         f'<div><span>{label}</span><b>{value}</b></div>' for label, value in facts
@@ -177,7 +183,7 @@ def render_detail_hero(match: pd.Series) -> str:
         '<div class="detail-motion-layer detail-layer-score"></div>'
         '<div class="detail-motion-layer detail-layer-line"></div>'
         '<div class="detail-kicker">'
-        f'<span>MATCH {int(match["ID"]):02d}</span><span>{safe(match.get("Stage")).upper()}</span>'
+        f'<span>TRẬN {int(match["ID"]):02d}</span><span>{safe(match.get("Stage")).upper()}</span>'
         f'<span>{format_date(match.get("Date"))}</span><span>{safe(match.get("City")).upper()}</span></div>'
         '<div class="detail-matchup">'
         f'<div class="detail-team">{home_flag}<span>{home_code}</span><h1>{home}</h1></div>'
@@ -196,23 +202,23 @@ def render_anomaly_panel(details: pd.DataFrame) -> str:
         return ""
     rows = []
     for _, row in details.iterrows():
-        direction = "ABOVE" if row["z"] >= 0 else "BELOW"
+        direction = "CAO HƠN" if row["z"] >= 0 else "THẤP HƠN"
         rows.append(
             '<div class="anomaly-row">'
             f'<span class="anomaly-team">{escape(str(row["team_name"])).upper()}</span>'
             f'<span class="anomaly-metric">{escape(str(row["metric"]))}</span>'
             f'<span class="anomaly-values">{row["value"]:.1f}{row["unit"]} '
-            f'<i>AVG {row["average"]:.1f}{row["unit"]}</i></span>'
-            f'<span class="anomaly-z">Z {row["z"]:+.1f}σ · {direction} AVG</span>'
+            f'<i>TB {row["average"]:.1f}{row["unit"]}</i></span>'
+            f'<span class="anomaly-z">Z {row["z"]:+.1f}σ · {direction} TB</span>'
             '</div>'
         )
     return (
-        '<section class="anomaly-programme" aria-label="Why this match is flagged anomalous">'
-        '<div class="anomaly-head"><span>STATISTICAL ANOMALY</span>'
-        '<span>WHY THIS MATCH IS FLAGGED · |Z| &gt; 2.3 VS TOURNAMENT AVG</span></div>'
+        '<section class="anomaly-programme" aria-label="Lý do trận đấu được gắn thẻ bất thường">'
+        '<div class="anomaly-head"><span>CHỈ SỐ BẤT THƯỜNG</span>'
+        '<span>LÝ DO TRẬN ĐẤU ĐƯỢC GẮN THẺ BẤT THƯỜNG · |Z| &gt; 2.3 SO VỚI TRUNG BÌNH GIẢI</span></div>'
         '<div class="anomaly-list">' + "".join(rows) + '</div>'
-        '<div class="anomaly-foot">σ = STANDARD DEVIATIONS FROM THE TOURNAMENT TEAM-MATCH AVERAGE · '
-        'SAME DETECTION AS THE MATCH CALENDAR ANOMALY BADGE</div>'
+        '<div class="anomaly-foot">σ = ĐỘ LỆCH CHUẨN SO VỚI TRUNG BÌNH CỦA GIẢI ĐẤU · '
+        'CÙNG CƠ CHẾ VỚI HUY HIỆU BẤT THƯỜNG TRÊN LỊCH THI ĐẤU</div>'
         '</section>'
     )
 
@@ -227,12 +233,12 @@ def safe_number(value: Any) -> str:
 def render_comparison_stats(match: pd.Series, stats: pd.DataFrame) -> str:
     home, away = _team_stat_rows(match, stats)
     if home is None or away is None:
-        return '<div class="match-empty-state">Head-to-head statistics are unavailable.</div>'
+        return '<div class="match-empty-state">Chưa có số liệu thống kê đối đầu.</div>'
     specs = (
-        ("POSSESSION", "possession_pct", "%"), ("TOTAL SHOTS", "total_shots", ""),
-        ("SHOTS ON TARGET", "shots_on_target", ""), ("CORNER KICKS", "corners", ""),
-        ("FOULS COMMITTED", "fouls", ""), ("OFFSIDES", "offsides", ""),
-        ("GOALKEEPER SAVES", "saves", ""),
+        ("KIỂM SOÁT BÓNG", "possession_pct", "%"), ("TỔNG SỐ CÚ SÚT", "total_shots", ""),
+        ("SÚT TRÚNG ĐÍCH", "shots_on_target", ""), ("PHẠT GÓC", "corners", ""),
+        ("PHẠM LỖI", "fouls", ""), ("VIỆT VỊ", "offsides", ""),
+        ("CỨU THUA", "saves", ""),
     )
     rows = []
     for label, column, unit in specs:
@@ -258,20 +264,26 @@ def render_comparison_stats(match: pd.Series, stats: pd.DataFrame) -> str:
 
 def render_timeline(match: pd.Series, events: pd.DataFrame) -> str:
     if events.empty:
-        return '<div class="match-empty-state">Timeline data unavailable for this match.</div>'
+        return '<div class="match-empty-state">Chưa có diễn biến cho trận đấu này.</div>'
     home_id = str(match.get("Home_Team_ID"))
     items = ['<div class="timeline-boundary">0′</div>']
+    event_names_vn = {
+        "GOAL": "BÀN THẮNG", "PENALTY": "PHẠT ĐỀN", "OWN GOAL": "PHẢN LƯỚI NHÀ",
+        "YELLOW CARD": "THẺ VÀNG", "RED CARD": "THẺ ĐỎ", "SUBSTITUTION": "THAY NGƯỜI",
+        "ASSIST": "KIẾN TẠO", "VAR": "VAR",
+    }
     for _, event in events.iterrows():
         side = "home" if str(event.get("team_id")) == home_id else "away"
-        event_type = safe(event.get("event_type")).upper()
-        kind = "goal" if "GOAL" in event_type else "red" if "RED" in event_type else "yellow" if "YELLOW" in event_type else "var" if "VAR" in event_type else "sub" if "SUB" in event_type else "assist" if "ASSIST" in event_type else "event"
+        raw_event = safe(event.get("event_type")).upper()
+        event_display = event_names_vn.get(raw_event, raw_event)
+        kind = "goal" if "GOAL" in raw_event else "red" if "RED" in raw_event else "yellow" if "YELLOW" in raw_event else "var" if "VAR" in raw_event else "sub" if "SUB" in raw_event else "assist" if "ASSIST" in raw_event else "event"
         items.append(
             f'<div class="timeline-event {side} {kind}">'
             '<div class="timeline-copy">'
-            f'<span>{safe(event.get("minute"))}′ / {event_type}</span>'
-            f'<strong>{safe(event.get("player_name"), "PLAYER UNAVAILABLE")}</strong>'
+            f'<span>{safe(event.get("minute"))}′ / {event_display}</span>'
+            f'<strong>{safe(event.get("player_name"), "CẦU THỦ")}</strong>'
             f'<small>{safe(event.get("team_name"))}</small></div>'
-            f'<i aria-label="{event_type}"></i></div>'
+            f'<i aria-label="{event_display}"></i></div>'
         )
     items.append('<div class="timeline-boundary end">90′</div>')
     return '<div class="editorial-timeline">' + "".join(items) + '</div>'
@@ -280,16 +292,16 @@ def render_timeline(match: pd.Series, events: pd.DataFrame) -> str:
 def render_match_facts(match: pd.Series, stats: pd.DataFrame, players: pd.DataFrame) -> str:
     home_stats, _ = _team_stat_rows(match, stats)
     facts: list[tuple[str, str]] = [
-        (score_value(match.get("Home_Score")) or "—", f'{safe(match.get("Home_Team")).upper()} GOALS'),
-        (score_value(match.get("Away_Score")) or "—", f'{safe(match.get("Away_Team")).upper()} GOALS'),
+        (score_value(match.get("Home_Score")) or "—", f'BÀN THẮNG {safe(match.get("Home_Team")).upper()}'),
+        (score_value(match.get("Away_Score")) or "—", f'BÀN THẮNG {safe(match.get("Away_Team")).upper()}'),
     ]
     if home_stats is not None and pd.notna(home_stats.get("possession_pct")):
-        facts.append((f'{safe_number(home_stats.get("possession_pct"))}%', f'{safe(match.get("Home_Team")).upper()} POSSESSION'))
+        facts.append((f'{safe_number(home_stats.get("possession_pct"))}%', f'KIỂM SOÁT BÓNG {safe(match.get("Home_Team")).upper()}'))
     if pd.notna(match.get("Attendance")) and match.get("Attendance"):
-        facts.append((f'{int(match["Attendance"]):,}', "ATTENDANCE"))
+        facts.append((f'{int(match["Attendance"]):,}', "KHÁN GIẢ"))
     if not players.empty:
         cards = players[["Yellow", "Red"]].fillna(0).sum().sum()
-        facts.append((safe_number(cards), "TOTAL CARDS"))
+        facts.append((safe_number(cards), "TỔNG SỐ THẺ"))
     fact_html = "".join(
         f'<div class="programme-fact"><strong>{value}</strong><span>{label}</span></div>'
         for value, label in facts
@@ -300,12 +312,12 @@ def render_match_facts(match: pd.Series, stats: pd.DataFrame, players: pd.DataFr
 def render_venue(match: pd.Series) -> str:
     capacity = match.get("Venue_Capacity")
     capacity_html = (
-        f'<div><span>CAPACITY</span><strong>{int(capacity):,}</strong></div>'
+        f'<div><span>SỨC CHỨA</span><strong>{int(capacity):,}</strong></div>'
         if pd.notna(capacity) and capacity else ""
     )
     return (
         '<div class="venue-programme">'
-        f'<span>HOST VENUE / {safe(match.get("Country")).upper()}</span>'
+        f'<span>ĐỊA ĐIỂM TỔ CHỨC / {safe(match.get("Country")).upper()}</span>'
         f'<h3>{safe(match.get("Stadium")).upper()}</h3>'
         f'<p>{safe(match.get("City")).upper()}</p>{capacity_html}</div>'
     )
@@ -315,7 +327,7 @@ def render_fixture_navigation(previous: pd.Series | None, following: pd.Series |
     def item(match: pd.Series | None, direction: str) -> str:
         if match is None:
             return '<div class="fixture-nav-item is-empty"></div>'
-        arrow = "←" if direction == "PREVIOUS MATCH" else "→"
+        arrow = "←" if direction == "TRẬN TRƯỚC" else "→"
         if is_completed(match):
             matchup = (
                 f'{safe(match.get("Home_Team")).upper()} '
@@ -330,7 +342,7 @@ def render_fixture_navigation(previous: pd.Series | None, following: pd.Series |
             )
         return (
             f'<a class="fixture-nav-item" href="{detail_url(match["ID"])}" target="_self">'
-            f'<span>{arrow} {direction}</span><small>MATCH {int(match["ID"]):02d}</small>'
+            f'<span>{arrow} {direction}</span><small>TRẬN {int(match["ID"]):02d}</small>'
             f'<strong>{matchup}</strong></a>'
         )
-    return '<div class="fixture-navigation">' + item(previous, "PREVIOUS MATCH") + item(following, "NEXT MATCH") + '</div>'
+    return '<div class="fixture-navigation">' + item(previous, "TRẬN TRƯỚC") + item(following, "TRẬN TIẾP THEO") + '</div>'

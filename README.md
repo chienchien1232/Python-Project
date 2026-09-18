@@ -6,23 +6,25 @@ Dự án phân tích dữ liệu chuyên sâu bóng đá World Cup (FBref Mini) 
 
 ## 🛠️ Hướng dẫn cài đặt & Thiết lập môi trường (Setup)
 
-Sau khi clone hoặc pull nhánh chien, chạy entrypoint duy nhất của bản bàn giao.
+### Điều kiện tiên quyết
+    Python 3.12 trở lên
+    git (hoặc tải repo về rồi giải nén)
 
 ### Bước 1: Cập nhật mã nguồn
 ```bash
-git pull origin chien
+git clone -b quoc_anh https://github.com/chienchien1232/Python-Project.git
 ```
 
 ### Bước 2: Tạo môi trường ảo (máy mới)
 Trên Windows:
 ```bash
 py -3.12 -m venv .venv
-.venv/Scripts/python.exe -m pip install -r requirements-lock.txt
+.venv/Scripts/python.exe -m pip install -r requirements.txt
 ```
 Trên macOS / Linux:
 ```bash
 python3.12 -m venv .venv
-.venv/bin/python -m pip install -r requirements-lock.txt
+.venv/bin/python -m pip install -r requirements.txt
 ```
 
 ### Bước 3: Khởi chạy
@@ -47,8 +49,7 @@ src/app/app.py là entrypoint duy nhất. Các trang hiện hành nằm trong sr
 
 src/app/static/ chứa ảnh hero, các chương World Cup và bundle Plotly được tham chiếu
 trực tiếp. Dữ liệu trong data/ phải được giữ nguyên khi bàn giao. requirements.txt
-là danh sách phụ thuộc theo khoảng phiên bản; requirements-lock.txt là bộ phiên bản
-đã dùng để kiểm tra bản cuối.
+chứa toàn bộ danh sách phụ thuộc và thư viện cần thiết để khởi chạy dự án.
 
 ## Kiểm tra nhanh
 

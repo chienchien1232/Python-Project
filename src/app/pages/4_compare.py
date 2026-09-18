@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit.errors import StreamlitPageNotFoundError
 
 st.set_page_config(
-    page_title="Players & Compare | WorldCup Stats '26",
+    page_title="So Sánh Cầu Thủ & Đội Tuyển | WorldCup Stats '26",
     page_icon="◉",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -18,6 +18,6 @@ try:
 except StreamlitPageNotFoundError:
     st.markdown(
         '<a href="/players?view=compare" target="_self" style="color:inherit;font:700 12px Arial;letter-spacing:.12em">'
-        'OPEN PLAYER COMPARISON →</a>',
+        'MỞ SO SÁNH CẦU THỦ →</a>',
         unsafe_allow_html=True,
     )

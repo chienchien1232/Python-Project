@@ -277,22 +277,22 @@ def render_photo_story(
     }
     asset_name, alt_text = hero_assets.get(page_key, hero_assets["overview"])
     chapter_sets = {
-        "NATIONAL": ("THE SQUAD", "THE BADGE", "THE PLAN", "THE CROWD"),
-        "PLAYER": ("THE ARRIVAL", "THE TOUCH", "THE VISION", "THE MOMENT"),
-        "HEAD-TO-HEAD": ("TWO SIDES", "THE DETAIL", "THE SHAPE", "THE EDGE"),
-        "MACHINE": ("RAW SIGNAL", "THE FEATURE", "THE PATTERN", "THE OUTLIER"),
-        "SQUAD OPTIMIZATION": ("THE POOL", "THE ROLE", "THE SHAPE", "THE ELEVEN"),
-        "MATCH CALENDAR": ("ARRIVAL", "THE BALL", "THE PLAN", "MATCHDAY"),
+        "NATIONAL": ("ĐỘI HÌNH", "MÀU CỜ", "CHIẾN THUẬT", "KHÁN ĐÀI"),
+        "PLAYER": ("XUẤT HIỆN", "CHẠM BÓNG", "TẦM NHÌN", "KHOẢNH KHẮC"),
+        "HEAD-TO-HEAD": ("HAI ĐỐI THỦ", "CHI TIẾT", "SƠ ĐỒ", "ƯU THẾ"),
+        "MACHINE": ("TÍN HIỆU THÔ", "ĐẶC TRƯNG", "QUY LUẬT", "ĐIỂM NGOẠI LAI"),
+        "SQUAD OPTIMIZATION": ("NGUỒN CẦU THỦ", "VAI TRÒ", "SƠ ĐỒ", "11 NGƯỜI"),
+        "MATCH CALENDAR": ("CHUẨN BỊ", "BÓNG LĂN", "KẾ HOẠCH", "NGÀY THI ĐẤU"),
     }
     chapters = next(
         (items for token, items in chapter_sets.items() if token in kicker.upper()),
-        ("THE STAGE", "THE BALL", "THE PLAN", "ONE WORLD"),
+        ("SÂN KHẤU", "TRÁI BÓNG", "CHIẾN THUẬT", "THẾ GIỚI"),
     )
     scene_notes = (
-        "Before the whistle / anticipation",
-        "Technique under pressure / decisive detail",
-        "Reading space / shaping the match",
-        "Nations together / one tournament",
+        "Trước giờ bóng lăn / Hồi hộp ngóng chờ",
+        "Kỹ thuật dưới áp lực / Chi tiết quyết định",
+        "Đọc khoảng trống / Định hình cục diện",
+        "Các quốc gia hội tụ / Một ngày hội bóng đá",
     )
     reel_panels = "".join(
         '<article class="editorial-reel-panel reel-panel-' + str(number) + '">'
@@ -312,16 +312,16 @@ def render_photo_story(
             '<article class="worldcup-chronicle-panel chronicle-panel-' + str(number) + '">'
             '<div class="worldcup-chronicle-frame">'
             '<div class="worldcup-chronicle-media"><img src="' + static_url(chapter_image)
-            + '" alt="' + escape(str(chapter.get("alt", "World Cup story chapter")), quote=True) + '">'
+            + '" alt="' + escape(str(chapter.get("alt", "World Cup story chapter")), quote=True) + '" loading="lazy" decoding="async">'
             '</div><div class="worldcup-chronicle-copy">'
-            '<header><span>THE WORLD CUP CHRONICLE</span><span>0' + str(number) + ' / 0'
+            '<header><span>BIÊN NIÊN SỬ WORLD CUP</span><span>0' + str(number) + ' / 0'
             + str(len(story_items)) + '</span></header>'
             '<div class="worldcup-chronicle-body">'
-            '<span class="worldcup-chronicle-kicker">' + escape(str(chapter.get("kicker", "CHAPTER"))) + '</span>'
+            '<span class="worldcup-chronicle-kicker">' + escape(str(chapter.get("kicker", "CHƯƠNG"))) + '</span>'
             '<small>' + escape(str(chapter.get("date", ""))) + '</small>'
             '<h2>' + title_html + '</h2><p>' + escape(str(chapter.get("copy", ""))) + '</p>'
             '<div class="worldcup-chronicle-stat"><strong>' + escape(str(chapter.get("stat", number)))
-            + '</strong><span>' + escape(str(chapter.get("label", "CHAPTER"))) + '</span></div>'
+            + '</strong><span>' + escape(str(chapter.get("label", "CHƯƠNG"))) + '</span></div>'
             '</div></div></div></article>'
         )
     story_class = " is-overview" if overview_story else " is-cover"
@@ -347,14 +347,14 @@ def render_photo_story(
         '<section class="photo-story-shell' + story_class + ' page-' + page_key + '" aria-label="' + escape(story_label) + '">'
         '<div class="photo-story-stage">'
         '<img class="photo-story-image" src="' + static_url(asset_name) + '" '
-        'alt="' + escape(alt_text, quote=True) + '">'
+        'alt="' + escape(alt_text, quote=True) + '" decoding="async">'
         '<div class="photo-story-shade" aria-hidden="true"></div>'
         '<div class="photo-story-rule" aria-hidden="true"></div>'
         '<div class="photo-story-top"><span>' + escape(kicker) + '</span><span>' + escape(index) + '</span></div>'
         '<div class="photo-story-copy">'
         + title_markup
         + '<div class="photo-story-foot"><p>' + escape(description) + '</p>'
-        '<span>SCROLL TO EXPLORE ↓</span></div></div>'
+        '<span>CUỘN ĐỂ KHÁM PHÁ ↓</span></div></div>'
         '</div></section>' + story_html,
         unsafe_allow_html=True,
     )

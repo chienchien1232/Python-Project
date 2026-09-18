@@ -30,7 +30,7 @@ from media_ui import flag_image, player_portrait, render_photo_story  # noqa: E4
 
 # ── Page configuration ────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Best XI Dream Team | WorldCup Stats '26",
+    page_title="Đội Hình Tiêu Biểu | WorldCup Stats '26",
     page_icon="◉",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -90,11 +90,11 @@ render_navigation('Best XI')
 st.html(Path(app_path) / "best_xi.css")
 
 render_photo_story(
-    "SQUAD OPTIMIZATION ENGINE / 2026",
-    "BUILD THE.",
-    "PERFECT XI.",
-    "Shape a tournament side through form, roles, value and tactical balance.",
-    index="11 STARTERS",
+    "HỆ THỐNG TỐI ƯU ĐỘI HÌNH / 2026",
+    "XÂY DỰNG.",
+    "ĐỘI HÌNH HOÀN HẢO.",
+    "Thiết lập đội hình xuất sắc nhất giải đấu qua phong độ, vai trò, giá trị và sự cân bằng chiến thuật.",
+    index="11 CẦU THỦ ĐÁ CHÍNH",
     page="best-xi",
 )
 
@@ -108,44 +108,109 @@ FORMATIONS = {
     "3-4-3": {"GK": 1, "DEF": 3, "MID": 4, "FWD": 3},
 }
 
-scores_path = os.path.join(ANALYTICS, "analytics_scores.csv")
-if not os.path.exists(scores_path):
-    st.error("Analytics scores file not found. Run `python src/analytics/analytics_score.py`.")
-    st.stop()
+@st.cache_data(show_spinner=False)
+def load_best_xi_pool():
+    scores_path = os.path.join(ANALYTICS, "analytics_scores.csv")
+    if not os.path.exists(scores_path):
+        return None
+    pool_df = pd.read_csv(scores_path, dtype={"player_id": str})
+    pool_df = pool_df[pool_df["minutes"].astype(float) >= 90].copy()
+    pool_df["player_name"] = pool_df["player_name"].apply(clean_name)
+    pool_df["team"] = pool_df["team"].apply(clean_name)
 
-df = pd.read_csv(scores_path, dtype={"player_id": str})
-df = df[df["minutes"].astype(float) >= 90].copy()
-df["player_name"] = df["player_name"].apply(clean_name)
-df["team"] = df["team"].apply(clean_name)
+    sq_path = os.path.join(ROOT, "data", "processed", "csv", "squads_and_players.csv")
+    if os.path.exists(sq_path):
+        sq = pd.read_csv(sq_path, dtype={"player_id": str})[["player_id", "market_value_eur", "date_of_birth"]]
+        pool_df = pool_df.merge(sq, on="player_id", how="left")
+        pool_df["value_meur"] = (pd.to_numeric(pool_df["market_value_eur"], errors="coerce") / 1e6).round(1)
+    else:
+        pool_df["value_meur"] = 25.0
 
-# Squad market valuations
-sq_path = os.path.join(ROOT, "data", "processed", "csv", "squads_and_players.csv")
-if os.path.exists(sq_path):
-    sq = pd.read_csv(sq_path, dtype={"player_id": str})[["player_id", "market_value_eur", "date_of_birth"]]
-    df = df.merge(sq, on="player_id", how="left")
-    df["value_meur"] = (pd.to_numeric(df["market_value_eur"], errors="coerce") / 1e6).round(1)
-else:
-    df["value_meur"] = 25.0
+    clusters = load_analytics_csv("player_clusters.csv")
+    if clusters is not None and "cluster_label" in clusters.columns:
+        clusters["player_id"] = clusters["player_id"].astype(str)
+        pool_df = pool_df.merge(clusters[["player_id", "cluster_label"]].drop_duplicates("player_id"),
+                                on="player_id", how="left")
+    return pool_df
 
-dob_col = "date_of_birth" if "date_of_birth" in df.columns else None
-clusters = load_analytics_csv("player_clusters.csv")
-if clusters is not None and "cluster_label" in clusters.columns:
-    clusters["player_id"] = clusters["player_id"].astype(str)
-    df = df.merge(clusters[["player_id", "cluster_label"]].drop_duplicates("player_id"),
-                  on="player_id", how="left")
+
+@st.cache_data(show_spinner=False)
+def solve_best_xi(formation: str, mode: str, budget: float | None, max_nation: int):
+    raw_pool = load_best_xi_pool()
+    if raw_pool is None:
+        return None, "Missing Data", 0.0, 0.0
+
+    pool = raw_pool.copy()
+    pool["value_meur"] = pool["value_meur"].fillna(pool["value_meur"].median() if pool["value_meur"].notna().any() else 10.0)
+
+    is_val_mode = ("Tối ưu Giá trị" in mode or "Value-for-Money" in mode)
+    is_u23_mode = ("U23" in mode or "Under-23" in mode)
+    is_ml_mode = ("Cụm ML" in mode or "ML Cluster" in mode)
+
+    if is_u23_mode:
+        if "date_of_birth" in pool.columns:
+            pool = pool[pd.to_datetime(pool["date_of_birth"], errors="coerce") > pd.Timestamp("2003-06-11")]
+        else:
+            pool = pool[pool.get("age", pd.Series(99, index=pool.index)) < 23]
+
+    has_cluster = "cluster_label" in pool.columns
+    if is_ml_mode and not has_cluster:
+        is_ml_mode = False
+
+    prob = pulp.LpProblem("BestXI", pulp.LpMaximize)
+    x = {i: pulp.LpVariable(f"x_{i}", cat="Binary") for i in pool.index}
+
+    if is_val_mode:
+        obj = pool["overall_score"] / pool["value_meur"].clip(lower=0.5)
+    else:
+        obj = pool["overall_score"]
+
+    prob += pulp.lpSum(obj[i] * x[i] for i in pool.index)
+    prob += pulp.lpSum(x.values()) == 11, "total_11"
+
+    for pos, need in FORMATIONS[formation].items():
+        idx = pool.index[pool["position"] == pos]
+        prob += pulp.lpSum(x[i] for i in idx) == need, f"pos_{pos}"
+
+    if budget is not None and is_val_mode:
+        prob += pulp.lpSum(pool.loc[i, "value_meur"] * x[i] for i in pool.index) <= budget, "budget"
+
+    if max_nation:
+        for nat, grp in pool.groupby("team"):
+            prob += pulp.lpSum(x[i] for i in grp.index) <= max_nation, f"nat_{nat}"
+
+    if is_ml_mode:
+        for lbl in ("Finisher / Goal Scorer", "Playmaker / Chance Creator", "Defensive Anchor", "Defensive Player"):
+            idx = pool.index[pool.get("cluster_label", "") == lbl]
+            if len(idx):
+                prob += pulp.lpSum(x[i] for i in idx) >= 1, f"min_{lbl[:8]}"
+
+    status = prob.solve(pulp.PULP_CBC_CMD(msg=False))
+    status_str = pulp.LpStatus[status]
+    if status_str != "Optimal":
+        return None, status_str, 0.0, 0.0
+
+    xi = pool[[x[i].value() == 1 for i in pool.index]].copy()
+    order = {"GK": 0, "DEF": 1, "MID": 2, "FWD": 3}
+    xi["_o"] = xi["position"].map(order)
+    xi = xi.sort_values("_o")
+
+    total_score = float(xi["overall_score"].sum().round(1))
+    total_val = float(xi["value_meur"].sum().round(1))
+    return xi, status_str, total_score, total_val
 
 
 # ── Best XI workspace marker and heading ─────────────────────────────────────
 st.markdown(
     '<div class="best-xi-studio" aria-hidden="true"></div>'
     '<section class="bxi-dashboard-heading">'
-    '<div><span>BEST XI / LINEUP STUDIO</span><h2>Build a tournament team.</h2></div>'
-    '<p>Choose a formation and selection model. The optimizer rebuilds all eleven positions instantly.</p>'
+    '<div><span>ĐỘI HÌNH TIÊU BIỂU / PHÒNG THIẾT KẾ</span><h2>Xây dựng đội bóng trong mơ.</h2></div>'
+    '<p>Chọn sơ đồ chiến thuật và mô hình tuyển chọn. Thuật toán tối ưu sẽ tái thiết lập trọn vẹn 11 vị trí ngay tức thì.</p>'
     '</section>',
     unsafe_allow_html=True,
 )
 # ── Control Panel ─────────────────────────────────────────────────────────────
-st.markdown("<div class='section-header'>Tactical Settings &amp; Constraints</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'>Thiết Lập Chiến Thuật &amp; Ràng Buộc</div>", unsafe_allow_html=True)
 
 def query_value(name: str, default: str) -> str:
     value = st.query_params.get(name, default)
@@ -162,94 +227,58 @@ def query_int(name: str, default: int) -> int:
 formation_options = list(FORMATIONS.keys())
 formation_query = query_value("formation", formation_options[0])
 formation_index = formation_options.index(formation_query) if formation_query in formation_options else 0
+
+MODE_ALIAS = {
+    "AI Official Team of the Tournament": "Đội hình Tiêu biểu AI Chính thức",
+    "ML Cluster Balanced XI": "Đội hình Cân bằng Cụm ML",
+    "Under-23 Young Stars XI": "Đội hình Ngôi sao trẻ U23",
+    "Value-for-Money XI": "Đội hình Tối ưu Giá trị",
+}
 mode_options = [
-    "AI Official Team of the Tournament",
-    "ML Cluster Balanced XI",
-    "Under-23 Young Stars XI",
-    "Value-for-Money XI",
+    "Đội hình Tiêu biểu AI Chính thức",
+    "Đội hình Cân bằng Cụm ML",
+    "Đội hình Ngôi sao trẻ U23",
+    "Đội hình Tối ưu Giá trị",
 ]
 mode_query = query_value("mode", mode_options[0])
+if mode_query in MODE_ALIAS:
+    mode_query = MODE_ALIAS[mode_query]
 mode_index = mode_options.index(mode_query) if mode_query in mode_options else 0
 
 c1, c2 = st.columns(2)
 with c1:
-    formation = st.selectbox("Tactical Formation:", formation_options, index=formation_index)
+    formation = st.selectbox("Sơ đồ chiến thuật:", formation_options, index=formation_index)
 with c2:
-    mode = st.radio("Optimization Selection Mode:", mode_options, index=mode_index, horizontal=True)
+    mode = st.radio("Mô hình tuyển chọn tối ưu:", mode_options, index=mode_index, horizontal=True)
+
+is_val_mode = ("Tối ưu Giá trị" in mode or "Value-for-Money" in mode)
 
 col_opt1, col_opt2 = st.columns(2)
 with col_opt1:
     budget_query = max(50, min(1200, query_int("budget", 300)))
     budget_query = int(round(budget_query / 25) * 25)
-    budget = st.slider("Budget Cap (€M) — applies to  Value-for-Money", 50, 1200, budget_query, step=25) if "Value-for-Money" in mode else None
+    budget = st.slider("Giới hạn ngân sách (€M) — áp dụng cho Tối ưu Giá trị", 50, 1200, budget_query, step=25) if is_val_mode else None
 with col_opt2:
     nation_query = max(1, min(8, query_int("nation", 4)))
-    max_nation = st.slider("Max Players per Nation Quota:", 1, 8, nation_query)
+    max_nation = st.slider("Hạn ngạch số cầu thủ tối đa mỗi quốc gia:", 1, 8, nation_query)
 
-pool = df.copy()
-pool["value_meur"] = pool["value_meur"].fillna(pool["value_meur"].median() if pool["value_meur"].notna().any() else 10.0)
+xi, solve_status, total_score, total_val = solve_best_xi(formation, mode, budget, max_nation)
 
-if "Under-23" in mode:
-    if dob_col and dob_col in pool.columns:
-        # Age at tournament opening, including players born later in 2003.
-        pool = pool[pd.to_datetime(pool[dob_col], errors="coerce") >pd.Timestamp("2003-06-11")]
-    else:
-        pool = pool[pool.get("age", pd.Series(99, index=pool.index)) < 23]
-
-has_cluster = "cluster_label" in pool.columns
-if "ML Cluster" in mode and not has_cluster:
-    mode = "AI Official Team of the Tournament"
-
-
-# ── Integer Linear Programming Optimization ──────────────────────────────────
-prob = pulp.LpProblem("BestXI", pulp.LpMaximize)
-x = {i: pulp.LpVariable(f"x_{i}", cat="Binary") for i in pool.index}
-
-if "Value-for-Money" in mode:
-    obj = pool["overall_score"] / pool["value_meur"].clip(lower=0.5)
-else:
-    obj = pool["overall_score"]
-
-prob += pulp.lpSum(obj[i] * x[i] for i in pool.index)
-prob += pulp.lpSum(x.values()) == 11, "total_11"
-
-for pos, need in FORMATIONS[formation].items():
-    idx = pool.index[pool["position"] == pos]
-    prob += pulp.lpSum(x[i] for i in idx) == need, f"pos_{pos}"
-
-if budget is not None and "Value-for-Money" in mode:
-    prob += pulp.lpSum(pool.loc[i, "value_meur"] * x[i] for i in pool.index) <= budget, "budget"
-
-if max_nation:
-    for nat, grp in pool.groupby("team"):
-        prob += pulp.lpSum(x[i] for i in grp.index) <= max_nation, f"nat_{nat}"
-
-if "ML Cluster" in mode:
-    for lbl in ("Finisher / Goal Scorer", "Playmaker / Chance Creator", "Defensive Anchor", "Defensive Player"):
-        idx = pool.index[pool.get("cluster_label", "") == lbl]
-        if len(idx):
-            prob += pulp.lpSum(x[i] for i in idx) >= 1, f"min_{lbl[:8]}"
-
-status = prob.solve(pulp.PULP_CBC_CMD(msg=False))
-
-if pulp.LpStatus[status] != "Optimal":
-    st.error(f"Solver status: {pulp.LpStatus[status]}. Please relax budget or nationality constraints.")
+if solve_status != "Optimal" or xi is None:
+    st.error(f"Trạng thái bộ giải: {solve_status}. Vui lòng nới lỏng ngân sách hoặc giới hạn số cầu thủ mỗi quốc gia.")
     st.stop()
 
-xi = pool[[x[i].value() == 1 for i in pool.index]].copy()
-order = {"GK": 0, "DEF": 1, "MID": 2, "FWD": 3}
-xi["_o"] = xi["position"].map(order)
-xi = xi.sort_values("_o")
-
-total_score = xi["overall_score"].sum().round(1)
-total_val = xi["value_meur"].sum().round(1)
 
 mode_title = {
-    "AI Official Team of the Tournament": "AI OFFICIAL TEAM OF THE TOURNAMENT",
-    "ML Cluster Balanced XI": "ML CLUSTER-BALANCED DREAM XI",
-    "Under-23 Young Stars XI": "UNDER-23 YOUNG STARS XI",
-    "Value-for-Money XI": "VALUE-FOR-MONEY ROSTER"
-}.get(mode, "OPTIMAL BEST XI")
+    "Đội hình Tiêu biểu AI Chính thức": "ĐỘI HÌNH TIÊU BIỂU AI CHÍNH THỨC CỦA GIẢI ĐẤU",
+    "Đội hình Cân bằng Cụm ML": "ĐỘI HÌNH CÂN BẰNG CHIẾN THUẬT THEO CỤM ML",
+    "Đội hình Ngôi sao trẻ U23": "ĐỘI HÌNH NGÔI SAO TRẺ U23 TIÊU BIỂU",
+    "Đội hình Tối ưu Giá trị": "ĐỘI HÌNH TỐI ƯU HÓA GIÁ TRỊ CHUYỂN NHƯỢNG",
+    "AI Official Team of the Tournament": "ĐỘI HÌNH TIÊU BIỂU AI CHÍNH THỨC CỦA GIẢI ĐẤU",
+    "ML Cluster Balanced XI": "ĐỘI HÌNH CÂN BẰNG CHIẾN THUẬT THEO CỤM ML",
+    "Under-23 Young Stars XI": "ĐỘI HÌNH NGÔI SAO TRẺ U23 TIÊU BIỂU",
+    "Value-for-Money XI": "ĐỘI HÌNH TỐI ƯU HÓA GIÁ TRỊ CHUYỂN NHƯỢNG",
+}.get(mode, "ĐỘI HÌNH TIÊU BIỂU TỐI ƯU")
 
 
 # ── Interactive lineup studio ─────────────────────────────────────────────────
@@ -263,11 +292,11 @@ focus_name = str(xi.loc[xi["player_id"].astype(str) == focus_id, "player_name"].
 
 st.markdown(
     f'<section class="bxi-club-summary">'
-    f'<div class="bxi-crest">XI</div><div><span>WORLD CUP 2026 / OPTIMAL LINEUP</span>'
+    f'<div class="bxi-crest">XI</div><div><span>WORLD CUP 2026 / ĐỘI HÌNH TỐI ƯU</span>'
     f'<h3>Best XI FC</h3><p>{html_lib.escape(mode_title.title())}</p></div>'
-    f'<dl><div><dt>FORMATION</dt><dd>{formation}</dd></div>'
-    f'<div><dt>SQUAD SCORE</dt><dd>{total_score:.1f}</dd></div>'
-    f'<div><dt>VALUE</dt><dd>€{total_val:.1f}M</dd></div></dl>'
+    f'<dl><div><dt>SƠ ĐỒ</dt><dd>{formation}</dd></div>'
+    f'<div><dt>ĐIỂM ĐỘI HÌNH</dt><dd>{total_score:.1f}</dd></div>'
+    f'<div><dt>GIÁ TRỊ</dt><dd>€{total_val:.1f}M</dd></div></dl>'
     f'</section>',
     unsafe_allow_html=True,
 )
@@ -279,7 +308,7 @@ for shirt_no, (_, row) in enumerate(xi.iterrows(), start=1):
         f'<button type="button" data-player-id="{html_lib.escape(str(row["player_id"]), quote=True)}" '
         f'class="bxi-roster-card{" is-active" if is_active else ""}" '
         f'aria-pressed="{str(is_active).lower()}" '
-        f'aria-label="View {html_lib.escape(player_name, quote=True)} profile">'
+        f'aria-label="Xem hồ sơ của {html_lib.escape(player_name, quote=True)}">'
         f'<div class="bxi-roster-number">{shirt_no:02d}<small>{html_lib.escape(str(row["position"]))}</small></div>'
         f'{player_portrait(player_name, "player-portrait bxi-roster-portrait")}'
         f'<footer><strong>{html_lib.escape(player_name)}</strong>'
@@ -298,7 +327,7 @@ def pitch_row(role: str, line_label: str) -> str:
             f'<button type="button" data-player-id="{html_lib.escape(str(player["player_id"]), quote=True)}" '
             f'class="bxi-pitch-player{" is-active" if is_active else ""}" '
             f'aria-pressed="{str(is_active).lower()}" '
-            f'aria-label="View {html_lib.escape(player_name, quote=True)} profile">'
+            f'aria-label="Xem hồ sơ của {html_lib.escape(player_name, quote=True)}">'
             f'<span class="bxi-shirt-number">{shirt_no}</span>'
             f'{player_portrait(player_name, "player-portrait bxi-pitch-portrait")}'
             f'<div><strong>{html_lib.escape(player_name)}</strong>'
@@ -310,14 +339,14 @@ def pitch_row(role: str, line_label: str) -> str:
 
 pitch_html = (
     '<section class="bxi-pitch-panel">'
-    '<header><div><span>TACTICAL BOARD / LIVE XI</span><h3>' + formation + '</h3></div>'
-    '<p>PuLP CBC / OPTIMAL<br>MAX ' + str(max_nation) + ' PER NATION</p></header>'
+    '<header><div><span>SA BÀN CHIẾN THUẬT / TRỰC TIẾP</span><h3>' + formation + '</h3></div>'
+    '<p>PuLP CBC / TỐI ƯU<br>TỐI ĐA ' + str(max_nation) + ' CẦU THỦ / ĐỘI</p></header>'
     '<div class="bxi-pitch">'
     '<div class="bxi-pitch-markings" aria-hidden="true"><i></i><b></b><em></em></div>'
-    + pitch_row("FWD", "ATTACK")
-    + pitch_row("MID", "MIDFIELD")
-    + pitch_row("DEF", "DEFENCE")
-    + pitch_row("GK", "GOALKEEPER")
+    + pitch_row("FWD", "TIỀN ĐẠO")
+    + pitch_row("MID", "TIỀN VỆ")
+    + pitch_row("DEF", "HẬU VỆ")
+    + pitch_row("GK", "THỦ MÔN")
     + '</div></section>'
 )
 
@@ -325,23 +354,23 @@ def player_profile_html(selected: pd.Series) -> str:
     player_name = str(selected["player_name"])
     selected_dob = pd.to_datetime(selected.get("date_of_birth"), errors="coerce")
     selected_age = int((pd.Timestamp("2026-06-11") - selected_dob).days / 365.2425) if pd.notna(selected_dob) else None
-    selected_role = str(selected.get("cluster_label", "Tournament specialist") or "Tournament specialist")
+    selected_role = str(selected.get("cluster_label", "Ngôi sao giải đấu") or "Ngôi sao giải đấu")
     selected_value = float(selected.get("value_meur", 0) or 0)
     selected_minutes = int(float(selected.get("minutes", 0) or 0))
     if str(selected["position"]) == "GK":
         metric_values = [
-            ("Overall", f'{float(selected.get("overall_score", 0) or 0):.0f}'),
-            ("Matches", str(int(float(selected.get("matches", 0) or 0)))),
-            ("Minutes", str(selected_minutes)),
-            ("Value", f'€{selected_value:.1f}M'),
+            ("Tổng điểm", f'{float(selected.get("overall_score", 0) or 0):.0f}'),
+            ("Số trận", str(int(float(selected.get("matches", 0) or 0)))),
+            ("Số phút", str(selected_minutes)),
+            ("Giá trị", f'€{selected_value:.1f}M'),
         ]
     else:
         metric_values = []
         for label, column in (
-            ("Overall", "overall_score"),
-            ("Attack", "attacking_score"),
-            ("Creation", "chance_creation_score"),
-            ("Defence", "defensive_score"),
+            ("Tổng điểm", "overall_score"),
+            ("Tấn công", "attacking_score"),
+            ("Sáng tạo", "chance_creation_score"),
+            ("Phòng ngự", "defensive_score"),
         ):
             value = pd.to_numeric(selected.get(column), errors="coerce")
             metric_values.append((label, f"{float(value):.0f}" if pd.notna(value) else "—"))
@@ -359,9 +388,9 @@ def player_profile_html(selected: pd.Series) -> str:
         f'<h3>{html_lib.escape(player_name)}</h3><p>{html_lib.escape(selected_role)}</p>'
         f'<div class="bxi-profile-metrics">{metric_html}</div>'
         '<dl class="bxi-profile-facts">'
-        f'<div><dt>AGE</dt><dd>{selected_age if selected_age is not None else "—"}</dd></div>'
-        f'<div><dt>MINUTES</dt><dd>{selected_minutes:,}</dd></div>'
-        f'<div><dt>MARKET VALUE</dt><dd>€{selected_value:.1f}M</dd></div>'
+        f'<div><dt>TUỔI</dt><dd>{selected_age if selected_age is not None else "—"}</dd></div>'
+        f'<div><dt>SỐ PHÚT</dt><dd>{selected_minutes:,}</dd></div>'
+        f'<div><dt>GIÁ TRỊ TT</dt><dd>€{selected_value:.1f}M</dd></div>'
         '</dl></aside>'
     )
 
@@ -398,7 +427,7 @@ html,body {{ margin:0; padding:0; background:transparent; color:var(--bxi-text);
 }}
 </style>
 <div class="bxi-component">
-  <div class="bxi-roster-label"><span>STARTING XI / SELECTED SQUAD</span><span>SCROLL ROSTER →</span></div>
+  <div class="bxi-roster-label"><span>ĐỘI HÌNH RA SÂN / 11 CẦU THỦ</span><span>CUỘN DANH SÁCH →</span></div>
   <section class="bxi-roster-rail" aria-label="Selected starting eleven">{roster_cards}</section>
   <div class="bxi-component-grid">
     {pitch_html}
@@ -438,7 +467,7 @@ window.addEventListener("load", reportHeight);
 st.iframe(lineup_component, height=1040, width="stretch", tab_index=-1)
 
 # ── Full 11 Starters Performance Breakdown Table ──────────────────────────────
-st.markdown("<div class='section-header'>Detailed 11 Starters Metrics Breakdown</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'>Bảng Chi Tiết Chỉ Số 11 Tuyển Thủ Đá Chính</div>", unsafe_allow_html=True)
 
 show_cols = [c for c in ("player_name", "position", "team", "minutes",
                          "overall_score", "attacking_score",
@@ -448,18 +477,18 @@ show_cols = [c for c in ("player_name", "position", "team", "minutes",
 
 disp_xi = xi[show_cols].copy()
 disp_xi.columns = [
-    "Player", "Position", "National Team", "Minutes", "Overall Score",
-    "Attacking Score", "Chance Creation", "Passing Score", "Defensive Score", "Value (€M)"
+    "Cầu thủ", "Vị trí", "Đội tuyển quốc gia", "Số phút", "Tổng điểm",
+    "Tấn công", "Tạo cơ hội", "Chuyền bóng", "Phòng ngự", "Giá trị (€M)"
 ]
 
-data_table(disp_xi, width="stretch", label="Selected eleven / performance index")
+data_table(disp_xi, width="stretch", label="11 cầu thủ đá chính / chỉ số hiệu suất")
 
 
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("<div style='height:30px'></div>", unsafe_allow_html=True)
 st.markdown(
     "<div style='text-align:center;color:#64748b;font-size:12.5px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.06)'>"
-    "WorldCup Stats '26 Analytics Platform &nbsp;·&nbsp; Data powered by FIFA, ESPN &amp; official match records &nbsp;·&nbsp; Built with Python &amp; Streamlit"
+    "Nền tảng Phân tích WorldCup Stats '26 &nbsp;·&nbsp; Dữ liệu từ FIFA, ESPN &amp; biên bản thi đấu chính thức &nbsp;·&nbsp; Phát triển bằng Python &amp; Streamlit"
     "</div>",
     unsafe_allow_html=True,
 )

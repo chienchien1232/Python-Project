@@ -20,7 +20,7 @@ from media_ui import flag_image, render_photo_story  # noqa: E402
 
 # ── Page configuration ────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="ML Analytics Explorer | WorldCup Stats '26",
+    page_title="Phân Tích Máy Học ML | WorldCup Stats '26",
     page_icon="◉",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -57,11 +57,11 @@ from table_ui import data_table
 render_navigation('ML Analytics')
 
 render_photo_story(
-    "MACHINE LEARNING ENGINE / 2026",
-    "PATTERNS.",
-    "BENEATH PLAY.",
-    "Clusters, projections and anomalies drawn from every tournament performance.",
-    index="ML LAB",
+    "TRUNG TÂM PHÂN TÍCH MÁY HỌC / 2026",
+    "QUY LUẬT.",
+    "ẨN SAU TRẬN ĐẤU.",
+    "Phân cụm, phép chiếu và các dị biệt dữ liệu được trích xuất từ mọi màn trình diễn tại giải đấu.",
+    index="PHÒNG LAB ML",
     page="ml",
 )
 
@@ -69,16 +69,16 @@ render_photo_story(
 st.markdown(
     '<div class="wc-hero-wrapper" style="margin-bottom:20px">'
     '<div class="wc-hero-badge-row">'
-    '<div class="wc-hero-badge"><span class="wc-badge-dot"></span>MACHINE LEARNING ENGINE</div>'
-    '<div class="wc-hero-dates">K-MEANS CLUSTERING · 2D PCA · OUTLIER DETECTION</div>'
+    '<div class="wc-hero-badge"><span class="wc-badge-dot"></span>HỆ THỐNG PHÂN TÍCH MÁY HỌC</div>'
+    '<div class="wc-hero-dates">PHÂN CỤM K-MEANS · GIẢM CHIỀU 2D PCA · PHÁT HIỆN DỊ BIỆT (OUTLIER)</div>'
     '</div>'
     '<div class="wc-hero-title" style="font-size:52px;margin-bottom:10px">'
-    '<span class="title-white">ADVANCED ML</span>'
-    '<span class="title-lime">ANALYTICS.</span>'
+    '<span class="title-white">PHÂN TÍCH</span>'
+    '<span class="title-lime">MÁY HỌC ML.</span>'
     '</div>'
     '<div class="wc-hero-desc" style="max-width:760px;margin-bottom:16px">'
-    'Unsupervised machine learning exploration of tournament data. Discover player tactical roles through K-Means clustering, '
-    'explore high-dimensional feature spaces via 2D Principal Component Analysis (PCA), and detect anomalous match performances.'
+    'Khám phá dữ liệu giải đấu bằng máy học không giám sát. Tìm hiểu các vai trò chiến thuật thực tế qua thuật toán K-Means, '
+    'quan sát không gian thuộc tính đa chiều với Phân tích Thành phần Chính (PCA 2D), và phát hiện những màn trình diễn đột biến dị thường.'
     '</div>'
     '</div>',
     unsafe_allow_html=True,
@@ -86,15 +86,15 @@ st.markdown(
 # ── ML Explorer Tabs ──────────────────────────────────────────────────────────
 st.markdown(
     '<div class="ml-workspace-intro" id="ml-workspace">'
-    '<span>ML WORKSPACE / 03 TOOLS</span>'
-    '<h2>Three models.<br>One workspace.</h2>'
+    '<span>KHÔNG GIAN ML / 03 CÔNG CỤ</span>'
+    '<h2>Ba mô hình.<br>Một không gian phân tích.</h2>'
     '</div>',
     unsafe_allow_html=True,
 )
 t1, t2, t3 = st.tabs([
-    " Tactical Role Clustering",
-    " 2D PCA Embedding Map",
-    " Statistical Anomaly Detection"
+    " Phân cụm Vai trò Chiến thuật",
+    " Bản đồ Nhúng 2D PCA",
+    " Phát hiện Trận đấu Dị biệt"
 ])
 
 
@@ -102,40 +102,40 @@ t1, t2, t3 = st.tabs([
 # TAB 1: CLUSTERING
 # ==============================================================================
 with t1:
-    st.markdown("<div class='section-header' style='font-size:20px;margin-top:0'>K-Means Tactical Role Definitions</div>", unsafe_allow_html=True)
+    st.markdown("<div class='section-header' style='font-size:20px;margin-top:0'>Định Nghĩa Vai Trò Chiến Thuật K-Means</div>", unsafe_allow_html=True)
 
     st.markdown(
         """
-        The **K-Means Clustering** pipeline evaluates **18 normalized Per-90 tactical metrics** per player to discover genuine on-pitch functional profiles beyond nominal lineup positions:
+        Quy trình **Phân cụm K-Means** đánh giá **18 chỉ số chiến thuật chuẩn hóa mỗi 90 phút** của từng cầu thủ để khám phá vai trò thi đấu thực tế trên sân thay vì chỉ nhìn vào vị trí đăng ký danh nghĩa:
 
-        *  **Finisher / Goal Scorer**: High shot volume, top-tier conversion rate, and elite box presence.
-        *  **Playmaker / Chance Creator**: Elite shot-creating actions, key passes, crosses, and foul drawing.
-        *  **Ball Progressor**: High-volume passing, progressive passes, and line-breaking progression.
-        *  **Defensive Anchor**: High tackle volume, interceptions, ball recoveries, and aerial clearances.
-        *  **Box-to-Box All-Rounder**: Balanced distribution across progressive, creative, and defensive actions.
+        *  **Sát thủ vòng cấm / Cầu thủ săn bàn**: Tần suất dứt điểm cao, tỷ lệ chuyển hóa cơ hội thượng thừa và chiếm lĩnh khu vực 16m50.
+        *  **Nhạc trưởng kiến thiết / Cầu thủ tạo cơ hội**: Số pha tạo đột biến dẫn tới dứt điểm vượt trội, đường chuyền quyết định, tạt bóng và câu lỗi chiến thuật.
+        *  **Tiền vệ tịnh tiến bóng**: Khối lượng chuyền bóng lớn, chuyền tịnh tiến xuyên tuyến đưa bóng lên phía trước.
+        *  **Mỏ neo phòng ngự**: Tranh chấp tay đôi, đánh chặn, thu hồi bóng và không chiến giải nguy xuất sắc.
+        *  **Tiền vệ con thoi toàn diện (Box-to-Box)**: Đóng góp cân bằng giữa tịnh tiến bóng, sáng tạo cơ hội và hỗ trợ phòng ngự.
         """
     )
 
     # ── Shared ML helpers (logic ported from the original explorer) ──
     METRIC_FRIENDLY = {
-        "goals_p90": "Goals scored",
-        "assists_p90": "Assists (pass leading to a goal)",
-        "shots_p90": "Shot attempts",
-        "shots_on_target_p90": "Shots on target",
-        "passes_p90": "Passes made",
-        "accurate_passes_p90": "Passes completed",
-        "crosses_p90": "Crosses (wing passes into the box)",
-        "tackles_p90": "Tackles (stopping the ball carrier)",
-        "interceptions_p90": "Interceptions (cutting passes)",
-        "clearances_p90": "Clearances (kicking the ball away)",
-        "blocks_p90": "Blocks",
-        "recoveries_p90": "Ball recoveries",
-        "duels_won_p90": "1-v-1 duels won",
-        "aerial_duels_won_p90": "Aerial duels won (headers)",
-        "dribbles_attempted_p90": "Dribbles attempted",
-        "fouls_committed_p90": "Fouls committed",
-        "fouls_won_p90": "Fouls won",
-        "offsides_p90": "Offsides",
+        "goals_p90": "Bàn thắng ghi được",
+        "assists_p90": "Kiến tạo thành bàn",
+        "shots_p90": "Dứt điểm",
+        "shots_on_target_p90": "Dứt điểm trúng đích",
+        "passes_p90": "Số đường chuyền",
+        "accurate_passes_p90": "Chuyền bóng chính xác",
+        "crosses_p90": "Tạt bóng vào vòng cấm",
+        "tackles_p90": "Tắc bóng cản phá",
+        "interceptions_p90": "Cắt đường chuyền",
+        "clearances_p90": "Phá bóng giải nguy",
+        "blocks_p90": "Chặn cú sút / đường chuyền",
+        "recoveries_p90": "Thu hồi bóng",
+        "duels_won_p90": "Thắng tranh chấp 1-đối-1",
+        "aerial_duels_won_p90": "Thắng không chiến (đánh đầu)",
+        "dribbles_attempted_p90": "Nỗ lực rê dắt bóng",
+        "fouls_committed_p90": "Phạm lỗi",
+        "fouls_won_p90": "Bị phạm lỗi (kiếm lỗi)",
+        "offsides_p90": "Việt vị",
     }
     KEY_METRICS = ["goals_p90", "shots_p90", "passes_p90", "tackles_p90",
                    "clearances_p90", "dribbles_attempted_p90"]
@@ -151,10 +151,10 @@ with t1:
 
     def ratio_text(ratio):
         if ratio >= 1.05:
-            return f"{ratio:.1f}× avg", "#ffffff"
+            return f"Gấp {ratio:.1f}× TB", "#ffffff"
         if ratio <= 0.95:
-            return f"{round((1 - ratio) * 100)}% below avg", "#8a8f98"
-        return "≈ tournament avg", "#8a8f98"
+            return f"Thấp hơn {round((1 - ratio) * 100)}% so với TB", "#8a8f98"
+        return "≈ mức trung bình giải", "#8a8f98"
 
     st.markdown(
         '<style>'
@@ -197,7 +197,7 @@ with t1:
         unsafe_allow_html=True,
     )
 
-    @st.dialog("Tactical group — players", width="large")
+    @st.dialog("Nhóm chiến thuật — danh sách cầu thủ", width="large")
     def show_group_players(role, players_df, metric_col, metric_label):
         top = players_df.sort_values(metric_col, ascending=False).head(20)
         rows = ""
@@ -214,9 +214,9 @@ with t1:
             )
         st.markdown(
             f'<div style="font-size:12.5px;color:#8a8f98;margin-bottom:12px">'
-            f'Standout metric: <b style="color:#fff">{html_lib.escape(metric_label)}</b> · '
-            f'showing top 20 of <b style="color:#e8e8e3">{len(players_df)}</b> players, '
-            f'sorted by that metric</div>' + rows,
+            f'Chỉ số nổi bật: <b style="color:#fff">{html_lib.escape(metric_label)}</b> · '
+            f'hiển thị top 20 trong tổng số <b style="color:#e8e8e3">{len(players_df)}</b> cầu thủ, '
+            f'sắp xếp theo chỉ số này</div>' + rows,
             unsafe_allow_html=True,
         )
 
@@ -233,7 +233,7 @@ with t1:
             hit = clus_all[clus_all["cluster"] == cluster_id]
             if not hit.empty and "cluster_label" in hit.columns:
                 return str(hit["cluster_label"].mode().iloc[0])
-        return f"Cluster {int(cluster_id)}"
+        return f"Nhóm {int(cluster_id)}"
 
     def group_frame_for(role, positions):
         if clus_all is None:
@@ -245,9 +245,9 @@ with t1:
             f'<div class="ml-role-card">'
             f'<div class="ml-role-head"><div class="ml-role-num">{number:02d}</div>'
             f'<div><div class="ml-role-title">{html_lib.escape(role)}</div>'
-            f'<div class="ml-role-sub">{n_pl} players in this group</div></div></div>'
-            f'<div class="ml-known">Known for: <b>{html_lib.escape(top_pl)}</b></div>'
-            f'<div class="ml-traits"><div class="ml-traits-title">What this group does most / least</div>'
+            f'<div class="ml-role-sub">{n_pl} cầu thủ trong nhóm này</div></div></div>'
+            f'<div class="ml-known">Tiêu biểu: <b>{html_lib.escape(top_pl)}</b></div>'
+            f'<div class="ml-traits"><div class="ml-traits-title">Đặc trưng nổi bật nhất / ít nhất của nhóm</div>'
             f'<ul>{bullets_html}</ul></div>'
             f'{bars_html}'
             f'</div>'
@@ -282,7 +282,7 @@ with t1:
         if low1 and z[low1] <= -0.25 and pop_mean[low1] > 0:
             bullets.append(f"<b>{METRIC_FRIENDLY[low1]}</b> — {ratio_text(float(r[low1]) / pop_mean[low1])[0]}")
         if not bullets:
-            bullets.append("No extreme tendency — an all-round profile")
+            bullets.append("Không có xu hướng cực đoan — phong cách thi đấu toàn diện")
         return "".join(f"<li>{b}</li>" for b in bullets), z
 
     # ── Outfield roles ──
@@ -292,12 +292,12 @@ with t1:
             "<div style='background:#0e0e0e;border:0;border-top:1px solid rgba(255,255,255,0.18);"
             "border-bottom:1px solid rgba(255,255,255,0.10);border-radius:0;padding:14px 18px;margin-bottom:18px;font-size:13.5px;"
             "color:#8a8f98;line-height:1.65'>"
-            "<b style='color:#fff'>What am I looking at?</b> Think of grouping classmates by "
-            "personality — the machine read every player's stats and automatically grouped similar "
-            "playing styles together. <b style='color:#fff'>No human labeled them.</b> Each card "
-            "below is one group: the numbers are that group's average <b style='color:#fff'>per "
-            "90 minutes on the pitch</b>, and every bar compares the group with the tournament "
-            "average (the white tick = 100% = exactly average)."
+            "<b style='color:#fff'>Ý nghĩa bảng này là gì?</b> Tương tự như phân loại học sinh theo "
+            "tính cách — mô hình tự động đọc toàn bộ thống kê của mọi cầu thủ và gom các cầu thủ có phong "
+            "cách thi đấu tương đồng vào cùng một nhóm. <b style='color:#fff'>Hoàn toàn không có sự can thiệp thủ công.</b> Mỗi thẻ "
+            "bên dưới là một nhóm: các con số thể hiện mức trung bình của nhóm <b style='color:#fff'>mỗi "
+            "90 phút trên sân</b>, và thanh biểu đồ so sánh nhóm đó với trung bình toàn bộ giải đấu "
+            "(vạch trắng = 100% = ngang bằng trung bình giải)."
             "</div>",
             unsafe_allow_html=True,
         )
@@ -326,54 +326,54 @@ with t1:
                 sig = ROLE_METRICS.get(role, KEY_METRICS)
                 standout = max([m for m in sig if m in z], key=lambda m: z[m]) if any(m in z for m in sig) else KEY_METRICS[0]
             else:
-                bullets_html = "<li>Population average unavailable.</li>"
+                bullets_html = "<li>Chưa có dữ liệu trung bình giải.</li>"
                 bars_html = ""
                 standout = KEY_METRICS[0]
-            standout_label = METRIC_FRIENDLY.get(standout, standout).split(" (")[0] + " / 90 min"
+            standout_label = METRIC_FRIENDLY.get(standout, standout).split(" (")[0] + " / 90 phút"
             card_html = role_card(role, n_pl, top_pl, bullets_html, bars_html, i + 1)
             with card_cols[i % 2]:
                 st.markdown(card_html, unsafe_allow_html=True)
-                if st.button("View players in this group", key=f"ml_cluster_{int(r.get('cluster', i))}"):
+                if st.button("Xem danh sách cầu thủ nhóm này", key=f"ml_cluster_{int(r.get('cluster', i))}"):
                     if not grp.empty and standout in grp.columns:
                         show_group_players(role, grp, standout, standout_label)
                     else:
-                        st.info("Player list not available for this group.")
+                        st.info("Chưa có danh sách cầu thủ cho nhóm này.")
 
-        st.markdown("<div class='section-header' style='font-size:18px'>Full Metrics Table — All 18 Indicators</div>", unsafe_allow_html=True)
+        st.markdown("<div class='section-header' style='font-size:18px'>Bảng Đầy Đủ 18 Chỉ Số Chiến Thuật</div>", unsafe_allow_html=True)
         tbl = prof_out.copy()
         if "cluster_label" not in tbl.columns:
             tbl["cluster_label"] = [cluster_label_for(c) for c in tbl["cluster"]]
         tbl = tbl[["cluster_label"] + metric_cols].copy()
-        tbl = tbl.rename(columns={"cluster_label": "Role", **{m: METRIC_FRIENDLY[m] for m in metric_cols}})
-        data_table(tbl, width="stretch", label="Cluster centroid index")
-        st.caption("per 90 = average per 90 minutes on the pitch · 'Role' is the machine-found group name (K-Means cluster).")
+        tbl = tbl.rename(columns={"cluster_label": "Vai trò chiến thuật", **{m: METRIC_FRIENDLY[m] for m in metric_cols}})
+        data_table(tbl, width="stretch", label="Chỉ mục trọng tâm phân cụm")
+        st.caption("mỗi 90 phút = trung bình mỗi 90 phút thi đấu trên sân · 'Vai trò chiến thuật' là tên nhóm do mô hình K-Means phát hiện.")
 
     # ── Goalkeeper roles ──
     prof_gk = load_analytics_csv("cluster_profile_gk.csv")
     if prof_gk is not None and not prof_gk.empty:
-        st.markdown("<div class='section-header' style='font-size:18px'>Goalkeeper Cluster Centroids Breakdown</div>", unsafe_allow_html=True)
+        st.markdown("<div class='section-header' style='font-size:18px'>Phân Tích Cụm Trọng Tâm Của Thủ Môn</div>", unsafe_allow_html=True)
         st.markdown(
             "<div style='background:#0e0e0e;border:0;border-top:1px solid rgba(255,255,255,0.18);"
             "border-bottom:1px solid rgba(255,255,255,0.10);border-radius:0;padding:14px 18px;margin-bottom:18px;font-size:13.5px;"
             "color:#8a8f98;line-height:1.65'>"
-            "<b style='color:#fff'>And the goalkeepers?</b> They are grouped separately, by "
-            "how they keep the ball out of the net — some stop a higher share of everything "
-            "they face, others see very little action across the tournament. Same rule as "
-            "above: the white tick on every bar = the tournament average for goalkeepers."
+            "<b style='color:#fff'>Còn các thủ môn thì sao?</b> Thủ môn được phân cụm riêng biệt, theo "
+            "cách họ bảo vệ khung thành — một số cản phá tỷ lệ bóng trúng đích cao, một số khác ít "
+            "phải hoạt động hơn suốt giải đấu. Quy tắc so sánh tương tự như trên: vạch trắng trên mỗi "
+            "thanh = mức trung bình của toàn bộ thủ môn tại giải đấu."
             "</div>",
             unsafe_allow_html=True,
         )
         gk_df = None
         if clus_all is not None:
             gk_df = clus_all[clus_all["position"] == "GK"]
-        GK_FRIENDLY = {"saves_p90": "Saves / 90 min", "save_pct": "Save %"}
+        GK_FRIENDLY = {"saves_p90": "Cứu thua / 90 phút", "save_pct": "Tỷ lệ cứu thua %"}
         gk_cards = st.columns(2)
         for i, (_, r) in enumerate(prof_gk.iterrows()):
             grp = gk_df[gk_df["cluster"] == r.get("cluster", i)] if gk_df is not None and "cluster" in gk_df.columns else (gk_df if gk_df is not None else pd.DataFrame())
             if not grp.empty and "cluster_label" in grp.columns:
                 role = str(grp["cluster_label"].mode().iloc[0])
             else:
-                role = f"Goalkeeper Cluster {i}"
+                role = f"Nhóm Thủ Môn {i}"
             if gk_df is not None and not gk_df.empty:
                 gm = gk_df[["saves_p90", "save_pct"]].mean()
                 gs = gk_df[["saves_p90", "save_pct"]].std()
@@ -384,7 +384,7 @@ with t1:
                     if abs(z[m]) >= 0.25 and gm[m] > 0:
                         bullets.append(f"<b>{GK_FRIENDLY[m]}</b> — {ratio_text(float(r[m]) / gm[m])[0]}")
                 if not bullets:
-                    bullets.append("No extreme tendency vs other goalkeepers")
+                    bullets.append("Không có xu hướng chênh lệch lớn so với thủ môn khác")
                 bars_html = ""
                 for m in ("saves_p90", "save_pct"):
                     if gm[m] <= 0:
@@ -401,8 +401,8 @@ with t1:
                         f'</div></div>'
                     )
             else:
-                role, grp = f"Goalkeeper Cluster {i}", pd.DataFrame()
-                bullets = ["Goalkeeper list not available."]
+                role, grp = f"Nhóm Thủ Môn {i}", pd.DataFrame()
+                bullets = ["Chưa có danh sách thủ môn."]
                 bars_html = ""
             n_pl = len(grp) if grp is not None else 0
             top_pl = "; ".join(grp.sort_values("minutes", ascending=False).head(3)["player_name"].tolist()) if grp is not None and not grp.empty else "-"
@@ -412,33 +412,33 @@ with t1:
                     f'<div class="ml-role-card">'
                     f'<div class="ml-role-head"><div class="ml-role-num">G{i + 1}</div>'
                     f'<div><div class="ml-role-title">{html_lib.escape(role)}</div>'
-                    f'<div class="ml-role-sub">{n_pl} goalkeepers in this group</div></div></div>'
-                    f'<div class="ml-known">Known for: <b>{html_lib.escape(top_pl)}</b></div>'
-                    f'<div class="ml-traits"><div class="ml-traits-title">Signature vs average goalkeeper</div>'
+                    f'<div class="ml-role-sub">{n_pl} thủ môn trong nhóm này</div></div></div>'
+                    f'<div class="ml-known">Tiêu biểu: <b>{html_lib.escape(top_pl)}</b></div>'
+                    f'<div class="ml-traits"><div class="ml-traits-title">Đặc trưng so với trung bình thủ môn toàn giải</div>'
                     f'<ul>{"".join(f"<li>{b}</li>" for b in bullets)}</ul></div>'
                     f'{bars_html}'
                     f'</div>',
                     unsafe_allow_html=True,
                 )
-                if st.button("View goalkeepers in this group", key=f"ml_gk_{i}"):
+                if st.button("Xem danh sách thủ môn nhóm này", key=f"ml_gk_{i}"):
                     if grp is not None and not grp.empty:
                         show_group_players(role, grp, standout, GK_FRIENDLY[standout])
                     else:
-                        st.info("Goalkeeper list not available.")
+                        st.info("Chưa có danh sách thủ môn.")
 
-        st.markdown("<div class='section-header' style='font-size:18px'>Full GK Metrics Table</div>", unsafe_allow_html=True)
+        st.markdown("<div class='section-header' style='font-size:18px'>Bảng Đầy Đủ Chỉ Số Thủ Môn</div>", unsafe_allow_html=True)
         gk_tbl = prof_gk[["saves_p90", "save_pct"]].copy()
-        gk_tbl = gk_tbl.rename(columns={"saves_p90": "Saves / 90 min", "save_pct": "Save %"})
-        data_table(gk_tbl, width="stretch", label="Goalkeeper centroid index")
-        st.caption("Save % = share of shots on target saved · Saves / 90 min = saves per 90 minutes on the pitch.")
+        gk_tbl = gk_tbl.rename(columns={"saves_p90": "Cứu thua / 90 phút", "save_pct": "Tỷ lệ cứu thua %"})
+        data_table(gk_tbl, width="stretch", label="Chỉ mục trọng tâm thủ môn")
+        st.caption("Tỷ lệ cứu thua % = phần trăm cú sút trúng đích được cản phá · Cứu thua / 90 phút = số lần cứu thua trung bình mỗi 90 phút trên sân.")
 
 
 # ==============================================================================
 # TAB 2: PCA MAP
 # ==============================================================================
 with t2:
-    st.markdown("<div class='section-header' style='font-size:20px;margin-top:0'> 2D PCA Dimensionality Projection</div>", unsafe_allow_html=True)
-    st.markdown("Interactive 2D Principal Component Analysis embedding showing similarity and clustering separation across all tournament players.")
+    st.markdown("<div class='section-header' style='font-size:20px;margin-top:0'>Phép Chiếu Không Gian 2D Bằng PCA</div>", unsafe_allow_html=True)
+    st.markdown("Bản đồ nhúng 2D Principal Component Analysis (PCA) tương tác trực quan hóa mức độ tương đồng và khoảng cách phân tách giữa mọi cầu thủ tại giải đấu.")
 
     html_p = os.path.join(ROOT, "data", "processed", "analytics", "pca_interactive.html")
     if os.path.exists(html_p):
@@ -448,27 +448,16 @@ with t2:
         def pca_html_self_contained() -> str:
             with open(html_p, encoding="utf-8") as f:
                 html_doc = f.read()
-            # Inline Plotly JS so the map renders even when the plot.ly CDN
-            # is unreachable from the viewer's browser.
-            js_path = os.path.join(ROOT, "src", "app", "static", "plotly-3.7.0.min.js")
-            if os.path.exists(js_path):
-                with open(js_path, encoding="utf-8") as f:
-                    plotly_js = f.read()
-                html_doc, n = _re.subn(
-                    r'<script\s+src="https://cdn\.plot\.ly/[^"]*"[^>]*></script>',
-                    lambda _m: "<script>" + plotly_js + "</script>",
-                    html_doc,
-                    count=1,
-                )
-                if n == 0:
-                    html_doc = html_doc.replace(
-                        "</head>", "<script>" + plotly_js + "</script></head>", 1,
-                    )
+            # Reference static Plotly script to avoid streaming 5MB string over WebSocket
+            html_doc = _re.sub(
+                r'<script\s+[^>]*src="https://cdn\.plot\.ly/[^"]*"[^>]*></script>',
+                '<script src="/app/static/plotly-3.7.0.min.js"></script>',
+                html_doc,
+                count=1,
+            )
             return html_doc
 
         html_bytes = pca_html_self_contained()
-        # Retheme the stored Plotly export at render time so the frame uses
-        # the same dark editorial canvas as the surrounding analytics page.
         html_bytes = html_bytes.replace(
             "<head>",
             '<head><style>html,body{margin:0;background:#0e0e0e!important;color:#f1f0eb}</style>',
@@ -486,13 +475,13 @@ with t2:
         with st.container(border=True):
             st.markdown(
                 '<div class="ml-panel-head"><span class="ml-dot"></span>'
-                'PLAYER SIMILARITY MAP<span class="ml-year">/ 2026</span></div>',
+                'BẢN ĐỒ TƯƠNG ĐỒNG CẦU THỦ<span class="ml-year">/ 2026</span></div>',
                 unsafe_allow_html=True,
             )
             st.iframe(html_bytes, height=620, width="stretch", tab_index=-1)
-        st.caption("Each point represents a tournament player · Color corresponds to ML cluster role · Hover to view player details")
+        st.caption("Mỗi điểm biểu thị một cầu thủ · Màu sắc tương ứng với cụm vai trò chiến thuật ML · Rê chuột để xem thông tin chi tiết của cầu thủ")
     else:
-        st.info("PCA interactive plot file not found. Run `python src/analytics/pca_explore.py` to generate the embedding.")
+        st.info("Chưa tìm thấy tệp biểu đồ tương tác PCA. Hãy chạy lệnh `python src/analytics/pca_explore.py` để tạo bản đồ nhúng.")
 
     # ── What drives each axis: loadings + extremes (existing pipeline outputs) ──
     loadings = load_analytics_csv("pca_loadings.csv")
@@ -502,10 +491,10 @@ with t2:
         with st.container(border=True):
             st.markdown(
                 '<div class="ml-panel-head"><span class="ml-dot"></span>'
-                'WHAT DRIVES EACH AXIS<span class="ml-year">PC1 / PC2 LOADINGS</span></div>'
+                'YẾU TỐ ĐỊNH HÌNH TRỤC TỌA<span class="ml-year">HỆ SỐ TẢI PC1 / PC2</span></div>'
                 '<div style="font-size:12.5px;color:#8a8f98;margin-bottom:12px">'
-                'Bars show how strongly each per-90 metric pulls players along the axis. '
-                'Longer bar = stronger influence on that direction of the map.</div>',
+                'Các thanh biểu thị mức độ mỗi chỉ số 90 phút chi phối vị trí của cầu thủ dọc theo trục tọa độ. '
+                'Thanh dài hơn = ảnh hưởng mạnh hơn tới hướng đó của bản đồ.</div>',
                 unsafe_allow_html=True,
             )
             load_cols = st.columns(2)
@@ -528,7 +517,7 @@ with t2:
                         f'</div></div>'
                     )
                 with load_cols[j % 2]:
-                    st.markdown(f'<div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:8px">{pc} — TOP DRIVERS</div>' + bars,
+                    st.markdown(f'<div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:8px">{pc} — YẾU TỐ ẢNH HƯỞNG HÀNG ĐẦU</div>' + bars,
                                 unsafe_allow_html=True)
     if pcs is not None and not pcs.empty:
         pcs["player_name"] = pcs["player_name"].apply(clean_name)
@@ -536,9 +525,9 @@ with t2:
         with st.container(border=True):
             st.markdown(
                 '<div class="ml-panel-head"><span class="ml-dot"></span>'
-                'PLAYERS AT THE EDGES<span class="ml-year">PC EXTREMES</span></div>'
+                'CÁC CẦU THỦ Ở VỊ TRÍ BIÊN CỰC<span class="ml-year">CỰC TRỊ PC</span></div>'
                 '<div style="font-size:12.5px;color:#8a8f98;margin-bottom:12px">'
-                'Most extreme players on each axis — the archetypes anchoring the corners of the map.</div>',
+                'Những cầu thủ có giá trị cực trị nhất trên mỗi trục — đại diện cho các phong cách định hình góc biên của bản đồ không gian.</div>',
                 unsafe_allow_html=True,
             )
             ext_cols = st.columns(2)
@@ -547,22 +536,22 @@ with t2:
                     continue
                 lo = pcs.nsmallest(4, pc)[["player_name", "position", "team", pc]].copy()
                 hi = pcs.nlargest(4, pc)[["player_name", "position", "team", pc]].copy()
-                lo.columns = hi.columns = ["Player", "Pos", "Team", pc]
+                lo.columns = hi.columns = ["Cầu thủ", "Vị trí", "Đội tuyển", pc]
                 with ext_cols[j % 2]:
-                    st.markdown(f'<div style="font-size:12px;font-weight:800;color:#8a8f98;margin:6px 0">◀ LOW {pc}</div>',
+                    st.markdown(f'<div style="font-size:12px;font-weight:800;color:#8a8f98;margin:6px 0">◀ {pc} THẤP NHẤT</div>',
                                 unsafe_allow_html=True)
-                    data_table(lo, width="stretch", label=f"Low {pc} extremes")
-                    st.markdown(f'<div style="font-size:12px;font-weight:800;color:#8a8f98;margin:6px 0">HIGH {pc} ▶</div>',
+                    data_table(lo, width="stretch", label=f"Cực trị {pc} thấp")
+                    st.markdown(f'<div style="font-size:12px;font-weight:800;color:#8a8f98;margin:6px 0">{pc} CAO NHẤT ▶</div>',
                                 unsafe_allow_html=True)
-                    data_table(hi, width="stretch", label=f"High {pc} extremes")
+                    data_table(hi, width="stretch", label=f"Cực trị {pc} cao")
 
 
 # ==============================================================================
 # TAB 3: ANOMALY DETECTION
 # ==============================================================================
 with t3:
-    st.markdown("<div class='section-header' style='font-size:20px;margin-top:0'>Statistical Outliers &amp; Anomalous Match Performances</div>", unsafe_allow_html=True)
-    st.markdown("Performances with statistical z-score deviations exceeding $|Z| > 2.3$ relative to positional baseline distributions.")
+    st.markdown("<div class='section-header' style='font-size:20px;margin-top:0'>Phát Hiện Dị Biệt Thống Kê &amp; Màn Trình Diễn Bất Thường</div>", unsafe_allow_html=True)
+    st.markdown("Các màn trình diễn có độ lệch chuẩn thống kê vượt ngưỡng $|Z| > 2.3$ so với phân phối chuẩn của các cầu thủ cùng vị trí thi đấu.")
 
     anom = load_analytics_csv("anomalies.csv")
     if anom is not None and not anom.empty:
@@ -571,28 +560,28 @@ with t3:
 
         disp_anom = anom.copy()
         rename_dict = {
-            "player_name": "Player",
-            "position": "Pos",
-            "team": "Team",
-            "minutes": "Mins",
-            "total_goals": "Goals",
-            "goals_p90": "Goals/90",
-            "nguyen_nhan": "Statistical Anomaly Reason (Z-Score)"
+            "player_name": "Cầu thủ",
+            "position": "Vị trí",
+            "team": "Đội tuyển",
+            "minutes": "Số phút",
+            "total_goals": "Bàn thắng",
+            "goals_p90": "Bàn thắng/90",
+            "nguyen_nhan": "Lý do dị biệt thống kê (Z-Score)"
         }
         disp_anom = disp_anom.rename(columns=rename_dict)
-        disp_cols = [c for c in ["Player", "Pos", "Team", "Mins", "Goals", "Goals/90", "Statistical Anomaly Reason (Z-Score)"] if c in disp_anom.columns]
+        disp_cols = [c for c in ["Cầu thủ", "Vị trí", "Đội tuyển", "Số phút", "Bàn thắng", "Bàn thắng/90", "Lý do dị biệt thống kê (Z-Score)"] if c in disp_anom.columns]
 
-        data_table(disp_anom[disp_cols], width="stretch", label="Statistical anomaly index")
-        st.caption("σ represents standard deviation units away from the positional player cohort average.")
+        data_table(disp_anom[disp_cols], width="stretch", label="Chỉ mục dị biệt thống kê")
+        st.caption("σ biểu thị số độ lệch chuẩn cách biệt so với mức trung bình của nhóm cầu thủ cùng vị trí.")
     else:
-        st.info("Run `python src/analytics/detect_anomalies.py` to compute anomaly thresholds.")
+        st.info("Chạy lệnh `python src/analytics/detect_anomalies.py` để tính toán ngưỡng dị biệt thống kê.")
 
 
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("<div style='height:30px'></div>", unsafe_allow_html=True)
 st.markdown(
     "<div style='text-align:center;color:#64748b;font-size:12.5px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.06)'>"
-    "WorldCup Stats '26 Analytics Platform &nbsp;·&nbsp; Data powered by FIFA, ESPN &amp; official match records &nbsp;·&nbsp; Built with Python &amp; Streamlit"
+    "Nền tảng Phân tích WorldCup Stats '26 &nbsp;·&nbsp; Dữ liệu từ FIFA, ESPN &amp; biên bản thi đấu chính thức &nbsp;·&nbsp; Phát triển bằng Python &amp; Streamlit"
     "</div>",
     unsafe_allow_html=True,
 )

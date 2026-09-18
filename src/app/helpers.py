@@ -47,7 +47,7 @@ def _load_analytics_csv_cached(filename):
     return pd.read_csv(path)
 
 
-@st.cache_data(ttl=600, show_spinner=False)
+@st.cache_resource(show_spinner=False)
 def _similarity_matrix_cached():
     path = os.path.join(ANALYTICS, "similarity_matrix.parquet")
     if not os.path.exists(path):
@@ -56,6 +56,15 @@ def _similarity_matrix_cached():
 
 
 def load_similarity_matrix():
-    """Similarity matrix (cached); each caller gets a copy. None if missing."""
-    result = _similarity_matrix_cached()
-    return result.copy() if result is not None else None
+    """Similarity matrix (read-only cached resource, zero copy). None if missing."""
+    return _similarity_matrix_cached()
+
+
+@st.cache_data(show_spinner=False)
+def read_text_file(filepath: str) -> str:
+    """Read a text or CSS asset once and cache in memory."""
+    if not os.path.exists(filepath):
+        return ""
+    with open(filepath, "r", encoding="utf-8") as f:
+        return f.read()
+
