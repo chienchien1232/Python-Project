@@ -10,7 +10,7 @@ Dự án phân tích dữ liệu chuyên sâu bóng đá World Cup (FBref Mini) 
     Python 3.12 trở lên
     git (hoặc tải repo về rồi giải nén)
 
-### Bước 1: Cập nhật mã nguồn
+### Bước 1: Cập nhật mã nguồn (Bỏ qua bước này nếu đã tải và giải nén trước đó)
 ```bash
 git clone -b quoc_anh https://github.com/chienchien1232/Python-Project.git
 ```
@@ -18,21 +18,22 @@ git clone -b quoc_anh https://github.com/chienchien1232/Python-Project.git
 ### Bước 2: Tạo môi trường ảo (máy mới)
 Trên Windows:
 ```bash
-py -3.12 -m venv .venv
+python -m venv .venv
 .venv/Scripts/python.exe -m pip install -r requirements.txt
 ```
 Trên macOS / Linux:
 ```bash
-python3.12 -m venv .venv
+python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 ```
 
 ### Bước 3: Khởi chạy
+
 ```bash
-.\start-dashboard.ps1
+.\run_web.bat
 ```
 
-Mặc định mở tại http://127.0.0.1:8520/. Cấu hình Streamlit đã ẩn sidebar và
+Mặc định mở tại http://127.0.0.1:8520/ (Vui lòng đợi khoảng 1 phút). Cấu hình Streamlit đã ẩn sidebar và
 toolbar mặc định để menu MPA cũ không lóe lên khi tải trang.
 
 ## Cấu trúc giao diện
