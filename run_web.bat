@@ -7,7 +7,7 @@ set "PYTHON=.venv\Scripts\python.exe"
 
 if not exist "%PYTHON%" (
     echo [Lan dau] Dang tao moi truong Python va cai thu vien...
-    py -3.12 -m venv .venv
+    python -m venv .venv
     if errorlevel 1 goto :setup_error
 
     "%PYTHON%" -m pip install --upgrade pip
@@ -22,7 +22,7 @@ echo Dang khoi dong World Cup Data Analytics Web App...
 echo Trinh duyet se mo tai http://localhost:8520
 echo Nhan Ctrl+C trong cua so nay de dung ung dung.
 echo.
-start "" /b powershell.exe -NoProfile -WindowStyle Hidden -Command "Start-Sleep -Seconds 3; Start-Process 'http://localhost:8520'"
+start "" /b powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File "%~dp0scripts\open_browser_when_ready.ps1"
 "%PYTHON%" -m streamlit run src\app\app.py
 
 echo.

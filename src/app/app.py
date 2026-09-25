@@ -55,39 +55,29 @@ def clean_name(val):
 def load_overview_kpis():
     try:
         kpi_df = q("""
-            SELECT COUNT(*) AS n_matches,
-                   COALESCE(SUM(home_score + away_score), 0) AS goals
-            FROM matches
+            SELECT
+                (SELECT COUNT(*) FROM matches) AS n_matches,
+                (SELECT COALESCE(SUM(home_score + away_score), 0) FROM matches) AS goals,
+                (SELECT COUNT(*) FROM teams) AS n_teams,
+                (SELECT COUNT(*) FROM players) AS n_players,
+                (SELECT COALESCE(SUM(assists), 0) FROM player_match_stats) AS assists,
+                (SELECT COUNT(*) FROM match_events
+                 WHERE event_type LIKE '%Penalty%') AS penalties
         """)
         n_m = int(kpi_df.iloc[0]["n_matches"]) if not kpi_df.empty else 104
         t_g = int(kpi_df.iloc[0]["goals"]) if not kpi_df.empty else 308
-    except Exception:
-        n_m, t_g = 104, 308
-
-    try:
-        n_t = int(q("SELECT COUNT(*) c FROM teams").iloc[0]["c"])
-    except Exception:
-        n_t = 48
-
-    try:
-        n_p = int(q("SELECT COUNT(*) c FROM players").iloc[0]["c"])
-    except Exception:
-        n_p = 1248
-
-    try:
-        tot_assists = int(q("SELECT COALESCE(SUM(assists), 0) c FROM player_match_stats").iloc[0]["c"])
+        n_t = int(kpi_df.iloc[0]["n_teams"]) if not kpi_df.empty else 48
+        n_p = int(kpi_df.iloc[0]["n_players"]) if not kpi_df.empty else 1248
+        tot_assists = int(kpi_df.iloc[0]["assists"]) if not kpi_df.empty else 0
         pct = int(round((tot_assists / max(t_g, 1)) * 100))
         if not (40 <= pct <= 90):
             pct = 72
-    except Exception:
-        pct = 72
-
-    try:
-        penalties = int(q("SELECT COUNT(*) c FROM match_events WHERE event_type LIKE '%Penalty%'").iloc[0]["c"])
+        penalties = int(kpi_df.iloc[0]["penalties"]) if not kpi_df.empty else 16
         if not (1 <= penalties <= 60):
             penalties = 16
     except Exception:
-        penalties = 16
+        n_m, t_g = 104, 308
+        n_t, n_p, pct, penalties = 48, 1248, 72, 16
 
     return {
         "n_matches": n_m,
