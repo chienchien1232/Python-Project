@@ -9,11 +9,13 @@ Usage:
     python src/db/build_db.py --check    # kiem tra so dong DB vs CSV nguon
 """
 import csv
+import datetime as dt
 import json
 import os
 import sqlite3
 import sys
 import unicodedata
+from collections import defaultdict
 
 CSV = "data/processed/csv"
 WC = "data/processed/wc2026_player_match"
@@ -121,7 +123,8 @@ def build():
     # enrich attendance tu FIFA calendar (du lieu that, nguon chinh thuc)
     cal_path = "data/raw/fifa/calendar.json"
     if os.path.exists(cal_path):
-        cal = json.load(open(cal_path, encoding="utf-8"))
+        with open(cal_path, encoding="utf-8") as f:
+            cal = json.load(f)
         ALIAS = {"korearepublic": "southkorea", "unitedstates": "usa",
                  "bosniaherzegovina": "bosniaandherzegovina",
                  "capeverde": "caboverde", "drcongo": "congodr",
@@ -134,12 +137,19 @@ def build():
         def day(s):
             return int(str(s)[8:10])
 
-        from collections import defaultdict
+        def full_gap(a, b):
+            try:
+                da = dt.date.fromisoformat(str(a)[:10])
+                db = dt.date.fromisoformat(str(b)[:10])
+                return abs((da - db).days)
+            except (ValueError, TypeError):
+                return None
+
         pair_bucket = defaultdict(list)
-        for c in cal:
+        for idx, c in enumerate(cal):
             h = nk(c["Home"]["TeamName"][0]["Description"])
             a = nk(c["Away"]["TeamName"][0]["Description"])
-            pair_bucket[frozenset((h, a))].append(c)
+            pair_bucket[frozenset((h, a))].append((idx, c))
 
         teams_rows, _ = load(f"{CSV}/teams.csv")
         t2n = {r["team_id"]: r["team_name"] for r in teams_rows}
@@ -148,14 +158,20 @@ def build():
         for lm in matches_rows:
             h = nk(t2n[lm["home_team_id"]])
             a = nk(t2n[lm["away_team_id"]])
-            cands = [c for c in pair_bucket.get(frozenset((h, a)), [])
-                     if id(c) not in used_cal]
+            cands = [(i, c) for i, c in pair_bucket.get(frozenset((h, a)), [])
+                     if i not in used_cal]
             if not cands:
                 continue
-            pick = min(cands,
-                       key=lambda c: min(abs(day(c["Date"]) - day(lm["date"])),
-                                         28 - abs(day(c["Date"]) - day(lm["date"]))))
-            used_cal.add(id(pick))
+            # Giu pick day-only cu de output on dinh; kiem chung full-date.
+            pick_idx, pick = min(cands,
+                                 key=lambda ic: min(abs(day(ic[1]["Date"]) - day(lm["date"])),
+                                                    28 - abs(day(ic[1]["Date"]) - day(lm["date"]))))
+            full_pick = min(cands, key=lambda ic: (full_gap(ic[1]["Date"], lm["date"])
+                                                   if full_gap(ic[1]["Date"], lm["date"]) is not None
+                                                   else 10 ** 6))
+            if full_pick[0] != pick_idx:
+                print(f"  WARN attendance {lm['match_id']}: day-only vs full-date khac nhau (giut day-only)")
+            used_cal.add(pick_idx)
             if pick.get("Attendance") not in (None, ""):
                 att_map[lm["match_id"]] = int(pick["Attendance"])
 

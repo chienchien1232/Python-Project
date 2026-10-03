@@ -588,7 +588,8 @@ a:focus-visible,button:focus-visible {outline:2px solid #fff!important;outline-o
 .kpi-sport-label {font-size:9px;letter-spacing:1px;}
 .section-header {font-size:clamp(25px,3vw,42px);font-weight:400;text-transform:uppercase;letter-spacing:-1.3px;border-top:1px solid #3b3b3b;padding-top:28px;margin-top:50px;margin-bottom:28px;}
 .section-header::before {display:none;}
-.leaderboard-card {border:0;border-top:1px solid #696963;border-radius:0;padding:18px 8px;background:none;}
+.leaderboard-card {border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:18px 16px;background:#0e0e0e;}
+.leaderboard-card:hover {border-color:rgba(255,255,255,.28);}
 .leaderboard-title {font-size:14px;font-weight:500;}
 .leaderboard-item {background:none;border:0;border-bottom:1px solid #272727;border-radius:0;padding:12px 0;}
 .leaderboard-item:hover {background:#191919;}
@@ -701,10 +702,13 @@ h1,h2,h3,h4 {font-weight:500;}
 [data-testid="stPageLink-NavLink"]:hover {background:#eee!important;color:#080808!important;}
 [data-testid="stPageLink-NavLink"]:hover * {color:#080808!important;}
 
-/* Widget navbar: the columns block holding page links becomes the floating bar. */
-div[data-testid="stElementContainer"]:has(.vc-nav-anchor) + div {position:sticky!important;top:14px;z-index:2147482000;max-width:1020px;margin:0 auto!important;padding:8px 22px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(8,8,10,.72);backdrop-filter:blur(18px) saturate(130%)!important;-webkit-backdrop-filter:blur(18px) saturate(130%)!important;box-shadow:0 14px 44px rgba(0,0,0,.45);transition:transform .35s cubic-bezier(.22,1,.36,1),opacity .3s ease;will-change:transform;}
+/* Floating transparent navbar: no pill, no blur — links drift over content
+   with a text shadow for legibility. Hides on scroll down, returns on up
+   (class toggled by the vc-nav scroll watcher). */
+div[data-testid="stElementContainer"]:has(.vc-nav-anchor) + div {position:sticky!important;top:10px;z-index:2147482000;max-width:1020px;margin:0 auto!important;padding:6px 22px;border:0;background:transparent;box-shadow:none;transition:transform .35s cubic-bezier(.22,1,.36,1),opacity .3s ease;will-change:transform;}
 /* Auto-hide on scroll down, reveal on scroll up (class toggled by vc-nav scroll watcher). */
 div[data-testid="stElementContainer"]:has(.vc-nav-anchor) + div.vc-nav-hidden {transform:translateY(-140%);opacity:0;pointer-events:none!important;}
+div[data-testid="stElementContainer"]:has(.vc-nav-anchor) + div div[data-testid="stHorizontalBlock"] [data-testid="stPageLink-NavLink"], div[data-testid="stElementContainer"]:has(.vc-nav-anchor) + div div[data-testid="stHorizontalBlock"] .wc-nav-home, div[data-testid="stElementContainer"]:has(.vc-nav-anchor) + div div[data-testid="stHorizontalBlock"] .wc-nav-fallback, div[data-testid="stElementContainer"]:has(.vc-nav-anchor) + div .wc-edition {text-shadow:0 1px 12px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.9);}
 @media(prefers-reduced-motion:reduce) {
   div[data-testid="stElementContainer"]:has(.vc-nav-anchor) + div {transition:none!important;transform:none!important;opacity:1!important;}
 }

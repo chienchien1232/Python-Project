@@ -51,7 +51,8 @@ save("tournament_stages", rows, cols)
 changes.append(f"tournament_stages.is_knockout: {n} values True/False -> 1/0")
 
 # ---------- 2. kickoff_time_utc true UTC from FIFA calendar ----------
-cal = json.load(open("data/raw/fifa/calendar.json", encoding="utf-8"))
+with open("data/raw/fifa/calendar.json", encoding="utf-8") as f:
+    cal = json.load(f)
 teams_rows, _ = load("teams")
 tid2name = {r["team_id"]: r["team_name"] for r in teams_rows}
 

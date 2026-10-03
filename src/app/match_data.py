@@ -8,40 +8,7 @@ import pandas as pd
 import streamlit as st
 
 from helpers import q
-
-
-FLAGS = {
-    "Algeria": "DZ", "Argentina": "AR", "Australia": "AU", "Austria": "AT",
-    "Belgium": "BE", "Bosnia and Herzegovina": "BA", "Brazil": "BR",
-    "Cabo Verde": "CV", "Canada": "CA", "Colombia": "CO", "Congo DR": "CD",
-    "Croatia": "HR", "Curaçao": "CW", "Czechia": "CZ", "Côte d'Ivoire": "CI",
-    "Ecuador": "EC", "Egypt": "EG", "England": "ENG", "France": "FR",
-    "Germany": "DE", "Ghana": "GH", "Haiti": "HT", "IR Iran": "IR",
-    "Iraq": "IQ", "Japan": "JP", "Jordan": "JO", "Mexico": "MX",
-    "Morocco": "MA", "Netherlands": "NL", "New Zealand": "NZ", "Norway": "NO",
-    "Panama": "PA", "Paraguay": "PY", "Portugal": "PT", "Qatar": "QA",
-    "Saudi Arabia": "SA", "Scotland": "SCO", "Senegal": "SN",
-    "South Africa": "ZA", "South Korea": "KR", "Spain": "ES", "Sweden": "SE",
-    "Switzerland": "CH", "Tunisia": "TN", "Türkiye": "TR", "USA": "US",
-    "Uruguay": "UY", "Uzbekistan": "UZ",
-}
-
-
-def clean_name(value: Any) -> str:
-    if value is None or (not isinstance(value, str) and pd.isna(value)):
-        return ""
-    text = str(value)
-    return (
-        text.replace("Adrin", "Adrian")
-        .replace("Andrs", "Andres")
-        .replace("Damin", "Damian")
-        .replace("Curaao", "Curacao")
-        .replace("Cte d'Ivoire", "Côte d'Ivoire")
-        .replace("Trkiye", "Türkiye")
-        .replace("Lionel Andrs Messi", "Lionel Messi")
-        .replace("Rodrigo Rodri", "Rodri")
-        .replace("Kylian Mbappe", "Kylian Mbappé")
-    )
+from text_norm import FLAGS, clean_name
 
 
 def team_code(team_name: Any, fifa_code: Any = None) -> str:
@@ -103,15 +70,20 @@ def get_matches() -> pd.DataFrame:
     return matches
 
 
+#: Nguong |Z| danh dau team-match bat thuong (dung chung badge + detail).
+Z_ANOMALY = 2.3
+
+
 @st.cache_data(ttl=300, show_spinner=False)
 def get_anomaly_ids() -> set[int]:
+    """Match co team-match lech khoi trung binh qua nguong Z_ANOMALY."""
     stats = q("SELECT match_id, possession_pct, total_shots FROM match_team_stats")
     if stats.empty:
         return set()
     deviation = (stats["possession_pct"] - stats["possession_pct"].mean()) / max(
         stats["possession_pct"].std(), 1e-9
     )
-    return {int(value) for value in stats.loc[deviation.abs() > 2.3, "match_id"]}
+    return {int(value) for value in stats.loc[deviation.abs() > Z_ANOMALY, "match_id"]}
 
 
 ANOMALY_METRICS: tuple[tuple[str, str, str], ...] = (
@@ -128,7 +100,7 @@ ANOMALY_METRICS: tuple[tuple[str, str, str], ...] = (
 def get_match_anomaly_details(match_id: int) -> pd.DataFrame:
     """Explain WHY a flagged match is anomalous: per-team metric z-scores.
 
-    Uses the same |Z| > 2.3 rule as :func:`get_anomaly_ids` so the Matches
+    Uses the same |Z| > Z_ANOMALY rule as :func:`get_anomaly_ids` so the Matches
     page badge and the detail-page reason always agree.
     """
     stats = q(
@@ -144,7 +116,7 @@ def get_match_anomaly_details(match_id: int) -> pd.DataFrame:
         series = stats[column].fillna(0)
         std = max(series.std(), 1e-9)
         deviation = (series - series.mean()) / std
-        flagged = stats.loc[deviation.abs() > 2.3].copy()
+        flagged = stats.loc[deviation.abs() > Z_ANOMALY].copy()
         for _, row in flagged.iterrows():
             if str(row["match_id"]) != str(match_id):
                 continue

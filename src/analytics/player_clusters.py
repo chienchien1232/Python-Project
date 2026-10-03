@@ -2,9 +2,11 @@
 """3.1 Player Clustering - KMeans theo vai tro (GK tach rieng)."""
 import os
 
+import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
-from sklearn.metrics import silhouette_score
+from sklearn.metrics import (adjusted_rand_score, davies_bouldin_score,
+                             silhouette_score)
 from sklearn.preprocessing import StandardScaler
 
 FEAT = "data/processed/analytics/player_features.csv"
@@ -15,49 +17,78 @@ DROP = {"player_id", "player_name", "position", "team", "nationality",
 MIN_MIN = 90
 
 
-def best_k(X, kmin=4, kmax=8):
+def best_k(X, kmin=4, kmax=8, tag="outfield"):
+    """Chon k theo silhouette, kem Davies-Bouldin + on dinh ARI de bao ve.
+
+    Tra ve (best_k, bang tuning). On dinh = ARI trung binh cua 3 seed
+    phu (1, 2, 3) so voi seed chinh 42. DB thap la tot.
+    """
+    rows = []
     best, best_s = kmin, -1
     for k in range(kmin, kmax + 1):
         km = KMeans(n_clusters=k, n_init=10, random_state=42).fit(X)
         s = silhouette_score(X, km.labels_)
-        print(f"  k={k} silhouette={s:.3f}")
+        db = davies_bouldin_score(X, km.labels_)
+        aris = [adjusted_rand_score(
+            km.labels_,
+            KMeans(n_clusters=k, n_init=10, random_state=seed).fit_predict(X))
+            for seed in (1, 2, 3)]
+        stab = round(float(np.mean(aris)), 3)
+        rows.append({"group": tag, "k": k, "silhouette": round(float(s), 3),
+                     "davies_bouldin": round(float(db), 3),
+                     "stability_ARI": stab})
+        print(f"  k={k} silhouette={s:.3f} DB={db:.3f} ARI_stab={stab:.3f}")
         if s > best_s:
             best, best_s = k, s
     print(f"  -> chon k={best}")
-    return best
+    return best, rows
 
 
 def main():
+    """KMeans outfield (k chon theo silhouette, co DB + ARI) + GK rieng.
+
+    Ghi player_clusters.csv, cluster_profile_outfield/gk.csv, cluster_tuning.csv.
+    """
     df = pd.read_csv(FEAT)
     df = df[df["minutes"] >= MIN_MIN].copy()
-    feats = [c for c in df.columns if c not in DROP and not c.startswith("total_")]
+    # FEATS_BASE: 18 cot p90 goc (giu schema profile cho UI).
+    # FEATS_MODEL: ban shrunk neu co (chong nhieu mau 90'), fallback ve goc.
+    feats = [c for c in df.columns if c not in DROP and not c.startswith("total_")
+             and not c.endswith("_shrunk")]
+    feats_model = [c + "_shrunk" if c + "_shrunk" in df.columns else c for c in feats]
 
     out_parts = []
+    tuning_rows = []
     # ---- OUTFIELD tu player_features ----
     sub = df[df["position"].isin(["DEF", "MID", "FWD"])].copy()
     if not sub.empty:
-        X = StandardScaler().fit_transform(sub[feats].fillna(0))
-        k = best_k(X, 4, 8)
+        X = StandardScaler().fit_transform(sub[feats_model].fillna(0))
+        k, tune = best_k(X, 4, 8, tag="outfield")
+        tuning_rows += tune
         km = KMeans(n_clusters=k, n_init=10, random_state=42).fit(X)
         sub["cluster"] = km.labels_
-        profile = sub.groupby("cluster")[feats].mean().round(2)
+        # Profile hien thi giu cot goc; centroid model (shrunk) dung de dat ten.
+        profile_model = sub.groupby("cluster")[feats_model].mean().round(2)
 
         # ---- dien giai ten cum theo centroid z-score (spec 3.1) ----
-        pop_mean = sub[feats].mean()
-        pop_std = sub[feats].std().replace(0, 1)
+        pop_mean = sub[feats_model].mean()
+        pop_std = sub[feats_model].std().replace(0, 1)
         GROUPS = {
-            "Finisher / Goal Scorer": ["goals_p90", "shots_on_target_p90", "shots_p90"],
-            "Playmaker / Chance Creator": ["assists_p90", "crosses_p90",
-                                           "dribbles_attempted_p90"],
-            "Ball Progressor": ["passes_p90", "accurate_passes_p90"],
-            "Defensive Player": ["tackles_p90", "interceptions_p90",
-                                 "clearances_p90", "blocks_p90"],
+            "Finisher / Goal Scorer": ["goals_p90_shrunk", "shots_on_target_p90_shrunk", "shots_p90_shrunk"],
+            "Playmaker / Chance Creator": ["assists_p90_shrunk", "crosses_p90_shrunk",
+                                           "dribbles_attempted_p90_shrunk"],
+            "Ball Progressor": ["passes_p90_shrunk", "accurate_passes_p90_shrunk"],
+            "Defensive Player": ["tackles_p90_shrunk", "interceptions_p90_shrunk",
+                                 "clearances_p90_shrunk", "blocks_p90_shrunk"],
         }
+        # Fallback neu file cu chua co cot shrunk.
+        GROUPS = {g: [f if f in feats_model else f.replace("_shrunk", "") for f in fl]
+                  for g, fl in GROUPS.items()}
         labels = {}
         for c in range(k):
-            cent = profile.loc[c]
+            cent = profile_model.loc[c]
             z = {f: (cent.get(f, 0) - pop_mean.get(f, 0)) / pop_std.get(f, 1)
-                 for f in feats}
+                 for f in feats_model}
             gscores = {g: sum(z.get(f, 0) for f in flist) / len(flist)
                        for g, flist in GROUPS.items()}
             best_g = max(gscores, key=gscores.get)
@@ -88,7 +119,8 @@ def main():
         gcols = ["save_pct", "saves_p90"]
         if len(gk) >= 3:
             Xg = StandardScaler().fit_transform(gk[gcols].fillna(0))
-            kg = best_k(Xg, 2, 5)
+            kg, tune_gk = best_k(Xg, 2, 5, tag="gk")
+            tuning_rows += tune_gk
             kmg = KMeans(n_clusters=kg, n_init=10, random_state=42).fit(Xg)
             gk["cluster"] = kmg.labels_
             gk["position"] = "GK"
@@ -125,7 +157,9 @@ def main():
     n_out = (result["position"] != "GK").sum()
     assert n_out > 0 and n_gk > 0, f"player_clusters.csv thieu thanh phan (out={n_out}, gk={n_gk})"
     result.to_csv(f"{OUT}/player_clusters.csv", index=False)
+    pd.DataFrame(tuning_rows).to_csv(f"{OUT}/cluster_tuning.csv", index=False)
     print(f"saved: {OUT}/player_clusters.csv | outfield={n_out}, gk={n_gk}")
+    print(f"saved: {OUT}/cluster_tuning.csv ({len(tuning_rows)} dong)")
 
 
 if __name__ == "__main__":

@@ -43,21 +43,11 @@ from match_ui import (  # noqa: E402
 )
 from media_ui import flag_url, player_portrait, render_photo_story  # noqa: E402
 from navigation import nav_link, render_navigation  # noqa: E402
+from page_chrome import setup_page  # noqa: E402
 from table_ui import data_table  # noqa: E402
 
 
-st.set_page_config(
-    page_title="Match Programme | WorldCup Stats '26",
-    page_icon="◉",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-)
-# First paint must be dark so page switches never flash white.
-st.markdown("<style>html,body,.stApp,#root{background:#050505 !important;color-scheme:dark}</style>", unsafe_allow_html=True)
-
-style_path = Path(APP_PATH) / "style.css"
-if style_path.exists():
-    st.markdown(f"<style>{style_path.read_text(encoding='utf-8')}</style>", unsafe_allow_html=True)
+setup_page("Match Programme | WorldCup Stats '26")
 
 render_navigation("Matches")
 st.html(Path(APP_PATH) / "match_experience.css")
@@ -73,6 +63,8 @@ def render_not_found(message: str) -> None:
 raw_match_id = st.query_params.get("match_id")
 try:
     match_id = int(raw_match_id)
+    if match_id <= 0:
+        raise ValueError("match_id out of range")
 except (TypeError, ValueError):
     render_not_found("The URL does not contain a valid match ID.")
     st.stop()

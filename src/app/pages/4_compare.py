@@ -2,15 +2,9 @@
 import streamlit as st
 from streamlit.errors import StreamlitPageNotFoundError
 
-st.set_page_config(
-    page_title="Players & Compare | WorldCup Stats '26",
-    page_icon="◉",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-)
+from page_chrome import setup_page
 
-# First paint must be dark so page switches never flash white.
-st.markdown("<style>html,body,.stApp,#root{background:#050505 !important;color-scheme:dark}</style>", unsafe_allow_html=True)
+setup_page("Players & Compare | WorldCup Stats '26")
 
 # Client-side redirect (no full reload) into the merged compare workspace.
 try:

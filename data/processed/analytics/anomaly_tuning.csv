@@ -1,0 +1,4 @@
+contamination,n_isolation,n_overlap_hard,n_hard
+0.03,25,3,36
+0.05,40,4,36
+0.07,55,5,36

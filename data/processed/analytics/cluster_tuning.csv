@@ -1,0 +1,10 @@
+group,k,silhouette,davies_bouldin,stability_ARI
+outfield,4,0.17,1.914,0.984
+outfield,5,0.132,1.966,0.971
+outfield,6,0.147,1.876,0.877
+outfield,7,0.104,1.934,0.852
+outfield,8,0.109,1.995,0.794
+gk,2,0.48,0.749,1.0
+gk,3,0.434,0.8,1.0
+gk,4,0.407,0.78,0.903
+gk,5,0.404,0.799,0.936

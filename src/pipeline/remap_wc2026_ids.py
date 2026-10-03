@@ -132,7 +132,7 @@ for tkey, fifa_map in by_team_fifa.items():
             continue
         mapping[fp] = choice
         used_f.add(fp)
-        used_l = [x for x in left_l if x[0] != choice]
+        used_l.add(choice)
         left_l = [x for x in left_l if x[0] != choice]
         print(f"[pass2] {tkey}: {fp} -> {choice} ({why})")
 

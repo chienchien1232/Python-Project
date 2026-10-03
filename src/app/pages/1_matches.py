@@ -21,21 +21,11 @@ from match_data import get_anomaly_ids, get_matches  # noqa: E402
 from match_ui import render_calendar_hero, render_match_card, render_stat_strip  # noqa: E402
 from media_ui import render_photo_story  # noqa: E402
 from navigation import render_navigation  # noqa: E402
+from page_chrome import footer, setup_page  # noqa: E402
 from table_ui import data_table  # noqa: E402
 
 
-st.set_page_config(
-    page_title="Matches & Results | WorldCup Stats '26",
-    page_icon="◉",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-)
-# First paint must be dark so page switches never flash white.
-st.markdown("<style>html,body,.stApp,#root{background:#050505 !important;color-scheme:dark}</style>", unsafe_allow_html=True)
-
-style_path = Path(APP_PATH) / "style.css"
-if style_path.exists():
-    st.markdown(f"<style>{style_path.read_text(encoding='utf-8')}</style>", unsafe_allow_html=True)
+setup_page("Matches & Results | WorldCup Stats '26")
 
 render_navigation("Matches")
 st.html(Path(APP_PATH) / "match_experience.css")
@@ -99,7 +89,7 @@ if search_term.strip():
     searchable = filtered[["Home_Team", "Away_Team", "City", "Stadium"]].fillna("").astype(str)
     mask = searchable.agg(" ".join, axis=1).str.contains(search_term.strip(), case=False, regex=False)
     filtered = filtered[mask]
-is_anomalous = filtered["ID"].astype(int).isin(anomalous_ids)
+is_anomalous = pd.to_numeric(filtered["ID"], errors="coerce").fillna(-1).astype(int).isin(anomalous_ids)
 if selected_tag == "Anomalous Only":
     filtered = filtered[is_anomalous]
 elif selected_tag == "Regular Only":
@@ -117,8 +107,14 @@ if filtered.empty:
         unsafe_allow_html=True,
     )
 else:
+    def _is_anomalous(match):
+        try:
+            return int(match["ID"]) in anomalous_ids
+        except (ValueError, TypeError):
+            return False
+
     cards = "".join(
-        render_match_card(match, int(match["ID"]) in anomalous_ids)
+        render_match_card(match, _is_anomalous(match))
         for _, match in filtered.iterrows()
     )
     st.markdown(f'<div class="match-card-grid">{cards}</div>', unsafe_allow_html=True)
@@ -151,13 +147,15 @@ if not filtered.empty:
     )
     selected_rows = getattr(getattr(selection, "selection", None), "rows", [])
     if selected_rows:
-        selected_match_id = int(fixture_table.iloc[selected_rows[0]]["ID"])
-        st.switch_page("pages/7_match_detail.py", query_params={"match_id": selected_match_id})
+        try:
+            pos = int(selected_rows[0])
+            selected_match_id = int(fixture_table.iloc[pos]["ID"])
+        except (ValueError, TypeError, IndexError, KeyError):
+            selected_match_id = None
+        if selected_match_id is not None and str(selected_match_id) in set(
+                all_matches["ID"].astype(str)):
+            st.switch_page("pages/7_match_detail.py", query_params={"match_id": selected_match_id})
+        elif selected_match_id is not None:
+            st.info("Selected match is no longer available.")
 
-st.markdown("<div style='height:36px'></div>", unsafe_allow_html=True)
-st.markdown(
-    "<div style='text-align:center;color:#686865;font-size:10px;letter-spacing:.08em;padding:24px 0;border-top:1px solid #292929'>"
-    "WORLDCUP STATS '26 &nbsp;·&nbsp; MATCH CALENDAR &nbsp;·&nbsp; FIFA 2026 DATA ARCHIVE"
-    "</div>",
-    unsafe_allow_html=True,
-)
+footer("match")

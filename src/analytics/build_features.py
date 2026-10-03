@@ -15,13 +15,35 @@ from analytics.common import (ACTION_COLS, load_gk, load_pms, played, to_int)
 
 OUT = "data/processed/analytics"
 
+# Shrinkage cho per-90: keo chi so cua mau nho ve trung binh de hat-trick
+# 1 tran 90' khong thong tri top score/cluster. Cong thuc Bayes don gian:
+#   p90_shrunk = p90 * minutes / (minutes + SHRINK_K), SHRINK_K ~ 3 tran.
+# Cot *_shrunk chi ADDITIVE (giut MIN_MIN=90 de so dong output khong doi).
+SHRINK_K = 270
+
 
 def per90(total, minutes):
+    """Trung binh per-90. Tra None khi minutes = 0."""
     m = int(minutes or 0)
     return round(90.0 * total / m, 3) if m > 0 else None
 
 
+def per90_shrunk(total, minutes, k=SHRINK_K):
+    """Per-90 co shrinkage Bayes: keo mau nho ve 0 (k ~ 3 tran)."""
+    m = int(minutes or 0)
+    if m <= 0:
+        return None
+    raw = 90.0 * total / m
+    return round(raw * m / (m + k), 3)
+
+
 def build_players():
+    """Gop player_match_stats theo cau thu (tong + per-90 + shrunk).
+
+    Returns:
+        List dict sap xep theo minutes giam dan, moi dict co total_*/ *_p90 /
+        *_p90_shrunk cho 18 cot hanh dong + pass_accuracy_pct.
+    """
     rows = [r for r in load_pms() if played(r)]
     agg = {}
     for r in rows:
@@ -48,6 +70,7 @@ def build_players():
         for c in ACTION_COLS:
             rec[f"total_{c}"] = a["_sum"][c]
             rec[f"{c}_p90"] = per90(a["_sum"][c], a["minutes"])
+            rec[f"{c}_p90_shrunk"] = per90_shrunk(a["_sum"][c], a["minutes"])
         # pass accuracy %
         pa = a["_sum"]["accurate_passes"]
         tp = a["_sum"]["passes"]
@@ -57,6 +80,7 @@ def build_players():
 
 
 def build_gk():
+    """Gop goalkeeper_match_stats theo thu mon (save_pct, saves_p90)."""
     rows = [r for r in load_gk() if played(r)]
     agg = {}
     for r in rows:
@@ -88,6 +112,7 @@ def build_gk():
 
 
 def write_csv(path, records):
+    """Ghi list dict ra CSV (tu tao thu muc). Returns: (path, so dong)."""
     os.makedirs(os.path.dirname(path), exist_ok=True)
     cols = list(records[0].keys())
     with open(path, "w", newline="", encoding="utf-8") as f:

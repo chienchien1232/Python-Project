@@ -19,38 +19,10 @@ for p in [app_path, sys_path]:
 
 from helpers import q, load_analytics_csv, load_similarity_matrix  # noqa: E402
 from media_ui import country_palette, flag_image, player_portrait, render_photo_story, static_url  # noqa: E402
+from page_chrome import footer, setup_page  # noqa: E402
+from text_norm import clean_name  # noqa: E402
 
-# ── Page configuration ────────────────────────────────────────────────────────
-st.set_page_config(
-    page_title="Players & Statistics | WorldCup Stats '26",
-    page_icon="◉",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-)
-# First paint must be dark so page switches never flash white.
-st.markdown("<style>html,body,.stApp,#root{background:#050505 !important;color-scheme:dark}</style>", unsafe_allow_html=True)
-
-# ── Inject custom CSS ──────────────────────────────────────────────────────────
-css_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "style.css")
-if os.path.exists(css_path):
-    with open(css_path, "r", encoding="utf-8") as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-
-def clean_name(val):
-    if not isinstance(val, str):
-        return str(val) if val is not None else ""
-    return (
-        val.replace("Adrin", "Adrian")
-           .replace("Andrs", "Andres")
-           .replace("Damin", "Damian")
-           .replace("Curaao", "Curacao")
-           .replace("Cte d'Ivoire", "Côte d'Ivoire")
-           .replace("Trkiye", "Türkiye")
-           .replace("Lionel Andrs Messi", "Lionel Messi")
-           .replace("Rodrigo Rodri", "Rodri")
-           .replace("Kylian Mbappe", "Kylian Mbappé")
-    )
+setup_page("Players & Statistics | WorldCup Stats '26")
 
 
 # ── Top Navigation Bar ────────────────────────────────────────────────────────
@@ -141,8 +113,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 tot_p = len(df)
-top_scorer = "Kylian Mbappé (10G)"
-top_assists = "Lionel Messi (5A)"
 
 st.markdown(
     '<div class="kpi-row-container" style="margin-bottom:28px">'
@@ -175,8 +145,8 @@ if sel_pos != "All Positions":
     view = view[view["position"] == sel_pos]
 if sel_team != "All Teams":
     view = view[view["team"] == sel_team]
-if search_q:
-    view = view[view["player_name"].str.contains(search_q, case=False, na=False)]
+if search_q and search_q.strip():
+    view = view[view["player_name"].str.contains(search_q.strip()[:64], case=False, na=False, regex=False)]
 
 if clusters is not None and "cluster_label" in clusters.columns:
     view = view.merge(clusters[["player_id", "cluster_label"]], on="player_id", how="left")
@@ -206,7 +176,11 @@ default_idx = player_list.index("Kylian Mbappé") if "Kylian Mbappé" in player_
 sel_pname = st.selectbox("Select Player to inspect complete profile:", player_list, index=default_idx)
 
 if sel_pname:
-    p = df[df["player_name"] == sel_pname].iloc[0]
+    hit = df[df["player_name"] == sel_pname]
+    if hit.empty:
+        st.info("Selected player is not in the current dataset.")
+        st.stop()
+    p = hit.iloc[0]
     pid = str(p["player_id"])
     p_team = p["team"]
     p_pos = str(p["position"])
@@ -519,10 +493,4 @@ render_compare_workspace()
 
 
 # ── Footer ────────────────────────────────────────────────────────────────────
-st.markdown("<div style='height:30px'></div>", unsafe_allow_html=True)
-st.markdown(
-    "<div style='text-align:center;color:#64748b;font-size:12.5px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.06)'>"
-    "WorldCup Stats '26 Analytics Platform &nbsp;·&nbsp; Data powered by FIFA, ESPN &amp; official match records &nbsp;·&nbsp; Built with Python &amp; Streamlit"
-    "</div>",
-    unsafe_allow_html=True,
-)
+footer()

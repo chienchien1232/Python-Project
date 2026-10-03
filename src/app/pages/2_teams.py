@@ -18,60 +18,10 @@ for p in [app_path, sys_path]:
 
 from helpers import q, load_analytics_csv  # noqa: E402
 from media_ui import flag_image, player_portrait, render_photo_story  # noqa: E402
+from page_chrome import footer, setup_page  # noqa: E402
+from text_norm import clean_name, flag  # noqa: E402
 
-# ── Page configuration ────────────────────────────────────────────────────────
-st.set_page_config(
-    page_title="Teams & Squads | WorldCup Stats '26",
-    page_icon="◉",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-)
-# First paint must be dark so page switches never flash white.
-st.markdown("<style>html,body,.stApp,#root{background:#050505 !important;color-scheme:dark}</style>", unsafe_allow_html=True)
-
-# ── Inject custom CSS ──────────────────────────────────────────────────────────
-css_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "style.css")
-if os.path.exists(css_path):
-    with open(css_path, "r", encoding="utf-8") as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-
-# ── Team flags lookup ─────────────────────────────────────────────────────────
-FLAGS = {
-    "Algeria": "DZ", "Argentina": "AR", "Australia": "AU", "Austria": "AT",
-    "Belgium": "BE", "Bosnia and Herzegovina": "BA", "Brazil": "BR",
-    "Cabo Verde": "CV", "Canada": "CA", "Colombia": "CO", "Congo DR": "CD",
-    "Croatia": "HR", "Curaçao": "CW", "Czechia": "CZ", "Côte d'Ivoire": "CI",
-    "Ecuador": "EC", "Egypt": "EG", "England": "ENG", "France": "FR",
-    "Germany": "DE", "Ghana": "GH", "Haiti": "HT", "IR Iran": "IR",
-    "Iraq": "IQ", "Japan": "JP", "Jordan": "JO", "Mexico": "MX",
-    "Morocco": "MA", "Netherlands": "NL", "New Zealand": "NZ", "Norway": "NO",
-    "Panama": "PA", "Paraguay": "PY", "Portugal": "PT", "Qatar": "QA",
-    "Saudi Arabia": "SA", "Scotland": "SCO", "Senegal": "SN",
-    "South Africa": "ZA", "South Korea": "KR", "Spain": "ES", "Sweden": "SE",
-    "Switzerland": "CH", "Tunisia": "TN", "Türkiye": "TR", "USA": "US",
-    "Uruguay": "UY", "Uzbekistan": "UZ",
-}
-
-
-def clean_name(val):
-    if not isinstance(val, str):
-        return str(val) if val is not None else ""
-    return (
-        val.replace("Adrin", "Adrian")
-           .replace("Andrs", "Andres")
-           .replace("Damin", "Damian")
-           .replace("Curaao", "Curacao")
-           .replace("Cte d'Ivoire", "Côte d'Ivoire")
-           .replace("Trkiye", "Türkiye")
-           .replace("Lionel Andrs Messi", "Lionel Messi")
-           .replace("Rodrigo Rodri", "Rodri")
-           .replace("Kylian Mbappe", "Kylian Mbappé")
-    )
-
-
-def flag(team_name: str) ->str:
-    return FLAGS.get(clean_name(team_name), "—")
+setup_page("Teams & Squads | WorldCup Stats '26")
 
 
 # ── Top Navigation Bar ────────────────────────────────────────────────────────
@@ -197,12 +147,21 @@ with col_s2:
         list(team_options.keys()) if team_options else ["No teams available"]
     )
 
-selected_team = team_options.get(sel_opt, df_teams["Team"].iloc[0] if not df_teams.empty else "Spain")
+selected_team = team_options.get(sel_opt)
+if selected_team is None:
+    if df_teams.empty:
+        st.info("No team data available.")
+        st.stop()
+    selected_team = df_teams["Team"].iloc[0]
 
 
 # ── Team Dossier Presentation ─────────────────────────────────────────────────
 if selected_team:
-    t_row = df_teams[df_teams["Team"] == selected_team].iloc[0]
+    t_hit = df_teams[df_teams["Team"] == selected_team]
+    if t_hit.empty:
+        st.info("Selected team is not in the current dataset.")
+        st.stop()
+    t_row = t_hit.iloc[0]
     t_flag = flag(selected_team)
     t_flag_img = flag_image(selected_team, t_row.get("Code"), "team-flag-photo")
     t_mgr = clean_name(t_row.get("Manager", "Unknown"))
@@ -578,8 +537,9 @@ with st.container(border=True):
 
     display_teams = df_teams[["Team", "Confederation", "Group_Letter", "FIFA_Rank", "Manager", "Matches_Played", "Wins", "Draws", "Losses", "Goals_For", "Goals_Against", "Goal_Diff", "Squad_Value_MEur", "AI_Cluster"]].copy()
     display_teams.columns = ["Nation", "Confederation", "Group", "FIFA Rank", "Head Coach", "P", "W", "D", "L", "GF", "GA", "GD", "Value (€M)", "AI Tactical Style"]
-    if search_nation:
-        display_teams = display_teams[display_teams["Nation"].str.contains(search_nation, case=False, na=False)]
+    if search_nation and search_nation.strip():
+        display_teams = display_teams[display_teams["Nation"].str.contains(
+            search_nation.strip()[:64], case=False, na=False, regex=False)]
     if sel_confed_tbl != "All Confederations":
         display_teams = display_teams[display_teams["Confederation"] == sel_confed_tbl]
     if sel_style_tbl != "All Tactical Styles":
@@ -614,10 +574,4 @@ if tc is not None and "cluster_label" in tc.columns:
 
 
 # ── Footer ────────────────────────────────────────────────────────────────────
-st.markdown("<div style='height:30px'></div>", unsafe_allow_html=True)
-st.markdown(
-    "<div style='text-align:center;color:#64748b;font-size:12.5px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.06)'>"
-    "WorldCup Stats '26 Analytics Platform &nbsp;·&nbsp; Data powered by FIFA, ESPN &amp; official match records &nbsp;·&nbsp; Built with Python &amp; Streamlit"
-    "</div>",
-    unsafe_allow_html=True,
-)
+footer()

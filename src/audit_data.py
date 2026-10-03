@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Read-only audit of data/processed/csv - no modifications."""
+"""Audit of data/processed/csv - khong sua CSV goc (chi ghi audit_schema.json)."""
 import csv
 import json
 import re
@@ -145,9 +145,17 @@ print("player SoT>Shots:", bad_sot or "none")
 bad_sot_t = [r["match_id"] for r in D["match_team_stats"]
              if int(r["shots_on_target"]) > int(r["total_shots"])]
 print("team SoT>Shots:", len(bad_sot_t), bad_sot_t[:5])
-mins_bad = [r["lineup_id"] for r in D["match_lineups"] if not (0 <= int(r["minutes_played"]) <= 130)]
+def _int_or_bad(v):
+    """int() an toan cho audit: gia tri rac -> -1 (tinh la out-of-range)."""
+    try:
+        return int(v)
+    except (ValueError, TypeError):
+        return -1
+
+
+mins_bad = [r["lineup_id"] for r in D["match_lineups"] if not (0 <= _int_or_bad(r["minutes_played"]) <= 130)]
 print("lineup minutes out of range:", mins_bad[:5] or "none")
-ev_min_bad = [r["event_id"] for r in D["match_events"] if not (0 <= int(r["minute"]) <= 130)]
+ev_min_bad = [r["event_id"] for r in D["match_events"] if not (0 <= _int_or_bad(r["minute"]) <= 130)]
 print("event minutes out of range:", ev_min_bad[:5] or "none")
 
 # starting XI per team-match
@@ -168,17 +176,7 @@ wrong_team = [e["event_id"] for e in D["match_events"]
               if lt.get((e["match_id"], e["player_id"])) not in (None, e["team_id"])]
 print("events where player team != event team:", wrong_team[:5] or "none", f"(n={len(wrong_team)})")
 
-# goals+assists per events vs score
-evg = Counter()
-oga = Counter()
-for e in D["match_events"]:
-    mid = int(e["match_id"])
-    m = next(x for x in D["matches"] if x["match_id"] == e["match_id"])
-    if e["event_type"] == "Goal":
-        evg[mid] += 1 if e["team_id"] == m["home_team_id"] else 0
-        if e["team_id"] == m["away_team_id"]:
-            evg[mid] += 0
-        # count properly below
+# goals+assists per events vs score (ban dung: dem theo doi chu nha/khach)
 score_check_fail = []
 by_match = defaultdict(lambda: [0, 0])
 mid2m = {r["match_id"]: r for r in D["matches"]}
@@ -228,6 +226,6 @@ for r in D["squads_and_players"]:
 coll = {k: v for k, v in nm.items() if k and len(v) > 1}
 print("name collisions (different ids, same name):", len(coll))
 
-json.dump(F, open("data/processed/audit_schema.json", "w", encoding="utf-8"),
-          ensure_ascii=False, indent=1)
+with open("data/processed/audit_schema.json", "w", encoding="utf-8") as f:
+    json.dump(F, f, ensure_ascii=False, indent=1)
 print("\nsaved schema -> data/processed/audit_schema.json")

@@ -61,6 +61,33 @@ Smoke test bao phủ Overview, Matches, Teams, Players/Compare, ML Analytics, Be
 Match Detail và trạng thái match hợp lệ/không tồn tại. Bảng, radar, bộ lọc, ảnh cầu thủ,
 cờ và các liên kết hiện có giữ nguyên thao tác.
 
+## Pipeline Machine Learning (chạy đúng thứ tự)
+
+    .\.venv\Scripts\python.exe src/analytics/eda_report.py
+    .\.venv\Scripts\python.exe src/analytics/build_features.py
+    .\.venv\Scripts\python.exe src/analytics/player_clusters.py
+    .\.venv\Scripts\python.exe src/analytics/player_similarity.py
+    .\.venv\Scripts\python.exe src/analytics/team_clusters.py
+    .\.venv\Scripts\python.exe src/analytics/pca_explore.py
+    .\.venv\Scripts\python.exe src/analytics/detect_anomalies.py
+    .\.venv\Scripts\python.exe src/analytics/analytics_score.py
+    .\.venv\Scripts\python.exe src/analytics/market_value.py
+    .\.venv\Scripts\python.exe src/analytics/best_xi.py --formation 4-3-3
+
+Bằng chứng thực nghiệm đi kèm output trong `data/processed/analytics/`:
+`eda_corr/minutes_bins.csv` (căn cứ shrinkage K=270, downweight 0.5),
+`cluster_tuning.csv` (silhouette + Davies-Bouldin + ARI),
+`market_value_cv.csv` (GridSearchCV 5-fold phân tầng), `market_value_ablation.csv`
+(team_win_pct 0.383 vs 0.383 — leakage không đáng kể),
+`market_value_calibration.csv` (max raw ratio 23.5x nên phải scale),
+`score_validation.csv`, `anomaly_tuning.csv`. Notebook EDA: `notebooks/C_eda_ml.ipynb`.
+Market value là ESTIMATE counterfactual (thiếu ground truth sau giải), xem
+`market_value_validation.csv` (MAE 53.5%, hit ±25% là 31.2%).
+
+Sơ đồ kiến trúc và luồng dữ liệu: `docs/ARCHITECTURE.md`. Module dùng chung:
+`src/app/text_norm.py` (chuẩn hóa tên + mã đội), `src/app/page_chrome.py`
+(boilerplate trang: config + CSS + footer).
+
 ## Phát triển
 
 CSS giao diện được tách theo trách nhiệm: style.css cho nền chung, photo_story.css

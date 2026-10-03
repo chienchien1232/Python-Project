@@ -22,6 +22,7 @@ except ImportError:
 SCORES = "data/processed/analytics/analytics_scores.csv"
 SQ = "data/processed/csv/squads_and_players.csv"
 OUT = "data/processed/analytics"
+MIN_MIN = 90
 
 FORMATIONS = {
     "4-3-3": {"GK": 1, "DEF": 4, "MID": 3, "FWD": 3},
@@ -33,8 +34,16 @@ FORMATIONS = {
 
 
 def main(formation="4-3-3", budget_meur=None, max_per_nation=None):
+    """Giai ILP chon Best XI toi da tong overall_score theo doi hinh.
+
+    Args:
+        formation: khoa trong FORMATIONS (vd '4-3-3').
+        budget_meur: tran tong gia tri (trieu EUR), None = khong gioi han.
+        max_per_nation: tran so cau thu cung doi tuyen, None = khong gioi han.
+    Ghi best_xi.csv (khong tim duoc optimal thi giu file cu + in ly do).
+    """
     df = pd.read_csv(SCORES, dtype={"player_id": str})
-    df = df[df["minutes"] >= MIN_MIN] if (MIN_MIN := 90) else df
+    df = df[df["minutes"] >= MIN_MIN].copy()
     sq = pd.read_csv(SQ, dtype={"player_id": str})[
         ["player_id", "market_value_eur", "date_of_birth"]]
     df = df.merge(sq, on="player_id", how="left")

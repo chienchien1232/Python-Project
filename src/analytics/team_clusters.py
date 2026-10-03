@@ -2,7 +2,7 @@
 """3.3 Team Clustering - phong cach doi tuyen (co dien giai ten nhom)."""
 import pandas as pd
 from sklearn.cluster import KMeans
-from sklearn.metrics import silhouette_score
+from sklearn.metrics import silhouette_samples, silhouette_score
 from sklearn.preprocessing import StandardScaler
 
 MTS = "data/processed/csv/match_team_stats.csv"
@@ -12,6 +12,10 @@ OUT = "data/processed/analytics"
 
 
 def main():
+    """KMeans phong cach doi tuyen (k chon theo silhouette, 3-6).
+
+    Ghi team_clusters.csv kem cluster_label + style_confidence.
+    """
     mts = pd.read_csv(MTS, dtype={"team_id": str, "match_id": str})
     matches = pd.read_csv(MATCHES, dtype={"team_id": str, "match_id": str})
     teams = pd.read_csv(TEAMS_CSV, dtype={"team_id": str})
@@ -31,21 +35,21 @@ def main():
     m["gf"] = m.apply(gf, axis=1)
     m["ga"] = m.apply(ga, axis=1)
 
-    feat_cols = ["possession_pct", "total_shots", "shots_on_target",
-                 "corners", "saves", "gf_pg", "ga_pg"]
-    m["gf_pg"] = 0.0
-    m["ga_pg"] = 0.0
-
     agg = m.groupby("team_id").agg(
         possession=("possession_pct", "mean"),
         shots=("total_shots", "mean"),
         sot=("shots_on_target", "mean"),
         corners=("corners", "mean"),
         saves=("saves", "mean"),
+        fouls=("fouls", "mean"),
+        offsides=("offsides", "mean"),
         gf=("gf", "mean"),
         ga=("ga", "mean"),
     ).round(2)
     agg["gd"] = (agg["gf"] - agg["ga"]).round(2)
+    # Ti le derived (khop schema file goc): chinh xac sut trung dich + hieu suat chuyen hoa.
+    agg["sot_acc"] = (agg["sot"] / agg["shots"].replace(0, float("nan")) * 100).round(1)
+    agg["conv"] = (agg["gf"] / agg["shots"].replace(0, float("nan")) * 100).round(1)
 
     num_cols = ["possession", "shots", "sot", "corners", "saves", "gf", "ga", "gd"]
     X = StandardScaler().fit_transform(agg[num_cols])
@@ -58,6 +62,8 @@ def main():
             best_k, best_s = k, s
     km = KMeans(n_clusters=best_k, n_init=10, random_state=42).fit(X)
     agg["cluster"] = km.labels_
+    # Do tin cay gan nhan = silhouette sample rescale 0-100.
+    agg["style_confidence"] = (((silhouette_samples(X, km.labels_) + 1) / 2) * 100).round(1)
 
     # ---- dien giai ten nhom theo centroid z-score (spec 3.3) ----
     zdf = pd.DataFrame(X, index=agg.index, columns=num_cols)

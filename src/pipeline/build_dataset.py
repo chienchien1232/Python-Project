@@ -14,6 +14,7 @@ Conventions (documented, deterministic derivations - no fabricated values):
   - clean_sheet (GK) : played > 0 min and opponent scored 0.
 """
 import csv
+import datetime as dt
 import glob
 import json
 import os
@@ -103,10 +104,12 @@ def load_local_csv(path):
 
 def main():
     # ---------- 1. load raw ----------
-    cal = json.load(open(f"{RAW}/calendar.json", encoding="utf-8"))
+    with open(f"{RAW}/calendar.json", encoding="utf-8") as f:
+        cal = json.load(f)
     details = {}
     for fp in glob.glob(f"{RAW}/match_*.json"):
-        d = json.load(open(fp, encoding="utf-8"))
+        with open(fp, encoding="utf-8") as f:
+            d = json.load(f)
         details[d["IdMatch"]] = d
     print(f"calendar={len(cal)} details={len(details)}")
 
@@ -124,8 +127,6 @@ def main():
 
     # ---------- 2. map fifa id -> local match_id (team pair + nearest date) ----------
     pair_to_locals = defaultdict(list)
-    for lm in lmatches:
-        h = name_key(next(t for t in [None]))  # placeholder replaced below
     tid2name = {}
     # build local team id->name from squads file fallback teams.csv
     teams_rows = load_local_csv(f"{LOCAL}/teams.csv")
@@ -151,7 +152,29 @@ def main():
             pick = cands[0]
         else:
             d_iso = m["Date"][:10]
-            pick = min(cands, key=lambda c: abs((int(c["date"][8:10]) - int(d_iso[8:10]))))
+
+            def _daygap(c):
+                try:
+                    return abs(int(c["date"][8:10]) - int(d_iso[8:10]))
+                except (ValueError, TypeError, KeyError):
+                    return 10 ** 6
+
+            def _fullgap(c):
+                try:
+                    a = dt.date.fromisoformat(c["date"][:10])
+                    b = dt.date.fromisoformat(d_iso)
+                    return abs((a - b).days)
+                except (ValueError, TypeError, KeyError):
+                    return None
+
+            pick = min(cands, key=_daygap)
+            # Kiem chung: full-date phai dong y voi day-only, neu khac thi log
+            # de soat thu cong (giut pick cu de output on dinh).
+            full_pick = min(cands, key=lambda c: (_fullgap(c)
+                                                 if _fullgap(c) is not None else 10 ** 6))
+            if full_pick["match_id"] != pick["match_id"]:
+                print(f"  WARN map tran {h}-{a} {d_iso}: day-only={pick['match_id']} "
+                      f"vs full-date={full_pick['match_id']} (giut day-only)")
         used_local.add(pick["match_id"])
         id2local[m["IdMatch"]] = int(pick["match_id"])
     print(f"mapped={len(id2local)} unmatched={len(unmatched)}")
@@ -444,8 +467,8 @@ def main():
                     "match_date": m["Date"][:10],
                     "stage": mm["stage"],
                     "group": mm["group"] or "",
-                    "venue": next(r["venue"] for r in matches_out if r["match_id"] == lid),
-                    "city": next(r["city"] for r in matches_out if r["match_id"] == lid),
+                    "venue": next((r["venue"] for r in matches_out if r["match_id"] == lid), ""),
+                    "city": next((r["city"] for r in matches_out if r["match_id"] == lid), ""),
                     "home_team": mm["home_name"],
                     "away_team": mm["away_name"],
                     "home_score": mm["home_score"],

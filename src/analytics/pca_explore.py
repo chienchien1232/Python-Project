@@ -18,13 +18,27 @@ MIN_MIN = 90
 
 
 def main():
+    """PCA (giu 90% phuong sai): fit tren outfield, project ca GK.
+
+    Ghi player_pcs.csv (PC1-4), pca_loadings.csv, pca_scree.csv + 2 hinh.
+    """
     df = pd.read_csv(FEAT)
     df = df[df["minutes"] >= MIN_MIN].copy()
-    feats = [c for c in df.columns if c not in DROP and not c.startswith("total_")]
-    X = StandardScaler().fit_transform(df[feats].fillna(0))
+    # Loai *_shrunk khoi feats PCA de loadings giu ten goc cho UI map.
+    feats = [c for c in df.columns if c not in DROP and not c.startswith("total_")
+             and not c.endswith("_shrunk")]
+    # FIX: fit PCA chi tren outfield (GK toan 0 o chi so ngoai san keo lech truc).
+    # Sau do project GK qua cung scaler/PCA de giu du dong trong player_pcs.csv.
+    out_mask = df["position"].isin(["DEF", "MID", "FWD"])
+    scaler = StandardScaler()
+    X_out = scaler.fit_transform(
+        df.loc[out_mask, feats].apply(pd.to_numeric, errors="coerce").fillna(0).to_numpy(dtype=float))
+    X_all = scaler.transform(
+        df[feats].apply(pd.to_numeric, errors="coerce").fillna(0).to_numpy(dtype=float))
 
     pca = PCA(n_components=0.9)
-    pcs = pca.fit_transform(X)
+    pca.fit(X_out)
+    pcs = pca.transform(X_all)
     for i, pc in enumerate(pcs.T[:4], 1):
         df[f"PC{i}"] = pc
 
@@ -46,6 +60,9 @@ def main():
     loadings = pd.DataFrame(pca.components_.T, index=feats,
                             columns=[f"PC{i+1}" for i in range(len(ev))])
     loadings.to_csv(f"{OUT}/pca_loadings.csv")
+    pd.DataFrame({"PC": [f"PC{i+1}" for i in range(len(ev))],
+                  "explained_variance_pct": (pca.explained_variance_ratio_ * 100).round(1)}
+                 ).to_csv(f"{OUT}/pca_scree.csv", index=False)
     df.to_csv(f"{OUT}/player_pcs.csv", index=False)
 
     # ---- Plotly tuong tac: mau theo cluster, hover thong tin (spec 3.5) ----

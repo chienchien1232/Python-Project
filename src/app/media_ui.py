@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Shared photographic storytelling, national flags, and FIFA player portraits."""
 from __future__ import annotations
 
@@ -34,6 +35,13 @@ def static_version(filename: str) -> str:
 def static_url(filename: str) -> str:
     safe_name = quote(str(filename), safe="")
     return f"/app/static/{safe_name}?v={static_version(filename)}"
+
+
+def static_variant(filename: str, suffix: str) -> str:
+    """Return a generated WebP variant when it exists, otherwise the source asset."""
+    source = Path(filename)
+    candidate = source.with_suffix("").name + suffix + ".webp"
+    return candidate if (APP_ROOT / "static" / candidate).exists() else filename
 
 TEAM_CODES = {
     "Algeria": "ALG", "Argentina": "ARG", "Australia": "AUS", "Austria": "AUT",
@@ -261,13 +269,12 @@ def render_photo_story(
     index: str = "2026",
     page: str = "overview",
     overview_story: bool = False,
-    story_chapters: list[dict[str, str]] | None = None,
     show_title: bool = True,
 ) -> None:
-    """Render a page-specific sticky hero and the optional Overview photo reel."""
+    """Render the La Dolfina Jumping Overview experience or page-specific cover hero."""
     page_key = re.sub(r"[^a-z0-9-]", "", page.casefold().replace("_", "-")) or "overview"
     hero_assets = {
-        "overview": ("hero-overview-fifa-2026-v1.png", "FIFA World Cup 2026 celebration with Cristiano Ronaldo and the World Cup trophy"),
+        "overview": ("images.webp", "FIFA World Cup 2026 tournament hero artwork"),
         "matches": ("hero-matches-v1.png", "A match ball on the centre circle under stadium lights"),
         "teams": ("hero-teams-v1.png", "A national squad preparing together in the stadium tunnel"),
         "players": ("hero-players-v1.png", "Two football players facing each other under floodlights"),
@@ -276,85 +283,383 @@ def render_photo_story(
         "match-detail": ("hero-match-detail-v1.png", "Two football players contesting the ball during a match"),
     }
     asset_name, alt_text = hero_assets.get(page_key, hero_assets["overview"])
-    chapter_sets = {
-        "NATIONAL": ("THE SQUAD", "THE BADGE", "THE PLAN", "THE CROWD"),
-        "PLAYER": ("THE ARRIVAL", "THE TOUCH", "THE VISION", "THE MOMENT"),
-        "HEAD-TO-HEAD": ("TWO SIDES", "THE DETAIL", "THE SHAPE", "THE EDGE"),
-        "MACHINE": ("RAW SIGNAL", "THE FEATURE", "THE PATTERN", "THE OUTLIER"),
-        "SQUAD OPTIMIZATION": ("THE POOL", "THE ROLE", "THE SHAPE", "THE ELEVEN"),
-        "MATCH CALENDAR": ("ARRIVAL", "THE BALL", "THE PLAN", "MATCHDAY"),
-    }
-    chapters = next(
-        (items for token, items in chapter_sets.items() if token in kicker.upper()),
-        ("THE STAGE", "THE BALL", "THE PLAN", "ONE WORLD"),
-    )
-    scene_notes = (
-        "Before the whistle / anticipation",
-        "Technique under pressure / decisive detail",
-        "Reading space / shaping the match",
-        "Nations together / one tournament",
-    )
-    reel_panels = "".join(
-        '<article class="editorial-reel-panel reel-panel-' + str(number) + '">'
-        '<div class="editorial-reel-image" role="img" aria-label="' + escape(note) + '"></div>'
-        '<div class="editorial-reel-shade" aria-hidden="true"></div>'
-        '<div class="editorial-reel-caption"><span>0' + str(number) + ' / 04</span>'
-        '<small>' + escape(note) + '</small><h2>' + escape(title) + '</h2></div></article>'
-        for number, (title, note) in enumerate(zip(chapters, scene_notes), start=1)
-    )
 
-    chronicle_panels = ""
-    story_items = (story_chapters or [])[:3]
-    for number, chapter in enumerate(story_items, start=1):
-        title_html = "<br>".join(escape(str(chapter.get("title", ""))).splitlines())
-        chapter_image = str(chapter.get("image", ""))
-        chronicle_panels += (
-            '<article class="worldcup-chronicle-panel chronicle-panel-' + str(number) + '">'
-            '<div class="worldcup-chronicle-frame">'
-            '<div class="worldcup-chronicle-media"><img src="' + static_url(chapter_image)
-            + '" alt="' + escape(str(chapter.get("alt", "World Cup story chapter")), quote=True) + '">'
-            '</div><div class="worldcup-chronicle-copy">'
-            '<header><span>THE WORLD CUP CHRONICLE</span><span>0' + str(number) + ' / 0'
-            + str(len(story_items)) + '</span></header>'
-            '<div class="worldcup-chronicle-body">'
-            '<span class="worldcup-chronicle-kicker">' + escape(str(chapter.get("kicker", "CHAPTER"))) + '</span>'
-            '<small>' + escape(str(chapter.get("date", ""))) + '</small>'
-            '<h2>' + title_html + '</h2><p>' + escape(str(chapter.get("copy", ""))) + '</p>'
-            '<div class="worldcup-chronicle-stat"><strong>' + escape(str(chapter.get("stat", number)))
-            + '</strong><span>' + escape(str(chapter.get("label", "CHAPTER"))) + '</span></div>'
-            '</div></div></div></article>'
-        )
-    story_class = " is-overview" if overview_story else " is-cover"
-    # Order on Overview: hero → chronicle (3 history chapters) → reel.
-    # Other pages render no story sections at all.
-    story_html = ""
     if overview_story:
-        if chronicle_panels:
-            story_html += (
-                '<section class="worldcup-chronicle" aria-label="Three chapters from World Cup history">'
-                + chronicle_panels + '</section>'
-            )
-        story_html += (
-            '<section class="editorial-reel" aria-label="Four visual tournament summary chapters">'
-            '<div class="editorial-reel-stage">' + reel_panels + '</div></section>'
+        # La Dolfina Jumping Inspired Architecture for Overview
+        hero_desktop = static_variant(asset_name, "")
+        hero_tablet = static_variant(asset_name, "-tablet")
+        hero_mobile = static_variant(asset_name, "-mobile")
+
+        # 1. Portal hero: WORLD CUP 2026 event identity (real DB dates).
+        #    Title halves split on scroll; panels/du dots driven by JS.
+        hero_html = (
+            '<header class="portal page-overview" id="hero">'
+            '<div class="portal-stage">'
+            '<div class="portal-field">'
+            '<picture class="portal-picture">'
+            f'<source media="(max-aspect-ratio: 4 / 5)" srcset="{static_url(hero_mobile)}">'
+            f'<source media="(max-aspect-ratio: 4 / 3)" srcset="{static_url(hero_tablet)}">'
+            f'<img src="{static_url(hero_desktop)}" alt="{escape(alt_text, quote=True)}" '
+            'class="portal-img" loading="eager" fetchpriority="high">'
+            '</picture>'
+            '<div class="portal-duo" aria-hidden="true"></div>'
+            '<div class="portal-veil" aria-hidden="true"></div>'
+            '<div class="portal-panel portal-left" aria-hidden="true"></div>'
+            '<div class="portal-panel portal-right" aria-hidden="true"></div>'
+            '<span class="portal-dot portal-d1" aria-hidden="true"></span>'
+            '<span class="portal-dot portal-d2" aria-hidden="true"></span>'
+            '<div class="portal-cup" aria-hidden="true">'
+            '<svg viewBox="0 0 120 150" width="120" height="150" fill="none" stroke="#f2f1ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">'
+            '<path d="M38 12 C38 44 46 66 60 78 C74 66 82 44 82 12" />'
+            '<path d="M38 12 C26 14 20 26 24 40 C27 50 34 56 42 58" />'
+            '<path d="M82 12 C94 14 100 26 96 40 C93 50 86 56 78 58" />'
+            '<path d="M35 12 L85 12" />'
+            '<path d="M52 78 L52 104 M68 78 L68 104" />'
+            '<path d="M44 104 L76 104 L82 118 L38 118 Z" />'
+            '<path d="M32 118 L88 118 L94 136 L26 136 Z" />'
+            '<circle cx="60" cy="128" r="2.5" fill="#f2f1ec" stroke="none" />'
+            '</svg>'
+            '</div>'
+            '<h1 class="portal-title" aria-label="World Cup 2026">'
+            '<span class="portal-half">WORLD CUP</span>'
+            '<span class="portal-half">2026</span>'
+            '</h1>'
+            '<div class="portal-dates">'
+            '<div><strong>11</strong><span>JUNE</span></div>'
+            '<div class="portal-dates-sep">—</div>'
+            '<div><strong>19</strong><span>JULY</span></div>'
+            '</div>'
+            '<div class="portal-event">'
+            '<span class="portal-corner tl" aria-hidden="true"></span>'
+            '<span class="portal-corner br" aria-hidden="true"></span>'
+            'UNITED 2026 · USA — MEXICO — CANADA · 16 VENUES'
+            '</div>'
+            '<div class="portal-champ">'
+            'FINAL · SPAIN 1 – 0 ARGENTINA · METLIFE STADIUM'
+            '</div>'
+            '<a class="portal-cta" href="#leaderboards" data-hover-text="Explore">EXPLORE THE ARCHIVE</a>'
+            '<canvas class="portal-lines" aria-hidden="true"></canvas>'
+            '<div class="portal-meta portal-meta-top"><span>WORLD CUP / 2026</span><span>THE DATA ARCHIVE</span></div>'
+            '<div class="portal-meta portal-meta-bottom"><span>48 NATIONS · 104 MATCHES</span><span>SCROLL TO OPEN ↓</span></div>'
+            '</div>'
+            '</div>'
+            '</header>'
         )
+
+        st.markdown(hero_html, unsafe_allow_html=True)
+
+        # 4. Companion Runtime Script for Native Smooth Anchors, Portal, and Film Reveals
+        st.iframe(
+            """<script>
+(function() {
+  var pWin = null;
+  var pDoc = null;
+  try {
+    pWin = window.parent;
+    pDoc = window.parent.document;
+  } catch(e) {
+    return;
+  }
+  if (!pDoc || !pWin) return;
+
+  // Hide the host iframe container
+  try {
+    var fe = window.frameElement;
+    if (fe) {
+      var c = fe.closest('div[data-testid="stElementContainer"]') || fe.parentElement;
+      if (c) c.style.display = 'none';
+    }
+  } catch(e) {}
+
+  // 1. Native smooth anchor scrolling (no wheel hijack: Lenis removed —
+  //    it fought Streamlit's scroll container and caused stutter).
+  //    CSS `scroll-behavior: smooth` on .stMain handles the animation.
+  //    No click handlers: default anchor jumps are left intact.
+
+  // 2. Parallax Motion without sticky pinning.
+  //     Single rAF-throttled pass: batch all reads first, then all writes,
+  //     so scrolling never triggers forced synchronous layout (the stutter).
+  //     Skipped entirely under prefers-reduced-motion.
+  var reduceMotion = false;
+  try {
+    reduceMotion = pWin.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  } catch(e) {}
+  // 2. Film autoplay management is handled in section 6 below.
+
+  // 3. Image Reveal via IntersectionObserver
+  //     Under reduced-motion everything shows at once.
+  //     Film cells / solo copy join the same one-shot reveal system.
+  function initReveals() {
+    try {
+      if (!reduceMotion) pDoc.documentElement.classList.add('film-motion');
+    } catch(e) {}
+    var revealEls = pDoc.querySelectorAll('.film-cell, .film-solo-copy, .section-header, .kpi-sport-card, .leaderboard-card, .match-card-grid, div[data-testid="stDataFrame"]');
+    if (!revealEls.length) return;
+
+    if ('IntersectionObserver' in pWin && !reduceMotion) {
+      var observer = new pWin.IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -5% 0px',
+        threshold: 0.12
+      });
+
+      revealEls.forEach(function(el) {
+        observer.observe(el);
+      });
+    } else {
+      revealEls.forEach(function(el) { el.classList.add('is-revealed'); });
+    }
+  }
+  initReveals();
+  setTimeout(initReveals, 500);
+
+  // 4. Custom cursor removed (native cursor only).
+
+  // 5. Motion gate: .portal-live is added ONLY when motion is allowed,
+  //    so reduced-motion / no-JS renders show the finished page.
+  var motionOk = false;
+  try {
+    motionOk = !reduceMotion;
+  } catch(e) {}
+
+  // 6. Film autoplay management: play only while visible, pause off-screen
+  //    (saves battery/CPU with 5 looping videos); static poster frame
+  //    under reduced-motion.
+  function initFilms() {
+    var vids = pDoc.querySelectorAll('.film-vid, .film-solo-vid');
+    if (!vids.length) return;
+    vids.forEach(function(v) {
+      v.muted = true;
+      if (reduceMotion) { try { v.pause(); } catch(e) {} return; }
+    });
+    if (reduceMotion || !('IntersectionObserver' in pWin)) return;
+    var obs = new pWin.IntersectionObserver(function(entries) {
+      entries.forEach(function(en) {
+        var v = en.target;
+        try {
+          if (en.isIntersecting) { v.play(); }
+          else { v.pause(); }
+        } catch(e) {}
+      });
+    }, { threshold: 0.12 });
+    vids.forEach(function(v) { obs.observe(v); });
+  }
+  initFilms();
+  setTimeout(initFilms, 800);
+
+  // 7. Portal hero bound to SCROLL POSITION (reversible both ways).
+  //    Closed state is applied here (never in CSS) so no-JS stays open.
+  var portalQueued = false;
+  function portalProgress() {
+    var hero = pDoc.querySelector('.portal');
+    if (!hero) return -1;
+    var rect = hero.getBoundingClientRect();
+    var vh = pWin.innerHeight || 800;
+    var travel = Math.max(rect.height - vh, 1);
+    var p = -rect.top / travel;
+    return Math.min(1, Math.max(0, p));
+  }
+  function updatePortal() {
+    if (!motionOk || portalQueued) return;
+    portalQueued = true;
+    pWin.requestAnimationFrame(function() {
+      portalQueued = false;
+      var hero = pDoc.querySelector('.portal');
+      if (!hero || !hero.classList.contains('portal-live')) return;
+      var p = portalProgress();
+      if (p < 0) return;
+      var panels = hero.querySelectorAll('.portal-panel');
+      var halves = hero.querySelectorAll('.portal-half');
+      var img = hero.querySelector('.portal-img');
+      var duo = hero.querySelector('.portal-duo');
+      var title = hero.querySelector('.portal-title');
+      var d1 = hero.querySelector('.portal-d1');
+      var d2 = hero.querySelector('.portal-d2');
+      // Info copy fades out as the portal opens (nothing lingers).
+      var fade = hero.querySelectorAll(
+        '.portal-kicker,.portal-title,.portal-cup,.portal-dates,.portal-event,.portal-champ,.portal-cta,.portal-meta');
+      for (var k = 0; k < fade.length; k++) {
+        fade[k].style.opacity = Math.max(0, 1 - p * 1.6).toFixed(3);
+      }
+      if (panels[0]) panels[0].style.transform = 'translateX(' + (-p * 115).toFixed(2) + '%)';
+      if (panels[1]) panels[1].style.transform = 'translateX(' + (p * 115).toFixed(2) + '%)';
+      if (title) {
+        title.style.transform = 'translateY(-50%) scale(' + (1 + p * 0.28).toFixed(3) + ')';
+        title.style.letterSpacing = (6 - p * 16).toFixed(1) + 'px';
+      }
+      if (halves[0]) halves[0].style.transform = 'translateX(' + (-p * 55).toFixed(2) + '%)';
+      if (halves[1]) halves[1].style.transform = 'translateX(' + (p * 55).toFixed(2) + '%)';
+      if (img) img.style.transform = 'scale(' + (1.09 - p * 0.09).toFixed(3) + ')';
+      if (duo) duo.style.opacity = (p * 0.28).toFixed(3);
+      if (d1) d1.style.transform = 'translate(' + (-p * 38).toFixed(1) + 'vw,' + (-p * 36).toFixed(1) + 'vh)';
+      if (d2) d2.style.transform = 'translate(' + (p * 38).toFixed(1) + 'vw,' + (p * 36).toFixed(1) + 'vh)';
+    });
+  }
+  function initPortal() {
+    var hero = pDoc.querySelector('.portal');
+    if (!hero || !motionOk) return;
+    hero.classList.add('portal-live');
+    updatePortal();
+  }
+  pWin.addEventListener('scroll', updatePortal, { passive: true });
+  var mainEl = pDoc.querySelector('[data-testid="stMain"]');
+  if (mainEl) mainEl.addEventListener('scroll', updatePortal, { passive: true });
+  initPortal();
+  setTimeout(initPortal, 800);
+
+  // 9. Hero line-field canvas: slow mono hairline streaks (static frame
+  //    under reduced-motion; paused while the hero is off-screen).
+  function initPortalLines() {
+    var cv = pDoc.querySelector('.portal-lines');
+    if (!cv || !cv.getContext) return;
+    var ctx = cv.getContext('2d');
+    var W = 0, H = 0, lines = [], running = true, drawn = false;
+    function size() {
+      var r = cv.getBoundingClientRect();
+      W = Math.max(320, Math.floor(r.width));
+      H = Math.max(120, Math.floor(r.height));
+      cv.width = W; cv.height = H;
+    }
+    function seed() {
+      lines = [];
+      var n = Math.max(18, Math.min(44, Math.floor(W / 34)));
+      for (var i = 0; i < n; i++) {
+        lines.push({
+          x: Math.random() * W, y: Math.random() * H,
+          len: 40 + Math.random() * 150,
+          ang: -0.12 + (Math.random() - 0.5) * 0.5,
+          sp: 0.12 + Math.random() * 0.4,
+          a: 0.12 + Math.random() * 0.4
+        });
+      }
+    }
+    function frame() {
+      if (!running) { drawn = false; return; }
+      drawn = true;
+      ctx.clearRect(0, 0, W, H);
+      ctx.lineWidth = 1;
+      for (var i = 0; i < lines.length; i++) {
+        var L = lines[i];
+        if (!reduceMotion) {
+          L.x += L.sp;
+          if (L.x - L.len > W) { L.x = -L.len; L.y = Math.random() * H; }
+        }
+        ctx.strokeStyle = 'rgba(242,241,236,' + L.a.toFixed(2) + ')';
+        ctx.beginPath();
+        ctx.moveTo(L.x, L.y);
+        ctx.lineTo(L.x + L.len * Math.cos(L.ang), L.y + L.len * Math.sin(L.ang));
+        ctx.stroke();
+      }
+      if (!reduceMotion) pWin.requestAnimationFrame(frame);
+    }
+    function kick() {
+      size(); seed();
+      if (reduceMotion) { running = true; frame(); running = false; return; }
+      if (!drawn) frame();
+    }
+    size(); seed();
+    if ('IntersectionObserver' in pWin) {
+      new pWin.IntersectionObserver(function(es) {
+        es.forEach(function(en) {
+          running = en.isIntersecting;
+          if (running) frame();
+        });
+      }, { threshold: 0.02 }).observe(cv);
+    }
+    pWin.addEventListener('resize', kick);
+    kick();
+  }
+  initPortalLines();
+  setTimeout(initPortalLines, 800);
+})();
+</script>""",
+            # Hidden helper frame (its own container is display:none at runtime).
+            # Height must be a positive int per Streamlit validation.
+            height=8,
+            width="stretch",
+            tab_index=-1,
+        )
+        return
+
+    # Default Cover Hero for other pages
+    hero_markup = (
+        f'<img class="photo-story-image" src="{static_url(asset_name)}" '
+        f'alt="{escape(alt_text, quote=True)}">'
+    )
     story_label = (line_one + " " + line_two).strip() or kicker
     title_markup = (
-        '<h1><span>' + escape(line_one) + '</span><span>' + escape(line_two) + '</span></h1>'
+        f'<h1><span>{escape(line_one)}</span><span>{escape(line_two)}</span></h1>'
         if show_title else ''
     )
+
     st.markdown(
-        '<section class="photo-story-shell' + story_class + ' page-' + page_key + '" aria-label="' + escape(story_label) + '">'
+        f'<section class="photo-story-shell is-cover page-{page_key}" aria-label="{escape(story_label)}">'
         '<div class="photo-story-stage">'
-        '<img class="photo-story-image" src="' + static_url(asset_name) + '" '
-        'alt="' + escape(alt_text, quote=True) + '">'
-        '<div class="photo-story-shade" aria-hidden="true"></div>'
+        + hero_markup
+        + '<div class="photo-story-shade" aria-hidden="true"></div>'
         '<div class="photo-story-rule" aria-hidden="true"></div>'
-        '<div class="photo-story-top"><span>' + escape(kicker) + '</span><span>' + escape(index) + '</span></div>'
+        f'<div class="photo-story-top"><span>{escape(kicker)}</span><span>{escape(index)}</span></div>'
         '<div class="photo-story-copy">'
         + title_markup
-        + '<div class="photo-story-foot"><p>' + escape(description) + '</p>'
+        + f'<div class="photo-story-foot"><p>{escape(description)}</p>'
         '<span>SCROLL TO EXPLORE ↓</span></div></div>'
-        '</div></section>' + story_html,
+        '</div></section>',
         unsafe_allow_html=True,
     )
+
+
+def render_film_sections() -> None:
+    """Render solo feature film + 3-in-1 highlight frame on Overview.
+
+    Videos are local files in src/app/static (autoplay muted loop).
+    Missing files fall back to poster images so the layout never breaks.
+    """
+    clips = [
+        {"file": "15552725_3840_2160_30fps.mp4", "poster": "football-story-grid-v1.webp",
+         "label": "AERIAL FILM", "alt": "Aerial stadium film"},
+        {"file": "YTSave_YouTube_Media_e6a6lppWZkQ_Ferran-Torres-Goal-Spain-1-0-Argentina-FIFA-World-Cup-2026-FINAL_002_720p.mp4",
+         "poster": "worldcup-story-02-legends-v1.webp",
+         "label": "FINAL WINNER", "alt": "Ferran Torres final winning goal"},
+        {"file": "YTSave_YouTube_Media_ihVQ60ftXMQ_Hyundai-Goal-of-the-Tournament-FINAL-WINNER-FIFA-World-Cup-2026_003_480p.mp4",
+         "poster": "worldcup-story-03-future-v1.webp",
+         "label": "GOAL OF THE TOURNAMENT", "alt": "Goal of the tournament winner"},
+    ]
+    cells = ""
+    for c in clips:
+        src = static_url(c["file"])
+        cells += (
+            '<div class="film-cell">'
+            f'<video class="film-vid" muted loop autoplay playsinline preload="metadata" '
+            f'poster="{static_url(c["poster"])}" aria-label="{escape(c["alt"])}">'
+            f'<source src="{src}" type="video/mp4">'
+            '</video>'
+            f'<div class="film-cap">{escape(c["label"])}</div>'
+            '</div>'
+        )
+    strip_html = (
+        '<section class="film-solo" aria-label="Tournament story film">'
+        '<video class="film-solo-vid" muted loop autoplay playsinline preload="metadata" '
+        f'poster="{static_url("worldcup-story-01-origin-v1.webp")}" aria-label="The story of the 2026 FIFA World Cup">'
+        '<source src="'
+        + static_url("YTSave_YouTube_Media_BRv3KW-NIQc_ABSOLUTE-CINEMA-The-Story-Of-The-2026-FIFA-World-Cup_002_720p.mp4")
+        + '" type="video/mp4">'
+        '</video>'
+        '<div class="film-solo-shade" aria-hidden="true"></div>'
+        '<div class="film-solo-copy">'
+        '<div class="film-kicker">ABSOLUTE CINEMA / 145 SECONDS</div>'
+        '<h2>THE STORY OF<br>UNITED 2026.</h2>'
+        '</div>'
+        '</section>'
+        '<section class="film-strip" aria-label="World Cup highlights">'
+        '<h2 class="film-title">MOMENTS THAT<br>MOVED THE WORLD.</h2>'
+        f'<div class="film-row film-row-3">{cells}</div>'
+        '</section>'
+    )
+
+    st.markdown(strip_html, unsafe_allow_html=True)

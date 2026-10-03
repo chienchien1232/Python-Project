@@ -16,7 +16,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px 24px;
+  flex-wrap: wrap;
+  gap: 4px 24px;
   min-height: 38px;
   margin-top: 30px;
   padding: 14px 0 8px;
@@ -100,6 +101,7 @@
 [data-testid="stDataFrame"] [data-testid="stElementToolbar"] {
   display: flex;
   align-items: center;
+  position: static !important;
   min-height: 36px;
   border: 0;
   border-bottom: 1px solid var(--data-rule);

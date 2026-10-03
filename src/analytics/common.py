@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """Common helpers cho analytics suite (3.1-3.7)."""
 import csv
-import re
-import unicodedata
 
 PMS = "data/processed/wc2026_player_match/player_match_stats.csv"
 GK = "data/processed/wc2026_player_match/goalkeeper_match_stats.csv"
@@ -16,24 +14,20 @@ ACTION_COLS = [
 ]
 
 
-def norm(s):
-    s = unicodedata.normalize("NFD", s or "")
-    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
-    return re.sub(r"[^a-z0-9]", "", s.lower())
-
-
 def load_pms():
+    """Doc player_match_stats.csv tra ve list dict."""
     with open(PMS, newline="", encoding="utf-8-sig") as f:
         return list(csv.DictReader(f))
 
 
 def load_gk():
+    """Doc goalkeeper_match_stats.csv tra ve list dict."""
     with open(GK, newline="", encoding="utf-8-sig") as f:
         return list(csv.DictReader(f))
 
 
 def played(row):
-    """Dong co thuc su thi dau."""
+    """True neu dong la lan ra san that (minutes_played > 0)."""
     return row["minutes_played"] != "" and int(row["minutes_played"]) > 0
 
 

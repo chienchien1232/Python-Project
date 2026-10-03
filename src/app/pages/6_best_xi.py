@@ -27,60 +27,10 @@ for p in [app_path, sys_path]:
 
 from helpers import load_analytics_csv  # noqa: E402
 from media_ui import flag_image, player_portrait, render_photo_story  # noqa: E402
+from page_chrome import footer, setup_page  # noqa: E402
+from text_norm import clean_name  # noqa: E402
 
-# ── Page configuration ────────────────────────────────────────────────────────
-st.set_page_config(
-    page_title="Best XI Dream Team | WorldCup Stats '26",
-    page_icon="◉",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-)
-# First paint must be dark so page switches never flash white.
-st.markdown("<style>html,body,.stApp,#root{background:#050505 !important;color-scheme:dark}</style>", unsafe_allow_html=True)
-
-# ── Inject custom CSS ──────────────────────────────────────────────────────────
-css_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "style.css")
-if os.path.exists(css_path):
-    with open(css_path, "r", encoding="utf-8") as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-
-# ── Team flags lookup ─────────────────────────────────────────────────────────
-FLAGS = {
-    "Algeria": "DZ", "Argentina": "AR", "Australia": "AU", "Austria": "AT",
-    "Belgium": "BE", "Bosnia and Herzegovina": "BA", "Brazil": "BR",
-    "Cabo Verde": "CV", "Canada": "CA", "Colombia": "CO", "Congo DR": "CD",
-    "Croatia": "HR", "Curaçao": "CW", "Czechia": "CZ", "Côte d'Ivoire": "CI",
-    "Ecuador": "EC", "Egypt": "EG", "England": "ENG", "France": "FR",
-    "Germany": "DE", "Ghana": "GH", "Haiti": "HT", "IR Iran": "IR",
-    "Iraq": "IQ", "Japan": "JP", "Jordan": "JO", "Mexico": "MX",
-    "Morocco": "MA", "Netherlands": "NL", "New Zealand": "NZ", "Norway": "NO",
-    "Panama": "PA", "Paraguay": "PY", "Portugal": "PT", "Qatar": "QA",
-    "Saudi Arabia": "SA", "Scotland": "SCO", "Senegal": "SN",
-    "South Africa": "ZA", "South Korea": "KR", "Spain": "ES", "Sweden": "SE",
-    "Switzerland": "CH", "Tunisia": "TN", "Türkiye": "TR", "USA": "US",
-    "Uruguay": "UY", "Uzbekistan": "UZ",
-}
-
-
-def clean_name(val):
-    if not isinstance(val, str):
-        return str(val) if val is not None else ""
-    return (
-        val.replace("Adrin", "Adrian")
-           .replace("Andrs", "Andres")
-           .replace("Damin", "Damian")
-           .replace("Curaao", "Curacao")
-           .replace("Cte d'Ivoire", "Côte d'Ivoire")
-           .replace("Trkiye", "Türkiye")
-           .replace("Lionel Andrs Messi", "Lionel Messi")
-           .replace("Rodrigo Rodri", "Rodri")
-           .replace("Kylian Mbappe", "Kylian Mbappé")
-    )
-
-
-def flag(team_name: str) ->str:
-    return FLAGS.get(clean_name(team_name), "—")
+setup_page("Best XI Dream Team | WorldCup Stats '26")
 
 
 # ── Top Navigation Bar ────────────────────────────────────────────────────────
@@ -133,6 +83,10 @@ if clusters is not None and "cluster_label" in clusters.columns:
     clusters["player_id"] = clusters["player_id"].astype(str)
     df = df.merge(clusters[["player_id", "cluster_label"]].drop_duplicates("player_id"),
                   on="player_id", how="left")
+    # Alias on dinh: gom ten cum phong ngu ve 1 nhan de rang buoc ML khong vo
+    # khi analytics doi nhan (Defensive Anchor <-> Defensive Player).
+    df["cluster_label"] = df["cluster_label"].replace(
+        {"Defensive Anchor": "Defensive Player"})
 
 
 # ── Best XI workspace marker and heading ─────────────────────────────────────
@@ -456,10 +410,4 @@ data_table(disp_xi, width="stretch", label="Selected eleven / performance index"
 
 
 # ── Footer ────────────────────────────────────────────────────────────────────
-st.markdown("<div style='height:30px'></div>", unsafe_allow_html=True)
-st.markdown(
-    "<div style='text-align:center;color:#64748b;font-size:12.5px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.06)'>"
-    "WorldCup Stats '26 Analytics Platform &nbsp;·&nbsp; Data powered by FIFA, ESPN &amp; official match records &nbsp;·&nbsp; Built with Python &amp; Streamlit"
-    "</div>",
-    unsafe_allow_html=True,
-)
+footer()

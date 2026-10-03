@@ -25,7 +25,7 @@ def q(sql, params=None):
     return _q_cached(sql, key).copy()
 
 
-@st.cache_data(ttl=600, show_spinner=False)
+@st.cache_data(ttl=600, show_spinner="Đang tải dữ liệu trận đấu...")
 def _q_cached(sql, params_key):
     con = get_conn()
     if con is None:
@@ -39,7 +39,7 @@ def load_analytics_csv(filename):
     return result.copy() if result is not None else None
 
 
-@st.cache_data(ttl=600, show_spinner=False)
+@st.cache_data(ttl=600, show_spinner="Đang tải kết quả phân tích...")
 def _load_analytics_csv_cached(filename):
     path = os.path.join(ANALYTICS, filename)
     if not os.path.exists(path):
@@ -47,7 +47,7 @@ def _load_analytics_csv_cached(filename):
     return pd.read_csv(path)
 
 
-@st.cache_data(ttl=600, show_spinner=False)
+@st.cache_data(ttl=600, show_spinner="Đang tải ma trận tương đồng...")
 def _similarity_matrix_cached():
     path = os.path.join(ANALYTICS, "similarity_matrix.parquet")
     if not os.path.exists(path):

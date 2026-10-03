@@ -26,11 +26,6 @@ def load(path, delim=","):
         return list(r), list(r.fieldnames)
 
 
-def to_int(v):
-    v = str(v).strip()
-    return int(v) if v else None
-
-
 # ---------- A. canonical ----------
 log("=== A. CANONICAL CSV ===")
 names = ["matches", "match_events", "match_lineups", "match_team_stats",
@@ -72,9 +67,14 @@ for child, col, parent in checks:
 log(f"  FK ({len(checks)} rang buoc): {'OK' if not fk_fail else 'FAIL'}")
 
 # format: delimiter phay + ten Title Case
+def _first_line(path):
+    with open(path, encoding="utf-8-sig") as f:
+        return f.readline()[:120]
+
+
 semi = [fn for fn in os.listdir(CSV) if fn.endswith(".csv")
-        and ";" in open(f"{CSV}/{fn}", encoding="utf-8-sig").readline()[:120]
-        and "," not in open(f"{CSV}/{fn}", encoding="utf-8-sig").readline()]
+        and ";" in _first_line(f"{CSV}/{fn}")
+        and "," not in _first_line(f"{CSV}/{fn}")]
 log(f"  delimiter ';': {semi or 'khong co - OK'}")
 
 

@@ -47,17 +47,28 @@ ROLE_MIX = {  # tron 4 score thanh Overall theo vai tro
 
 
 def pct_rank(s):
+    """Percentile rank 0-100 cua Series (NaN -> 0 nho fillna truoc)."""
     return (s.rank(pct=True) * 100).round(1)
 
 
 def main():
+    """4 diem chuyen mon + overall theo ROLE_MIX (percentile trong vai tro).
+
+    Ghi analytics_scores.csv + score_validation.csv (Spearman overall~output).
+    """
     df = pd.read_csv(FEAT)
     df = df[df["minutes"] >= MIN_MIN].copy()
+
+    # Uu tien cot shrunk (chong hat-trick 1 tran), fallback cot goc.
+    def _col(c):
+        s = c + "_shrunk"
+        return s if s in df.columns else c
 
     # 4 score chuyen mon cho outfield
     for sc_name, weights in SCORE_DEFS.items():
         total = pd.Series(0.0, index=df.index)
         for col, w in weights.items():
+            col = _col(col) if col != "pass_accuracy_pct" else col
             if col in df.columns:
                 total += w * pct_rank(df[col].fillna(0))
         df[sc_name] = total.round(1)
@@ -86,8 +97,38 @@ def main():
     result = result.sort_values("overall_score", ascending=False)
     os.makedirs(OUT, exist_ok=True)
     result.to_csv(f"{OUT}/analytics_scores.csv", index=False)
-
     print(f"Analytics Scores: {len(result)} cau thu (>= {MIN_MIN} phut)")
+
+    # Bien luan ROLE_MIX bang so lieu: overall phai tuong quan voi san luong
+    # (goals+assists) hon la voi minutes don thuan trong tung vai tro.
+    val = result.copy()
+    feat_full = pd.read_csv(FEAT)
+    val = val.merge(feat_full[["player_id", "total_goals", "total_assists",
+                               "total_tackles", "total_interceptions",
+                               "total_clearances"]],
+                    on="player_id", how="left")
+    val["ga"] = val["total_goals"].fillna(0) + val["total_assists"].fillna(0)
+    val["def_act"] = (val["total_tackles"].fillna(0)
+                      + val["total_interceptions"].fillna(0)
+                      + val["total_clearances"].fillna(0))
+    # Output chuan theo vai tro: DEF do bang hanh dong phong ngu, MID/FWD do
+    # bang goals+assists (hau ve hiem khi ghi ban nen tuong quan goals thap la
+    # dung ban chat, khong phai loi weights).
+    TARGET = {"DEF": "def_act", "MID": "ga", "FWD": "ga"}
+    vrows = []
+    for pos in ("DEF", "MID", "FWD"):
+        m = val[val["position"] == pos]
+        if len(m) > 5:
+            tgt = TARGET[pos]
+            vrows.append({"position": pos, "n": len(m), "target": tgt,
+                          "spearman_overall_vs_output": round(
+                              m["overall_score"].corr(m[tgt], method="spearman"), 3),
+                          "spearman_overall_vs_minutes": round(
+                              m["overall_score"].corr(m["minutes"], method="spearman"), 3)})
+    pd.DataFrame(vrows).to_csv(f"{OUT}/score_validation.csv", index=False)
+    print("\nBien luan ROLE_MIX (overall ~ output, khong phai minutes):")
+    print(pd.DataFrame(vrows).to_string(index=False))
+
     print("\nTop OVERALL theo vai tro:")
     for pos in ("GK", "DEF", "MID", "FWD"):
         top3 = result[result["position"] == pos].head(3) if pos != "GK" else \
@@ -103,6 +144,7 @@ def main():
 
 
 def _top_gk(min_min):
+    """Xep hang GK theo saves_p90/save_pct/clean-sheet (thang rieng)."""
     gk = pd.read_csv(GK)
     gk = gk[gk["minutes"] >= min_min].copy()
     gk["saves_p90"] = pd.to_numeric(gk["saves_p90"], errors="coerce").fillna(0)

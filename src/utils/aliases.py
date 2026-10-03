@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""Bang alias ten doi tuyen - dung chung A1/A2/B.
+"""Bang alias ten doi tuyen - dung chung.
 
 Khoa: chuoi da chuan hoa (bo dau, chi chu thuong) -> ten trong csv/teams.csv
-Dung: src/utils/io_helpers.norm() truoc khi tra cuu.
+Chuan hoa key bang cach bo dau + lower + giu [a-z] truoc khi tra cuu.
 """
 ALIAS = {
     "korearepublic": "southkorea",
