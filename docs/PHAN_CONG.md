@@ -31,7 +31,7 @@ CSV trực tiếp, thiếu file thì cảnh báo không crash.
 |---|---|---|
 | TV6: _________Chiến_ | Feature + clustering | `build_features.py`, `common.py`, `eda_report.py`, `notebooks/C_eda_ml.ipynb`, `player_clusters.py`, `team_clusters.py` |
 | TV7: ___Mạnh_______ | Similarity/PCA/anomaly/score | `player_similarity.py`, `pca_explore.py`, `detect_anomalies.py`, `analytics_score.py` |
-| TV8: _____Quốc Anh_____ | Value/XI + pipeline ML | `market_value.py`, `best_xi.py`, `ml_data.py`, `run_ml_pipeline.py`, `Player_Analysis/`, `Team_Analysis/` |
+| TV8: _____Quốc Anh_____ | Value/XI + pipeline ML | `market_value.py`, `best_xi.py` (pipeline song song `Player_Analysis/`, `Team_Analysis/`, `ml_data.py`, `run_ml_pipeline.py` đã dọn đợt clean) |
 
 Cam kết nhóm 3: output đúng schema `data/processed/analytics/` kèm file bằng chứng
 (`eda_*`, `cluster_tuning.csv`, `market_value_cv/ablation/calibration.csv`,
