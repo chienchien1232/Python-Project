@@ -19,8 +19,8 @@ CSV nguồn trong `data/processed/csv/` không được sửa sau khi chốt.
 
 | Người | Vai trò | File sở hữu |
 |---|---|---|
-| TV4: _____Đức_____ | Trang dữ liệu + nền tảng | `src/app/app.py`, `pages/1_matches.py`, `2_teams.py`, `7_match_detail.py`, `match_data.py`, `navigation.py`, `page_chrome.py`, `text_norm.py`, `start-dashboard.bat`, `tests/ui_smoke.py`, toàn bộ `*.css`, `media_ui.py`, `match_ui.py`, `src/app/static/` |
-| TV5: ______Trung____ | Trang cầu thủ/ML/BestXI | `pages/3_players.py`, `4_compare.py`, `5_ml_explorer.py`, `6_best_xi.py`, `compare_ui.py`, `helpers.py`, `table_ui.py` |
+| TV4: _____Đức_____ | Trang dữ liệu + nền tảng | `src/app/app.py`, `src/app/pages/1_matches.py`, `2_teams.py`, `7_match_detail.py`, `src/app/match_data.py`, `src/app/navigation.py`, `src/app/page_chrome.py`, `src/app/text_norm.py`, `src/app/ui/media_ui.py`, `src/app/ui/match_ui.py`, `src/app/ui/styles/*.css`, `src/app/static/`, `start-dashboard.bat`, `tests/ui_smoke.py` |
+| TV5: ______Trung____ | Trang cầu thủ/ML/BestXI | `src/app/pages/3_players.py`, `4_compare.py`, `5_ml_explorer.py`, `6_best_xi.py`, `src/app/ui/compare_ui.py`, `src/app/helpers.py`, `src/app/ui/table_ui.py` |
 
 Cam kết nhóm 2: smoke 34/34 PASS; web chỉ đọc DB + file analytics, không đọc
 CSV trực tiếp, thiếu file thì cảnh báo không crash.

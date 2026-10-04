@@ -42,11 +42,12 @@ toolbar mặc định để menu MPA cũ không lóe lên khi tải trang.
 ## 2. Cấu trúc dự án
 
 ```plaintext
-my_python_project/
+Fotball_analys/
 ├── data/               # raw (FIFA API) / processed (csv chuẩn, wc2026_player_match, analytics) / db
-├── src/                # pipeline, db, analytics, app, utils
+├── src/                # pipeline, db, analytics, app (pages + ui/styles), utils
 ├── notebooks/          # C_eda_ml.ipynb (EDA phục vụ BTL)
 ├── tests/              # ui_smoke.py (34 kịch bản)
+├── .streamlit/         # config.toml (theme + port 8521)
 ├── .gitignore
 ├── requirements.txt    # pin cứng phiên bản đã kiểm tra
 ├── start-dashboard.bat # entrypoint duy nhất (tự tạo .venv + cài + mở browser)
@@ -65,7 +66,7 @@ my_python_project/
 
 Module dùng chung: `src/app/text_norm.py` (chuẩn hóa tên + mã đội),
 `src/app/page_chrome.py` (boilerplate trang: config + CSS + footer),
-`src/app/utils/entity_resolve.py` (nối thực thể: blocking + difflib + ThreadPool).
+`src/utils/entity_resolve.py` (nối thực thể: blocking + difflib + ThreadPool).
 
 ## 3. Luồng dữ liệu & kiến trúc
 
@@ -192,8 +193,10 @@ match hợp lệ/không tồn tại, lọc và tìm kiếm.
 
 ## 9. Phát triển
 
-CSS tách theo trách nhiệm: style.css (nền chung + navbar), photo_story.css
-(hero/portal/film/chapters), table_theme.css (bảng), match_experience.css
-(Matches + Match Detail), unified_pages.css, xnrgy.css, best_xi.css.
+CSS tách theo trách nhiệm (`src/app/ui/styles/`): style.css (nền chung + navbar),
+table_theme.css (bảng), photo_story.css (hero/portal/film/chapters),
+match_experience.css (Matches + Match Detail), unified_pages.css, xnrgy.css,
+best_xi.css, compare.css (khối head-to-head), page_teams.css, page_players.css,
+page_ml.css, page_overview_xi.css (khối AI Squad Builder ở Overview).
 Component HTML và ánh xạ ảnh dùng chung: media_ui.py, table_ui.py, match_ui.py,
 compare_ui.py. Không dùng `import *`; tên snake_case; hằng UPPER_SNAKE_CASE.
