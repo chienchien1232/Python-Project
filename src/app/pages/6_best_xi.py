@@ -25,7 +25,7 @@ for p in [app_path, sys_path]:
     if p not in sys.path:
         sys.path.insert(0, p)
 
-from helpers import load_analytics_csv  # noqa: E402
+from helpers import load_analytics_csv, q  # noqa: E402
 from ui.media_ui import flag_image, player_portrait, render_photo_story  # noqa: E402
 from page_chrome import footer, setup_page  # noqa: E402
 from text_norm import clean_name  # noqa: E402
@@ -58,21 +58,20 @@ FORMATIONS = {
     "3-4-3": {"GK": 1, "DEF": 3, "MID": 4, "FWD": 3},
 }
 
-scores_path = os.path.join(ANALYTICS, "analytics_scores.csv")
-if not os.path.exists(scores_path):
+df = load_analytics_csv("analytics_scores.csv", dtype={"player_id": str})
+if df is None:
     st.error("Analytics scores file not found. Run `python src/analytics/analytics_score.py`.")
     st.stop()
-
-df = pd.read_csv(scores_path, dtype={"player_id": str})
 df = df[df["minutes"].astype(float) >= 90].copy()
 df["player_name"] = df["player_name"].apply(clean_name)
 df["team"] = df["team"].apply(clean_name)
 
-# Squad market valuations
-sq_path = os.path.join(ROOT, "data", "processed", "csv", "squads_and_players.csv")
-if os.path.exists(sq_path):
-    sq = pd.read_csv(sq_path, dtype={"player_id": str})[["player_id", "market_value_eur", "date_of_birth"]]
-    df = df.merge(sq, on="player_id", how="left")
+# Squad market valuations + birth dates from the web SQLite (single source
+# of truth for base data). player_id is TEXT in DB, matching scores dtype.
+sq = q("SELECT CAST(player_id AS TEXT) AS player_id, market_value_eur, date_of_birth"
+       " FROM squads_and_players")
+if not sq.empty and {"player_id", "market_value_eur", "date_of_birth"}.issubset(sq.columns):
+    df = df.merge(sq[["player_id", "market_value_eur", "date_of_birth"]], on="player_id", how="left")
     df["value_meur"] = (pd.to_numeric(df["market_value_eur"], errors="coerce") / 1e6).round(1)
 else:
     df["value_meur"] = 25.0

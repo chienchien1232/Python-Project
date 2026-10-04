@@ -33,18 +33,24 @@ def _q_cached(sql, params_key):
     return pd.read_sql(sql, con, params=list(params_key) if params_key else [])
 
 
-def load_analytics_csv(filename):
-    """Doc output cua Nhóm B tu data/processed/analytics/. Tra None neu thieu."""
-    result = _load_analytics_csv_cached(filename)
+def load_analytics_csv(filename, dtype=None):
+    """Doc output cua Nhóm B tu data/processed/analytics/. Tra None neu thieu.
+
+    `dtype` (dict hoac None) chi truyen thang cho pandas; cache van 1 duong
+    duy nhat qua `_load_analytics_csv_cached` (dict duoc dong bang thanh
+    tuple de hash duoc cho st.cache_data).
+    """
+    frozen = tuple(sorted(dtype.items())) if dtype else None
+    result = _load_analytics_csv_cached(filename, frozen)
     return result.copy() if result is not None else None
 
 
 @st.cache_data(ttl=600, show_spinner="Đang tải kết quả phân tích...")
-def _load_analytics_csv_cached(filename):
+def _load_analytics_csv_cached(filename, dtype_key):
     path = os.path.join(ANALYTICS, filename)
     if not os.path.exists(path):
         return None
-    return pd.read_csv(path)
+    return pd.read_csv(path, dtype=dict(dtype_key) if dtype_key else None)
 
 
 @st.cache_data(ttl=600, show_spinner="Đang tải ma trận tương đồng...")

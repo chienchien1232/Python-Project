@@ -673,7 +673,9 @@ def main():
         })
     write_csv(f"{OUT}/players.csv", pmaster_rows)
 
-    # ---------- 7. sqlite ----------
+    # ---------- 7. sqlite (DB TRUNG GIAN cua pipeline ML - web KHONG doc) ----------
+    # Web dashboard chi doc data/db/wc2026_full.db (xay boi src/db/build_db.py).
+    # File nay chi phuc vu debug/kiem tra pipeline tai cho.
     db_path = f"{OUT}/wc2026.db"
     if os.path.exists(db_path):
         os.remove(db_path)

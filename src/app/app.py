@@ -15,7 +15,7 @@ sys_path = os.path.join(ROOT, "src")
 if sys_path not in sys.path:
     sys.path.insert(0, sys_path)
 
-from helpers import q  # noqa: E402
+from helpers import load_analytics_csv, q  # noqa: E402
 from ui.media_ui import flag_image, render_film_sections, render_photo_story  # noqa: E402
 from page_chrome import footer, setup_page  # noqa: E402
 from ui.table_ui import data_table  # noqa: E402
@@ -231,9 +231,8 @@ with ch2:
 # ── Best XI preview ───────────────────────────────────────────────────────────
 st.markdown("<div class='section-header'> World Cup 2026 Best XI Preview</div>", unsafe_allow_html=True)
 
-xi_path = os.path.join(ROOT, "data", "processed", "analytics", "best_xi.csv")
-if os.path.exists(xi_path):
-    xi_df = pd.read_csv(xi_path)
+xi_df = load_analytics_csv("best_xi.csv")
+if xi_df is not None:
     if "player_name" in xi_df.columns:
         xi_df["player_name"] = xi_df["player_name"].apply(clean_name)
 
