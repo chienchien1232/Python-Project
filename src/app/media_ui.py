@@ -491,12 +491,21 @@ def render_photo_story(
     hero.classList.add('portal-live');
     updatePortal();
   }
-  if (!pWin.__portalBound) {
-    pWin.__portalBound = true;
-    pWin.addEventListener('scroll', updatePortal, { passive: true });
-    var mainEl = pDoc.querySelector('[data-testid="stMain"]');
-    if (mainEl) mainEl.addEventListener('scroll', updatePortal, { passive: true });
-  }
+  // Re-bind on every run (client-side routing keeps one document, so a
+  // once-forever guard would leave listeners on a detached scroller).
+  try {
+    if (pWin.__portalWinH) pWin.removeEventListener('scroll', pWin.__portalWinH, { passive: true });
+    var __mainOld = pWin.__portalMainEl;
+    if (__mainOld && pWin.__portalMainH) {
+      try { __mainOld.removeEventListener('scroll', pWin.__portalMainH, { passive: true }); } catch(e) {}
+    }
+  } catch(e) {}
+  pWin.__portalWinH = updatePortal;
+  pWin.addEventListener('scroll', updatePortal, { passive: true });
+  var mainEl = pDoc.querySelector('[data-testid="stMain"]');
+  pWin.__portalMainEl = mainEl;
+  pWin.__portalMainH = updatePortal;
+  if (mainEl) mainEl.addEventListener('scroll', updatePortal, { passive: true });
   initPortal();
   setTimeout(initPortal, 800);
 
@@ -508,9 +517,9 @@ def render_photo_story(
     cv.__streakInit = true;
     var ctx = cv.getContext('2d');
     var W = 0, H = 0, parts = [], targets = [], cup = { x: 0, y: 0, w: 120 };
-    var running = true, drawn = false, t0 = 0;
+    var running = true, drawn = false, t0 = 0, layoutKey = "";
     var BLUE = ['91,192,222', '46,139,192', '242,241,236'];
-    var CYCLE = 9500;
+    var CYCLE = 12500;
     function size() {
       var r = cv.getBoundingClientRect();
       W = Math.max(320, Math.floor(r.width));
@@ -531,18 +540,18 @@ def render_photo_story(
         o.fillStyle = '#fff';
         o.textAlign = 'center';
         o.textBaseline = 'middle';
-        var fs = Math.max(32, Math.round(H * 0.16));
-        o.font = '600 ' + fs + 'px "Arial Narrow", Arial, sans-serif';
-        o.fillText('WORLD CUP', W / 2, H * 0.70 - 30);
-        o.fillText('2026', W / 2, H * 0.88 - 30);
+        var fs = Math.max(30, Math.round(H * 0.14));
+        o.font = '300 ' + fs + 'px "Arial Narrow", Arial, sans-serif';
+        o.fillText('WORLD', W / 2, H * 0.46);
+        o.fillText('CUP 2026', W / 2, H * 0.60);
         var img = o.getImageData(0, 0, W, H).data;
-        var step = Math.max(2, Math.round(W / 320));
+        var step = Math.max(3, Math.round(W / 150));
         for (var y = 0; y < H; y += step) {
           for (var x = 0; x < W; x += step) {
             if (img[((y * W) + x) * 4 + 3] > 128) targets.push([x, y]);
           }
         }
-        while (targets.length > 1100) {
+        while (targets.length > 800) {
           targets = targets.filter(function(_, i) { return i % 2 === 0; });
         }
       } catch(e) { targets = []; }
@@ -554,7 +563,11 @@ def render_photo_story(
         }
       } catch(e) {}
     }
-    function seed() {
+    function seed(force) {
+      // Cache targets: chi rebuild getImageData khi kich thuoc doi.
+      var key = W + "x" + H;
+      if (!force && key === layoutKey && targets.length) return;
+      layoutKey = key;
       buildTargets();
       parts = [];
       var n = Math.max(targets.length, 120);
@@ -567,8 +580,8 @@ def render_photo_story(
           rx: cup.w * (0.75 + Math.random() * 0.55),
           ry: cup.w * (0.32 + Math.random() * 0.12),
           sp: (0.004 + Math.random() * 0.010) * (Math.random() < 0.5 ? 1 : -1),
-          ci: i % 3, a: 0.85 + Math.random() * 0.15,
-          sz: 1.8, dl: Math.random() * 0.06
+          ci: 2, a: 0.70 + Math.random() * 0.20,
+          sz: 1.5, dl: Math.random() * 0.04
         });
       }
       t0 = pWin.performance ? pWin.performance.now() : Date.now();
@@ -579,10 +592,16 @@ def render_photo_story(
       } catch(e) {}
       return false;
     }
-    var lastT = 0, lastPhase = 0;
+    var lastT = 0, lastPhase = 0, lastDraw = 0;
     function frame(now) {
       if (!running) { drawn = false; return; }
       if (!cv.isConnected) { running = false; drawn = false; return; }
+      // Cap 30fps: bo frame thua, vat ly dung dt nen chuyen dong van chuan.
+      if (now && lastDraw && now - lastDraw < 33) {
+        if (!reduceMotion) pWin.requestAnimationFrame(frame);
+        return;
+      }
+      lastDraw = now || 0;
       drawn = true;
       var nowMs = now || 0;
       var dt = Math.min(0.05, Math.max(0.001, (nowMs - (lastT || nowMs)) / 1000));
@@ -592,11 +611,11 @@ def render_photo_story(
       if (phase < 0) phase += Math.ceil(-phase) + 1, phase = phase % 1;
       var open = heroOpen();
       if (open || !targets.length) {
-        // Hero open (or no glyph targets): orbit only; refresh layout
-        // only on cycle wrap so scrolling stays cheap.
+        // Hero open (or no glyph targets): full-screen flight only.
         if (phase < lastPhase) { buildTargets(); seed(); }
         phase = 1;
       }
+      // Het text: tach ra bay vong quanh cup (orbit ellipse vua khung).
       lastPhase = phase;
       ctx.clearRect(0, 0, W, H);
       for (var i = 0; i < parts.length; i++) {
@@ -604,7 +623,7 @@ def render_photo_story(
         var gx, gy, k;
         if (phase < 0.42 && !heroOpen()) {
           // Converge into the title glyphs (with per-dot delay).
-          var lp = Math.min(1, Math.max(0, (phase - P.dl) / 0.3));
+          var lp = Math.min(1, Math.max(0, (phase - P.dl) / 0.2));
           var e = lp * lp * (3 - 2 * lp);
           gx = P.x + (P.tx - P.x) * Math.min(1, e * 1.15);
           gy = P.y + (P.ty - P.y) * Math.min(1, e * 1.15);
@@ -620,12 +639,12 @@ def render_photo_story(
         P.y += (gy - P.y) * Math.min(1, dt * k * 60 * 0.06 + 0.04);
         ctx.fillStyle = 'rgba(' + BLUE[P.ci] + ',' + P.a.toFixed(2) + ')';
         ctx.beginPath();
-        ctx.arc(P.x, P.y, P.sz * 3.4, 0, Math.PI * 2);
-        ctx.globalAlpha = 0.16;
+        ctx.arc(P.x, P.y, P.sz * 5.0, 0, Math.PI * 2);
+        ctx.globalAlpha = 0.12;
         ctx.fill();
-        ctx.globalAlpha = 0.4;
         ctx.beginPath();
-        ctx.arc(P.x, P.y, P.sz * 2.2, 0, Math.PI * 2);
+        ctx.arc(P.x, P.y, P.sz * 3.0, 0, Math.PI * 2);
+        ctx.globalAlpha = 0.35;
         ctx.fill();
         ctx.globalAlpha = 1;
         ctx.fillStyle = 'rgba(255,255,255,1)';
@@ -666,10 +685,14 @@ def render_photo_story(
   }
   try {
     if ('MutationObserver' in pWin && pDoc.body) {
-      new pWin.MutationObserver(function() {
+      if (pWin.__portalMutObs) {
+        try { pWin.__portalMutObs.disconnect(); } catch(e) {}
+      }
+      pWin.__portalMutObs = new pWin.MutationObserver(function() {
         if (domTimer) pWin.clearTimeout(domTimer);
         domTimer = pWin.setTimeout(reinitDynamic, 600);
-      }).observe(pDoc.body, { childList: true, subtree: true });
+      });
+      pWin.__portalMutObs.observe(pDoc.body, { childList: true, subtree: true });
     }
   } catch(e) {}
 })();
@@ -682,9 +705,10 @@ def render_photo_story(
         )
         return
 
-    # Default Cover Hero for other pages
+    # Default Cover Hero for other pages (resolve webp variant first —
+    # the source PNGs were removed, so raw names would 404).
     hero_markup = (
-        f'<img class="photo-story-image" src="{static_url(asset_name)}" '
+        f'<img class="photo-story-image" src="{static_url(static_variant(asset_name, ""))}" '
         f'alt="{escape(alt_text, quote=True)}">'
     )
     story_label = (line_one + " " + line_two).strip() or kicker
@@ -716,8 +740,9 @@ def render_film_sections() -> None:
     Missing files fall back to poster images so the layout never breaks.
     """
     clips = [
-        {"file": "15552725_3840_2160_30fps.mp4", "poster": "football-story-grid-v1.webp",
-         "label": "AERIAL FILM", "alt": "Aerial stadium film"},
+        {"file": "YTSave_YouTube_Media_ZTdOX1U2K0Q_This-is-FIFA-World-Cup-26_004_360p.mp4",
+         "poster": "football-story-grid-v1.webp",
+         "label": "THIS IS WORLD CUP 26", "alt": "This is FIFA World Cup 26 film"},
         {"file": "YTSave_YouTube_Media_e6a6lppWZkQ_Ferran-Torres-Goal-Spain-1-0-Argentina-FIFA-World-Cup-2026-FINAL_002_720p.mp4",
          "poster": "worldcup-story-02-legends-v1.webp",
          "label": "FINAL WINNER", "alt": "Ferran Torres final winning goal"},
@@ -730,7 +755,7 @@ def render_film_sections() -> None:
         src = static_url(c["file"])
         cells += (
             '<div class="film-cell">'
-            f'<video class="film-vid" muted loop autoplay playsinline preload="metadata" '
+            f'<video class="film-vid" muted loop playsinline preload="metadata" '
             f'poster="{static_url(c["poster"])}" aria-label="{escape(c["alt"])}">'
             f'<source src="{src}" type="video/mp4">'
             '</video>'
@@ -739,7 +764,7 @@ def render_film_sections() -> None:
         )
     strip_html = (
         '<section class="film-solo" aria-label="Tournament story film">'
-        '<video class="film-solo-vid" muted loop autoplay playsinline preload="metadata" '
+        '<video class="film-solo-vid" muted loop playsinline preload="none" '
         f'poster="{static_url("worldcup-story-01-origin-v1.webp")}" aria-label="The story of the 2026 FIFA World Cup">'
         '<source src="'
         + static_url("YTSave_YouTube_Media_BRv3KW-NIQc_ABSOLUTE-CINEMA-The-Story-Of-The-2026-FIFA-World-Cup_002_720p.mp4")
