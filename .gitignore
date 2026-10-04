@@ -4,6 +4,8 @@ __pycache__/
 *.egg-info/
 .ipynb_checkpoints/
 *.streamlit-*.log
+server.out.log
+server.err.log
 
 # Virtual environment
 venv/
