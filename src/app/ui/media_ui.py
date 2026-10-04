@@ -540,15 +540,17 @@ def render_photo_story(
         o.fillStyle = '#fff';
         o.textAlign = 'center';
         o.textBaseline = 'middle';
-        var fs = Math.max(30, Math.round(H * 0.14));
-        o.font = '300 ' + fs + 'px "Arial Narrow", Arial, sans-serif';
+        var fs = Math.max(34, Math.round(H * 0.17));
+        o.font = '700 ' + fs + 'px Arial, sans-serif';
+        try { o.letterSpacing = '8px'; } catch(e) {}
         o.fillText('WORLD', W / 2, H * 0.46);
         o.fillText('CUP 2026', W / 2, H * 0.60);
         var img = o.getImageData(0, 0, W, H).data;
         var step = Math.max(2, Math.round(W / 220));
         for (var y = 0; y < H; y += step) {
           for (var x = 0; x < W; x += step) {
-            if (img[((y * W) + x) * 4 + 3] > 128) {
+            // Nguong cao: chi giu loi net chu dam, bo vien mo -> chu sac net.
+            if (img[((y * W) + x) * 4 + 3] > 170) {
               // Jitter pha vo luoi deu: moi diem lech ngau nhien trong o step,
               // chu khong con cum theo hang/cot lay mau.
               targets.push([
@@ -593,8 +595,8 @@ def render_photo_story(
           rx: cup.w * (0.75 + Math.random() * 0.55),
           ry: cup.w * (0.32 + Math.random() * 0.12),
           sp: (0.004 + Math.random() * 0.010) * (Math.random() < 0.5 ? 1 : -1),
-          ci: 2, a: 0.70 + Math.random() * 0.20,
-          sz: 2.1, dl: Math.random() * 0.04
+          ci: 2, a: 0.75 + Math.random() * 0.20,
+          sz: 1.8, dl: Math.random() * 0.04
         });
       }
       t0 = pWin.performance ? pWin.performance.now() : Date.now();
@@ -652,11 +654,11 @@ def render_photo_story(
         P.y += (gy - P.y) * Math.min(1, dt * k * 60 * 0.06 + 0.04);
         ctx.fillStyle = 'rgba(' + BLUE[P.ci] + ',' + P.a.toFixed(2) + ')';
         ctx.beginPath();
-        ctx.arc(P.x, P.y, P.sz * 5.0, 0, Math.PI * 2);
+        ctx.arc(P.x, P.y, P.sz * 3.5, 0, Math.PI * 2);
         ctx.globalAlpha = 0.12;
         ctx.fill();
         ctx.beginPath();
-        ctx.arc(P.x, P.y, P.sz * 3.0, 0, Math.PI * 2);
+        ctx.arc(P.x, P.y, P.sz * 2.0, 0, Math.PI * 2);
         ctx.globalAlpha = 0.35;
         ctx.fill();
         ctx.globalAlpha = 1;
