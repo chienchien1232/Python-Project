@@ -66,12 +66,17 @@ def main():
 
     # 4 score chuyen mon cho outfield
     for sc_name, weights in SCORE_DEFS.items():
-        total = pd.Series(0.0, index=df.index)
-        for col, w in weights.items():
-            col = _col(col) if col != "pass_accuracy_pct" else col
-            if col in df.columns:
-                total += w * pct_rank(df[col].fillna(0))
-        df[sc_name] = total.round(1)
+        # So sanh tung chi so voi cau thu cung vi tri; rank toan bo pool se
+        # lam lech diem vi phan bo thong ke DEF/MID/FWD khac nhau.
+        df[sc_name] = 0.0
+        for pos in ROLE_MIX:
+            mask = df["position"] == pos
+            total = pd.Series(0.0, index=df.index[mask])
+            for col, w in weights.items():
+                col = _col(col) if col != "pass_accuracy_pct" else col
+                if col in df.columns:
+                    total += w * pct_rank(df.loc[mask, col].fillna(0))
+            df.loc[mask, sc_name] = total.round(1)
 
     # Overall theo role mix
     overall = pd.Series(0.0, index=df.index)

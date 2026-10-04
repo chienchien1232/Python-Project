@@ -152,17 +152,20 @@ Phương pháp từng module (số liệu đã kiểm chứng khi chạy):
 - **PCA** (giữ 90% phương sai, PC1 25.4%; fit outfield rồi project GK).
 - **Anomaly** (IsolationForest theo vị trí + luật cứng + lý do z-score;
   contamination 0.05; ~72 ca gồm Messi/Mbappé do luật bàn thắng).
-- **Score** (percentile + ROLE_MIX; Spearman overall~output: DEF 0.866, FWD 0.836).
-- **Market value** (hồi quy log1p; GridSearchCV 5-fold phân tầng, Ridge thắng
-  R2_cv 0.383; counterfactual median-vị-trí, hiệu chuẩn P95→+40% vì raw ratio
-  nổ 23.5×, kẹp −25/+80%; ablation team_win_pct 0.383≈0.383).
+- **Score** (percentile trong từng vị trí + ROLE_MIX; Spearman overall~output:
+  DEF 0.891, MID 0.536, FWD 0.834 trên dữ liệu hiện tại).
+- **Market value** (hồi quy log1p; GridSearchCV phân tầng theo vị trí, chọn
+  Ridge theo MAE trên tập train; dự báo từng cầu thủ bằng cross-validation).
+  Holdout 25%: R² log 0.405, MAE €11.8M, median absolute percentage error 59.7%;
+  baseline median theo vị trí có MAE €15.3M. Đây là ước lượng giá trị trong
+  dataset, không phải dự báo giá sau giải.
 - **Best XI** (ILP PuLP max tổng overall_score + ràng buộc đội hình/ngân sách/quota).
 
 Bằng chứng thực nghiệm đi kèm output: `eda_corr/minutes_bins.csv`,
-`cluster_tuning.csv`, `market_value_cv/ablation/calibration.csv`,
+`cluster_tuning.csv`, `market_value_cv.csv`, `market_value_holdout.csv`,
 `score_validation.csv`, `anomaly_tuning.csv`, `club_tier_map.csv`.
-**Market value là ESTIMATE counterfactual** (thiếu ground truth sau giải):
-`market_value_validation.csv` (MAE 53.5%, hit ±25% là 31.2%).
+**Market value là hồi quy mô tả giá trong dataset**; sai số holdout còn cao,
+nên không dùng làm định giá chuyển nhượng hay dự báo giá tương lai.
 
 ## 7. Giao diện web
 

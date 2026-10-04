@@ -1,5 +1,5 @@
-model,r2_cv,mae_cv_log,r2_holdout,mae_holdout_log,best_params
-Linear Regression,0.379,0.876,0.398,0.84,-
-RidgeCV,0.383,0.875,0.408,0.833,-
-Random Forest,0.351,0.898,0.348,0.869,"{'max_depth': 8, 'min_samples_leaf': 2, 'n_estimators': 200}"
-Gradient Boosting,0.343,0.897,0.386,0.842,"{'learning_rate': 0.05, 'max_depth': 2, 'n_estimators': 200}"
+model,mae_cv_log,mae_holdout_log,best_params
+Linear Regression,0.899,0.85,{}
+Ridge,0.897,0.849,{'ridge__alpha': np.float64(1.0)}
+Random Forest,0.925,0.83,"{'max_depth': 6, 'min_samples_leaf': 3, 'n_estimators': 300}"
+Gradient Boosting,0.926,0.83,"{'learning_rate': 0.03, 'max_depth': 3, 'n_estimators': 200}"

@@ -1,4 +1,4 @@
 position,n,target,spearman_overall_vs_output,spearman_overall_vs_minutes
-DEF,283,def_act,0.866,0.79
-MID,249,ga,0.552,0.731
-FWD,173,ga,0.836,0.673
+DEF,283,def_act,0.891,0.794
+MID,249,ga,0.536,0.728
+FWD,173,ga,0.834,0.701

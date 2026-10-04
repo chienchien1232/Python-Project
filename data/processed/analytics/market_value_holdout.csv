@@ -1,0 +1,2 @@
+r2_log,mae_log,mae_eur,median_absolute_pct_error,position_median_mae_eur,model_mae_eur,best_model,n_test
+0.405,0.849,11788748.0,59.7,15275663.0,11788748.0,Ridge,191

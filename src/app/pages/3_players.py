@@ -107,7 +107,7 @@ st.markdown(
     '</div>'
     '<div class="wc-hero-desc" style="max-width:760px;margin-bottom:16px">'
     'Browse in-depth player statistics normalized per 90 minutes. Inspect positional percentile radar charts, '
-    'AI-calculated player similarity profiles, and post-tournament market value estimations.'
+    'AI-calculated player similarity profiles, and model estimates based on recorded market values.'
     '</div>'
     '</div>',
     unsafe_allow_html=True,
@@ -462,23 +462,24 @@ if sel_pname:
             else:
                 st.info("Run `python src/analytics/player_similarity.py` to generate similarity vectors.")
 
-        # Post-Tournament Market Value Estimation
+        # Dataset market value regression estimate
         if mv is not None:
             mrow = mv[mv["player_id"] == pid]
             if not mrow.empty:
                 r_mv = mrow.iloc[0]
                 st.markdown("<div class='section-header' style='font-size:20px'>Market Value AI Regression</div>", unsafe_allow_html=True)
                 v_pre = float(r_mv["current_value"]) / 1e6
-                v_post = float(r_mv["predicted_post_value"]) / 1e6
-                chg = float(r_mv["change_pct"])
+                v_est = float(r_mv["model_estimated_value"]) / 1e6
+                gap_eur = float(r_mv["model_gap_abs"]) / 1e6
 
                 st.markdown(
                     f'<div style="background:#141414;border:0;border-top:1px solid rgba(255,255,255,0.18);border-bottom:1px solid rgba(255,255,255,0.10);border-radius:0;padding:18px">'
                     f'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:center">'
-                    f'<div><div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase">PRE-TOURNAMENT</div><div style="font-family:var(--font-sport);font-size:22px;font-weight:900;color:#FFFFFF">€{v_pre:.1f}M</div></div>'
-                    f'<div><div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase">PREDICTED POST</div><div style="font-family:var(--font-sport);font-size:22px;font-weight:900;color:#e8e8e3">€{v_post:.1f}M</div></div>'
-                    f'<div><div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase">NET CHANGE</div><div style="font-family:var(--font-sport);font-size:22px;font-weight:900;color:{"#00e676" if chg>=0 else "#ff5252"}">{chg:+.1f}%</div></div>'
+                    f'<div><div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase">DATASET VALUE</div><div style="font-family:var(--font-sport);font-size:22px;font-weight:900;color:#FFFFFF">€{v_pre:.1f}M</div></div>'
+                    f'<div><div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase">MODEL ESTIMATE</div><div style="font-family:var(--font-sport);font-size:22px;font-weight:900;color:#e8e8e3">€{v_est:.1f}M</div></div>'
+                    f'<div><div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase">MODEL GAP</div><div style="font-family:var(--font-sport);font-size:22px;font-weight:900;color:{"#00e676" if gap_eur>=0 else "#ff5252"}">€{gap_eur:+.1f}M</div></div>'
                     f'</div>'
+                    f'<div style="font-size:11px;color:#8a8f98;text-align:center;margin-top:12px">Regression estimate from recorded player data; not a future transfer price forecast.</div>'
                     f'</div>',
                     unsafe_allow_html=True
                 )
