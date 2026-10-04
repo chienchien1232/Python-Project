@@ -8,29 +8,30 @@ chuyển nhượng. Giao diện web đen/trắng tối giản, mono editorial, �
 
 ## 1. Cài đặt & chạy (Setup)
 
-Sau khi clone hoặc pull nhánh `chien`, chạy entrypoint duy nhất của bản bàn giao.
+### Điều kiện tiên quyết: Python 3.12 trở lên
 
-### Bước 1: Cập nhật mã nguồn
+### Bước 1: Cập nhật mã nguồn (Hoặc tải trực tiếp repo từ branch chien)
 ```bash
-git pull origin chien
+git clone -b chien https://github.com/chienchien1232/Python-Project.git
 ```
 
 ### Bước 2: Tạo môi trường ảo (máy mới, Python 3.12)
 Trên Windows:
 ```bash
-py -3.12 -m venv .venv
-.venv/Scripts/python.exe -m pip install -r requirements.txt
+cd Python-Project
+python -m venv .venv
+.venv\Scripts\Python.exe -m pip install -r requirements.txt
 ```
 Trên macOS / Linux:
 ```bash
-python3.12 -m venv .venv
+python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 ```
 `requirements.txt` pin cứng đúng phiên bản đã kiểm tra (pandas 3.0.5, streamlit 1.63.0, ...).
 
 ### Bước 3: Khởi chạy
 ```bash
-.\start-dashboard.ps1
+.\start-dashboard.bat
 ```
 
 Mặc định mở tại http://127.0.0.1:8520/. Cấu hình Streamlit đã ẩn sidebar và
