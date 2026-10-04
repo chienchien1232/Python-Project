@@ -545,13 +545,13 @@ def render_photo_story(
         o.fillText('WORLD', W / 2, H * 0.46);
         o.fillText('CUP 2026', W / 2, H * 0.60);
         var img = o.getImageData(0, 0, W, H).data;
-        var step = Math.max(3, Math.round(W / 150));
+        var step = Math.max(2, Math.round(W / 220));
         for (var y = 0; y < H; y += step) {
           for (var x = 0; x < W; x += step) {
             if (img[((y * W) + x) * 4 + 3] > 128) targets.push([x, y]);
           }
         }
-        while (targets.length > 800) {
+        while (targets.length > 1400) {
           targets = targets.filter(function(_, i) { return i % 2 === 0; });
         }
       } catch(e) { targets = []; }
@@ -581,7 +581,7 @@ def render_photo_story(
           ry: cup.w * (0.32 + Math.random() * 0.12),
           sp: (0.004 + Math.random() * 0.010) * (Math.random() < 0.5 ? 1 : -1),
           ci: 2, a: 0.70 + Math.random() * 0.20,
-          sz: 1.5, dl: Math.random() * 0.04
+          sz: 2.1, dl: Math.random() * 0.04
         });
       }
       t0 = pWin.performance ? pWin.performance.now() : Date.now();
