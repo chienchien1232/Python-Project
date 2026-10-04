@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import datetime as dt
 import html as html_lib
-import os
+from pathlib import Path
 from typing import Any
 
 import pandas as pd
@@ -177,7 +177,7 @@ def render_pvp() -> None:
     rowsA_html, rowsB_html = _panel_rows(rA, dA), _panel_rows(rB, dB)
 
     # ── Versus hero: national colour atmosphere, original portraits ──
-    st.html(os.path.join(os.path.dirname(os.path.abspath(__file__)), "styles", "compare.css"))
+    st.html(Path(__file__).resolve().parent / "styles" / "compare.css")
     st.markdown(
         f'<section class="h2h-hero">'
         f'<div class="h2h-panel is-a" data-team-code="{html_lib.escape(codeA, quote=True)}" style="{panel_varsA}">'

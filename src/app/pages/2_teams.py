@@ -3,6 +3,7 @@
 import os
 import sys
 import html as html_lib
+from pathlib import Path
 
 import pandas as pd
 import plotly.graph_objects as go
@@ -211,7 +212,7 @@ if selected_team:
     )
 
     # ── Dossier styles loaded from ui/styles/page_teams.css ──
-    st.html(os.path.join(app_path, "ui", "styles", "page_teams.css"))
+    st.html(Path(app_path) / "ui" / "styles" / "page_teams.css")
 
     col_t_left, col_t_right = st.columns([1.15, 1.0], gap="large")
 

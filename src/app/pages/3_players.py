@@ -4,6 +4,7 @@ import os
 import sys
 import datetime as dt
 import html as html_lib
+from pathlib import Path
 
 import pandas as pd
 import plotly.graph_objects as go
@@ -39,7 +40,7 @@ render_photo_story(
     page="players",
 )
 
-st.html(os.path.join(app_path, "ui", "styles", "page_players.css"))
+st.html(Path(app_path) / "ui" / "styles" / "page_players.css")
 st.markdown(
     '<div class="vc-subnav-anchor" aria-hidden="true">players-subnav</div>',
     unsafe_allow_html=True,

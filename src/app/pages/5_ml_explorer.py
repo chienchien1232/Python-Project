@@ -3,6 +3,7 @@
 import os
 import sys
 import html as html_lib
+from pathlib import Path
 
 import pandas as pd
 import streamlit as st
@@ -129,7 +130,7 @@ with t1:
         return "≈ tournament avg", "#8a8f98"
 
     # Workspace styles loaded once from ui/styles/page_ml.css.
-    st.html(os.path.join(app_path, "ui", "styles", "page_ml.css"))
+    st.html(Path(app_path) / "ui" / "styles" / "page_ml.css")
 
     @st.dialog("Tactical group — players", width="large")
     def show_group_players(role, players_df, metric_col, metric_label):

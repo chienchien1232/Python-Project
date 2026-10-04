@@ -3,6 +3,7 @@
 import os
 import sys
 import html as html_lib
+from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
@@ -254,7 +255,7 @@ if os.path.exists(xi_path):
         )
 
     with xi_right:
-        st.html(os.path.join(ROOT, "src", "app", "ui", "styles", "page_overview_xi.css"))
+        st.html(Path(ROOT, "src", "app", "ui", "styles", "page_overview_xi.css"))
         st.markdown(
             '<div class="champions-card xi-builder-card">'
             '<div class="xi-kicker">AI SQUAD BUILDER</div>'
