@@ -43,8 +43,8 @@ if errorlevel 1 (
 )
 
 echo Dang khoi dong World Cup Dashboard...
-echo Trinh duyet se mo tai http://127.0.0.1:8520/
-"%PYTHON%" -m streamlit run src/app/app.py --server.address 127.0.0.1 --server.port 8520 --server.headless false --browser.gatherUsageStats false
+echo Trinh duyet se mo tai http://127.0.0.1:8521/
+"%PYTHON%" -m streamlit run src/app/app.py --server.address 127.0.0.1 --server.port 8521 --server.headless false --browser.gatherUsageStats false
 
 if errorlevel 1 (
     echo.

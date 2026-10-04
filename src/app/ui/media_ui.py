@@ -548,11 +548,24 @@ def render_photo_story(
         var step = Math.max(2, Math.round(W / 220));
         for (var y = 0; y < H; y += step) {
           for (var x = 0; x < W; x += step) {
-            if (img[((y * W) + x) * 4 + 3] > 128) targets.push([x, y]);
+            if (img[((y * W) + x) * 4 + 3] > 128) {
+              // Jitter pha vo luoi deu: moi diem lech ngau nhien trong o step,
+              // chu khong con cum theo hang/cot lay mau.
+              targets.push([
+                x + (Math.random() - 0.5) * step,
+                y + (Math.random() - 0.5) * step
+              ]);
+            }
           }
         }
-        while (targets.length > 1400) {
-          targets = targets.filter(function(_, i) { return i % 2 === 0; });
+        // Cat tran bang xao tron + slice (thay vi loc i%2 theo thu tu quet):
+        // giu phan bo dong deu tren toan bo chu.
+        if (targets.length > 1400) {
+          for (var s = targets.length - 1; s > 0; s--) {
+            var r = Math.floor(Math.random() * (s + 1));
+            var tmp = targets[s]; targets[s] = targets[r]; targets[r] = tmp;
+          }
+          targets = targets.slice(0, 1400);
         }
       } catch(e) { targets = []; }
       try {

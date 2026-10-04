@@ -34,7 +34,7 @@ python3 -m venv .venv
 .\start-dashboard.bat
 ```
 
-Mặc định mở tại http://127.0.0.1:8520/. Cấu hình Streamlit đã ẩn sidebar và
+Mặc định mở tại http://127.0.0.1:8521/. Cấu hình Streamlit đã ẩn sidebar và
 toolbar mặc định để menu MPA cũ không lóe lên khi tải trang.
 
 ---

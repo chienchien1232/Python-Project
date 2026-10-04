@@ -50,7 +50,7 @@ Cam kết nhóm 3: output đúng schema `data/processed/analytics/` kèm file b�
     .\.venv\Scripts\python.exe -m compileall -q src tests
     .\.venv\Scripts\python.exe -m pip check
     .\.venv\Scripts\python.exe tests/ui_smoke.py   # 34/34 PASS
-    .\start-dashboard.bat                          # http://127.0.0.1:8520/
+    .\start-dashboard.bat                          # http://127.0.0.1:8521/
 
 ## Xác nhận
 
