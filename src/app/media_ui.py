@@ -306,24 +306,9 @@ def render_photo_story(
             '<div class="portal-veil" aria-hidden="true"></div>'
             '<div class="portal-panel portal-left" aria-hidden="true"></div>'
             '<div class="portal-panel portal-right" aria-hidden="true"></div>'
-            '<span class="portal-dot portal-d1" aria-hidden="true"></span>'
-            '<span class="portal-dot portal-d2" aria-hidden="true"></span>'
             '<div class="portal-cup" aria-hidden="true">'
-            '<svg viewBox="0 0 120 150" width="120" height="150" fill="none" stroke="#f2f1ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">'
-            '<path d="M38 12 C38 44 46 66 60 78 C74 66 82 44 82 12" />'
-            '<path d="M38 12 C26 14 20 26 24 40 C27 50 34 56 42 58" />'
-            '<path d="M82 12 C94 14 100 26 96 40 C93 50 86 56 78 58" />'
-            '<path d="M35 12 L85 12" />'
-            '<path d="M52 78 L52 104 M68 78 L68 104" />'
-            '<path d="M44 104 L76 104 L82 118 L38 118 Z" />'
-            '<path d="M32 118 L88 118 L94 136 L26 136 Z" />'
-            '<circle cx="60" cy="128" r="2.5" fill="#f2f1ec" stroke="none" />'
-            '</svg>'
+            f'<img src="{static_url("tải xuống.png")}" alt="" loading="eager" decoding="async">'
             '</div>'
-            '<h1 class="portal-title" aria-label="World Cup 2026">'
-            '<span class="portal-half">WORLD CUP</span>'
-            '<span class="portal-half">2026</span>'
-            '</h1>'
             '<div class="portal-dates">'
             '<div><strong>11</strong><span>JUNE</span></div>'
             '<div class="portal-dates-sep">—</div>'
@@ -337,7 +322,6 @@ def render_photo_story(
             '<div class="portal-champ">'
             'FINAL · SPAIN 1 – 0 ARGENTINA · METLIFE STADIUM'
             '</div>'
-            '<a class="portal-cta" href="#leaderboards" data-hover-text="Explore">EXPLORE THE ARCHIVE</a>'
             '<canvas class="portal-lines" aria-hidden="true"></canvas>'
             '<div class="portal-meta portal-meta-top"><span>WORLD CUP / 2026</span><span>THE DATA ARCHIVE</span></div>'
             '<div class="portal-meta portal-meta-bottom"><span>48 NATIONS · 104 MATCHES</span><span>SCROLL TO OPEN ↓</span></div>'
@@ -442,13 +426,18 @@ def render_photo_story(
     var obs = new pWin.IntersectionObserver(function(entries) {
       entries.forEach(function(en) {
         var v = en.target;
+        if (!v.isConnected) { obs.unobserve(v); return; }
         try {
           if (en.isIntersecting) { v.play(); }
           else { v.pause(); }
         } catch(e) {}
       });
     }, { threshold: 0.12 });
-    vids.forEach(function(v) { obs.observe(v); });
+    vids.forEach(function(v) {
+      if (v.__filmInit) return;
+      v.__filmInit = true;
+      obs.observe(v);
+    });
   }
   initFilms();
   setTimeout(initFilms, 800);
@@ -478,12 +467,9 @@ def render_photo_story(
       var halves = hero.querySelectorAll('.portal-half');
       var img = hero.querySelector('.portal-img');
       var duo = hero.querySelector('.portal-duo');
-      var title = hero.querySelector('.portal-title');
-      var d1 = hero.querySelector('.portal-d1');
-      var d2 = hero.querySelector('.portal-d2');
-      // Info copy fades out as the portal opens (nothing lingers).
+      // Info copy + streak field fade out as the portal opens (nothing lingers).
       var fade = hero.querySelectorAll(
-        '.portal-kicker,.portal-title,.portal-cup,.portal-dates,.portal-event,.portal-champ,.portal-cta,.portal-meta');
+        '.portal-cup,.portal-lines,.portal-dates,.portal-event,.portal-champ,.portal-meta');
       for (var k = 0; k < fade.length; k++) {
         fade[k].style.opacity = Math.max(0, 1 - p * 1.6).toFixed(3);
       }
@@ -497,8 +483,6 @@ def render_photo_story(
       if (halves[1]) halves[1].style.transform = 'translateX(' + (p * 55).toFixed(2) + '%)';
       if (img) img.style.transform = 'scale(' + (1.09 - p * 0.09).toFixed(3) + ')';
       if (duo) duo.style.opacity = (p * 0.28).toFixed(3);
-      if (d1) d1.style.transform = 'translate(' + (-p * 38).toFixed(1) + 'vw,' + (-p * 36).toFixed(1) + 'vh)';
-      if (d2) d2.style.transform = 'translate(' + (p * 38).toFixed(1) + 'vw,' + (p * 36).toFixed(1) + 'vh)';
     });
   }
   function initPortal() {
@@ -507,54 +491,147 @@ def render_photo_story(
     hero.classList.add('portal-live');
     updatePortal();
   }
-  pWin.addEventListener('scroll', updatePortal, { passive: true });
-  var mainEl = pDoc.querySelector('[data-testid="stMain"]');
-  if (mainEl) mainEl.addEventListener('scroll', updatePortal, { passive: true });
+  if (!pWin.__portalBound) {
+    pWin.__portalBound = true;
+    pWin.addEventListener('scroll', updatePortal, { passive: true });
+    var mainEl = pDoc.querySelector('[data-testid="stMain"]');
+    if (mainEl) mainEl.addEventListener('scroll', updatePortal, { passive: true });
+  }
   initPortal();
   setTimeout(initPortal, 800);
 
-  // 9. Hero line-field canvas: slow mono hairline streaks (static frame
-  //    under reduced-motion; paused while the hero is off-screen).
-  function initPortalLines() {
+  // Hero streak-field canvas: light streaks travelling across the whole
+  //    hero screen (static frame under reduced-motion; paused off-screen).
+  function initCupLines() {
     var cv = pDoc.querySelector('.portal-lines');
-    if (!cv || !cv.getContext) return;
+    if (!cv || !cv.getContext || cv.__streakInit) return;
+    cv.__streakInit = true;
     var ctx = cv.getContext('2d');
-    var W = 0, H = 0, lines = [], running = true, drawn = false;
+    var W = 0, H = 0, parts = [], targets = [], cup = { x: 0, y: 0, w: 120 };
+    var running = true, drawn = false, t0 = 0;
+    var BLUE = ['91,192,222', '46,139,192', '242,241,236'];
+    var CYCLE = 9500;
     function size() {
       var r = cv.getBoundingClientRect();
       W = Math.max(320, Math.floor(r.width));
-      H = Math.max(120, Math.floor(r.height));
+      H = Math.max(200, Math.floor(r.height));
       cv.width = W; cv.height = H;
     }
+    function relRect(el) {
+      var a = el.getBoundingClientRect(), b = cv.getBoundingClientRect();
+      return { x: a.left - b.left, y: a.top - b.top, w: a.width, h: a.height };
+    }
+    function buildTargets() {
+      targets = [];
+      try {
+        // No HTML title anymore: particles draw the words themselves.
+        var off = pDoc.createElement('canvas');
+        off.width = W; off.height = H;
+        var o = off.getContext('2d');
+        o.fillStyle = '#fff';
+        o.textAlign = 'center';
+        o.textBaseline = 'middle';
+        var fs = Math.max(32, Math.round(H * 0.16));
+        o.font = '600 ' + fs + 'px "Arial Narrow", Arial, sans-serif';
+        o.fillText('WORLD CUP', W / 2, H * 0.70 - 30);
+        o.fillText('2026', W / 2, H * 0.88 - 30);
+        var img = o.getImageData(0, 0, W, H).data;
+        var step = Math.max(2, Math.round(W / 320));
+        for (var y = 0; y < H; y += step) {
+          for (var x = 0; x < W; x += step) {
+            if (img[((y * W) + x) * 4 + 3] > 128) targets.push([x, y]);
+          }
+        }
+        while (targets.length > 1100) {
+          targets = targets.filter(function(_, i) { return i % 2 === 0; });
+        }
+      } catch(e) { targets = []; }
+      try {
+        var cupEl = pDoc.querySelector('.portal-cup');
+        if (cupEl) {
+          var c = relRect(cupEl);
+          cup = { x: c.x + c.w / 2, y: c.y + c.h / 2, w: Math.max(60, c.w) };
+        }
+      } catch(e) {}
+    }
     function seed() {
-      lines = [];
-      var n = Math.max(18, Math.min(44, Math.floor(W / 34)));
+      buildTargets();
+      parts = [];
+      var n = Math.max(targets.length, 120);
       for (var i = 0; i < n; i++) {
-        lines.push({
+        var t = targets.length ? targets[i % targets.length] : [Math.random() * W, Math.random() * H];
+        parts.push({
           x: Math.random() * W, y: Math.random() * H,
-          len: 40 + Math.random() * 150,
-          ang: -0.12 + (Math.random() - 0.5) * 0.5,
-          sp: 0.12 + Math.random() * 0.4,
-          a: 0.12 + Math.random() * 0.4
+          tx: t[0], ty: t[1],
+          ang: Math.random() * Math.PI * 2,
+          rx: cup.w * (0.75 + Math.random() * 0.55),
+          ry: cup.w * (0.32 + Math.random() * 0.12),
+          sp: (0.004 + Math.random() * 0.010) * (Math.random() < 0.5 ? 1 : -1),
+          ci: i % 3, a: 0.85 + Math.random() * 0.15,
+          sz: 1.8, dl: Math.random() * 0.06
         });
       }
+      t0 = pWin.performance ? pWin.performance.now() : Date.now();
     }
-    function frame() {
+    function heroOpen() {
+      try {
+        if (typeof portalProgress === 'function' && portalProgress() > 0.2) return true;
+      } catch(e) {}
+      return false;
+    }
+    var lastT = 0, lastPhase = 0;
+    function frame(now) {
       if (!running) { drawn = false; return; }
+      if (!cv.isConnected) { running = false; drawn = false; return; }
       drawn = true;
+      var nowMs = now || 0;
+      var dt = Math.min(0.05, Math.max(0.001, (nowMs - (lastT || nowMs)) / 1000));
+      lastT = nowMs;
+      var phase = 1;
+      if (t0) phase = ((nowMs - t0) % CYCLE) / CYCLE;
+      if (phase < 0) phase += Math.ceil(-phase) + 1, phase = phase % 1;
+      var open = heroOpen();
+      if (open || !targets.length) {
+        // Hero open (or no glyph targets): orbit only; refresh layout
+        // only on cycle wrap so scrolling stays cheap.
+        if (phase < lastPhase) { buildTargets(); seed(); }
+        phase = 1;
+      }
+      lastPhase = phase;
       ctx.clearRect(0, 0, W, H);
-      ctx.lineWidth = 1;
-      for (var i = 0; i < lines.length; i++) {
-        var L = lines[i];
-        if (!reduceMotion) {
-          L.x += L.sp;
-          if (L.x - L.len > W) { L.x = -L.len; L.y = Math.random() * H; }
+      for (var i = 0; i < parts.length; i++) {
+        var P = parts[i];
+        var gx, gy, k;
+        if (phase < 0.42 && !heroOpen()) {
+          // Converge into the title glyphs (with per-dot delay).
+          var lp = Math.min(1, Math.max(0, (phase - P.dl) / 0.3));
+          var e = lp * lp * (3 - 2 * lp);
+          gx = P.x + (P.tx - P.x) * Math.min(1, e * 1.15);
+          gy = P.y + (P.ty - P.y) * Math.min(1, e * 1.15);
+          k = 4;
+        } else {
+          // Released: wide sparse ellipse around the cup (fits the frame).
+          P.ang += P.sp * (dt * 60);
+          gx = cup.x + Math.cos(P.ang) * P.rx;
+          gy = cup.y + Math.sin(P.ang) * P.ry;
+          k = 2.2;
         }
-        ctx.strokeStyle = 'rgba(242,241,236,' + L.a.toFixed(2) + ')';
+        P.x += (gx - P.x) * Math.min(1, dt * k * 60 * 0.06 + 0.04);
+        P.y += (gy - P.y) * Math.min(1, dt * k * 60 * 0.06 + 0.04);
+        ctx.fillStyle = 'rgba(' + BLUE[P.ci] + ',' + P.a.toFixed(2) + ')';
         ctx.beginPath();
-        ctx.moveTo(L.x, L.y);
-        ctx.lineTo(L.x + L.len * Math.cos(L.ang), L.y + L.len * Math.sin(L.ang));
-        ctx.stroke();
+        ctx.arc(P.x, P.y, P.sz * 3.4, 0, Math.PI * 2);
+        ctx.globalAlpha = 0.16;
+        ctx.fill();
+        ctx.globalAlpha = 0.4;
+        ctx.beginPath();
+        ctx.arc(P.x, P.y, P.sz * 2.2, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.globalAlpha = 1;
+        ctx.fillStyle = 'rgba(255,255,255,1)';
+        ctx.beginPath();
+        ctx.arc(P.x, P.y, P.sz, 0, Math.PI * 2);
+        ctx.fill();
       }
       if (!reduceMotion) pWin.requestAnimationFrame(frame);
     }
@@ -575,8 +652,26 @@ def render_photo_story(
     pWin.addEventListener('resize', kick);
     kick();
   }
-  initPortalLines();
-  setTimeout(initPortalLines, 800);
+  initCupLines();
+  setTimeout(initCupLines, 800);
+
+  // 10. Streamlit re-renders replace canvas/DOM nodes, killing running
+  //     loops bound to dead elements. Re-init (debounced) on DOM changes
+  //     so effects never disappear after reruns or late image loads.
+  var domTimer = null;
+  function reinitDynamic() {
+    initCupLines();
+    initPortal();
+    initFilms();
+  }
+  try {
+    if ('MutationObserver' in pWin && pDoc.body) {
+      new pWin.MutationObserver(function() {
+        if (domTimer) pWin.clearTimeout(domTimer);
+        domTimer = pWin.setTimeout(reinitDynamic, 600);
+      }).observe(pDoc.body, { childList: true, subtree: true });
+    }
+  } catch(e) {}
 })();
 </script>""",
             # Hidden helper frame (its own container is display:none at runtime).
