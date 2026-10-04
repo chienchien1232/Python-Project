@@ -15,7 +15,7 @@ if sys_path not in sys.path:
     sys.path.insert(0, sys_path)
 
 from helpers import q  # noqa: E402
-from ui.media_ui import flag_image, player_portrait, render_film_sections, render_photo_story  # noqa: E402
+from ui.media_ui import flag_image, render_film_sections, render_photo_story  # noqa: E402
 from page_chrome import footer, setup_page  # noqa: E402
 from ui.table_ui import data_table  # noqa: E402
 from text_norm import clean_name  # noqa: E402
