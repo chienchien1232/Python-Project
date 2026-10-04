@@ -49,7 +49,7 @@ my_python_project/
 ├── tests/              # ui_smoke.py (34 kịch bản)
 ├── .gitignore
 ├── requirements.txt    # pin cứng phiên bản đã kiểm tra
-├── start-dashboard.ps1 # entrypoint duy nhất
+├── start-dashboard.bat # entrypoint duy nhất (tự tạo .venv + cài + mở browser)
 └── README.md           # file này
 ```
 
