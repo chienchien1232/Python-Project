@@ -1,19 +1,22 @@
-﻿# Core data manipulation
-pandas
-numpy
+﻿# Pinned dependencies — cai dat dung cac phien ban da kiem tra (Python 3.12).
+# `pip install -r requirements.txt` trong .venv moi.
+
+# Core data manipulation
+pandas==3.0.5
+numpy==2.5.3
 
 # Visualization
-matplotlib
-seaborn
+matplotlib==3.11.2
+seaborn==0.13.2
 
 # Web dashboard
-streamlit>=1.63,<2
+streamlit==1.63.0
 
 # Excel support
-openpyxl
+openpyxl==3.1.5
 
 # Machine learning
-scikit-learn
-plotly
-pulp
-pyarrow
+scikit-learn==1.9.1
+plotly==7.0.0
+PuLP==3.3.2
+pyarrow==25.0.1
