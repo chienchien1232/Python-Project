@@ -41,7 +41,7 @@ def setup_page(page_title: str) -> None:
         "<style>html,body,.stApp,#root{background:#050505 !important;color-scheme:dark}</style>",
         unsafe_allow_html=True,
     )
-    css_path = os.path.join(APP_ROOT, "style.css")
+    css_path = os.path.join(APP_ROOT, "ui", "styles", "style.css")
     if os.path.exists(css_path):
         with open(css_path, "r", encoding="utf-8") as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)

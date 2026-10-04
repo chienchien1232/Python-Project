@@ -29,7 +29,7 @@ from match_data import (  # noqa: E402
     get_player_match_stats,
     team_code,
 )
-from match_ui import (  # noqa: E402
+from ui.match_ui import (  # noqa: E402
     render_anomaly_panel,
     render_comparison_stats,
     render_detail_hero,
@@ -41,16 +41,16 @@ from match_ui import (  # noqa: E402
     safe_number,
     section_heading,
 )
-from media_ui import flag_url, player_portrait, render_photo_story  # noqa: E402
+from ui.media_ui import flag_url, player_portrait, render_photo_story  # noqa: E402
 from navigation import nav_link, render_navigation  # noqa: E402
 from page_chrome import setup_page  # noqa: E402
-from table_ui import data_table  # noqa: E402
+from ui.table_ui import data_table  # noqa: E402
 
 
 setup_page("Match Programme | WorldCup Stats '26")
 
 render_navigation("Matches")
-st.html(Path(APP_PATH) / "match_experience.css")
+st.html(Path(APP_PATH) / "ui" / "styles" / "match_experience.css")
 
 
 def render_not_found(message: str) -> None:

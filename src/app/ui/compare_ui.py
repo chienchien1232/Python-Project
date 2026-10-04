@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import datetime as dt
 import html as html_lib
+import os
 from typing import Any
 
 import pandas as pd
@@ -10,7 +11,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from helpers import load_similarity_matrix, q
-from media_ui import country_palette, flag_image, player_portrait, static_url
+from ui.media_ui import country_palette, flag_image, player_portrait, static_url
 from text_norm import clean_name, flag
 
 #: Per-90 rows of the head-to-head panel: (column, label, icon key, format).
@@ -176,74 +177,8 @@ def render_pvp() -> None:
     rowsA_html, rowsB_html = _panel_rows(rA, dA), _panel_rows(rB, dB)
 
     # ── Versus hero: national colour atmosphere, original portraits ──
+    st.html(os.path.join(os.path.dirname(os.path.abspath(__file__)), "styles", "compare.css"))
     st.markdown(
-        '<style>'
-        '.h2h-hero{display:grid;grid-template-columns:minmax(0,1fr) 92px minmax(0,1fr);gap:0;'
-        'background:#080b10;border:1px solid #343434;border-radius:0;overflow:hidden;margin:14px 0 22px;'
-        'opacity:0;animation:h2h-hero-in .72s cubic-bezier(.22,.61,.36,1) .04s both;}'
-        '.h2h-panel{position:relative;display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr);'
-        'min-height:500px;overflow:hidden;background:#080b10;isolation:isolate;}'
-        '.h2h-panel.is-a{border-top:2px solid #f1f0eb;}'
-        '.h2h-panel.is-b{border-top:1px solid #686862;}'
-        '.h2h-stadium{position:absolute;inset:-3%;width:106%;height:106%;object-fit:cover;object-position:center;'
-        'filter:brightness(.18) saturate(.45) blur(3px);opacity:.68;z-index:0;transform:scale(1.03);}'
-        '.h2h-panel::before{content:"";position:absolute;inset:-8%;z-index:1;pointer-events:none;'
-        'background:radial-gradient(circle at 30% 34%,rgba(var(--h2h-primary-rgb),.26),rgba(var(--h2h-primary-rgb),.12) 28%,transparent 62%),'
-        'radial-gradient(circle at 62% 88%,rgba(var(--h2h-secondary-rgb),.11),transparent 64%);'
-        'animation:h2h-glow-drift 14s ease-in-out infinite alternate;}'
-        '.h2h-panel.is-b::before{background:radial-gradient(circle at 70% 34%,rgba(var(--h2h-primary-rgb),.26),rgba(var(--h2h-primary-rgb),.12) 28%,transparent 62%),'
-        'radial-gradient(circle at 38% 88%,rgba(var(--h2h-secondary-rgb),.11),transparent 64%);animation-direction:alternate-reverse;}'
-        '.h2h-panel::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;'
-        'background:linear-gradient(90deg,rgba(4,6,9,.10),transparent 38%,rgba(4,6,9,.76)),linear-gradient(180deg,rgba(4,6,9,.12),transparent 42%,rgba(4,6,9,.62));}'
-        '.h2h-panel.is-b::after{background:linear-gradient(270deg,rgba(4,6,9,.10),transparent 38%,rgba(4,6,9,.76)),linear-gradient(180deg,rgba(4,6,9,.12),transparent 42%,rgba(4,6,9,.62));}'
-        '.h2h-photo{position:relative;min-height:500px;overflow:hidden;z-index:2;}'
-        '.h2h-photo .player-portrait{position:absolute;inset:0;width:100% !important;height:100% !important;'
-        'border:none !important;display:block;overflow:visible;background:transparent;}'
-        '.h2h-panel.is-a .h2h-photo .player-portrait{animation:h2h-photo-a .76s cubic-bezier(.22,.61,.36,1) .10s both;}'
-        '.h2h-panel.is-b .h2h-photo .player-portrait{animation:h2h-photo-b .76s cubic-bezier(.22,.61,.36,1) .10s both;}'
-        '.h2h-photo .player-portrait img{object-position:center top;transform:scale(1.18);transform-origin:center top;'
-        'filter:none !important;image-rendering:auto;-webkit-backface-visibility:hidden;backface-visibility:hidden;'
-        'transition:opacity .6s ease,transform .7s cubic-bezier(.22,.61,.36,1);}'
-        '.h2h-giant{position:absolute;top:8px;font-size:120px;font-weight:400;line-height:1;'
-        'color:transparent;-webkit-text-stroke:1px rgba(241,240,235,0.35);letter-spacing:-4px;pointer-events:none;z-index:4;}'
-        '.h2h-panel.is-b .h2h-giant{-webkit-text-stroke-color:rgba(155,155,149,0.4);}'
-        '.h2h-panel.is-a .h2h-giant{left:12px;}'
-        '.h2h-panel.is-b .h2h-giant{right:12px;}'
-        '.h2h-sign{position:absolute;bottom:26px;font-size:11px;font-weight:700;letter-spacing:2px;'
-        'color:#d2d2cc;pointer-events:none;text-transform:uppercase;z-index:4;}'
-        '.h2h-panel.is-a .h2h-sign{left:16px;}'
-        '.h2h-panel.is-b .h2h-sign{right:16px;}'
-        '.h2h-body{position:relative;z-index:3;padding:30px 24px 22px;border-left:1px solid rgba(255,255,255,0.10);'
-        'background:linear-gradient(90deg,rgba(var(--h2h-primary-rgb),.08),rgba(8,11,16,.82) 34%,rgba(8,11,16,.94));'
-        'animation:h2h-info-in .72s cubic-bezier(.22,.61,.36,1) .18s both;}'
-        '.h2h-panel.is-b .h2h-body{border-left:none;border-right:1px solid rgba(255,255,255,0.08);}'
-        '.h2h-flag .team-flag-photo{position:relative;width:44px;height:30px;display:inline-block;overflow:hidden;border-radius:0;border:1px solid #343434;}'
-        '.h2h-first{font-size:15px;color:#9b9b95;margin-top:10px;letter-spacing:1px;text-transform:uppercase;}'
-        '.h2h-last{font-size:clamp(28px,2.2vw,38px);font-weight:400;color:#f1f0eb;line-height:1;letter-spacing:-0.5px;margin:2px 0 6px;overflow-wrap:anywhere;}'
-        '.h2h-sub{font-size:12px;color:#9b9b95;}'
-        '.h2h-trio{display:grid;grid-template-columns:repeat(3,1fr);margin:16px 0 14px;text-align:center;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);}'
-        '.h2h-trio > div{padding:10px 4px;border-left:1px solid rgba(255,255,255,0.08);}'
-        '.h2h-trio > div:first-child{border-left:none;}'
-        '.h2h-trio b{display:block;font-size:21px;font-weight:400;color:#f1f0eb;}'
-        '.h2h-trio span{font-size:10px;letter-spacing:1.4px;color:#9b9b95;}'
-        '.h2h-row{display:flex;align-items:center;gap:9px;padding:9px 2px;border-top:1px solid rgba(255,255,255,0.08);}'
-        '.h2h-ico{color:#9b9b95;font-size:13px;}'
-        '.h2h-lbl{font-size:12px;color:#9b9b95;}'
-        '.h2h-val{margin-left:auto;font-size:14px;font-weight:700;color:#f1f0eb;}'
-        '.h2h-vs{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;'
-        'background:#080808;padding:10px 4px;border-left:1px solid rgba(255,255,255,0.08);border-right:1px solid rgba(255,255,255,0.08);}'
-        '.h2h-vs .slash{width:1px;height:56px;background:rgba(255,255,255,0.20);}'
-        '.h2h-vs b{font-size:34px;font-weight:400;color:#f1f0eb;letter-spacing:1px;}'
-        '.h2h-vs span{font-size:10px;font-weight:700;letter-spacing:2.5px;color:#9b9b95;}'
-        '@keyframes h2h-hero-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}'
-        '@keyframes h2h-photo-a{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:translateX(0)}}'
-        '@keyframes h2h-photo-b{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:translateX(0)}}'
-        '@keyframes h2h-info-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}'
-        '@keyframes h2h-glow-drift{from{transform:translate3d(-4px,-2px,0)}to{transform:translate3d(4px,6px,0)}}'
-        '@media (max-width:900px){.h2h-hero{grid-template-columns:1fr;}.h2h-panel,.h2h-photo{min-height:460px;}.h2h-vs{flex-direction:row;padding:14px;border:none;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);}.h2h-vs .slash{width:56px;height:1px;}}'
-        '@media (max-width:560px){.h2h-panel{grid-template-columns:minmax(0,44fr) minmax(0,56fr);min-height:400px;}.h2h-photo{min-height:400px;}.h2h-body{padding:22px 14px 18px;}.h2h-photo .player-portrait img{transform:scale(1.10);}.h2h-first{font-size:11px;}.h2h-last{font-size:25px;}.h2h-trio b{font-size:17px;}.h2h-trio span,.h2h-lbl{font-size:9px;}.h2h-row{gap:6px;}.h2h-ico{display:none;}}'
-        '@media (prefers-reduced-motion:reduce){.h2h-hero,.h2h-photo .player-portrait,.h2h-body,.h2h-panel::before{animation:none !important;opacity:1 !important;transform:none !important;}.h2h-photo .player-portrait img{transition:none !important;}}'
-        '</style>'
         f'<section class="h2h-hero">'
         f'<div class="h2h-panel is-a" data-team-code="{html_lib.escape(codeA, quote=True)}" style="{panel_varsA}">'
         f'<img class="h2h-stadium" src="{stadium_src}" alt="" aria-hidden="true" loading="lazy">'
@@ -278,26 +213,6 @@ def render_pvp() -> None:
     )
 
     col_radar, col_table = st.columns([1.15, 1.0], gap="large")
-
-    st.markdown(
-        '<style>'
-        '.h2h-panel-head{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:700;'
-        'letter-spacing:1.2px;color:#f1f0eb;text-transform:uppercase;margin-bottom:6px;}'
-        '.h2h-dot{width:8px;height:8px;border-radius:50%;background:#f1f0eb;flex:0 0 auto;}'
-        '.h2h-year{margin-left:auto;font-size:10px;font-weight:600;letter-spacing:1px;color:#9b9b95;}'
-        '.h2h-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px;}'
-        '.h2h-table th{font-size:11px;font-weight:600;color:#9b9b95;text-align:right;padding:8px 10px;'
-        'border-bottom:1px solid rgba(255,255,255,0.14);font-weight:600;}'
-        '.h2h-table th:first-child{text-align:left;}'
-        '.h2h-table td{padding:9px 10px;border-bottom:1px solid rgba(255,255,255,0.08);text-align:right;color:#f1f0eb;}'
-        '.h2h-table td:first-child{text-align:left;color:#9b9b95;}'
-        '.h2h-table tr:last-child td{border-bottom:none;}'
-        '.h2h-delta-up{color:#f1f0eb;font-weight:700;}'
-        '.h2h-delta-dn{color:#9b9b95;font-weight:700;}'
-        '.h2h-delta-eq{color:#9b9b95;font-weight:700;}'
-        '</style>',
-        unsafe_allow_html=True,
-    )
 
     with col_radar:
         with st.container(border=True):

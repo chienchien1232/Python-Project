@@ -15,9 +15,9 @@ if sys_path not in sys.path:
     sys.path.insert(0, sys_path)
 
 from helpers import q  # noqa: E402
-from media_ui import flag_image, player_portrait, render_film_sections, render_photo_story  # noqa: E402
+from ui.media_ui import flag_image, player_portrait, render_film_sections, render_photo_story  # noqa: E402
 from page_chrome import footer, setup_page  # noqa: E402
-from table_ui import data_table  # noqa: E402
+from ui.table_ui import data_table  # noqa: E402
 from text_norm import clean_name  # noqa: E402
 
 setup_page("WorldCup Stats '26")
@@ -254,24 +254,8 @@ if os.path.exists(xi_path):
         )
 
     with xi_right:
+        st.html(os.path.join(ROOT, "src", "app", "ui", "styles", "page_overview_xi.css"))
         st.markdown(
-            '<style>'
-            '.vc-xi-anchor{display:none!important;}'
-            'div[data-testid="stElementContainer"]:has(.vc-xi-anchor) + div [data-testid="stHorizontalBlock"]{align-items:stretch;}'
-            'div[data-testid="stElementContainer"]:has(.vc-xi-anchor) + div [data-testid="stHorizontalBlock"] [data-testid="stColumn"] > [data-testid="stVerticalBlock"],'
-            'div[data-testid="stElementContainer"]:has(.vc-xi-anchor) + div [data-testid="stHorizontalBlock"] [data-testid="stElementContainer"]:has(.xi-builder-card),'
-            'div[data-testid="stElementContainer"]:has(.vc-xi-anchor) + div [data-testid="stHorizontalBlock"] [data-testid="stElementContainer"]:has(.xi-builder-card) [data-testid="stMarkdown"],'
-            'div[data-testid="stElementContainer"]:has(.vc-xi-anchor) + div [data-testid="stHorizontalBlock"] [data-testid="stElementContainer"]:has(.xi-builder-card) [data-testid="stMarkdown"] > div,'
-            'div[data-testid="stElementContainer"]:has(.vc-xi-anchor) + div [data-testid="stHorizontalBlock"] [data-testid="stElementContainer"]:has(.xi-builder-card) [data-testid="stMarkdownContainer"],'
-            'div[data-testid="stElementContainer"]:has(.vc-xi-anchor) + div [data-testid="stHorizontalBlock"] [data-testid="stElementContainer"]:has(.xi-builder-card) [data-testid="stMarkdownContainer"] > div{height:100%;}'
-            '.xi-builder-card{height:100%;display:flex;flex-direction:column;padding:26px 24px;}'
-            '.xi-kicker{font-size:10px;font-weight:700;letter-spacing:1.5px;color:#9b9b95;text-transform:uppercase;margin-bottom:10px;}'
-            '.xi-title{font-size:24px;font-weight:700;color:#f1f0eb;letter-spacing:-.5px;line-height:1.2;margin-bottom:12px;}'
-            '.xi-sub{font-size:13px;color:#9b9b95;margin-bottom:6px;}'
-            '.xi-list{margin-bottom:8px;}'
-            '.xi-list span{display:block;padding:7px 0;border-top:1px solid rgba(255,255,255,0.08);font-size:13px;font-weight:600;color:#cfcfc9;}'
-            '.xi-link{margin-top:auto;padding-top:18px;}'
-            '</style>'
             '<div class="champions-card xi-builder-card">'
             '<div class="xi-kicker">AI SQUAD BUILDER</div>'
             '<div class="xi-title">Explore 4 AI-Generated Dream Teams</div>'

@@ -57,13 +57,13 @@ def render_navigation(active):
     # Tables are a shared product surface, including the Overview page. Load
     # their theme once for every route so native dataframes never fall back to
     # Streamlit's default blue/rounded treatment during a page switch.
-    st.html(root / "table_theme.css")
+    st.html(root / "ui" / "styles" / "table_theme.css")
     if is_xnrgy_page:
-        st.html(root / "xnrgy.css")
-        st.html(root / "unified_pages.css")
+        st.html(root / "ui" / "styles" / "xnrgy.css")
+        st.html(root / "ui" / "styles" / "unified_pages.css")
     # Load the photographic/navigation layer last so the full-screen opening
     # and floating menu stay consistent across every page-specific theme.
-    st.html(root / "photo_story.css")
+    st.html(root / "ui" / "styles" / "photo_story.css")
 
     edition = (
         '<span class="wc-edition">EXPLORE DATA <b>↗</b></span>' if is_xnrgy_page

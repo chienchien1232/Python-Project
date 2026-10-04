@@ -26,7 +26,7 @@ for p in [app_path, sys_path]:
         sys.path.insert(0, p)
 
 from helpers import load_analytics_csv  # noqa: E402
-from media_ui import flag_image, player_portrait, render_photo_story  # noqa: E402
+from ui.media_ui import flag_image, player_portrait, render_photo_story  # noqa: E402
 from page_chrome import footer, setup_page  # noqa: E402
 from text_norm import clean_name  # noqa: E402
 
@@ -35,9 +35,9 @@ setup_page("Best XI Dream Team | WorldCup Stats '26")
 
 # ── Top Navigation Bar ────────────────────────────────────────────────────────
 from navigation import render_navigation
-from table_ui import data_table
+from ui.table_ui import data_table
 render_navigation('Best XI')
-st.html(Path(app_path) / "best_xi.css")
+st.html(Path(app_path) / "ui" / "styles" / "best_xi.css")
 
 render_photo_story(
     "SQUAD OPTIMIZATION ENGINE / 2026",
@@ -326,7 +326,7 @@ profile_by_id = {
 }
 profile_html = profile_by_id[focus_id]
 profiles_json = json.dumps(profile_by_id, ensure_ascii=False).replace("</", "<\\/")
-component_css = Path(app_path, "best_xi.css").read_text(encoding="utf-8")
+component_css = Path(app_path, "ui", "styles", "best_xi.css").read_text(encoding="utf-8")
 
 lineup_component = f"""
 <style>

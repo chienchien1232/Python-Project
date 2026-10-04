@@ -18,17 +18,17 @@ for path in (APP_PATH, SRC_PATH):
         sys.path.insert(0, path)
 
 from match_data import get_anomaly_ids, get_matches  # noqa: E402
-from match_ui import render_calendar_hero, render_match_card, render_stat_strip  # noqa: E402
-from media_ui import render_photo_story  # noqa: E402
+from ui.match_ui import render_calendar_hero, render_match_card, render_stat_strip  # noqa: E402
+from ui.media_ui import render_photo_story  # noqa: E402
 from navigation import render_navigation  # noqa: E402
 from page_chrome import footer, setup_page  # noqa: E402
-from table_ui import data_table  # noqa: E402
+from ui.table_ui import data_table  # noqa: E402
 
 
 setup_page("Matches & Results | WorldCup Stats '26")
 
 render_navigation("Matches")
-st.html(Path(APP_PATH) / "match_experience.css")
+st.html(Path(APP_PATH) / "ui" / "styles" / "match_experience.css")
 
 render_photo_story(
     "MATCH CALENDAR / 2026",

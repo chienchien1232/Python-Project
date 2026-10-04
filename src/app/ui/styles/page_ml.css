@@ -1,0 +1,36 @@
+/* ML Explorer workspace cards, bars and group rows. Extracted from pages/5_ml_explorer.py. */
+.ml-role-card{background:#0e0e0e;border:0;border-top:1px solid rgba(255,255,255,0.18);border-bottom:1px solid rgba(255,255,255,0.10);border-radius:0;
+padding:18px;margin-bottom:16px;}
+.ml-panel-head{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:800;
+letter-spacing:1.2px;color:#f3f2ed;text-transform:uppercase;margin-bottom:12px;flex-wrap:wrap;}
+.ml-dot{width:8px;height:8px;border-radius:50%;background:#f2f1ec;flex:0 0 auto;}
+.ml-year{margin-left:auto;font-size:10px;font-weight:600;letter-spacing:1px;color:#6b7280;white-space:nowrap;}
+.ml-role-head{display:flex;align-items:center;gap:12px;margin-bottom:6px;}
+.ml-role-num{display:grid;place-items:center;width:40px;height:40px;flex:0 0 auto;
+border:1px solid rgba(242,241,236,0.5);border-radius:8px;color:#f2f1ec;
+font-size:15px;font-weight:900;}
+.ml-role-title{font-size:19px;font-weight:800;color:#fff;line-height:1.15;}
+.ml-role-sub{font-size:11.5px;color:#8a8f98;font-weight:600;}
+.ml-known{font-size:12px;color:#8a8f98;margin-bottom:10px;}
+.ml-known b{color:#e8e8e3;}
+.ml-traits{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);
+border-radius:8px;padding:10px 12px;margin-bottom:10px;}
+.ml-traits-title{font-size:10.5px;font-weight:800;color:#8a8f98;letter-spacing:1px;
+text-transform:uppercase;margin-bottom:6px;}
+.ml-traits ul{margin:0;padding-left:16px;font-size:12.5px;color:#e8e8e3;line-height:1.7;}
+.ml-bar-row{margin:7px 0;}
+.ml-bar-top{display:flex;justify-content:space-between;font-size:11.5px;margin-bottom:3px;}
+.ml-bar-top span:first-child{color:#8a8f98;}
+.ml-bar-track{height:8px;background:rgba(255,255,255,0.06);border-radius:4px;position:relative;}
+.ml-bar-avg{position:absolute;left:50%;top:-1px;bottom:-1px;width:2px;background:rgba(255,255,255,0.35);}
+.ml-bar-fill{position:absolute;left:0;top:0;bottom:0;border-radius:4px;opacity:0.85;}
+.ml-group-row{display:flex;align-items:center;gap:10px;min-width:0;
+padding:8px 2px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.ml-group-row .media-flag{flex:0 0 auto;}
+.ml-group-name{font-size:13.5px;font-weight:700;color:#fff;
+white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ml-group-team{font-size:11.5px;color:#8a8f98;white-space:nowrap;}
+.ml-group-pos{background:rgba(255,255,255,0.10);color:#fff;border-radius:5px;
+padding:1px 7px;font-size:10.5px;font-weight:800;white-space:nowrap;}
+.ml-group-val{margin-left:auto;font-size:13.5px;font-weight:800;color:#fff;white-space:nowrap;}
+.ml-group-val small{font-size:10px;color:#8a8f98;font-weight:600;margin-left:4px;}

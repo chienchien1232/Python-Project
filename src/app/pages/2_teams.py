@@ -17,7 +17,7 @@ for p in [app_path, sys_path]:
         sys.path.insert(0, p)
 
 from helpers import q, load_analytics_csv  # noqa: E402
-from media_ui import flag_image, player_portrait, render_photo_story  # noqa: E402
+from ui.media_ui import flag_image, player_portrait, render_photo_story  # noqa: E402
 from page_chrome import footer, setup_page  # noqa: E402
 from text_norm import clean_name, flag  # noqa: E402
 
@@ -26,7 +26,7 @@ setup_page("Teams & Squads | WorldCup Stats '26")
 
 # ── Top Navigation Bar ────────────────────────────────────────────────────────
 from navigation import nav_link, render_navigation
-from table_ui import data_table
+from ui.table_ui import data_table
 render_navigation('Teams')
 
 render_photo_story(
@@ -210,68 +210,8 @@ if selected_team:
         unsafe_allow_html=True
     )
 
-    # ── Dossier styles (scoped .tm-, editorial dark) ──
-    st.markdown(
-        '<style>'
-        '.tm-select-head{display:flex;align-items:center;gap:10px;font-size:30px;font-weight:900;'
-        'letter-spacing:-0.5px;color:#fff;text-transform:uppercase;margin:6px 0 14px;}'
-        '.tm-dot{width:9px;height:9px;border-radius:50%;background:#fff;flex:0 0 auto;}'
-        '.tm-year{font-size:11px;font-weight:600;letter-spacing:1px;color:#6b7280;}'
-        '.tm-panel{background:#0e0e0e;border:0;border-top:1px solid rgba(255,255,255,0.18);border-bottom:1px solid rgba(255,255,255,0.10);border-radius:0;'
-        'padding:16px 16px 14px;margin-bottom:16px;min-width:0;}'
-        '[data-testid="stVerticalBlockBorderWrapper"]{background:#0e0e0e;border:0;border-top:1px solid rgba(255,255,255,0.18);'
-        'border-bottom:1px solid rgba(255,255,255,0.10);border-radius:0;margin-bottom:16px;}'
-        '[data-testid="stVerticalBlockBorderWrapper"] > div{padding:16px 16px 14px;}'
-        '.tm-panel-head{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:800;'
-        'letter-spacing:1.2px;color:#f3f2ed;text-transform:uppercase;margin-bottom:12px;min-width:0;flex-wrap:wrap;}'
-        '.tm-panel-head .tm-dot{width:8px;height:8px;}'
-        '.tm-panel-head .tm-year{margin-left:auto;white-space:nowrap;}'
-        '.tm-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;}'
-        '.tm-kpi{background:#111111;border:0;border-left:1px solid rgba(255,255,255,0.12);border-radius:0;'
-        'padding:10px 12px;min-width:0;}'
-        '.tm-kpi-lbl{font-size:9.5px;font-weight:700;letter-spacing:1px;color:#8a8f98;text-transform:uppercase;'
-        'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}'
-        '.tm-kpi-val{font-size:21px;font-weight:900;color:#fff;margin-top:2px;}'
-        '.tm-kpi-delta{font-size:11px;font-weight:700;}'
-        '.tm-kpi-sub{font-size:10px;color:#6b7280;}'
-        '.up{color:#00e676;}.dn{color:#ff5252;}'
-        '.tm-match{display:flex;align-items:center;gap:10px;min-width:0;padding:9px 10px;'
-        'background:rgba(255,255,255,0.02);border:0;border-bottom:1px solid rgba(255,255,255,0.10);border-radius:0;margin-bottom:8px;}'
-        '.tm-match-date{flex:0 0 74px;font-size:10.5px;color:#8a8f98;line-height:1.5;}'
-        '.tm-match-mid{flex:1 1 auto;display:flex;align-items:center;justify-content:center;gap:8px;min-width:0;'
-        'font-size:13px;font-weight:600;color:#e8e8e3;}'
-        '.tm-match-mid .media-flag{flex:0 0 auto;}'
-        '.tm-match-team{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}'
-        '.tm-match-score{font-size:16px;font-weight:900;color:#fff;white-space:nowrap;}'
-        '.tm-badge{flex:0 0 auto;font-size:10px;font-weight:800;letter-spacing:0.8px;border-radius:6px;padding:4px 10px;}'
-        '.tm-badge.win{background:rgba(0,230,118,0.14);color:#00e676;}'
-        '.tm-badge.draw{background:rgba(255,255,255,0.09);color:#cbd5e1;}'
-        '.tm-badge.loss{background:rgba(255,82,82,0.14);color:#ff5252;}'
-        '.tm-roster-wrap{display:flex;align-items:stretch;gap:8px;}'
-        '.tm-roster-nav{flex:0 0 auto;align-self:center;width:30px;height:64px;background:#11141b;'
-        'border:1px solid rgba(255,255,255,0.10);border-radius:8px;color:#cbd5e1;font-size:15px;cursor:pointer;}'
-        '.tm-roster-nav:hover{background:#1b2029;color:#fff;}'
-        '.tm-roster-rail{display:flex;flex-wrap:nowrap;gap:10px;overflow-x:auto;flex:1 1 auto;min-width:0;'
-        'padding:2px 2px 6px;scrollbar-width:thin;scrollbar-color:#2e2e2e transparent;}'
-        '.tm-roster-rail::-webkit-scrollbar{height:6px;}'
-        '.tm-roster-rail::-webkit-scrollbar-track{background:transparent;}'
-        '.tm-roster-rail::-webkit-scrollbar-thumb{background:#2e2e2e;border-radius:3px;}'
-        '.tm-rcard{flex:0 0 208px;width:208px;display:flex;gap:10px;background:#111111;'
-        'border:0;border-top:1px solid rgba(255,255,255,0.12);border-bottom:1px solid rgba(255,255,255,0.08);border-radius:0;padding:10px;min-width:0;}'
-        '.tm-rcard:hover{border-color:rgba(255,255,255,0.24);}'
-        '.tm-rcard .player-portrait{flex:0 0 76px;width:76px !important;height:96px !important;'
-        'border-radius:6px;border:1px solid rgba(255,255,255,0.10) !important;}'
-        '.tm-rcard-info{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:3px;}'
-        '.tm-rcard-name{font-size:13px;font-weight:700;color:#f3f2ed;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}'
-        '.tm-pos{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:0.8px;color:#f2f1ec;'
-        'background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.30);border-radius:0;padding:1px 7px;}'
-        '.tm-rcard-sub{font-size:11px;color:#a7abb3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}'
-        '.tm-rcard-club{font-size:11px;color:#8a8f98;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}'
-        '@media (max-width:900px){.tm-kpis{grid-template-columns:repeat(2,1fr);}'
-        '.tm-select-head{font-size:22px;}.tm-match-date{flex-basis:60px;}}'
-        '</style>',
-        unsafe_allow_html=True,
-    )
+    # ── Dossier styles loaded from ui/styles/page_teams.css ──
+    st.html(os.path.join(app_path, "ui", "styles", "page_teams.css"))
 
     col_t_left, col_t_right = st.columns([1.15, 1.0], gap="large")
 

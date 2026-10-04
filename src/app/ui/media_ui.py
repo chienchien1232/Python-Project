@@ -14,7 +14,7 @@ from urllib.parse import quote
 import streamlit as st
 
 
-APP_ROOT = Path(__file__).resolve().parent
+APP_ROOT = Path(__file__).resolve().parent.parent  # src/app (module lives in src/app/ui/)
 PROJECT_ROOT = APP_ROOT.parents[1]
 FIFA_RAW = PROJECT_ROOT / "data" / "raw" / "fifa"
 

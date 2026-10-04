@@ -7,7 +7,7 @@ from streamlit.testing.v1 import AppTest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src' / 'app'))
 
-from media_ui import flag_url, player_photo_url, player_portrait
+from ui.media_ui import flag_url, player_photo_url, player_portrait
 
 
 def verify(app, label):

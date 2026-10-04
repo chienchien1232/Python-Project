@@ -8,7 +8,7 @@ from urllib.parse import urlencode
 import pandas as pd
 
 from match_data import team_code
-from media_ui import flag_image
+from ui.media_ui import flag_image
 
 
 def safe(value: Any, fallback: str = "—") -> str:
