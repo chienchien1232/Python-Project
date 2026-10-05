@@ -14,6 +14,10 @@
 
 Cam kết nhóm 1: `wc2026_full.db` đầy đủ (104 trận / 48 đội / 1039 cầu thủ),
 CSV nguồn trong `data/processed/csv/` không được sửa sau khi chốt.
+Đã dọn (commit `c796c42`): backup `wc2026_before_name_fix/`, `wc2026_before_remap/`,
+`ml_results/*.csv` cũ (đã có `analytics/` thay thế), `Miscellaneous/shoot/gk.csv`
+thô, cache `espn/plays_agg+plays_full`. Rerun `remap_wc2026_ids.py` thì restore
+backup từ git trước (`git show c796c42~1:...`).
 
 ## Nhóm 2 — Web App + UI/Media (2 người)
 
