@@ -12,7 +12,7 @@ chuyển nhượng. Giao diện web đen/trắng tối giản, mono editorial, �
 
 ### Bước 1: Cập nhật mã nguồn (Hoặc tải trực tiếp repo từ branch chien)
 ```bash
-git clone -b chien https://github.com/chienchien1232/Python-Project.git
+git clone https://github.com/chienchien1232/Python-Project.git
 ```
 
 ### Bước 2: Tạo môi trường ảo (máy mới, Python 3.12)
