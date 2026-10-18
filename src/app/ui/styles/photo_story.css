@@ -526,158 +526,14 @@ html { background:#050505; }
   object-position: center;
   transform: scale(1.09);
 }
-.portal-duo {
-  position: absolute;
-  inset: 0;
-  background: #fff;
-  opacity: 0;
-  mix-blend-mode: overlay;
-}
-.portal-veil {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,.72) 100%);
-}
-.portal-panel {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 52%;
-  background: #050505;
-  z-index: 3;
-  /* No-JS default = OPEN (finished page). JS adds .portal-live and then
-     drives these inline from scroll position (closed at top). */
-  transition: none;
-}
-.portal-left { left: 0; transform: translateX(-115%); }
-.portal-right { right: 0; transform: translateX(115%); }
-.portal-live .portal-panel { transform: none; }
-.portal-cup {
-  position: absolute;
-  left: 50%;
-  bottom: 78%;
-  width: min(300px, 56vw);
-  height: min(300px, 56vw);
-  transform: translate(-50%, 50%);
-  z-index: 5;
-  perspective: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-}
-.portal-cup img {
-  display: block;
-  width: clamp(140px, 16vw, 220px);
-  height: auto;
-  opacity: 1;
-  animation: portal-cup-spin 9s linear infinite;
-  transform-style: preserve-3d;
-}
-@keyframes portal-cup-spin {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
-}
-.portal-dates {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 22px;
-  z-index: 5;
-}
-.portal-dates div { text-align: center; }
-.portal-dates strong {
-  display: block;
-  font-family: "Arial Narrow", Arial, sans-serif;
-  font-size: clamp(40px, 5vw, 64px);
-  font-weight: 300;
-  line-height: 1;
-  color: #f2f1ec;
-}
-.portal-dates span {
-  font-size: 9.5px;
-  font-weight: 800;
-  letter-spacing: 0.24em;
-  color: rgba(242, 241, 236, 0.65);
-}
-.portal-dates-sep {
-  padding-top: 14px;
-  font-size: 20px;
-  color: rgba(242, 241, 236, 0.5);
-}
-.portal-event {
-  position: absolute;
-  left: 50%;
-  bottom: 120px;
-  transform: translateX(-50%);
-  padding: 10px 26px;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  white-space: nowrap;
-  color: #f2f1ec;
-  z-index: 5;
-}
-.portal-corner {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border: 0 solid rgba(242, 241, 236, 0.7);
-}
-.portal-corner.tl { top: 0; left: 0; border-top-width: 1px; border-left-width: 1px; }
-.portal-corner.br { bottom: 0; right: 0; border-bottom-width: 1px; border-right-width: 1px; }
-.portal-champ {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 88px;
-  text-align: center;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  color: rgba(242, 241, 236, 0.6);
-  z-index: 5;
-}
-.portal-lines {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 4;
-  pointer-events: none;
-}
-.portal-meta {
-  position: absolute;
-  left: 26px;
-  right: 26px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  color: rgba(242, 241, 236, 0.65);
-  z-index: 5;
-}
-.portal-meta-top { top: 64px; }
-.portal-meta-bottom { bottom: 26px; }
-/* Closed state applied by JS only (motion-ok). */
-.portal-live .portal-panel,
-.portal-live .portal-img,
-.portal-live .portal-duo {
-  will-change: transform;
-}
-
 /* ── Solo feature film (longest clip stands alone) ── */
 .film-solo {
   position: relative;
   width: 100vw;
   max-width: none;
   margin-left: calc(50% - 50vw);
-  height: clamp(420px, 88vh, 900px);
+  height: 100vh;
+  height: 100svh;
   overflow: hidden;
   background: #000;
 }
@@ -810,7 +666,6 @@ html { background:#050505; }
 @media (prefers-reduced-motion: reduce) {
   .portal { height: auto; }
   .portal-stage { position: relative; height: 92vh; }
-  .portal-cup svg { animation: none; }
 }
 
 /* Entrance animation for remaining pages: headers, KPI, leaderboards,

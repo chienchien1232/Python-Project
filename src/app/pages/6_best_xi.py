@@ -155,41 +155,62 @@ if "ML Cluster" in mode and not has_cluster:
 
 
 # ── Integer Linear Programming Optimization ──────────────────────────────────
-prob = pulp.LpProblem("BestXI", pulp.LpMaximize)
-x = {i: pulp.LpVariable(f"x_{i}", cat="Binary") for i in pool.index}
+@st.cache_data(show_spinner="Đang giải bài toán tối ưu Best XI...")
+def _solve_xi(pool_sig: pd.DataFrame, formation: str, mode: str,
+              budget, max_nation: int) -> tuple:
+    """Giải LP gửi dữ liệu tối thiểu (hash của pool_sig làm cache key);
 
-if "Value-for-Money" in mode:
-    obj = pool["overall_score"] / pool["value_meur"].clip(lower=0.5)
-else:
-    obj = pool["overall_score"]
+    trả về tuple index của các cầu thủ được chọn, () nếu không Optimal."""
+    prob = pulp.LpProblem("BestXI", pulp.LpMaximize)
+    x = {i: pulp.LpVariable(f"x_{i}", cat="Binary") for i in pool_sig.index}
 
-prob += pulp.lpSum(obj[i] * x[i] for i in pool.index)
-prob += pulp.lpSum(x.values()) == 11, "total_11"
+    if "Value-for-Money" in mode:
+        obj = pool_sig["overall_score"] / pool_sig["value_meur"].clip(lower=0.5)
+    else:
+        obj = pool_sig["overall_score"]
 
-for pos, need in FORMATIONS[formation].items():
-    idx = pool.index[pool["position"] == pos]
-    prob += pulp.lpSum(x[i] for i in idx) == need, f"pos_{pos}"
+    prob += pulp.lpSum(obj[i] * x[i] for i in pool_sig.index)
+    prob += pulp.lpSum(x.values()) == 11, "total_11"
 
-if budget is not None and "Value-for-Money" in mode:
-    prob += pulp.lpSum(pool.loc[i, "value_meur"] * x[i] for i in pool.index) <= budget, "budget"
+    for pos, need in FORMATIONS[formation].items():
+        idx = pool_sig.index[pool_sig["position"] == pos]
+        prob += pulp.lpSum(x[i] for i in idx) == need, f"pos_{pos}"
 
-if max_nation:
-    for nat, grp in pool.groupby("team"):
-        prob += pulp.lpSum(x[i] for i in grp.index) <= max_nation, f"nat_{nat}"
+    if budget is not None and "Value-for-Money" in mode:
+        prob += pulp.lpSum(pool_sig.loc[i, "value_meur"] * x[i]
+                           for i in pool_sig.index) <= budget, "budget"
 
-if "ML Cluster" in mode:
-    for lbl in ("Finisher / Goal Scorer", "Playmaker / Chance Creator", "Defensive Anchor", "Defensive Player"):
-        idx = pool.index[pool.get("cluster_label", "") == lbl]
-        if len(idx):
-            prob += pulp.lpSum(x[i] for i in idx) >= 1, f"min_{lbl[:8]}"
+    if max_nation:
+        for nat, grp in pool_sig.groupby("team"):
+            prob += pulp.lpSum(x[i] for i in grp.index) <= max_nation, f"nat_{nat}"
 
-status = prob.solve(pulp.PULP_CBC_CMD(msg=False))
+    if "ML Cluster" in mode:
+        for lbl in ("Finisher / Goal Scorer", "Playmaker / Chance Creator",
+                    "Defensive Player"):
+            if "cluster_label" not in pool_sig.columns:
+                break
+            idx = pool_sig.index[pool_sig["cluster_label"] == lbl]
+            if len(idx):
+                prob += pulp.lpSum(x[i] for i in idx) >= 1, f"min_{lbl[:8]}"
 
-if pulp.LpStatus[status] != "Optimal":
-    st.error(f"Solver status: {pulp.LpStatus[status]}. Please relax budget or nationality constraints.")
+    status = prob.solve(pulp.PULP_CBC_CMD(msg=False))
+    if pulp.LpStatus[status] != "Optimal":
+        return ()
+    return tuple(pool_sig.index[i] for i in range(len(pool_sig.index))
+                 if x[pool_sig.index[i]].value() == 1)
+
+
+pool_cols = [c for c in ("position", "team", "overall_score",
+                         "value_meur", "cluster_label") if c in pool.columns]
+selected = _solve_xi(pool[pool_cols].copy(), formation, mode,
+                     budget, int(max_nation) if max_nation else 0)
+
+if not selected:
+    st.error("Solver status: Không tìm được đội hình Optimal. "
+             "Please relax budget or nationality constraints.")
     st.stop()
 
-xi = pool[[x[i].value() == 1 for i in pool.index]].copy()
+xi = pool.loc[list(selected)].copy()
 order = {"GK": 0, "DEF": 1, "MID": 2, "FWD": 3}
 xi["_o"] = xi["position"].map(order)
 xi = xi.sort_values("_o")

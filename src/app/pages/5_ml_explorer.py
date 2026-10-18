@@ -383,21 +383,22 @@ with t2:
         def pca_html_self_contained() -> str:
             with open(html_p, encoding="utf-8") as f:
                 html_doc = f.read()
-            # Inline Plotly JS so the map renders even when the plot.ly CDN
-            # is unreachable from the viewer's browser.
+            # Serve the 4.6 MB Plotly runtime from /app/static instead of
+            # inlining it into the iframe payload, so the browser caches it
+            # and reruns of this page do not re-send megabytes per interaction.
             js_path = os.path.join(ROOT, "src", "app", "static", "plotly-3.7.0.min.js")
             if os.path.exists(js_path):
-                with open(js_path, encoding="utf-8") as f:
-                    plotly_js = f.read()
                 html_doc, n = _re.subn(
-                    r'<script\s+src="https://cdn\.plot\.ly/[^"]*"[^>]*></script>',
-                    lambda _m: "<script>" + plotly_js + "</script>",
+                    r'<script[^>]+src="https://cdn\.plot\.ly/[^"]*"[^>]*>\s*</script>',
+                    '<script src="/app/static/plotly-3.7.0.min.js"></script>',
                     html_doc,
                     count=1,
                 )
                 if n == 0:
                     html_doc = html_doc.replace(
-                        "</head>", "<script>" + plotly_js + "</script></head>", 1,
+                        "</head>",
+                        '<script src="/app/static/plotly-3.7.0.min.js"></script></head>',
+                        1,
                     )
             return html_doc
 

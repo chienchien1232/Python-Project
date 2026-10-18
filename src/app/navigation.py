@@ -1,4 +1,5 @@
 """Shared, accessible navigation and page-specific visual systems."""
+from functools import lru_cache
 from pathlib import Path
 from urllib.parse import urlencode
 
@@ -51,19 +52,25 @@ def nav_link(path, label, disabled=False, query_params=None):
     )
 
 
+@lru_cache(maxsize=8)
+def _css_bundle(*names: str) -> str:
+    """Read + concatenate the shared stylesheets once per process."""
+    styles = Path(__file__).resolve().parent / "ui" / "styles"
+    return "".join((styles / name).read_text(encoding="utf-8") for name in names)
+
+
 def render_navigation(active):
-    root = Path(__file__).resolve().parent
     is_xnrgy_page = active != "Overview"
-    # Tables are a shared product surface, including the Overview page. Load
-    # their theme once for every route so native dataframes never fall back to
-    # Streamlit's default blue/rounded treatment during a page switch.
-    st.html(root / "ui" / "styles" / "table_theme.css")
-    if is_xnrgy_page:
-        st.html(root / "ui" / "styles" / "xnrgy.css")
-        st.html(root / "ui" / "styles" / "unified_pages.css")
-    # Load the photographic/navigation layer last so the full-screen opening
-    # and floating menu stay consistent across every page-specific theme.
-    st.html(root / "ui" / "styles" / "photo_story.css")
+    # One <style> element per page instead of four: fewer elements to
+    # serialize on every rerun. Load order is preserved exactly
+    # (table_theme -> xnrgy -> unified_pages -> photo_story), so the cascade
+    # is unchanged. NOTE: st.html(string) does not auto-wrap CSS in <style>
+    # (only st.html(Path-to-.css) does), hence the explicit wrapper here.
+    bundle = ("table_theme.css",) + (
+        ("xnrgy.css", "unified_pages.css") if is_xnrgy_page else ()
+    ) + ("photo_story.css",)
+    st.markdown("<style>" + _css_bundle(*bundle) + "</style>",
+                unsafe_allow_html=True)
 
     edition = (
         '<span class="wc-edition">EXPLORE DATA <b>↗</b></span>' if is_xnrgy_page

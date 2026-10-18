@@ -19,7 +19,7 @@ for p in [app_path, sys_path]:
         sys.path.insert(0, p)
 
 from helpers import q, load_analytics_csv, load_similarity_matrix  # noqa: E402
-from ui.media_ui import country_palette, flag_image, player_portrait, render_photo_story, static_url  # noqa: E402
+from ui.media_ui import country_palette, flag_image, player_portrait, render_photo_story, static_url, static_variant  # noqa: E402
 from page_chrome import footer, setup_page  # noqa: E402
 from text_norm import clean_name  # noqa: E402
 
@@ -41,6 +41,51 @@ render_photo_story(
 )
 
 st.html(Path(app_path) / "ui" / "styles" / "page_players.css")
+
+
+@st.cache_data(show_spinner=False)
+def _fig_player_radar(player_name: str, pos_label: str, r_vals: tuple, labels: tuple):
+    """Percentile radar vs positional peers; cached on (player, values, labels)."""
+    fig = go.Figure()
+    fig.add_trace(go.Scatterpolar(
+        r=list(r_vals) + [r_vals[0]],
+        theta=list(labels) + [labels[0]],
+        fill="toself",
+        # Use the same muted aqua/sand pair as the team radar so
+        # the analytical views remain visually consistent.
+        fillcolor="rgba(168, 218, 220, 0.22)",
+        name=player_name,
+        line=dict(color="#a8dadc", width=2.5),
+        marker=dict(color="#a8dadc", size=5),
+    ))
+    fig.add_trace(go.Scatterpolar(
+        r=[50] * (len(labels) + 1),
+        theta=list(labels) + [labels[0]],
+        name=f"{pos_label} Peer Average",
+        line=dict(color="#d7c3a3", dash="dash", width=1.5),
+    ))
+    fig.update_layout(
+        paper_bgcolor="#000000",
+        plot_bgcolor="#000000",
+        font=dict(family="Inter, sans-serif", color="#a7abb3", size=11),
+        polar=dict(
+            bgcolor="#000000",
+            radialaxis=dict(visible=True, range=[0, 100],
+                            gridcolor="rgba(255,255,255,0.10)",
+                            linecolor="rgba(255,255,255,0.12)",
+                            tickfont=dict(color="#6b7280", size=9)),
+            angularaxis=dict(gridcolor="rgba(255,255,255,0.10)",
+                             linecolor="rgba(255,255,255,0.12)"),
+        ),
+        showlegend=True,
+        legend=dict(orientation="h", yanchor="bottom", y=-0.22,
+                    xanchor="center", x=0.5, font=dict(size=10)),
+        margin=dict(l=35, r=35, t=20, b=50),
+        height=350,
+    )
+    return fig
+
+
 st.markdown(
     '<div class="vc-subnav-anchor" aria-hidden="true">players-subnav</div>',
     unsafe_allow_html=True,
@@ -204,7 +249,7 @@ if sel_pname:
     }
     tagline = TAGLINES.get(p_pos, "DISCIPLINE. PRECISION. BIG-MOMENT PLAYER.")
     palette_code, palette_primary, palette_secondary, palette_primary_rgb, palette_secondary_rgb = country_palette(p_team)
-    stadium_src = html_lib.escape(static_url("hero-players-v1.png"), quote=True)
+    stadium_src = html_lib.escape(static_url(static_variant("hero-players-v1.png", "")), quote=True)
     profile_vars = (
         f'--pp-primary:{palette_primary};--pp-secondary:{palette_secondary};'
         f'--pp-primary-rgb:{palette_primary_rgb};--pp-secondary-rgb:{palette_secondary_rgb};'
@@ -287,43 +332,7 @@ if sel_pname:
                 unsafe_allow_html=True,
             )
             if r_vals:
-                fig_p_radar = go.Figure()
-                fig_p_radar.add_trace(go.Scatterpolar(
-                    r=r_vals + [r_vals[0]],
-                    theta=labels_r + [labels_r[0]],
-                    fill="toself",
-                    # Use the same muted aqua/sand pair as the team radar so
-                    # the analytical views remain visually consistent.
-                    fillcolor="rgba(168, 218, 220, 0.22)",
-                    name=sel_pname,
-                    line=dict(color="#a8dadc", width=2.5),
-                    marker=dict(color="#a8dadc", size=5),
-                ))
-                fig_p_radar.add_trace(go.Scatterpolar(
-                    r=[50] * (len(labels_r) + 1),
-                    theta=labels_r + [labels_r[0]],
-                    name=f"{p_pos} Peer Average",
-                    line=dict(color="#d7c3a3", dash="dash", width=1.5),
-                ))
-                fig_p_radar.update_layout(
-                    paper_bgcolor="#000000",
-                    plot_bgcolor="#000000",
-                    font=dict(family="Inter, sans-serif", color="#a7abb3", size=11),
-                    polar=dict(
-                        bgcolor="#000000",
-                        radialaxis=dict(visible=True, range=[0, 100],
-                                        gridcolor="rgba(255,255,255,0.10)",
-                                        linecolor="rgba(255,255,255,0.12)",
-                                        tickfont=dict(color="#6b7280", size=9)),
-                        angularaxis=dict(gridcolor="rgba(255,255,255,0.10)",
-                                         linecolor="rgba(255,255,255,0.12)"),
-                    ),
-                    showlegend=True,
-                    legend=dict(orientation="h", yanchor="bottom", y=-0.22,
-                                xanchor="center", x=0.5, font=dict(size=10)),
-                    margin=dict(l=35, r=35, t=20, b=50),
-                    height=350,
-                )
+                fig_p_radar = _fig_player_radar(sel_pname, p_pos, tuple(r_vals), tuple(labels_r))
                 st.plotly_chart(fig_p_radar, width="stretch")
             else:
                 st.info("Not enough peer data for radar.")

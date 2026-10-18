@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from helpers import load_similarity_matrix, q
-from ui.media_ui import country_palette, flag_image, player_portrait, static_url
+from ui.media_ui import country_palette, flag_image, player_portrait, static_url, static_variant
 from text_norm import clean_name, flag
 
 #: Per-90 rows of the head-to-head panel: (column, label, icon key, format).
@@ -44,6 +44,47 @@ TEAM_STAT_SPECS: list[tuple[str, str, str]] = [
     ("Goalkeeper Saves", "avg_saves", ""),
     ("Fouls Committed", "avg_fouls", ""),
 ]
+
+
+@st.cache_data(show_spinner=False)
+def _fig_h2h_radar(name_a: str, pct_a: tuple, name_b: str, pct_b: tuple):
+    """Head-to-head percentile radar; cached on (names, percentile tuples)."""
+    fig = go.Figure()
+    for r_vals, p_label, clr, fill_clr in (
+        # Muted aqua and sand separate both players clearly
+        # while preserving the monochrome page foundation.
+        (pct_a, name_a, "#a8dadc", "rgba(168,218,220,0.20)"),
+        (pct_b, name_b, "#d7c3a3", "rgba(215,195,163,0.18)"),
+    ):
+        fig.add_trace(go.Scatterpolar(
+            r=list(r_vals) + [r_vals[0]],
+            theta=[lbl for _, lbl, _, _ in AXES_PVP] + [AXES_PVP[0][1]],
+            fill="toself",
+            fillcolor=fill_clr,
+            name=p_label,
+            line=dict(color=clr, width=2.8),
+            marker=dict(color=clr, size=5),
+        ))
+    fig.update_layout(
+        paper_bgcolor="#080808",
+        plot_bgcolor="#080808",
+        font=dict(family="Arial, sans-serif", color="#9b9b95", size=11),
+        polar=dict(
+            bgcolor="#080808",
+            radialaxis=dict(visible=True, range=[0, 100],
+                            gridcolor="rgba(255,255,255,0.10)",
+                            linecolor="rgba(255,255,255,0.14)",
+                            tickfont=dict(color="#9b9b95", size=9)),
+            angularaxis=dict(gridcolor="rgba(255,255,255,0.10)",
+                             linecolor="rgba(255,255,255,0.14)"),
+        ),
+        showlegend=True,
+        legend=dict(orientation="h", yanchor="bottom", y=-0.18,
+                    xanchor="center", x=0.5, font=dict(size=11, color="#f1f0eb")),
+        margin=dict(l=35, r=35, t=20, b=45),
+        height=380,
+    )
+    return fig
 
 
 def _drib90(row: pd.Series, columns: pd.Index) -> float:
@@ -154,7 +195,7 @@ def render_pvp() -> None:
         f"--h2h-primary:{primaryB};--h2h-secondary:{secondaryB};"
         f"--h2h-primary-rgb:{primary_rgbB};--h2h-secondary-rgb:{secondary_rgbB};"
     )
-    stadium_src = html_lib.escape(static_url("hero-players-v1.png"), quote=True)
+    stadium_src = html_lib.escape(static_url(static_variant("hero-players-v1.png", "")), quote=True)
 
     # ── Derived per-90 dribbles + bio (age / height / caps) ──
     dA, dB = _drib90(rA, df_p.columns), _drib90(rB, df_p.columns)
@@ -222,57 +263,27 @@ def render_pvp() -> None:
                 '<span class="h2h-year">/ 2026</span></div>',
                 unsafe_allow_html=True,
             )
-            fig_h2h = go.Figure()
-            for r_item, driv, p_label, clr, fill_clr in [
-                # Muted aqua and sand separate both players clearly
-                # while preserving the monochrome page foundation.
-                (rA, dA, pA_name, "#a8dadc", "rgba(168,218,220,0.20)"),
-                (rB, dB, pB_name, "#d7c3a3", "rgba(215,195,163,0.18)"),
-            ]:
+            # Axis maxima are shared by both players; compute them once.
+            h2h_maxes = []
+            for c, _, der, _ in AXES_PVP:
+                if der:
+                    col_vals = (
+                        df_p["dribbles_p90"]
+                        if "dribbles_p90" in df_p.columns
+                        else (df_p["dribbles_attempted"].fillna(0)
+                              / df_p["minutes"].replace(0, pd.NA) * 90)
+                    )
+                    h2h_maxes.append(max(col_vals.fillna(0).max(), 1e-6))
+                else:
+                    h2h_maxes.append(max(df_p[c].fillna(0).max(), 1e-6))
+
+            h2h_pct = []
+            for r_item, driv in ((rA, dA), (rB, dB)):
                 vals = [_ax_val(r_item, c, der, driv) for c, _, der, _ in AXES_PVP]
-                maxes = []
-                for c, _, der, _ in AXES_PVP:
-                    if der:
-                        col_vals = (
-                            df_p["dribbles_p90"]
-                            if "dribbles_p90" in df_p.columns
-                            else (df_p["dribbles_attempted"].fillna(0)
-                                  / df_p["minutes"].replace(0, pd.NA) * 90)
-                        )
-                        maxes.append(max(col_vals.fillna(0).max(), 1e-6))
-                    else:
-                        maxes.append(max(df_p[c].fillna(0).max(), 1e-6))
-                pct = [round(100.0 * min(v / mx, 1.0), 1) for v, mx in zip(vals, maxes)]
+                h2h_pct.append(tuple(round(100.0 * min(v / mx, 1.0), 1)
+                                     for v, mx in zip(vals, h2h_maxes)))
 
-                fig_h2h.add_trace(go.Scatterpolar(
-                    r=pct + [pct[0]],
-                    theta=[lbl for _, lbl, _, _ in AXES_PVP] + [AXES_PVP[0][1]],
-                    fill="toself",
-                    fillcolor=fill_clr,
-                    name=p_label,
-                    line=dict(color=clr, width=2.8),
-                    marker=dict(color=clr, size=5),
-                ))
-
-            fig_h2h.update_layout(
-                paper_bgcolor="#080808",
-                plot_bgcolor="#080808",
-                font=dict(family="Arial, sans-serif", color="#9b9b95", size=11),
-                polar=dict(
-                    bgcolor="#080808",
-                    radialaxis=dict(visible=True, range=[0, 100],
-                                    gridcolor="rgba(255,255,255,0.10)",
-                                    linecolor="rgba(255,255,255,0.14)",
-                                    tickfont=dict(color="#9b9b95", size=9)),
-                    angularaxis=dict(gridcolor="rgba(255,255,255,0.10)",
-                                     linecolor="rgba(255,255,255,0.14)"),
-                ),
-                showlegend=True,
-                legend=dict(orientation="h", yanchor="bottom", y=-0.18,
-                            xanchor="center", x=0.5, font=dict(size=11, color="#f1f0eb")),
-                margin=dict(l=35, r=35, t=20, b=45),
-                height=380,
-            )
+            fig_h2h = _fig_h2h_radar(pA_name, h2h_pct[0], pB_name, h2h_pct[1])
             st.plotly_chart(fig_h2h, width="stretch")
 
     with col_table:

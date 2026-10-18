@@ -290,41 +290,16 @@ def render_photo_story(
         hero_tablet = static_variant(asset_name, "-tablet")
         hero_mobile = static_variant(asset_name, "-mobile")
 
-        # 1. Portal hero: WORLD CUP 2026 event identity (real DB dates).
-        #    Title halves split on scroll; panels/du dots driven by JS.
+        # 1. Portal hero: full-screen intro video. Title/text removed — the
+        #    video IS the hero; portal panels still split on scroll.
         hero_html = (
             '<header class="portal page-overview" id="hero">'
             '<div class="portal-stage">'
             '<div class="portal-field">'
-            '<picture class="portal-picture">'
-            f'<source media="(max-aspect-ratio: 4 / 5)" srcset="{static_url(hero_mobile)}">'
-            f'<source media="(max-aspect-ratio: 4 / 3)" srcset="{static_url(hero_tablet)}">'
-            f'<img src="{static_url(hero_desktop)}" alt="{escape(alt_text, quote=True)}" '
-            'class="portal-img" loading="eager" fetchpriority="high">'
-            '</picture>'
-            '<div class="portal-duo" aria-hidden="true"></div>'
-            '<div class="portal-veil" aria-hidden="true"></div>'
-            '<div class="portal-panel portal-left" aria-hidden="true"></div>'
-            '<div class="portal-panel portal-right" aria-hidden="true"></div>'
-            '<div class="portal-cup" aria-hidden="true">'
-            f'<img src="{static_url("tải xuống.png")}" alt="" loading="eager" decoding="async">'
-            '</div>'
-            '<div class="portal-dates">'
-            '<div><strong>11</strong><span>JUNE</span></div>'
-            '<div class="portal-dates-sep">—</div>'
-            '<div><strong>19</strong><span>JULY</span></div>'
-            '</div>'
-            '<div class="portal-event">'
-            '<span class="portal-corner tl" aria-hidden="true"></span>'
-            '<span class="portal-corner br" aria-hidden="true"></span>'
-            'UNITED 2026 · USA — MEXICO — CANADA · 16 VENUES'
-            '</div>'
-            '<div class="portal-champ">'
-            'FINAL · SPAIN 1 – 0 ARGENTINA · METLIFE STADIUM'
-            '</div>'
-            '<canvas class="portal-lines" aria-hidden="true"></canvas>'
-            '<div class="portal-meta portal-meta-top"><span>WORLD CUP / 2026</span><span>THE DATA ARCHIVE</span></div>'
-            '<div class="portal-meta portal-meta-bottom"><span>48 NATIONS · 104 MATCHES</span><span>SCROLL TO OPEN ↓</span></div>'
+            '<video class="portal-picture portal-img" autoplay muted loop playsinline preload="auto" '
+            f'src="{static_url("wc26-intro-v1.mp4")}" '
+            f'poster="{static_url(hero_desktop)}" '
+            'aria-hidden="true" tabindex="-1"></video>'
             '</div>'
             '</div>'
             '</header>'
@@ -463,26 +438,8 @@ def render_photo_story(
       if (!hero || !hero.classList.contains('portal-live')) return;
       var p = portalProgress();
       if (p < 0) return;
-      var panels = hero.querySelectorAll('.portal-panel');
-      var halves = hero.querySelectorAll('.portal-half');
       var img = hero.querySelector('.portal-img');
-      var duo = hero.querySelector('.portal-duo');
-      // Info copy + streak field fade out as the portal opens (nothing lingers).
-      var fade = hero.querySelectorAll(
-        '.portal-cup,.portal-lines,.portal-dates,.portal-event,.portal-champ,.portal-meta');
-      for (var k = 0; k < fade.length; k++) {
-        fade[k].style.opacity = Math.max(0, 1 - p * 1.6).toFixed(3);
-      }
-      if (panels[0]) panels[0].style.transform = 'translateX(' + (-p * 115).toFixed(2) + '%)';
-      if (panels[1]) panels[1].style.transform = 'translateX(' + (p * 115).toFixed(2) + '%)';
-      if (title) {
-        title.style.transform = 'translateY(-50%) scale(' + (1 + p * 0.28).toFixed(3) + ')';
-        title.style.letterSpacing = (6 - p * 16).toFixed(1) + 'px';
-      }
-      if (halves[0]) halves[0].style.transform = 'translateX(' + (-p * 55).toFixed(2) + '%)';
-      if (halves[1]) halves[1].style.transform = 'translateX(' + (p * 55).toFixed(2) + '%)';
       if (img) img.style.transform = 'scale(' + (1.09 - p * 0.09).toFixed(3) + ')';
-      if (duo) duo.style.opacity = (p * 0.28).toFixed(3);
     });
   }
   function initPortal() {
@@ -509,192 +466,11 @@ def render_photo_story(
   initPortal();
   setTimeout(initPortal, 800);
 
-  // Hero streak-field canvas: light streaks travelling across the whole
-  //    hero screen (static frame under reduced-motion; paused off-screen).
-  function initCupLines() {
-    var cv = pDoc.querySelector('.portal-lines');
-    if (!cv || !cv.getContext || cv.__streakInit) return;
-    cv.__streakInit = true;
-    var ctx = cv.getContext('2d');
-    var W = 0, H = 0, parts = [], targets = [], cup = { x: 0, y: 0, w: 120 };
-    var running = true, drawn = false, t0 = 0, layoutKey = "";
-    var BLUE = ['91,192,222', '46,139,192', '242,241,236'];
-    var CYCLE = 12500;
-    function size() {
-      var r = cv.getBoundingClientRect();
-      W = Math.max(320, Math.floor(r.width));
-      H = Math.max(200, Math.floor(r.height));
-      cv.width = W; cv.height = H;
-    }
-    function relRect(el) {
-      var a = el.getBoundingClientRect(), b = cv.getBoundingClientRect();
-      return { x: a.left - b.left, y: a.top - b.top, w: a.width, h: a.height };
-    }
-    function buildTargets() {
-      targets = [];
-      try {
-        // No HTML title anymore: particles draw the words themselves.
-        var off = pDoc.createElement('canvas');
-        off.width = W; off.height = H;
-        var o = off.getContext('2d');
-        o.fillStyle = '#fff';
-        o.textAlign = 'center';
-        o.textBaseline = 'middle';
-        var fs = Math.max(34, Math.round(H * 0.17));
-        o.font = '700 ' + fs + 'px Arial, sans-serif';
-        try { o.letterSpacing = '8px'; } catch(e) {}
-        o.fillText('WORLD', W / 2, H * 0.46);
-        o.fillText('CUP 2026', W / 2, H * 0.60);
-        var img = o.getImageData(0, 0, W, H).data;
-        var step = Math.max(2, Math.round(W / 220));
-        for (var y = 0; y < H; y += step) {
-          for (var x = 0; x < W; x += step) {
-            // Nguong cao: chi giu loi net chu dam, bo vien mo -> chu sac net.
-            if (img[((y * W) + x) * 4 + 3] > 170) {
-              // Jitter pha vo luoi deu: moi diem lech ngau nhien trong o step,
-              // chu khong con cum theo hang/cot lay mau.
-              targets.push([
-                x + (Math.random() - 0.5) * step,
-                y + (Math.random() - 0.5) * step
-              ]);
-            }
-          }
-        }
-        // Cat tran bang xao tron + slice (thay vi loc i%2 theo thu tu quet):
-        // giu phan bo dong deu tren toan bo chu.
-        if (targets.length > 1400) {
-          for (var s = targets.length - 1; s > 0; s--) {
-            var r = Math.floor(Math.random() * (s + 1));
-            var tmp = targets[s]; targets[s] = targets[r]; targets[r] = tmp;
-          }
-          targets = targets.slice(0, 1400);
-        }
-      } catch(e) { targets = []; }
-      try {
-        var cupEl = pDoc.querySelector('.portal-cup');
-        if (cupEl) {
-          var c = relRect(cupEl);
-          cup = { x: c.x + c.w / 2, y: c.y + c.h / 2, w: Math.max(60, c.w) };
-        }
-      } catch(e) {}
-    }
-    function seed(force) {
-      // Cache targets: chi rebuild getImageData khi kich thuoc doi.
-      var key = W + "x" + H;
-      if (!force && key === layoutKey && targets.length) return;
-      layoutKey = key;
-      buildTargets();
-      parts = [];
-      var n = Math.max(targets.length, 120);
-      for (var i = 0; i < n; i++) {
-        var t = targets.length ? targets[i % targets.length] : [Math.random() * W, Math.random() * H];
-        parts.push({
-          x: Math.random() * W, y: Math.random() * H,
-          tx: t[0], ty: t[1],
-          ang: Math.random() * Math.PI * 2,
-          rx: cup.w * (0.75 + Math.random() * 0.55),
-          ry: cup.w * (0.32 + Math.random() * 0.12),
-          sp: (0.004 + Math.random() * 0.010) * (Math.random() < 0.5 ? 1 : -1),
-          ci: 2, a: 0.75 + Math.random() * 0.20,
-          sz: 1.8, dl: Math.random() * 0.04
-        });
-      }
-      t0 = pWin.performance ? pWin.performance.now() : Date.now();
-    }
-    function heroOpen() {
-      try {
-        if (typeof portalProgress === 'function' && portalProgress() > 0.2) return true;
-      } catch(e) {}
-      return false;
-    }
-    var lastT = 0, lastPhase = 0, lastDraw = 0;
-    function frame(now) {
-      if (!running) { drawn = false; return; }
-      if (!cv.isConnected) { running = false; drawn = false; return; }
-      // Cap 30fps: bo frame thua, vat ly dung dt nen chuyen dong van chuan.
-      if (now && lastDraw && now - lastDraw < 33) {
-        if (!reduceMotion) pWin.requestAnimationFrame(frame);
-        return;
-      }
-      lastDraw = now || 0;
-      drawn = true;
-      var nowMs = now || 0;
-      var dt = Math.min(0.05, Math.max(0.001, (nowMs - (lastT || nowMs)) / 1000));
-      lastT = nowMs;
-      var phase = 1;
-      if (t0) phase = ((nowMs - t0) % CYCLE) / CYCLE;
-      if (phase < 0) phase += Math.ceil(-phase) + 1, phase = phase % 1;
-      var open = heroOpen();
-      if (open || !targets.length) {
-        // Hero open (or no glyph targets): full-screen flight only.
-        if (phase < lastPhase) { buildTargets(); seed(); }
-        phase = 1;
-      }
-      // Het text: tach ra bay vong quanh cup (orbit ellipse vua khung).
-      lastPhase = phase;
-      ctx.clearRect(0, 0, W, H);
-      for (var i = 0; i < parts.length; i++) {
-        var P = parts[i];
-        var gx, gy, k;
-        if (phase < 0.42 && !heroOpen()) {
-          // Converge into the title glyphs (with per-dot delay).
-          var lp = Math.min(1, Math.max(0, (phase - P.dl) / 0.2));
-          var e = lp * lp * (3 - 2 * lp);
-          gx = P.x + (P.tx - P.x) * Math.min(1, e * 1.15);
-          gy = P.y + (P.ty - P.y) * Math.min(1, e * 1.15);
-          k = 4;
-        } else {
-          // Released: wide sparse ellipse around the cup (fits the frame).
-          P.ang += P.sp * (dt * 60);
-          gx = cup.x + Math.cos(P.ang) * P.rx;
-          gy = cup.y + Math.sin(P.ang) * P.ry;
-          k = 2.2;
-        }
-        P.x += (gx - P.x) * Math.min(1, dt * k * 60 * 0.06 + 0.04);
-        P.y += (gy - P.y) * Math.min(1, dt * k * 60 * 0.06 + 0.04);
-        ctx.fillStyle = 'rgba(' + BLUE[P.ci] + ',' + P.a.toFixed(2) + ')';
-        ctx.beginPath();
-        ctx.arc(P.x, P.y, P.sz * 3.5, 0, Math.PI * 2);
-        ctx.globalAlpha = 0.12;
-        ctx.fill();
-        ctx.beginPath();
-        ctx.arc(P.x, P.y, P.sz * 2.0, 0, Math.PI * 2);
-        ctx.globalAlpha = 0.35;
-        ctx.fill();
-        ctx.globalAlpha = 1;
-        ctx.fillStyle = 'rgba(255,255,255,1)';
-        ctx.beginPath();
-        ctx.arc(P.x, P.y, P.sz, 0, Math.PI * 2);
-        ctx.fill();
-      }
-      if (!reduceMotion) pWin.requestAnimationFrame(frame);
-    }
-    function kick() {
-      size(); seed();
-      if (reduceMotion) { running = true; frame(); running = false; return; }
-      if (!drawn) frame();
-    }
-    size(); seed();
-    if ('IntersectionObserver' in pWin) {
-      new pWin.IntersectionObserver(function(es) {
-        es.forEach(function(en) {
-          running = en.isIntersecting;
-          if (running) frame();
-        });
-      }, { threshold: 0.02 }).observe(cv);
-    }
-    pWin.addEventListener('resize', kick);
-    kick();
-  }
-  initCupLines();
-  setTimeout(initCupLines, 800);
-
   // 10. Streamlit re-renders replace canvas/DOM nodes, killing running
   //     loops bound to dead elements. Re-init (debounced) on DOM changes
   //     so effects never disappear after reruns or late image loads.
   var domTimer = null;
   function reinitDynamic() {
-    initCupLines();
     initPortal();
     initFilms();
   }

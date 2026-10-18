@@ -2,6 +2,7 @@
 """Ket noi DB dung chung cho cac trang Streamlit."""
 import os
 import sqlite3
+from pathlib import Path
 
 import pandas as pd
 import streamlit as st
@@ -11,12 +12,16 @@ DB = os.path.join(ROOT, "data", "db", "wc2026_full.db")
 ANALYTICS = os.path.join(ROOT, "data", "processed", "analytics")
 
 
-@st.cache_resource
-def get_conn():
+def _read_conn():
+    """Ket noi SQLite chi-doc moi lan query (an toan da-stream/thread: khong
+    dung chung connection). mode=ro chan ghi; mmap cho phep doc file nhanh."""
     if not os.path.exists(DB):
         st.error("Chưa có database! Chạy lệnh: python src/db/build_db.py")
         return None
-    return sqlite3.connect(DB, check_same_thread=False)
+    uri = "file:///" + Path(DB).as_posix() + "?mode=ro"
+    con = sqlite3.connect(uri, uri=True)
+    con.execute("PRAGMA mmap_size=268435456")
+    return con
 
 
 def q(sql, params=None):
@@ -27,10 +32,13 @@ def q(sql, params=None):
 
 @st.cache_data(ttl=600, show_spinner="Đang tải dữ liệu trận đấu...")
 def _q_cached(sql, params_key):
-    con = get_conn()
+    con = _read_conn()
     if con is None:
         return pd.DataFrame()
-    return pd.read_sql(sql, con, params=list(params_key) if params_key else [])
+    try:
+        return pd.read_sql(sql, con, params=list(params_key) if params_key else [])
+    finally:
+        con.close()
 
 
 def load_analytics_csv(filename, dtype=None):

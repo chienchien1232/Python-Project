@@ -156,6 +156,49 @@ if selected_team is None:
     selected_team = df_teams["Team"].iloc[0]
 
 
+@st.cache_data(show_spinner=False)
+def _fig_team_radar(team_name: str, pct: tuple, axes: tuple):
+    """Tactical radar figure; cached on (team, percentiles, axes)."""
+    fig = go.Figure()
+    fig.add_trace(go.Scatterpolar(
+        r=list(pct) + [pct[0]],
+        theta=list(axes) + [axes[0]],
+        fill="toself",
+        # Muted aqua keeps the selected team legible on black without
+        # introducing a neon accent into the minimal visual system.
+        fillcolor="rgba(168, 218, 220, 0.22)",
+        name=team_name,
+        line=dict(color="#a8dadc", width=2.5),
+        marker=dict(color="#a8dadc", size=4),
+    ))
+    fig.add_trace(go.Scatterpolar(
+        r=[50] * (len(axes) + 1),
+        theta=list(axes) + [axes[0]],
+        name="Tournament Avg (Baseline 50)",
+        line=dict(color="#d7c3a3", dash="dash", width=1.6),
+    ))
+    fig.update_layout(
+        paper_bgcolor="#000000",
+        plot_bgcolor="#000000",
+        font=dict(family="Inter, sans-serif", color="#a7abb3", size=11),
+        polar=dict(
+            bgcolor="#000000",
+            radialaxis=dict(visible=True, range=[0, 100],
+                            gridcolor="rgba(255,255,255,0.10)",
+                            linecolor="rgba(255,255,255,0.12)",
+                            tickfont=dict(color="#6b7280", size=9)),
+            angularaxis=dict(gridcolor="rgba(255,255,255,0.10)",
+                             linecolor="rgba(255,255,255,0.12)"),
+        ),
+        showlegend=True,
+        legend=dict(orientation="h", yanchor="bottom", y=-0.18, xanchor="center", x=0.5,
+                    font=dict(size=10)),
+        margin=dict(l=35, r=35, t=20, b=45),
+        height=340,
+    )
+    return fig
+
+
 # ── Team Dossier Presentation ─────────────────────────────────────────────────
 if selected_team:
     t_hit = df_teams[df_teams["Team"] == selected_team]
@@ -262,43 +305,7 @@ if selected_team:
             # Scaled normalized score (50 is exact league average)
             pct = [round(min(max((v / max(l, 1e-6)) * 50.0, 10.0), 95.0), 1) for v, l in zip(vals, lavgs)]
 
-            fig_radar = go.Figure()
-            fig_radar.add_trace(go.Scatterpolar(
-                r=pct + [pct[0]],
-                theta=axes + [axes[0]],
-                fill="toself",
-                # Muted aqua keeps the selected team legible on black without
-                # introducing a neon accent into the minimal visual system.
-                fillcolor="rgba(168, 218, 220, 0.22)",
-                name=selected_team,
-                line=dict(color="#a8dadc", width=2.5),
-                marker=dict(color="#a8dadc", size=4),
-            ))
-            fig_radar.add_trace(go.Scatterpolar(
-                r=[50] * (len(axes) + 1),
-                theta=axes + [axes[0]],
-                name="Tournament Avg (Baseline 50)",
-                line=dict(color="#d7c3a3", dash="dash", width=1.6),
-            ))
-            fig_radar.update_layout(
-                paper_bgcolor="#000000",
-                plot_bgcolor="#000000",
-                font=dict(family="Inter, sans-serif", color="#a7abb3", size=11),
-                polar=dict(
-                    bgcolor="#000000",
-                    radialaxis=dict(visible=True, range=[0, 100],
-                                    gridcolor="rgba(255,255,255,0.10)",
-                                    linecolor="rgba(255,255,255,0.12)",
-                                    tickfont=dict(color="#6b7280", size=9)),
-                    angularaxis=dict(gridcolor="rgba(255,255,255,0.10)",
-                                     linecolor="rgba(255,255,255,0.12)"),
-                ),
-                showlegend=True,
-                legend=dict(orientation="h", yanchor="bottom", y=-0.18, xanchor="center", x=0.5,
-                            font=dict(size=10)),
-                margin=dict(l=35, r=35, t=20, b=45),
-                height=340,
-            )
+            fig_radar = _fig_team_radar(selected_team, tuple(pct), tuple(axes))
 
         if has_stats:
             d_poss, d_shots, d_sot = vals[0] - lavgs[0], vals[1] - lavgs[1], vals[2] - lavgs[2]

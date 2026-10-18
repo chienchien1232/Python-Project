@@ -170,9 +170,10 @@ nên không dùng làm định giá chuyển nhượng hay dự báo giá tươn
 
 ## 7. Giao diện web
 
-Đen/trắng tối giản, chữ khổ lớn, video/ảnh toàn màn hình. Overview: portal hero
-WORLD CUP 2026 (ngày tổ chức, nhà vô địch, CTA) + film solo + khung 3 video
-highlight lặp + KPI + leaderboard + Best XI preview. Các trang còn lại: Matches,
+Đen/trắng tối giản, chữ khổ lớn, video/ảnh toàn màn hình. Overview: hero video
+intro toàn màn hình (không text, scroll chỉ zoom nhẹ), film solo full-screen
+"THE STORY OF UNITED 2026" + khung 3 video highlight lặp + KPI + leaderboard +
+Best XI preview. Các trang còn lại: Matches,
 Teams, Players/Compare, ML Analytics, Best XI, Match Detail — bảng, radar, bộ lọc,
 ảnh cầu thủ, cờ và liên kết giữ nguyên thao tác. Navbar trong suốt, ẩn khi cuộn
 xuống, hiện khi cuộn lên. Tôn trọng `prefers-reduced-motion`, không can thiệp

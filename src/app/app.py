@@ -6,6 +6,7 @@ import html as html_lib
 from pathlib import Path
 
 import plotly.express as px
+import pandas as pd
 import streamlit as st
 
 # ── Path setup ────────────────────────────────────────────────────────────────
@@ -172,6 +173,49 @@ for col, (title, icon, sql, suffix) in zip(lb_cols, LEADERBOARD_QUERIES):
 # ── Charts ────────────────────────────────────────────────────────────────────
 st.markdown("<div class='section-header'>Tournament Analysis</div>", unsafe_allow_html=True)
 
+
+@st.cache_data(show_spinner=False)
+def _fig_stage_goals(df_stage: pd.DataFrame):
+    fig = px.bar(
+        df_stage, x="Stage", y="Goals", text="Goals",
+        title=" Goals Scored by Tournament Stage",
+        color="Goals",
+        color_continuous_scale=[[0, "#2a2a28"], [0.5, "#8a8a84"], [1, "#e8e8e3"]],
+    )
+    fig.update_traces(textposition="outside", textfont=dict(color="#F8FAFC", size=13))
+    fig.update_layout(
+        paper_bgcolor="#141414", plot_bgcolor="#141414",
+        font=dict(family="Inter, sans-serif", color="#94A3B8"),
+        title_font=dict(color="#FFFFFF", size=16),
+        coloraxis_showscale=False,
+        margin=dict(l=20, r=20, t=50, b=30),
+        xaxis=dict(gridcolor="rgba(255,255,255,0.05)", title=""),
+        yaxis=dict(gridcolor="rgba(255,255,255,0.05)", title="Goals"),
+    )
+    return fig
+
+
+@st.cache_data(show_spinner=False)
+def _fig_shots_goals(df_shots: pd.DataFrame):
+    fig = px.scatter(
+        df_shots, x="Shots", y="Goals",
+        hover_data=["Player", "Team"],
+        title=" Shots vs Goals — Conversion Efficiency",
+        color="Goals", size="Goals",
+        color_continuous_scale=[[0, "#2a2a28"], [0.5, "#8a8a84"], [1, "#e8e8e3"]],
+    )
+    fig.update_layout(
+        paper_bgcolor="#141414", plot_bgcolor="#141414",
+        font=dict(family="Inter, sans-serif", color="#94A3B8"),
+        title_font=dict(color="#FFFFFF", size=16),
+        coloraxis_showscale=False,
+        margin=dict(l=20, r=20, t=50, b=30),
+        xaxis=dict(gridcolor="rgba(255,255,255,0.05)", title="Total Shots"),
+        yaxis=dict(gridcolor="rgba(255,255,255,0.05)", title="Goals"),
+    )
+    return fig
+
+
 ch1, ch2 = st.columns(2)
 
 with ch1:
@@ -182,23 +226,7 @@ with ch1:
         GROUP BY s.stage_id ORDER BY MIN(m.date)
     """)
     if not df_stage.empty:
-        fig1 = px.bar(
-            df_stage, x="Stage", y="Goals", text="Goals",
-            title=" Goals Scored by Tournament Stage",
-            color="Goals",
-            color_continuous_scale=[[0, "#2a2a28"], [0.5, "#8a8a84"], [1, "#e8e8e3"]],
-        )
-        fig1.update_traces(textposition="outside", textfont=dict(color="#F8FAFC", size=13))
-        fig1.update_layout(
-            paper_bgcolor="#141414", plot_bgcolor="#141414",
-            font=dict(family="Inter, sans-serif", color="#94A3B8"),
-            title_font=dict(color="#FFFFFF", size=16),
-            coloraxis_showscale=False,
-            margin=dict(l=20, r=20, t=50, b=30),
-            xaxis=dict(gridcolor="rgba(255,255,255,0.05)", title=""),
-            yaxis=dict(gridcolor="rgba(255,255,255,0.05)", title="Goals"),
-        )
-        st.plotly_chart(fig1, width="stretch")
+        st.plotly_chart(_fig_stage_goals(df_stage), width="stretch")
 
 with ch2:
     df_shots = q("""
@@ -208,23 +236,7 @@ with ch2:
     """)
     if not df_shots.empty:
         df_shots["Player"] = df_shots["Player"].apply(clean_name)
-        fig2 = px.scatter(
-            df_shots, x="Shots", y="Goals",
-            hover_data=["Player", "Team"],
-            title=" Shots vs Goals — Conversion Efficiency",
-            color="Goals", size="Goals",
-            color_continuous_scale=[[0, "#2a2a28"], [0.5, "#8a8a84"], [1, "#e8e8e3"]],
-        )
-        fig2.update_layout(
-            paper_bgcolor="#141414", plot_bgcolor="#141414",
-            font=dict(family="Inter, sans-serif", color="#94A3B8"),
-            title_font=dict(color="#FFFFFF", size=16),
-            coloraxis_showscale=False,
-            margin=dict(l=20, r=20, t=50, b=30),
-            xaxis=dict(gridcolor="rgba(255,255,255,0.05)", title="Total Shots"),
-            yaxis=dict(gridcolor="rgba(255,255,255,0.05)", title="Goals"),
-        )
-        st.plotly_chart(fig2, width="stretch")
+        st.plotly_chart(_fig_shots_goals(df_shots), width="stretch")
 
 
 # ── Best XI preview ───────────────────────────────────────────────────────────
