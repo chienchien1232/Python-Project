@@ -496,6 +496,14 @@ html { background:#050505; }
   margin: 0 0 0 calc(50% - 50vw);
   background: #050505;
 }
+/* Streamlit stacks ~152px of empty element containers + the floating navbar
+   (56px) with 1rem gaps above the first block. Pull the video hero up by that
+   exact stack so the film starts at y=0 with the navbar floating over it —
+   removes the black band that showed above the hero video on scroll.
+   (Photo-story pages keep -84px so their kicker text clears the navbar.) */
+.stApp:has(.page-overview) .portal {
+  margin-top: -152px;
+}
 .portal-stage {
   position: sticky;
   top: 0;
