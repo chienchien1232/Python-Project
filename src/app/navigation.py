@@ -18,14 +18,16 @@ NAV_PAGES = (
 
 # Plain-anchor fallback URLs (used only when page_link cannot resolve,
 # e.g. standalone test runs; production always takes the widget path).
+# Relative values so the anchors also work inside the Community Cloud
+# shell iframe (base /~/+/) instead of hitting the proxy root.
 PAGE_URLS = {
-    "app.py": "/",
-    "pages/1_matches.py": "/matches",
-    "pages/2_teams.py": "/teams",
-    "pages/3_players.py": "/players",
-    "pages/5_ml_explorer.py": "/ml_explorer",
-    "pages/6_best_xi.py": "/best_xi",
-    "pages/7_match_detail.py": "/match_detail",
+    "app.py": "./",
+    "pages/1_matches.py": "matches",
+    "pages/2_teams.py": "teams",
+    "pages/3_players.py": "players",
+    "pages/5_ml_explorer.py": "ml_explorer",
+    "pages/6_best_xi.py": "best_xi",
+    "pages/7_match_detail.py": "match_detail",
 }
 
 
@@ -41,9 +43,11 @@ def nav_link(path, label, disabled=False, query_params=None):
         else:
             st.page_link(path, label=label, disabled=disabled)
         return
-    except StreamlitPageNotFoundError:
+    except (StreamlitPageNotFoundError, KeyError):
+        # KeyError: AppTest harness runs have no url_pathname context;
+        # production page context always provides it.
         pass
-    url = PAGE_URLS.get(path, "/")
+    url = PAGE_URLS.get(path, "./")
     if query_params:
         url += "?" + urlencode({k: str(v) for k, v in dict(query_params).items()})
     st.markdown(
@@ -94,7 +98,7 @@ def render_navigation(active):
                 # home item stays a plain anchor (full reload only here).
                 st.markdown(
                     f'<a class="wc-nav-home{" is-active" if label == active else ""}" '
-                    f'href="/" target="_self">{label.upper()}</a>',
+                    f'href="./" target="_self">{label.upper()}</a>',
                     unsafe_allow_html=True,
                 )
             else:

@@ -390,14 +390,14 @@ with t2:
             if os.path.exists(js_path):
                 html_doc, n = _re.subn(
                     r'<script[^>]+src="https://cdn\.plot\.ly/[^"]*"[^>]*>\s*</script>',
-                    '<script src="/app/static/plotly-3.7.0.min.js"></script>',
+                    '<script src="app/static/plotly-3.7.0.min.js"></script>',
                     html_doc,
                     count=1,
                 )
                 if n == 0:
                     html_doc = html_doc.replace(
                         "</head>",
-                        '<script src="/app/static/plotly-3.7.0.min.js"></script></head>',
+                        '<script src="app/static/plotly-3.7.0.min.js"></script></head>',
                         1,
                     )
             return html_doc

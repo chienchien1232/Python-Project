@@ -7,11 +7,14 @@ from html import escape
 from pathlib import Path
 import hashlib
 import json
+import logging
 import re
 import unicodedata
 from urllib.parse import quote
 
 import streamlit as st
+
+_log = logging.getLogger(__name__)
 
 
 APP_ROOT = Path(__file__).resolve().parent.parent  # src/app (module lives in src/app/ui/)
@@ -23,18 +26,24 @@ FIFA_RAW = PROJECT_ROOT / "data" / "raw" / "fifa"
 def static_version(filename: str) -> str:
     """Cache-busting query string for bundled static assets.
 
-    Browsers cache /app/static/* aggressively; appending the file mtime
+    Browsers cache app/static/* aggressively; appending the file mtime
     forces a fresh download whenever an image is replaced.
     """
     try:
         return str(int((APP_ROOT / "static" / filename).stat().st_mtime))
     except OSError:
+        _log.warning("static asset missing: %s", filename)
         return "0"
 
 
 def static_url(filename: str) -> str:
+    # Relative URL on purpose: on Streamlit Community Cloud the app lives
+    # inside the shell iframe at /~/+/ so an absolute /app/static/* path
+    # resolves to the proxy root and gets answered with the shell's HTML
+    # instead of the file. A relative path resolves against the document
+    # base in both environments (/app/static/... locally).
     safe_name = quote(str(filename), safe="")
-    return f"/app/static/{safe_name}?v={static_version(filename)}"
+    return f"app/static/{safe_name}?v={static_version(filename)}"
 
 
 def static_variant(filename: str, suffix: str) -> str:
@@ -225,7 +234,9 @@ def flag_image(team_name: object, fifa_code: object = "", class_name: str = "med
     url = flag_url(name, fifa_code)
     image = (
         f'<img src="{escape(url, quote=True)}" alt="{escape(name)} flag" loading="lazy" '
-        'referrerpolicy="no-referrer">'
+        'referrerpolicy="no-referrer" '
+        'onerror="this.onerror=null;this.style.display=\'none\';'
+        'console.warn(\'[media] flag failed:\', this.src)">'
         if url else ""
     )
     return (
@@ -299,7 +310,8 @@ def render_photo_story(
             '<video class="portal-picture portal-img" autoplay muted loop playsinline preload="auto" '
             f'src="{static_url("wc26-intro-v1.mp4")}" '
             f'poster="{static_url(hero_desktop)}" '
-            'aria-hidden="true" tabindex="-1"></video>'
+            'aria-hidden="true" tabindex="-1" '
+            'onerror="console.warn(\'[media] hero video failed:\', this.currentSrc||this.src)"></video>'
             '</div>'
             '</div>'
             '</header>'
@@ -546,9 +558,11 @@ def render_film_sections() -> None:
         src = static_url(c["file"])
         cells += (
             '<div class="film-cell">'
-            f'<video class="film-vid" muted loop playsinline preload="metadata" '
-            f'poster="{static_url(c["poster"])}" aria-label="{escape(c["alt"])}">'
-            f'<source src="{src}" type="video/mp4">'
+            '<video class="film-vid" muted loop playsinline preload="none" '
+            f'poster="{static_url(c["poster"])}" aria-label="{escape(c["alt"])}" '
+            'onerror="console.warn(\'[media] film video failed:\', this.currentSrc||this.src)">'
+            f'<source src="{src}" type="video/mp4" '
+            'onerror="console.warn(\'[media] film source failed:\', this.src)">'
             '</video>'
             f'<div class="film-cap">{escape(c["label"])}</div>'
             '</div>'
@@ -556,10 +570,12 @@ def render_film_sections() -> None:
     strip_html = (
         '<section class="film-solo" aria-label="Tournament story film">'
         '<video class="film-solo-vid" muted loop playsinline preload="none" '
-        f'poster="{static_url("worldcup-story-01-origin-v1.webp")}" aria-label="The story of the 2026 FIFA World Cup">'
+        f'poster="{static_url("worldcup-story-01-origin-v1.webp")}" aria-label="The story of the 2026 FIFA World Cup" '
+        'onerror="console.warn(\'[media] solo video failed:\', this.currentSrc||this.src)">'
         '<source src="'
         + static_url("YTSave_YouTube_Media_BRv3KW-NIQc_ABSOLUTE-CINEMA-The-Story-Of-The-2026-FIFA-World-Cup_002_720p.mp4")
-        + '" type="video/mp4">'
+        + '" type="video/mp4" '
+        'onerror="console.warn(\'[media] solo source failed:\', this.src)">'
         '</video>'
         '<div class="film-solo-shade" aria-hidden="true"></div>'
         '<div class="film-solo-copy">'
