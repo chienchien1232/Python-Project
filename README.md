@@ -47,7 +47,7 @@ Fotball_analys/
 ├── src/                # pipeline, db, analytics, app (pages + ui/styles), utils
 ├── notebooks/          # C_eda_ml.ipynb (EDA phục vụ BTL)
 ├── tests/              # ui_smoke.py (34 kịch bản)
-├── .streamlit/         # config.toml (theme + port 8521)
+├── .streamlit/         # config.toml (theme + static serving; port do script truyền vào)
 ├── .gitignore
 ├── requirements.txt    # pin cứng phiên bản đã kiểm tra
 ├── start-dashboard.bat # entrypoint duy nhất (tự tạo .venv + cài + mở browser)

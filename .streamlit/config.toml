@@ -22,4 +22,3 @@ toolbarMode = "minimal"
 [server]
 enableStaticServing = true
 headless = true
-port = 8521
