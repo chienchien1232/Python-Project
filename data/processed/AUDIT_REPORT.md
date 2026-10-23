@@ -71,7 +71,7 @@ Kiểm tra logic bóng đá: home≠away ✓, tỉ số ≥ 0 ✓, XI luôn = 11
 | 3 | `matches.date`: 42/104 → ngày UTC tương ứng | Tránh mâu thuẫn date↔time phát sinh sau fix #2 |
 | 4 | `matches_detailed`: giống #2+#3 (91 giờ + 42 ngày) | Nhất quán giữa 2 file trận |
 
-Script: `src/clean_data.py` (idempotent). Audit script: `src/audit_data.py`.
+Script: `src/maintenance/clean_data.py` (idempotent). Audit script: `src/maintenance/audit_data.py`.
 
 ## 10. Files NOT modified
 
@@ -112,17 +112,17 @@ Lưu ý: 3 file ML vẫn chứa kickoff/date cũ — nếu retrai mô hình cầ
 
 ## Cấu trúc code cuối cùng (src/)
 ```
-fetch_fifa.py            # B1: tải raw FIFA API (104 trận)
-build_dataset.py         # B2: dựng wc2026_player_match (FIFA ids)
-remap_wc2026_ids.py      # B3: chuẩn hóa ID theo csv (bắt buộc chạy sau B2)
-fill_gk_final.py         # B4: backfill GK stats từ ESPN
-fill_fifa_tc.py          # B5: backfill passes/tackles/... từ FIFA TC
-validate_dataset.py      # B6: validation cuối
-audit_data.py            # tiện ích audit csv chuẩn
-clean_data.py            # tiện ích fix kickoff/boolean (idempotent)
-format_prediction_floats.py  # tiện ích format ML files
-verify_env.py            # kiểm tra môi trường
-data_loader.py / utils.py / web.py / __init__.py  # placeholder khung gốc
+pipeline/     # B1 fetch_fifa.py | B2 build_dataset.py | B3 remap_wc2026_ids.py
+              # B4 fill_gk_final.py | B5 fill_fifa_tc.py | B6 validate_dataset.py
+              # build_club_tier.py
+maintenance/  # audit_data.py | clean_data.py (idempotent)
+              # format_prediction_floats.py | verify_env.py
+analytics/    # build_features.py, best_xi.py, analytics_score.py, common.py,
+              # pca_explore.py, player_similarity.py, player_clusters.py,
+              # team_clusters.py, market_value.py, eda_report.py, detect_anomalies.py
+utils/        # io_helpers.py, entity_resolve.py, aliases.py
+db/           # build_db.py (SQLite wc2026_full.db)
+app/          # Streamlit web app (WC26 Stats)
 ```
 
 ## 15. Recommendations

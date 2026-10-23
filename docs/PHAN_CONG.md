@@ -9,8 +9,8 @@
 | Người | Vai trò | File sở hữu |
 |---|---|---|
 | TV1: ___Tùng___+ Thanh____ | Tìm raw data | `data/raw/`, `src/pipeline/fetch_fifa.py` (chỉ tải API/dataset tĩnh, cấm scrape live) |
-| TV2: _____Thông_____ | Xử lý dữ liệu | `src/pipeline/build_dataset.py`, `fill_fifa_tc.py`, `fill_gk_final.py`, `remap_wc2026_ids.py`, `build_club_tier.py`, `src/clean_data.py`, `src/utils/`, `data/processed/csv/`, `data/processed/wc2026_player_match/` |
-| TV3: __Giáp________ | DB + kiểm định | `src/db/build_db.py`, `src/pipeline/validate_dataset.py`, `src/audit_data.py`, `src/format_prediction_floats.py`, `src/verify_env.py`, `data/db/` |
+| TV2: _____Thông_____ | Xử lý dữ liệu | `src/pipeline/build_dataset.py`, `fill_fifa_tc.py`, `fill_gk_final.py`, `remap_wc2026_ids.py`, `build_club_tier.py`, `src/maintenance/clean_data.py`, `src/utils/`, `data/processed/csv/`, `data/processed/wc2026_player_match/` |
+| TV3: __Giáp________ | DB + kiểm định | `src/db/build_db.py`, `src/pipeline/validate_dataset.py`, `src/maintenance/audit_data.py`, `src/maintenance/format_prediction_floats.py`, `src/maintenance/verify_env.py`, `data/db/` |
 
 Cam kết nhóm 1: `wc2026_full.db` đầy đủ (104 trận / 48 đội / 1039 cầu thủ),
 CSV nguồn trong `data/processed/csv/` không được sửa sau khi chốt.
