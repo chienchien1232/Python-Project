@@ -10,7 +10,7 @@ import os
 
 import streamlit as st
 
-APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+APP_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 FOOTER_DEFAULT = (
     "<div style='text-align:center;color:#64748b;font-size:12.5px;padding:20px 0;"

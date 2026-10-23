@@ -7,7 +7,7 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 DB = os.path.join(ROOT, "data", "db", "wc2026_full.db")
 ANALYTICS = os.path.join(ROOT, "data", "processed", "analytics")
 

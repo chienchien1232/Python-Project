@@ -15,11 +15,11 @@ sys_path = os.path.join(ROOT, "src")
 if sys_path not in sys.path:
     sys.path.insert(0, sys_path)
 
-from helpers import load_analytics_csv, q  # noqa: E402
+from core.helpers import load_analytics_csv, q  # noqa: E402
 from ui.media_ui import flag_image, render_film_sections, render_photo_story  # noqa: E402
-from page_chrome import footer, setup_page  # noqa: E402
+from core.page_chrome import footer, setup_page  # noqa: E402
 from ui.table_ui import data_table  # noqa: E402
-from text_norm import clean_name  # noqa: E402
+from core.text_norm import clean_name  # noqa: E402
 
 setup_page("WorldCup Stats '26")
 
@@ -74,7 +74,7 @@ except Exception as e:
 # main DOM and can actually navigate between Streamlit pages.
 # The HTML is kept as a single concatenated string so the Markdown parser never
 # sees 4+ leading spaces (which would trigger a code-block).
-from navigation import render_navigation
+from core.navigation import render_navigation
 render_navigation('Overview')
 
 render_photo_story(

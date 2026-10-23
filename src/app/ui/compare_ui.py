@@ -10,9 +10,9 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-from helpers import load_similarity_matrix, q
+from core.helpers import load_similarity_matrix, q
 from ui.media_ui import country_palette, flag_image, player_portrait, static_url, static_variant
-from text_norm import clean_name, flag
+from core.text_norm import clean_name, flag
 
 #: Per-90 rows of the head-to-head panel: (column, label, icon key, format).
 H2H_STAT_ROWS: list[tuple[str, str, str, str]] = [

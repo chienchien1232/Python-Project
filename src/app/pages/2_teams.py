@@ -17,16 +17,16 @@ for p in [app_path, sys_path]:
     if p not in sys.path:
         sys.path.insert(0, p)
 
-from helpers import q, load_analytics_csv  # noqa: E402
+from core.helpers import q, load_analytics_csv  # noqa: E402
 from ui.media_ui import flag_image, player_portrait, render_photo_story  # noqa: E402
-from page_chrome import footer, setup_page  # noqa: E402
-from text_norm import clean_name, flag  # noqa: E402
+from core.page_chrome import footer, setup_page  # noqa: E402
+from core.text_norm import clean_name, flag  # noqa: E402
 
 setup_page("Teams & Squads | WorldCup Stats '26")
 
 
 # ── Top Navigation Bar ────────────────────────────────────────────────────────
-from navigation import nav_link, render_navigation
+from core.navigation import nav_link, render_navigation
 from ui.table_ui import data_table
 render_navigation('Teams')
 

@@ -17,11 +17,11 @@ for path in (APP_PATH, SRC_PATH):
     if path not in sys.path:
         sys.path.insert(0, path)
 
-from match_data import get_anomaly_ids, get_matches  # noqa: E402
+from core.match_data import get_anomaly_ids, get_matches  # noqa: E402
 from ui.match_ui import render_calendar_hero, render_match_card, render_stat_strip  # noqa: E402
 from ui.media_ui import render_photo_story  # noqa: E402
-from navigation import render_navigation  # noqa: E402
-from page_chrome import footer, setup_page  # noqa: E402
+from core.navigation import render_navigation  # noqa: E402
+from core.page_chrome import footer, setup_page  # noqa: E402
 from ui.table_ui import data_table  # noqa: E402
 
 

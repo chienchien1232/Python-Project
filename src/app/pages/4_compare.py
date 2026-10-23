@@ -2,7 +2,7 @@
 import streamlit as st
 from streamlit.errors import StreamlitAPIException, StreamlitPageNotFoundError
 
-from page_chrome import setup_page
+from core.page_chrome import setup_page
 
 setup_page("Players & Compare | WorldCup Stats '26")
 

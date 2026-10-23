@@ -59,7 +59,7 @@ def nav_link(path, label, disabled=False, query_params=None):
 @lru_cache(maxsize=8)
 def _css_bundle(*names: str) -> str:
     """Read + concatenate the shared stylesheets once per process."""
-    styles = Path(__file__).resolve().parent / "ui" / "styles"
+    styles = Path(__file__).resolve().parent.parent / "ui" / "styles"
     return "".join((styles / name).read_text(encoding="utf-8") for name in names)
 
 

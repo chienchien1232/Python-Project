@@ -64,8 +64,8 @@ Fotball_analys/
 - 6_best_xi.py — các chế độ đội hình Best XI.
 - 7_match_detail.py — trang chi tiết trận theo match_id (`/match_detail?match_id=<id>`).
 
-Module dùng chung: `src/app/text_norm.py` (chuẩn hóa tên + mã đội),
-`src/app/page_chrome.py` (boilerplate trang: config + CSS + footer),
+Module dùng chung: `src/app/core/text_norm.py` (chuẩn hóa tên + mã đội),
+`src/app/core/page_chrome.py` (boilerplate trang: config + CSS + footer),
 `src/utils/entity_resolve.py` (nối thực thể: blocking + difflib + ThreadPool).
 
 ## 3. Luồng dữ liệu & kiến trúc

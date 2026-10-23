@@ -7,7 +7,7 @@ from urllib.parse import urlencode
 
 import pandas as pd
 
-from match_data import team_code
+from core.match_data import team_code
 from ui.media_ui import flag_image
 
 

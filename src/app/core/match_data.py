@@ -7,8 +7,8 @@ from typing import Any
 import pandas as pd
 import streamlit as st
 
-from helpers import q
-from text_norm import FLAGS, clean_name
+from core.helpers import q
+from core.text_norm import FLAGS, clean_name
 
 
 def team_code(team_name: Any, fifa_code: Any = None) -> str:

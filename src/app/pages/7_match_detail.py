@@ -18,7 +18,7 @@ for path in (APP_PATH, SRC_PATH):
     if path not in sys.path:
         sys.path.insert(0, path)
 
-from match_data import (  # noqa: E402
+from core.match_data import (  # noqa: E402
     get_anomaly_ids,
     get_match,
     get_match_anomaly_details,
@@ -42,8 +42,8 @@ from ui.match_ui import (  # noqa: E402
     section_heading,
 )
 from ui.media_ui import flag_url, player_portrait, render_photo_story  # noqa: E402
-from navigation import nav_link, render_navigation  # noqa: E402
-from page_chrome import setup_page  # noqa: E402
+from core.navigation import nav_link, render_navigation  # noqa: E402
+from core.page_chrome import setup_page  # noqa: E402
 from ui.table_ui import data_table  # noqa: E402
 
 
