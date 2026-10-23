@@ -44,7 +44,7 @@ toolbar mặc định để menu MPA cũ không lóe lên khi tải trang.
 ```plaintext
 Fotball_analys/
 ├── data/               # raw (FIFA API) / processed (csv chuẩn, wc2026_player_match, analytics) / db
-├── src/                # pipeline, db, analytics, app (pages + ui/styles), utils
+├── src/                # app (core + pages + ui/styles + static), pipeline, db, analytics, maintenance, utils
 ├── notebooks/          # C_eda_ml.ipynb (EDA phục vụ BTL)
 ├── tests/              # ui_smoke.py (34 kịch bản)
 ├── .streamlit/         # config.toml (theme + static serving; port do script truyền vào)

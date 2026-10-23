@@ -298,8 +298,6 @@ def render_photo_story(
     if overview_story:
         # La Dolfina Jumping Inspired Architecture for Overview
         hero_desktop = static_variant(asset_name, "")
-        hero_tablet = static_variant(asset_name, "-tablet")
-        hero_mobile = static_variant(asset_name, "-mobile")
 
         # 1. Portal hero: full-screen intro video. Title/text removed — the
         #    video IS the hero; portal panels still split on scroll.

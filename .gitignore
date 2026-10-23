@@ -17,6 +17,13 @@ env/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Local tooling state (opencode command cache)
+.commandcode/
+
+# Test/lint caches
+.pytest_cache/
+.ruff_cache/
 # ESPN play-by-play caches (tai lai bang src/fetch scripts)
 data/raw/espn/plays_full/
 data/raw/espn/plays_agg/
