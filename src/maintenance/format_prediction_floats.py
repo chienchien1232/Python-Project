@@ -2,6 +2,7 @@
 """Standardize float columns in prediction feature files to 1 decimal place,
 international rounding (ROUND_HALF_UP). Integer/ID/date columns untouched."""
 import csv
+import os
 from decimal import Decimal, ROUND_HALF_UP, InvalidOperation
 
 BASE = "data/processed/csv"
@@ -23,7 +24,11 @@ def is_float_column(vals):
 def main():
     """Quantize cac cot float ve 1 thap phan, giu nguyen cot int/ID/date."""
     for fname in FILES:
-        with open(f"{BASE}/{fname}.csv", newline="", encoding="utf-8-sig") as f:
+        path = f"{BASE}/{fname}.csv"
+        if not os.path.exists(path):
+            print(f"{fname}: source file removed from dataset - skipped")
+            continue
+        with open(path, newline="", encoding="utf-8-sig") as f:
             r = csv.DictReader(f)
             cols = r.fieldnames
             rows = list(r)

@@ -19,7 +19,6 @@ import glob
 import json
 import os
 import re
-import sqlite3
 import unicodedata
 from collections import Counter, defaultdict
 
@@ -298,7 +297,6 @@ def main():
         lid = id2local[mid]
         det = details[mid]
         mm = meta[mid]
-        home_len_extra = int(m.get("FirstHalfExtraTime") or 0)
         sh_extra = int(m.get("SecondHalfExtraTime") or 0)
         # full-length effective minutes: regular = 90 + H2 added time;
         # after extra time = 120 (ET added time not published by source -> 0).
@@ -420,7 +418,6 @@ def main():
             opp_id = mm["home_id"] if team_id == mm["away_id"] else mm["away_id"]
             team_name = mm["home_name"] if side == "HomeTeam" else mm["away_name"]
             opp_name = mm["away_name"] if side == "HomeTeam" else mm["home_name"]
-            opp_goals_full = (as_ if side == "HomeTeam" else hs)
             formation = t.get("Tactics")
 
             for p in t.get("Players") or []:
@@ -672,41 +669,6 @@ def main():
             "data_source": "api.fifa.com",
         })
     write_csv(f"{OUT}/players.csv", pmaster_rows)
-
-    # ---------- 7. sqlite (DB TRUNG GIAN cua pipeline ML - web KHONG doc) ----------
-    # Web dashboard chi doc data/db/wc2026_full.db (xay boi src/db/build_db.py).
-    # File nay chi phuc vu debug/kiem tra pipeline tai cho.
-    db_path = f"{OUT}/wc2026.db"
-    if os.path.exists(db_path):
-        os.remove(db_path)
-    con = sqlite3.connect(db_path)
-    for name, rows in (("matches", matches_out), ("player_match_stats", pms_rows),
-                       ("goalkeeper_match_stats", gk_rows), ("match_events", events_rows),
-                       ("players", pmaster_rows)):
-        cols = list(rows[0].keys())
-        con.execute(f"CREATE TABLE {name} ({', '.join(repr(c) for c in cols)})")
-        con.executemany(
-            f"INSERT INTO {name} VALUES ({', '.join('?' * len(cols))})",
-            [[r[c] for c in cols] for r in rows])
-    con.commit()
-    con.close()
-
-    # ---------- 7b. parquet ----------
-    try:
-        import pandas as pd
-
-        def to_df(rows):
-            df = pd.DataFrame(rows).replace("", None)
-            return df
-
-        for name, rows in (("matches", matches_out), ("player_match_stats", pms_rows),
-                           ("goalkeeper_match_stats", gk_rows), ("match_events", events_rows),
-                           ("players", pmaster_rows)):
-            to_df(rows).to_parquet(f"{OUT}/{name}.parquet", index=False)
-        parquet_ok = True
-    except Exception as e:
-        print("parquet skipped:", e)
-        parquet_ok = False
 
     # ---------- 8. summary stats for report ----------
     missing = {}

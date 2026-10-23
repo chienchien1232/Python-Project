@@ -7,8 +7,7 @@ import unicodedata
 from collections import Counter, defaultdict
 
 BASE = "data/processed/csv"
-FILES = ["match_events", "match_lineups", "match_prediction_features",
-         "match_prediction_features_X", "match_prediction_targets_y",
+FILES = ["match_events", "match_lineups",
          "match_team_stats", "matches", "matches_detailed", "player_stats",
          "squads_and_players", "teams", "tournament_stages", "venues"]
 
@@ -65,9 +64,6 @@ dupcheck("match_lineups", ["lineup_id"])
 dupcheck("match_lineups", ["match_id", "player_id"])
 dupcheck("match_events", ["event_id"])
 dupcheck("match_team_stats", ["match_id", "team_id"])
-dupcheck("match_prediction_features", ["match_id"])
-dupcheck("match_prediction_features_X", ["match_id"])
-dupcheck("match_prediction_targets_y", ["match_id"])
 
 # duplicate matches by (home,away,date)
 mm = Counter((r["home_team_id"], r["away_team_id"], r["date"]) for r in D["matches"])
@@ -102,11 +98,6 @@ fk("match_events", "team_id", team_ids, "teams")
 fk("match_events", "player_id", player_ids, "squads")
 fk("match_team_stats", "match_id", match_ids, "matches")
 fk("match_team_stats", "team_id", team_ids, "teams")
-fk("match_prediction_features", "match_id", match_ids, "matches")
-fk("match_prediction_features", "home_team_id", team_ids, "teams")
-fk("match_prediction_features", "away_team_id", team_ids, "teams")
-fk("match_prediction_features", "stage_id", stage_ids, "stages")
-fk("match_prediction_features", "venue_id", venue_ids, "venues")
 
 # matches.player_of_the_match_id -> squads?
 potm_bad = sorted({r["player_of_the_match_id"] for r in D["matches"]

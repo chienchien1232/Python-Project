@@ -1,7 +1,7 @@
 # AUDIT REPORT — World Cup 2026 Dataset (`data/processed/csv/`)
 
 Ngày audit: 2026-08-23 · Phạm vi: 13 file CSV · Nguyên tắc: **sửa tối thiểu, giữ nguyên cấu trúc**
-Backup bản gốc (trước mọi sửa đổi): `data/raw/csv_original/` (13 file)
+Backup bản gốc (trước mọi sửa đổi): ~~`data/raw/csv_original/` (13 file)~~ — đã xóa theo quyết định chủ repo (2026-10-23; toàn bộ nội dung fix vẫn được mô tả đầy đủ trong các mục 0a–0j bên dưới)
 
 ---
 
@@ -131,7 +131,7 @@ app/          # Streamlit web app (WC26 Stats)
 
 
 1. Thay `match_events.csv` bằng bản tổng hợp từ FIFA raw (đã có sẵn) để đủ substitution/VAR/shootout-miss.
-2. Bổ sung `player_match_stats` từ `data/processed/wc2026_player_match/player_match_stats.parquet` (5323 dòng, đã build & validate): **có thể sinh nội bộ** minutes_played/goals/assists/cards/starter/captain; **cần nguồn ngoài** shots/passes/xG/xA/duels/touches/GK-detail (FIFA API không công bố; Sofascore/ESPN bị chặn mạng tại máy hiện tại).
+2. Bổ sung `player_match_stats` từ `data/processed/wc2026_player_match/player_match_stats.csv` (5323 dòng, đã build & validate): **có thể sinh nội bộ** minutes_played/goals/assists/cards/starter/captain; **cần nguồn ngoài** shots/passes/xG/xA/duels/touches/GK-detail (FIFA API không công bố; Sofascore/ESPN bị chặn mạng tại máy hiện tại).
 3. Khi retrai ML: đồng bộ lại cột date/kickoff của 3 file prediction với core, hoặc tách feature thời gian ra pipeline riêng.
 4. Thêm `data_source`/`last_verified` cho các dòng player_stats còn thiếu khi có nguồn xác nhận.
-5. Giữ nguyên backup `data/raw/csv_original/` làm snapshot bất biến.
+5. ~~Giữ nguyên backup `data/raw/csv_original/` làm snapshot bất biến.~~ — đã xóa sạch theo quyết định chủ repo (2026-10-23; quy trình rebuild từ raw vẫn khả thi vì mọi đợt fix đã mô tả thao tác bên trên)
