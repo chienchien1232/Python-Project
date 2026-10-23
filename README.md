@@ -44,7 +44,7 @@ toolbar mặc định để menu MPA cũ không lóe lên khi tải trang.
 ```plaintext
 Fotball_analys/
 ├── data/               # raw (FIFA API) / processed (csv chuẩn, wc2026_player_match, analytics) / db
-├── src/                # app (core + pages + ui/styles + static), pipeline, db, analytics, maintenance, utils
+├── src/                # app (core + pages + ui/styles + static), pipeline, db, analytics, maintenance
 ├── notebooks/          # C_eda_ml.ipynb (EDA phục vụ BTL)
 ├── tests/              # ui_smoke.py (34 kịch bản)
 ├── .streamlit/         # config.toml (theme + static serving; port do script truyền vào)
@@ -65,8 +65,7 @@ Fotball_analys/
 - 7_match_detail.py — trang chi tiết trận theo match_id (`/match_detail?match_id=<id>`).
 
 Module dùng chung: `src/app/core/text_norm.py` (chuẩn hóa tên + mã đội),
-`src/app/core/page_chrome.py` (boilerplate trang: config + CSS + footer),
-`src/utils/entity_resolve.py` (nối thực thể: blocking + difflib + ThreadPool).
+`src/app/core/page_chrome.py` (boilerplate trang: config + CSS + footer).
 
 ## 3. Luồng dữ liệu & kiến trúc
 

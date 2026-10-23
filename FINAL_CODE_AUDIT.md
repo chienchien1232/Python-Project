@@ -45,14 +45,13 @@ Fotball_analys/
 │   ├── pipeline/          7 data-build scripts (fetch_fifa → build_dataset →
 │   │                      remap_ids → fill_gk/fifa_tc → validate → club_tier)
 │   ├── maintenance/       audit_data, clean_data, format_prediction_floats, verify_env
-│   ├── utils/             aliases, io_helpers, entity_resolve (+ __init__ re-exports)
 │   └── db/                build_db.py (builds wc2026_full.db)
 ├── data/
-│   ├── db/                wc2026_full.db (2.8 MB) + .gitkeep
-│   ├── processed/         csv/ (13), wc2026_player_match/ (11), analytics/ (31),
-│   │                      ml_results/ (2), AUDIT_REPORT.md, audit_schema.json
-│   └── raw/               csv_original/ (13), fifa/ (105), espn/ (14),
-│                          fifa_training_centre/ (37)
+│   ├── db/                wc2026_full.db (2.8 MB)
+│   ├── processed/         csv/ (10), wc2026_player_match/ (8), analytics/ (31),
+│   │                      AUDIT_REPORT.md, audit_schema.json
+│   └── raw/               fifa/ (105), espn/ (2 — pen_punch runtime sources),
+│                          fifa_training_centre/ (6 tables + CITATION + LICENSE)
 ├── docs/PHAN_CONG.md      team ownership map (9 members / 3 groups)
 ├── notebooks/C_eda_ml.ipynb  small documented EDA notebook (kept — active content)
 ├── tests/ui_smoke.py      34-check AppTest smoke suite
@@ -103,11 +102,11 @@ local assignment with no side effects and no readers:
 
 | Classification | Item | Disposition |
 |---|---|---|
-| MUST KEEP | `data/db/.gitkeep`, `data/processed/analytics/.gitkeep`, `data/processed/ml_results/.gitkeep` | Intentional placeholders that keep empty output dirs in git |
-| MUST KEEP | `src/utils/__init__.py`, `src/app/ui/__init__.py` | Package markers with meaningful package docstrings |
+| REMOVED (2026-10-23, owner-directed) | 3 × `.gitkeep` (`data/db/`, `data/processed/analytics/`, `data/processed/ml_results/`) + empty `data/processed/ml_results/` | Content files keep live dirs tracked in git; placeholders no longer needed |
+| REMOVED (2026-10-23, owner-directed) | `src/utils/` (aliases, io_helpers, entity_resolve, `__init__`) | Zero importers repo-wide (verified twice); see §10.3 |
+| MUST KEEP | `src/app/ui/__init__.py` | Package marker — `ui.*` modules are imported by pages |
 | MUST KEEP | `notebooks/C_eda_ml.ipynb` | Documented EDA used for the course (MIN_MIN=90, shrinkage K=270 rationale); active content |
-| MUST KEEP | `docs/PHAN_CONG.md` | Live team ownership contract |
-| NEEDS VERIFICATION | `.commandcode/` (untracked local tool state) | **Not deleted** — local IDE/agent state, now git-ignored so it cannot be committed |
+| MUST KEEP | `docs/PHAN_CONG.md` | Live team ownership contract (updated in the same commit) |
 | SAFE TO REMOVE (done) | 5 dead variable assignments (§3) | Removed |
 | Generated caches | `__pycache__/` dirs | Covered by `.gitignore`; none are tracked; no action needed |
 
@@ -216,11 +215,11 @@ The database is accessed in read-only mode from the app (`file:...?mode=ro` URI,
    one-time decision for the new owner (no defect identified requiring a change now).
 2. **`seaborn` and `openpyxl` are declared and env-gated but import-free in code.**
    Safe to drop in a future cleanup *together with* their `verify_env.py` gate entries.
-3. **`src/utils/` currently has no importer.** The package (aliases, io_helpers,
-   entity_resolve) is README-documented and TV2-assigned in `docs/PHAN_CONG.md`, so it
-   was retained as a live team contract — but nothing imports it today. If it remains
-   unused by next audit, consider deprecating it explicitly (or wiring it into the
-   pipeline where the entity resolver was designed to be used).
+3. **`src/utils/` had no importer — since removed.** The package (aliases, io_helpers,
+   entity_resolve) was README-documented and TV2-assigned in `docs/PHAN_CONG.md`, but
+   nothing ever imported it. Owner directed its deletion on 2026-10-23 (same commit
+   refreshed every doc reference). If entity resolution is needed again, it should be
+   re-created wired directly into the pipeline rather than as a standalone package.
 4. The Streamlit Cloud health path `/_stcore/health` responds with the shell wrapper
    (proxy-level behavior of the platform, not the app); do not build tooling that
    expects a bare `ok` there.

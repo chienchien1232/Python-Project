@@ -108,7 +108,7 @@ Lưu ý: 3 file ML vẫn chứa kickoff/date cũ — nếu retrai mô hình cầ
 
 0j. **[Chuẩn hóa tên cầu thủ]** Toàn bộ `player_name` trong `player_match_stats` (5153 dòng) + `goalkeeper_match_stats` (608 dòng) đã đổi từ kiểu FIFA "Raul RANGEL" (HOA, không dấu) về **định dạng chuẩn của CSV gốc**: Title Case có đầy đủ dấu ("José Raúl Rangel") — join chính xác theo player_id, 0 dòng lệch. Đồng thời khôi phục delimiter dấu phẩy cho 2 file bị Excel lưu thành `;`. Backup: `csv_original/wc2026_before_name_fix/`.
 
-0k. **[Cleanup dự án]** Đã xóa: `src/tmp_*.py` (rác agent), `src/main.py` (scraper cũ, theo lựa chọn chủ sở hữu), `downloaded_files/`, `data/raw/espn/plays/` (bản 400-events lỗi thời). Giữ nguyên placeholder rỗng (`data_loader/utils/web/__init__`) theo ý chủ sở hữu. Viết lại `validate_dataset.py`: phạm vi mới gồm PK/FK 10 file CSV chuẩn + pms/gk ↔ chuẩn + goals==scores + minutes numeric — **TOÀN BỘ PASS**. FINAL_REPORT.txt sinh lại phản ánh đúng hiện trạng.
+0k. **[Cleanup dự án]** Đã xóa: `src/tmp_*.py` (rác agent), `src/main.py` (scraper cũ, theo lựa chọn chủ sở hữu), `downloaded_files/`, `data/raw/espn/plays/` (bản 400-events lỗi thời). Placeholder rỗng thời điểm đó (`data_loader/utils/web/__init__`) được chủ sở hữu giữ lại — sau này đã được xóa sạch theo yêu cầu trong đợt dọn dead-code 2026-10-23 (cùng `src/utils/` 0-importer và các `.gitkeep` giữ thư mục rỗng). Viết lại `validate_dataset.py`: phạm vi mới gồm PK/FK 10 file CSV chuẩn + pms/gk ↔ chuẩn + goals==scores + minutes numeric — **TOÀN BỘ PASS**. FINAL_REPORT.txt sinh lại phản ánh đúng hiện trạng.
 
 ## Cấu trúc code cuối cùng (src/)
 ```
@@ -120,7 +120,6 @@ maintenance/  # audit_data.py | clean_data.py (idempotent)
 analytics/    # build_features.py, best_xi.py, analytics_score.py, common.py,
               # pca_explore.py, player_similarity.py, player_clusters.py,
               # team_clusters.py, market_value.py, eda_report.py, detect_anomalies.py
-utils/        # io_helpers.py, entity_resolve.py, aliases.py
 db/           # build_db.py (SQLite wc2026_full.db)
 app/          # Streamlit web app (WC26 Stats)
 ```

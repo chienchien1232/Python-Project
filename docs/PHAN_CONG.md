@@ -9,7 +9,7 @@
 | Người | Vai trò | File sở hữu |
 |---|---|---|
 | TV1: ___Tùng___+ Thanh____ | Tìm raw data | `data/raw/`, `src/pipeline/fetch_fifa.py` (chỉ tải API/dataset tĩnh, cấm scrape live) |
-| TV2: _____Thông_____ | Xử lý dữ liệu | `src/pipeline/build_dataset.py`, `fill_fifa_tc.py`, `fill_gk_final.py`, `remap_wc2026_ids.py`, `build_club_tier.py`, `src/maintenance/clean_data.py`, `src/utils/`, `data/processed/csv/`, `data/processed/wc2026_player_match/` |
+| TV2: _____Thông_____ | Xử lý dữ liệu | `src/pipeline/build_dataset.py`, `fill_fifa_tc.py`, `fill_gk_final.py`, `remap_wc2026_ids.py`, `build_club_tier.py`, `src/maintenance/clean_data.py`, `data/processed/csv/`, `data/processed/wc2026_player_match/` |
 | TV3: __Giáp________ | DB + kiểm định | `src/db/build_db.py`, `src/pipeline/validate_dataset.py`, `src/maintenance/audit_data.py`, `src/maintenance/format_prediction_floats.py`, `src/maintenance/verify_env.py`, `data/db/` |
 
 Cam kết nhóm 1: `wc2026_full.db` đầy đủ (104 trận / 48 đội / 1039 cầu thủ),
@@ -46,8 +46,8 @@ Cam kết nhóm 3: output đúng schema `data/processed/analytics/` kèm file b�
 
 - Nhóm 2 đọc DB của nhóm 1 qua `helpers.q()` (cache 600s, trả bản copy).
 - Nhóm 2 đọc output nhóm 3 qua `load_analytics_csv()` / `load_similarity_matrix()`.
-- Nối thực thể mới: `src/utils/entity_resolve.py` (blocking + difflib +
-  ThreadPool, cấm `joblib/loky`), bridge offline, cấm fuzzy runtime.
+- (Nối thực thể offline trước đây do `src/utils/entity_resolve.py` chịu trách nhiệm đã
+  bị xóa trong đợt dọn dead-code 2026-10-23 — module 0 importer, không pipeline nào gọi.)
 
 ## Checklist bàn giao (chạy trước mọi buổi demo)
 
